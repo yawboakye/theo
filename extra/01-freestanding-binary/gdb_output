@@ -1,0 +1,18 @@
+(gdb) break 1
+No line 1 in the current file.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (1) pending.
+(gdb) run
+Starting program: /home/yiadom/Self/theo/target/x86_64-unknown-none/debug/theo 
+
+Program received signal SIGILL, Illegal instruction.
+theo::_start () at src/main.rs:22
+22      pub extern "C" fn _start() -> ! { intrinsics::abort() }
+(gdb) 
+Display all 196 possibilities? (y or n)
+(gdb) continue 
+Continuing.
+
+Program terminated with signal SIGILL, Illegal instruction.
+The program no longer exists.
+(gdb) 

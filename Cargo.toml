@@ -6,3 +6,15 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+# According to https://doc.rust-lang.org/stable/book/ch09-01-unrecoverable-errors-with-panic.html
+# If we don't want to perform any specific tasks during a panic, we
+# can configure the profile as such. Given that we're building an operating
+# system this will be my preference.
+#
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
