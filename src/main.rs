@@ -42,22 +42,22 @@ fn panic_handler(_panic_info: &PanicInfo) -> ! {
 
 // After trying to compile the above, there occurred a new error related
 // to the linker. Phil doesn't go into the details but I think it's
-// worth digging into. I've copy-pasted it into extra/linker_error so that
-// it's self-contained. The significant bits seem to be:
+// worth digging into. I've copy-pasted it into extra/linker_error for
+// quick reference. The significant bits seem to be:
 //
 // Multiple definitions of _start. We define one, but it looks like the
-// linker tries to copy one from another location (looks like inside the
-// Scrt1.o object), which is a related to the kind of binary we're
+// linker tries to copy one from another location (looks like from inside
+// the Scrt1.o object), which is a related to the kind of binary we're
 // building: A Position-indepedent executable (see
 // https://en.wikipedia.org/wiki/Position-independent_code) for details.
 // According to https://dev.gentoo.org/~vapier/crt.txt, it's in fact
 // true that Scrt1.o defines a `_start` entry point too. Then there's
-// another not about `undefined reference to __libc_start_main`. That
+// another error about `undefined reference to __libc_start_main`. That
 // seems to originate from the text section of our binary? Don't know
 // yet.
 
 // Alright, so I managed to compile the program for a different target
-// tripe: x86_64-unknown-none, and the compilation succeeded. I executed
+// triple: x86_64-unknown-none, and the compilation succeeded. I executed
 // the binary and indeed SIGILL causes the program to terminate. See
 // extra/01-freestanding-binary/gdb_output for an interactive run. Normal
 // run produced:
