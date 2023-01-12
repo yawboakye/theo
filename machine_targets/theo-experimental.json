@@ -8,5 +8,6 @@
   "os": "none",
   "panic-strategy": "abort",
   "linker-flavor": "ld.lld",
-  "linker": "rust-lld"
+  "linker": "rust-lld",
+  "disable-redzone": false
 }

@@ -18,6 +18,6 @@ significant differences between `data-layout` specifications. somehow `rustc`
 interprets them to the same target triple configuration. to investigate
 later.
 
-rustc_target: https://github.com/rust-lang/rust/tree/master/compiler/rustc_target/src/spec 
-android_target: https://github.com/rust-lang/rust/blob/b22c152958eade17a71d899b29a2d39bcc77aa48/compiler/rustc_target/src/spec/arm_linux_androideabi.rs
-llvm_data_layout_spec: https://llvm.org/docs/LangRef.html#data-layout
+[rustc_target]: https://github.com/rust-lang/rust/tree/master/compiler/rustc_target/src/spec 
+[android_target]: https://github.com/rust-lang/rust/blob/b22c152958eade17a71d899b29a2d39bcc77aa48/compiler/rustc_target/src/spec/arm_linux_androideabi.rs
+[llvm_data_layout_spec]: https://llvm.org/docs/LangRef.html#data-layout
