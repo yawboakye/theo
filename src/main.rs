@@ -2,7 +2,17 @@
 #![no_main]
 #![feature(core_intrinsics)]
 
-use core::{intrinsics, panic::PanicInfo};
+use core::{intrinsics, panic::PanicInfo, slice};
+
+// pub just so the compiler doesn't complain about unused colors.
+#[repr(u8)]
+pub enum Color {
+    Black = 0x0,
+    Green = 0x2,
+    Gray = 0x7,
+    DarkGray = 0x8,
+    BrightCyan = 0xb,
+}
 
 // When we're no longer deferring to the Rust runtime to organize
 // program initialization for us, there's a few things we need to
@@ -18,8 +28,30 @@ use core::{intrinsics, panic::PanicInfo};
 //     but didn't find another divergent function we could use
 //     in `core::intrinsics` so I'll keep Phil's implementation
 //     and loop infinitely.
+
+// there should be a constants crate that provides these machine constants
+// typing as `u64` basically because i set pointer width to 64 (which probably
+// doesn't matter in the grand scheme of things).
+static VGA_BUF_ADDR: u64 = 0xb8000;
+
 #[no_mangle]
-pub extern "C" fn _start() -> ! { intrinsics::abort() }
+pub extern "C" fn _start() -> ! {
+    let welcome_text: &[u8] = b"ave imperator, morituri te salutant!";
+    // make a slice for a VGA buffer region just enough to hold the welcome
+    // text. actual size/capacity of the slice is double since we have to allow
+    // room for the foreground color of the text. VGA_BUF_ADDR by specification
+    // points to a line of memory large enough to hold the entire VGA buffer
+    // so we're in the clear here.
+    let vga_buf =
+        unsafe { slice::from_raw_parts_mut(VGA_BUF_ADDR as *mut u8, 2 * welcome_text.len()) };
+    for i in 0..(welcome_text.len()) {
+        vga_buf[2 * i] = welcome_text[i];
+        vga_buf[2 * i + 1] = Color::Gray as u8;
+    }
+    // qemu by default gets into a restart loop. replacing abort with infinite loop...
+    // intrinsics::abort()
+    loop {}
+}
 
 // A panic handler is a never-returning function. Thus if we find
 // our way into it, we're sure that we're never finding our way
@@ -29,7 +61,7 @@ fn panic_handler(_panic_info: &PanicInfo) -> ! {
     // Marking first point of deviation from the curriculum.
     // Phil prefers to block during the panic and spin indefinitely.
     // While perusing the [Embedded Rust](https://embedded-rust.com)
-    // book I discovered that we could do this instead. What's 
+    // book I discovered that we could do this instead. What's
     // different?
     //
     // According to https://doc.rust-lang.org/std/intrinsics/fn.abort.html,
