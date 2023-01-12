@@ -1,0 +1,1 @@
+{"rustc":6789319822153502054,"features":"","target":0,"profile":0,"path":0,"deps":[[17115693669385569923,"build_script_build",false,9506448089475732190]],"local":[{"RerunIfChanged":{"output":"theo/debug/build/compiler_builtins-a44879d3858ae1f7/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
