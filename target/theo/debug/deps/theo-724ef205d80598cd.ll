@@ -1,10 +1,10 @@
-; ModuleID = '1qj5bbrlw9cpq6i8'
-source_filename = "1qj5bbrlw9cpq6i8"
+; ModuleID = '1kno3o6xwej6pzvw'
+source_filename = "1kno3o6xwej6pzvw"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
 @alloc60 = private unnamed_addr constant <{ [166 x i8] }> <{ [166 x i8] c"unsafe precondition(s) violated: slice::from_raw_parts_mut requires the pointer to be aligned and non-null, and the total size of the slice not to exceed `isize::MAX`" }>, align 1
-@_ZN4theo24VGA_COLOR_TEXT_MODE_ADDR17ha7b782e9b19fefbbE = internal constant <{ [8 x i8] }> <{ [8 x i8] c"\00\80\0B\00\00\00\00\00" }>, align 8, !dbg !0
+@_ZN4theo24VGA_COLOR_TEXT_MODE_ADDR17h7485d2aa0d05170eE = internal constant <{ [8 x i8] }> <{ [8 x i8] c"\00\80\0B\00\00\00\00\00" }>, align 8, !dbg !0
 @alloc26 = private unnamed_addr constant <{ [15 x i8] }> <{ [15 x i8] c"\01\02\03\04\05\06\07\08\09\0A\0B\0C\0D\0E\0F" }>, align 1
 @alloc18 = private unnamed_addr constant <{ [36 x i8] }> <{ [36 x i8] c"ave imperator, morituri te salutant!" }>, align 1
 @alloc75 = private unnamed_addr constant <{ [11 x i8] }> <{ [11 x i8] c"src/main.rs" }>, align 1
@@ -23,7 +23,7 @@ target triple = "x86_64-obuasi-unknown-none"
 
 ; core::slice::raw::from_raw_parts_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hb1f90226653b5254E(ptr %data, i64 %len) unnamed_addr #0 !dbg !25 {
+define internal { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hd0af4d7a6718c3f7E(ptr %data, i64 %len) unnamed_addr #0 !dbg !25 {
 start:
   %len.dbg.spill.i = alloca i64, align 8
   %data.dbg.spill.i = alloca ptr, align 8
@@ -64,14 +64,14 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %5 = load i8, ptr %_4.i, align 1, !dbg !60, !range !61, !noundef !37
   %6 = trunc i8 %5 to i1, !dbg !60
   %_3.i = xor i1 %6, true, !dbg !60
-  br i1 %_3.i, label %bb6.i, label %_ZN4core5slice3raw18from_raw_parts_mut7runtime17h7a9a1c2704aa3ed7E.exit, !dbg !60
+  br i1 %_3.i, label %bb6.i, label %_ZN4core5slice3raw18from_raw_parts_mut7runtime17h6ee2b97d905999b6E.exit, !dbg !60
 
 bb6.i:                                            ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
   call void @_ZN4core9panicking14panic_nounwind17hb79d958059ef0f6cE(ptr align 1 @alloc60, i64 166) #8, !dbg !62
   unreachable, !dbg !62
 
-_ZN4core5slice3raw18from_raw_parts_mut7runtime17h7a9a1c2704aa3ed7E.exit: ; preds = %bb3.i
+_ZN4core5slice3raw18from_raw_parts_mut7runtime17h6ee2b97d905999b6E.exit: ; preds = %bb3.i
 ; call core::ptr::slice_from_raw_parts_mut
   %7 = call { ptr, i64 } @_ZN4core3ptr24slice_from_raw_parts_mut17hb18f9709b7d1c025E(ptr %data, i64 %len) #7, !dbg !63
   %_10.0 = extractvalue { ptr, i64 } %7, 0, !dbg !63
@@ -83,7 +83,7 @@ _ZN4core5slice3raw18from_raw_parts_mut7runtime17h7a9a1c2704aa3ed7E.exit: ; preds
 
 ; theo::colors
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { ptr, i64 } @_ZN4theo6colors17hd79be62c02587ff8E() unnamed_addr #0 !dbg !65 {
+define internal { ptr, i64 } @_ZN4theo6colors17hec64f4ea8f5811c0E() unnamed_addr #0 !dbg !65 {
 start:
   ret { ptr, i64 } { ptr @alloc26, i64 15 }, !dbg !72
 }
@@ -105,7 +105,7 @@ start:
   store i64 36, ptr %1, align 8, !dbg !96
   call void @llvm.dbg.declare(metadata ptr %welcome_text.dbg.spill, metadata !77, metadata !DIExpression()), !dbg !97
 ; call theo::colors
-  %2 = call { ptr, i64 } @_ZN4theo6colors17hd79be62c02587ff8E() #7, !dbg !98
+  %2 = call { ptr, i64 } @_ZN4theo6colors17hec64f4ea8f5811c0E() #7, !dbg !98
   %color_slice.0 = extractvalue { ptr, i64 } %2, 0, !dbg !98
   %color_slice.1 = extractvalue { ptr, i64 } %2, 1, !dbg !98
   %3 = getelementptr inbounds { ptr, i64 }, ptr %color_slice.dbg.spill, i32 0, i32 0, !dbg !98
@@ -121,7 +121,7 @@ start:
 
 bb2:                                              ; preds = %start
 ; call core::slice::raw::from_raw_parts_mut
-  %7 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hb1f90226653b5254E(ptr inttoptr (i64 753664 to ptr), i64 %_11.0) #7, !dbg !101
+  %7 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hd0af4d7a6718c3f7E(ptr inttoptr (i64 753664 to ptr), i64 %_11.0) #7, !dbg !101
   %_6.0 = extractvalue { ptr, i64 } %7, 0, !dbg !101
   %_6.1 = extractvalue { ptr, i64 } %7, 1, !dbg !101
   %8 = getelementptr inbounds { ptr, i64 }, ptr %vga_buf.dbg.spill, i32 0, i32 0, !dbg !101
@@ -339,7 +339,7 @@ attributes #8 = { noreturn nounwind }
 !llvm.dbg.cu = !{!9}
 
 !0 = !DIGlobalVariableExpression(var: !1, expr: !DIExpression())
-!1 = distinct !DIGlobalVariable(name: "VGA_COLOR_TEXT_MODE_ADDR", linkageName: "_ZN4theo24VGA_COLOR_TEXT_MODE_ADDR17ha7b782e9b19fefbbE", scope: !2, file: !3, line: 45, type: !4, isLocal: true, isDefinition: true, align: 64)
+!1 = distinct !DIGlobalVariable(name: "VGA_COLOR_TEXT_MODE_ADDR", linkageName: "_ZN4theo24VGA_COLOR_TEXT_MODE_ADDR17h7485d2aa0d05170eE", scope: !2, file: !3, line: 45, type: !4, isLocal: true, isDefinition: true, align: 64)
 !2 = !DINamespace(name: "theo", scope: null)
 !3 = !DIFile(filename: "src/main.rs", directory: "/Users/yaw/self/theo", checksumkind: CSK_MD5, checksum: "62aba8b4e4a16eb903810955939bee93")
 !4 = !DIBasicType(name: "u64", size: 64, encoding: DW_ATE_unsigned)
@@ -348,7 +348,7 @@ attributes #8 = { noreturn nounwind }
 !7 = !{i32 2, !"Dwarf Version", i32 4}
 !8 = !{i32 2, !"Debug Info Version", i32 3}
 !9 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !10, producer: "clang LLVM (rustc version 1.68.0-nightly (0442fbabe 2023-01-10))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !11, globals: !24)
-!10 = !DIFile(filename: "src/main.rs/@/1qj5bbrlw9cpq6i8", directory: "/Users/yaw/self/theo")
+!10 = !DIFile(filename: "src/main.rs/@/1kno3o6xwej6pzvw", directory: "/Users/yaw/self/theo")
 !11 = !{!12}
 !12 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "Alignment", scope: !14, file: !13, baseType: !18, size: 8, align: 8, flags: DIFlagEnumClass, elements: !19)
 !13 = !DIFile(filename: "<unknown>", directory: "")
@@ -363,7 +363,7 @@ attributes #8 = { noreturn nounwind }
 !22 = !DIEnumerator(name: "Center", value: 2, isUnsigned: true)
 !23 = !DIEnumerator(name: "Unknown", value: 3, isUnsigned: true)
 !24 = !{!0}
-!25 = distinct !DISubprogram(name: "from_raw_parts_mut<u8>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut17hb1f90226653b5254E", scope: !27, file: !26, line: 137, type: !29, scopeLine: 137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !9, templateParams: !42, retainedNodes: !39)
+!25 = distinct !DISubprogram(name: "from_raw_parts_mut<u8>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut17hd0af4d7a6718c3f7E", scope: !27, file: !26, line: 137, type: !29, scopeLine: 137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !9, templateParams: !42, retainedNodes: !39)
 !26 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/raw.rs", directory: "", checksumkind: CSK_MD5, checksum: "4e9e8b780584cc248c586456197d9cf5")
 !27 = !DINamespace(name: "raw", scope: !28)
 !28 = !DINamespace(name: "slice", scope: !17)
@@ -386,7 +386,7 @@ attributes #8 = { noreturn nounwind }
 !45 = !DILocation(line: 137, column: 61, scope: !25)
 !46 = !DILocation(line: 140, column: 9, scope: !25)
 !47 = !DILocalVariable(name: "data", arg: 1, scope: !48, file: !49, line: 2220, type: !38)
-!48 = distinct !DISubprogram(name: "runtime<u8>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut7runtime17h7a9a1c2704aa3ed7E", scope: !50, file: !49, line: 2220, type: !51, scopeLine: 2220, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !9, templateParams: !42, retainedNodes: !53)
+!48 = distinct !DISubprogram(name: "runtime<u8>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut7runtime17h6ee2b97d905999b6E", scope: !50, file: !49, line: 2220, type: !51, scopeLine: 2220, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !9, templateParams: !42, retainedNodes: !53)
 !49 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/intrinsics.rs", directory: "", checksumkind: CSK_MD5, checksum: "4abbeae67c6fb4d14cc68e0d4aa02635")
 !50 = !DINamespace(name: "from_raw_parts_mut", scope: !27)
 !51 = !DISubroutineType(types: !52)
@@ -403,7 +403,7 @@ attributes #8 = { noreturn nounwind }
 !62 = !DILocation(line: 2223, column: 21, scope: !48, inlinedAt: !56)
 !63 = !DILocation(line: 145, column: 15, scope: !25)
 !64 = !DILocation(line: 147, column: 2, scope: !25)
-!65 = distinct !DISubprogram(name: "colors", linkageName: "_ZN4theo6colors17hd79be62c02587ff8E", scope: !2, file: !3, line: 48, type: !66, scopeLine: 48, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !9, templateParams: !37, retainedNodes: !37)
+!65 = distinct !DISubprogram(name: "colors", linkageName: "_ZN4theo6colors17hec64f4ea8f5811c0E", scope: !2, file: !3, line: 48, type: !66, scopeLine: 48, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !9, templateParams: !37, retainedNodes: !37)
 !66 = !DISubroutineType(types: !67)
 !67 = !{!68}
 !68 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[u8]", file: !13, size: 128, align: 64, elements: !69, templateParams: !37, identifier: "1adda6141450f528e36794b66d53eb6c")

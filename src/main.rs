@@ -4,14 +4,24 @@
 
 use core::{intrinsics, panic::PanicInfo, slice};
 
-// pub just so the compiler doesn't complain about unused colors.
 #[repr(u8)]
-pub enum Color {
-    Black = 0x0,
+enum Color {
+    _Black = 0x0,
+    Blue = 0x1,
     Green = 0x2,
-    Gray = 0x7,
+    Cyan = 0x3,
+    Red = 0x4,
+    Magenta = 0x5,
+    Brown = 0x6,
+    LightGray = 0x7,
     DarkGray = 0x8,
-    BrightCyan = 0xb,
+    LightBlue = 0x9,
+    LightGreen = 0xa,
+    LightCyan = 0xb,
+    LightRed = 0xc,
+    LightMagenta = 0xd,
+    Yellow = 0xe,
+    White = 0xf,
 }
 
 // When we're no longer deferring to the Rust runtime to organize
@@ -32,21 +42,45 @@ pub enum Color {
 // there should be a constants crate that provides these machine constants
 // typing as `u64` basically because i set pointer width to 64 (which probably
 // doesn't matter in the grand scheme of things).
-static VGA_BUF_ADDR: u64 = 0xb8000;
+static VGA_COLOR_TEXT_MODE_ADDR: u64 = 0xb8000;
+
+#[inline]
+fn colors() -> &'static [u8] {
+    &[
+        Color::Blue as u8,
+        Color::Green as u8,
+        Color::Cyan as u8,
+        Color::Red as u8,
+        Color::Magenta as u8,
+        Color::Brown as u8,
+        Color::LightGray as u8,
+        Color::DarkGray as u8,
+        Color::LightBlue as u8,
+        Color::LightGreen as u8,
+        Color::LightCyan as u8,
+        Color::LightRed as u8,
+        Color::LightMagenta as u8,
+        Color::Yellow as u8,
+        Color::White as u8,
+    ]
+}
 
 #[no_mangle]
-pub extern "C" fn _start() -> ! {
+pub fn _start() -> ! {
     let welcome_text: &[u8] = b"ave imperator, morituri te salutant!";
+    let color_slice = colors();
+
     // make a slice for a VGA buffer region just enough to hold the welcome
     // text. actual size/capacity of the slice is double since we have to allow
-    // room for the foreground color of the text. VGA_BUF_ADDR by specification
+    // room for the foreground color of the text. VGA_COLOR_TEXT_MODE_ADDR by specification
     // points to a line of memory large enough to hold the entire VGA buffer
     // so we're in the clear here.
-    let vga_buf =
-        unsafe { slice::from_raw_parts_mut(VGA_BUF_ADDR as *mut u8, 2 * welcome_text.len()) };
+    let vga_buf = unsafe {
+        slice::from_raw_parts_mut(VGA_COLOR_TEXT_MODE_ADDR as *mut u8, 2 * welcome_text.len())
+    };
     for i in 0..(welcome_text.len()) {
         vga_buf[2 * i] = welcome_text[i];
-        vga_buf[2 * i + 1] = Color::Gray as u8;
+        vga_buf[2 * i + 1] = color_slice[i % color_slice.len()];
     }
     // qemu by default gets into a restart loop. replacing abort with infinite loop...
     // intrinsics::abort()
