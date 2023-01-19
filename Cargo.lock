@@ -13,4 +13,9 @@ name = "theo"
 version = "0.1.0"
 dependencies = [
  "bootloader",
+ "vga",
 ]
+
+[[package]]
+name = "vga"
+version = "0.1.0"
