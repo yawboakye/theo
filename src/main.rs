@@ -1,9 +1,11 @@
 #![no_std]
 #![no_main]
 #![feature(core_intrinsics)]
+#![feature(error_in_core)]
+
+mod peripherals;
 
 use core::{intrinsics, panic::PanicInfo};
-use vga::{Screen, TextFlowDirection};
 
 // When we're no longer deferring to the Rust runtime to organize
 // program initialization for us, there's a few things we need to
@@ -21,13 +23,10 @@ use vga::{Screen, TextFlowDirection};
 //     and loop infinitely.
 #[no_mangle]
 pub fn _start() -> ! {
-    let mut screen = Screen::new(TextFlowDirection::BottomUp);
-    let welcome_text: &[u8] = b"ave imperator, morituri te salutant!";
-
-    screen.print_text(welcome_text);
-
-    // qemu by default gets into a restart loop. replacing abort with infinite loop...
-    // intrinsics::abort()
+    peripherals::initialize();
+    println!("ave imperator, morituri te salutant 🖖!\n\n\n\n");
+    println!("this text should appear on last but one row");
+    println!("last row of text");
     loop {}
 }
 
@@ -35,7 +34,7 @@ pub fn _start() -> ! {
 // our way into it, we're sure that we're never finding our way
 // back out into the program.
 #[panic_handler]
-fn panic_handler(_panic_info: &PanicInfo) -> ! {
+fn panic_handler(panic_info: &PanicInfo) -> ! {
     // Marking first point of deviation from the curriculum.
     // Phil prefers to block during the panic and spin indefinitely.
     // While perusing the [Embedded Rust](https://embedded-rust.com)
@@ -47,6 +46,7 @@ fn panic_handler(_panic_info: &PanicInfo) -> ! {
     // interesting because it means the actual abort is caused by us not
     // having an exception/interrupt handler for when we try to execute
     // an invalid instruction. TBD.
+    println!("{:#?}", panic_info);
     intrinsics::abort()
 }
 
