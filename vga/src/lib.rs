@@ -86,17 +86,22 @@ struct Cursor {
 }
 
 impl Cursor {
+    #[inline]
     fn x(&self) -> usize {
         self.pos.x
     }
+
+    #[inline]
     fn y(&self) -> usize {
         self.pos.y
     }
 
+    #[inline]
     fn incr_x(&mut self) {
         self.pos.x += 1;
     }
 
+    #[inline]
     fn decr_y(&mut self) {
         self.pos.y -= 1;
     }
@@ -134,10 +139,12 @@ pub struct Screen {
 }
 
 impl Screen {
+    #[inline]
     fn width(&self) -> usize {
         self.buf.chars[0].len()
     }
 
+    #[inline]
     fn height(&self) -> usize {
         self.buf.chars.len()
     }
@@ -201,6 +208,7 @@ impl Screen {
         self.cursor.incr_x();
     }
 
+    #[inline]
     fn should_wrap(&self) -> bool {
         self.cursor.x() == self.width()
     }
@@ -214,6 +222,7 @@ impl Screen {
         self.print_sc(ScreenChar::new(c))
     }
 
+    #[inline]
     fn recall_cursor_to_origin(&mut self) {
         self.cursor.pos = self.origin;
     }
