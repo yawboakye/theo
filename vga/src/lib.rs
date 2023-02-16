@@ -1,5 +1,6 @@
 #![no_std]
 #![allow(dead_code)]
+#![feature(custom_test_frameworks)]
 
 use core::fmt::{Result, Write};
 use core::ptr::write_volatile;
@@ -48,14 +49,14 @@ impl ScreenChar {
     fn new(c: u8) -> Self {
         ScreenChar {
             char: c,
-            color_code: ColorCode::new(Color::Green, Color::Black),
+            color_code: ColorCode::new(Color::Black, Color::LightGray),
         }
     }
 
     fn inverse(c: u8) -> Self {
         ScreenChar {
             char: c,
-            color_code: ColorCode::new(Color::Black, Color::Green),
+            color_code: ColorCode::new(Color::Black, Color::LightGray),
         }
     }
 }

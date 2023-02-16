@@ -1,9 +1,14 @@
 #![no_std]
 #![no_main]
 #![feature(core_intrinsics)]
-#![feature(error_in_core)]
+#![feature(custom_test_frameworks)]
+#![test_runner(main_test_runner)]
+#![reexport_test_harness_main = "test_main"]
 
 mod peripherals;
+mod qemu;
+mod serial;
+mod traits;
 
 use core::{intrinsics, panic::PanicInfo};
 
@@ -27,12 +32,17 @@ pub fn _start() -> ! {
     println!("ave imperator, morituri te salutant 🖖!\n\n\n\n");
     println!("this text should appear on last but one row");
     println!("last row of text");
+
+    #[cfg(test)]
+    test_main();
+
     loop {}
 }
 
 // A panic handler is a never-returning function. Thus if we find
 // our way into it, we're sure that we're never finding our way
 // back out into the program.
+#[cfg(not(test))]
 #[panic_handler]
 fn panic_handler(panic_info: &PanicInfo) -> ! {
     // Marking first point of deviation from the curriculum.
@@ -47,6 +57,13 @@ fn panic_handler(panic_info: &PanicInfo) -> ! {
     // having an exception/interrupt handler for when we try to execute
     // an invalid instruction. TBD.
     println!("{:#?}", panic_info);
+    intrinsics::abort()
+}
+
+#[cfg(test)]
+#[panic_handler]
+fn panic_handler(panic_info: &PanicInfo) -> ! {
+    serial_println!("{:#?}", panic_info);
     intrinsics::abort()
 }
 
@@ -74,3 +91,27 @@ fn panic_handler(panic_info: &PanicInfo) -> ! {
 //
 // $ ./target/x86_64-unknown-none/debug/theo
 // Illegal instruction (core dumped)
+
+#[test_case]
+fn assert_true() {
+    let sum = 1 + 1;
+    assert_eq!(sum, 2);
+}
+
+#[test_case]
+fn panic_test() {
+    panic!("something bad happened");
+}
+
+#[cfg(test)]
+fn main_test_runner(tests: &[&dyn traits::Testable]) {
+    use qemu::{exit_qemu, QemuExitCode};
+
+    let barrier = "====================================";
+    serial_println!("\n\n{} TESTS ={}", barrier, barrier);
+    serial_println!("running {} tests", tests.len());
+    for test in tests {
+        test.run();
+    }
+    exit_qemu(QemuExitCode::Success);
+}
