@@ -7,21 +7,36 @@ edition = "2021"
 
 [dependencies]
 bootloader = "0.9.23"
+lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
 spin = "0.9.4"
+uart_16550 = "0.2.18"
 vga = { path = "vga", version = "0.1.0" }
+x86_64 = { version = "0.14.10", features = ["nightly"] }
 
-[dependencies.lazy_static]
-version = "1.4.0"
-features = ["spin_no_std"]
+[package.metadata.bootimage]
+run-args = [
+  "-cpu", "Cascadelake-Server",
+  "-m", "4.2M",
+  "-no-reboot", "-nodefaults",
+  "-serial", "stdio"
+]
+test-args = [
+  "-cpu", "Cascadelake-Server",
+  "-m", "4.2M",
+  "-no-reboot",
+  "-device", "isa-debug-exit,iobase=0xf4,iosize=0x4",
+  "-serial", "stdio"
+]
+test-success-exit-code = 201
 
 # According to https://doc.rust-lang.org/stable/book/ch09-01-unrecoverable-errors-with-panic.html
 # If we don't want to perform any specific tasks during a panic, we
 # can configure the profile as such. Given that we're building an operating
 # system this will be my preference.
 #
-[profile.dev]
-panic = "abort"
+# [profile.dev]
+# panic = "abort"
 
-[profile.release]
-panic = "abort"
+# [profile.release]
+# panic = "abort"
 

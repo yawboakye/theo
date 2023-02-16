@@ -9,3 +9,7 @@ target = "machine_targets/theo.json"
 # example, nounwind and noredzone can be easily spotted.
 rustflags = ["--emit=llvm-ir"]
 incremental = true
+
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
+
