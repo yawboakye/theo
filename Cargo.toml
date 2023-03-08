@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 bootloader = "0.9.23"
+cpu_interrupts = { version = "0.1.0", path = "cpu_interrupts" }
 lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
 spin = "0.9.4"
 uart_16550 = "0.2.18"

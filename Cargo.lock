@@ -27,6 +27,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b6e02311b16c9819e7c72866d379cdd3026c3b7b25c1edf161f548f8e887e7ff"
 
 [[package]]
+name = "cpu_interrupts"
+version = "0.1.0"
+dependencies = [
+ "x86_64",
+]
+
+[[package]]
 name = "lazy_static"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -77,6 +84,7 @@ name = "theo"
 version = "0.1.0"
 dependencies = [
  "bootloader",
+ "cpu_interrupts",
  "lazy_static",
  "spin 0.9.4",
  "uart_16550",

@@ -2,9 +2,11 @@
 #![no_main]
 #![feature(core_intrinsics)]
 #![feature(custom_test_frameworks)]
+#![feature(abi_x86_interrupt)]
 #![test_runner(main_test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
+mod interrupts;
 mod peripherals;
 mod qemu;
 mod serial;
@@ -28,10 +30,13 @@ use core::{intrinsics, panic::PanicInfo};
 //     and loop infinitely.
 #[no_mangle]
 pub fn _start() -> ! {
+    let handler_map = interrupts::make_handler_map();
+    cpu_interrupts::initialize(handler_map);
     peripherals::initialize();
+
     println!("ave imperator, morituri te salutant 🖖!\n\n\n\n");
     println!("this text should appear on last but one row");
-    println!("last row of text");
+    println!("last row of text, with empty row below");
 
     #[cfg(test)]
     test_main();
