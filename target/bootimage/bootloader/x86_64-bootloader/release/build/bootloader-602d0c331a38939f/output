@@ -1,7 +1,0 @@
-cargo:rerun-if-changed=/Users/yaw/self/theo/Cargo.toml
-cargo:rustc-link-search=native=/Users/yaw/self/theo/target/bootimage/bootloader/x86_64-bootloader/release/build/bootloader-602d0c331a38939f/out
-cargo:rustc-link-lib=static=kernel_bin-theo-2862f730575541a3
-cargo:rerun-if-env-changed=KERNEL
-cargo:rerun-if-env-changed=KERNEL_MANIFEST
-cargo:rerun-if-changed=/Users/yaw/self/theo/target/theo/debug/deps/theo-2862f730575541a3
-cargo:rerun-if-changed=build.rs

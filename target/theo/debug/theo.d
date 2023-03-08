@@ -1,0 +1,1 @@
+/Users/yaw/self/theo/target/theo/debug/theo: /Users/yaw/self/theo/src/main.rs /Users/yaw/self/theo/src/peripherals.rs /Users/yaw/self/theo/src/qemu.rs /Users/yaw/self/theo/src/serial.rs /Users/yaw/self/theo/src/traits.rs /Users/yaw/self/theo/vga/src/lib.rs
