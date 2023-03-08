@@ -6,31 +6,31 @@ target triple = "x86_64-obuasi-unknown-none"
 %"core::fmt::Arguments<'_>" = type { { ptr, i64 }, { ptr, i64 }, { ptr, i64 } }
 %Screen = type { [80 x { i8, i8 }], { i64, i64 }, { i64, i64 }, i64, ptr, i8, [7 x i8] }
 
-@alloc18 = private unnamed_addr constant <{ [107 x i8] }> <{ [107 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs" }>, align 1
-@alloc17 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc18, [16 x i8] c"k\00\00\00\00\00\00\00\92\01\00\008\00\00\00" }>, align 8
+@alloc107 = private unnamed_addr constant <{ [107 x i8] }> <{ [107 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs" }>, align 1
+@alloc106 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc107, [16 x i8] c"k\00\00\00\00\00\00\00\92\01\00\008\00\00\00" }>, align 8
 @str.0 = internal constant [28 x i8] c"attempt to add with overflow"
-@alloc14 = private unnamed_addr constant <{ [12 x i8] }> <{ [12 x i8] c"invalid args" }>, align 1
-@alloc13 = private unnamed_addr constant <{ ptr, [8 x i8] }> <{ ptr @alloc14, [8 x i8] c"\0C\00\00\00\00\00\00\00" }>, align 8
-@alloc12 = private unnamed_addr constant <{}> zeroinitializer, align 8
-@alloc19 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc18, [16 x i8] c"k\00\00\00\00\00\00\00\93\01\00\00\0D\00\00\00" }>, align 8
-@alloc20 = private unnamed_addr constant <{ [111 x i8] }> <{ [111 x i8] c"unsafe precondition(s) violated: ptr::write_volatile requires that the pointer argument is aligned and non-null" }>, align 1
-@alloc23 = private unnamed_addr constant <{ [113 x i8] }> <{ [113 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs" }>, align 1
-@alloc22 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc23, [16 x i8] c"q\00\00\00\00\00\00\00#\06\00\00\1A\00\00\00" }>, align 8
+@alloc99 = private unnamed_addr constant <{ [12 x i8] }> <{ [12 x i8] c"invalid args" }>, align 1
+@alloc98 = private unnamed_addr constant <{ ptr, [8 x i8] }> <{ ptr @alloc99, [8 x i8] c"\0C\00\00\00\00\00\00\00" }>, align 8
+@alloc97 = private unnamed_addr constant <{}> zeroinitializer, align 8
+@alloc108 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc107, [16 x i8] c"k\00\00\00\00\00\00\00\93\01\00\00\0D\00\00\00" }>, align 8
+@alloc109 = private unnamed_addr constant <{ [111 x i8] }> <{ [111 x i8] c"unsafe precondition(s) violated: ptr::write_volatile requires that the pointer argument is aligned and non-null" }>, align 1
+@alloc112 = private unnamed_addr constant <{ [113 x i8] }> <{ [113 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs" }>, align 1
+@alloc111 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc112, [16 x i8] c"q\00\00\00\00\00\00\00#\06\00\00\1A\00\00\00" }>, align 8
 @str.1 = internal constant [33 x i8] c"attempt to subtract with overflow"
-@alloc11 = private unnamed_addr constant <{ [42 x i8] }> <{ [42 x i8] c"is_aligned_to: align is not a power-of-two" }>, align 1
-@alloc10 = private unnamed_addr constant <{ ptr, [8 x i8] }> <{ ptr @alloc11, [8 x i8] c"*\00\00\00\00\00\00\00" }>, align 8
-@alloc24 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc23, [16 x i8] c"q\00\00\00\00\00\00\00\1E\06\00\00\0D\00\00\00" }>, align 8
+@alloc96 = private unnamed_addr constant <{ [42 x i8] }> <{ [42 x i8] c"is_aligned_to: align is not a power-of-two" }>, align 1
+@alloc95 = private unnamed_addr constant <{ ptr, [8 x i8] }> <{ ptr @alloc96, [8 x i8] c"*\00\00\00\00\00\00\00" }>, align 8
+@alloc113 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc112, [16 x i8] c"q\00\00\00\00\00\00\00\1E\06\00\00\0D\00\00\00" }>, align 8
 @_ZN3vga12PI_CHAR_CODE17h8e9ea7f731a76159E = internal constant <{ [1 x i8] }> <{ [1 x i8] c"\E3" }>, align 1, !dbg !0
 @_ZN3vga24VGA_COLOR_TEXT_MODE_ADDR17h087438aadf3a3af8E = internal constant <{ [8 x i8] }> <{ [8 x i8] c"\00\80\0B\00\00\00\00\00" }>, align 8, !dbg !5
-@alloc39 = private unnamed_addr constant <{ [10 x i8] }> <{ [10 x i8] c"src/lib.rs" }>, align 1
-@alloc26 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00f\00\00\00\09\00\00\00" }>, align 8
-@alloc28 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00\C4\00\00\00\0D\00\00\00" }>, align 8
-@alloc30 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00\C9\00\00\00\18\00\00\00" }>, align 8
-@alloc32 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00\EC\00\00\00/\00\00\00" }>, align 8
-@alloc34 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00\EC\00\00\00$\00\00\00" }>, align 8
-@alloc36 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00\EC\00\00\00\15\00\00\00" }>, align 8
-@alloc38 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00\ED\00\00\00\15\00\00\00" }>, align 8
-@alloc40 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc39, [16 x i8] c"\0A\00\00\00\00\00\00\00\EF\00\00\00\11\00\00\00" }>, align 8
+@alloc128 = private unnamed_addr constant <{ [10 x i8] }> <{ [10 x i8] c"src/lib.rs" }>, align 1
+@alloc115 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00f\00\00\00\09\00\00\00" }>, align 8
+@alloc117 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00\C4\00\00\00\0D\00\00\00" }>, align 8
+@alloc119 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00\C9\00\00\00\18\00\00\00" }>, align 8
+@alloc121 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00\EC\00\00\00/\00\00\00" }>, align 8
+@alloc123 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00\EC\00\00\00$\00\00\00" }>, align 8
+@alloc125 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00\EC\00\00\00\15\00\00\00" }>, align 8
+@alloc127 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00\ED\00\00\00\15\00\00\00" }>, align 8
+@alloc129 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc128, [16 x i8] c"\0A\00\00\00\00\00\00\00\EF\00\00\00\11\00\00\00" }>, align 8
 
 ; <core::iter::adapters::copied::Copied<I> as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: noredzone nounwind
@@ -128,7 +128,7 @@ bb4:                                              ; preds = %bb2
 
 panic:                                            ; preds = %bb2
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc17) #8, !dbg !263
+  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc106) #8, !dbg !263
   unreachable, !dbg !263
 
 bb7:                                              ; preds = %bb3
@@ -155,9 +155,9 @@ bb7:                                              ; preds = %bb3
 
 bb5:                                              ; preds = %bb3
 ; call core::fmt::Arguments::new_v1
-  call void @_ZN4core3fmt9Arguments6new_v117h089ef56c22f16aa9E(ptr sret(%"core::fmt::Arguments<'_>") %_13, ptr align 8 @alloc13, i64 1, ptr align 8 @alloc12, i64 0) #7, !dbg !269
+  call void @_ZN4core3fmt9Arguments6new_v117h089ef56c22f16aa9E(ptr sret(%"core::fmt::Arguments<'_>") %_13, ptr align 8 @alloc98, i64 1, ptr align 8 @alloc97, i64 0) #7, !dbg !269
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hda3097b88687bbd9E(ptr %_13, ptr align 8 @alloc19) #8, !dbg !269
+  call void @_ZN4core9panicking9panic_fmt17hda3097b88687bbd9E(ptr %_13, ptr align 8 @alloc108) #8, !dbg !269
   unreachable, !dbg !269
 }
 
@@ -187,7 +187,7 @@ start:
 
 bb2.i:                                            ; preds = %start
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h81923f513de58d5eE(ptr align 1 @alloc20, i64 111) #8, !dbg !292
+  call void @_ZN4core9panicking14panic_nounwind17h81923f513de58d5eE(ptr align 1 @alloc109, i64 111) #8, !dbg !292
   unreachable, !dbg !292
 
 _ZN4core3ptr14write_volatile7runtime17h521145c4a5277a38E.exit: ; preds = %start
@@ -241,7 +241,7 @@ bb2:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.1, i64 33, ptr align 8 @alloc22) #8, !dbg !332
+  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.1, i64 33, ptr align 8 @alloc111) #8, !dbg !332
   unreachable, !dbg !332
 }
 
@@ -288,9 +288,9 @@ bb4:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
 ; call core::fmt::Arguments::new_v1
-  call void @_ZN4core3fmt9Arguments6new_v117h089ef56c22f16aa9E(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc10, i64 1, ptr align 8 @alloc12, i64 0) #7, !dbg !374
+  call void @_ZN4core3fmt9Arguments6new_v117h089ef56c22f16aa9E(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc95, i64 1, ptr align 8 @alloc97, i64 0) #7, !dbg !374
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hda3097b88687bbd9E(ptr %_6, ptr align 8 @alloc24) #8, !dbg !374
+  call void @_ZN4core9panicking9panic_fmt17hda3097b88687bbd9E(ptr %_6, ptr align 8 @alloc113) #8, !dbg !374
   unreachable, !dbg !374
 }
 
@@ -613,7 +613,7 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc26) #8, !dbg !566
+  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc115) #8, !dbg !566
   unreachable, !dbg !566
 }
 
@@ -878,7 +878,7 @@ bb8:                                              ; preds = %bb5
 
 panic:                                            ; preds = %bb5
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %row, i64 25, ptr align 8 @alloc28) #8, !dbg !687
+  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %row, i64 25, ptr align 8 @alloc117) #8, !dbg !687
   unreachable, !dbg !687
 }
 
@@ -913,7 +913,7 @@ bb2:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %_4, i64 25, ptr align 8 @alloc30) #8, !dbg !700
+  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %_4, i64 25, ptr align 8 @alloc119) #8, !dbg !700
   unreachable, !dbg !700
 
 bb4:                                              ; preds = %bb2
@@ -932,7 +932,7 @@ bb4:                                              ; preds = %bb2
 
 panic1:                                           ; preds = %bb2
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %_8, i64 80, ptr align 8 @alloc30) #8, !dbg !700
+  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %_8, i64 80, ptr align 8 @alloc119) #8, !dbg !700
   unreachable, !dbg !700
 }
 
@@ -1090,7 +1090,7 @@ bb10:                                             ; preds = %bb7
 
 panic:                                            ; preds = %bb7
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %row, i64 25, ptr align 8 @alloc32) #8, !dbg !754
+  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %row, i64 25, ptr align 8 @alloc121) #8, !dbg !754
   unreachable, !dbg !754
 
 bb11:                                             ; preds = %bb10
@@ -1100,7 +1100,7 @@ bb11:                                             ; preds = %bb10
 
 panic1:                                           ; preds = %bb10
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.1, i64 33, ptr align 8 @alloc34) #8, !dbg !755
+  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.1, i64 33, ptr align 8 @alloc123) #8, !dbg !755
   unreachable, !dbg !755
 
 bb12:                                             ; preds = %bb11
@@ -1115,7 +1115,7 @@ bb12:                                             ; preds = %bb11
 
 panic2:                                           ; preds = %bb11
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %_17.0, i64 25, ptr align 8 @alloc36) #8, !dbg !756
+  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %_17.0, i64 25, ptr align 8 @alloc125) #8, !dbg !756
   unreachable, !dbg !756
 
 bb13:                                             ; preds = %bb12
@@ -1127,7 +1127,7 @@ bb13:                                             ; preds = %bb12
 
 panic3:                                           ; preds = %bb12
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %row, i64 25, ptr align 8 @alloc38) #8, !dbg !758
+  call void @_ZN4core9panicking18panic_bounds_check17h4e6d49d6308b939dE(i64 %row, i64 25, ptr align 8 @alloc127) #8, !dbg !758
   unreachable, !dbg !758
 
 bb14:                                             ; preds = %bb9
@@ -1139,7 +1139,7 @@ bb14:                                             ; preds = %bb9
 
 panic4:                                           ; preds = %bb9
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.1, i64 33, ptr align 8 @alloc40) #8, !dbg !751
+  call void @_ZN4core9panicking5panic17h758e89f926a8adfcE(ptr align 1 @str.1, i64 33, ptr align 8 @alloc129) #8, !dbg !751
   unreachable, !dbg !751
 }
 
