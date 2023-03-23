@@ -2,7 +2,9 @@
 #![feature(custom_test_frameworks)]
 #![feature(abi_x86_interrupt)]
 
+pub mod constants;
 pub mod default_exception_handlers;
+pub mod global_descriptor_table;
 pub mod interrupt_descriptor_table;
 
 use interrupt_descriptor_table::*;
@@ -21,4 +23,6 @@ pub fn initialize(handler_map: InterruptHandlerMap) -> () {
         Err(s) => panic!("{s}"),
         Ok(_) => (),
     }
+
+    crate::global_descriptor_table::initialize();
 }

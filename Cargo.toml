@@ -17,13 +17,12 @@ x86_64 = { version = "0.14.10", features = ["nightly"] }
 [package.metadata.bootimage]
 run-args = [
   "-cpu", "Cascadelake-Server",
-  "-m", "10.2M",
-  "-no-reboot",
+  "-m", "50.2M",
   "-serial", "stdio"
 ]
 test-args = [
   "-cpu", "Cascadelake-Server",
-  "-m", "4.2M",
+  "-m", "50.2M",
   "-no-reboot",
   "-device", "isa-debug-exit,iobase=0xf4,iosize=0x4",
   "-serial", "stdio"

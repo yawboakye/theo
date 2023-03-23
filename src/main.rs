@@ -41,6 +41,15 @@ pub fn _start() -> ! {
     #[cfg(test)]
     test_main();
 
+    // kernel stack overflow...
+    #[rustfmt::skip]
+    #[allow(unconditional_recursion)]
+    fn stack_overflow() { stack_overflow() }
+    stack_overflow();
+
+    // inactive
+    unsafe { *(0xbadc0de as *mut u64) = 0xff }
+
     loop {}
 }
 

@@ -1,3 +1,4 @@
+use crate::constants;
 use x86_64::structures::idt::{InterruptDescriptorTable, InterruptStackFrame};
 
 pub type InterruptHandlerFn = extern "x86-interrupt" fn(InterruptStackFrame);
@@ -18,9 +19,11 @@ pub struct SafeInterruptDescriptorTable {
 impl SafeInterruptDescriptorTable {
     pub fn new() -> Self {
         let mut idt = InterruptDescriptorTable::new();
-
-        #[rustfmt::skip]
-        idt.double_fault.set_handler_fn(crate::default_exception_handlers::double_fault_handler);
+        unsafe {
+            idt.double_fault
+                .set_handler_fn(crate::default_exception_handlers::double_fault_handler)
+                .set_stack_index(constants::DOUBLE_FAULT_IST_INDEX as u16);
+        }
         SafeInterruptDescriptorTable {
             double_fault_handler_set: true,
             breakpoint_handler_set: false,
