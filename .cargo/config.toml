@@ -12,4 +12,3 @@ incremental = true
 
 [target.'cfg(target_os = "none")']
 runner = "bootimage runner"
-
