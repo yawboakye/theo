@@ -3,6 +3,7 @@
 #![feature(core_intrinsics)]
 #![feature(custom_test_frameworks)]
 #![feature(abi_x86_interrupt)]
+#![feature(stmt_expr_attributes)]
 #![test_runner(main_test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
@@ -31,9 +32,7 @@ use core::{intrinsics, panic::PanicInfo};
 #[no_mangle]
 pub fn _start() -> ! {
     peripherals::initialize();
-    let handler_map = interrupts::make_handler_map();
-    cpu_interrupts::initialize(handler_map);
-    cpu_interrupts::enable();
+    interrupts::initialize();
 
     println!("ave imperator, morituri te salutant 🖖!\n\n\n\n");
     println!("this text should appear on last but one row");
@@ -51,7 +50,8 @@ pub fn _start() -> ! {
     // // inactive
     // unsafe { *(0xbadc0de as *mut u64) = 0xff }
 
-    loop {}
+    #[rustfmt::skip]
+    loop { x86_64::instructions::hlt() }
 }
 
 // A panic handler is a never-returning function. Thus if we find
