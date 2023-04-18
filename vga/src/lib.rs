@@ -49,14 +49,14 @@ impl ScreenChar {
     fn new(c: u8) -> Self {
         ScreenChar {
             char: c,
-            color_code: ColorCode::new(Color::Black, Color::LightGray),
+            color_code: ColorCode::new(Color::Yellow, Color::Blue),
         }
     }
 
     fn inverse(c: u8) -> Self {
         ScreenChar {
             char: c,
-            color_code: ColorCode::new(Color::Black, Color::LightGray),
+            color_code: ColorCode::new(Color::Yellow, Color::Blue),
         }
     }
 }
