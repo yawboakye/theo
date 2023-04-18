@@ -18,6 +18,7 @@ x86_64 = { version = "0.14.10", features = ["nightly"] }
 run-args = [
   "-cpu", "Cascadelake-Server",
   "-m", "50.2M",
+  # "-no-reboot",
   "-serial", "stdio"
 ]
 test-args = [

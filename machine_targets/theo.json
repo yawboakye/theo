@@ -6,6 +6,7 @@
   "target-pointer-width": "64",
   "target-c-int-width": "32",
   "os": "none",
+  "executables": true,
   "panic-strategy": "abort",
   "linker-flavor": "ld.lld",
   "linker": "rust-lld",
