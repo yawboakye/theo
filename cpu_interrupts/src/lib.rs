@@ -9,4 +9,4 @@ pub mod interrupt_descriptor_table;
 pub mod programmable_interface_controller;
 
 #[rustfmt::skip]
-pub fn enable() { x86_64::instructions::interrupts::enable(); }
+pub fn enable() { x86_64::instructions::interrupts::enable() }

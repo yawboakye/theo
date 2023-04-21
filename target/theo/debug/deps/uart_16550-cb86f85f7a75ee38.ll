@@ -1,5 +1,5 @@
-; ModuleID = 'uart_16550.eb430398-cgu.0'
-source_filename = "uart_16550.eb430398-cgu.0"
+; ModuleID = 'uart_16550.66a31b9561e03477-cgu.0'
+source_filename = "uart_16550.66a31b9561e03477-cgu.0"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
@@ -18,10 +18,10 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_96ab912d0054b46da785b206a96c9a45 = private unnamed_addr constant <{ [49 x i8] }> <{ [49 x i8] c"there is no such thing as an acquire-release load" }>, align 1
 @alloc_e1829842c862d95248bdb87a26e1372f = private unnamed_addr constant <{ ptr, [8 x i8] }> <{ ptr @alloc_96ab912d0054b46da785b206a96c9a45, [8 x i8] c"1\00\00\00\00\00\00\00" }>, align 8
 @alloc_758e3eafddd83bea2c9171c5517da1cc = private unnamed_addr constant <{ [111 x i8] }> <{ [111 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/sync/atomic.rs" }>, align 1
-@alloc_82e36b07fafd36999c96f8fa2677903e = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_758e3eafddd83bea2c9171c5517da1cc, [16 x i8] c"o\00\00\00\00\00\00\00[\0C\00\00\17\00\00\00" }>, align 8
+@alloc_7734ea445cad8f1de7ec4bc5845f15ef = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_758e3eafddd83bea2c9171c5517da1cc, [16 x i8] c"o\00\00\00\00\00\00\00U\0C\00\00\17\00\00\00" }>, align 8
 @alloc_9cd20c3e415f4d39f0ceb012cb758628 = private unnamed_addr constant <{ [40 x i8] }> <{ [40 x i8] c"there is no such thing as a release load" }>, align 1
 @alloc_c986ce739acfc2550367c92bb47d7476 = private unnamed_addr constant <{ ptr, [8 x i8] }> <{ ptr @alloc_9cd20c3e415f4d39f0ceb012cb758628, [8 x i8] c"(\00\00\00\00\00\00\00" }>, align 8
-@alloc_d6d87d062d62cb6f7d56483643968db0 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_758e3eafddd83bea2c9171c5517da1cc, [16 x i8] c"o\00\00\00\00\00\00\00Z\0C\00\00\18\00\00\00" }>, align 8
+@alloc_32ed42c49aaaff238637115f363ad5b0 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_758e3eafddd83bea2c9171c5517da1cc, [16 x i8] c"o\00\00\00\00\00\00\00T\0C\00\00\18\00\00\00" }>, align 8
 @alloc_2a181126a5e63603dd127db2bc02d5d9 = private unnamed_addr constant <{ [93 x i8] }> <{ [93 x i8] c"/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs" }>, align 1
 @alloc_97046cef643bb8dbc04dcbee238966fc = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_2a181126a5e63603dd127db2bc02d5d9, [16 x i8] c"]\00\00\00\00\00\00\00\1A\00\00\00(\00\00\00" }>, align 8
 @str.0 = internal constant [28 x i8] c"attempt to add with overflow"
@@ -44,15 +44,15 @@ target triple = "x86_64-obuasi-unknown-none"
 
 ; <core::iter::adapters::copied::Copied<I> as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: noredzone nounwind
-define { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h5e84b6fc4a340e57E"(ptr align 8 %self) unnamed_addr #0 !dbg !27 {
+define { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h9159c6b0ae74d5eaE"(ptr align 8 %self) unnamed_addr #0 !dbg !27 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !75, metadata !DIExpression()), !dbg !77
 ; call <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::next
-  %_2 = call align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h0c2f840062e5d1d8E"(ptr align 8 %self) #4, !dbg !78
+  %_2 = call align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h3e4da3f5982de4ecE"(ptr align 8 %self) #4, !dbg !78
 ; call core::option::Option<&T>::copied
-  %0 = call { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17hed3b03d5f9dd6849E"(ptr align 1 %_2) #4, !dbg !78
+  %0 = call { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17h7cf6c21708c7801fE"(ptr align 1 %_2) #4, !dbg !78
   %1 = extractvalue { i8, i8 } %0, 0, !dbg !78
   %2 = trunc i8 %1 to i1, !dbg !78
   %3 = extractvalue { i8, i8 } %0, 1, !dbg !78
@@ -64,7 +64,7 @@ start:
 
 ; core::fmt::Arguments::new_const
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core3fmt9Arguments9new_const17hfec148fa76b9bcedE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #1 !dbg !80 {
+define internal void @_ZN4core3fmt9Arguments9new_const17h0ac5a3fce00d9a55E(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #1 !dbg !80 {
 start:
   %pieces.dbg.spill = alloca { ptr, i64 }, align 8
   %_7 = alloca { ptr, i64 }, align 8
@@ -101,15 +101,15 @@ bb3:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hfec148fa76b9bcedE(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #4, !dbg !221
+  call void @_ZN4core3fmt9Arguments9new_const17h0ac5a3fce00d9a55E(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #4, !dbg !221
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_5, ptr align 8 @alloc_3565e73f34d7302748197a3f0bc50374) #7, !dbg !221
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_5, ptr align 8 @alloc_3565e73f34d7302748197a3f0bc50374) #7, !dbg !221
   unreachable, !dbg !221
 }
 
 ; core::str::<impl str>::bytes
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17hd4fe5ed2a6b604a8E"(ptr align 1 %self.0, i64 %self.1) unnamed_addr #1 !dbg !222 {
+define internal { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17he043f389ae0a8b1aE"(ptr align 1 %self.0, i64 %self.1) unnamed_addr #1 !dbg !222 {
 start:
   %self.dbg.spill.i = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca { ptr, i64 }, align 8
@@ -128,11 +128,11 @@ start:
   %_5.0 = extractvalue { ptr, i64 } %5, 0, !dbg !247
   %_5.1 = extractvalue { ptr, i64 } %5, 1, !dbg !247
 ; call core::slice::<impl [T]>::iter
-  %6 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h9b6a6a15f4cfa354E"(ptr align 1 %_5.0, i64 %_5.1) #4, !dbg !247
+  %6 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h1e079a9797348949E"(ptr align 1 %_5.0, i64 %_5.1) #4, !dbg !247
   %_3.0 = extractvalue { ptr, ptr } %6, 0, !dbg !247
   %_3.1 = extractvalue { ptr, ptr } %6, 1, !dbg !247
 ; call core::iter::traits::iterator::Iterator::copied
-  %7 = call { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17hf229e701e993113fE(ptr %_3.0, ptr %_3.1) #4, !dbg !247
+  %7 = call { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17h1514b981672a942eE(ptr %_3.0, ptr %_3.1) #4, !dbg !247
   %_2.0 = extractvalue { ptr, ptr } %7, 0, !dbg !247
   %_2.1 = extractvalue { ptr, ptr } %7, 1, !dbg !247
   %8 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !248
@@ -150,7 +150,7 @@ start:
 
 ; core::iter::traits::iterator::Iterator::copied
 ; Function Attrs: noredzone nounwind
-define { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17hf229e701e993113fE(ptr %self.0, ptr %self.1) unnamed_addr #0 !dbg !250 {
+define { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17h1514b981672a942eE(ptr %self.0, ptr %self.1) unnamed_addr #0 !dbg !250 {
 start:
   %self.dbg.spill = alloca { ptr, ptr }, align 8
   %0 = getelementptr inbounds { ptr, ptr }, ptr %self.dbg.spill, i32 0, i32 0
@@ -159,7 +159,7 @@ start:
   store ptr %self.1, ptr %1, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !258, metadata !DIExpression()), !dbg !261
 ; call core::iter::adapters::copied::Copied<I>::new
-  %2 = call { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h32f21c56e144fe64E"(ptr %self.0, ptr %self.1) #4, !dbg !262
+  %2 = call { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h687c545862c1b7a7E"(ptr %self.0, ptr %self.1) #4, !dbg !262
   %3 = extractvalue { ptr, ptr } %2, 0, !dbg !262
   %4 = extractvalue { ptr, ptr } %2, 1, !dbg !262
   %5 = insertvalue { ptr, ptr } poison, ptr %3, 0, !dbg !263
@@ -169,7 +169,7 @@ start:
 
 ; core::iter::adapters::copied::Copied<I>::new
 ; Function Attrs: noredzone nounwind
-define { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h32f21c56e144fe64E"(ptr %it.0, ptr %it.1) unnamed_addr #0 !dbg !264 {
+define { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h687c545862c1b7a7E"(ptr %it.0, ptr %it.1) unnamed_addr #0 !dbg !264 {
 start:
   %it.dbg.spill = alloca { ptr, ptr }, align 8
   %0 = alloca { ptr, ptr }, align 8
@@ -193,7 +193,7 @@ start:
 
 ; core::sync::atomic::atomic_load
 ; Function Attrs: inlinehint noredzone nounwind
-define ptr @_ZN4core4sync6atomic11atomic_load17ha41a257be8f0e917E(ptr %dst, i8 %0) unnamed_addr #1 !dbg !270 {
+define ptr @_ZN4core4sync6atomic11atomic_load17hb5a59cd47eb7658dE(ptr %dst, i8 %0) unnamed_addr #1 !dbg !270 {
 start:
   %dst.dbg.spill = alloca ptr, align 8
   %_8 = alloca %"core::fmt::Arguments<'_>", align 8
@@ -225,9 +225,9 @@ bb3:                                              ; preds = %start
 
 bb6:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hfec148fa76b9bcedE(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_c986ce739acfc2550367c92bb47d7476, i64 1) #4, !dbg !287
+  call void @_ZN4core3fmt9Arguments9new_const17h0ac5a3fce00d9a55E(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_c986ce739acfc2550367c92bb47d7476, i64 1) #4, !dbg !287
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_5, ptr align 8 @alloc_d6d87d062d62cb6f7d56483643968db0) #7, !dbg !287
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_5, ptr align 8 @alloc_32ed42c49aaaff238637115f363ad5b0) #7, !dbg !287
   unreachable, !dbg !287
 
 bb4:                                              ; preds = %start
@@ -238,9 +238,9 @@ bb4:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hfec148fa76b9bcedE(ptr sret(%"core::fmt::Arguments<'_>") %_8, ptr align 8 @alloc_e1829842c862d95248bdb87a26e1372f, i64 1) #4, !dbg !289
+  call void @_ZN4core3fmt9Arguments9new_const17h0ac5a3fce00d9a55E(ptr sret(%"core::fmt::Arguments<'_>") %_8, ptr align 8 @alloc_e1829842c862d95248bdb87a26e1372f, i64 1) #4, !dbg !289
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_8, ptr align 8 @alloc_82e36b07fafd36999c96f8fa2677903e) #7, !dbg !289
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_8, ptr align 8 @alloc_7734ea445cad8f1de7ec4bc5845f15ef) #7, !dbg !289
   unreachable, !dbg !289
 
 bb5:                                              ; preds = %start
@@ -256,7 +256,7 @@ bb9:                                              ; preds = %bb3, %bb4, %bb5
 
 ; core::sync::atomic::AtomicPtr<T>::new
 ; Function Attrs: inlinehint noredzone nounwind
-define i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E"(ptr %p) unnamed_addr #1 !dbg !292 {
+define i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E"(ptr %p) unnamed_addr #1 !dbg !292 {
 start:
   %value.dbg.spill.i = alloca ptr, align 8
   %0 = alloca ptr, align 8
@@ -275,7 +275,7 @@ start:
 
 ; core::sync::atomic::AtomicPtr<T>::load
 ; Function Attrs: inlinehint noredzone nounwind
-define ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %self, i8 %order) unnamed_addr #1 !dbg !317 {
+define ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %self, i8 %order) unnamed_addr #1 !dbg !317 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %order.dbg.spill = alloca i8, align 1
@@ -287,13 +287,13 @@ start:
   store ptr %self, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !326, metadata !DIExpression()), !dbg !333
 ; call core::sync::atomic::atomic_load
-  %0 = call ptr @_ZN4core4sync6atomic11atomic_load17ha41a257be8f0e917E(ptr %self, i8 %order) #4, !dbg !335
+  %0 = call ptr @_ZN4core4sync6atomic11atomic_load17hb5a59cd47eb7658dE(ptr %self, i8 %order) #4, !dbg !335
   ret ptr %0, !dbg !336
 }
 
 ; core::option::Option<&T>::copied
 ; Function Attrs: noredzone nounwind
-define { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17hed3b03d5f9dd6849E"(ptr align 1 %0) unnamed_addr #0 !dbg !337 {
+define { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17h7cf6c21708c7801fE"(ptr align 1 %0) unnamed_addr #0 !dbg !337 {
 start:
   %v.dbg.spill = alloca i8, align 1
   %1 = alloca { i8, i8 }, align 1
@@ -338,7 +338,7 @@ bb4:                                              ; preds = %bb1, %bb3
 
 ; core::core_arch::x86::sse2::_mm_pause
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() unnamed_addr #1 !dbg !367 {
+define internal void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() unnamed_addr #1 !dbg !367 {
 start:
   call void @llvm.x86.sse2.pause() #4, !dbg !374
   ret void, !dbg !375
@@ -346,7 +346,7 @@ start:
 
 ; <I as core::iter::traits::collect::IntoIterator>::into_iter
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h2603b9adfacff9bfE"(ptr %self.0, ptr %self.1) unnamed_addr #1 !dbg !376 {
+define { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17he3c3b787637d6089E"(ptr %self.0, ptr %self.1) unnamed_addr #1 !dbg !376 {
 start:
   %self.dbg.spill = alloca { ptr, ptr }, align 8
   %0 = getelementptr inbounds { ptr, ptr }, ptr %self.dbg.spill, i32 0, i32 0
@@ -361,7 +361,7 @@ start:
 
 ; x86_64::instructions::port::PortGeneric<T,A>::new
 ; Function Attrs: inlinehint noredzone nounwind
-define i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h16b08ba3d2a59066E"(i16 %port) unnamed_addr #1 !dbg !388 {
+define i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h0d910a274970db38E"(i16 %port) unnamed_addr #1 !dbg !388 {
 start:
   %port.dbg.spill = alloca i16, align 2
   %0 = alloca i16, align 2
@@ -374,7 +374,7 @@ start:
 
 ; x86_64::instructions::port::PortGeneric<T,A>::new
 ; Function Attrs: inlinehint noredzone nounwind
-define i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h31a0435ea77180f7E"(i16 %port) unnamed_addr #1 !dbg !417 {
+define i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h50e1cb903ad67d3cE"(i16 %port) unnamed_addr #1 !dbg !417 {
 start:
   %port.dbg.spill = alloca i16, align 2
   %0 = alloca i16, align 2
@@ -387,7 +387,7 @@ start:
 
 ; x86_64::instructions::port::PortGeneric<T,A>::new
 ; Function Attrs: inlinehint noredzone nounwind
-define i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hc46d4bfbe056d27dE"(i16 %port) unnamed_addr #1 !dbg !441 {
+define i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hcb200592ef9058a6E"(i16 %port) unnamed_addr #1 !dbg !441 {
 start:
   %port.dbg.spill = alloca i16, align 2
   %0 = alloca i16, align 2
@@ -400,33 +400,33 @@ start:
 
 ; x86_64::instructions::port::PortGeneric<T,A>::read
 ; Function Attrs: inlinehint noredzone nounwind
-define i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17ha0d343901fa23a46E"(ptr align 2 %self) unnamed_addr #1 !dbg !465 {
+define i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17h23391e86d50ad379E"(ptr align 2 %self) unnamed_addr #1 !dbg !465 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !470, metadata !DIExpression()), !dbg !471
   %_2 = load i16, ptr %self, align 2, !dbg !472, !noundef !42
 ; call x86_64::instructions::port::<impl x86_64::structures::port::PortRead for u8>::read_from_port
-  %0 = call i8 @"_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17hf9d70cab70fb54cdE"(i16 %_2) #4, !dbg !473
+  %0 = call i8 @"_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17h2375a717feb954ceE"(i16 %_2) #4, !dbg !473
   ret i8 %0, !dbg !474
 }
 
 ; x86_64::instructions::port::PortGeneric<T,A>::read
 ; Function Attrs: inlinehint noredzone nounwind
-define i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17hd213f1e81433e525E"(ptr align 2 %self) unnamed_addr #1 !dbg !475 {
+define i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17hcd71549c41c00c6aE"(ptr align 2 %self) unnamed_addr #1 !dbg !475 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !480, metadata !DIExpression()), !dbg !481
   %_2 = load i16, ptr %self, align 2, !dbg !482, !noundef !42
 ; call x86_64::instructions::port::<impl x86_64::structures::port::PortRead for u8>::read_from_port
-  %0 = call i8 @"_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17hf9d70cab70fb54cdE"(i16 %_2) #4, !dbg !483
+  %0 = call i8 @"_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17h2375a717feb954ceE"(i16 %_2) #4, !dbg !483
   ret i8 %0, !dbg !484
 }
 
 ; x86_64::instructions::port::PortGeneric<T,A>::write
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E"(ptr align 2 %self, i8 %value) unnamed_addr #1 !dbg !485 {
+define void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E"(ptr align 2 %self, i8 %value) unnamed_addr #1 !dbg !485 {
 start:
   %value.dbg.spill = alloca i8, align 1
   %self.dbg.spill = alloca ptr, align 8
@@ -436,13 +436,13 @@ start:
   call void @llvm.dbg.declare(metadata ptr %value.dbg.spill, metadata !490, metadata !DIExpression()), !dbg !492
   %_3 = load i16, ptr %self, align 2, !dbg !493, !noundef !42
 ; call x86_64::instructions::port::<impl x86_64::structures::port::PortWrite for u8>::write_to_port
-  call void @"_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h89d54a86420a7cc9E"(i16 %_3, i8 %value) #4, !dbg !494
+  call void @"_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h70676a96eafd1e4cE"(i16 %_3, i8 %value) #4, !dbg !494
   ret void, !dbg !495
 }
 
 ; x86_64::instructions::port::PortGeneric<T,A>::write
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %self, i8 %value) unnamed_addr #1 !dbg !496 {
+define void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %self, i8 %value) unnamed_addr #1 !dbg !496 {
 start:
   %value.dbg.spill = alloca i8, align 1
   %self.dbg.spill = alloca ptr, align 8
@@ -452,13 +452,13 @@ start:
   call void @llvm.dbg.declare(metadata ptr %value.dbg.spill, metadata !502, metadata !DIExpression()), !dbg !504
   %_3 = load i16, ptr %self, align 2, !dbg !505, !noundef !42
 ; call x86_64::instructions::port::<impl x86_64::structures::port::PortWrite for u8>::write_to_port
-  call void @"_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h89d54a86420a7cc9E"(i16 %_3, i8 %value) #4, !dbg !506
+  call void @"_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h70676a96eafd1e4cE"(i16 %_3, i8 %value) #4, !dbg !506
   ret void, !dbg !507
 }
 
 ; x86_64::instructions::port::<impl x86_64::structures::port::PortRead for u8>::read_from_port
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @"_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17hf9d70cab70fb54cdE"(i16 %port) unnamed_addr #1 !dbg !508 {
+define internal i8 @"_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17h2375a717feb954ceE"(i16 %port) unnamed_addr #1 !dbg !508 {
 start:
   %port.dbg.spill = alloca i16, align 2
   %0 = alloca i8, align 1
@@ -473,7 +473,7 @@ start:
 
 ; x86_64::instructions::port::<impl x86_64::structures::port::PortWrite for u8>::write_to_port
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h89d54a86420a7cc9E"(i16 %port, i8 %value) unnamed_addr #1 !dbg !521 {
+define internal void @"_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h70676a96eafd1e4cE"(i16 %port, i8 %value) unnamed_addr #1 !dbg !521 {
 start:
   %value.dbg.spill = alloca i8, align 1
   %port.dbg.spill = alloca i16, align 2
@@ -487,13 +487,13 @@ start:
 
 ; <core::str::iter::Bytes as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hce769cbdd3de84a4E"(ptr align 8 %self) unnamed_addr #1 !dbg !533 {
+define internal { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17ha08c13afdfece2c2E"(ptr align 8 %self) unnamed_addr #1 !dbg !533 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !540, metadata !DIExpression()), !dbg !541
 ; call <core::iter::adapters::copied::Copied<I> as core::iter::traits::iterator::Iterator>::next
-  %0 = call { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h5e84b6fc4a340e57E"(ptr align 8 %self) #4, !dbg !542
+  %0 = call { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h9159c6b0ae74d5eaE"(ptr align 8 %self) #4, !dbg !542
   %1 = extractvalue { i8, i8 } %0, 0, !dbg !542
   %2 = trunc i8 %1 to i1, !dbg !542
   %3 = extractvalue { i8, i8 } %0, 1, !dbg !542
@@ -505,7 +505,7 @@ start:
 
 ; uart_16550::mmio::MmioSerialPort::init
 ; Function Attrs: noredzone nounwind
-define void @_ZN10uart_165504mmio14MmioSerialPort4init17hbe2aa235581bb972E(ptr align 8 %self) unnamed_addr #0 !dbg !544 {
+define void @_ZN10uart_165504mmio14MmioSerialPort4init17hde07563e27283a64E(ptr align 8 %self) unnamed_addr #0 !dbg !544 {
 start:
   %val.dbg.spill.i13 = alloca i8, align 1
   %self.dbg.spill.i14 = alloca ptr, align 8
@@ -540,34 +540,34 @@ start:
   store i8 0, ptr %_4, align 1, !dbg !573
   %0 = load i8, ptr %_4, align 1, !dbg !572, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %self_int_en = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %_3, i8 %0) #4, !dbg !572
+  %self_int_en = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %_3, i8 %0) #4, !dbg !572
   store ptr %self_int_en, ptr %self_int_en.dbg.spill, align 8, !dbg !572
   call void @llvm.dbg.declare(metadata ptr %self_int_en.dbg.spill, metadata !561, metadata !DIExpression()), !dbg !574
   %_6 = getelementptr inbounds %"mmio::MmioSerialPort", ptr %self, i32 0, i32 3, !dbg !575
   store i8 0, ptr %_7, align 1, !dbg !576
   %1 = load i8, ptr %_7, align 1, !dbg !575, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %self_line_ctrl = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %_6, i8 %1) #4, !dbg !575
+  %self_line_ctrl = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %_6, i8 %1) #4, !dbg !575
   store ptr %self_line_ctrl, ptr %self_line_ctrl.dbg.spill, align 8, !dbg !575
   call void @llvm.dbg.declare(metadata ptr %self_line_ctrl.dbg.spill, metadata !563, metadata !DIExpression()), !dbg !577
   store i8 0, ptr %_10, align 1, !dbg !578
   %2 = load i8, ptr %_10, align 1, !dbg !579, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %self_data = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %self, i8 %2) #4, !dbg !579
+  %self_data = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %self, i8 %2) #4, !dbg !579
   store ptr %self_data, ptr %self_data.dbg.spill, align 8, !dbg !579
   call void @llvm.dbg.declare(metadata ptr %self_data.dbg.spill, metadata !565, metadata !DIExpression()), !dbg !580
   %_12 = getelementptr inbounds %"mmio::MmioSerialPort", ptr %self, i32 0, i32 2, !dbg !581
   store i8 0, ptr %_13, align 1, !dbg !582
   %3 = load i8, ptr %_13, align 1, !dbg !581, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %self_fifo_ctrl = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %_12, i8 %3) #4, !dbg !581
+  %self_fifo_ctrl = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %_12, i8 %3) #4, !dbg !581
   store ptr %self_fifo_ctrl, ptr %self_fifo_ctrl.dbg.spill, align 8, !dbg !581
   call void @llvm.dbg.declare(metadata ptr %self_fifo_ctrl.dbg.spill, metadata !567, metadata !DIExpression()), !dbg !583
   %_15 = getelementptr inbounds %"mmio::MmioSerialPort", ptr %self, i32 0, i32 4, !dbg !584
   store i8 0, ptr %_16, align 1, !dbg !585
   %4 = load i8, ptr %_16, align 1, !dbg !584, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %self_modem_ctrl = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %_15, i8 %4) #4, !dbg !584
+  %self_modem_ctrl = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %_15, i8 %4) #4, !dbg !584
   store ptr %self_modem_ctrl, ptr %self_modem_ctrl.dbg.spill, align 8, !dbg !584
   call void @llvm.dbg.declare(metadata ptr %self_modem_ctrl.dbg.spill, metadata !569, metadata !DIExpression()), !dbg !586
   store ptr %self_int_en, ptr %self.dbg.spill.i14, align 8
@@ -575,55 +575,55 @@ start:
   store i8 0, ptr %val.dbg.spill.i13, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i13, metadata !595, metadata !DIExpression()), !dbg !598
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_int_en, i8 0) #4, !dbg !599
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_int_en, i8 0) #4, !dbg !599
   store ptr %self_line_ctrl, ptr %self.dbg.spill.i12, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i12, metadata !587, metadata !DIExpression()), !dbg !600
   store i8 -128, ptr %val.dbg.spill.i11, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i11, metadata !595, metadata !DIExpression()), !dbg !602
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_line_ctrl, i8 -128) #4, !dbg !603
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_line_ctrl, i8 -128) #4, !dbg !603
   store ptr %self_data, ptr %self.dbg.spill.i10, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i10, metadata !587, metadata !DIExpression()), !dbg !604
   store i8 3, ptr %val.dbg.spill.i9, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i9, metadata !595, metadata !DIExpression()), !dbg !606
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_data, i8 3) #4, !dbg !607
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_data, i8 3) #4, !dbg !607
   store ptr %self_int_en, ptr %self.dbg.spill.i8, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i8, metadata !587, metadata !DIExpression()), !dbg !608
   store i8 0, ptr %val.dbg.spill.i7, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i7, metadata !595, metadata !DIExpression()), !dbg !610
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_int_en, i8 0) #4, !dbg !611
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_int_en, i8 0) #4, !dbg !611
   store ptr %self_line_ctrl, ptr %self.dbg.spill.i6, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i6, metadata !587, metadata !DIExpression()), !dbg !612
   store i8 3, ptr %val.dbg.spill.i5, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i5, metadata !595, metadata !DIExpression()), !dbg !614
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_line_ctrl, i8 3) #4, !dbg !615
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_line_ctrl, i8 3) #4, !dbg !615
   store ptr %self_fifo_ctrl, ptr %self.dbg.spill.i4, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i4, metadata !587, metadata !DIExpression()), !dbg !616
   store i8 -57, ptr %val.dbg.spill.i3, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i3, metadata !595, metadata !DIExpression()), !dbg !618
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_fifo_ctrl, i8 -57) #4, !dbg !619
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_fifo_ctrl, i8 -57) #4, !dbg !619
   store ptr %self_modem_ctrl, ptr %self.dbg.spill.i2, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i2, metadata !587, metadata !DIExpression()), !dbg !620
   store i8 11, ptr %val.dbg.spill.i1, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i1, metadata !595, metadata !DIExpression()), !dbg !622
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_modem_ctrl, i8 11) #4, !dbg !623
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_modem_ctrl, i8 11) #4, !dbg !623
   store ptr %self_int_en, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !587, metadata !DIExpression()), !dbg !624
   store i8 1, ptr %val.dbg.spill.i, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i, metadata !595, metadata !DIExpression()), !dbg !626
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_int_en, i8 1) #4, !dbg !627
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_int_en, i8 1) #4, !dbg !627
   ret void, !dbg !628
 }
 
 ; uart_16550::mmio::MmioSerialPort::line_sts
 ; Function Attrs: noredzone nounwind
-define internal i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h6f6ae94a007132d2E(ptr align 8 %self) unnamed_addr #0 !dbg !629 {
+define internal i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h98b6c871479b8e42E(ptr align 8 %self) unnamed_addr #0 !dbg !629 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_5 = alloca i8, align 1
@@ -633,16 +633,16 @@ start:
   store i8 0, ptr %_5, align 1, !dbg !639
   %0 = load i8, ptr %_5, align 1, !dbg !638, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %_3 = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %_4, i8 %0) #4, !dbg !638
+  %_3 = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %_4, i8 %0) #4, !dbg !638
   %_2 = load i8, ptr %_3, align 1, !dbg !640, !noundef !42
 ; call uart_16550::LineStsFlags::from_bits_truncate
-  %1 = call i8 @_ZN10uart_1655012LineStsFlags18from_bits_truncate17hc8086a3d0ef180c9E(i8 %_2) #4, !dbg !641
+  %1 = call i8 @_ZN10uart_1655012LineStsFlags18from_bits_truncate17h6abf08042c0286daE(i8 %_2) #4, !dbg !641
   ret i8 %1, !dbg !642
 }
 
 ; uart_16550::mmio::MmioSerialPort::send
 ; Function Attrs: noredzone nounwind
-define void @_ZN10uart_165504mmio14MmioSerialPort4send17h46f8df853628b299E(ptr align 8 %self, i8 %data) unnamed_addr #0 !dbg !643 {
+define void @_ZN10uart_165504mmio14MmioSerialPort4send17h8c2479683b08c4f3E(ptr align 8 %self, i8 %data) unnamed_addr #0 !dbg !643 {
 start:
   %val.dbg.spill.i5 = alloca i8, align 1
   %self.dbg.spill.i6 = alloca ptr, align 8
@@ -667,7 +667,7 @@ start:
   store i8 0, ptr %_5, align 1, !dbg !653
   %0 = load i8, ptr %_5, align 1, !dbg !654, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %self_data = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %self, i8 %0) #4, !dbg !654
+  %self_data = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %self, i8 %0) #4, !dbg !654
   store ptr %self_data, ptr %self_data.dbg.spill, align 8, !dbg !654
   call void @llvm.dbg.declare(metadata ptr %self_data.dbg.spill, metadata !649, metadata !DIExpression()), !dbg !655
   switch i8 %data, label %bb17 [
@@ -677,19 +677,19 @@ start:
 
 bb17:                                             ; preds = %bb20, %start
 ; call uart_16550::mmio::MmioSerialPort::line_sts
-  %1 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h6f6ae94a007132d2E(ptr align 8 %self) #4, !dbg !657
+  %1 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h98b6c871479b8e42E(ptr align 8 %self) #4, !dbg !657
   store i8 %1, ptr %_27, align 1, !dbg !657
 ; call uart_16550::LineStsFlags::contains
-  %_25 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_27, i8 32) #4, !dbg !657
+  %_25 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_27, i8 32) #4, !dbg !657
   %_24 = xor i1 %_25, true, !dbg !658
   br i1 %_24, label %bb20, label %bb21, !dbg !658
 
 bb2:                                              ; preds = %bb5, %start, %start
 ; call uart_16550::mmio::MmioSerialPort::line_sts
-  %2 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h6f6ae94a007132d2E(ptr align 8 %self) #4, !dbg !659
+  %2 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h98b6c871479b8e42E(ptr align 8 %self) #4, !dbg !659
   store i8 %2, ptr %_10, align 1, !dbg !659
 ; call uart_16550::LineStsFlags::contains
-  %_8 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_10, i8 32) #4, !dbg !659
+  %_8 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_10, i8 32) #4, !dbg !659
   %_7 = xor i1 %_8, true, !dbg !660
   br i1 %_7, label %bb5, label %bb6, !dbg !660
 
@@ -699,12 +699,12 @@ bb21:                                             ; preds = %bb17
   store i8 %data, ptr %val.dbg.spill.i5, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i5, metadata !595, metadata !DIExpression()), !dbg !663
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_data, i8 %data) #4, !dbg !664
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_data, i8 %data) #4, !dbg !664
   br label %bb22, !dbg !665
 
 bb20:                                             ; preds = %bb17
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !666
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !666
   br label %bb17, !dbg !658
 
 bb22:                                             ; preds = %bb16, %bb21
@@ -716,20 +716,20 @@ bb6:                                              ; preds = %bb2
   store i8 8, ptr %val.dbg.spill.i3, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i3, metadata !595, metadata !DIExpression()), !dbg !674
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_data, i8 8) #4, !dbg !675
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_data, i8 8) #4, !dbg !675
   br label %bb7, !dbg !676
 
 bb5:                                              ; preds = %bb2
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !677
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !677
   br label %bb2, !dbg !660
 
 bb7:                                              ; preds = %bb10, %bb6
 ; call uart_16550::mmio::MmioSerialPort::line_sts
-  %3 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h6f6ae94a007132d2E(ptr align 8 %self) #4, !dbg !679
+  %3 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h98b6c871479b8e42E(ptr align 8 %self) #4, !dbg !679
   store i8 %3, ptr %_16, align 1, !dbg !679
 ; call uart_16550::LineStsFlags::contains
-  %_14 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_16, i8 32) #4, !dbg !679
+  %_14 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_16, i8 32) #4, !dbg !679
   %_13 = xor i1 %_14, true, !dbg !680
   br i1 %_13, label %bb10, label %bb11, !dbg !680
 
@@ -739,20 +739,20 @@ bb11:                                             ; preds = %bb7
   store i8 32, ptr %val.dbg.spill.i1, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i1, metadata !595, metadata !DIExpression()), !dbg !683
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_data, i8 32) #4, !dbg !684
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_data, i8 32) #4, !dbg !684
   br label %bb12, !dbg !685
 
 bb10:                                             ; preds = %bb7
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !686
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !686
   br label %bb7, !dbg !680
 
 bb12:                                             ; preds = %bb15, %bb11
 ; call uart_16550::mmio::MmioSerialPort::line_sts
-  %4 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h6f6ae94a007132d2E(ptr align 8 %self) #4, !dbg !688
+  %4 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h98b6c871479b8e42E(ptr align 8 %self) #4, !dbg !688
   store i8 %4, ptr %_22, align 1, !dbg !688
 ; call uart_16550::LineStsFlags::contains
-  %_20 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_22, i8 32) #4, !dbg !688
+  %_20 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_22, i8 32) #4, !dbg !688
   %_19 = xor i1 %_20, true, !dbg !689
   br i1 %_19, label %bb15, label %bb16, !dbg !689
 
@@ -762,18 +762,18 @@ bb16:                                             ; preds = %bb12
   store i8 8, ptr %val.dbg.spill.i, align 1
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill.i, metadata !595, metadata !DIExpression()), !dbg !692
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr %self_data, i8 8) #4, !dbg !693
+  call void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr %self_data, i8 8) #4, !dbg !693
   br label %bb22, !dbg !694
 
 bb15:                                             ; preds = %bb12
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !695
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !695
   br label %bb12, !dbg !689
 }
 
 ; uart_16550::mmio::MmioSerialPort::receive
 ; Function Attrs: noredzone nounwind
-define i8 @_ZN10uart_165504mmio14MmioSerialPort7receive17hd1e267363d68d126E(ptr align 8 %self) unnamed_addr #0 !dbg !697 {
+define i8 @_ZN10uart_165504mmio14MmioSerialPort7receive17h8f7b8f3b990865f4E(ptr align 8 %self) unnamed_addr #0 !dbg !697 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %self_data.dbg.spill = alloca ptr, align 8
@@ -785,17 +785,17 @@ start:
   store i8 0, ptr %_4, align 1, !dbg !705
   %0 = load i8, ptr %_4, align 1, !dbg !706, !range !284, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::load
-  %self_data = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E"(ptr align 8 %self, i8 %0) #4, !dbg !706
+  %self_data = call ptr @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE"(ptr align 8 %self, i8 %0) #4, !dbg !706
   store ptr %self_data, ptr %self_data.dbg.spill, align 8, !dbg !706
   call void @llvm.dbg.declare(metadata ptr %self_data.dbg.spill, metadata !702, metadata !DIExpression()), !dbg !707
   br label %bb1, !dbg !706
 
 bb1:                                              ; preds = %bb4, %start
 ; call uart_16550::mmio::MmioSerialPort::line_sts
-  %1 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h6f6ae94a007132d2E(ptr align 8 %self) #4, !dbg !708
+  %1 = call i8 @_ZN10uart_165504mmio14MmioSerialPort8line_sts17h98b6c871479b8e42E(ptr align 8 %self) #4, !dbg !708
   store i8 %1, ptr %_9, align 1, !dbg !708
 ; call uart_16550::LineStsFlags::contains
-  %_7 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_9, i8 1) #4, !dbg !708
+  %_7 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_9, i8 1) #4, !dbg !708
   %_6 = xor i1 %_7, true, !dbg !709
   br i1 %_6, label %bb4, label %bb5, !dbg !709
 
@@ -803,18 +803,18 @@ bb5:                                              ; preds = %bb1
   store ptr %self_data, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !710, metadata !DIExpression()), !dbg !715
 ; call core::ptr::read
-  %2 = call i8 @_ZN4core3ptr4read17h4f58ac4bcbf0876fE(ptr %self_data) #4, !dbg !717
+  %2 = call i8 @_ZN4core3ptr4read17h8ebb658d47c6e29aE(ptr %self_data) #4, !dbg !717
   ret i8 %2, !dbg !718
 
 bb4:                                              ; preds = %bb1
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !719
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !719
   br label %bb1, !dbg !709
 }
 
 ; <uart_16550::mmio::MmioSerialPort as core::fmt::Write>::write_str
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN69_$LT$uart_16550..mmio..MmioSerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17h30313f30b4164dccE"(ptr align 8 %self, ptr align 1 %s.0, i64 %s.1) unnamed_addr #0 !dbg !721 {
+define zeroext i1 @"_ZN69_$LT$uart_16550..mmio..MmioSerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17h4d42b801d07e7030E"(ptr align 8 %self, ptr align 1 %s.0, i64 %s.1) unnamed_addr #0 !dbg !721 {
 start:
   %byte.dbg.spill = alloca i8, align 1
   %s.dbg.spill = alloca { ptr, i64 }, align 8
@@ -831,11 +831,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %s.dbg.spill, metadata !727, metadata !DIExpression()), !dbg !733
   call void @llvm.dbg.declare(metadata ptr %iter, metadata !728, metadata !DIExpression()), !dbg !734
 ; call core::str::<impl str>::bytes
-  %3 = call { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17hd4fe5ed2a6b604a8E"(ptr align 1 %s.0, i64 %s.1) #4, !dbg !735
+  %3 = call { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17he043f389ae0a8b1aE"(ptr align 1 %s.0, i64 %s.1) #4, !dbg !735
   %_4.0 = extractvalue { ptr, ptr } %3, 0, !dbg !735
   %_4.1 = extractvalue { ptr, ptr } %3, 1, !dbg !735
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %4 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h2603b9adfacff9bfE"(ptr %_4.0, ptr %_4.1) #4, !dbg !735
+  %4 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17he3c3b787637d6089E"(ptr %_4.0, ptr %_4.1) #4, !dbg !735
   %_3.0 = extractvalue { ptr, ptr } %4, 0, !dbg !735
   %_3.1 = extractvalue { ptr, ptr } %4, 1, !dbg !735
   %5 = getelementptr inbounds { ptr, ptr }, ptr %iter, i32 0, i32 0, !dbg !735
@@ -846,7 +846,7 @@ start:
 
 bb3:                                              ; preds = %bb5, %start
 ; call <core::str::iter::Bytes as core::iter::traits::iterator::Iterator>::next
-  %7 = call { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hce769cbdd3de84a4E"(ptr align 8 %iter) #4, !dbg !734
+  %7 = call { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17ha08c13afdfece2c2E"(ptr align 8 %iter) #4, !dbg !734
   store { i8, i8 } %7, ptr %_6, align 1, !dbg !734
   %8 = load i8, ptr %_6, align 1, !dbg !734, !range !366, !noundef !42
   %9 = trunc i8 %8 to i1, !dbg !734
@@ -866,7 +866,7 @@ bb5:                                              ; preds = %bb3
   store i8 %byte, ptr %byte.dbg.spill, align 1, !dbg !739
   call void @llvm.dbg.declare(metadata ptr %byte.dbg.spill, metadata !730, metadata !DIExpression()), !dbg !740
 ; call uart_16550::mmio::MmioSerialPort::send
-  call void @_ZN10uart_165504mmio14MmioSerialPort4send17h46f8df853628b299E(ptr align 8 %self, i8 %byte) #4, !dbg !741
+  call void @_ZN10uart_165504mmio14MmioSerialPort4send17h8c2479683b08c4f3E(ptr align 8 %self, i8 %byte) #4, !dbg !741
   br label %bb3, !dbg !741
 
 bb6:                                              ; No predecessors!
@@ -875,13 +875,13 @@ bb6:                                              ; No predecessors!
 
 ; uart_16550::port::SerialPort::new
 ; Function Attrs: noredzone nounwind
-define void @_ZN10uart_165504port10SerialPort3new17h234239137422bde5E(ptr sret(%"port::SerialPort") %0, i16 %base) unnamed_addr #0 !dbg !742 {
+define void @_ZN10uart_165504port10SerialPort3new17hd6e36efd445c171eE(ptr sret(%"port::SerialPort") %0, i16 %base) unnamed_addr #0 !dbg !742 {
 start:
   %base.dbg.spill = alloca i16, align 2
   store i16 %base, ptr %base.dbg.spill, align 2
   call void @llvm.dbg.declare(metadata ptr %base.dbg.spill, metadata !756, metadata !DIExpression()), !dbg !757
 ; call x86_64::instructions::port::PortGeneric<T,A>::new
-  %_2 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h31a0435ea77180f7E"(i16 %base) #4, !dbg !758
+  %_2 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h0d910a274970db38E"(i16 %base) #4, !dbg !758
   %1 = call { i16, i1 } @llvm.uadd.with.overflow.i16(i16 %base, i16 1), !dbg !759
   %_5.0 = extractvalue { i16, i1 } %1, 0, !dbg !759
   %_5.1 = extractvalue { i16, i1 } %1, 1, !dbg !759
@@ -890,7 +890,7 @@ start:
 
 bb2:                                              ; preds = %start
 ; call x86_64::instructions::port::PortGeneric<T,A>::new
-  %_3 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hc46d4bfbe056d27dE"(i16 %_5.0) #4, !dbg !760
+  %_3 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hcb200592ef9058a6E"(i16 %_5.0) #4, !dbg !760
   %3 = call { i16, i1 } @llvm.uadd.with.overflow.i16(i16 %base, i16 2), !dbg !761
   %_8.0 = extractvalue { i16, i1 } %3, 0, !dbg !761
   %_8.1 = extractvalue { i16, i1 } %3, 1, !dbg !761
@@ -899,12 +899,12 @@ bb2:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_97046cef643bb8dbc04dcbee238966fc) #7, !dbg !759
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_97046cef643bb8dbc04dcbee238966fc) #7, !dbg !759
   unreachable, !dbg !759
 
 bb4:                                              ; preds = %bb2
 ; call x86_64::instructions::port::PortGeneric<T,A>::new
-  %_6 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hc46d4bfbe056d27dE"(i16 %_8.0) #4, !dbg !762
+  %_6 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hcb200592ef9058a6E"(i16 %_8.0) #4, !dbg !762
   %5 = call { i16, i1 } @llvm.uadd.with.overflow.i16(i16 %base, i16 3), !dbg !763
   %_11.0 = extractvalue { i16, i1 } %5, 0, !dbg !763
   %_11.1 = extractvalue { i16, i1 } %5, 1, !dbg !763
@@ -913,12 +913,12 @@ bb4:                                              ; preds = %bb2
 
 panic1:                                           ; preds = %bb2
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_1424527968993f221cdc1be2155ac1d3) #7, !dbg !761
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_1424527968993f221cdc1be2155ac1d3) #7, !dbg !761
   unreachable, !dbg !761
 
 bb6:                                              ; preds = %bb4
 ; call x86_64::instructions::port::PortGeneric<T,A>::new
-  %_9 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hc46d4bfbe056d27dE"(i16 %_11.0) #4, !dbg !764
+  %_9 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hcb200592ef9058a6E"(i16 %_11.0) #4, !dbg !764
   %7 = call { i16, i1 } @llvm.uadd.with.overflow.i16(i16 %base, i16 4), !dbg !765
   %_14.0 = extractvalue { i16, i1 } %7, 0, !dbg !765
   %_14.1 = extractvalue { i16, i1 } %7, 1, !dbg !765
@@ -927,12 +927,12 @@ bb6:                                              ; preds = %bb4
 
 panic2:                                           ; preds = %bb4
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_bf204813ce4cde5fb3acf338f16aec3c) #7, !dbg !763
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_bf204813ce4cde5fb3acf338f16aec3c) #7, !dbg !763
   unreachable, !dbg !763
 
 bb8:                                              ; preds = %bb6
 ; call x86_64::instructions::port::PortGeneric<T,A>::new
-  %_12 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hc46d4bfbe056d27dE"(i16 %_14.0) #4, !dbg !766
+  %_12 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hcb200592ef9058a6E"(i16 %_14.0) #4, !dbg !766
   %9 = call { i16, i1 } @llvm.uadd.with.overflow.i16(i16 %base, i16 5), !dbg !767
   %_17.0 = extractvalue { i16, i1 } %9, 0, !dbg !767
   %_17.1 = extractvalue { i16, i1 } %9, 1, !dbg !767
@@ -941,12 +941,12 @@ bb8:                                              ; preds = %bb6
 
 panic3:                                           ; preds = %bb6
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_6da33710d55a6c15bb83c1f48361272c) #7, !dbg !765
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_6da33710d55a6c15bb83c1f48361272c) #7, !dbg !765
   unreachable, !dbg !765
 
 bb10:                                             ; preds = %bb8
 ; call x86_64::instructions::port::PortGeneric<T,A>::new
-  %_15 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h16b08ba3d2a59066E"(i16 %_17.0) #4, !dbg !768
+  %_15 = call i16 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h50e1cb903ad67d3cE"(i16 %_17.0) #4, !dbg !768
   store i16 %_2, ptr %0, align 2, !dbg !769
   %11 = getelementptr inbounds %"port::SerialPort", ptr %0, i32 0, i32 1, !dbg !769
   store i16 %_3, ptr %11, align 2, !dbg !769
@@ -962,61 +962,61 @@ bb10:                                             ; preds = %bb8
 
 panic4:                                           ; preds = %bb8
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_33968c780b48a062e7a000ca0b1a855e) #7, !dbg !767
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 28, ptr align 8 @alloc_33968c780b48a062e7a000ca0b1a855e) #7, !dbg !767
   unreachable, !dbg !767
 }
 
 ; uart_16550::port::SerialPort::init
 ; Function Attrs: noredzone nounwind
-define void @_ZN10uart_165504port10SerialPort4init17h1c025ef3a11ca6bcE(ptr align 2 %self) unnamed_addr #0 !dbg !771 {
+define void @_ZN10uart_165504port10SerialPort4init17hfba893a464c351caE(ptr align 2 %self) unnamed_addr #0 !dbg !771 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !776, metadata !DIExpression()), !dbg !777
   %_3 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 1, !dbg !778
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %_3, i8 0) #4, !dbg !778
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %_3, i8 0) #4, !dbg !778
   %_5 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 3, !dbg !779
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %_5, i8 -128) #4, !dbg !779
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %_5, i8 -128) #4, !dbg !779
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E"(ptr align 2 %self, i8 3) #4, !dbg !780
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E"(ptr align 2 %self, i8 3) #4, !dbg !780
   %_9 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 1, !dbg !781
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %_9, i8 0) #4, !dbg !781
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %_9, i8 0) #4, !dbg !781
   %_11 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 3, !dbg !782
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %_11, i8 3) #4, !dbg !782
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %_11, i8 3) #4, !dbg !782
   %_13 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 2, !dbg !783
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %_13, i8 -57) #4, !dbg !783
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %_13, i8 -57) #4, !dbg !783
   %_15 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 4, !dbg !784
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %_15, i8 11) #4, !dbg !784
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %_15, i8 11) #4, !dbg !784
   %_17 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 1, !dbg !785
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE"(ptr align 2 %_17, i8 1) #4, !dbg !785
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE"(ptr align 2 %_17, i8 1) #4, !dbg !785
   ret void, !dbg !786
 }
 
 ; uart_16550::port::SerialPort::line_sts
 ; Function Attrs: noredzone nounwind
-define internal i8 @_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E(ptr align 2 %self) unnamed_addr #0 !dbg !787 {
+define internal i8 @_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE(ptr align 2 %self) unnamed_addr #0 !dbg !787 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !791, metadata !DIExpression()), !dbg !792
   %_3 = getelementptr inbounds %"port::SerialPort", ptr %self, i32 0, i32 5, !dbg !793
 ; call x86_64::instructions::port::PortGeneric<T,A>::read
-  %_2 = call i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17hd213f1e81433e525E"(ptr align 2 %_3) #4, !dbg !793
+  %_2 = call i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17hcd71549c41c00c6aE"(ptr align 2 %_3) #4, !dbg !793
 ; call uart_16550::LineStsFlags::from_bits_truncate
-  %0 = call i8 @_ZN10uart_1655012LineStsFlags18from_bits_truncate17hc8086a3d0ef180c9E(i8 %_2) #4, !dbg !794
+  %0 = call i8 @_ZN10uart_1655012LineStsFlags18from_bits_truncate17h6abf08042c0286daE(i8 %_2) #4, !dbg !794
   ret i8 %0, !dbg !795
 }
 
 ; uart_16550::port::SerialPort::send
 ; Function Attrs: noredzone nounwind
-define void @_ZN10uart_165504port10SerialPort4send17h10e4f2062013a3a4E(ptr align 2 %self, i8 %data) unnamed_addr #0 !dbg !796 {
+define void @_ZN10uart_165504port10SerialPort4send17h0e03b03601beb6e3E(ptr align 2 %self, i8 %data) unnamed_addr #0 !dbg !796 {
 start:
   %data.dbg.spill = alloca i8, align 1
   %self.dbg.spill = alloca ptr, align 8
@@ -1035,30 +1035,30 @@ start:
 
 bb16:                                             ; preds = %bb19, %start
 ; call uart_16550::port::SerialPort::line_sts
-  %0 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E(ptr align 2 %self) #4, !dbg !805
+  %0 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE(ptr align 2 %self) #4, !dbg !805
   store i8 %0, ptr %_24, align 1, !dbg !805
 ; call uart_16550::LineStsFlags::contains
-  %_22 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_24, i8 32) #4, !dbg !805
+  %_22 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_24, i8 32) #4, !dbg !805
   %_21 = xor i1 %_22, true, !dbg !806
   br i1 %_21, label %bb19, label %bb20, !dbg !806
 
 bb1:                                              ; preds = %bb4, %start, %start
 ; call uart_16550::port::SerialPort::line_sts
-  %1 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E(ptr align 2 %self) #4, !dbg !807
+  %1 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE(ptr align 2 %self) #4, !dbg !807
   store i8 %1, ptr %_7, align 1, !dbg !807
 ; call uart_16550::LineStsFlags::contains
-  %_5 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_7, i8 32) #4, !dbg !807
+  %_5 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_7, i8 32) #4, !dbg !807
   %_4 = xor i1 %_5, true, !dbg !808
   br i1 %_4, label %bb4, label %bb5, !dbg !808
 
 bb20:                                             ; preds = %bb16
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E"(ptr align 2 %self, i8 %data) #4, !dbg !809
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E"(ptr align 2 %self, i8 %data) #4, !dbg !809
   br label %bb21, !dbg !809
 
 bb19:                                             ; preds = %bb16
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !810
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !810
   br label %bb16, !dbg !806
 
 bb21:                                             ; preds = %bb15, %bb20
@@ -1066,56 +1066,56 @@ bb21:                                             ; preds = %bb15, %bb20
 
 bb5:                                              ; preds = %bb1
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E"(ptr align 2 %self, i8 8) #4, !dbg !813
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E"(ptr align 2 %self, i8 8) #4, !dbg !813
   br label %bb6, !dbg !813
 
 bb4:                                              ; preds = %bb1
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !814
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !814
   br label %bb1, !dbg !808
 
 bb6:                                              ; preds = %bb9, %bb5
 ; call uart_16550::port::SerialPort::line_sts
-  %2 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E(ptr align 2 %self) #4, !dbg !816
+  %2 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE(ptr align 2 %self) #4, !dbg !816
   store i8 %2, ptr %_13, align 1, !dbg !816
 ; call uart_16550::LineStsFlags::contains
-  %_11 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_13, i8 32) #4, !dbg !816
+  %_11 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_13, i8 32) #4, !dbg !816
   %_10 = xor i1 %_11, true, !dbg !817
   br i1 %_10, label %bb9, label %bb10, !dbg !817
 
 bb10:                                             ; preds = %bb6
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E"(ptr align 2 %self, i8 32) #4, !dbg !818
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E"(ptr align 2 %self, i8 32) #4, !dbg !818
   br label %bb11, !dbg !818
 
 bb9:                                              ; preds = %bb6
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !819
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !819
   br label %bb6, !dbg !817
 
 bb11:                                             ; preds = %bb14, %bb10
 ; call uart_16550::port::SerialPort::line_sts
-  %3 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E(ptr align 2 %self) #4, !dbg !821
+  %3 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE(ptr align 2 %self) #4, !dbg !821
   store i8 %3, ptr %_19, align 1, !dbg !821
 ; call uart_16550::LineStsFlags::contains
-  %_17 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_19, i8 32) #4, !dbg !821
+  %_17 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_19, i8 32) #4, !dbg !821
   %_16 = xor i1 %_17, true, !dbg !822
   br i1 %_16, label %bb14, label %bb15, !dbg !822
 
 bb15:                                             ; preds = %bb11
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E"(ptr align 2 %self, i8 8) #4, !dbg !823
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E"(ptr align 2 %self, i8 8) #4, !dbg !823
   br label %bb21, !dbg !823
 
 bb14:                                             ; preds = %bb11
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !824
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !824
   br label %bb11, !dbg !822
 }
 
 ; uart_16550::port::SerialPort::send_raw
 ; Function Attrs: noredzone nounwind
-define void @_ZN10uart_165504port10SerialPort8send_raw17haafdafed0ad6d549E(ptr align 2 %self, i8 %data) unnamed_addr #0 !dbg !826 {
+define void @_ZN10uart_165504port10SerialPort8send_raw17hbdb0dfb82f27d905E(ptr align 2 %self, i8 %data) unnamed_addr #0 !dbg !826 {
 start:
   %data.dbg.spill = alloca i8, align 1
   %self.dbg.spill = alloca ptr, align 8
@@ -1128,27 +1128,27 @@ start:
 
 bb1:                                              ; preds = %bb4, %start
 ; call uart_16550::port::SerialPort::line_sts
-  %0 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E(ptr align 2 %self) #4, !dbg !833
+  %0 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE(ptr align 2 %self) #4, !dbg !833
   store i8 %0, ptr %_7, align 1, !dbg !833
 ; call uart_16550::LineStsFlags::contains
-  %_5 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_7, i8 32) #4, !dbg !833
+  %_5 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_7, i8 32) #4, !dbg !833
   %_4 = xor i1 %_5, true, !dbg !832
   br i1 %_4, label %bb4, label %bb5, !dbg !832
 
 bb5:                                              ; preds = %bb1
 ; call x86_64::instructions::port::PortGeneric<T,A>::write
-  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E"(ptr align 2 %self, i8 %data) #4, !dbg !834
+  call void @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E"(ptr align 2 %self, i8 %data) #4, !dbg !834
   ret void, !dbg !835
 
 bb4:                                              ; preds = %bb1
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !836
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !836
   br label %bb1, !dbg !832
 }
 
 ; uart_16550::port::SerialPort::receive
 ; Function Attrs: noredzone nounwind
-define i8 @_ZN10uart_165504port10SerialPort7receive17h029874cfe28226e6E(ptr align 2 %self) unnamed_addr #0 !dbg !838 {
+define i8 @_ZN10uart_165504port10SerialPort7receive17h61dc8a9ed202361aE(ptr align 2 %self) unnamed_addr #0 !dbg !838 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_6 = alloca i8, align 1
@@ -1158,27 +1158,27 @@ start:
 
 bb1:                                              ; preds = %bb4, %start
 ; call uart_16550::port::SerialPort::line_sts
-  %0 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E(ptr align 2 %self) #4, !dbg !845
+  %0 = call i8 @_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE(ptr align 2 %self) #4, !dbg !845
   store i8 %0, ptr %_6, align 1, !dbg !845
 ; call uart_16550::LineStsFlags::contains
-  %_4 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %_6, i8 1) #4, !dbg !845
+  %_4 = call zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %_6, i8 1) #4, !dbg !845
   %_3 = xor i1 %_4, true, !dbg !844
   br i1 %_3, label %bb4, label %bb5, !dbg !844
 
 bb5:                                              ; preds = %bb1
 ; call x86_64::instructions::port::PortGeneric<T,A>::read
-  %1 = call i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17ha0d343901fa23a46E"(ptr align 2 %self) #4, !dbg !846
+  %1 = call i8 @"_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17h23391e86d50ad379E"(ptr align 2 %self) #4, !dbg !846
   ret i8 %1, !dbg !847
 
 bb4:                                              ; preds = %bb1
 ; call core::core_arch::x86::sse2::_mm_pause
-  call void @_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E() #4, !dbg !848
+  call void @_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E() #4, !dbg !848
   br label %bb1, !dbg !844
 }
 
 ; <uart_16550::port::SerialPort as core::fmt::Write>::write_str
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN65_$LT$uart_16550..port..SerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17hdaf0532d5dffbd32E"(ptr align 2 %self, ptr align 1 %s.0, i64 %s.1) unnamed_addr #0 !dbg !850 {
+define zeroext i1 @"_ZN65_$LT$uart_16550..port..SerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17h44b30947687f817bE"(ptr align 2 %self, ptr align 1 %s.0, i64 %s.1) unnamed_addr #0 !dbg !850 {
 start:
   %byte.dbg.spill = alloca i8, align 1
   %s.dbg.spill = alloca { ptr, i64 }, align 8
@@ -1195,11 +1195,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %s.dbg.spill, metadata !856, metadata !DIExpression()), !dbg !862
   call void @llvm.dbg.declare(metadata ptr %iter, metadata !857, metadata !DIExpression()), !dbg !863
 ; call core::str::<impl str>::bytes
-  %3 = call { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17hd4fe5ed2a6b604a8E"(ptr align 1 %s.0, i64 %s.1) #4, !dbg !864
+  %3 = call { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17he043f389ae0a8b1aE"(ptr align 1 %s.0, i64 %s.1) #4, !dbg !864
   %_4.0 = extractvalue { ptr, ptr } %3, 0, !dbg !864
   %_4.1 = extractvalue { ptr, ptr } %3, 1, !dbg !864
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %4 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h2603b9adfacff9bfE"(ptr %_4.0, ptr %_4.1) #4, !dbg !864
+  %4 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17he3c3b787637d6089E"(ptr %_4.0, ptr %_4.1) #4, !dbg !864
   %_3.0 = extractvalue { ptr, ptr } %4, 0, !dbg !864
   %_3.1 = extractvalue { ptr, ptr } %4, 1, !dbg !864
   %5 = getelementptr inbounds { ptr, ptr }, ptr %iter, i32 0, i32 0, !dbg !864
@@ -1210,7 +1210,7 @@ start:
 
 bb3:                                              ; preds = %bb5, %start
 ; call <core::str::iter::Bytes as core::iter::traits::iterator::Iterator>::next
-  %7 = call { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hce769cbdd3de84a4E"(ptr align 8 %iter) #4, !dbg !863
+  %7 = call { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17ha08c13afdfece2c2E"(ptr align 8 %iter) #4, !dbg !863
   store { i8, i8 } %7, ptr %_6, align 1, !dbg !863
   %8 = load i8, ptr %_6, align 1, !dbg !863, !range !366, !noundef !42
   %9 = trunc i8 %8 to i1, !dbg !863
@@ -1230,7 +1230,7 @@ bb5:                                              ; preds = %bb3
   store i8 %byte, ptr %byte.dbg.spill, align 1, !dbg !868
   call void @llvm.dbg.declare(metadata ptr %byte.dbg.spill, metadata !859, metadata !DIExpression()), !dbg !869
 ; call uart_16550::port::SerialPort::send
-  call void @_ZN10uart_165504port10SerialPort4send17h10e4f2062013a3a4E(ptr align 2 %self, i8 %byte) #4, !dbg !870
+  call void @_ZN10uart_165504port10SerialPort4send17h0e03b03601beb6e3E(ptr align 2 %self, i8 %byte) #4, !dbg !870
   br label %bb3, !dbg !870
 
 bb6:                                              ; No predecessors!
@@ -1239,7 +1239,7 @@ bb6:                                              ; No predecessors!
 
 ; uart_16550::mmio::MmioSerialPort::new
 ; Function Attrs: noredzone nounwind
-define void @_ZN10uart_165504mmio14MmioSerialPort3new17h67da30b38856d3bcE(ptr sret(%"mmio::MmioSerialPort") %0, i64 %base) unnamed_addr #0 !dbg !871 {
+define void @_ZN10uart_165504mmio14MmioSerialPort3new17h41bd780fc8f00d5fE(ptr sret(%"mmio::MmioSerialPort") %0, i64 %base) unnamed_addr #0 !dbg !871 {
 start:
   %1 = alloca ptr, align 8
   %count.dbg.spill.i20 = alloca i64, align 8
@@ -1286,7 +1286,7 @@ start:
   store ptr %base_pointer, ptr %base_pointer.dbg.spill, align 8, !dbg !879
   call void @llvm.dbg.declare(metadata ptr %base_pointer.dbg.spill, metadata !876, metadata !DIExpression()), !dbg !880
 ; call core::sync::atomic::AtomicPtr<T>::new
-  %12 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E"(ptr %base_pointer) #4, !dbg !881
+  %12 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E"(ptr %base_pointer) #4, !dbg !881
   store i64 %12, ptr %11, align 8, !dbg !881
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_3, ptr align 8 %11, i64 8, i1 false), !dbg !881
   store ptr %base_pointer, ptr %self.dbg.spill.i8, align 8
@@ -1301,7 +1301,7 @@ start:
   store ptr %13, ptr %5, align 8, !dbg !901
   %_3.i = load ptr, ptr %5, align 8, !dbg !901, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::new
-  %14 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E"(ptr %_3.i) #4, !dbg !902
+  %14 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E"(ptr %_3.i) #4, !dbg !902
   store i64 %14, ptr %10, align 8, !dbg !902
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_4, ptr align 8 %10, i64 8, i1 false), !dbg !902
   store ptr %base_pointer, ptr %self.dbg.spill.i6, align 8
@@ -1316,7 +1316,7 @@ start:
   store ptr %15, ptr %4, align 8, !dbg !909
   %_3.i13 = load ptr, ptr %4, align 8, !dbg !909, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::new
-  %16 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E"(ptr %_3.i13) #4, !dbg !910
+  %16 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E"(ptr %_3.i13) #4, !dbg !910
   store i64 %16, ptr %9, align 8, !dbg !910
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_6, ptr align 8 %9, i64 8, i1 false), !dbg !910
   store ptr %base_pointer, ptr %self.dbg.spill.i4, align 8
@@ -1331,7 +1331,7 @@ start:
   store ptr %17, ptr %3, align 8, !dbg !917
   %_3.i16 = load ptr, ptr %3, align 8, !dbg !917, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::new
-  %18 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E"(ptr %_3.i16) #4, !dbg !918
+  %18 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E"(ptr %_3.i16) #4, !dbg !918
   store i64 %18, ptr %8, align 8, !dbg !918
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_8, ptr align 8 %8, i64 8, i1 false), !dbg !918
   store ptr %base_pointer, ptr %self.dbg.spill.i2, align 8
@@ -1346,7 +1346,7 @@ start:
   store ptr %19, ptr %2, align 8, !dbg !925
   %_3.i19 = load ptr, ptr %2, align 8, !dbg !925, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::new
-  %20 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E"(ptr %_3.i19) #4, !dbg !926
+  %20 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E"(ptr %_3.i19) #4, !dbg !926
   store i64 %20, ptr %7, align 8, !dbg !926
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_10, ptr align 8 %7, i64 8, i1 false), !dbg !926
   store ptr %base_pointer, ptr %self.dbg.spill.i, align 8
@@ -1361,7 +1361,7 @@ start:
   store ptr %21, ptr %1, align 8, !dbg !933
   %_3.i22 = load ptr, ptr %1, align 8, !dbg !933, !noundef !42
 ; call core::sync::atomic::AtomicPtr<T>::new
-  %22 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E"(ptr %_3.i22) #4, !dbg !934
+  %22 = call i64 @"_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E"(ptr %_3.i22) #4, !dbg !934
   store i64 %22, ptr %6, align 8, !dbg !934
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_12, ptr align 8 %6, i64 8, i1 false), !dbg !934
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %0, ptr align 8 %_3, i64 8, i1 false), !dbg !935
@@ -1380,7 +1380,7 @@ start:
 
 ; <uart_16550::IntEnFlags as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17ha0277cd5e424e4ffE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !937 {
+define zeroext i1 @"_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17hedb452de0345bd22E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !937 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1456,12 +1456,12 @@ start:
   call void @llvm.dbg.declare(metadata ptr %extra_bits, metadata !1002, metadata !DIExpression()), !dbg !1047
   store i8 1, ptr %first, align 1, !dbg !1048
 ; call <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::RECEIVED
-  %_4 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$8RECEIVED17h97175bb6676fe247E"(ptr align 1 %self) #4, !dbg !1049
+  %_4 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$8RECEIVED17h22d53202acc312feE"(ptr align 1 %self) #4, !dbg !1049
   br i1 %_4, label %bb2, label %bb12, !dbg !1049
 
 bb12:                                             ; preds = %bb8, %start
 ; call <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::SENT
-  %_15 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$4SENT17h7be2d2903b68815dE"(ptr align 1 %self) #4, !dbg !1049
+  %_15 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$4SENT17h02f44be9a38bc8a3E"(ptr align 1 %self) #4, !dbg !1049
   br i1 %_15, label %bb14, label %bb23, !dbg !1049
 
 bb2:                                              ; preds = %start
@@ -1473,9 +1473,9 @@ bb2:                                              ; preds = %start
 bb8:                                              ; preds = %bb3, %bb2
   store i8 0, ptr %first, align 1, !dbg !1052
 ; call core::fmt::Formatter::write_str
-  %_12 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_408e081dfcc5d3cdfedd83fcb3cf21dd, i64 8) #4, !dbg !1053
+  %_12 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_408e081dfcc5d3cdfedd83fcb3cf21dd, i64 8) #4, !dbg !1053
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %2 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_12) #4, !dbg !1053
+  %2 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_12) #4, !dbg !1053
   %3 = zext i1 %2 to i8, !dbg !1053
   store i8 %3, ptr %_11, align 1, !dbg !1053
   %4 = load i8, ptr %_11, align 1, !dbg !1053, !range !366, !noundef !42
@@ -1486,9 +1486,9 @@ bb8:                                              ; preds = %bb3, %bb2
 
 bb3:                                              ; preds = %bb2
 ; call core::fmt::Formatter::write_str
-  %_8 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
+  %_8 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %7 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_8) #4, !dbg !1054
+  %7 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_8) #4, !dbg !1054
   %8 = zext i1 %7 to i8, !dbg !1054
   store i8 %8, ptr %_7, align 1, !dbg !1054
   %9 = load i8, ptr %_7, align 1, !dbg !1054, !range !366, !noundef !42
@@ -1499,7 +1499,7 @@ bb3:                                              ; preds = %bb2
 
 bb7:                                              ; preds = %bb3
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %12 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1055
+  %12 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1055
   %13 = zext i1 %12 to i8, !dbg !1055
   store i8 %13, ptr %0, align 1, !dbg !1055
   br label %bb67, !dbg !1055
@@ -1511,14 +1511,14 @@ bb67:                                             ; preds = %bb66, %bb65, %bb60,
 
 bb11:                                             ; preds = %bb8
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %16 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1057
+  %16 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1057
   %17 = zext i1 %16 to i8, !dbg !1057
   store i8 %17, ptr %0, align 1, !dbg !1057
   br label %bb67, !dbg !1057
 
 bb23:                                             ; preds = %bb19, %bb12
 ; call <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::ERRORED
-  %_26 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$7ERRORED17h439eb556c3bde3f9E"(ptr align 1 %self) #4, !dbg !1049
+  %_26 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$7ERRORED17h36114b02259f9b53E"(ptr align 1 %self) #4, !dbg !1049
   br i1 %_26, label %bb25, label %bb34, !dbg !1049
 
 bb14:                                             ; preds = %bb12
@@ -1530,9 +1530,9 @@ bb14:                                             ; preds = %bb12
 bb19:                                             ; preds = %bb15, %bb14
   store i8 0, ptr %first, align 1, !dbg !1052
 ; call core::fmt::Formatter::write_str
-  %_23 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_54fb47ba400b918d3d9b578ddd976fe2, i64 4) #4, !dbg !1053
+  %_23 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_54fb47ba400b918d3d9b578ddd976fe2, i64 4) #4, !dbg !1053
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %19 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_23) #4, !dbg !1053
+  %19 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_23) #4, !dbg !1053
   %20 = zext i1 %19 to i8, !dbg !1053
   store i8 %20, ptr %_22, align 1, !dbg !1053
   %21 = load i8, ptr %_22, align 1, !dbg !1053, !range !366, !noundef !42
@@ -1543,9 +1543,9 @@ bb19:                                             ; preds = %bb15, %bb14
 
 bb15:                                             ; preds = %bb14
 ; call core::fmt::Formatter::write_str
-  %_19 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
+  %_19 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %24 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_19) #4, !dbg !1054
+  %24 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_19) #4, !dbg !1054
   %25 = zext i1 %24 to i8, !dbg !1054
   store i8 %25, ptr %_18, align 1, !dbg !1054
   %26 = load i8, ptr %_18, align 1, !dbg !1054, !range !366, !noundef !42
@@ -1556,21 +1556,21 @@ bb15:                                             ; preds = %bb14
 
 bb18:                                             ; preds = %bb15
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %29 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1058
+  %29 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1058
   %30 = zext i1 %29 to i8, !dbg !1058
   store i8 %30, ptr %0, align 1, !dbg !1058
   br label %bb67, !dbg !1058
 
 bb22:                                             ; preds = %bb19
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %31 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1059
+  %31 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1059
   %32 = zext i1 %31 to i8, !dbg !1059
   store i8 %32, ptr %0, align 1, !dbg !1059
   br label %bb67, !dbg !1059
 
 bb34:                                             ; preds = %bb30, %bb23
 ; call <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::STATUS_CHANGE
-  %_37 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$13STATUS_CHANGE17h0a8645ac984a647dE"(ptr align 1 %self) #4, !dbg !1049
+  %_37 = call zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$13STATUS_CHANGE17h0fa544319282f641E"(ptr align 1 %self) #4, !dbg !1049
   br i1 %_37, label %bb36, label %bb45, !dbg !1049
 
 bb25:                                             ; preds = %bb23
@@ -1582,9 +1582,9 @@ bb25:                                             ; preds = %bb23
 bb30:                                             ; preds = %bb26, %bb25
   store i8 0, ptr %first, align 1, !dbg !1052
 ; call core::fmt::Formatter::write_str
-  %_34 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_c0a66bbb25456a4612547aa76a03b995, i64 7) #4, !dbg !1053
+  %_34 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_c0a66bbb25456a4612547aa76a03b995, i64 7) #4, !dbg !1053
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %34 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_34) #4, !dbg !1053
+  %34 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_34) #4, !dbg !1053
   %35 = zext i1 %34 to i8, !dbg !1053
   store i8 %35, ptr %_33, align 1, !dbg !1053
   %36 = load i8, ptr %_33, align 1, !dbg !1053, !range !366, !noundef !42
@@ -1595,9 +1595,9 @@ bb30:                                             ; preds = %bb26, %bb25
 
 bb26:                                             ; preds = %bb25
 ; call core::fmt::Formatter::write_str
-  %_30 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
+  %_30 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %39 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_30) #4, !dbg !1054
+  %39 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_30) #4, !dbg !1054
   %40 = zext i1 %39 to i8, !dbg !1054
   store i8 %40, ptr %_29, align 1, !dbg !1054
   %41 = load i8, ptr %_29, align 1, !dbg !1054, !range !366, !noundef !42
@@ -1608,14 +1608,14 @@ bb26:                                             ; preds = %bb25
 
 bb29:                                             ; preds = %bb26
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %44 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1060
+  %44 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1060
   %45 = zext i1 %44 to i8, !dbg !1060
   store i8 %45, ptr %0, align 1, !dbg !1060
   br label %bb67, !dbg !1060
 
 bb33:                                             ; preds = %bb30
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %46 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1061
+  %46 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1061
   %47 = zext i1 %46 to i8, !dbg !1061
   store i8 %47, ptr %0, align 1, !dbg !1061
   br label %bb67, !dbg !1061
@@ -1623,10 +1623,10 @@ bb33:                                             ; preds = %bb30
 bb45:                                             ; preds = %bb41, %bb34
   %_49 = load i8, ptr %self, align 1, !dbg !1062, !noundef !42
 ; call uart_16550::IntEnFlags::all
-  %48 = call i8 @_ZN10uart_1655010IntEnFlags3all17h363fba674245dcd6E() #4, !dbg !1063
+  %48 = call i8 @_ZN10uart_1655010IntEnFlags3all17h40555c3565028fcfE() #4, !dbg !1063
   store i8 %48, ptr %_53, align 1, !dbg !1063
 ; call uart_16550::IntEnFlags::bits
-  %_51 = call i8 @_ZN10uart_1655010IntEnFlags4bits17h31026ae52d7415eeE(ptr align 1 %_53) #4, !dbg !1063
+  %_51 = call i8 @_ZN10uart_1655010IntEnFlags4bits17hf48a6c9256befe20E(ptr align 1 %_53) #4, !dbg !1063
   %_50 = xor i8 %_51, -1, !dbg !1064
   %49 = and i8 %_49, %_50, !dbg !1062
   store i8 %49, ptr %extra_bits, align 1, !dbg !1062
@@ -1643,9 +1643,9 @@ bb36:                                             ; preds = %bb34
 bb41:                                             ; preds = %bb37, %bb36
   store i8 0, ptr %first, align 1, !dbg !1052
 ; call core::fmt::Formatter::write_str
-  %_45 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_d60bd0e70573fa7ac692caf5bcfdb50e, i64 13) #4, !dbg !1053
+  %_45 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_d60bd0e70573fa7ac692caf5bcfdb50e, i64 13) #4, !dbg !1053
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %53 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_45) #4, !dbg !1053
+  %53 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_45) #4, !dbg !1053
   %54 = zext i1 %53 to i8, !dbg !1053
   store i8 %54, ptr %_44, align 1, !dbg !1053
   %55 = load i8, ptr %_44, align 1, !dbg !1053, !range !366, !noundef !42
@@ -1656,9 +1656,9 @@ bb41:                                             ; preds = %bb37, %bb36
 
 bb37:                                             ; preds = %bb36
 ; call core::fmt::Formatter::write_str
-  %_41 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
+  %_41 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1054
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %58 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_41) #4, !dbg !1054
+  %58 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_41) #4, !dbg !1054
   %59 = zext i1 %58 to i8, !dbg !1054
   store i8 %59, ptr %_40, align 1, !dbg !1054
   %60 = load i8, ptr %_40, align 1, !dbg !1054, !range !366, !noundef !42
@@ -1669,14 +1669,14 @@ bb37:                                             ; preds = %bb36
 
 bb40:                                             ; preds = %bb37
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %63 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1066
+  %63 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1066
   %64 = zext i1 %63 to i8, !dbg !1066
   store i8 %64, ptr %0, align 1, !dbg !1066
   br label %bb67, !dbg !1066
 
 bb44:                                             ; preds = %bb41
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %65 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1067
+  %65 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1067
   %66 = zext i1 %65 to i8, !dbg !1067
   store i8 %66, ptr %0, align 1, !dbg !1067
   br label %bb67, !dbg !1067
@@ -1695,9 +1695,9 @@ bb48:                                             ; preds = %bb45
 bb53:                                             ; preds = %bb49, %bb48
   store i8 0, ptr %first, align 1, !dbg !1071
 ; call core::fmt::Formatter::write_str
-  %_61 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_83d8d36e705c58ed11bda7b90dabc655, i64 2) #4, !dbg !1072
+  %_61 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_83d8d36e705c58ed11bda7b90dabc655, i64 2) #4, !dbg !1072
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %69 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_61) #4, !dbg !1072
+  %69 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_61) #4, !dbg !1072
   %70 = zext i1 %69 to i8, !dbg !1072
   store i8 %70, ptr %_60, align 1, !dbg !1072
   %71 = load i8, ptr %_60, align 1, !dbg !1072, !range !366, !noundef !42
@@ -1708,9 +1708,9 @@ bb53:                                             ; preds = %bb49, %bb48
 
 bb49:                                             ; preds = %bb48
 ; call core::fmt::Formatter::write_str
-  %_57 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1073
+  %_57 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1073
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %74 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_57) #4, !dbg !1073
+  %74 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_57) #4, !dbg !1073
   %75 = zext i1 %74 to i8, !dbg !1073
   store i8 %75, ptr %_56, align 1, !dbg !1073
   %76 = load i8, ptr %_56, align 1, !dbg !1073, !range !366, !noundef !42
@@ -1721,16 +1721,16 @@ bb49:                                             ; preds = %bb48
 
 bb52:                                             ; preds = %bb49
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %79 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1074
+  %79 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1074
   %80 = zext i1 %79 to i8, !dbg !1074
   store i8 %80, ptr %0, align 1, !dbg !1074
   br label %bb67, !dbg !1074
 
 bb56:                                             ; preds = %bb53
 ; call core::fmt::num::<impl core::fmt::LowerHex for u8>::fmt
-  %_65 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h92da74caf67b643fE"(ptr align 1 %extra_bits, ptr align 8 %f) #4, !dbg !1075
+  %_65 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h24164aa92d99f5beE"(ptr align 1 %extra_bits, ptr align 8 %f) #4, !dbg !1075
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %81 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_65) #4, !dbg !1075
+  %81 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_65) #4, !dbg !1075
   %82 = zext i1 %81 to i8, !dbg !1075
   store i8 %82, ptr %_64, align 1, !dbg !1075
   %83 = load i8, ptr %_64, align 1, !dbg !1075, !range !366, !noundef !42
@@ -1741,14 +1741,14 @@ bb56:                                             ; preds = %bb53
 
 bb57:                                             ; preds = %bb53
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %86 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1076
+  %86 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1076
   %87 = zext i1 %86 to i8, !dbg !1076
   store i8 %87, ptr %0, align 1, !dbg !1076
   br label %bb67, !dbg !1076
 
 bb60:                                             ; preds = %bb56
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %88 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1077
+  %88 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1077
   %89 = zext i1 %88 to i8, !dbg !1077
   store i8 %89, ptr %0, align 1, !dbg !1077
   br label %bb67, !dbg !1077
@@ -1759,9 +1759,9 @@ bb66:                                             ; preds = %bb62, %bb61
 
 bb62:                                             ; preds = %bb61
 ; call core::fmt::Formatter::write_str
-  %_70 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_3c9121c73b3ca7bd4d0dc09458e4ca54, i64 7) #4, !dbg !1079
+  %_70 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_3c9121c73b3ca7bd4d0dc09458e4ca54, i64 7) #4, !dbg !1079
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %90 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_70) #4, !dbg !1079
+  %90 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_70) #4, !dbg !1079
   %91 = zext i1 %90 to i8, !dbg !1079
   store i8 %91, ptr %_69, align 1, !dbg !1079
   %92 = load i8, ptr %_69, align 1, !dbg !1079, !range !366, !noundef !42
@@ -1772,7 +1772,7 @@ bb62:                                             ; preds = %bb61
 
 bb65:                                             ; preds = %bb62
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %95 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1080
+  %95 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_c1084351195a01eb3b08593165149f19) #4, !dbg !1080
   %96 = zext i1 %95 to i8, !dbg !1080
   store i8 %96, ptr %0, align 1, !dbg !1080
   br label %bb67, !dbg !1080
@@ -1783,7 +1783,7 @@ bb6:                                              ; No predecessors!
 
 ; <uart_16550::IntEnFlags as core::fmt::Binary>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN60_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17h249c60572237725aE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1081 {
+define zeroext i1 @"_ZN60_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17ha0a9a3b02a42654fE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1081 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1792,13 +1792,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1085, metadata !DIExpression()), !dbg !1087
 ; call core::fmt::num::<impl core::fmt::Binary for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Binary$u20$for$u20$u8$GT$3fmt17he26b086a59963bfeE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1088
+  %0 = call zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Binary$u20$for$u20$u8$GT$3fmt17h7f445ce3b39fc2f9E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1088
   ret i1 %0, !dbg !1089
 }
 
 ; <uart_16550::IntEnFlags as core::fmt::Octal>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h3de6460b94abb3a2E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1090 {
+define zeroext i1 @"_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h326fc0d1f4b5e93eE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1090 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1807,13 +1807,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1094, metadata !DIExpression()), !dbg !1096
 ; call core::fmt::num::<impl core::fmt::Octal for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num49_$LT$impl$u20$core..fmt..Octal$u20$for$u20$u8$GT$3fmt17ha9ee59634ddb4f7aE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1097
+  %0 = call zeroext i1 @"_ZN4core3fmt3num49_$LT$impl$u20$core..fmt..Octal$u20$for$u20$u8$GT$3fmt17hf99f654dcddef7c3E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1097
   ret i1 %0, !dbg !1098
 }
 
 ; <uart_16550::IntEnFlags as core::fmt::LowerHex>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17hf15b52a28f695473E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1099 {
+define zeroext i1 @"_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17h06d162748924f0f8E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1099 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1822,13 +1822,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1103, metadata !DIExpression()), !dbg !1105
 ; call core::fmt::num::<impl core::fmt::LowerHex for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h92da74caf67b643fE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1106
+  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h24164aa92d99f5beE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1106
   ret i1 %0, !dbg !1107
 }
 
 ; <uart_16550::IntEnFlags as core::fmt::UpperHex>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17h99902a7fea10b63dE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1108 {
+define zeroext i1 @"_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17h38314ad4d5da07e8E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1108 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1837,13 +1837,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1112, metadata !DIExpression()), !dbg !1114
 ; call core::fmt::num::<impl core::fmt::UpperHex for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u8$GT$3fmt17h1286f6f138b816f3E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1115
+  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u8$GT$3fmt17hebd03be57f180487E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1115
   ret i1 %0, !dbg !1116
 }
 
 ; uart_16550::IntEnFlags::all
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @_ZN10uart_1655010IntEnFlags3all17h363fba674245dcd6E() unnamed_addr #1 !dbg !1117 {
+define internal i8 @_ZN10uart_1655010IntEnFlags3all17h40555c3565028fcfE() unnamed_addr #1 !dbg !1117 {
 start:
   %0 = alloca i8, align 1
   store i8 15, ptr %0, align 1, !dbg !1120
@@ -1853,7 +1853,7 @@ start:
 
 ; uart_16550::IntEnFlags::bits
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @_ZN10uart_1655010IntEnFlags4bits17h31026ae52d7415eeE(ptr align 1 %self) unnamed_addr #1 !dbg !1122 {
+define internal i8 @_ZN10uart_1655010IntEnFlags4bits17hf48a6c9256befe20E(ptr align 1 %self) unnamed_addr #1 !dbg !1122 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -1864,7 +1864,7 @@ start:
 
 ; <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::RECEIVED
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$8RECEIVED17h97175bb6676fe247E"(ptr align 1 %self) unnamed_addr #1 !dbg !1130 {
+define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$8RECEIVED17h22d53202acc312feE"(ptr align 1 %self) unnamed_addr #1 !dbg !1130 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca i8, align 1
@@ -1909,7 +1909,7 @@ bb6:                                              ; preds = %bb5, %bb4
 
 ; <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::SENT
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$4SENT17h7be2d2903b68815dE"(ptr align 1 %self) unnamed_addr #1 !dbg !1141 {
+define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$4SENT17h02f44be9a38bc8a3E"(ptr align 1 %self) unnamed_addr #1 !dbg !1141 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca i8, align 1
@@ -1954,7 +1954,7 @@ bb6:                                              ; preds = %bb5, %bb4
 
 ; <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::ERRORED
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$7ERRORED17h439eb556c3bde3f9E"(ptr align 1 %self) unnamed_addr #1 !dbg !1147 {
+define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$7ERRORED17h36114b02259f9b53E"(ptr align 1 %self) unnamed_addr #1 !dbg !1147 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca i8, align 1
@@ -1999,7 +1999,7 @@ bb6:                                              ; preds = %bb5, %bb4
 
 ; <uart_16550::IntEnFlags as <uart_16550::IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::STATUS_CHANGE
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$13STATUS_CHANGE17h0a8645ac984a647dE"(ptr align 1 %self) unnamed_addr #1 !dbg !1153 {
+define internal zeroext i1 @"_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$13STATUS_CHANGE17h0fa544319282f641E"(ptr align 1 %self) unnamed_addr #1 !dbg !1153 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca i8, align 1
@@ -2044,7 +2044,7 @@ bb6:                                              ; preds = %bb5, %bb4
 
 ; <uart_16550::LineStsFlags as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17hfac8bd50f986b0beE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1159 {
+define zeroext i1 @"_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17hd0a086549e23a0dcE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1159 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -2100,12 +2100,12 @@ start:
   call void @llvm.dbg.declare(metadata ptr %extra_bits, metadata !1185, metadata !DIExpression()), !dbg !1222
   store i8 1, ptr %first, align 1, !dbg !1223
 ; call <uart_16550::LineStsFlags as <uart_16550::LineStsFlags as core::fmt::Debug>::fmt::__BitFlags>::INPUT_FULL
-  %_4 = call zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$10INPUT_FULL17h302817ea3bf0ae70E"(ptr align 1 %self) #4, !dbg !1224
+  %_4 = call zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$10INPUT_FULL17h091a5c05ef41deaeE"(ptr align 1 %self) #4, !dbg !1224
   br i1 %_4, label %bb2, label %bb12, !dbg !1224
 
 bb12:                                             ; preds = %bb8, %start
 ; call <uart_16550::LineStsFlags as <uart_16550::LineStsFlags as core::fmt::Debug>::fmt::__BitFlags>::OUTPUT_EMPTY
-  %_15 = call zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$12OUTPUT_EMPTY17h95013b0297e99679E"(ptr align 1 %self) #4, !dbg !1224
+  %_15 = call zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$12OUTPUT_EMPTY17h5c01f1d1f3b290e4E"(ptr align 1 %self) #4, !dbg !1224
   br i1 %_15, label %bb14, label %bb23, !dbg !1224
 
 bb2:                                              ; preds = %start
@@ -2117,9 +2117,9 @@ bb2:                                              ; preds = %start
 bb8:                                              ; preds = %bb3, %bb2
   store i8 0, ptr %first, align 1, !dbg !1227
 ; call core::fmt::Formatter::write_str
-  %_12 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_5cb811aeeb101507f607bf45271d3612, i64 10) #4, !dbg !1228
+  %_12 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_5cb811aeeb101507f607bf45271d3612, i64 10) #4, !dbg !1228
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %2 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_12) #4, !dbg !1228
+  %2 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_12) #4, !dbg !1228
   %3 = zext i1 %2 to i8, !dbg !1228
   store i8 %3, ptr %_11, align 1, !dbg !1228
   %4 = load i8, ptr %_11, align 1, !dbg !1228, !range !366, !noundef !42
@@ -2130,9 +2130,9 @@ bb8:                                              ; preds = %bb3, %bb2
 
 bb3:                                              ; preds = %bb2
 ; call core::fmt::Formatter::write_str
-  %_8 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1229
+  %_8 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1229
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %7 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_8) #4, !dbg !1229
+  %7 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_8) #4, !dbg !1229
   %8 = zext i1 %7 to i8, !dbg !1229
   store i8 %8, ptr %_7, align 1, !dbg !1229
   %9 = load i8, ptr %_7, align 1, !dbg !1229, !range !366, !noundef !42
@@ -2143,7 +2143,7 @@ bb3:                                              ; preds = %bb2
 
 bb7:                                              ; preds = %bb3
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %12 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1230
+  %12 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1230
   %13 = zext i1 %12 to i8, !dbg !1230
   store i8 %13, ptr %0, align 1, !dbg !1230
   br label %bb45, !dbg !1230
@@ -2155,7 +2155,7 @@ bb45:                                             ; preds = %bb44, %bb43, %bb38,
 
 bb11:                                             ; preds = %bb8
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %16 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1232
+  %16 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1232
   %17 = zext i1 %16 to i8, !dbg !1232
   store i8 %17, ptr %0, align 1, !dbg !1232
   br label %bb45, !dbg !1232
@@ -2163,10 +2163,10 @@ bb11:                                             ; preds = %bb8
 bb23:                                             ; preds = %bb19, %bb12
   %_27 = load i8, ptr %self, align 1, !dbg !1233, !noundef !42
 ; call uart_16550::LineStsFlags::all
-  %18 = call i8 @_ZN10uart_1655012LineStsFlags3all17h83ca217cf8291905E() #4, !dbg !1234
+  %18 = call i8 @_ZN10uart_1655012LineStsFlags3all17h6796570f588160f8E() #4, !dbg !1234
   store i8 %18, ptr %_31, align 1, !dbg !1234
 ; call uart_16550::LineStsFlags::bits
-  %_29 = call i8 @_ZN10uart_1655012LineStsFlags4bits17h9f18372e3e5299bbE(ptr align 1 %_31) #4, !dbg !1234
+  %_29 = call i8 @_ZN10uart_1655012LineStsFlags4bits17h9e42052d0e9b92bfE(ptr align 1 %_31) #4, !dbg !1234
   %_28 = xor i8 %_29, -1, !dbg !1235
   %19 = and i8 %_27, %_28, !dbg !1233
   store i8 %19, ptr %extra_bits, align 1, !dbg !1233
@@ -2183,9 +2183,9 @@ bb14:                                             ; preds = %bb12
 bb19:                                             ; preds = %bb15, %bb14
   store i8 0, ptr %first, align 1, !dbg !1227
 ; call core::fmt::Formatter::write_str
-  %_23 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_07f55bf0a2ccaf4c98808e619fa38518, i64 12) #4, !dbg !1228
+  %_23 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_07f55bf0a2ccaf4c98808e619fa38518, i64 12) #4, !dbg !1228
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %23 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_23) #4, !dbg !1228
+  %23 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_23) #4, !dbg !1228
   %24 = zext i1 %23 to i8, !dbg !1228
   store i8 %24, ptr %_22, align 1, !dbg !1228
   %25 = load i8, ptr %_22, align 1, !dbg !1228, !range !366, !noundef !42
@@ -2196,9 +2196,9 @@ bb19:                                             ; preds = %bb15, %bb14
 
 bb15:                                             ; preds = %bb14
 ; call core::fmt::Formatter::write_str
-  %_19 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1229
+  %_19 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1229
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %28 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_19) #4, !dbg !1229
+  %28 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_19) #4, !dbg !1229
   %29 = zext i1 %28 to i8, !dbg !1229
   store i8 %29, ptr %_18, align 1, !dbg !1229
   %30 = load i8, ptr %_18, align 1, !dbg !1229, !range !366, !noundef !42
@@ -2209,14 +2209,14 @@ bb15:                                             ; preds = %bb14
 
 bb18:                                             ; preds = %bb15
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %33 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1237
+  %33 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1237
   %34 = zext i1 %33 to i8, !dbg !1237
   store i8 %34, ptr %0, align 1, !dbg !1237
   br label %bb45, !dbg !1237
 
 bb22:                                             ; preds = %bb19
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %35 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1238
+  %35 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1238
   %36 = zext i1 %35 to i8, !dbg !1238
   store i8 %36, ptr %0, align 1, !dbg !1238
   br label %bb45, !dbg !1238
@@ -2235,9 +2235,9 @@ bb26:                                             ; preds = %bb23
 bb31:                                             ; preds = %bb27, %bb26
   store i8 0, ptr %first, align 1, !dbg !1242
 ; call core::fmt::Formatter::write_str
-  %_39 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_83d8d36e705c58ed11bda7b90dabc655, i64 2) #4, !dbg !1243
+  %_39 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_83d8d36e705c58ed11bda7b90dabc655, i64 2) #4, !dbg !1243
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %39 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_39) #4, !dbg !1243
+  %39 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_39) #4, !dbg !1243
   %40 = zext i1 %39 to i8, !dbg !1243
   store i8 %40, ptr %_38, align 1, !dbg !1243
   %41 = load i8, ptr %_38, align 1, !dbg !1243, !range !366, !noundef !42
@@ -2248,9 +2248,9 @@ bb31:                                             ; preds = %bb27, %bb26
 
 bb27:                                             ; preds = %bb26
 ; call core::fmt::Formatter::write_str
-  %_35 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1244
+  %_35 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_a73d0e35045fd787c81346701178a687, i64 3) #4, !dbg !1244
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %44 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_35) #4, !dbg !1244
+  %44 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_35) #4, !dbg !1244
   %45 = zext i1 %44 to i8, !dbg !1244
   store i8 %45, ptr %_34, align 1, !dbg !1244
   %46 = load i8, ptr %_34, align 1, !dbg !1244, !range !366, !noundef !42
@@ -2261,16 +2261,16 @@ bb27:                                             ; preds = %bb26
 
 bb30:                                             ; preds = %bb27
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %49 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1245
+  %49 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1245
   %50 = zext i1 %49 to i8, !dbg !1245
   store i8 %50, ptr %0, align 1, !dbg !1245
   br label %bb45, !dbg !1245
 
 bb34:                                             ; preds = %bb31
 ; call core::fmt::num::<impl core::fmt::LowerHex for u8>::fmt
-  %_43 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h92da74caf67b643fE"(ptr align 1 %extra_bits, ptr align 8 %f) #4, !dbg !1246
+  %_43 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h24164aa92d99f5beE"(ptr align 1 %extra_bits, ptr align 8 %f) #4, !dbg !1246
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %51 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_43) #4, !dbg !1246
+  %51 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_43) #4, !dbg !1246
   %52 = zext i1 %51 to i8, !dbg !1246
   store i8 %52, ptr %_42, align 1, !dbg !1246
   %53 = load i8, ptr %_42, align 1, !dbg !1246, !range !366, !noundef !42
@@ -2281,14 +2281,14 @@ bb34:                                             ; preds = %bb31
 
 bb35:                                             ; preds = %bb31
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %56 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1247
+  %56 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1247
   %57 = zext i1 %56 to i8, !dbg !1247
   store i8 %57, ptr %0, align 1, !dbg !1247
   br label %bb45, !dbg !1247
 
 bb38:                                             ; preds = %bb34
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %58 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1248
+  %58 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1248
   %59 = zext i1 %58 to i8, !dbg !1248
   store i8 %59, ptr %0, align 1, !dbg !1248
   br label %bb45, !dbg !1248
@@ -2299,9 +2299,9 @@ bb44:                                             ; preds = %bb40, %bb39
 
 bb40:                                             ; preds = %bb39
 ; call core::fmt::Formatter::write_str
-  %_48 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 @alloc_3c9121c73b3ca7bd4d0dc09458e4ca54, i64 7) #4, !dbg !1250
+  %_48 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 @alloc_3c9121c73b3ca7bd4d0dc09458e4ca54, i64 7) #4, !dbg !1250
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %60 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext %_48) #4, !dbg !1250
+  %60 = call zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext %_48) #4, !dbg !1250
   %61 = zext i1 %60 to i8, !dbg !1250
   store i8 %61, ptr %_47, align 1, !dbg !1250
   %62 = load i8, ptr %_47, align 1, !dbg !1250, !range !366, !noundef !42
@@ -2312,7 +2312,7 @@ bb40:                                             ; preds = %bb39
 
 bb43:                                             ; preds = %bb40
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %65 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1251
+  %65 = call zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8 @alloc_d1181e9d70f5ff24fc2be399d9f9b539) #4, !dbg !1251
   %66 = zext i1 %65 to i8, !dbg !1251
   store i8 %66, ptr %0, align 1, !dbg !1251
   br label %bb45, !dbg !1251
@@ -2323,7 +2323,7 @@ bb6:                                              ; No predecessors!
 
 ; <uart_16550::LineStsFlags as core::fmt::Binary>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN62_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17h48350af0249be6d2E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1252 {
+define zeroext i1 @"_ZN62_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17hd1645f626f5fc6c6E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1252 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -2332,13 +2332,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1256, metadata !DIExpression()), !dbg !1258
 ; call core::fmt::num::<impl core::fmt::Binary for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Binary$u20$for$u20$u8$GT$3fmt17he26b086a59963bfeE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1259
+  %0 = call zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Binary$u20$for$u20$u8$GT$3fmt17h7f445ce3b39fc2f9E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1259
   ret i1 %0, !dbg !1260
 }
 
 ; <uart_16550::LineStsFlags as core::fmt::Octal>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h5c65b93782ac83d2E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1261 {
+define zeroext i1 @"_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h5c3b699ecdfe8c88E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1261 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -2347,13 +2347,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1265, metadata !DIExpression()), !dbg !1267
 ; call core::fmt::num::<impl core::fmt::Octal for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num49_$LT$impl$u20$core..fmt..Octal$u20$for$u20$u8$GT$3fmt17ha9ee59634ddb4f7aE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1268
+  %0 = call zeroext i1 @"_ZN4core3fmt3num49_$LT$impl$u20$core..fmt..Octal$u20$for$u20$u8$GT$3fmt17hf99f654dcddef7c3E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1268
   ret i1 %0, !dbg !1269
 }
 
 ; <uart_16550::LineStsFlags as core::fmt::LowerHex>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17heb2d9873f1d9f8fdE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1270 {
+define zeroext i1 @"_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17hc02ee13c4424703cE"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1270 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -2362,13 +2362,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1274, metadata !DIExpression()), !dbg !1276
 ; call core::fmt::num::<impl core::fmt::LowerHex for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h92da74caf67b643fE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1277
+  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h24164aa92d99f5beE"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1277
   ret i1 %0, !dbg !1278
 }
 
 ; <uart_16550::LineStsFlags as core::fmt::UpperHex>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17hb602173897a2ada1E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1279 {
+define zeroext i1 @"_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17h39572f986d11c762E"(ptr align 1 %self, ptr align 8 %f) unnamed_addr #0 !dbg !1279 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -2377,13 +2377,13 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !1283, metadata !DIExpression()), !dbg !1285
 ; call core::fmt::num::<impl core::fmt::UpperHex for u8>::fmt
-  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u8$GT$3fmt17h1286f6f138b816f3E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1286
+  %0 = call zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u8$GT$3fmt17hebd03be57f180487E"(ptr align 1 %self, ptr align 8 %f) #4, !dbg !1286
   ret i1 %0, !dbg !1287
 }
 
 ; uart_16550::LineStsFlags::all
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @_ZN10uart_1655012LineStsFlags3all17h83ca217cf8291905E() unnamed_addr #1 !dbg !1288 {
+define internal i8 @_ZN10uart_1655012LineStsFlags3all17h6796570f588160f8E() unnamed_addr #1 !dbg !1288 {
 start:
   %0 = alloca i8, align 1
   store i8 33, ptr %0, align 1, !dbg !1291
@@ -2393,7 +2393,7 @@ start:
 
 ; uart_16550::LineStsFlags::bits
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @_ZN10uart_1655012LineStsFlags4bits17h9f18372e3e5299bbE(ptr align 1 %self) unnamed_addr #1 !dbg !1293 {
+define internal i8 @_ZN10uart_1655012LineStsFlags4bits17h9e42052d0e9b92bfE(ptr align 1 %self) unnamed_addr #1 !dbg !1293 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -2404,14 +2404,14 @@ start:
 
 ; uart_16550::LineStsFlags::from_bits_truncate
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @_ZN10uart_1655012LineStsFlags18from_bits_truncate17hc8086a3d0ef180c9E(i8 %bits) unnamed_addr #1 !dbg !1301 {
+define internal i8 @_ZN10uart_1655012LineStsFlags18from_bits_truncate17h6abf08042c0286daE(i8 %bits) unnamed_addr #1 !dbg !1301 {
 start:
   %bits.dbg.spill = alloca i8, align 1
   %0 = alloca i8, align 1
   store i8 %bits, ptr %bits.dbg.spill, align 1
   call void @llvm.dbg.declare(metadata ptr %bits.dbg.spill, metadata !1305, metadata !DIExpression()), !dbg !1306
 ; call uart_16550::LineStsFlags::all
-  %_4 = call i8 @_ZN10uart_1655012LineStsFlags3all17h83ca217cf8291905E() #4, !dbg !1307
+  %_4 = call i8 @_ZN10uart_1655012LineStsFlags3all17h6796570f588160f8E() #4, !dbg !1307
   %_2 = and i8 %bits, %_4, !dbg !1308
   store i8 %_2, ptr %0, align 1, !dbg !1309
   %1 = load i8, ptr %0, align 1, !dbg !1310, !noundef !42
@@ -2420,7 +2420,7 @@ start:
 
 ; uart_16550::LineStsFlags::contains
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE(ptr align 1 %self, i8 %other) unnamed_addr #1 !dbg !1311 {
+define internal zeroext i1 @_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE(ptr align 1 %self, i8 %other) unnamed_addr #1 !dbg !1311 {
 start:
   %other.dbg.spill = alloca i8, align 1
   %self.dbg.spill = alloca ptr, align 8
@@ -2436,7 +2436,7 @@ start:
 
 ; <uart_16550::LineStsFlags as <uart_16550::LineStsFlags as core::fmt::Debug>::fmt::__BitFlags>::INPUT_FULL
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$10INPUT_FULL17h302817ea3bf0ae70E"(ptr align 1 %self) unnamed_addr #1 !dbg !1322 {
+define internal zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$10INPUT_FULL17h091a5c05ef41deaeE"(ptr align 1 %self) unnamed_addr #1 !dbg !1322 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca i8, align 1
@@ -2481,7 +2481,7 @@ bb6:                                              ; preds = %bb5, %bb4
 
 ; <uart_16550::LineStsFlags as <uart_16550::LineStsFlags as core::fmt::Debug>::fmt::__BitFlags>::OUTPUT_EMPTY
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$12OUTPUT_EMPTY17h95013b0297e99679E"(ptr align 1 %self) unnamed_addr #1 !dbg !1332 {
+define internal zeroext i1 @"_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$12OUTPUT_EMPTY17h5c01f1d1f3b290e4E"(ptr align 1 %self) unnamed_addr #1 !dbg !1332 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca i8, align 1
@@ -2529,23 +2529,23 @@ declare void @llvm.dbg.declare(metadata, metadata, metadata) #2
 
 ; <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: inlinehint noredzone nounwind
-declare align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h0c2f840062e5d1d8E"(ptr align 8) unnamed_addr #1
+declare align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h3e4da3f5982de4ecE"(ptr align 8) unnamed_addr #1
 
 ; core::panicking::panic_fmt
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr, ptr align 8) unnamed_addr #3
+declare void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr, ptr align 8) unnamed_addr #3
 
 ; core::ptr::read
 ; Function Attrs: inlinehint noredzone nounwind
-declare i8 @_ZN4core3ptr4read17h4f58ac4bcbf0876fE(ptr) unnamed_addr #1
+declare i8 @_ZN4core3ptr4read17h8ebb658d47c6e29aE(ptr) unnamed_addr #1
 
 ; core::ptr::write
 ; Function Attrs: inlinehint noredzone nounwind
-declare void @_ZN4core3ptr5write17h9ba8f3f3046b9426E(ptr, i8) unnamed_addr #1
+declare void @_ZN4core3ptr5write17h0936bba7b1884812E(ptr, i8) unnamed_addr #1
 
 ; core::slice::<impl [T]>::iter
 ; Function Attrs: inlinehint noredzone nounwind
-declare { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h9b6a6a15f4cfa354E"(ptr align 1, i64) unnamed_addr #1
+declare { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h1e079a9797348949E"(ptr align 1, i64) unnamed_addr #1
 
 ; Function Attrs: nounwind
 declare void @llvm.x86.sse2.pause() unnamed_addr #4
@@ -2558,38 +2558,38 @@ declare i1 @llvm.expect.i1(i1, i1) #5
 
 ; core::panicking::panic
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1, i64, ptr align 8) unnamed_addr #3
+declare void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1, i64, ptr align 8) unnamed_addr #3
 
 ; Function Attrs: nocallback nofree nounwind willreturn memory(argmem: readwrite)
 declare void @llvm.memcpy.p0.p0.i64(ptr noalias nocapture writeonly, ptr noalias nocapture readonly, i64, i1 immarg) #6
 
 ; core::fmt::Formatter::write_str
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8, ptr align 1, i64) unnamed_addr #0
+declare zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8, ptr align 1, i64) unnamed_addr #0
 
 ; <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
 ; Function Attrs: inlinehint noredzone nounwind
-declare zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h648a10cd017c3ba5E"(i1 zeroext) unnamed_addr #1
+declare zeroext i1 @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hedb555af9a71a79aE"(i1 zeroext) unnamed_addr #1
 
 ; <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
 ; Function Attrs: inlinehint noredzone nounwind
-declare zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hab055e9f11847b3bE"(ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h684a2b61453c98e2E"(ptr align 8) unnamed_addr #1
 
 ; core::fmt::num::<impl core::fmt::LowerHex for u8>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h92da74caf67b643fE"(ptr align 1, ptr align 8) unnamed_addr #0
+declare zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u8$GT$3fmt17h24164aa92d99f5beE"(ptr align 1, ptr align 8) unnamed_addr #0
 
 ; core::fmt::num::<impl core::fmt::Binary for u8>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Binary$u20$for$u20$u8$GT$3fmt17he26b086a59963bfeE"(ptr align 1, ptr align 8) unnamed_addr #0
+declare zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Binary$u20$for$u20$u8$GT$3fmt17h7f445ce3b39fc2f9E"(ptr align 1, ptr align 8) unnamed_addr #0
 
 ; core::fmt::num::<impl core::fmt::Octal for u8>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num49_$LT$impl$u20$core..fmt..Octal$u20$for$u20$u8$GT$3fmt17ha9ee59634ddb4f7aE"(ptr align 1, ptr align 8) unnamed_addr #0
+declare zeroext i1 @"_ZN4core3fmt3num49_$LT$impl$u20$core..fmt..Octal$u20$for$u20$u8$GT$3fmt17hf99f654dcddef7c3E"(ptr align 1, ptr align 8) unnamed_addr #0
 
 ; core::fmt::num::<impl core::fmt::UpperHex for u8>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u8$GT$3fmt17h1286f6f138b816f3E"(ptr align 1, ptr align 8) unnamed_addr #0
+declare zeroext i1 @"_ZN4core3fmt3num52_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u8$GT$3fmt17hebd03be57f180487E"(ptr align 1, ptr align 8) unnamed_addr #0
 
 attributes #0 = { noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
 attributes #1 = { inlinehint noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
@@ -2607,8 +2607,8 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !0 = !{i32 8, !"PIC Level", i32 2}
 !1 = !{i32 2, !"Dwarf Version", i32 4}
 !2 = !{i32 2, !"Debug Info Version", i32 3}
-!3 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !4, producer: "clang LLVM (rustc version 1.71.0-nightly (d0f204e4d 2023-04-16))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !5, splitDebugInlining: false)
-!4 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/lib.rs/@/uart_16550.eb430398-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18")
+!3 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !4, producer: "clang LLVM (rustc version 1.71.0-nightly (39c6804b9 2023-04-19))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !5, splitDebugInlining: false)
+!4 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/lib.rs/@/uart_16550.66a31b9561e03477-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18")
 !5 = !{!6, !18}
 !6 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "Alignment", scope: !8, file: !7, baseType: !12, size: 8, align: 8, flags: DIFlagEnumClass, elements: !13)
 !7 = !DIFile(filename: "<unknown>", directory: "")
@@ -2631,7 +2631,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !24 = !DIEnumerator(name: "Acquire", value: 2, isUnsigned: true)
 !25 = !DIEnumerator(name: "AcqRel", value: 3, isUnsigned: true)
 !26 = !DIEnumerator(name: "SeqCst", value: 4, isUnsigned: true)
-!27 = distinct !DISubprogram(name: "next<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h5e84b6fc4a340e57E", scope: !29, file: !28, line: 47, type: !33, scopeLine: 47, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !76, retainedNodes: !74)
+!27 = distinct !DISubprogram(name: "next<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h9159c6b0ae74d5eaE", scope: !29, file: !28, line: 47, type: !33, scopeLine: 47, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !76, retainedNodes: !74)
 !28 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/copied.rs", directory: "", checksumkind: CSK_MD5, checksum: "c62182f1c70ead07686c37e26ad4aaf1")
 !29 = !DINamespace(name: "{impl#1}", scope: !30)
 !30 = !DINamespace(name: "copied", scope: !31)
@@ -2639,31 +2639,31 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !32 = !DINamespace(name: "iter", scope: !11)
 !33 = !DISubroutineType(types: !34)
 !34 = !{!35, !50}
-!35 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<u8>", scope: !36, file: !7, size: 16, align: 8, elements: !37, templateParams: !42, identifier: "99bbbec2a0e35dac1e9286997cfb6c8d")
+!35 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<u8>", scope: !36, file: !7, size: 16, align: 8, elements: !37, templateParams: !42, identifier: "e28c3ac861fae5eca00f52b20cfdc3c6")
 !36 = !DINamespace(name: "option", scope: !11)
 !37 = !{!38}
-!38 = !DICompositeType(tag: DW_TAG_variant_part, scope: !35, file: !7, size: 16, align: 8, elements: !39, templateParams: !42, identifier: "57b3c3f4e2027a6266dc9ab669e851db", discriminator: !49)
+!38 = !DICompositeType(tag: DW_TAG_variant_part, scope: !35, file: !7, size: 16, align: 8, elements: !39, templateParams: !42, identifier: "2e65a2fdd479a5d97ae6e5c054f1103", discriminator: !49)
 !39 = !{!40, !45}
 !40 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !38, file: !7, baseType: !41, size: 16, align: 8, extraData: i64 0)
-!41 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !35, file: !7, size: 16, align: 8, elements: !42, templateParams: !43, identifier: "7c2e502f65c86591a9596c9e9989cce9")
+!41 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !35, file: !7, size: 16, align: 8, elements: !42, templateParams: !43, identifier: "ef4888deeb7baba6dbd568be422f0185")
 !42 = !{}
 !43 = !{!44}
 !44 = !DITemplateTypeParameter(name: "T", type: !12)
 !45 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !38, file: !7, baseType: !46, size: 16, align: 8, extraData: i64 1)
-!46 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !35, file: !7, size: 16, align: 8, elements: !47, templateParams: !43, identifier: "412bd9535ded5ce366390802bfd0cdd")
+!46 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !35, file: !7, size: 16, align: 8, elements: !47, templateParams: !43, identifier: "7cb1208d60cd739c7430d5538f4f44d")
 !47 = !{!48}
 !48 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !46, file: !7, baseType: !12, size: 8, align: 8, offset: 8)
 !49 = !DIDerivedType(tag: DW_TAG_member, scope: !35, file: !7, baseType: !12, size: 8, align: 8, flags: DIFlagArtificial)
 !50 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::iter::adapters::copied::Copied<core::slice::iter::Iter<u8>>", baseType: !51, size: 64, align: 64, dwarfAddressSpace: 0)
-!51 = !DICompositeType(tag: DW_TAG_structure_type, name: "Copied<core::slice::iter::Iter<u8>>", scope: !30, file: !7, size: 128, align: 64, elements: !52, templateParams: !72, identifier: "c2e8e2b63e2fd0c36b8766e11cebc636")
+!51 = !DICompositeType(tag: DW_TAG_structure_type, name: "Copied<core::slice::iter::Iter<u8>>", scope: !30, file: !7, size: 128, align: 64, elements: !52, templateParams: !72, identifier: "abc13a56b4f8a6968251ebdd44b3ec0c")
 !52 = !{!53}
 !53 = !DIDerivedType(tag: DW_TAG_member, name: "it", scope: !51, file: !7, baseType: !54, size: 128, align: 64)
-!54 = !DICompositeType(tag: DW_TAG_structure_type, name: "Iter<u8>", scope: !55, file: !7, size: 128, align: 64, elements: !57, templateParams: !43, identifier: "5f90073148b5cfd9cb96baa946b3e555")
+!54 = !DICompositeType(tag: DW_TAG_structure_type, name: "Iter<u8>", scope: !55, file: !7, size: 128, align: 64, elements: !57, templateParams: !43, identifier: "b13b7f88e18b544ac0ba138a6efc42b2")
 !55 = !DINamespace(name: "iter", scope: !56)
 !56 = !DINamespace(name: "slice", scope: !11)
 !57 = !{!58, !65, !66}
 !58 = !DIDerivedType(tag: DW_TAG_member, name: "ptr", scope: !54, file: !7, baseType: !59, size: 64, align: 64, offset: 64)
-!59 = !DICompositeType(tag: DW_TAG_structure_type, name: "NonNull<u8>", scope: !60, file: !7, size: 64, align: 64, elements: !62, templateParams: !43, identifier: "c7d0779419e3ba3ced89631c2ee2e04")
+!59 = !DICompositeType(tag: DW_TAG_structure_type, name: "NonNull<u8>", scope: !60, file: !7, size: 64, align: 64, elements: !62, templateParams: !43, identifier: "d31063e20be0daaf5963d681afdd9d3d")
 !60 = !DINamespace(name: "non_null", scope: !61)
 !61 = !DINamespace(name: "ptr", scope: !11)
 !62 = !{!63}
@@ -2671,7 +2671,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !64 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const u8", baseType: !12, size: 64, align: 64, dwarfAddressSpace: 0)
 !65 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !54, file: !7, baseType: !64, size: 64, align: 64)
 !66 = !DIDerivedType(tag: DW_TAG_member, name: "_marker", scope: !54, file: !7, baseType: !67, align: 8)
-!67 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<&u8>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !69, identifier: "24e17897fccf9830a20c76067e2ff522")
+!67 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<&u8>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !69, identifier: "9b3941025524bf1dca1740fddd0a84e9")
 !68 = !DINamespace(name: "marker", scope: !11)
 !69 = !{!70}
 !70 = !DITemplateTypeParameter(name: "T", type: !71)
@@ -2684,9 +2684,9 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !77 = !DILocation(line: 47, column: 13, scope: !27)
 !78 = !DILocation(line: 48, column: 9, scope: !27)
 !79 = !DILocation(line: 49, column: 6, scope: !27)
-!80 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17hfec148fa76b9bcedE", scope: !82, file: !81, line: 399, type: !211, scopeLine: 399, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !213)
+!80 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17h0ac5a3fce00d9a55E", scope: !82, file: !81, line: 399, type: !211, scopeLine: 399, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !213)
 !81 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "182f86c33f08a6043ea29a144b857881")
-!82 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !10, file: !7, size: 384, align: 64, elements: !83, templateParams: !42, identifier: "dc49042afee2f796a8fa4685389c4b18")
+!82 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !10, file: !7, size: 384, align: 64, elements: !83, templateParams: !42, identifier: "1c46a498dd7b956f4c3a670fdfba5262")
 !83 = !{!84, !96, !144}
 !84 = !DIDerivedType(tag: DW_TAG_member, name: "pieces", scope: !82, file: !7, baseType: !85, size: 128, align: 64, offset: 128)
 !85 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[&str]", file: !7, size: 128, align: 64, elements: !86, templateParams: !42, identifier: "d76b83877ddcb5cca61caf6bdca727ac")
@@ -2701,23 +2701,23 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !94 = !DIBasicType(name: "usize", size: 64, encoding: DW_ATE_unsigned)
 !95 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !85, file: !7, baseType: !94, size: 64, align: 64, offset: 64)
 !96 = !DIDerivedType(tag: DW_TAG_member, name: "fmt", scope: !82, file: !7, baseType: !97, size: 128, align: 64)
-!97 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::v1::Argument]>", scope: !36, file: !7, size: 128, align: 64, elements: !98, templateParams: !42, identifier: "62d362416a1eb41bf984638792a73145")
+!97 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::v1::Argument]>", scope: !36, file: !7, size: 128, align: 64, elements: !98, templateParams: !42, identifier: "d25d924bb8d51dd413c49dbfa1f11f1")
 !98 = !{!99}
-!99 = !DICompositeType(tag: DW_TAG_variant_part, scope: !97, file: !7, size: 128, align: 64, elements: !100, templateParams: !42, identifier: "51527d667cbd19b863d93073f3cc474", discriminator: !143)
+!99 = !DICompositeType(tag: DW_TAG_variant_part, scope: !97, file: !7, size: 128, align: 64, elements: !100, templateParams: !42, identifier: "759788f84997b99f6bc91fe0c57058ba", discriminator: !143)
 !100 = !{!101, !139}
 !101 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !99, file: !7, baseType: !102, size: 128, align: 64, extraData: i64 0)
-!102 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !97, file: !7, size: 128, align: 64, elements: !42, templateParams: !103, identifier: "66a59c7143972a6588bd1a9c8246e60f")
+!102 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !97, file: !7, size: 128, align: 64, elements: !42, templateParams: !103, identifier: "82efcd94523cf9c0b17ac37e82724639")
 !103 = !{!104}
 !104 = !DITemplateTypeParameter(name: "T", type: !105)
-!105 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::v1::Argument]", file: !7, size: 128, align: 64, elements: !106, templateParams: !42, identifier: "66b60dbaad43783577fb935928e2ac56")
+!105 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::v1::Argument]", file: !7, size: 128, align: 64, elements: !106, templateParams: !42, identifier: "de3ba5e1dd56fab311eb54a28d6cb95f")
 !106 = !{!107, !138}
 !107 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !105, file: !7, baseType: !108, size: 64, align: 64)
 !108 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !109, size: 64, align: 64, dwarfAddressSpace: 0)
-!109 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !8, file: !7, size: 448, align: 64, elements: !110, templateParams: !42, identifier: "1b0f53c51c2a0850dc27a4ea7530e9b2")
+!109 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !8, file: !7, size: 448, align: 64, elements: !110, templateParams: !42, identifier: "9bee5132fe724679d94d9aaa78899300")
 !110 = !{!111, !112}
 !111 = !DIDerivedType(tag: DW_TAG_member, name: "position", scope: !109, file: !7, baseType: !94, size: 64, align: 64, offset: 384)
 !112 = !DIDerivedType(tag: DW_TAG_member, name: "format", scope: !109, file: !7, baseType: !113, size: 384, align: 64)
-!113 = !DICompositeType(tag: DW_TAG_structure_type, name: "FormatSpec", scope: !8, file: !7, size: 384, align: 64, elements: !114, templateParams: !42, identifier: "4ceb8823bbeb709d93b7ffb6ddd40132")
+!113 = !DICompositeType(tag: DW_TAG_structure_type, name: "FormatSpec", scope: !8, file: !7, size: 384, align: 64, elements: !114, templateParams: !42, identifier: "65fce75b527475dfcd89c81174c5b112")
 !114 = !{!115, !117, !118, !120, !137}
 !115 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !113, file: !7, baseType: !116, size: 32, align: 32, offset: 288)
 !116 = !DIBasicType(name: "char", size: 32, encoding: DW_ATE_UTF)
@@ -2725,90 +2725,90 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !118 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !113, file: !7, baseType: !119, size: 32, align: 32, offset: 256)
 !119 = !DIBasicType(name: "u32", size: 32, encoding: DW_ATE_unsigned)
 !120 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !113, file: !7, baseType: !121, size: 128, align: 64)
-!121 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !8, file: !7, size: 128, align: 64, elements: !122, templateParams: !42, identifier: "beb49147a723c973b15fc19c2245c821")
+!121 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !8, file: !7, size: 128, align: 64, elements: !122, templateParams: !42, identifier: "eb274483ac6a1a818973f8ef56806ce6")
 !122 = !{!123}
-!123 = !DICompositeType(tag: DW_TAG_variant_part, scope: !121, file: !7, size: 128, align: 64, elements: !124, templateParams: !42, identifier: "c9db73f716fc865c39b9a87ace47fe10", discriminator: !135)
+!123 = !DICompositeType(tag: DW_TAG_variant_part, scope: !121, file: !7, size: 128, align: 64, elements: !124, templateParams: !42, identifier: "1383065eb0a1d3eb5559cfa60c22a70d", discriminator: !135)
 !124 = !{!125, !129, !133}
 !125 = !DIDerivedType(tag: DW_TAG_member, name: "Is", scope: !123, file: !7, baseType: !126, size: 128, align: 64, extraData: i64 0)
-!126 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !121, file: !7, size: 128, align: 64, elements: !127, templateParams: !42, identifier: "db0b97f002b1fae3dbc4ebdd853ff355")
+!126 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !121, file: !7, size: 128, align: 64, elements: !127, templateParams: !42, identifier: "284bf6fbe777a447ca6ded9ea5417274")
 !127 = !{!128}
 !128 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !126, file: !7, baseType: !94, size: 64, align: 64, offset: 64)
 !129 = !DIDerivedType(tag: DW_TAG_member, name: "Param", scope: !123, file: !7, baseType: !130, size: 128, align: 64, extraData: i64 1)
-!130 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !121, file: !7, size: 128, align: 64, elements: !131, templateParams: !42, identifier: "49d2632f301eeedc951f3431bb382902")
+!130 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !121, file: !7, size: 128, align: 64, elements: !131, templateParams: !42, identifier: "47998f14b9dfef6b1e659ae3b3c1ad7f")
 !131 = !{!132}
 !132 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !130, file: !7, baseType: !94, size: 64, align: 64, offset: 64)
 !133 = !DIDerivedType(tag: DW_TAG_member, name: "Implied", scope: !123, file: !7, baseType: !134, size: 128, align: 64, extraData: i64 2)
-!134 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !121, file: !7, size: 128, align: 64, elements: !42, identifier: "afc023622f1fd60e7b29fd0e4f997a04")
+!134 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !121, file: !7, size: 128, align: 64, elements: !42, identifier: "a9ac2edd79b7a2c052d84739de651359")
 !135 = !DIDerivedType(tag: DW_TAG_member, scope: !121, file: !7, baseType: !136, size: 64, align: 64, flags: DIFlagArtificial)
 !136 = !DIBasicType(name: "u64", size: 64, encoding: DW_ATE_unsigned)
 !137 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !113, file: !7, baseType: !121, size: 128, align: 64, offset: 128)
 !138 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !105, file: !7, baseType: !94, size: 64, align: 64, offset: 64)
 !139 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !99, file: !7, baseType: !140, size: 128, align: 64)
-!140 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !97, file: !7, size: 128, align: 64, elements: !141, templateParams: !103, identifier: "45eaeac90b0c2cad515177aa4ad012c0")
+!140 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !97, file: !7, size: 128, align: 64, elements: !141, templateParams: !103, identifier: "ecb4a60835a68b86ac55d46be42b6cd5")
 !141 = !{!142}
 !142 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !140, file: !7, baseType: !105, size: 128, align: 64)
 !143 = !DIDerivedType(tag: DW_TAG_member, scope: !97, file: !7, baseType: !136, size: 64, align: 64, flags: DIFlagArtificial)
 !144 = !DIDerivedType(tag: DW_TAG_member, name: "args", scope: !82, file: !7, baseType: !145, size: 128, align: 64, offset: 256)
-!145 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::ArgumentV1]", file: !7, size: 128, align: 64, elements: !146, templateParams: !42, identifier: "83fd9dd078f03ba333a6c21d9c3331b7")
+!145 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::ArgumentV1]", file: !7, size: 128, align: 64, elements: !146, templateParams: !42, identifier: "1ef2a88983c14e17bd3824c1adc5cb")
 !146 = !{!147, !210}
 !147 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !145, file: !7, baseType: !148, size: 64, align: 64)
 !148 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !149, size: 64, align: 64, dwarfAddressSpace: 0)
-!149 = !DICompositeType(tag: DW_TAG_structure_type, name: "ArgumentV1", scope: !10, file: !7, size: 128, align: 64, elements: !150, templateParams: !42, identifier: "3c2ef6ebf262caba6e43777d9c298823")
+!149 = !DICompositeType(tag: DW_TAG_structure_type, name: "ArgumentV1", scope: !10, file: !7, size: 128, align: 64, elements: !150, templateParams: !42, identifier: "4e3593181d4a3fd7c7588e4c93e285e5")
 !150 = !{!151, !155}
 !151 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !149, file: !7, baseType: !152, size: 64, align: 64)
 !152 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::fmt::{extern#0}::Opaque", baseType: !153, size: 64, align: 64, dwarfAddressSpace: 0)
-!153 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !154, file: !7, align: 8, elements: !42, identifier: "43185ab61ba6b0b799bd1bef1620bc0b")
+!153 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !154, file: !7, align: 8, elements: !42, identifier: "9d957b9cbc95a5d52c57994d133a21d2")
 !154 = !DINamespace(name: "{extern#0}", scope: !10)
 !155 = !DIDerivedType(tag: DW_TAG_member, name: "formatter", scope: !149, file: !7, baseType: !156, size: 64, align: 64, offset: 64)
 !156 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "fn(&core::fmt::{extern#0}::Opaque, &mut core::fmt::Formatter) -> core::result::Result<(), core::fmt::Error>", baseType: !157, size: 64, align: 64, dwarfAddressSpace: 0)
 !157 = !DISubroutineType(types: !158)
 !158 = !{!159, !152, !178}
-!159 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !160, file: !7, size: 8, align: 8, elements: !161, templateParams: !42, identifier: "1c6ce168e24238e83c13ec35dde7d382")
+!159 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !160, file: !7, size: 8, align: 8, elements: !161, templateParams: !42, identifier: "b7fb26f737e54d12fa01aa3853cdbeae")
 !160 = !DINamespace(name: "result", scope: !11)
 !161 = !{!162}
-!162 = !DICompositeType(tag: DW_TAG_variant_part, scope: !159, file: !7, size: 8, align: 8, elements: !163, templateParams: !42, identifier: "42dfca7da53f7734270db51480dbcc24", discriminator: !177)
+!162 = !DICompositeType(tag: DW_TAG_variant_part, scope: !159, file: !7, size: 8, align: 8, elements: !163, templateParams: !42, identifier: "a92bdd2eb05472a8bda434c249c29302", discriminator: !177)
 !163 = !{!164, !173}
 !164 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !162, file: !7, baseType: !165, size: 8, align: 8, extraData: i64 0)
-!165 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !159, file: !7, size: 8, align: 8, elements: !166, templateParams: !169, identifier: "4d011f8c16a13f53ec25b197c7b1903")
+!165 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !159, file: !7, size: 8, align: 8, elements: !166, templateParams: !169, identifier: "bb2249fac7fb973c2c787a4c375e7dc3")
 !166 = !{!167}
 !167 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !165, file: !7, baseType: !168, align: 8, offset: 8)
 !168 = !DIBasicType(name: "()", encoding: DW_ATE_unsigned)
 !169 = !{!170, !171}
 !170 = !DITemplateTypeParameter(name: "T", type: !168)
 !171 = !DITemplateTypeParameter(name: "E", type: !172)
-!172 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !10, file: !7, align: 8, elements: !42, identifier: "d361babf030d8dcc5fc2146a5e622473")
+!172 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !10, file: !7, align: 8, elements: !42, identifier: "db1174efc0a2f975f4813d5134979630")
 !173 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !162, file: !7, baseType: !174, size: 8, align: 8, extraData: i64 1)
-!174 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !159, file: !7, size: 8, align: 8, elements: !175, templateParams: !169, identifier: "c5af1e4fa5907b7a524a9ebbd4a5ec10")
+!174 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !159, file: !7, size: 8, align: 8, elements: !175, templateParams: !169, identifier: "eb015aef3c84d8cf3918a665d11906a1")
 !175 = !{!176}
 !176 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !174, file: !7, baseType: !172, align: 8, offset: 8)
 !177 = !DIDerivedType(tag: DW_TAG_member, scope: !159, file: !7, baseType: !12, size: 8, align: 8, flags: DIFlagArtificial)
 !178 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::fmt::Formatter", baseType: !179, size: 64, align: 64, dwarfAddressSpace: 0)
-!179 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !10, file: !7, size: 512, align: 64, elements: !180, templateParams: !42, identifier: "a3b888d0a58016a3ad42c934cf971ea3")
+!179 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !10, file: !7, size: 512, align: 64, elements: !180, templateParams: !42, identifier: "4518b2a8833c3639e2a18f19d8d2d035")
 !180 = !{!181, !182, !183, !184, !198, !199}
 !181 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !179, file: !7, baseType: !119, size: 32, align: 32, offset: 384)
 !182 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !179, file: !7, baseType: !116, size: 32, align: 32, offset: 416)
 !183 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !179, file: !7, baseType: !6, size: 8, align: 8, offset: 448)
 !184 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !179, file: !7, baseType: !185, size: 128, align: 64, offset: 128)
-!185 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !36, file: !7, size: 128, align: 64, elements: !186, templateParams: !42, identifier: "8d57b0310dad0e81a52a7e1f827929d")
+!185 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !36, file: !7, size: 128, align: 64, elements: !186, templateParams: !42, identifier: "e509e62aca398ad985d4d7108c999fce")
 !186 = !{!187}
-!187 = !DICompositeType(tag: DW_TAG_variant_part, scope: !185, file: !7, size: 128, align: 64, elements: !188, templateParams: !42, identifier: "1503e6327b896c262eca127cbc35ec74", discriminator: !197)
+!187 = !DICompositeType(tag: DW_TAG_variant_part, scope: !185, file: !7, size: 128, align: 64, elements: !188, templateParams: !42, identifier: "b800028c0f41e5f65055b3206ca16e40", discriminator: !197)
 !188 = !{!189, !193}
 !189 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !187, file: !7, baseType: !190, size: 128, align: 64, extraData: i64 0)
-!190 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !185, file: !7, size: 128, align: 64, elements: !42, templateParams: !191, identifier: "b9a11c756332445b5e317b2b2625f528")
+!190 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !185, file: !7, size: 128, align: 64, elements: !42, templateParams: !191, identifier: "c64b01d4e9024c6089607fba201241ac")
 !191 = !{!192}
 !192 = !DITemplateTypeParameter(name: "T", type: !94)
 !193 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !187, file: !7, baseType: !194, size: 128, align: 64, extraData: i64 1)
-!194 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !185, file: !7, size: 128, align: 64, elements: !195, templateParams: !191, identifier: "87159a1745a522a36bc4a0700aab6dc3")
+!194 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !185, file: !7, size: 128, align: 64, elements: !195, templateParams: !191, identifier: "d909f9aede69ded5e6a3f34da3cb5ef3")
 !195 = !{!196}
 !196 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !194, file: !7, baseType: !94, size: 64, align: 64, offset: 64)
 !197 = !DIDerivedType(tag: DW_TAG_member, scope: !185, file: !7, baseType: !136, size: 64, align: 64, flags: DIFlagArtificial)
 !198 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !179, file: !7, baseType: !185, size: 128, align: 64, offset: 256)
 !199 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !179, file: !7, baseType: !200, size: 128, align: 64)
-!200 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !7, size: 128, align: 64, elements: !201, templateParams: !42, identifier: "b58efcb3df0f0beb9aa098f750459fd2")
+!200 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !7, size: 128, align: 64, elements: !201, templateParams: !42, identifier: "f9270966a9fda351195f72d6edc0f59a")
 !201 = !{!202, !205}
 !202 = !DIDerivedType(tag: DW_TAG_member, name: "pointer", scope: !200, file: !7, baseType: !203, size: 64, align: 64)
 !203 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !204, size: 64, align: 64, dwarfAddressSpace: 0)
-!204 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !7, align: 8, elements: !42, identifier: "bcfe988c4f0dd1d50291e24ffc6447")
+!204 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !7, align: 8, elements: !42, identifier: "26797fbb1ceb902d1b523adeae52178")
 !205 = !DIDerivedType(tag: DW_TAG_member, name: "vtable", scope: !200, file: !7, baseType: !206, size: 64, align: 64, offset: 64)
 !206 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&[usize; 3]", baseType: !207, size: 64, align: 64, dwarfAddressSpace: 0)
 !207 = !DICompositeType(tag: DW_TAG_array_type, baseType: !94, size: 192, align: 64, elements: !208)
@@ -2826,21 +2826,21 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !219 = !{i64 8}
 !220 = !DILocation(line: 404, column: 6, scope: !80)
 !221 = !DILocation(line: 401, column: 13, scope: !80)
-!222 = distinct !DISubprogram(name: "bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17hd4fe5ed2a6b604a8E", scope: !224, file: !223, line: 864, type: !226, scopeLine: 864, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !232)
-!223 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "b8176094d70b96d19ed6eb71a23da935")
+!222 = distinct !DISubprogram(name: "bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17he043f389ae0a8b1aE", scope: !224, file: !223, line: 856, type: !226, scopeLine: 856, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !232)
+!223 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "8f91e5aecc982717403f5cbdc23932fe")
 !224 = !DINamespace(name: "{impl#0}", scope: !225)
 !225 = !DINamespace(name: "str", scope: !11)
 !226 = !DISubroutineType(types: !227)
 !227 = !{!228, !89}
-!228 = !DICompositeType(tag: DW_TAG_structure_type, name: "Bytes", scope: !229, file: !7, size: 128, align: 64, elements: !230, templateParams: !42, identifier: "8be8eb045418948da0d080a003994773")
+!228 = !DICompositeType(tag: DW_TAG_structure_type, name: "Bytes", scope: !229, file: !7, size: 128, align: 64, elements: !230, templateParams: !42, identifier: "1c6d0e83664b8ea7ecc7e9eacee8c8b1")
 !229 = !DINamespace(name: "iter", scope: !225)
 !230 = !{!231}
 !231 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !228, file: !7, baseType: !51, size: 128, align: 64)
 !232 = !{!233}
-!233 = !DILocalVariable(name: "self", arg: 1, scope: !222, file: !223, line: 864, type: !89)
-!234 = !DILocation(line: 864, column: 18, scope: !222)
-!235 = !DILocalVariable(name: "self", arg: 1, scope: !236, file: !223, line: 325, type: !89)
-!236 = distinct !DISubprogram(name: "as_bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$8as_bytes17h1cd55b9dbce3b1c7E", scope: !224, file: !223, line: 325, type: !237, scopeLine: 325, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !243)
+!233 = !DILocalVariable(name: "self", arg: 1, scope: !222, file: !223, line: 856, type: !89)
+!234 = !DILocation(line: 856, column: 18, scope: !222)
+!235 = !DILocalVariable(name: "self", arg: 1, scope: !236, file: !223, line: 324, type: !89)
+!236 = distinct !DISubprogram(name: "as_bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$8as_bytes17hf9fc150870f70375E", scope: !224, file: !223, line: 324, type: !237, scopeLine: 324, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !243)
 !237 = !DISubroutineType(types: !238)
 !238 = !{!239, !89}
 !239 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[u8]", file: !7, size: 128, align: 64, elements: !240, templateParams: !42, identifier: "4f7d759e2003ffb713a77bd933fd0146")
@@ -2848,130 +2848,130 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !241 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !239, file: !7, baseType: !92, size: 64, align: 64)
 !242 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !239, file: !7, baseType: !94, size: 64, align: 64, offset: 64)
 !243 = !{!235}
-!244 = !DILocation(line: 325, column: 27, scope: !236, inlinedAt: !245)
-!245 = distinct !DILocation(line: 865, column: 15, scope: !222)
-!246 = !DILocation(line: 328, column: 6, scope: !236, inlinedAt: !245)
-!247 = !DILocation(line: 865, column: 15, scope: !222)
-!248 = !DILocation(line: 865, column: 9, scope: !222)
-!249 = !DILocation(line: 866, column: 6, scope: !222)
-!250 = distinct !DISubprogram(name: "copied<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN4core4iter6traits8iterator8Iterator6copied17hf229e701e993113fE", scope: !252, file: !251, line: 3311, type: !255, scopeLine: 3311, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !259, retainedNodes: !257)
-!251 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs", directory: "", checksumkind: CSK_MD5, checksum: "73d175c00d58c02116c31cf298d75f09")
+!244 = !DILocation(line: 324, column: 27, scope: !236, inlinedAt: !245)
+!245 = distinct !DILocation(line: 857, column: 15, scope: !222)
+!246 = !DILocation(line: 327, column: 6, scope: !236, inlinedAt: !245)
+!247 = !DILocation(line: 857, column: 15, scope: !222)
+!248 = !DILocation(line: 857, column: 9, scope: !222)
+!249 = !DILocation(line: 858, column: 6, scope: !222)
+!250 = distinct !DISubprogram(name: "copied<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN4core4iter6traits8iterator8Iterator6copied17h1514b981672a942eE", scope: !252, file: !251, line: 3310, type: !255, scopeLine: 3310, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !259, retainedNodes: !257)
+!251 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs", directory: "", checksumkind: CSK_MD5, checksum: "95e88b6c652e0490e905763009955c97")
 !252 = !DINamespace(name: "Iterator", scope: !253)
 !253 = !DINamespace(name: "iterator", scope: !254)
 !254 = !DINamespace(name: "traits", scope: !32)
 !255 = !DISubroutineType(types: !256)
 !256 = !{!51, !54}
 !257 = !{!258}
-!258 = !DILocalVariable(name: "self", arg: 1, scope: !250, file: !251, line: 3311, type: !54)
+!258 = !DILocalVariable(name: "self", arg: 1, scope: !250, file: !251, line: 3310, type: !54)
 !259 = !{!260, !44}
 !260 = !DITemplateTypeParameter(name: "Self", type: !54)
-!261 = !DILocation(line: 3311, column: 26, scope: !250)
-!262 = !DILocation(line: 3316, column: 9, scope: !250)
-!263 = !DILocation(line: 3317, column: 6, scope: !250)
-!264 = distinct !DISubprogram(name: "new<core::slice::iter::Iter<u8>>", linkageName: "_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h32f21c56e144fe64E", scope: !51, file: !28, line: 26, type: !255, scopeLine: 26, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !72, retainedNodes: !265)
+!261 = !DILocation(line: 3310, column: 26, scope: !250)
+!262 = !DILocation(line: 3315, column: 9, scope: !250)
+!263 = !DILocation(line: 3316, column: 6, scope: !250)
+!264 = distinct !DISubprogram(name: "new<core::slice::iter::Iter<u8>>", linkageName: "_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h687c545862c1b7a7E", scope: !51, file: !28, line: 26, type: !255, scopeLine: 26, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !72, retainedNodes: !265)
 !265 = !{!266}
 !266 = !DILocalVariable(name: "it", arg: 1, scope: !264, file: !28, line: 26, type: !54)
 !267 = !DILocation(line: 26, column: 32, scope: !264)
 !268 = !DILocation(line: 27, column: 9, scope: !264)
 !269 = !DILocation(line: 28, column: 6, scope: !264)
-!270 = distinct !DISubprogram(name: "atomic_load<*mut u8>", linkageName: "_ZN4core4sync6atomic11atomic_load17ha41a257be8f0e917E", scope: !19, file: !271, line: 3155, type: !272, scopeLine: 3155, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !279, retainedNodes: !276)
-!271 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/sync/atomic.rs", directory: "", checksumkind: CSK_MD5, checksum: "cd92f8d8b05e6b3d85c324633916e8b5")
+!270 = distinct !DISubprogram(name: "atomic_load<*mut u8>", linkageName: "_ZN4core4sync6atomic11atomic_load17hb5a59cd47eb7658dE", scope: !19, file: !271, line: 3149, type: !272, scopeLine: 3149, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !279, retainedNodes: !276)
+!271 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/sync/atomic.rs", directory: "", checksumkind: CSK_MD5, checksum: "93a0089cd11c622e97239c13f01ff0c9")
 !272 = !DISubroutineType(types: !273)
 !273 = !{!274, !275, !18}
 !274 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut u8", baseType: !12, size: 64, align: 64, dwarfAddressSpace: 0)
 !275 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const *mut u8", baseType: !274, size: 64, align: 64, dwarfAddressSpace: 0)
 !276 = !{!277, !278}
-!277 = !DILocalVariable(name: "dst", arg: 1, scope: !270, file: !271, line: 3155, type: !275)
-!278 = !DILocalVariable(name: "order", arg: 2, scope: !270, file: !271, line: 3155, type: !18)
+!277 = !DILocalVariable(name: "dst", arg: 1, scope: !270, file: !271, line: 3149, type: !275)
+!278 = !DILocalVariable(name: "order", arg: 2, scope: !270, file: !271, line: 3149, type: !18)
 !279 = !{!280}
 !280 = !DITemplateTypeParameter(name: "T", type: !274)
-!281 = !DILocation(line: 3155, column: 32, scope: !270)
-!282 = !DILocation(line: 3155, column: 47, scope: !270)
-!283 = !DILocation(line: 3158, column: 15, scope: !270)
+!281 = !DILocation(line: 3149, column: 32, scope: !270)
+!282 = !DILocation(line: 3149, column: 47, scope: !270)
+!283 = !DILocation(line: 3152, column: 15, scope: !270)
 !284 = !{i8 0, i8 5}
-!285 = !DILocation(line: 3158, column: 9, scope: !270)
-!286 = !DILocation(line: 3159, column: 24, scope: !270)
-!287 = !DILocation(line: 3162, column: 24, scope: !270)
-!288 = !DILocation(line: 3160, column: 24, scope: !270)
-!289 = !DILocation(line: 3163, column: 23, scope: !270)
-!290 = !DILocation(line: 3161, column: 23, scope: !270)
-!291 = !DILocation(line: 3166, column: 2, scope: !270)
-!292 = distinct !DISubprogram(name: "new<u8>", linkageName: "_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17h79f946139ec23297E", scope: !293, file: !271, line: 1062, type: !300, scopeLine: 1062, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !302)
-!293 = !DICompositeType(tag: DW_TAG_structure_type, name: "AtomicPtr<u8>", scope: !19, file: !7, size: 64, align: 64, elements: !294, templateParams: !43, identifier: "2b0ae62343b9af6e815e1680be0af2")
+!285 = !DILocation(line: 3152, column: 9, scope: !270)
+!286 = !DILocation(line: 3153, column: 24, scope: !270)
+!287 = !DILocation(line: 3156, column: 24, scope: !270)
+!288 = !DILocation(line: 3154, column: 24, scope: !270)
+!289 = !DILocation(line: 3157, column: 23, scope: !270)
+!290 = !DILocation(line: 3155, column: 23, scope: !270)
+!291 = !DILocation(line: 3160, column: 2, scope: !270)
+!292 = distinct !DISubprogram(name: "new<u8>", linkageName: "_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$3new17hd5b3c798015e79e8E", scope: !293, file: !271, line: 1060, type: !300, scopeLine: 1060, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !302)
+!293 = !DICompositeType(tag: DW_TAG_structure_type, name: "AtomicPtr<u8>", scope: !19, file: !7, size: 64, align: 64, elements: !294, templateParams: !43, identifier: "bd78382b11e750ae55a82521627bedb5")
 !294 = !{!295}
 !295 = !DIDerivedType(tag: DW_TAG_member, name: "p", scope: !293, file: !7, baseType: !296, size: 64, align: 64)
-!296 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<*mut u8>", scope: !297, file: !7, size: 64, align: 64, elements: !298, templateParams: !279, identifier: "172ee342d105f8fa4b07c4fc8f63be4b")
+!296 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<*mut u8>", scope: !297, file: !7, size: 64, align: 64, elements: !298, templateParams: !279, identifier: "8787a5b75a21b14ee85d18f625986402")
 !297 = !DINamespace(name: "cell", scope: !11)
 !298 = !{!299}
 !299 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !296, file: !7, baseType: !274, size: 64, align: 64)
 !300 = !DISubroutineType(types: !301)
 !301 = !{!293, !274}
 !302 = !{!303}
-!303 = !DILocalVariable(name: "p", arg: 1, scope: !292, file: !271, line: 1062, type: !274)
-!304 = !DILocation(line: 1062, column: 22, scope: !292)
-!305 = !DILocalVariable(name: "value", arg: 1, scope: !306, file: !307, line: 2011, type: !274)
-!306 = distinct !DISubprogram(name: "new<*mut u8>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3new17h78bbbcf819046d4cE", scope: !296, file: !307, line: 2011, type: !308, scopeLine: 2011, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !279, retainedNodes: !310)
-!307 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/cell.rs", directory: "", checksumkind: CSK_MD5, checksum: "4a756604d5b8adc8c373a79367d25e51")
+!303 = !DILocalVariable(name: "p", arg: 1, scope: !292, file: !271, line: 1060, type: !274)
+!304 = !DILocation(line: 1060, column: 22, scope: !292)
+!305 = !DILocalVariable(name: "value", arg: 1, scope: !306, file: !307, line: 2009, type: !274)
+!306 = distinct !DISubprogram(name: "new<*mut u8>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3new17hd1146c5fae4656bfE", scope: !296, file: !307, line: 2009, type: !308, scopeLine: 2009, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !279, retainedNodes: !310)
+!307 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/cell.rs", directory: "", checksumkind: CSK_MD5, checksum: "8d01b740129a4b9c32202a274c61d632")
 !308 = !DISubroutineType(types: !309)
 !309 = !{!296, !274}
 !310 = !{!305}
-!311 = !DILocation(line: 2011, column: 22, scope: !306, inlinedAt: !312)
-!312 = distinct !DILocation(line: 1063, column: 24, scope: !292)
-!313 = !DILocation(line: 2012, column: 9, scope: !306, inlinedAt: !312)
-!314 = !DILocation(line: 2013, column: 6, scope: !306, inlinedAt: !312)
-!315 = !DILocation(line: 1063, column: 9, scope: !292)
-!316 = !DILocation(line: 1064, column: 6, scope: !292)
-!317 = distinct !DISubprogram(name: "load<u8>", linkageName: "_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h1e79633572e4bb02E", scope: !293, file: !271, line: 1279, type: !318, scopeLine: 1279, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !321)
+!311 = !DILocation(line: 2009, column: 22, scope: !306, inlinedAt: !312)
+!312 = distinct !DILocation(line: 1061, column: 24, scope: !292)
+!313 = !DILocation(line: 2010, column: 9, scope: !306, inlinedAt: !312)
+!314 = !DILocation(line: 2011, column: 6, scope: !306, inlinedAt: !312)
+!315 = !DILocation(line: 1061, column: 9, scope: !292)
+!316 = !DILocation(line: 1062, column: 6, scope: !292)
+!317 = distinct !DISubprogram(name: "load<u8>", linkageName: "_ZN4core4sync6atomic18AtomicPtr$LT$T$GT$4load17h5f31b7485572af8eE", scope: !293, file: !271, line: 1277, type: !318, scopeLine: 1277, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !321)
 !318 = !DISubroutineType(types: !319)
 !319 = !{!274, !320, !18}
 !320 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::sync::atomic::AtomicPtr<u8>", baseType: !293, size: 64, align: 64, dwarfAddressSpace: 0)
 !321 = !{!322, !323}
-!322 = !DILocalVariable(name: "self", arg: 1, scope: !317, file: !271, line: 1279, type: !320)
-!323 = !DILocalVariable(name: "order", arg: 2, scope: !317, file: !271, line: 1279, type: !18)
-!324 = !DILocation(line: 1279, column: 17, scope: !317)
-!325 = !DILocation(line: 1279, column: 24, scope: !317)
-!326 = !DILocalVariable(name: "self", arg: 1, scope: !327, file: !307, line: 2054, type: !331)
-!327 = distinct !DISubprogram(name: "get<*mut u8>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h3b4863ebb071cfb3E", scope: !296, file: !307, line: 2054, type: !328, scopeLine: 2054, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !279, retainedNodes: !332)
+!322 = !DILocalVariable(name: "self", arg: 1, scope: !317, file: !271, line: 1277, type: !320)
+!323 = !DILocalVariable(name: "order", arg: 2, scope: !317, file: !271, line: 1277, type: !18)
+!324 = !DILocation(line: 1277, column: 17, scope: !317)
+!325 = !DILocation(line: 1277, column: 24, scope: !317)
+!326 = !DILocalVariable(name: "self", arg: 1, scope: !327, file: !307, line: 2052, type: !331)
+!327 = distinct !DISubprogram(name: "get<*mut u8>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h1466350bcc5db861E", scope: !296, file: !307, line: 2052, type: !328, scopeLine: 2052, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !279, retainedNodes: !332)
 !328 = !DISubroutineType(types: !329)
 !329 = !{!330, !331}
 !330 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut *mut u8", baseType: !274, size: 64, align: 64, dwarfAddressSpace: 0)
 !331 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<*mut u8>", baseType: !296, size: 64, align: 64, dwarfAddressSpace: 0)
 !332 = !{!326}
-!333 = !DILocation(line: 2054, column: 22, scope: !327, inlinedAt: !334)
-!334 = distinct !DILocation(line: 1281, column: 30, scope: !317)
-!335 = !DILocation(line: 1281, column: 18, scope: !317)
-!336 = !DILocation(line: 1282, column: 6, scope: !317)
-!337 = distinct !DISubprogram(name: "copied<u8>", linkageName: "_ZN4core6option19Option$LT$$RF$T$GT$6copied17hed3b03d5f9dd6849E", scope: !339, file: !338, line: 1899, type: !350, scopeLine: 1899, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !352)
-!338 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs", directory: "", checksumkind: CSK_MD5, checksum: "57ab105cef20f1dc79a065da4ca5bc2f")
-!339 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&u8>", scope: !36, file: !7, size: 64, align: 64, elements: !340, templateParams: !42, identifier: "8a609cbe7b29403c6b481516812aeb75")
+!333 = !DILocation(line: 2052, column: 22, scope: !327, inlinedAt: !334)
+!334 = distinct !DILocation(line: 1279, column: 30, scope: !317)
+!335 = !DILocation(line: 1279, column: 18, scope: !317)
+!336 = !DILocation(line: 1280, column: 6, scope: !317)
+!337 = distinct !DISubprogram(name: "copied<u8>", linkageName: "_ZN4core6option19Option$LT$$RF$T$GT$6copied17h7cf6c21708c7801fE", scope: !339, file: !338, line: 1828, type: !350, scopeLine: 1828, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !352)
+!338 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs", directory: "", checksumkind: CSK_MD5, checksum: "7fe636643511270d6f7e365434dea895")
+!339 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&u8>", scope: !36, file: !7, size: 64, align: 64, elements: !340, templateParams: !42, identifier: "bfc495f48dc37f09f478bd3eb09ffe0d")
 !340 = !{!341}
-!341 = !DICompositeType(tag: DW_TAG_variant_part, scope: !339, file: !7, size: 64, align: 64, elements: !342, templateParams: !42, identifier: "9b5637c8904cadf85b3a34e2d8c6b3df", discriminator: !349)
+!341 = !DICompositeType(tag: DW_TAG_variant_part, scope: !339, file: !7, size: 64, align: 64, elements: !342, templateParams: !42, identifier: "a23d37d5d5b6350b94fb9b5d3f1cd4cc", discriminator: !349)
 !342 = !{!343, !345}
 !343 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !341, file: !7, baseType: !344, size: 64, align: 64, extraData: i64 0)
-!344 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !339, file: !7, size: 64, align: 64, elements: !42, templateParams: !69, identifier: "a60e797b847fb1fc654fcb57f68686bc")
+!344 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !339, file: !7, size: 64, align: 64, elements: !42, templateParams: !69, identifier: "42c63ab87d419b0473096dfb98803a15")
 !345 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !341, file: !7, baseType: !346, size: 64, align: 64)
-!346 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !339, file: !7, size: 64, align: 64, elements: !347, templateParams: !69, identifier: "b6bac6d95f4c9cd5195e019f9f81d37c")
+!346 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !339, file: !7, size: 64, align: 64, elements: !347, templateParams: !69, identifier: "8d0eb3617ba126ce58a6283f6c53b7d9")
 !347 = !{!348}
 !348 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !346, file: !7, baseType: !71, size: 64, align: 64)
 !349 = !DIDerivedType(tag: DW_TAG_member, scope: !339, file: !7, baseType: !136, size: 64, align: 64, flags: DIFlagArtificial)
 !350 = !DISubroutineType(types: !351)
 !351 = !{!35, !339}
 !352 = !{!353, !354}
-!353 = !DILocalVariable(name: "self", arg: 1, scope: !337, file: !338, line: 1899, type: !339)
-!354 = !DILocalVariable(name: "v", scope: !355, file: !338, line: 1906, type: !12, align: 1)
-!355 = distinct !DILexicalBlock(scope: !337, file: !338, line: 1906, column: 13)
-!356 = !DILocation(line: 1899, column: 25, scope: !337)
-!357 = !DILocation(line: 1905, column: 15, scope: !337)
-!358 = !DILocation(line: 1905, column: 9, scope: !337)
-!359 = !DILocation(line: 1907, column: 21, scope: !337)
-!360 = !DILocation(line: 1906, column: 19, scope: !337)
+!353 = !DILocalVariable(name: "self", arg: 1, scope: !337, file: !338, line: 1828, type: !339)
+!354 = !DILocalVariable(name: "v", scope: !355, file: !338, line: 1835, type: !12, align: 1)
+!355 = distinct !DILexicalBlock(scope: !337, file: !338, line: 1835, column: 13)
+!356 = !DILocation(line: 1828, column: 25, scope: !337)
+!357 = !DILocation(line: 1834, column: 15, scope: !337)
+!358 = !DILocation(line: 1834, column: 9, scope: !337)
+!359 = !DILocation(line: 1836, column: 21, scope: !337)
+!360 = !DILocation(line: 1835, column: 19, scope: !337)
 !361 = !{i64 1}
-!362 = !DILocation(line: 1906, column: 19, scope: !355)
-!363 = !DILocation(line: 1906, column: 25, scope: !355)
-!364 = !DILocation(line: 1906, column: 31, scope: !337)
-!365 = !DILocation(line: 1909, column: 6, scope: !337)
+!362 = !DILocation(line: 1835, column: 19, scope: !355)
+!363 = !DILocation(line: 1835, column: 25, scope: !355)
+!364 = !DILocation(line: 1835, column: 31, scope: !337)
+!365 = !DILocation(line: 1838, column: 6, scope: !337)
 !366 = !{i8 0, i8 2}
-!367 = distinct !DISubprogram(name: "_mm_pause", linkageName: "_ZN4core9core_arch3x864sse29_mm_pause17he3316212e2db9da8E", scope: !369, file: !368, line: 22, type: !372, scopeLine: 22, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
+!367 = distinct !DISubprogram(name: "_mm_pause", linkageName: "_ZN4core9core_arch3x864sse29_mm_pause17he406bea768186800E", scope: !369, file: !368, line: 22, type: !372, scopeLine: 22, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
 !368 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse2.rs", directory: "", checksumkind: CSK_MD5, checksum: "af15c06b8fe0c45637e9a1b14f5b1c62")
 !369 = !DINamespace(name: "sse2", scope: !370)
 !370 = !DINamespace(name: "x86", scope: !371)
@@ -2980,21 +2980,21 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !373 = !{null}
 !374 = !DILocation(line: 25, column: 5, scope: !367)
 !375 = !DILocation(line: 26, column: 2, scope: !367)
-!376 = distinct !DISubprogram(name: "into_iter<core::str::iter::Bytes>", linkageName: "_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h2603b9adfacff9bfE", scope: !378, file: !377, line: 272, type: !380, scopeLine: 272, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !384, retainedNodes: !382)
-!377 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs", directory: "", checksumkind: CSK_MD5, checksum: "697d559cdba63f105535b8b53d6ea422")
+!376 = distinct !DISubprogram(name: "into_iter<core::str::iter::Bytes>", linkageName: "_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17he3c3b787637d6089E", scope: !378, file: !377, line: 271, type: !380, scopeLine: 271, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !384, retainedNodes: !382)
+!377 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs", directory: "", checksumkind: CSK_MD5, checksum: "a39b82fc812ed30b3e6ebda5fbc56490")
 !378 = !DINamespace(name: "{impl#0}", scope: !379)
 !379 = !DINamespace(name: "collect", scope: !254)
 !380 = !DISubroutineType(types: !381)
 !381 = !{!228, !228}
 !382 = !{!383}
-!383 = !DILocalVariable(name: "self", arg: 1, scope: !376, file: !377, line: 272, type: !228)
+!383 = !DILocalVariable(name: "self", arg: 1, scope: !376, file: !377, line: 271, type: !228)
 !384 = !{!385}
 !385 = !DITemplateTypeParameter(name: "I", type: !228)
-!386 = !DILocation(line: 272, column: 18, scope: !376)
-!387 = !DILocation(line: 274, column: 6, scope: !376)
-!388 = distinct !DISubprogram(name: "new<u8, x86_64::instructions::port::ReadOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h16b08ba3d2a59066E", scope: !390, file: !389, line: 134, type: !410, scopeLine: 134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !408, retainedNodes: !412)
+!386 = !DILocation(line: 271, column: 18, scope: !376)
+!387 = !DILocation(line: 273, column: 6, scope: !376)
+!388 = distinct !DISubprogram(name: "new<u8, x86_64::instructions::port::ReadWriteAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h0d910a274970db38E", scope: !390, file: !389, line: 134, type: !410, scopeLine: 134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !408, retainedNodes: !412)
 !389 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/x86_64-0.14.10/src/instructions/port.rs", directory: "", checksumkind: CSK_MD5, checksum: "d2d89e3a4061823cc5bef50c152ccf5c")
-!390 = !DICompositeType(tag: DW_TAG_structure_type, name: "PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>", scope: !391, file: !7, size: 16, align: 16, elements: !394, templateParams: !408, identifier: "f491eca81b00aee76f9218cba6b4bf5f")
+!390 = !DICompositeType(tag: DW_TAG_structure_type, name: "PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>", scope: !391, file: !7, size: 16, align: 16, elements: !394, templateParams: !408, identifier: "891b8963aaec3281174b762a7b4c9ced")
 !391 = !DINamespace(name: "port", scope: !392)
 !392 = !DINamespace(name: "instructions", scope: !393)
 !393 = !DINamespace(name: "x86_64", scope: null)
@@ -3002,14 +3002,14 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !395 = !DIDerivedType(tag: DW_TAG_member, name: "port", scope: !390, file: !7, baseType: !396, size: 16, align: 16)
 !396 = !DIBasicType(name: "u16", size: 16, encoding: DW_ATE_unsigned)
 !397 = !DIDerivedType(tag: DW_TAG_member, name: "phantom", scope: !390, file: !7, baseType: !398, align: 8)
-!398 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<(u8, x86_64::instructions::port::ReadOnlyAccess)>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !399, identifier: "69524a05c8dcee762fc634bf4ae0eadd")
+!398 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<(u8, x86_64::instructions::port::ReadWriteAccess)>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !399, identifier: "cf1e6ac0b81c4d477067f2210327a959")
 !399 = !{!400}
 !400 = !DITemplateTypeParameter(name: "T", type: !401)
-!401 = !DICompositeType(tag: DW_TAG_structure_type, name: "(u8, x86_64::instructions::port::ReadOnlyAccess)", file: !7, size: 8, align: 8, elements: !402, templateParams: !42, identifier: "913df7bdd9f6ee5c80105c0817f3c8da")
+!401 = !DICompositeType(tag: DW_TAG_structure_type, name: "(u8, x86_64::instructions::port::ReadWriteAccess)", file: !7, size: 8, align: 8, elements: !402, templateParams: !42, identifier: "cf2996b5b7cc8925c44f7146ae57577d")
 !402 = !{!403, !404}
 !403 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !401, file: !7, baseType: !12, size: 8, align: 8)
 !404 = !DIDerivedType(tag: DW_TAG_member, name: "__1", scope: !401, file: !7, baseType: !405, align: 8, offset: 8)
-!405 = !DICompositeType(tag: DW_TAG_structure_type, name: "ReadOnlyAccess", scope: !391, file: !7, align: 8, elements: !406, templateParams: !42, identifier: "90201ce8d3293861bd06adb8c990f9b0")
+!405 = !DICompositeType(tag: DW_TAG_structure_type, name: "ReadWriteAccess", scope: !391, file: !7, align: 8, elements: !406, templateParams: !42, identifier: "db2664ceb848d2dae7bd39140452d55")
 !406 = !{!407}
 !407 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !405, file: !7, baseType: !168, align: 8)
 !408 = !{!44, !409}
@@ -3021,19 +3021,19 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !414 = !DILocation(line: 134, column: 22, scope: !388)
 !415 = !DILocation(line: 135, column: 9, scope: !388)
 !416 = !DILocation(line: 139, column: 6, scope: !388)
-!417 = distinct !DISubprogram(name: "new<u8, x86_64::instructions::port::ReadWriteAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h31a0435ea77180f7E", scope: !418, file: !389, line: 134, type: !434, scopeLine: 134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !432, retainedNodes: !436)
-!418 = !DICompositeType(tag: DW_TAG_structure_type, name: "PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>", scope: !391, file: !7, size: 16, align: 16, elements: !419, templateParams: !432, identifier: "a8eb19b2ce088a9b7e474711afc9a3ab")
+!417 = distinct !DISubprogram(name: "new<u8, x86_64::instructions::port::ReadOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17h50e1cb903ad67d3cE", scope: !418, file: !389, line: 134, type: !434, scopeLine: 134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !432, retainedNodes: !436)
+!418 = !DICompositeType(tag: DW_TAG_structure_type, name: "PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>", scope: !391, file: !7, size: 16, align: 16, elements: !419, templateParams: !432, identifier: "e816ad8078827804fa3d5bcc4bc0149f")
 !419 = !{!420, !421}
 !420 = !DIDerivedType(tag: DW_TAG_member, name: "port", scope: !418, file: !7, baseType: !396, size: 16, align: 16)
 !421 = !DIDerivedType(tag: DW_TAG_member, name: "phantom", scope: !418, file: !7, baseType: !422, align: 8)
-!422 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<(u8, x86_64::instructions::port::ReadWriteAccess)>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !423, identifier: "8d33ffc0710a4c2f1f458093d077c9a3")
+!422 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<(u8, x86_64::instructions::port::ReadOnlyAccess)>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !423, identifier: "90c1041b3a9e595c33c0f90b7bfb2cfb")
 !423 = !{!424}
 !424 = !DITemplateTypeParameter(name: "T", type: !425)
-!425 = !DICompositeType(tag: DW_TAG_structure_type, name: "(u8, x86_64::instructions::port::ReadWriteAccess)", file: !7, size: 8, align: 8, elements: !426, templateParams: !42, identifier: "61129a9fb5f505dc2c1bda9fef39cabd")
+!425 = !DICompositeType(tag: DW_TAG_structure_type, name: "(u8, x86_64::instructions::port::ReadOnlyAccess)", file: !7, size: 8, align: 8, elements: !426, templateParams: !42, identifier: "7bede4854495a77b85d2a70b63162d37")
 !426 = !{!427, !428}
 !427 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !425, file: !7, baseType: !12, size: 8, align: 8)
 !428 = !DIDerivedType(tag: DW_TAG_member, name: "__1", scope: !425, file: !7, baseType: !429, align: 8, offset: 8)
-!429 = !DICompositeType(tag: DW_TAG_structure_type, name: "ReadWriteAccess", scope: !391, file: !7, align: 8, elements: !430, templateParams: !42, identifier: "7b61641c06de0483f7557b84ccab5a8b")
+!429 = !DICompositeType(tag: DW_TAG_structure_type, name: "ReadOnlyAccess", scope: !391, file: !7, align: 8, elements: !430, templateParams: !42, identifier: "923793729ddd42a36b36191642c2996")
 !430 = !{!431}
 !431 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !429, file: !7, baseType: !168, align: 8)
 !432 = !{!44, !433}
@@ -3045,19 +3045,19 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !438 = !DILocation(line: 134, column: 22, scope: !417)
 !439 = !DILocation(line: 135, column: 9, scope: !417)
 !440 = !DILocation(line: 139, column: 6, scope: !417)
-!441 = distinct !DISubprogram(name: "new<u8, x86_64::instructions::port::WriteOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hc46d4bfbe056d27dE", scope: !442, file: !389, line: 134, type: !458, scopeLine: 134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !456, retainedNodes: !460)
-!442 = !DICompositeType(tag: DW_TAG_structure_type, name: "PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>", scope: !391, file: !7, size: 16, align: 16, elements: !443, templateParams: !456, identifier: "550c9cc19a4cb4e49a85e4180dcb750d")
+!441 = distinct !DISubprogram(name: "new<u8, x86_64::instructions::port::WriteOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$3new17hcb200592ef9058a6E", scope: !442, file: !389, line: 134, type: !458, scopeLine: 134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !456, retainedNodes: !460)
+!442 = !DICompositeType(tag: DW_TAG_structure_type, name: "PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>", scope: !391, file: !7, size: 16, align: 16, elements: !443, templateParams: !456, identifier: "7f717ee20479e70b28a5030221db5144")
 !443 = !{!444, !445}
 !444 = !DIDerivedType(tag: DW_TAG_member, name: "port", scope: !442, file: !7, baseType: !396, size: 16, align: 16)
 !445 = !DIDerivedType(tag: DW_TAG_member, name: "phantom", scope: !442, file: !7, baseType: !446, align: 8)
-!446 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<(u8, x86_64::instructions::port::WriteOnlyAccess)>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !447, identifier: "28c51fa43b12fc7ea0512a3de568eae")
+!446 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<(u8, x86_64::instructions::port::WriteOnlyAccess)>", scope: !68, file: !7, align: 8, elements: !42, templateParams: !447, identifier: "163283c5974c266433610755ec92f2c5")
 !447 = !{!448}
 !448 = !DITemplateTypeParameter(name: "T", type: !449)
-!449 = !DICompositeType(tag: DW_TAG_structure_type, name: "(u8, x86_64::instructions::port::WriteOnlyAccess)", file: !7, size: 8, align: 8, elements: !450, templateParams: !42, identifier: "ea50742d5ed69251b6c8fa71a4c76d63")
+!449 = !DICompositeType(tag: DW_TAG_structure_type, name: "(u8, x86_64::instructions::port::WriteOnlyAccess)", file: !7, size: 8, align: 8, elements: !450, templateParams: !42, identifier: "36d4cb01c67257ac7b31f9c10da09c87")
 !450 = !{!451, !452}
 !451 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !449, file: !7, baseType: !12, size: 8, align: 8)
 !452 = !DIDerivedType(tag: DW_TAG_member, name: "__1", scope: !449, file: !7, baseType: !453, align: 8, offset: 8)
-!453 = !DICompositeType(tag: DW_TAG_structure_type, name: "WriteOnlyAccess", scope: !391, file: !7, align: 8, elements: !454, templateParams: !42, identifier: "ad2eebbeb6c16677e2cecf7281405b3a")
+!453 = !DICompositeType(tag: DW_TAG_structure_type, name: "WriteOnlyAccess", scope: !391, file: !7, align: 8, elements: !454, templateParams: !42, identifier: "ee6af8237358b78ad437f2e31a2cf2cb")
 !454 = !{!455}
 !455 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !453, file: !7, baseType: !168, align: 8)
 !456 = !{!44, !457}
@@ -3069,27 +3069,27 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !462 = !DILocation(line: 134, column: 22, scope: !441)
 !463 = !DILocation(line: 135, column: 9, scope: !441)
 !464 = !DILocation(line: 139, column: 6, scope: !441)
-!465 = distinct !DISubprogram(name: "read<u8, x86_64::instructions::port::ReadWriteAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17ha0d343901fa23a46E", scope: !418, file: !389, line: 150, type: !466, scopeLine: 150, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !432, retainedNodes: !469)
+!465 = distinct !DISubprogram(name: "read<u8, x86_64::instructions::port::ReadWriteAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17h23391e86d50ad379E", scope: !390, file: !389, line: 150, type: !466, scopeLine: 150, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !408, retainedNodes: !469)
 !466 = !DISubroutineType(types: !467)
 !467 = !{!12, !468}
-!468 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>", baseType: !418, size: 64, align: 64, dwarfAddressSpace: 0)
+!468 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>", baseType: !390, size: 64, align: 64, dwarfAddressSpace: 0)
 !469 = !{!470}
 !470 = !DILocalVariable(name: "self", arg: 1, scope: !465, file: !389, line: 150, type: !468)
 !471 = !DILocation(line: 150, column: 24, scope: !465)
 !472 = !DILocation(line: 151, column: 36, scope: !465)
 !473 = !DILocation(line: 151, column: 18, scope: !465)
 !474 = !DILocation(line: 152, column: 6, scope: !465)
-!475 = distinct !DISubprogram(name: "read<u8, x86_64::instructions::port::ReadOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17hd213f1e81433e525E", scope: !390, file: !389, line: 150, type: !476, scopeLine: 150, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !408, retainedNodes: !479)
+!475 = distinct !DISubprogram(name: "read<u8, x86_64::instructions::port::ReadOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$4read17hcd71549c41c00c6aE", scope: !418, file: !389, line: 150, type: !476, scopeLine: 150, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !432, retainedNodes: !479)
 !476 = !DISubroutineType(types: !477)
 !477 = !{!12, !478}
-!478 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>", baseType: !390, size: 64, align: 64, dwarfAddressSpace: 0)
+!478 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>", baseType: !418, size: 64, align: 64, dwarfAddressSpace: 0)
 !479 = !{!480}
 !480 = !DILocalVariable(name: "self", arg: 1, scope: !475, file: !389, line: 150, type: !478)
 !481 = !DILocation(line: 150, column: 24, scope: !475)
 !482 = !DILocation(line: 151, column: 36, scope: !475)
 !483 = !DILocation(line: 151, column: 18, scope: !475)
 !484 = !DILocation(line: 152, column: 6, scope: !475)
-!485 = distinct !DISubprogram(name: "write<u8, x86_64::instructions::port::ReadWriteAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h3d9b07908f4a83b8E", scope: !418, file: !389, line: 163, type: !486, scopeLine: 163, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !432, retainedNodes: !488)
+!485 = distinct !DISubprogram(name: "write<u8, x86_64::instructions::port::ReadWriteAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h29b210d15fc7a702E", scope: !390, file: !389, line: 163, type: !486, scopeLine: 163, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !408, retainedNodes: !488)
 !486 = !DISubroutineType(types: !487)
 !487 = !{null, !468, !12}
 !488 = !{!489, !490}
@@ -3100,7 +3100,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !493 = !DILocation(line: 164, column: 35, scope: !485)
 !494 = !DILocation(line: 164, column: 18, scope: !485)
 !495 = !DILocation(line: 165, column: 6, scope: !485)
-!496 = distinct !DISubprogram(name: "write<u8, x86_64::instructions::port::WriteOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17hcbebc404b82de84fE", scope: !442, file: !389, line: 163, type: !497, scopeLine: 163, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !456, retainedNodes: !500)
+!496 = distinct !DISubprogram(name: "write<u8, x86_64::instructions::port::WriteOnlyAccess>", linkageName: "_ZN6x86_6412instructions4port24PortGeneric$LT$T$C$A$GT$5write17h464dc4921d3fd8ccE", scope: !442, file: !389, line: 163, type: !497, scopeLine: 163, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !456, retainedNodes: !500)
 !497 = !DISubroutineType(types: !498)
 !498 = !{null, !499, !12}
 !499 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>", baseType: !442, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -3112,7 +3112,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !505 = !DILocation(line: 164, column: 35, scope: !496)
 !506 = !DILocation(line: 164, column: 18, scope: !496)
 !507 = !DILocation(line: 165, column: 6, scope: !496)
-!508 = distinct !DISubprogram(name: "read_from_port", linkageName: "_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17hf9d70cab70fb54cdE", scope: !509, file: !389, line: 11, type: !510, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !512)
+!508 = distinct !DISubprogram(name: "read_from_port", linkageName: "_ZN6x86_6412instructions4port67_$LT$impl$u20$x86_64..structures..port..PortRead$u20$for$u20$u8$GT$14read_from_port17h2375a717feb954ceE", scope: !509, file: !389, line: 11, type: !510, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !512)
 !509 = !DINamespace(name: "{impl#0}", scope: !391)
 !510 = !DISubroutineType(types: !511)
 !511 = !{!12, !396}
@@ -3123,9 +3123,9 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !516 = !DILocation(line: 12, column: 13, scope: !515)
 !517 = !DILocation(line: 11, column: 30, scope: !508)
 !518 = !DILocation(line: 14, column: 13, scope: !515)
-!519 = !{i32 420472}
+!519 = !{i32 419733}
 !520 = !DILocation(line: 17, column: 6, scope: !508)
-!521 = distinct !DISubprogram(name: "write_to_port", linkageName: "_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h89d54a86420a7cc9E", scope: !522, file: !389, line: 44, type: !523, scopeLine: 44, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !525)
+!521 = distinct !DISubprogram(name: "write_to_port", linkageName: "_ZN6x86_6412instructions4port68_$LT$impl$u20$x86_64..structures..port..PortWrite$u20$for$u20$u8$GT$13write_to_port17h70676a96eafd1e4cE", scope: !522, file: !389, line: 44, type: !523, scopeLine: 44, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !525)
 !522 = !DINamespace(name: "{impl#3}", scope: !391)
 !523 = !DISubroutineType(types: !524)
 !524 = !{null, !396, !12}
@@ -3135,9 +3135,9 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !528 = !DILocation(line: 44, column: 29, scope: !521)
 !529 = !DILocation(line: 44, column: 40, scope: !521)
 !530 = !DILocation(line: 46, column: 13, scope: !521)
-!531 = !{i32 421251}
+!531 = !{i32 420512}
 !532 = !DILocation(line: 48, column: 6, scope: !521)
-!533 = distinct !DISubprogram(name: "next", linkageName: "_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hce769cbdd3de84a4E", scope: !535, file: !534, line: 236, type: !536, scopeLine: 236, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !539)
+!533 = distinct !DISubprogram(name: "next", linkageName: "_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17ha08c13afdfece2c2E", scope: !535, file: !534, line: 236, type: !536, scopeLine: 236, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !539)
 !534 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/iter.rs", directory: "", checksumkind: CSK_MD5, checksum: "09c36955e811d84967bcb5dbc290ce49")
 !535 = !DINamespace(name: "{impl#9}", scope: !229)
 !536 = !DISubroutineType(types: !537)
@@ -3148,9 +3148,9 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !541 = !DILocation(line: 236, column: 13, scope: !533)
 !542 = !DILocation(line: 237, column: 9, scope: !533)
 !543 = !DILocation(line: 238, column: 6, scope: !533)
-!544 = distinct !DISubprogram(name: "init", linkageName: "_ZN10uart_165504mmio14MmioSerialPort4init17hbe2aa235581bb972E", scope: !546, file: !545, line: 39, type: !556, scopeLine: 39, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !559)
+!544 = distinct !DISubprogram(name: "init", linkageName: "_ZN10uart_165504mmio14MmioSerialPort4init17hde07563e27283a64E", scope: !546, file: !545, line: 39, type: !556, scopeLine: 39, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !559)
 !545 = !DIFile(filename: "src/mmio.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18", checksumkind: CSK_MD5, checksum: "6a530ecd49570fb9bf77fb2e8e9e168a")
-!546 = !DICompositeType(tag: DW_TAG_structure_type, name: "MmioSerialPort", scope: !547, file: !7, size: 384, align: 64, elements: !549, templateParams: !42, identifier: "3c4fa3a95d27c14d9432685ea94fa614")
+!546 = !DICompositeType(tag: DW_TAG_structure_type, name: "MmioSerialPort", scope: !547, file: !7, size: 384, align: 64, elements: !549, templateParams: !42, identifier: "298a66f2c0ac42ede7986fc28339ed1c")
 !547 = !DINamespace(name: "mmio", scope: !548)
 !548 = !DINamespace(name: "uart_16550", scope: null)
 !549 = !{!550, !551, !552, !553, !554, !555}
@@ -3192,8 +3192,8 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !585 = !DILocation(line: 44, column: 52, scope: !568)
 !586 = !DILocation(line: 44, column: 13, scope: !570)
 !587 = !DILocalVariable(name: "self", arg: 1, scope: !588, file: !589, line: 1444, type: !274)
-!588 = distinct !DISubprogram(name: "write<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$5write17ha062eee8fcc1a39cE", scope: !590, file: !589, line: 1444, type: !592, scopeLine: 1444, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !594)
-!589 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "11087a90ad8f3b9862444e143466697a")
+!588 = distinct !DISubprogram(name: "write<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$5write17hdee1f941b71f1c91E", scope: !590, file: !589, line: 1444, type: !592, scopeLine: 1444, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !594)
+!589 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "133d7d3c37c674125ee9e1c682a4b571")
 !590 = !DINamespace(name: "{impl#0}", scope: !591)
 !591 = !DINamespace(name: "mut_ptr", scope: !61)
 !592 = !DISubroutineType(types: !593)
@@ -3233,10 +3233,10 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !626 = !DILocation(line: 1444, column: 37, scope: !588, inlinedAt: !625)
 !627 = !DILocation(line: 1449, column: 18, scope: !588, inlinedAt: !625)
 !628 = !DILocation(line: 70, column: 6, scope: !544)
-!629 = distinct !DISubprogram(name: "line_sts", linkageName: "_ZN10uart_165504mmio14MmioSerialPort8line_sts17h6f6ae94a007132d2E", scope: !546, file: !545, line: 72, type: !630, scopeLine: 72, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !635)
+!629 = distinct !DISubprogram(name: "line_sts", linkageName: "_ZN10uart_165504mmio14MmioSerialPort8line_sts17h98b6c871479b8e42E", scope: !546, file: !545, line: 72, type: !630, scopeLine: 72, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !635)
 !630 = !DISubroutineType(types: !631)
 !631 = !{!632, !558}
-!632 = !DICompositeType(tag: DW_TAG_structure_type, name: "LineStsFlags", scope: !548, file: !7, size: 8, align: 8, elements: !633, templateParams: !42, identifier: "33a7514ae151018aad0561048e643cd0")
+!632 = !DICompositeType(tag: DW_TAG_structure_type, name: "LineStsFlags", scope: !548, file: !7, size: 8, align: 8, elements: !633, templateParams: !42, identifier: "755fb1d6bdf52d04ba1ca22a78db7e2")
 !633 = !{!634}
 !634 = !DIDerivedType(tag: DW_TAG_member, name: "bits", scope: !632, file: !7, baseType: !12, size: 8, align: 8)
 !635 = !{!636}
@@ -3247,7 +3247,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !640 = !DILocation(line: 73, column: 51, scope: !629)
 !641 = !DILocation(line: 73, column: 18, scope: !629)
 !642 = !DILocation(line: 74, column: 6, scope: !629)
-!643 = distinct !DISubprogram(name: "send", linkageName: "_ZN10uart_165504mmio14MmioSerialPort4send17h46f8df853628b299E", scope: !546, file: !545, line: 77, type: !644, scopeLine: 77, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !646)
+!643 = distinct !DISubprogram(name: "send", linkageName: "_ZN10uart_165504mmio14MmioSerialPort4send17h8c2479683b08c4f3E", scope: !546, file: !545, line: 77, type: !644, scopeLine: 77, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !646)
 !644 = !DISubroutineType(types: !645)
 !645 = !{null, !558, !12}
 !646 = !{!647, !648, !649}
@@ -3271,7 +3271,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !664 = !DILocation(line: 1449, column: 18, scope: !588, inlinedAt: !662)
 !665 = !DILocation(line: 91, column: 21, scope: !650)
 !666 = !DILocation(line: 175, column: 18, scope: !667, inlinedAt: !670)
-!667 = distinct !DISubprogram(name: "spin_loop", linkageName: "_ZN4core4hint9spin_loop17h3071c5bbd432a2dbE", scope: !669, file: !668, line: 165, type: !372, scopeLine: 165, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
+!667 = distinct !DISubprogram(name: "spin_loop", linkageName: "_ZN4core4hint9spin_loop17h72bd8a61093d3f07E", scope: !669, file: !668, line: 165, type: !372, scopeLine: 165, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
 !668 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/hint.rs", directory: "", checksumkind: CSK_MD5, checksum: "bdccd67e2121209a433721fb94464813")
 !669 = !DINamespace(name: "hint", scope: !11)
 !670 = distinct !DILocation(line: 90, column: 21, scope: !650)
@@ -3301,7 +3301,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !694 = !DILocation(line: 87, column: 21, scope: !650)
 !695 = !DILocation(line: 175, column: 18, scope: !667, inlinedAt: !696)
 !696 = distinct !DILocation(line: 86, column: 21, scope: !650)
-!697 = distinct !DISubprogram(name: "receive", linkageName: "_ZN10uart_165504mmio14MmioSerialPort7receive17hd1e267363d68d126E", scope: !546, file: !545, line: 98, type: !698, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !700)
+!697 = distinct !DISubprogram(name: "receive", linkageName: "_ZN10uart_165504mmio14MmioSerialPort7receive17h8f7b8f3b990865f4E", scope: !546, file: !545, line: 98, type: !698, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !700)
 !698 = !DISubroutineType(types: !699)
 !699 = !{!12, !558}
 !700 = !{!701, !702}
@@ -3315,7 +3315,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !708 = !DILocation(line: 101, column: 23, scope: !703)
 !709 = !DILocation(line: 101, column: 13, scope: !703)
 !710 = !DILocalVariable(name: "self", arg: 1, scope: !711, file: !589, line: 1293, type: !274)
-!711 = distinct !DISubprogram(name: "read<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4read17h94955c9600e3b119E", scope: !590, file: !589, line: 1293, type: !712, scopeLine: 1293, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !714)
+!711 = distinct !DISubprogram(name: "read<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4read17ha74fc33cd107192eE", scope: !590, file: !589, line: 1293, type: !712, scopeLine: 1293, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !714)
 !712 = !DISubroutineType(types: !713)
 !713 = !{!12, !274}
 !714 = !{!710}
@@ -3325,7 +3325,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !718 = !DILocation(line: 104, column: 6, scope: !697)
 !719 = !DILocation(line: 175, column: 18, scope: !667, inlinedAt: !720)
 !720 = distinct !DILocation(line: 101, column: 13, scope: !703)
-!721 = distinct !DISubprogram(name: "write_str", linkageName: "_ZN69_$LT$uart_16550..mmio..MmioSerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17h30313f30b4164dccE", scope: !722, file: !545, line: 108, type: !723, scopeLine: 108, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !725)
+!721 = distinct !DISubprogram(name: "write_str", linkageName: "_ZN69_$LT$uart_16550..mmio..MmioSerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17h4d42b801d07e7030E", scope: !722, file: !545, line: 108, type: !723, scopeLine: 108, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !725)
 !722 = !DINamespace(name: "{impl#1}", scope: !547)
 !723 = !DISubroutineType(types: !724)
 !724 = !{!159, !558, !89}
@@ -3346,17 +3346,17 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !739 = !DILocation(line: 109, column: 13, scope: !729)
 !740 = !DILocation(line: 109, column: 13, scope: !731)
 !741 = !DILocation(line: 110, column: 13, scope: !731)
-!742 = distinct !DISubprogram(name: "new", linkageName: "_ZN10uart_165504port10SerialPort3new17h234239137422bde5E", scope: !744, file: !743, line: 23, type: !753, scopeLine: 23, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !755)
+!742 = distinct !DISubprogram(name: "new", linkageName: "_ZN10uart_165504port10SerialPort3new17hd6e36efd445c171eE", scope: !744, file: !743, line: 23, type: !753, scopeLine: 23, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !755)
 !743 = !DIFile(filename: "src/port.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18", checksumkind: CSK_MD5, checksum: "2b770beb8cfb5c2dd2a7577c385b04ce")
-!744 = !DICompositeType(tag: DW_TAG_structure_type, name: "SerialPort", scope: !745, file: !7, size: 96, align: 16, elements: !746, templateParams: !42, identifier: "6c510780e0485fd28e2b31dbed860fd4")
+!744 = !DICompositeType(tag: DW_TAG_structure_type, name: "SerialPort", scope: !745, file: !7, size: 96, align: 16, elements: !746, templateParams: !42, identifier: "6b12e73ecb1b146e840cd6df157bd55a")
 !745 = !DINamespace(name: "port", scope: !548)
 !746 = !{!747, !748, !749, !750, !751, !752}
-!747 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !744, file: !7, baseType: !418, size: 16, align: 16)
+!747 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !744, file: !7, baseType: !390, size: 16, align: 16)
 !748 = !DIDerivedType(tag: DW_TAG_member, name: "int_en", scope: !744, file: !7, baseType: !442, size: 16, align: 16, offset: 16)
 !749 = !DIDerivedType(tag: DW_TAG_member, name: "fifo_ctrl", scope: !744, file: !7, baseType: !442, size: 16, align: 16, offset: 32)
 !750 = !DIDerivedType(tag: DW_TAG_member, name: "line_ctrl", scope: !744, file: !7, baseType: !442, size: 16, align: 16, offset: 48)
 !751 = !DIDerivedType(tag: DW_TAG_member, name: "modem_ctrl", scope: !744, file: !7, baseType: !442, size: 16, align: 16, offset: 64)
-!752 = !DIDerivedType(tag: DW_TAG_member, name: "line_sts", scope: !744, file: !7, baseType: !390, size: 16, align: 16, offset: 80)
+!752 = !DIDerivedType(tag: DW_TAG_member, name: "line_sts", scope: !744, file: !7, baseType: !418, size: 16, align: 16, offset: 80)
 !753 = !DISubroutineType(types: !754)
 !754 = !{!744, !396}
 !755 = !{!756}
@@ -3375,7 +3375,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !768 = !DILocation(line: 30, column: 23, scope: !742)
 !769 = !DILocation(line: 24, column: 9, scope: !742)
 !770 = !DILocation(line: 32, column: 6, scope: !742)
-!771 = distinct !DISubprogram(name: "init", linkageName: "_ZN10uart_165504port10SerialPort4init17h1c025ef3a11ca6bcE", scope: !744, file: !743, line: 37, type: !772, scopeLine: 37, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !775)
+!771 = distinct !DISubprogram(name: "init", linkageName: "_ZN10uart_165504port10SerialPort4init17hfba893a464c351caE", scope: !744, file: !743, line: 37, type: !772, scopeLine: 37, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !775)
 !772 = !DISubroutineType(types: !773)
 !773 = !{null, !774}
 !774 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut uart_16550::port::SerialPort", baseType: !744, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -3391,7 +3391,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !784 = !DILocation(line: 58, column: 13, scope: !771)
 !785 = !DILocation(line: 61, column: 13, scope: !771)
 !786 = !DILocation(line: 63, column: 6, scope: !771)
-!787 = distinct !DISubprogram(name: "line_sts", linkageName: "_ZN10uart_165504port10SerialPort8line_sts17ha6f4052625334c70E", scope: !744, file: !743, line: 65, type: !788, scopeLine: 65, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !790)
+!787 = distinct !DISubprogram(name: "line_sts", linkageName: "_ZN10uart_165504port10SerialPort8line_sts17h8f97d1ee3e9a69cfE", scope: !744, file: !743, line: 65, type: !788, scopeLine: 65, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !790)
 !788 = !DISubroutineType(types: !789)
 !789 = !{!632, !774}
 !790 = !{!791}
@@ -3400,7 +3400,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !793 = !DILocation(line: 66, column: 51, scope: !787)
 !794 = !DILocation(line: 66, column: 18, scope: !787)
 !795 = !DILocation(line: 67, column: 6, scope: !787)
-!796 = distinct !DISubprogram(name: "send", linkageName: "_ZN10uart_165504port10SerialPort4send17h10e4f2062013a3a4E", scope: !744, file: !743, line: 70, type: !797, scopeLine: 70, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !799)
+!796 = distinct !DISubprogram(name: "send", linkageName: "_ZN10uart_165504port10SerialPort4send17h0e03b03601beb6e3E", scope: !744, file: !743, line: 70, type: !797, scopeLine: 70, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !799)
 !797 = !DISubroutineType(types: !798)
 !798 = !{null, !774, !12}
 !799 = !{!800, !801}
@@ -3430,7 +3430,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !823 = !DILocation(line: 79, column: 21, scope: !796)
 !824 = !DILocation(line: 175, column: 18, scope: !667, inlinedAt: !825)
 !825 = distinct !DILocation(line: 78, column: 21, scope: !796)
-!826 = distinct !DISubprogram(name: "send_raw", linkageName: "_ZN10uart_165504port10SerialPort8send_raw17haafdafed0ad6d549E", scope: !744, file: !743, line: 90, type: !797, scopeLine: 90, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !827)
+!826 = distinct !DISubprogram(name: "send_raw", linkageName: "_ZN10uart_165504port10SerialPort8send_raw17hbdb0dfb82f27d905E", scope: !744, file: !743, line: 90, type: !797, scopeLine: 90, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !827)
 !827 = !{!828, !829}
 !828 = !DILocalVariable(name: "self", arg: 1, scope: !826, file: !743, line: 90, type: !774)
 !829 = !DILocalVariable(name: "data", arg: 2, scope: !826, file: !743, line: 90, type: !12)
@@ -3442,7 +3442,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !835 = !DILocation(line: 95, column: 6, scope: !826)
 !836 = !DILocation(line: 175, column: 18, scope: !667, inlinedAt: !837)
 !837 = distinct !DILocation(line: 92, column: 13, scope: !826)
-!838 = distinct !DISubprogram(name: "receive", linkageName: "_ZN10uart_165504port10SerialPort7receive17h029874cfe28226e6E", scope: !744, file: !743, line: 98, type: !839, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !841)
+!838 = distinct !DISubprogram(name: "receive", linkageName: "_ZN10uart_165504port10SerialPort7receive17h61dc8a9ed202361aE", scope: !744, file: !743, line: 98, type: !839, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !841)
 !839 = !DISubroutineType(types: !840)
 !840 = !{!12, !774}
 !841 = !{!842}
@@ -3454,7 +3454,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !847 = !DILocation(line: 103, column: 6, scope: !838)
 !848 = !DILocation(line: 175, column: 18, scope: !667, inlinedAt: !849)
 !849 = distinct !DILocation(line: 100, column: 13, scope: !838)
-!850 = distinct !DISubprogram(name: "write_str", linkageName: "_ZN65_$LT$uart_16550..port..SerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17hdaf0532d5dffbd32E", scope: !851, file: !743, line: 107, type: !852, scopeLine: 107, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !854)
+!850 = distinct !DISubprogram(name: "write_str", linkageName: "_ZN65_$LT$uart_16550..port..SerialPort$u20$as$u20$core..fmt..Write$GT$9write_str17h44b30947687f817bE", scope: !851, file: !743, line: 107, type: !852, scopeLine: 107, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !854)
 !851 = !DINamespace(name: "{impl#1}", scope: !745)
 !852 = !DISubroutineType(types: !853)
 !853 = !{!159, !774, !89}
@@ -3475,7 +3475,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !868 = !DILocation(line: 108, column: 13, scope: !858)
 !869 = !DILocation(line: 108, column: 13, scope: !860)
 !870 = !DILocation(line: 109, column: 13, scope: !860)
-!871 = distinct !DISubprogram(name: "new", linkageName: "_ZN10uart_165504mmio14MmioSerialPort3new17h67da30b38856d3bcE", scope: !546, file: !545, line: 24, type: !872, scopeLine: 24, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !874)
+!871 = distinct !DISubprogram(name: "new", linkageName: "_ZN10uart_165504mmio14MmioSerialPort3new17h41bd780fc8f00d5fE", scope: !546, file: !545, line: 24, type: !872, scopeLine: 24, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !874)
 !872 = !DISubroutineType(types: !873)
 !873 = !{!546, !94}
 !874 = !{!875, !876}
@@ -3487,7 +3487,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !880 = !DILocation(line: 25, column: 13, scope: !877)
 !881 = !DILocation(line: 27, column: 19, scope: !877)
 !882 = !DILocalVariable(name: "self", arg: 1, scope: !883, file: !589, line: 1015, type: !274)
-!883 = distinct !DISubprogram(name: "add<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17h1ce210cc6f17dea1E", scope: !590, file: !589, line: 1015, type: !884, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !886)
+!883 = distinct !DISubprogram(name: "add<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17h64cda85bba41dbaeE", scope: !590, file: !589, line: 1015, type: !884, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !886)
 !884 = !DISubroutineType(types: !885)
 !885 = !{!274, !274, !94}
 !886 = !{!882, !887}
@@ -3496,7 +3496,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !889 = distinct !DILocation(line: 28, column: 36, scope: !877)
 !890 = !DILocation(line: 1015, column: 35, scope: !883, inlinedAt: !889)
 !891 = !DILocalVariable(name: "self", arg: 1, scope: !892, file: !589, line: 472, type: !274)
-!892 = distinct !DISubprogram(name: "offset<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17h6aef0b941717a98fE", scope: !590, file: !589, line: 472, type: !893, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !896)
+!892 = distinct !DISubprogram(name: "offset<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17h01866a433a55f501E", scope: !590, file: !589, line: 472, type: !893, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !43, retainedNodes: !896)
 !893 = !DISubroutineType(types: !894)
 !894 = !{!274, !274, !895}
 !895 = !DIBasicType(name: "isize", size: 64, encoding: DW_ATE_signed)
@@ -3541,13 +3541,13 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !934 = !DILocation(line: 32, column: 23, scope: !877)
 !935 = !DILocation(line: 26, column: 9, scope: !877)
 !936 = !DILocation(line: 34, column: 6, scope: !871)
-!937 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17ha0277cd5e424e4ffE", scope: !939, file: !938, line: 434, type: !940, scopeLine: 434, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !946)
+!937 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17hedb452de0345bd22E", scope: !939, file: !938, line: 434, type: !940, scopeLine: 434, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !946)
 !938 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs", directory: "", checksumkind: CSK_MD5, checksum: "a71177c4b92801136d960c3c8e5a0a3c")
 !939 = !DINamespace(name: "{impl#9}", scope: !548)
 !940 = !DISubroutineType(types: !941)
 !941 = !{!159, !942, !178}
 !942 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&uart_16550::IntEnFlags", baseType: !943, size: 64, align: 64, dwarfAddressSpace: 0)
-!943 = !DICompositeType(tag: DW_TAG_structure_type, name: "IntEnFlags", scope: !548, file: !7, size: 8, align: 8, elements: !944, templateParams: !42, identifier: "d7834217efca85ff82b94649890cebe0")
+!943 = !DICompositeType(tag: DW_TAG_structure_type, name: "IntEnFlags", scope: !548, file: !7, size: 8, align: 8, elements: !944, templateParams: !42, identifier: "8b3b129891133f5710677d15d9d28fd7")
 !944 = !{!945}
 !945 = !DIDerivedType(tag: DW_TAG_member, name: "bits", scope: !943, file: !7, baseType: !12, size: 8, align: 8)
 !946 = !{!947, !948, !949, !952, !972, !974, !976, !978, !980, !982, !984, !986, !988, !990, !992, !994, !996, !998, !1000, !1002, !1004, !1006, !1008, !1010, !1012, !1014, !1016, !1018}
@@ -3558,22 +3558,22 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !951 = !DIBasicType(name: "bool", size: 8, encoding: DW_ATE_boolean)
 !952 = !DILocalVariable(name: "residual", scope: !953, file: !938, line: 475, type: !954, align: 1)
 !953 = distinct !DILexicalBlock(scope: !950, file: !938, line: 475, column: 47)
-!954 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::convert::Infallible, core::fmt::Error>", scope: !160, file: !7, align: 8, elements: !955, templateParams: !42, identifier: "d39c6f82b406755e45563b72ee25a6d5")
+!954 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::convert::Infallible, core::fmt::Error>", scope: !160, file: !7, align: 8, elements: !955, templateParams: !42, identifier: "914cac5adae6a5ccfbf912b838240dd4")
 !955 = !{!956}
-!956 = !DICompositeType(tag: DW_TAG_variant_part, scope: !954, file: !7, align: 8, elements: !957, templateParams: !42, identifier: "58a09e341e5187a970fdc7a1a6ec49ba")
+!956 = !DICompositeType(tag: DW_TAG_variant_part, scope: !954, file: !7, align: 8, elements: !957, templateParams: !42, identifier: "b1d434da6cc20747e604030c341b79")
 !957 = !{!958, !968}
 !958 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !956, file: !7, baseType: !959, align: 8)
-!959 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !954, file: !7, align: 8, elements: !960, templateParams: !966, identifier: "e4e60b13091aa0e7cbe1245a12de44d6")
+!959 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !954, file: !7, align: 8, elements: !960, templateParams: !966, identifier: "5430f499e45b28e81485357ec72bd4e5")
 !960 = !{!961}
 !961 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !959, file: !7, baseType: !962, align: 8)
-!962 = !DICompositeType(tag: DW_TAG_structure_type, name: "Infallible", scope: !963, file: !7, align: 8, elements: !964, templateParams: !42, identifier: "d87034d51ec5453e67c3a74d50dbe296")
+!962 = !DICompositeType(tag: DW_TAG_structure_type, name: "Infallible", scope: !963, file: !7, align: 8, elements: !964, templateParams: !42, identifier: "86bae707373f90c8f222ce2599ff4348")
 !963 = !DINamespace(name: "convert", scope: !11)
 !964 = !{!965}
-!965 = !DICompositeType(tag: DW_TAG_variant_part, scope: !962, file: !7, align: 8, elements: !42, identifier: "a097c07fc9688b7da75a6062690e52d5")
+!965 = !DICompositeType(tag: DW_TAG_variant_part, scope: !962, file: !7, align: 8, elements: !42, identifier: "6e349ace543f39a9ea983a9de4cb3c")
 !966 = !{!967, !171}
 !967 = !DITemplateTypeParameter(name: "T", type: !962)
 !968 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !956, file: !7, baseType: !969, align: 8)
-!969 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !954, file: !7, align: 8, elements: !970, templateParams: !966, identifier: "2f60f8351a1f5e98cbb38d779231c60b")
+!969 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !954, file: !7, align: 8, elements: !970, templateParams: !966, identifier: "3c8d2f0c4671b611ce2fa7845fc3f8c6")
 !970 = !{!971}
 !971 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !969, file: !7, baseType: !172, align: 8)
 !972 = !DILocalVariable(name: "val", scope: !973, file: !938, line: 475, type: !168, align: 1)
@@ -3685,7 +3685,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1078 = !DILocation(line: 493, column: 17, scope: !1003)
 !1079 = !DILocation(line: 491, column: 21, scope: !1003)
 !1080 = !DILocation(line: 491, column: 21, scope: !1017)
-!1081 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN60_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17h249c60572237725aE", scope: !1082, file: !938, line: 497, type: !940, scopeLine: 497, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1083)
+!1081 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN60_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17ha0a9a3b02a42654fE", scope: !1082, file: !938, line: 497, type: !940, scopeLine: 497, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1083)
 !1082 = !DINamespace(name: "{impl#10}", scope: !548)
 !1083 = !{!1084, !1085}
 !1084 = !DILocalVariable(name: "self", arg: 1, scope: !1081, file: !938, line: 497, type: !942)
@@ -3694,7 +3694,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1087 = !DILocation(line: 497, column: 27, scope: !1081)
 !1088 = !DILocation(line: 498, column: 17, scope: !1081)
 !1089 = !DILocation(line: 499, column: 14, scope: !1081)
-!1090 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h3de6460b94abb3a2E", scope: !1091, file: !938, line: 502, type: !940, scopeLine: 502, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1092)
+!1090 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN59_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h326fc0d1f4b5e93eE", scope: !1091, file: !938, line: 502, type: !940, scopeLine: 502, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1092)
 !1091 = !DINamespace(name: "{impl#11}", scope: !548)
 !1092 = !{!1093, !1094}
 !1093 = !DILocalVariable(name: "self", arg: 1, scope: !1090, file: !938, line: 502, type: !942)
@@ -3703,7 +3703,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1096 = !DILocation(line: 502, column: 27, scope: !1090)
 !1097 = !DILocation(line: 503, column: 17, scope: !1090)
 !1098 = !DILocation(line: 504, column: 14, scope: !1090)
-!1099 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17hf15b52a28f695473E", scope: !1100, file: !938, line: 507, type: !940, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1101)
+!1099 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17h06d162748924f0f8E", scope: !1100, file: !938, line: 507, type: !940, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1101)
 !1100 = !DINamespace(name: "{impl#12}", scope: !548)
 !1101 = !{!1102, !1103}
 !1102 = !DILocalVariable(name: "self", arg: 1, scope: !1099, file: !938, line: 507, type: !942)
@@ -3712,7 +3712,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1105 = !DILocation(line: 507, column: 27, scope: !1099)
 !1106 = !DILocation(line: 508, column: 17, scope: !1099)
 !1107 = !DILocation(line: 509, column: 14, scope: !1099)
-!1108 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17h99902a7fea10b63dE", scope: !1109, file: !938, line: 512, type: !940, scopeLine: 512, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1110)
+!1108 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN62_$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17h38314ad4d5da07e8E", scope: !1109, file: !938, line: 512, type: !940, scopeLine: 512, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1110)
 !1109 = !DINamespace(name: "{impl#13}", scope: !548)
 !1110 = !{!1111, !1112}
 !1111 = !DILocalVariable(name: "self", arg: 1, scope: !1108, file: !938, line: 512, type: !942)
@@ -3721,12 +3721,12 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1114 = !DILocation(line: 512, column: 27, scope: !1108)
 !1115 = !DILocation(line: 513, column: 17, scope: !1108)
 !1116 = !DILocation(line: 514, column: 14, scope: !1108)
-!1117 = distinct !DISubprogram(name: "all", linkageName: "_ZN10uart_1655010IntEnFlags3all17h363fba674245dcd6E", scope: !943, file: !938, line: 532, type: !1118, scopeLine: 532, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
+!1117 = distinct !DISubprogram(name: "all", linkageName: "_ZN10uart_1655010IntEnFlags3all17h40555c3565028fcfE", scope: !943, file: !938, line: 532, type: !1118, scopeLine: 532, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
 !1118 = !DISubroutineType(types: !1119)
 !1119 = !{!943}
 !1120 = !DILocation(line: 533, column: 17, scope: !1117)
 !1121 = !DILocation(line: 541, column: 14, scope: !1117)
-!1122 = distinct !DISubprogram(name: "bits", linkageName: "_ZN10uart_1655010IntEnFlags4bits17h31026ae52d7415eeE", scope: !943, file: !938, line: 545, type: !1123, scopeLine: 545, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1125)
+!1122 = distinct !DISubprogram(name: "bits", linkageName: "_ZN10uart_1655010IntEnFlags4bits17hf48a6c9256befe20E", scope: !943, file: !938, line: 545, type: !1123, scopeLine: 545, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1125)
 !1123 = !DISubroutineType(types: !1124)
 !1124 = !{!12, !942}
 !1125 = !{!1126}
@@ -3734,7 +3734,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1127 = !DILocation(line: 545, column: 31, scope: !1122)
 !1128 = !DILocation(line: 546, column: 17, scope: !1122)
 !1129 = !DILocation(line: 547, column: 14, scope: !1122)
-!1130 = distinct !DISubprogram(name: "RECEIVED", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$8RECEIVED17h97175bb6676fe247E", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1135)
+!1130 = distinct !DISubprogram(name: "RECEIVED", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$8RECEIVED17h22d53202acc312feE", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1135)
 !1131 = !DINamespace(name: "{impl#0}", scope: !1132)
 !1132 = !DINamespace(name: "fmt", scope: !939)
 !1133 = !DISubroutineType(types: !1134)
@@ -3745,25 +3745,25 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1138 = !DIFile(filename: "src/lib.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18", checksumkind: CSK_MD5, checksum: "a5b317466563221626b6482de23a4a5f")
 !1139 = !DILocation(line: 85, column: 1, scope: !1137)
 !1140 = !DILocation(line: 875, column: 11, scope: !1130)
-!1141 = distinct !DISubprogram(name: "SENT", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$4SENT17h7be2d2903b68815dE", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1142)
+!1141 = distinct !DISubprogram(name: "SENT", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$4SENT17h02f44be9a38bc8a3E", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1142)
 !1142 = !{!1143}
 !1143 = !DILocalVariable(name: "self", arg: 1, scope: !1144, file: !1138, line: 85, type: !942)
 !1144 = !DILexicalBlockFile(scope: !1141, file: !1138, discriminator: 0)
 !1145 = !DILocation(line: 85, column: 1, scope: !1144)
 !1146 = !DILocation(line: 875, column: 11, scope: !1141)
-!1147 = distinct !DISubprogram(name: "ERRORED", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$7ERRORED17h439eb556c3bde3f9E", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1148)
+!1147 = distinct !DISubprogram(name: "ERRORED", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$7ERRORED17h36114b02259f9b53E", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1148)
 !1148 = !{!1149}
 !1149 = !DILocalVariable(name: "self", arg: 1, scope: !1150, file: !1138, line: 85, type: !942)
 !1150 = !DILexicalBlockFile(scope: !1147, file: !1138, discriminator: 0)
 !1151 = !DILocation(line: 85, column: 1, scope: !1150)
 !1152 = !DILocation(line: 875, column: 11, scope: !1147)
-!1153 = distinct !DISubprogram(name: "STATUS_CHANGE", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$13STATUS_CHANGE17h0a8645ac984a647dE", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1154)
+!1153 = distinct !DISubprogram(name: "STATUS_CHANGE", linkageName: "_ZN118_$LT$uart_16550..IntEnFlags$u20$as$u20$$LT$uart_16550..IntEnFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$13STATUS_CHANGE17h0fa544319282f641E", scope: !1131, file: !938, line: 460, type: !1133, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1154)
 !1154 = !{!1155}
 !1155 = !DILocalVariable(name: "self", arg: 1, scope: !1156, file: !1138, line: 85, type: !942)
 !1156 = !DILexicalBlockFile(scope: !1153, file: !1138, discriminator: 0)
 !1157 = !DILocation(line: 85, column: 1, scope: !1156)
 !1158 = !DILocation(line: 875, column: 11, scope: !1153)
-!1159 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17hfac8bd50f986b0beE", scope: !1160, file: !938, line: 434, type: !1161, scopeLine: 434, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1164)
+!1159 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$3fmt17hd0a086549e23a0dcE", scope: !1160, file: !938, line: 434, type: !1161, scopeLine: 434, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1164)
 !1160 = !DINamespace(name: "{impl#35}", scope: !548)
 !1161 = !DISubroutineType(types: !1162)
 !1162 = !{!159, !1163, !178}
@@ -3856,7 +3856,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1249 = !DILocation(line: 493, column: 17, scope: !1186)
 !1250 = !DILocation(line: 491, column: 21, scope: !1186)
 !1251 = !DILocation(line: 491, column: 21, scope: !1200)
-!1252 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN62_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17h48350af0249be6d2E", scope: !1253, file: !938, line: 497, type: !1161, scopeLine: 497, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1254)
+!1252 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN62_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Binary$GT$3fmt17hd1645f626f5fc6c6E", scope: !1253, file: !938, line: 497, type: !1161, scopeLine: 497, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1254)
 !1253 = !DINamespace(name: "{impl#36}", scope: !548)
 !1254 = !{!1255, !1256}
 !1255 = !DILocalVariable(name: "self", arg: 1, scope: !1252, file: !938, line: 497, type: !1163)
@@ -3865,7 +3865,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1258 = !DILocation(line: 497, column: 27, scope: !1252)
 !1259 = !DILocation(line: 498, column: 17, scope: !1252)
 !1260 = !DILocation(line: 499, column: 14, scope: !1252)
-!1261 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h5c65b93782ac83d2E", scope: !1262, file: !938, line: 502, type: !1161, scopeLine: 502, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1263)
+!1261 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN61_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Octal$GT$3fmt17h5c3b699ecdfe8c88E", scope: !1262, file: !938, line: 502, type: !1161, scopeLine: 502, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1263)
 !1262 = !DINamespace(name: "{impl#37}", scope: !548)
 !1263 = !{!1264, !1265}
 !1264 = !DILocalVariable(name: "self", arg: 1, scope: !1261, file: !938, line: 502, type: !1163)
@@ -3874,7 +3874,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1267 = !DILocation(line: 502, column: 27, scope: !1261)
 !1268 = !DILocation(line: 503, column: 17, scope: !1261)
 !1269 = !DILocation(line: 504, column: 14, scope: !1261)
-!1270 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17heb2d9873f1d9f8fdE", scope: !1271, file: !938, line: 507, type: !1161, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1272)
+!1270 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..LowerHex$GT$3fmt17hc02ee13c4424703cE", scope: !1271, file: !938, line: 507, type: !1161, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1272)
 !1271 = !DINamespace(name: "{impl#38}", scope: !548)
 !1272 = !{!1273, !1274}
 !1273 = !DILocalVariable(name: "self", arg: 1, scope: !1270, file: !938, line: 507, type: !1163)
@@ -3883,7 +3883,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1276 = !DILocation(line: 507, column: 27, scope: !1270)
 !1277 = !DILocation(line: 508, column: 17, scope: !1270)
 !1278 = !DILocation(line: 509, column: 14, scope: !1270)
-!1279 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17hb602173897a2ada1E", scope: !1280, file: !938, line: 512, type: !1161, scopeLine: 512, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1281)
+!1279 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN64_$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..UpperHex$GT$3fmt17h39572f986d11c762E", scope: !1280, file: !938, line: 512, type: !1161, scopeLine: 512, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1281)
 !1280 = !DINamespace(name: "{impl#39}", scope: !548)
 !1281 = !{!1282, !1283}
 !1282 = !DILocalVariable(name: "self", arg: 1, scope: !1279, file: !938, line: 512, type: !1163)
@@ -3892,12 +3892,12 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1285 = !DILocation(line: 512, column: 27, scope: !1279)
 !1286 = !DILocation(line: 513, column: 17, scope: !1279)
 !1287 = !DILocation(line: 514, column: 14, scope: !1279)
-!1288 = distinct !DISubprogram(name: "all", linkageName: "_ZN10uart_1655012LineStsFlags3all17h83ca217cf8291905E", scope: !632, file: !938, line: 532, type: !1289, scopeLine: 532, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
+!1288 = distinct !DISubprogram(name: "all", linkageName: "_ZN10uart_1655012LineStsFlags3all17h6796570f588160f8E", scope: !632, file: !938, line: 532, type: !1289, scopeLine: 532, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !42)
 !1289 = !DISubroutineType(types: !1290)
 !1290 = !{!632}
 !1291 = !DILocation(line: 533, column: 17, scope: !1288)
 !1292 = !DILocation(line: 541, column: 14, scope: !1288)
-!1293 = distinct !DISubprogram(name: "bits", linkageName: "_ZN10uart_1655012LineStsFlags4bits17h9f18372e3e5299bbE", scope: !632, file: !938, line: 545, type: !1294, scopeLine: 545, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1296)
+!1293 = distinct !DISubprogram(name: "bits", linkageName: "_ZN10uart_1655012LineStsFlags4bits17h9e42052d0e9b92bfE", scope: !632, file: !938, line: 545, type: !1294, scopeLine: 545, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1296)
 !1294 = !DISubroutineType(types: !1295)
 !1295 = !{!12, !1163}
 !1296 = !{!1297}
@@ -3905,7 +3905,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1298 = !DILocation(line: 545, column: 31, scope: !1293)
 !1299 = !DILocation(line: 546, column: 17, scope: !1293)
 !1300 = !DILocation(line: 547, column: 14, scope: !1293)
-!1301 = distinct !DISubprogram(name: "from_bits_truncate", linkageName: "_ZN10uart_1655012LineStsFlags18from_bits_truncate17hc8086a3d0ef180c9E", scope: !632, file: !938, line: 563, type: !1302, scopeLine: 563, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1304)
+!1301 = distinct !DISubprogram(name: "from_bits_truncate", linkageName: "_ZN10uart_1655012LineStsFlags18from_bits_truncate17h6abf08042c0286daE", scope: !632, file: !938, line: 563, type: !1302, scopeLine: 563, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1304)
 !1302 = !DISubroutineType(types: !1303)
 !1303 = !{!632, !12}
 !1304 = !{!1305}
@@ -3915,7 +3915,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1308 = !DILocation(line: 564, column: 30, scope: !1301)
 !1309 = !DILocation(line: 564, column: 17, scope: !1301)
 !1310 = !DILocation(line: 565, column: 14, scope: !1301)
-!1311 = distinct !DISubprogram(name: "contains", linkageName: "_ZN10uart_1655012LineStsFlags8contains17hd00f753826927f5cE", scope: !632, file: !938, line: 603, type: !1312, scopeLine: 603, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1314)
+!1311 = distinct !DISubprogram(name: "contains", linkageName: "_ZN10uart_1655012LineStsFlags8contains17h6f15f23cc17aa51cE", scope: !632, file: !938, line: 603, type: !1312, scopeLine: 603, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1314)
 !1312 = !DISubroutineType(types: !1313)
 !1313 = !{!951, !1163, !632}
 !1314 = !{!1315, !1316}
@@ -3926,7 +3926,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1319 = !DILocation(line: 604, column: 18, scope: !1311)
 !1320 = !DILocation(line: 604, column: 17, scope: !1311)
 !1321 = !DILocation(line: 605, column: 14, scope: !1311)
-!1322 = distinct !DISubprogram(name: "INPUT_FULL", linkageName: "_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$10INPUT_FULL17h302817ea3bf0ae70E", scope: !1323, file: !938, line: 460, type: !1325, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1327)
+!1322 = distinct !DISubprogram(name: "INPUT_FULL", linkageName: "_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$10INPUT_FULL17h091a5c05ef41deaeE", scope: !1323, file: !938, line: 460, type: !1325, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1327)
 !1323 = !DINamespace(name: "{impl#0}", scope: !1324)
 !1324 = !DINamespace(name: "fmt", scope: !1160)
 !1325 = !DISubroutineType(types: !1326)
@@ -3936,7 +3936,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !1329 = !DILexicalBlockFile(scope: !1322, file: !1138, discriminator: 0)
 !1330 = !DILocation(line: 96, column: 1, scope: !1329)
 !1331 = !DILocation(line: 875, column: 11, scope: !1322)
-!1332 = distinct !DISubprogram(name: "OUTPUT_EMPTY", linkageName: "_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$12OUTPUT_EMPTY17h95013b0297e99679E", scope: !1323, file: !938, line: 460, type: !1325, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1333)
+!1332 = distinct !DISubprogram(name: "OUTPUT_EMPTY", linkageName: "_ZN122_$LT$uart_16550..LineStsFlags$u20$as$u20$$LT$uart_16550..LineStsFlags$u20$as$u20$core..fmt..Debug$GT$..fmt..__BitFlags$GT$12OUTPUT_EMPTY17h5c01f1d1f3b290e4E", scope: !1323, file: !938, line: 460, type: !1325, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !42, retainedNodes: !1333)
 !1333 = !{!1334}
 !1334 = !DILocalVariable(name: "self", arg: 1, scope: !1335, file: !1138, line: 96, type: !1163)
 !1335 = !DILexicalBlockFile(scope: !1332, file: !1138, discriminator: 0)

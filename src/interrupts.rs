@@ -26,8 +26,8 @@ lazy_static! {
     };
 }
 
-pub extern "x86-interrupt" fn breakpoint_handler(_isf: InterruptStackFrame) {}
-pub extern "x86-interrupt" fn timer_interrupt_handler(_isf: InterruptStackFrame) {
+extern "x86-interrupt" fn breakpoint_handler(_isf: InterruptStackFrame) {}
+extern "x86-interrupt" fn timer_interrupt_handler(_isf: InterruptStackFrame) {
     crate::print!(".");
     // TODO(yaw) this call should be made on behalf of the handler.
     // i.e. when implanting the handlers into the interrupt descriptor
@@ -39,7 +39,7 @@ pub extern "x86-interrupt" fn timer_interrupt_handler(_isf: InterruptStackFrame)
 pub fn initialize() -> () {
     global_descriptor_table::initialize();
     match SAFE_IDT.load() {
-        Err(s) => panic!("error initializing interrupt description table: {s}"),
+        Err(s) => panic!("IDT initialization failed -> {s}"),
         Ok(_) => {
             programmable_interface_controller::initialize();
             cpu_interrupts::enable();

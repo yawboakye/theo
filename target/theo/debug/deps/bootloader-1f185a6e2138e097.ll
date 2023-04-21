@@ -1,5 +1,5 @@
-; ModuleID = 'bootloader.df17fe0f-cgu.0'
-source_filename = "bootloader.df17fe0f-cgu.0"
+; ModuleID = 'bootloader.1f3bd46d6a4ebe1c-cgu.0'
+source_filename = "bootloader.1f3bd46d6a4ebe1c-cgu.0"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
@@ -9,9 +9,9 @@ target triple = "x86_64-obuasi-unknown-none"
 %"core::fmt::UnsafeArg" = type { {} }
 %"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>" = type { [3 x i64] }
 %"core::mem::manually_drop::ManuallyDrop<bootinfo::memory_map::MemoryRegion>" = type { %"bootinfo::memory_map::MemoryRegion" }
+%"core::ptr::metadata::PtrRepr<[bootinfo::memory_map::MemoryRegion]>" = type { [2 x i64] }
 %"core::ptr::metadata::PtrComponents<bootinfo::memory_map::MemoryRegion>" = type { ptr, {} }
 %"core::ptr::metadata::PtrRepr<bootinfo::memory_map::MemoryRegion>" = type { [1 x i64] }
-%"core::ptr::metadata::PtrRepr<[bootinfo::memory_map::MemoryRegion]>" = type { [2 x i64] }
 %"[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]" = type {}
 %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]" = type { { ptr, i64 }, ptr, ptr }
 %"core::option::Option<core::fmt::Arguments<'_>>" = type { [2 x i64], ptr, [3 x i64] }
@@ -29,14 +29,15 @@ target triple = "x86_64-obuasi-unknown-none"
 
 @alloc_fa017189c529f9a37ad81f1b7f28d734 = private unnamed_addr constant <{ [97 x i8] }> <{ [97 x i8] c"unsafe precondition(s) violated: slice::get_unchecked requires that the range is within the slice" }>, align 1
 @alloc_e4c0784e4975da2173a354afd99193ad = private unnamed_addr constant <{ [101 x i8] }> <{ [101 x i8] c"unsafe precondition(s) violated: slice::get_unchecked_mut requires that the range is within the slice" }>, align 1
+@alloc_763310d78c99c2c1ad3f8a9821e942f3 = private unnamed_addr constant <{ [61 x i8] }> <{ [61 x i8] c"is_nonoverlapping: `size_of::<T>() * count` overflows a usize" }>, align 1
 @alloc_cf71ba46b07f75a509e946b584ee4f31 = private unnamed_addr constant <{ [110 x i8] }> <{ [110 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/intrinsics.rs" }>, align 1
-@alloc_c92b068cc8d2cd4c50e9488095980e32 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_cf71ba46b07f75a509e946b584ee4f31, [16 x i8] c"n\00\00\00\00\00\00\00\DA\09\00\007\00\00\00" }>, align 8
-@alloc_7ad8e03c2174e39a8f819d6ca6833838 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_cf71ba46b07f75a509e946b584ee4f31, [16 x i8] c"n\00\00\00\00\00\00\00\DB\09\00\00+\00\00\00" }>, align 8
+@alloc_a8f5a1029a5e0d25d825219ea89697e3 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_cf71ba46b07f75a509e946b584ee4f31, [16 x i8] c"n\00\00\00\00\00\00\00\DC\09\00\00\0A\00\00\00" }>, align 8
+@alloc_ecfa63b3c1c347c3fa9d9d647fee2801 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_cf71ba46b07f75a509e946b584ee4f31, [16 x i8] c"n\00\00\00\00\00\00\00\DD\09\00\00+\00\00\00" }>, align 8
 @str.0 = internal constant [33 x i8] c"attempt to subtract with overflow"
-@alloc_2ca6b8c4026dbf3457d2606f6c47263d = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_cf71ba46b07f75a509e946b584ee4f31, [16 x i8] c"n\00\00\00\00\00\00\00\DB\09\00\00J\00\00\00" }>, align 8
+@alloc_49268b5d2bc3ac6e3a5203e76215cb05 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_cf71ba46b07f75a509e946b584ee4f31, [16 x i8] c"n\00\00\00\00\00\00\00\DD\09\00\00J\00\00\00" }>, align 8
 @alloc_8df0580a595a87d56789d20c7318e185 = private unnamed_addr constant <{ [166 x i8] }> <{ [166 x i8] c"unsafe precondition(s) violated: ptr::copy_nonoverlapping requires that both pointer arguments are aligned and non-null and the specified memory ranges do not overlap" }>, align 1
 @alloc_4f979e408ba56e8e0fdc172fb24ef68d = private unnamed_addr constant <{ [112 x i8] }> <{ [112 x i8] c"unsafe precondition(s) violated: ptr::copy requires that both pointer arguments are aligned aligned and non-null" }>, align 1
-@vtable.1 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr71drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegion$GT$17h3e7bbd2e13e5f413E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17he49a6232630c6b52E" }>, align 8, !dbg !0
+@vtable.1 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr71drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegion$GT$17h765a6f3749029cc9E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17hd79519092e6154abE" }>, align 8, !dbg !0
 @alloc_c2ea93c90919bb7b1e482f917e413fa1 = private unnamed_addr constant <{ [107 x i8] }> <{ [107 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs" }>, align 1
 @alloc_bf47d7cf946e324312b7aba9afabb742 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_c2ea93c90919bb7b1e482f917e413fa1, [16 x i8] c"k\00\00\00\00\00\00\00\9D\01\00\008\00\00\00" }>, align 8
 @str.2 = internal constant [28 x i8] c"attempt to add with overflow"
@@ -49,10 +50,10 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_f5758da710ba897165288b0f4da8acb3 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_062d8212fd02b81dce3f023edbf3244d, [16 x i8] c"k\00\00\00\00\00\00\00\E5\02\00\00\0C\00\00\00" }>, align 8
 @str.3 = internal constant [25 x i8] c"attempt to divide by zero"
 @alloc_8b72e65625de3e221368553edb4591ff = private unnamed_addr constant <{ [107 x i8] }> <{ [107 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/mod.rs" }>, align 1
-@alloc_82a295533409787c3e504fb0ce3831ff = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_8b72e65625de3e221368553edb4591ff, [16 x i8] c"k\00\00\00\00\00\00\00\A6\04\00\00\05\00\00\00" }>, align 8
+@alloc_4d780623f0d854654618d3ce6b6a177d = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_8b72e65625de3e221368553edb4591ff, [16 x i8] c"k\00\00\00\00\00\00\00\B7\04\00\00\05\00\00\00" }>, align 8
 @str.4 = internal constant [36 x i8] c"attempt to shift right with overflow"
 @alloc_444495105b9016883a01942a28847d22 = private unnamed_addr constant <{ [109 x i8] }> <{ [109 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/range.rs" }>, align 1
-@alloc_50d1e257ccd56aaa3f8677a989ec63c7 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_444495105b9016883a01942a28847d22, [16 x i8] c"m\00\00\00\00\00\00\00\CA\01\00\00\1D\00\00\00" }>, align 8
+@alloc_0e90a8d2edaf8520d1b6cc44dc6ee0c4 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_444495105b9016883a01942a28847d22, [16 x i8] c"m\00\00\00\00\00\00\00\C6\01\00\00\1D\00\00\00" }>, align 8
 @alloc_29f87e6ac6e7e4317253d26531c5c81c = private unnamed_addr constant <{ [107 x i8] }> <{ [107 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mod.rs" }>, align 1
 @alloc_a8d2d57d37571df30f9c47ba3b3c586b = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_29f87e6ac6e7e4317253d26531c5c81c, [16 x i8] c"k\00\00\00\00\00\00\00\AC\03\00\00&\00\00\00" }>, align 8
 @str.5 = internal constant [33 x i8] c"attempt to multiply with overflow"
@@ -75,18 +76,18 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_fddaeef1fe1a23c45402ef8f58614acb = private unnamed_addr constant <{ [35 x i8] }> <{ [35 x i8] c"assertion failed: mid <= self.len()" }>, align 1
 @alloc_9a72dc1c87ddefcce62e4b5ab68e5150 = private unnamed_addr constant <{ [1 x i8] }> <{ [1 x i8] c"\FF" }>, align 1
 @alloc_0e767b22ac99e9123f3c482417f77f98 = private unnamed_addr constant <{ [109 x i8] }> <{ [109 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/mod.rs" }>, align 1
-@alloc_4a6cc2814e9c70d90675aafc22034495 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\DD\06\00\00M\00\00\00" }>, align 8
+@alloc_76fa8839e346213ef9d31b2afdb0086d = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\D8\06\00\00M\00\00\00" }>, align 8
 @alloc_3dc073651148de734d2593768efc16e9 = private unnamed_addr constant <{ [104 x i8] }> <{ [104 x i8] c"unsafe precondition(s) violated: slice::split_at_mut_unchecked requires the index to be within the slice" }>, align 1
 @alloc_dd0dc542054f5a3bd5e0287046a20794 = private unnamed_addr constant <{ [30 x i8] }> <{ [30 x i8] c"assertion failed: a.len() == n" }>, align 1
-@alloc_9bc869464e7f5dcda873bc5fba3167ae = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\C3\02\00\00\0D\00\00\00" }>, align 8
+@alloc_ecc9899c650d8314fba3084b3c654203 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\BE\02\00\00\0D\00\00\00" }>, align 8
 @alloc_deedf7aeab1a7c66b5420b58a4093bcc = private unnamed_addr constant <{ [30 x i8] }> <{ [30 x i8] c"assertion failed: b.len() == n" }>, align 1
-@alloc_b8749fb97ee29c7317ad030bd8942a48 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\C4\02\00\00\0D\00\00\00" }>, align 8
-@alloc_3aa494a7a9b07e5c1a0696cee8170daa = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\CA\02\00\00 \00\00\00" }>, align 8
-@alloc_fb8f45380652987d6b5bbea56a8e912e = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\CA\02\00\00-\00\00\00" }>, align 8
-@alloc_2d6a2ee37e528966f03d3441dddee676 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\CE\02\00\00 \00\00\00" }>, align 8
-@alloc_aa932769fb5b51c12790c6d75b182bf2 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\CE\02\00\00-\00\00\00" }>, align 8
-@alloc_6014d62b444cee9e42a5ca2bfd6b4613 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\CE\02\00\00+\00\00\00" }>, align 8
-@alloc_c070e7c146c652ff4ec0b63c99b2e746 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\CF\02\00\00\11\00\00\00" }>, align 8
+@alloc_ff56e0ff16b9da2be75af81ae63895bc = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\BF\02\00\00\0D\00\00\00" }>, align 8
+@alloc_2216ac2b12fee1f72596cee1b2a48660 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\C5\02\00\00 \00\00\00" }>, align 8
+@alloc_5c5f0f88f9e7a84c338861be835ff420 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\C5\02\00\00-\00\00\00" }>, align 8
+@alloc_3802366fa986a65287f2fa3ffe444552 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\C9\02\00\00 \00\00\00" }>, align 8
+@alloc_932be07abcf6e404c637b3e479c1e7c9 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\C9\02\00\00-\00\00\00" }>, align 8
+@alloc_1fe2ed67373e408d8a88dd6dd998e88a = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\C9\02\00\00+\00\00\00" }>, align 8
+@alloc_6827e7b7bc8d29e581436027f00ebf5a = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_0e767b22ac99e9123f3c482417f77f98, [16 x i8] c"m\00\00\00\00\00\00\00\CA\02\00\00\11\00\00\00" }>, align 8
 @alloc_d685bb4d9a1abf4f5af46d1af0d9ef8a = private unnamed_addr constant <{ [166 x i8] }> <{ [166 x i8] c"unsafe precondition(s) violated: slice::from_raw_parts_mut requires the pointer to be aligned and non-null, and the total size of the slice not to exceed `isize::MAX`" }>, align 1
 @alloc_140877f72603b53a2926afdc5b6562c1 = private unnamed_addr constant <{ [30 x i8] }> <{ [30 x i8] c"assertion failed: v.len() >= 2" }>, align 1
 @alloc_d80990e1774d1c38795ebd415913ef0a = private unnamed_addr constant <{ [110 x i8] }> <{ [110 x i8] c"/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/sort.rs" }>, align 1
@@ -99,9 +100,9 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_7aff2c5e0ce2b115fc6c1e2cef0aaf8b = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\E0\02\00\00\11\00\00\00" }>, align 8
 @alloc_51fd6fd3cd9ef520ddfe39086f06b289 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\E1\02\00\00\11\00\00\00" }>, align 8
 @alloc_6a8eb4c18787545063c119f92681aeff = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\13\03\00\00\0A\00\00\00" }>, align 8
-@alloc_8b1cf5b76b10a43810ba75cdb94336e8 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\F1\02\00\00\11\00\00\00" }>, align 8
 @alloc_4e8855159810091534f04a19bbe30782 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\00\03\00\00\1C\00\00\00" }>, align 8
 @alloc_787d88f30b9a4c9abd6abb658d261d97 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\00\03\00\00/\00\00\00" }>, align 8
+@alloc_8b1cf5b76b10a43810ba75cdb94336e8 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\F1\02\00\00\11\00\00\00" }>, align 8
 @alloc_2745df5dada1022057bbf8b1e08b9408 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\BD\02\00\00\13\00\00\00" }>, align 8
 @alloc_c3165b226cb3c0c182e30d6993318b09 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\C3\02\00\00+\00\00\00" }>, align 8
 @alloc_c938216ce784d5d7b6bb0e8f59c85beb = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_d80990e1774d1c38795ebd415913ef0a, [16 x i8] c"n\00\00\00\00\00\00\00\C7\02\00\00\11\00\00\00" }>, align 8
@@ -200,9 +201,9 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_82eaa0d65834937aa85ffd9cf79e73a5 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_7d15286e500c88a119425ae53316340e, [16 x i8] c"l\00\00\00\00\00\00\00\E4\00\00\007\00\00\00" }>, align 8
 @alloc_2fa382d66c8b05cee83d1e636a456d83 = private unnamed_addr constant <{ [12 x i8] }> <{ [12 x i8] c"MemoryRegion" }>, align 1
 @alloc_c6d312f4fb2564cdde1868738b40e953 = private unnamed_addr constant <{ [5 x i8] }> <{ [5 x i8] c"range" }>, align 1
-@vtable.7 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr65drop_in_place$LT$bootloader..bootinfo..memory_map..FrameRange$GT$17h940e07a5cfd69181E", [16 x i8] c"\10\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN81_$LT$bootloader..bootinfo..memory_map..FrameRange$u20$as$u20$core..fmt..Debug$GT$3fmt17h7c1866d775acbc7fE" }>, align 8, !dbg !44
+@vtable.7 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr65drop_in_place$LT$bootloader..bootinfo..memory_map..FrameRange$GT$17h65f52f7c0d10a5feE", [16 x i8] c"\10\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN81_$LT$bootloader..bootinfo..memory_map..FrameRange$u20$as$u20$core..fmt..Debug$GT$3fmt17hb984a4e1d3634888E" }>, align 8, !dbg !44
 @alloc_24a09d864e93eaea8a967d85ad5fb14b = private unnamed_addr constant <{ [11 x i8] }> <{ [11 x i8] c"region_type" }>, align 1
-@vtable.8 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr75drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegionType$GT$17hdef642da1c075729E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h32082bad30d2c159E" }>, align 8, !dbg !52
+@vtable.8 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr75drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegionType$GT$17h94a111edabab3532E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h774e5ed9883a620cE" }>, align 8, !dbg !52
 @alloc_4f458a5ac3a6382b3750f993ab870080 = private unnamed_addr constant <{ [13 x i8] }> <{ [13 x i8] c"NonExhaustive" }>, align 1
 @alloc_3faf0b3374c02c8ecbb0aba47045e793 = private unnamed_addr constant <{ [7 x i8] }> <{ [7 x i8] c"Package" }>, align 1
 @alloc_1f9c4cc73f4140a97f2cf1f721646a68 = private unnamed_addr constant <{ [8 x i8] }> <{ [8 x i8] c"BootInfo" }>, align 1
@@ -220,25 +221,25 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_3c5b86a9b7fa1d302afea08936e483c5 = private unnamed_addr constant <{ [6 x i8] }> <{ [6 x i8] c"Usable" }>, align 1
 @alloc_bee533f45c59e636f24e3b92e9dcf8a1 = private unnamed_addr constant <{ [16 x i8] }> <{ [16 x i8] c"E820MemoryRegion" }>, align 1
 @alloc_e896abd190c076ac3d64221d9ae37a51 = private unnamed_addr constant <{ [10 x i8] }> <{ [10 x i8] c"start_addr" }>, align 1
-@vtable.9 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr24drop_in_place$LT$u64$GT$17h934378307490d0a7E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u64$GT$3fmt17h6cc99aabc8dc9a21E" }>, align 8, !dbg !61
+@vtable.9 = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr24drop_in_place$LT$u64$GT$17h50a192d1e7832168E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u64$GT$3fmt17haf45b493f50037cbE" }>, align 8, !dbg !61
 @alloc_f92b1a49cd2fef011d7606f6333298f2 = private unnamed_addr constant <{ [3 x i8] }> <{ [3 x i8] c"len" }>, align 1
-@vtable.a = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr24drop_in_place$LT$u32$GT$17h5dcf02aa7ca6dd71E", [16 x i8] c"\04\00\00\00\00\00\00\00\04\00\00\00\00\00\00\00", ptr @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u32$GT$3fmt17hf349b60677dd9891E" }>, align 8, !dbg !69
+@vtable.a = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr24drop_in_place$LT$u32$GT$17h64e6676b01e9e33dE", [16 x i8] c"\04\00\00\00\00\00\00\00\04\00\00\00\00\00\00\00", ptr @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u32$GT$3fmt17h1e03dcc8c6b9ff18E" }>, align 8, !dbg !69
 @alloc_3453f215b747c0edd0eebf0fbcea5172 = private unnamed_addr constant <{ [24 x i8] }> <{ [24 x i8] c"acpi_extended_attributes" }>, align 1
-@vtable.b = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr28drop_in_place$LT$$RF$u32$GT$17hae2ed7f265841b70E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h03207b162034f1bcE" }>, align 8, !dbg !77
+@vtable.b = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr28drop_in_place$LT$$RF$u32$GT$17h1d73533f704e0351E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h442781ef0c4c5cb6E" }>, align 8, !dbg !77
 @alloc_9edc7a92f8d25561ab6dc7613f63189d = private unnamed_addr constant <{ [10 x i8] }> <{ [10 x i8] c"memory_map" }>, align 1
-@vtable.c = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr64drop_in_place$LT$bootloader..bootinfo..memory_map..MemoryMap$GT$17hd2d4cd0598932281E", [16 x i8] c"\08\06\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN80_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..fmt..Debug$GT$3fmt17h9737d89a1f4e8994E" }>, align 8, !dbg !86
+@vtable.c = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr64drop_in_place$LT$bootloader..bootinfo..memory_map..MemoryMap$GT$17hab76927217d1a271E", [16 x i8] c"\08\06\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN80_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..fmt..Debug$GT$3fmt17h946aba19ea4022cfE" }>, align 8, !dbg !86
 @alloc_1cbcc15d14c439465e35578ac36229c9 = private unnamed_addr constant <{ [12 x i8] }> <{ [12 x i8] c"tls_template" }>, align 1
-@vtable.d = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr54drop_in_place$LT$bootloader..bootinfo..TlsTemplate$GT$17hd451f3452808e2d0E", [16 x i8] c"\18\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN70_$LT$bootloader..bootinfo..TlsTemplate$u20$as$u20$core..fmt..Debug$GT$3fmt17hd389f09cb59dcb2aE" }>, align 8, !dbg !101
+@vtable.d = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr54drop_in_place$LT$bootloader..bootinfo..TlsTemplate$GT$17h89f6b485ba3376efE", [16 x i8] c"\18\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN70_$LT$bootloader..bootinfo..TlsTemplate$u20$as$u20$core..fmt..Debug$GT$3fmt17hd721ca5c2a0151c5E" }>, align 8, !dbg !101
 @alloc_b0bb0c7a0f8be091d3fc1c11116fce9b = private unnamed_addr constant <{ [15 x i8] }> <{ [15 x i8] c"_non_exhaustive" }>, align 1
-@vtable.e = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr27drop_in_place$LT$$RF$u8$GT$17h93e56f135775a23bE", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h65f399967d7391c0E" }>, align 8, !dbg !114
+@vtable.e = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr27drop_in_place$LT$$RF$u8$GT$17h75cd57b67ffca4a4E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17hfa3fdfc684a59af8E" }>, align 8, !dbg !114
 @alloc_db9f6246386b35b655b2a4a0bfe4b5d7 = private unnamed_addr constant <{ [11 x i8] }> <{ [11 x i8] c"TlsTemplate" }>, align 1
 @alloc_586126a6b84f2dd36fa1e3b3e4c38ef1 = private unnamed_addr constant <{ [9 x i8] }> <{ [9 x i8] c"file_size" }>, align 1
 @alloc_6a7e1d6cb9743b05f95a08c478d87c6e = private unnamed_addr constant <{ [8 x i8] }> <{ [8 x i8] c"mem_size" }>, align 1
-@vtable.f = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr28drop_in_place$LT$$RF$u64$GT$17h12dd31e77c1ef066E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h91a47dc815968b8cE" }>, align 8, !dbg !124
+@vtable.f = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr28drop_in_place$LT$$RF$u64$GT$17h8f16d595b7ffdd46E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h9e1f8f9e6c8a32e8E" }>, align 8, !dbg !124
 
 ; <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::get_unchecked
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h5b3ffffb25ed1251E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !163 {
+define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h4c54c58de0d8ed23E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !163 {
 start:
   %0 = alloca ptr, align 8
   %count.dbg.spill.i1 = alloca i64, align 8
@@ -270,14 +271,14 @@ start:
   store i64 %self.1, ptr %6, align 8, !dbg !195
   br i1 true, label %bb1, label %bb2, !dbg !196
 
-bb2:                                              ; preds = %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h6e79f2bf5825ede3E.exit", %start
+bb2:                                              ; preds = %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h9cd1bd1f26c4aab9E.exit", %start
   %7 = sub nuw i64 %self.1, %self.0, !dbg !197
   store i64 %7, ptr %1, align 8, !dbg !197
   %new_len = load i64, ptr %1, align 8, !dbg !197, !noundef !24
   store i64 %new_len, ptr %new_len.dbg.spill, align 8, !dbg !197
   call void @llvm.dbg.declare(metadata ptr %new_len.dbg.spill, metadata !188, metadata !DIExpression()), !dbg !198
 ; call core::ptr::const_ptr::<impl *const [T]>::as_ptr
-  %_11 = call ptr @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17h0da60db6e72722a9E"(ptr %slice.0, i64 %slice.1) #10, !dbg !199
+  %_11 = call ptr @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17hdc3d6574984ebdc5E"(ptr %slice.0, i64 %slice.1) #10, !dbg !199
   store ptr %_11, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !200, metadata !DIExpression()), !dbg !211
   store i64 %self.0, ptr %count.dbg.spill.i, align 8
@@ -290,7 +291,7 @@ bb2:                                              ; preds = %"_ZN106_$LT$core..o
   store ptr %8, ptr %0, align 8, !dbg !224
   %9 = load ptr, ptr %0, align 8, !dbg !224, !noundef !24
 ; call core::ptr::slice_from_raw_parts
-  %10 = call { ptr, i64 } @_ZN4core3ptr20slice_from_raw_parts17hcf229f673cb6d2cdE(ptr %9, i64 %new_len) #10, !dbg !225
+  %10 = call { ptr, i64 } @_ZN4core3ptr20slice_from_raw_parts17h1f77dfc268ff9a51E(ptr %9, i64 %new_len) #10, !dbg !225
   %11 = extractvalue { ptr, i64 } %10, 0, !dbg !225
   %12 = extractvalue { ptr, i64 } %10, 1, !dbg !225
   %13 = insertvalue { ptr, i64 } poison, ptr %11, 0, !dbg !226
@@ -337,7 +338,7 @@ bb1.i:                                            ; preds = %bb1
 
 bb2.i:                                            ; preds = %bb1
 ; call core::ptr::const_ptr::<impl *const [T]>::len
-  %_10.i = call i64 @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3c5ccfd32d4e1d7aE"(ptr %30, i64 %32) #10, !dbg !239
+  %_10.i = call i64 @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3a7bf3213f5f2ac5E"(ptr %30, i64 %32) #10, !dbg !239
   %_8.i = icmp ule i64 %27, %_10.i, !dbg !240
   %35 = zext i1 %_8.i to i8, !dbg !237
   store i8 %35, ptr %_4.i, align 1, !dbg !237
@@ -347,20 +348,20 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %36 = load i8, ptr %_4.i, align 1, !dbg !241, !range !242, !noundef !24
   %37 = trunc i8 %36 to i1, !dbg !241
   %_3.i = xor i1 %37, true, !dbg !241
-  br i1 %_3.i, label %bb5.i, label %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h6e79f2bf5825ede3E.exit", !dbg !241
+  br i1 %_3.i, label %bb5.i, label %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h9cd1bd1f26c4aab9E.exit", !dbg !241
 
 bb5.i:                                            ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_fa017189c529f9a37ad81f1b7f28d734, i64 97) #11, !dbg !243
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_fa017189c529f9a37ad81f1b7f28d734, i64 97) #11, !dbg !243
   unreachable, !dbg !243
 
-"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h6e79f2bf5825ede3E.exit": ; preds = %bb3.i
+"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h9cd1bd1f26c4aab9E.exit": ; preds = %bb3.i
   br label %bb2, !dbg !196
 }
 
 ; <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::get_unchecked_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h5c0b3f9eebf0ed73E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !244 {
+define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h6a3f95e11b33d7c3E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !244 {
 start:
   %self.dbg.spill.i5 = alloca { ptr, i64 }, align 8
   %self.dbg.spill.i4 = alloca { ptr, i64 }, align 8
@@ -394,7 +395,7 @@ start:
   store i64 %self.1, ptr %6, align 8, !dbg !261
   br i1 true, label %bb1, label %bb2, !dbg !262
 
-bb2:                                              ; preds = %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h81734ee76a1eb463E.exit", %start
+bb2:                                              ; preds = %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h0294ca926293e977E.exit", %start
   %7 = sub nuw i64 %self.1, %self.0, !dbg !263
   store i64 %7, ptr %1, align 8, !dbg !263
   %new_len = load i64, ptr %1, align 8, !dbg !263, !noundef !24
@@ -416,7 +417,7 @@ bb2:                                              ; preds = %"_ZN106_$LT$core..o
   store ptr %9, ptr %0, align 8, !dbg !295
   %_3.i3 = load ptr, ptr %0, align 8, !dbg !295, !noundef !24
 ; call core::ptr::slice_from_raw_parts_mut
-  %10 = call { ptr, i64 } @_ZN4core3ptr24slice_from_raw_parts_mut17hdbb067706a3044e6E(ptr %_3.i3, i64 %new_len) #10, !dbg !296
+  %10 = call { ptr, i64 } @_ZN4core3ptr24slice_from_raw_parts_mut17h60c099831c83210dE(ptr %_3.i3, i64 %new_len) #10, !dbg !296
   %11 = extractvalue { ptr, i64 } %10, 0, !dbg !296
   %12 = extractvalue { ptr, i64 } %10, 1, !dbg !296
   %13 = insertvalue { ptr, i64 } poison, ptr %11, 0, !dbg !297
@@ -467,7 +468,7 @@ bb2.i:                                            ; preds = %bb1
   store i64 %32, ptr %35, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i5, metadata !309, metadata !DIExpression()), !dbg !314
 ; call core::ptr::metadata::metadata
-  %36 = call i64 @_ZN4core3ptr8metadata8metadata17hb74b1e80e659b76aE(ptr %30, i64 %32) #10, !dbg !316
+  %36 = call i64 @_ZN4core3ptr8metadata8metadata17h65a66bab20766f97E(ptr %30, i64 %32) #10, !dbg !316
   %_8.i = icmp ule i64 %27, %36, !dbg !317
   %37 = zext i1 %_8.i to i8, !dbg !307
   store i8 %37, ptr %_4.i, align 1, !dbg !307
@@ -477,20 +478,20 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %38 = load i8, ptr %_4.i, align 1, !dbg !318, !range !242, !noundef !24
   %39 = trunc i8 %38 to i1, !dbg !318
   %_3.i = xor i1 %39, true, !dbg !318
-  br i1 %_3.i, label %bb5.i, label %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h81734ee76a1eb463E.exit", !dbg !318
+  br i1 %_3.i, label %bb5.i, label %"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h0294ca926293e977E.exit", !dbg !318
 
 bb5.i:                                            ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_e4c0784e4975da2173a354afd99193ad, i64 101) #11, !dbg !319
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_e4c0784e4975da2173a354afd99193ad, i64 101) #11, !dbg !319
   unreachable, !dbg !319
 
-"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h81734ee76a1eb463E.exit": ; preds = %bb3.i
+"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h0294ca926293e977E.exit": ; preds = %bb3.i
   br label %bb2, !dbg !262
 }
 
 ; <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::index
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$5index17hef54beb91de143f3E"(i64 %self.0, i64 %self.1, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !320 {
+define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$5index17h16af271770283f30E"(i64 %self.0, i64 %self.1, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !320 {
 start:
   %slice.dbg.spill = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca { i64, i64 }, align 8
@@ -513,12 +514,12 @@ bb2:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
 ; call core::slice::index::slice_index_order_fail
-  call void @_ZN4core5slice5index22slice_index_order_fail17h3a73883734c7d871E(i64 %self.0, i64 %self.1, ptr align 8 %0) #11, !dbg !347
+  call void @_ZN4core5slice5index22slice_index_order_fail17h49bde6a7f8cb847aE(i64 %self.0, i64 %self.1, ptr align 8 %0) #11, !dbg !347
   unreachable, !dbg !347
 
 bb4:                                              ; preds = %bb2
 ; call <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::get_unchecked
-  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h5b3ffffb25ed1251E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) #10, !dbg !348
+  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h4c54c58de0d8ed23E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) #10, !dbg !348
   %_15.0 = extractvalue { ptr, i64 } %5, 0, !dbg !348
   %_15.1 = extractvalue { ptr, i64 } %5, 1, !dbg !348
   %6 = insertvalue { ptr, i64 } poison, ptr %_15.0, 0, !dbg !349
@@ -527,13 +528,13 @@ bb4:                                              ; preds = %bb2
 
 bb3:                                              ; preds = %bb2
 ; call core::slice::index::slice_end_index_len_fail
-  call void @_ZN4core5slice5index24slice_end_index_len_fail17hac0fdec05618e01fE(i64 %self.1, i64 %slice.1, ptr align 8 %0) #11, !dbg !350
+  call void @_ZN4core5slice5index24slice_end_index_len_fail17hcb085bdc18b82b69E(i64 %self.1, i64 %slice.1, ptr align 8 %0) #11, !dbg !350
   unreachable, !dbg !350
 }
 
 ; <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hc7bb6ed126f23147E"(i64 %self.0, i64 %self.1, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !351 {
+define { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h71d141a80ac11235E"(i64 %self.0, i64 %self.1, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !351 {
 start:
   %slice.dbg.spill = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca { i64, i64 }, align 8
@@ -556,12 +557,12 @@ bb2:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
 ; call core::slice::index::slice_index_order_fail
-  call void @_ZN4core5slice5index22slice_index_order_fail17h3a73883734c7d871E(i64 %self.0, i64 %self.1, ptr align 8 %0) #11, !dbg !365
+  call void @_ZN4core5slice5index22slice_index_order_fail17h49bde6a7f8cb847aE(i64 %self.0, i64 %self.1, ptr align 8 %0) #11, !dbg !365
   unreachable, !dbg !365
 
 bb4:                                              ; preds = %bb2
 ; call <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::get_unchecked_mut
-  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h5c0b3f9eebf0ed73E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) #10, !dbg !366
+  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h6a3f95e11b33d7c3E"(i64 %self.0, i64 %self.1, ptr %slice.0, i64 %slice.1) #10, !dbg !366
   %_17.0 = extractvalue { ptr, i64 } %5, 0, !dbg !366
   %_17.1 = extractvalue { ptr, i64 } %5, 1, !dbg !366
   %6 = insertvalue { ptr, i64 } poison, ptr %_17.0, 0, !dbg !367
@@ -570,13 +571,13 @@ bb4:                                              ; preds = %bb2
 
 bb3:                                              ; preds = %bb2
 ; call core::slice::index::slice_end_index_len_fail
-  call void @_ZN4core5slice5index24slice_end_index_len_fail17hac0fdec05618e01fE(i64 %self.1, i64 %slice.1, ptr align 8 %0) #11, !dbg !368
+  call void @_ZN4core5slice5index24slice_end_index_len_fail17hcb085bdc18b82b69E(i64 %self.1, i64 %slice.1, ptr align 8 %0) #11, !dbg !368
   unreachable, !dbg !368
 }
 
 ; <core::ops::range::RangeTo<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN108_$LT$core..ops..range..RangeTo$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hee6af4a418ddd650E"(i64 %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !369 {
+define { ptr, i64 } @"_ZN108_$LT$core..ops..range..RangeTo$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h019cc67149b61e3fE"(i64 %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !369 {
 start:
   %slice.dbg.spill = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca i64, align 8
@@ -596,7 +597,7 @@ start:
   %6 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 1, !dbg !381
   %7 = load i64, ptr %6, align 8, !dbg !381, !noundef !24
 ; call <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
-  %8 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hc7bb6ed126f23147E"(i64 %5, i64 %7, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) #10, !dbg !381
+  %8 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h71d141a80ac11235E"(i64 %5, i64 %7, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) #10, !dbg !381
   %_3.0 = extractvalue { ptr, i64 } %8, 0, !dbg !381
   %_3.1 = extractvalue { ptr, i64 } %8, 1, !dbg !381
   %9 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !382
@@ -606,7 +607,7 @@ start:
 
 ; <core::ops::range::RangeFrom<usize> as core::slice::index::SliceIndex<[T]>>::get_unchecked_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17hd253cfe71e348022E"(i64 %self, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !383 {
+define { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h986931a3255f49bbE"(i64 %self, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !383 {
 start:
   %self.dbg.spill.i = alloca { ptr, i64 }, align 8
   %slice.dbg.spill = alloca { ptr, i64 }, align 8
@@ -624,7 +625,7 @@ start:
   store i64 %slice.1, ptr %2, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !309, metadata !DIExpression()), !dbg !395
 ; call core::ptr::metadata::metadata
-  %3 = call i64 @_ZN4core3ptr8metadata8metadata17hb74b1e80e659b76aE(ptr %slice.0, i64 %slice.1) #10, !dbg !397
+  %3 = call i64 @_ZN4core3ptr8metadata8metadata17h65a66bab20766f97E(ptr %slice.0, i64 %slice.1) #10, !dbg !397
   store i64 %self, ptr %_3, align 8, !dbg !398
   %4 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 1, !dbg !398
   store i64 %3, ptr %4, align 8, !dbg !398
@@ -633,7 +634,7 @@ start:
   %7 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 1, !dbg !398
   %8 = load i64, ptr %7, align 8, !dbg !398, !noundef !24
 ; call <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::get_unchecked_mut
-  %9 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h5c0b3f9eebf0ed73E"(i64 %6, i64 %8, ptr %slice.0, i64 %slice.1) #10, !dbg !398
+  %9 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h6a3f95e11b33d7c3E"(i64 %6, i64 %8, ptr %slice.0, i64 %slice.1) #10, !dbg !398
   %10 = extractvalue { ptr, i64 } %9, 0, !dbg !398
   %11 = extractvalue { ptr, i64 } %9, 1, !dbg !398
   %12 = insertvalue { ptr, i64 } poison, ptr %10, 0, !dbg !399
@@ -643,7 +644,7 @@ start:
 
 ; <core::ops::range::RangeFrom<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hb9f7e43bfb5a58c9E"(i64 %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !400 {
+define { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h8d4efffb94d8cdd2E"(i64 %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !400 {
 start:
   %slice.dbg.spill = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca i64, align 8
@@ -659,7 +660,7 @@ start:
 
 bb2:                                              ; preds = %start
 ; call <core::ops::range::RangeFrom<usize> as core::slice::index::SliceIndex<[T]>>::get_unchecked_mut
-  %3 = call { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17hd253cfe71e348022E"(i64 %self, ptr %slice.0, i64 %slice.1) #10, !dbg !409
+  %3 = call { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h986931a3255f49bbE"(i64 %self, ptr %slice.0, i64 %slice.1) #10, !dbg !409
   %_11.0 = extractvalue { ptr, i64 } %3, 0, !dbg !409
   %_11.1 = extractvalue { ptr, i64 } %3, 1, !dbg !409
   %4 = insertvalue { ptr, i64 } poison, ptr %_11.0, 0, !dbg !410
@@ -668,13 +669,13 @@ bb2:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
 ; call core::slice::index::slice_start_index_len_fail
-  call void @_ZN4core5slice5index26slice_start_index_len_fail17he5dc540bc7c1eda1E(i64 %self, i64 %slice.1, ptr align 8 %0) #11, !dbg !411
+  call void @_ZN4core5slice5index26slice_start_index_len_fail17h4127f60ad7a09cbdE(i64 %self, i64 %slice.1, ptr align 8 %0) #11, !dbg !411
   unreachable, !dbg !411
 }
 
 ; <core::ops::range::RangeInclusive<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN115_$LT$core..ops..range..RangeInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17haaefb11c55fdb42bE"(ptr %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !412 {
+define { ptr, i64 } @"_ZN115_$LT$core..ops..range..RangeInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h841da8ad177dd699E"(ptr %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !412 {
 start:
   %slice.dbg.spill = alloca { ptr, i64 }, align 8, !dbg !425
   call void @llvm.dbg.declare(metadata ptr %self, metadata !423, metadata !DIExpression()), !dbg !425
@@ -684,18 +685,18 @@ start:
   store i64 %slice.1, ptr %2, align 8
   call void @llvm.dbg.declare(metadata ptr %slice.dbg.spill, metadata !424, metadata !DIExpression()), !dbg !426
 ; call core::ops::range::RangeInclusive<Idx>::end
-  %_5 = call align 8 ptr @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3end17hc84d02dca1ce1660E"(ptr align 8 %self) #10, !dbg !427
+  %_5 = call align 8 ptr @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3end17h92165a95a3b8a6b5E"(ptr align 8 %self) #10, !dbg !427
   %_4 = load i64, ptr %_5, align 8, !dbg !428, !noundef !24
   %_3 = icmp eq i64 %_4, -1, !dbg !428
   br i1 %_3, label %bb2, label %bb3, !dbg !428
 
 bb3:                                              ; preds = %start
 ; call core::ops::range::RangeInclusive<usize>::into_slice_range
-  %3 = call { i64, i64 } @"_ZN4core3ops5range27RangeInclusive$LT$usize$GT$16into_slice_range17hb8c48996da4fecadE"(ptr %self) #10, !dbg !429
+  %3 = call { i64, i64 } @"_ZN4core3ops5range27RangeInclusive$LT$usize$GT$16into_slice_range17h1feef5a233c74608E"(ptr %self) #10, !dbg !429
   %_9.0 = extractvalue { i64, i64 } %3, 0, !dbg !429
   %_9.1 = extractvalue { i64, i64 } %3, 1, !dbg !429
 ; call <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
-  %4 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hc7bb6ed126f23147E"(i64 %_9.0, i64 %_9.1, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) #10, !dbg !429
+  %4 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h71d141a80ac11235E"(i64 %_9.0, i64 %_9.1, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) #10, !dbg !429
   %_8.0 = extractvalue { ptr, i64 } %4, 0, !dbg !429
   %_8.1 = extractvalue { ptr, i64 } %4, 1, !dbg !429
   %5 = insertvalue { ptr, i64 } poison, ptr %_8.0, 0, !dbg !430
@@ -704,13 +705,13 @@ bb3:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
 ; call core::slice::index::slice_end_index_overflow_fail
-  call void @_ZN4core5slice5index29slice_end_index_overflow_fail17h6f79fc3290077011E(ptr align 8 %0) #11, !dbg !431
+  call void @_ZN4core5slice5index29slice_end_index_overflow_fail17h8781b928e640c989E(ptr align 8 %0) #11, !dbg !431
   unreachable, !dbg !431
 }
 
 ; <core::ops::range::RangeToInclusive<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN117_$LT$core..ops..range..RangeToInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h9555939660343c9eE"(i64 %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !432 {
+define { ptr, i64 } @"_ZN117_$LT$core..ops..range..RangeToInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h5fc6f6ee90b4473eE"(i64 %self, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) unnamed_addr #0 !dbg !432 {
 start:
   %slice.dbg.spill = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca i64, align 8
@@ -723,9 +724,9 @@ start:
   store i64 %slice.1, ptr %2, align 8
   call void @llvm.dbg.declare(metadata ptr %slice.dbg.spill, metadata !441, metadata !DIExpression()), !dbg !443
 ; call core::ops::range::RangeInclusive<Idx>::new
-  call void @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3new17h6e1589f1e89e1696E"(ptr sret(%"core::ops::range::RangeInclusive<usize>") %_4, i64 0, i64 %self) #10, !dbg !444
+  call void @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3new17h9d68c8f933949b4fE"(ptr sret(%"core::ops::range::RangeInclusive<usize>") %_4, i64 0, i64 %self) #10, !dbg !444
 ; call <core::ops::range::RangeInclusive<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
-  %3 = call { ptr, i64 } @"_ZN115_$LT$core..ops..range..RangeInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17haaefb11c55fdb42bE"(ptr %_4, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) #10, !dbg !444
+  %3 = call { ptr, i64 } @"_ZN115_$LT$core..ops..range..RangeInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h841da8ad177dd699E"(ptr %_4, ptr align 8 %slice.0, i64 %slice.1, ptr align 8 %0) #10, !dbg !444
   %_3.0 = extractvalue { ptr, i64 } %3, 0, !dbg !444
   %_3.1 = extractvalue { ptr, i64 } %3, 1, !dbg !444
   %4 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !445
@@ -735,7 +736,7 @@ start:
 
 ; <&T as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h32082bad30d2c159E"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !446 {
+define zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h774e5ed9883a620cE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !446 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -745,13 +746,13 @@ start:
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !506, metadata !DIExpression()), !dbg !510
   %_3 = load ptr, ptr %self, align 8, !dbg !511, !nonnull !24, !align !512, !noundef !24
 ; call <bootloader::bootinfo::memory_map::MemoryRegionType as core::fmt::Debug>::fmt
-  %0 = call zeroext i1 @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryRegionType$u20$as$u20$core..fmt..Debug$GT$3fmt17hb40c95ac774d70e6E"(ptr align 4 %_3, ptr align 8 %f) #10, !dbg !513
+  %0 = call zeroext i1 @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryRegionType$u20$as$u20$core..fmt..Debug$GT$3fmt17h5288c65a4929f4acE"(ptr align 4 %_3, ptr align 8 %f) #10, !dbg !513
   ret i1 %0, !dbg !514
 }
 
 ; <&T as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17he49a6232630c6b52E"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !515 {
+define zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17hd79519092e6154abE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !515 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -761,13 +762,13 @@ start:
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !521, metadata !DIExpression()), !dbg !523
   %_3 = load ptr, ptr %self, align 8, !dbg !524, !nonnull !24, !align !525, !noundef !24
 ; call <bootloader::bootinfo::memory_map::MemoryRegion as core::fmt::Debug>::fmt
-  %0 = call zeroext i1 @"_ZN83_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h47f12e6d2557594cE"(ptr align 8 %_3, ptr align 8 %f) #10, !dbg !526
+  %0 = call zeroext i1 @"_ZN83_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h6909f28b8cb986d8E"(ptr align 8 %_3, ptr align 8 %f) #10, !dbg !526
   ret i1 %0, !dbg !527
 }
 
 ; core::intrinsics::is_nonoverlapping
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17h30ac5373771a6525E(ptr %src, ptr %dst, i64 %count) unnamed_addr #1 !dbg !528 {
+define zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17hca626f424669f518E(ptr %src, ptr %dst, i64 %count) unnamed_addr #1 !dbg !528 {
 start:
   %self.dbg.spill.i5 = alloca ptr, align 8
   %self.dbg.spill.i4 = alloca ptr, align 8
@@ -802,55 +803,55 @@ start:
   store i64 %1, ptr %dst_usize.dbg.spill, align 8, !dbg !572
   call void @llvm.dbg.declare(metadata ptr %dst_usize.dbg.spill, metadata !538, metadata !DIExpression()), !dbg !573
 ; call core::num::<impl usize>::checked_mul
-  %2 = call { i64, i64 } @"_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h1a50449d966bb29fE"(i64 24, i64 %count) #10, !dbg !574
+  %2 = call { i64, i64 } @"_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17hf7ec3245fedf3771E"(i64 24, i64 %count) #10, !dbg !574
   %_7.0 = extractvalue { i64, i64 } %2, 0, !dbg !574
   %_7.1 = extractvalue { i64, i64 } %2, 1, !dbg !574
-; call core::option::Option<T>::unwrap
-  %size = call i64 @"_ZN4core6option15Option$LT$T$GT$6unwrap17h6b9c7dcddc3eb64aE"(i64 %_7.0, i64 %_7.1, ptr align 8 @alloc_c92b068cc8d2cd4c50e9488095980e32) #10, !dbg !574
+; call core::option::Option<T>::expect
+  %size = call i64 @"_ZN4core6option15Option$LT$T$GT$6expect17hdeba9ca718bed0bfE"(i64 %_7.0, i64 %_7.1, ptr align 1 @alloc_763310d78c99c2c1ad3f8a9821e942f3, i64 61, ptr align 8 @alloc_a8f5a1029a5e0d25d825219ea89697e3) #10, !dbg !574
   store i64 %size, ptr %size.dbg.spill, align 8, !dbg !574
   call void @llvm.dbg.declare(metadata ptr %size.dbg.spill, metadata !540, metadata !DIExpression()), !dbg !575
-  %_10 = icmp ugt i64 %0, %1, !dbg !576
-  br i1 %_10, label %bb6, label %bb8, !dbg !576
+  %_11 = icmp ugt i64 %0, %1, !dbg !576
+  br i1 %_11, label %bb6, label %bb8, !dbg !576
 
 bb8:                                              ; preds = %start
-  %_18.0 = sub i64 %1, %0, !dbg !577
-  %_18.1 = icmp ult i64 %1, %0, !dbg !577
-  %3 = call i1 @llvm.expect.i1(i1 %_18.1, i1 false), !dbg !577
+  %_19.0 = sub i64 %1, %0, !dbg !577
+  %_19.1 = icmp ult i64 %1, %0, !dbg !577
+  %3 = call i1 @llvm.expect.i1(i1 %_19.1, i1 false), !dbg !577
   br i1 %3, label %panic1, label %bb9, !dbg !577
 
 bb6:                                              ; preds = %start
-  %_15.0 = sub i64 %0, %1, !dbg !578
-  %_15.1 = icmp ult i64 %0, %1, !dbg !578
-  %4 = call i1 @llvm.expect.i1(i1 %_15.1, i1 false), !dbg !578
+  %_16.0 = sub i64 %0, %1, !dbg !578
+  %_16.1 = icmp ult i64 %0, %1, !dbg !578
+  %4 = call i1 @llvm.expect.i1(i1 %_16.1, i1 false), !dbg !578
   br i1 %4, label %panic, label %bb7, !dbg !578
 
 bb7:                                              ; preds = %bb6
-  store i64 %_15.0, ptr %diff, align 8, !dbg !578
+  store i64 %_16.0, ptr %diff, align 8, !dbg !578
   br label %bb10, !dbg !579
 
 panic:                                            ; preds = %bb6
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_7ad8e03c2174e39a8f819d6ca6833838) #11, !dbg !578
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_ecfa63b3c1c347c3fa9d9d647fee2801) #11, !dbg !578
   unreachable, !dbg !578
 
 bb10:                                             ; preds = %bb9, %bb7
-  %_19 = load i64, ptr %diff, align 8, !dbg !580, !noundef !24
-  %5 = icmp uge i64 %_19, %size, !dbg !580
+  %_20 = load i64, ptr %diff, align 8, !dbg !580, !noundef !24
+  %5 = icmp uge i64 %_20, %size, !dbg !580
   ret i1 %5, !dbg !581
 
 bb9:                                              ; preds = %bb8
-  store i64 %_18.0, ptr %diff, align 8, !dbg !577
+  store i64 %_19.0, ptr %diff, align 8, !dbg !577
   br label %bb10, !dbg !579
 
 panic1:                                           ; preds = %bb8
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_2ca6b8c4026dbf3457d2606f6c47263d) #11, !dbg !577
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_49268b5d2bc3ac6e3a5203e76215cb05) #11, !dbg !577
   unreachable, !dbg !577
 }
 
 ; core::intrinsics::copy_nonoverlapping
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !582 {
+define void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !582 {
 start:
   %count.dbg.spill.i = alloca i64, align 8
   %dst.dbg.spill.i = alloca ptr, align 8
@@ -869,7 +870,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill, metadata !588, metadata !DIExpression()), !dbg !591
   br i1 true, label %bb1, label %bb2, !dbg !592
 
-bb2:                                              ; preds = %_ZN4core10intrinsics19copy_nonoverlapping7runtime17hcde02cb2d666fe7eE.exit, %start
+bb2:                                              ; preds = %_ZN4core10intrinsics19copy_nonoverlapping7runtime17h6eb0d1d74970170eE.exit, %start
   %0 = mul i64 %count, 24, !dbg !593
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %dst, ptr align 8 %src, i64 %0, i1 false), !dbg !593
   ret void, !dbg !594
@@ -892,7 +893,7 @@ bb1:                                              ; preds = %start
   store i64 %7, ptr %count.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill.i, metadata !600, metadata !DIExpression()), !dbg !601
 ; call core::intrinsics::is_aligned_and_not_null
-  %_7.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %3) #10, !dbg !603
+  %_7.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %3) #10, !dbg !603
   br i1 %_7.i, label %bb5.i, label %bb4.i, !dbg !603
 
 bb4.i:                                            ; preds = %bb1
@@ -901,7 +902,7 @@ bb4.i:                                            ; preds = %bb1
 
 bb5.i:                                            ; preds = %bb1
 ; call core::intrinsics::is_aligned_and_not_null
-  %_8.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %5) #10, !dbg !604
+  %_8.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %5) #10, !dbg !604
   %8 = zext i1 %_8.i to i8, !dbg !603
   store i8 %8, ptr %_6.i, align 1, !dbg !603
   br label %bb6.i, !dbg !603
@@ -917,7 +918,7 @@ bb1.i:                                            ; preds = %bb6.i
 
 bb2.i:                                            ; preds = %bb6.i
 ; call core::intrinsics::is_nonoverlapping
-  %_10.i = call zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17h30ac5373771a6525E(ptr %3, ptr %5, i64 %7) #10, !dbg !605
+  %_10.i = call zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17hca626f424669f518E(ptr %3, ptr %5, i64 %7) #10, !dbg !605
   %11 = zext i1 %_10.i to i8, !dbg !603
   store i8 %11, ptr %_5.i, align 1, !dbg !603
   br label %bb3.i, !dbg !603
@@ -926,20 +927,20 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %12 = load i8, ptr %_5.i, align 1, !dbg !606, !range !242, !noundef !24
   %13 = trunc i8 %12 to i1, !dbg !606
   %_4.i = xor i1 %13, true, !dbg !606
-  br i1 %_4.i, label %bb10.i, label %_ZN4core10intrinsics19copy_nonoverlapping7runtime17hcde02cb2d666fe7eE.exit, !dbg !606
+  br i1 %_4.i, label %bb10.i, label %_ZN4core10intrinsics19copy_nonoverlapping7runtime17h6eb0d1d74970170eE.exit, !dbg !606
 
 bb10.i:                                           ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_8df0580a595a87d56789d20c7318e185, i64 166) #11, !dbg !607
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_8df0580a595a87d56789d20c7318e185, i64 166) #11, !dbg !607
   unreachable, !dbg !607
 
-_ZN4core10intrinsics19copy_nonoverlapping7runtime17hcde02cb2d666fe7eE.exit: ; preds = %bb3.i
+_ZN4core10intrinsics19copy_nonoverlapping7runtime17h6eb0d1d74970170eE.exit: ; preds = %bb3.i
   br label %bb2, !dbg !592
 }
 
 ; core::intrinsics::copy_nonoverlapping
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core10intrinsics19copy_nonoverlapping17h47de7969a9985aacE(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !608 {
+define void @_ZN4core10intrinsics19copy_nonoverlapping17h7f2962754de9d15aE(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !608 {
 start:
   %count.dbg.spill.i = alloca i64, align 8
   %dst.dbg.spill.i = alloca ptr, align 8
@@ -958,7 +959,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill, metadata !616, metadata !DIExpression()), !dbg !619
   br i1 true, label %bb1, label %bb2, !dbg !620
 
-bb2:                                              ; preds = %_ZN4core10intrinsics19copy_nonoverlapping7runtime17hf945eed718cc1d5cE.exit, %start
+bb2:                                              ; preds = %_ZN4core10intrinsics19copy_nonoverlapping7runtime17hc3a18a29ffcefb4fE.exit, %start
   %0 = mul i64 %count, 8, !dbg !621
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %dst, ptr align 8 %src, i64 %0, i1 false), !dbg !621
   ret void, !dbg !622
@@ -981,7 +982,7 @@ bb1:                                              ; preds = %start
   store i64 %7, ptr %count.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill.i, metadata !627, metadata !DIExpression()), !dbg !628
 ; call core::intrinsics::is_aligned_and_not_null
-  %_7.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h54e3a64a8d80a0c2E(ptr %3) #10, !dbg !630
+  %_7.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h98a96d04b4c67285E(ptr %3) #10, !dbg !630
   br i1 %_7.i, label %bb5.i, label %bb4.i, !dbg !630
 
 bb4.i:                                            ; preds = %bb1
@@ -990,7 +991,7 @@ bb4.i:                                            ; preds = %bb1
 
 bb5.i:                                            ; preds = %bb1
 ; call core::intrinsics::is_aligned_and_not_null
-  %_8.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h54e3a64a8d80a0c2E(ptr %5) #10, !dbg !631
+  %_8.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h98a96d04b4c67285E(ptr %5) #10, !dbg !631
   %8 = zext i1 %_8.i to i8, !dbg !630
   store i8 %8, ptr %_6.i, align 1, !dbg !630
   br label %bb6.i, !dbg !630
@@ -1006,7 +1007,7 @@ bb1.i:                                            ; preds = %bb6.i
 
 bb2.i:                                            ; preds = %bb6.i
 ; call core::intrinsics::is_nonoverlapping
-  %_10.i = call zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17hdfa133b4c9e6bfe0E(ptr %3, ptr %5, i64 %7) #10, !dbg !632
+  %_10.i = call zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17he2d4d5851e6335c6E(ptr %3, ptr %5, i64 %7) #10, !dbg !632
   %11 = zext i1 %_10.i to i8, !dbg !630
   store i8 %11, ptr %_5.i, align 1, !dbg !630
   br label %bb3.i, !dbg !630
@@ -1015,57 +1016,57 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %12 = load i8, ptr %_5.i, align 1, !dbg !633, !range !242, !noundef !24
   %13 = trunc i8 %12 to i1, !dbg !633
   %_4.i = xor i1 %13, true, !dbg !633
-  br i1 %_4.i, label %bb10.i, label %_ZN4core10intrinsics19copy_nonoverlapping7runtime17hf945eed718cc1d5cE.exit, !dbg !633
+  br i1 %_4.i, label %bb10.i, label %_ZN4core10intrinsics19copy_nonoverlapping7runtime17hc3a18a29ffcefb4fE.exit, !dbg !633
 
 bb10.i:                                           ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_8df0580a595a87d56789d20c7318e185, i64 166) #11, !dbg !634
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_8df0580a595a87d56789d20c7318e185, i64 166) #11, !dbg !634
   unreachable, !dbg !634
 
-_ZN4core10intrinsics19copy_nonoverlapping7runtime17hf945eed718cc1d5cE.exit: ; preds = %bb3.i
+_ZN4core10intrinsics19copy_nonoverlapping7runtime17hc3a18a29ffcefb4fE.exit: ; preds = %bb3.i
   br label %bb2, !dbg !620
 }
 
 ; core::intrinsics::is_aligned_and_not_null
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h22d81bef441ca05fE(ptr %ptr) unnamed_addr #1 !dbg !635 {
+define zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %ptr) unnamed_addr #1 !dbg !635 {
 start:
   %ptr.dbg.spill = alloca ptr, align 8
   %0 = alloca i8, align 1
   store ptr %ptr, ptr %ptr.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !650, metadata !DIExpression()), !dbg !653
+  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !639, metadata !DIExpression()), !dbg !640
 ; call core::ptr::const_ptr::<impl *const T>::is_null
-  %_3 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17ha32a967971c7c509E"(ptr %ptr) #10, !dbg !654
-  %_2 = xor i1 %_3, true, !dbg !655
-  br i1 %_2, label %bb2, label %bb1, !dbg !655
+  %_3 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hb34f08b01fbed2d9E"(ptr %ptr) #10, !dbg !641
+  %_2 = xor i1 %_3, true, !dbg !642
+  br i1 %_2, label %bb2, label %bb1, !dbg !642
 
 bb1:                                              ; preds = %start
-  store i8 0, ptr %0, align 1, !dbg !655
-  br label %bb3, !dbg !655
+  store i8 0, ptr %0, align 1, !dbg !642
+  br label %bb3, !dbg !642
 
 bb2:                                              ; preds = %start
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned
-  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h8ef422c6d56e179dE"(ptr %ptr) #10, !dbg !656
-  %1 = zext i1 %_4 to i8, !dbg !655
-  store i8 %1, ptr %0, align 1, !dbg !655
-  br label %bb3, !dbg !655
+  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17he71e0796d8ebfcb4E"(ptr %ptr) #10, !dbg !643
+  %1 = zext i1 %_4 to i8, !dbg !642
+  store i8 %1, ptr %0, align 1, !dbg !642
+  br label %bb3, !dbg !642
 
 bb3:                                              ; preds = %bb1, %bb2
-  %2 = load i8, ptr %0, align 1, !dbg !657, !range !242, !noundef !24
-  %3 = trunc i8 %2 to i1, !dbg !657
-  ret i1 %3, !dbg !657
+  %2 = load i8, ptr %0, align 1, !dbg !644, !range !242, !noundef !24
+  %3 = trunc i8 %2 to i1, !dbg !644
+  ret i1 %3, !dbg !644
 }
 
 ; core::intrinsics::is_aligned_and_not_null
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %ptr) unnamed_addr #1 !dbg !658 {
+define zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h9c7df8c71b1caecfE(ptr %ptr) unnamed_addr #1 !dbg !645 {
 start:
   %ptr.dbg.spill = alloca ptr, align 8
   %0 = alloca i8, align 1
   store ptr %ptr, ptr %ptr.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !662, metadata !DIExpression()), !dbg !663
+  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !660, metadata !DIExpression()), !dbg !663
 ; call core::ptr::const_ptr::<impl *const T>::is_null
-  %_3 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h8887dc6f95652e18E"(ptr %ptr) #10, !dbg !664
+  %_3 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hed584459377ed975E"(ptr %ptr) #10, !dbg !664
   %_2 = xor i1 %_3, true, !dbg !665
   br i1 %_2, label %bb2, label %bb1, !dbg !665
 
@@ -1075,7 +1076,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned
-  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17hdce19ac4ca451d04E"(ptr %ptr) #10, !dbg !666
+  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17hccadd5f30647ea68E"(ptr %ptr) #10, !dbg !666
   %1 = zext i1 %_4 to i8, !dbg !665
   store i8 %1, ptr %0, align 1, !dbg !665
   br label %bb3, !dbg !665
@@ -1088,7 +1089,7 @@ bb3:                                              ; preds = %bb1, %bb2
 
 ; core::intrinsics::is_valid_allocation_size
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN4core10intrinsics24is_valid_allocation_size17h7ac2add6c8684074E(i64 %len) unnamed_addr #1 !dbg !668 {
+define zeroext i1 @_ZN4core10intrinsics24is_valid_allocation_size17h02832c510035953dE(i64 %len) unnamed_addr #1 !dbg !668 {
 start:
   %max_len.dbg.spill = alloca i64, align 8
   %len.dbg.spill = alloca i64, align 8
@@ -1102,7 +1103,7 @@ start:
 
 ; core::intrinsics::copy
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core10intrinsics4copy17h41ae0f12b9944baeE(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !680 {
+define void @_ZN4core10intrinsics4copy17h3cd453a57eee73c7E(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !680 {
 start:
   %dst.dbg.spill.i = alloca ptr, align 8
   %src.dbg.spill.i = alloca ptr, align 8
@@ -1119,8 +1120,8 @@ start:
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill, metadata !684, metadata !DIExpression()), !dbg !687
   br i1 true, label %bb1, label %bb2, !dbg !688
 
-bb2:                                              ; preds = %_ZN4core10intrinsics4copy7runtime17he478a87d4fed4c30E.exit, %start
-  %0 = mul i64 8, %count, !dbg !689
+bb2:                                              ; preds = %_ZN4core10intrinsics4copy7runtime17h481e461e63cc2895E.exit, %start
+  %0 = mul i64 24, %count, !dbg !689
   call void @llvm.memmove.p0.p0.i64(ptr align 8 %dst, ptr align 8 %src, i64 %0, i1 false), !dbg !689
   ret void, !dbg !690
 
@@ -1136,7 +1137,7 @@ bb1:                                              ; preds = %start
   store ptr %4, ptr %dst.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill.i, metadata !697, metadata !DIExpression()), !dbg !698
 ; call core::intrinsics::is_aligned_and_not_null
-  %_5.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h54e3a64a8d80a0c2E(ptr %2) #10, !dbg !700
+  %_5.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %2) #10, !dbg !700
   br i1 %_5.i, label %bb2.i, label %bb1.i, !dbg !700
 
 bb1.i:                                            ; preds = %bb1
@@ -1145,7 +1146,7 @@ bb1.i:                                            ; preds = %bb1
 
 bb2.i:                                            ; preds = %bb1
 ; call core::intrinsics::is_aligned_and_not_null
-  %_6.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h54e3a64a8d80a0c2E(ptr %4) #10, !dbg !701
+  %_6.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %4) #10, !dbg !701
   %5 = zext i1 %_6.i to i8, !dbg !700
   store i8 %5, ptr %_4.i, align 1, !dbg !700
   br label %bb3.i, !dbg !700
@@ -1154,20 +1155,20 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %6 = load i8, ptr %_4.i, align 1, !dbg !702, !range !242, !noundef !24
   %7 = trunc i8 %6 to i1, !dbg !702
   %_3.i = xor i1 %7, true, !dbg !702
-  br i1 %_3.i, label %bb6.i, label %_ZN4core10intrinsics4copy7runtime17he478a87d4fed4c30E.exit, !dbg !702
+  br i1 %_3.i, label %bb6.i, label %_ZN4core10intrinsics4copy7runtime17h481e461e63cc2895E.exit, !dbg !702
 
 bb6.i:                                            ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_4f979e408ba56e8e0fdc172fb24ef68d, i64 112) #11, !dbg !703
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_4f979e408ba56e8e0fdc172fb24ef68d, i64 112) #11, !dbg !703
   unreachable, !dbg !703
 
-_ZN4core10intrinsics4copy7runtime17he478a87d4fed4c30E.exit: ; preds = %bb3.i
+_ZN4core10intrinsics4copy7runtime17h481e461e63cc2895E.exit: ; preds = %bb3.i
   br label %bb2, !dbg !688
 }
 
 ; core::intrinsics::copy
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core10intrinsics4copy17h66502225802bac67E(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !704 {
+define void @_ZN4core10intrinsics4copy17h5da12744d50e3203E(ptr %src, ptr %dst, i64 %count) unnamed_addr #0 !dbg !704 {
 start:
   %dst.dbg.spill.i = alloca ptr, align 8
   %src.dbg.spill.i = alloca ptr, align 8
@@ -1184,8 +1185,8 @@ start:
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill, metadata !708, metadata !DIExpression()), !dbg !711
   br i1 true, label %bb1, label %bb2, !dbg !712
 
-bb2:                                              ; preds = %_ZN4core10intrinsics4copy7runtime17h780360ddb06f6cb8E.exit, %start
-  %0 = mul i64 24, %count, !dbg !713
+bb2:                                              ; preds = %_ZN4core10intrinsics4copy7runtime17h9e5648a412671d18E.exit, %start
+  %0 = mul i64 8, %count, !dbg !713
   call void @llvm.memmove.p0.p0.i64(ptr align 8 %dst, ptr align 8 %src, i64 %0, i1 false), !dbg !713
   ret void, !dbg !714
 
@@ -1201,7 +1202,7 @@ bb1:                                              ; preds = %start
   store ptr %4, ptr %dst.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill.i, metadata !720, metadata !DIExpression()), !dbg !721
 ; call core::intrinsics::is_aligned_and_not_null
-  %_5.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %2) #10, !dbg !723
+  %_5.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h98a96d04b4c67285E(ptr %2) #10, !dbg !723
   br i1 %_5.i, label %bb2.i, label %bb1.i, !dbg !723
 
 bb1.i:                                            ; preds = %bb1
@@ -1210,7 +1211,7 @@ bb1.i:                                            ; preds = %bb1
 
 bb2.i:                                            ; preds = %bb1
 ; call core::intrinsics::is_aligned_and_not_null
-  %_6.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %4) #10, !dbg !724
+  %_6.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h98a96d04b4c67285E(ptr %4) #10, !dbg !724
   %5 = zext i1 %_6.i to i8, !dbg !723
   store i8 %5, ptr %_4.i, align 1, !dbg !723
   br label %bb3.i, !dbg !723
@@ -1219,20 +1220,20 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %6 = load i8, ptr %_4.i, align 1, !dbg !725, !range !242, !noundef !24
   %7 = trunc i8 %6 to i1, !dbg !725
   %_3.i = xor i1 %7, true, !dbg !725
-  br i1 %_3.i, label %bb6.i, label %_ZN4core10intrinsics4copy7runtime17h780360ddb06f6cb8E.exit, !dbg !725
+  br i1 %_3.i, label %bb6.i, label %_ZN4core10intrinsics4copy7runtime17h9e5648a412671d18E.exit, !dbg !725
 
 bb6.i:                                            ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_4f979e408ba56e8e0fdc172fb24ef68d, i64 112) #11, !dbg !726
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_4f979e408ba56e8e0fdc172fb24ef68d, i64 112) #11, !dbg !726
   unreachable, !dbg !726
 
-_ZN4core10intrinsics4copy7runtime17h780360ddb06f6cb8E.exit: ; preds = %bb3.i
+_ZN4core10intrinsics4copy7runtime17h9e5648a412671d18E.exit: ; preds = %bb3.i
   br label %bb2, !dbg !712
 }
 
 ; core::cmp::impls::<impl core::cmp::Ord for u64>::cmp
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @"_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h3f053a9c0b80c8c7E"(ptr align 8 %self, ptr align 8 %other) unnamed_addr #0 !dbg !727 {
+define internal i8 @"_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h5032906cd42a2baaE"(ptr align 8 %self, ptr align 8 %other) unnamed_addr #0 !dbg !727 {
 start:
   %other.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1271,13 +1272,13 @@ bb3:                                              ; preds = %bb2
 
 ; core::fmt::ArgumentV1::new_lower_hex
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, ptr } @_ZN4core3fmt10ArgumentV113new_lower_hex17h49377683266f663dE(ptr align 8 %x) unnamed_addr #0 !dbg !749 {
+define { ptr, ptr } @_ZN4core3fmt10ArgumentV113new_lower_hex17h5c75358a2fa21259E(ptr align 8 %x) unnamed_addr #0 !dbg !749 {
 start:
   %x.dbg.spill = alloca ptr, align 8
   store ptr %x, ptr %x.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %x.dbg.spill, metadata !763, metadata !DIExpression()), !dbg !766
 ; call core::fmt::ArgumentV1::new
-  %0 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV13new17hff38262718737e36E(ptr align 8 %x, ptr @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u64$GT$3fmt17hceee1cc64e7ed24aE") #10, !dbg !767
+  %0 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV13new17hcd024a23899bed53E(ptr align 8 %x, ptr @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u64$GT$3fmt17h1cb1a13e067490d6E") #10, !dbg !767
   %1 = extractvalue { ptr, ptr } %0, 0, !dbg !767
   %2 = extractvalue { ptr, ptr } %0, 1, !dbg !767
   %3 = insertvalue { ptr, ptr } poison, ptr %1, 0, !dbg !768
@@ -1287,7 +1288,7 @@ start:
 
 ; core::fmt::num::<impl core::fmt::Debug for u32>::fmt
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u32$GT$3fmt17hf349b60677dd9891E"(ptr align 4 %self, ptr align 8 %f) unnamed_addr #0 !dbg !769 {
+define internal zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u32$GT$3fmt17h1e03dcc8c6b9ff18E"(ptr align 4 %self, ptr align 8 %f) unnamed_addr #0 !dbg !769 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1297,17 +1298,17 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !777, metadata !DIExpression()), !dbg !779
 ; call core::fmt::Formatter::debug_lower_hex
-  %_3 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_lower_hex17h41ca6b16ba65727eE(ptr align 8 %f) #10, !dbg !780
+  %_3 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_lower_hex17h121685f0bd3428f6E(ptr align 8 %f) #10, !dbg !780
   br i1 %_3, label %bb2, label %bb3, !dbg !780
 
 bb3:                                              ; preds = %start
 ; call core::fmt::Formatter::debug_upper_hex
-  %_5 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_upper_hex17h1b93910475cacd94E(ptr align 8 %f) #10, !dbg !781
+  %_5 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_upper_hex17h08e1aba76b1c06abE(ptr align 8 %f) #10, !dbg !781
   br i1 %_5, label %bb5, label %bb6, !dbg !781
 
 bb2:                                              ; preds = %start
 ; call core::fmt::num::<impl core::fmt::LowerHex for u32>::fmt
-  %1 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u32$GT$3fmt17h87cb2e342e5141a4E"(ptr align 4 %self, ptr align 8 %f) #10, !dbg !782
+  %1 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u32$GT$3fmt17h8bfa2e9223c7e4a2E"(ptr align 4 %self, ptr align 8 %f) #10, !dbg !782
   %2 = zext i1 %1 to i8, !dbg !782
   store i8 %2, ptr %0, align 1, !dbg !782
   br label %bb7, !dbg !782
@@ -1319,14 +1320,14 @@ bb7:                                              ; preds = %bb6, %bb5, %bb2
 
 bb6:                                              ; preds = %bb3
 ; call core::fmt::num::imp::<impl core::fmt::Display for u32>::fmt
-  %5 = call zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u32$GT$3fmt17h9c863612f56988d3E"(ptr align 4 %self, ptr align 8 %f) #10, !dbg !784
+  %5 = call zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u32$GT$3fmt17h04ef4c863faf69deE"(ptr align 4 %self, ptr align 8 %f) #10, !dbg !784
   %6 = zext i1 %5 to i8, !dbg !784
   store i8 %6, ptr %0, align 1, !dbg !784
   br label %bb7, !dbg !784
 
 bb5:                                              ; preds = %bb3
 ; call core::fmt::num::<impl core::fmt::UpperHex for u32>::fmt
-  %7 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u32$GT$3fmt17h2f2ab6e4739c3556E"(ptr align 4 %self, ptr align 8 %f) #10, !dbg !785
+  %7 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u32$GT$3fmt17h8dae69749bf3c377E"(ptr align 4 %self, ptr align 8 %f) #10, !dbg !785
   %8 = zext i1 %7 to i8, !dbg !785
   store i8 %8, ptr %0, align 1, !dbg !785
   br label %bb7, !dbg !785
@@ -1334,7 +1335,7 @@ bb5:                                              ; preds = %bb3
 
 ; core::fmt::num::<impl core::fmt::Debug for u64>::fmt
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u64$GT$3fmt17h6cc99aabc8dc9a21E"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #0 !dbg !786 {
+define internal zeroext i1 @"_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u64$GT$3fmt17haf45b493f50037cbE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #0 !dbg !786 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1344,17 +1345,17 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !792, metadata !DIExpression()), !dbg !794
 ; call core::fmt::Formatter::debug_lower_hex
-  %_3 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_lower_hex17h41ca6b16ba65727eE(ptr align 8 %f) #10, !dbg !795
+  %_3 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_lower_hex17h121685f0bd3428f6E(ptr align 8 %f) #10, !dbg !795
   br i1 %_3, label %bb2, label %bb3, !dbg !795
 
 bb3:                                              ; preds = %start
 ; call core::fmt::Formatter::debug_upper_hex
-  %_5 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_upper_hex17h1b93910475cacd94E(ptr align 8 %f) #10, !dbg !796
+  %_5 = call zeroext i1 @_ZN4core3fmt9Formatter15debug_upper_hex17h08e1aba76b1c06abE(ptr align 8 %f) #10, !dbg !796
   br i1 %_5, label %bb5, label %bb6, !dbg !796
 
 bb2:                                              ; preds = %start
 ; call core::fmt::num::<impl core::fmt::LowerHex for u64>::fmt
-  %1 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u64$GT$3fmt17hceee1cc64e7ed24aE"(ptr align 8 %self, ptr align 8 %f) #10, !dbg !797
+  %1 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u64$GT$3fmt17h1cb1a13e067490d6E"(ptr align 8 %self, ptr align 8 %f) #10, !dbg !797
   %2 = zext i1 %1 to i8, !dbg !797
   store i8 %2, ptr %0, align 1, !dbg !797
   br label %bb7, !dbg !797
@@ -1366,14 +1367,14 @@ bb7:                                              ; preds = %bb6, %bb5, %bb2
 
 bb6:                                              ; preds = %bb3
 ; call core::fmt::num::imp::<impl core::fmt::Display for u64>::fmt
-  %5 = call zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u64$GT$3fmt17ha7e2c62b9562228dE"(ptr align 8 %self, ptr align 8 %f) #10, !dbg !799
+  %5 = call zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u64$GT$3fmt17h625724b56576f797E"(ptr align 8 %self, ptr align 8 %f) #10, !dbg !799
   %6 = zext i1 %5 to i8, !dbg !799
   store i8 %6, ptr %0, align 1, !dbg !799
   br label %bb7, !dbg !799
 
 bb5:                                              ; preds = %bb3
 ; call core::fmt::num::<impl core::fmt::UpperHex for u64>::fmt
-  %7 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u64$GT$3fmt17h66713fc47818d59eE"(ptr align 8 %self, ptr align 8 %f) #10, !dbg !800
+  %7 = call zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u64$GT$3fmt17h0c0917c16a84cc24E"(ptr align 8 %self, ptr align 8 %f) #10, !dbg !800
   %8 = zext i1 %7 to i8, !dbg !800
   store i8 %8, ptr %0, align 1, !dbg !800
   br label %bb7, !dbg !800
@@ -1381,7 +1382,7 @@ bb5:                                              ; preds = %bb3
 
 ; core::fmt::builders::DebugList::entries
 ; Function Attrs: noredzone nounwind
-define align 8 ptr @_ZN4core3fmt8builders9DebugList7entries17h3d2e4fa43e1d7009E(ptr align 8 %self, ptr %entries.0, ptr %entries.1) unnamed_addr #1 !dbg !801 {
+define align 8 ptr @_ZN4core3fmt8builders9DebugList7entries17h7d93063a04bf6cc7E(ptr align 8 %self, ptr %entries.0, ptr %entries.1) unnamed_addr #1 !dbg !801 {
 start:
   %entries.dbg.spill = alloca { ptr, ptr }, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1398,7 +1399,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %iter, metadata !832, metadata !DIExpression()), !dbg !841
   call void @llvm.dbg.declare(metadata ptr %entry, metadata !834, metadata !DIExpression()), !dbg !842
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %2 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h8af5423956ab47bbE"(ptr %entries.0, ptr %entries.1) #10, !dbg !843
+  %2 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h6f1bfcac0ddec601E"(ptr %entries.0, ptr %entries.1) #10, !dbg !843
   %_3.0 = extractvalue { ptr, ptr } %2, 0, !dbg !843
   %_3.1 = extractvalue { ptr, ptr } %2, 1, !dbg !843
   %3 = getelementptr inbounds { ptr, ptr }, ptr %iter, i32 0, i32 0, !dbg !843
@@ -1409,7 +1410,7 @@ start:
 
 bb2:                                              ; preds = %bb4, %start
 ; call <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::next
-  %5 = call align 8 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h2beee56cf310e2bbE"(ptr align 8 %iter) #10, !dbg !841
+  %5 = call align 8 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17he876426d7fcbf6a9E"(ptr align 8 %iter) #10, !dbg !841
   store ptr %5, ptr %_5, align 8, !dbg !841
   %6 = load ptr, ptr %_5, align 8, !dbg !841, !noundef !24
   %7 = ptrtoint ptr %6 to i64, !dbg !841
@@ -1425,7 +1426,7 @@ bb4:                                              ; preds = %bb2
   %10 = load ptr, ptr %_5, align 8, !dbg !846, !nonnull !24, !align !525, !noundef !24
   store ptr %10, ptr %entry, align 8, !dbg !846
 ; call core::fmt::builders::DebugList::entry
-  %_9 = call align 8 ptr @_ZN4core3fmt8builders9DebugList5entry17h7271bd8a3d508d11E(ptr align 8 %self, ptr align 1 %entry, ptr align 8 @vtable.1) #10, !dbg !847
+  %_9 = call align 8 ptr @_ZN4core3fmt8builders9DebugList5entry17h9d9136ba0b6afa57E(ptr align 8 %self, ptr align 1 %entry, ptr align 8 @vtable.1) #10, !dbg !847
   br label %bb2, !dbg !848
 
 bb5:                                              ; No predecessors!
@@ -1434,7 +1435,7 @@ bb5:                                              ; No predecessors!
 
 ; core::fmt::Arguments::new_v1_formatted
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core3fmt9Arguments16new_v1_formatted17h5801c682b8271facE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1, ptr align 8 %args.0, i64 %args.1, ptr align 8 %fmt.0, i64 %fmt.1) unnamed_addr #0 !dbg !849 {
+define internal void @_ZN4core3fmt9Arguments16new_v1_formatted17hda5d41df8690ec0fE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1, ptr align 8 %args.0, i64 %args.1, ptr align 8 %fmt.0, i64 %fmt.1) unnamed_addr #0 !dbg !849 {
 start:
   %_4.dbg.spill = alloca %"core::fmt::UnsafeArg", align 1
   %fmt.dbg.spill = alloca { ptr, i64 }, align 8
@@ -1486,7 +1487,7 @@ start:
 
 ; core::fmt::Arguments::new_v1
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core3fmt9Arguments6new_v117h17505f2ad5a51ba3E(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1, ptr align 8 %args.0, i64 %args.1) unnamed_addr #0 !dbg !927 {
+define internal void @_ZN4core3fmt9Arguments6new_v117h2bfadc962778ad00E(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1, ptr align 8 %args.0, i64 %args.1) unnamed_addr #0 !dbg !927 {
 start:
   %args.dbg.spill = alloca { ptr, i64 }, align 8
   %pieces.dbg.spill = alloca { ptr, i64 }, align 8
@@ -1530,7 +1531,7 @@ bb4:                                              ; preds = %bb2
 
 panic:                                            ; preds = %bb2
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_bf47d7cf946e324312b7aba9afabb742) #11, !dbg !936
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_bf47d7cf946e324312b7aba9afabb742) #11, !dbg !936
   unreachable, !dbg !936
 
 bb7:                                              ; preds = %bb3
@@ -1557,15 +1558,15 @@ bb7:                                              ; preds = %bb3
 
 bb5:                                              ; preds = %bb3
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hcf96160f8d888857E(ptr sret(%"core::fmt::Arguments<'_>") %_13, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #10, !dbg !941
+  call void @_ZN4core3fmt9Arguments9new_const17h0c49114209049e8bE(ptr sret(%"core::fmt::Arguments<'_>") %_13, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #10, !dbg !941
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_13, ptr align 8 @alloc_0e0da1257467e00be4bc17cc4a166d8a) #11, !dbg !941
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_13, ptr align 8 @alloc_0e0da1257467e00be4bc17cc4a166d8a) #11, !dbg !941
   unreachable, !dbg !941
 }
 
 ; core::fmt::Arguments::new_const
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core3fmt9Arguments9new_const17hcf96160f8d888857E(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #0 !dbg !942 {
+define internal void @_ZN4core3fmt9Arguments9new_const17h0c49114209049e8bE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #0 !dbg !942 {
 start:
   %pieces.dbg.spill = alloca { ptr, i64 }, align 8
   %_7 = alloca { ptr, i64 }, align 8
@@ -1602,15 +1603,15 @@ bb3:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hcf96160f8d888857E(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #10, !dbg !952
+  call void @_ZN4core3fmt9Arguments9new_const17h0c49114209049e8bE(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #10, !dbg !952
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_5, ptr align 8 @alloc_3565e73f34d7302748197a3f0bc50374) #11, !dbg !952
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_5, ptr align 8 @alloc_3565e73f34d7302748197a3f0bc50374) #11, !dbg !952
   unreachable, !dbg !952
 }
 
 ; core::mem::swap_simple
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3mem11swap_simple17h18530e83179ae6f8E(ptr align 8 %x, ptr align 8 %y) unnamed_addr #0 !dbg !953 {
+define void @_ZN4core3mem11swap_simple17h03f5c9db8511937bE(ptr align 8 %x, ptr align 8 %y) unnamed_addr #0 !dbg !953 {
 start:
   %y.dbg.spill = alloca ptr, align 8
   %x.dbg.spill = alloca ptr, align 8
@@ -1625,21 +1626,21 @@ start:
   call void @llvm.dbg.declare(metadata ptr %a, metadata !961, metadata !DIExpression()), !dbg !967
   call void @llvm.dbg.declare(metadata ptr %b, metadata !963, metadata !DIExpression()), !dbg !968
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17h1eb71283f48defa5E(ptr sret(%"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>") %a, ptr %x) #10, !dbg !969
+  call void @_ZN4core3ptr4read17hbb43da3dbb7d0cc0E(ptr sret(%"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>") %a, ptr %x) #10, !dbg !969
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17h1eb71283f48defa5E(ptr sret(%"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>") %b, ptr %y) #10, !dbg !970
+  call void @_ZN4core3ptr4read17hbb43da3dbb7d0cc0E(ptr sret(%"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>") %b, ptr %y) #10, !dbg !970
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_9, ptr align 8 %b, i64 24, i1 false), !dbg !971
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h994fca2b514745e7E(ptr %x, ptr %_9) #10, !dbg !972
+  call void @_ZN4core3ptr5write17hfb75c4d0a63c148aE(ptr %x, ptr %_9) #10, !dbg !972
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_12, ptr align 8 %a, i64 24, i1 false), !dbg !973
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h994fca2b514745e7E(ptr %y, ptr %_12) #10, !dbg !974
+  call void @_ZN4core3ptr5write17hfb75c4d0a63c148aE(ptr %y, ptr %_12) #10, !dbg !974
   ret void, !dbg !975
 }
 
 ; core::mem::swap_simple
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3mem11swap_simple17he65d78d163df400fE(ptr align 8 %x, ptr align 8 %y) unnamed_addr #0 !dbg !976 {
+define void @_ZN4core3mem11swap_simple17h074bb468a9d232e4E(ptr align 8 %x, ptr align 8 %y) unnamed_addr #0 !dbg !976 {
 start:
   %y.dbg.spill = alloca ptr, align 8
   %x.dbg.spill = alloca ptr, align 8
@@ -1654,21 +1655,21 @@ start:
   call void @llvm.dbg.declare(metadata ptr %a, metadata !983, metadata !DIExpression()), !dbg !989
   call void @llvm.dbg.declare(metadata ptr %b, metadata !985, metadata !DIExpression()), !dbg !990
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %a, ptr %x) #10, !dbg !991
+  call void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %a, ptr %x) #10, !dbg !991
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %b, ptr %y) #10, !dbg !992
+  call void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %b, ptr %y) #10, !dbg !992
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_9, ptr align 8 %b, i64 24, i1 false), !dbg !993
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h70546c85884fe256E(ptr %x, ptr %_9) #10, !dbg !994
+  call void @_ZN4core3ptr5write17h43a35b295addb75dE(ptr %x, ptr %_9) #10, !dbg !994
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_12, ptr align 8 %a, i64 24, i1 false), !dbg !995
 ; call core::ptr::write
-  call void @_ZN4core3ptr5write17h70546c85884fe256E(ptr %y, ptr %_12) #10, !dbg !996
+  call void @_ZN4core3ptr5write17h43a35b295addb75dE(ptr %y, ptr %_12) #10, !dbg !996
   ret void, !dbg !997
 }
 
 ; core::mem::swap
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3mem4swap17h5bdd38adc05b73abE(ptr align 8 %x, ptr align 8 %y) unnamed_addr #0 !dbg !998 {
+define void @_ZN4core3mem4swap17h477820c24705d26aE(ptr align 8 %x, ptr align 8 %y) unnamed_addr #0 !dbg !998 {
 start:
   %y.dbg.spill = alloca ptr, align 8
   %x.dbg.spill = alloca ptr, align 8
@@ -1687,17 +1688,17 @@ bb3:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_f5758da710ba897165288b0f4da8acb3) #11, !dbg !1004
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_f5758da710ba897165288b0f4da8acb3) #11, !dbg !1004
   unreachable, !dbg !1004
 
 bb5:                                              ; preds = %bb3
 ; call core::mem::swap_simple
-  call void @_ZN4core3mem11swap_simple17he65d78d163df400fE(ptr align 8 %x, ptr align 8 %y) #10, !dbg !1005
+  call void @_ZN4core3mem11swap_simple17h074bb468a9d232e4E(ptr align 8 %x, ptr align 8 %y) #10, !dbg !1005
   br label %bb6, !dbg !1005
 
 bb4:                                              ; preds = %bb3
 ; call core::ptr::swap_nonoverlapping
-  call void @_ZN4core3ptr19swap_nonoverlapping17he69e527d7f0d58b1E(ptr %x, ptr %y, i64 1) #10, !dbg !1006
+  call void @_ZN4core3ptr19swap_nonoverlapping17h540c69c045de4bb4E(ptr %x, ptr %y, i64 1) #10, !dbg !1006
   br label %bb6, !dbg !1006
 
 bb6:                                              ; preds = %bb5, %bb4
@@ -1706,7 +1707,7 @@ bb6:                                              ; preds = %bb5, %bb4
 
 ; core::mem::forget
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3mem6forget17h9ad22200b7c444dfE(ptr %t) unnamed_addr #0 !dbg !1008 {
+define void @_ZN4core3mem6forget17h0df2bf7708e9d6b0E(ptr %t) unnamed_addr #0 !dbg !1008 {
 start:
   %_2 = alloca %"core::mem::manually_drop::ManuallyDrop<bootinfo::memory_map::MemoryRegion>", align 8
   call void @llvm.dbg.declare(metadata ptr %t, metadata !1012, metadata !DIExpression()), !dbg !1013
@@ -1717,7 +1718,7 @@ start:
 
 ; core::num::<impl usize>::checked_mul
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { i64, i64 } @"_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h1a50449d966bb29fE"(i64 %self, i64 %rhs) unnamed_addr #0 !dbg !1024 {
+define internal { i64, i64 } @"_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17hf7ec3245fedf3771E"(i64 %self, i64 %rhs) unnamed_addr #0 !dbg !1024 {
 start:
   %b.dbg.spill.i = alloca i8, align 1
   %a.dbg.spill.i = alloca i64, align 8
@@ -1794,13 +1795,13 @@ bb5:                                              ; preds = %bb4, %bb3
 
 ; core::num::<impl usize>::next_power_of_two
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$17next_power_of_two17h8bf2ba1ae5ba97f7E"(i64 %self) unnamed_addr #0 !dbg !1072 {
+define internal i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$17next_power_of_two17h5ea7db227970baadE"(i64 %self) unnamed_addr #0 !dbg !1072 {
 start:
   %self.dbg.spill = alloca i64, align 8
   store i64 %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !1076, metadata !DIExpression()), !dbg !1077
 ; call core::num::<impl usize>::one_less_than_next_power_of_two
-  %_2 = call i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$31one_less_than_next_power_of_two17h4e0f18f6ae969078E"(i64 %self) #10, !dbg !1078
+  %_2 = call i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$31one_less_than_next_power_of_two17h07bfb0193e2bc9a1E"(i64 %self) #10, !dbg !1078
   %0 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %_2, i64 1), !dbg !1078
   %_3.0 = extractvalue { i64, i1 } %0, 0, !dbg !1078
   %_3.1 = extractvalue { i64, i1 } %0, 1, !dbg !1078
@@ -1812,13 +1813,13 @@ bb2:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_82a295533409787c3e504fb0ce3831ff) #11, !dbg !1078
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_4d780623f0d854654618d3ce6b6a177d) #11, !dbg !1078
   unreachable, !dbg !1078
 }
 
 ; core::num::<impl usize>::one_less_than_next_power_of_two
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$31one_less_than_next_power_of_two17h4e0f18f6ae969078E"(i64 %self) unnamed_addr #0 !dbg !1080 {
+define internal i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$31one_less_than_next_power_of_two17h07bfb0193e2bc9a1E"(i64 %self) unnamed_addr #0 !dbg !1080 {
 start:
   %z.dbg.spill = alloca i64, align 8
   %0 = alloca i64, align 8
@@ -1858,7 +1859,7 @@ bb3:                                              ; preds = %bb2
 
 panic:                                            ; preds = %bb2
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_82a295533409787c3e504fb0ce3831ff) #11, !dbg !1089
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_4d780623f0d854654618d3ce6b6a177d) #11, !dbg !1089
   unreachable, !dbg !1089
 
 bb5:                                              ; preds = %bb3
@@ -1869,13 +1870,13 @@ bb5:                                              ; preds = %bb3
 
 panic1:                                           ; preds = %bb3
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.4, i64 36, ptr align 8 @alloc_82a295533409787c3e504fb0ce3831ff) #11, !dbg !1095
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.4, i64 36, ptr align 8 @alloc_4d780623f0d854654618d3ce6b6a177d) #11, !dbg !1095
   unreachable, !dbg !1095
 }
 
 ; core::ops::range::RangeInclusive<usize>::into_slice_range
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { i64, i64 } @"_ZN4core3ops5range27RangeInclusive$LT$usize$GT$16into_slice_range17hb8c48996da4fecadE"(ptr %self) unnamed_addr #0 !dbg !1096 {
+define internal { i64, i64 } @"_ZN4core3ops5range27RangeInclusive$LT$usize$GT$16into_slice_range17h1feef5a233c74608E"(ptr %self) unnamed_addr #0 !dbg !1096 {
 start:
   %exclusive_end.dbg.spill = alloca i64, align 8
   %start1 = alloca i64, align 8
@@ -1900,7 +1901,7 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_50d1e257ccd56aaa3f8677a989ec63c7) #11, !dbg !1108
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_0e90a8d2edaf8520d1b6cc44dc6ee0c4) #11, !dbg !1108
   unreachable, !dbg !1108
 
 bb3:                                              ; preds = %bb1
@@ -1928,7 +1929,7 @@ bb4:                                              ; preds = %bb3, %bb2
 
 ; core::ops::function::impls::<impl core::ops::function::FnMut<A> for &mut F>::call_mut
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17hdc67ec61149bda50E"(ptr align 8 %self, ptr align 8 %0, ptr align 8 %1) unnamed_addr #1 !dbg !1116 {
+define zeroext i1 @"_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17h0dcc23ef895e1408E"(ptr align 8 %self, ptr align 8 %0, ptr align 8 %1) unnamed_addr #1 !dbg !1116 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %args = alloca { ptr, ptr }, align 8
@@ -1944,25 +1945,25 @@ start:
   %5 = getelementptr inbounds { ptr, ptr }, ptr %args, i32 0, i32 1, !dbg !1146
   %6 = load ptr, ptr %5, align 8, !dbg !1146, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %7 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %_3, ptr align 8 %4, ptr align 8 %6) #10, !dbg !1146
+  %7 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %_3, ptr align 8 %4, ptr align 8 %6) #10, !dbg !1146
   ret i1 %7, !dbg !1147
 }
 
 ; core::ptr::drop_in_place<core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>>
 ; Function Attrs: noredzone nounwind
-define void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h14860f460f28eaf1E"(ptr %_1) unnamed_addr #1 !dbg !1148 {
+define void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h1cb7c39fa811be84E"(ptr %_1) unnamed_addr #1 !dbg !1148 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !1159, metadata !DIExpression()), !dbg !1162
 ; call <core::slice::sort::InsertionHole<T> as core::ops::drop::Drop>::drop
-  call void @"_ZN83_$LT$core..slice..sort..InsertionHole$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17hc11065f685b18269E"(ptr align 8 %_1) #10, !dbg !1162
+  call void @"_ZN83_$LT$core..slice..sort..InsertionHole$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h15ddc8e48d95ec0bE"(ptr align 8 %_1) #10, !dbg !1162
   ret void, !dbg !1162
 }
 
 ; core::ptr::swap_nonoverlapping
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr19swap_nonoverlapping17he69e527d7f0d58b1E(ptr %x, ptr %y, i64 %count) unnamed_addr #0 !dbg !1163 {
+define void @_ZN4core3ptr19swap_nonoverlapping17h540c69c045de4bb4E(ptr %x, ptr %y, i64 %count) unnamed_addr #0 !dbg !1163 {
 start:
   %self.dbg.spill.i20 = alloca ptr, align 8
   %self.dbg.spill.i19 = alloca ptr, align 8
@@ -1998,7 +1999,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill, metadata !1169, metadata !DIExpression()), !dbg !1185
   br i1 true, label %bb1, label %bb2, !dbg !1186
 
-bb2:                                              ; preds = %_ZN4core3ptr19swap_nonoverlapping7runtime17h090780e3a02004a0E.exit, %start
+bb2:                                              ; preds = %_ZN4core3ptr19swap_nonoverlapping7runtime17hdd2ae9fc0b7e0fd4E.exit, %start
   %_8 = icmp ule i64 8, 8, !dbg !1187
   br i1 %_8, label %bb4, label %bb3, !dbg !1187
 
@@ -2020,7 +2021,7 @@ bb1:                                              ; preds = %start
   store i64 %7, ptr %count.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill.i, metadata !1193, metadata !DIExpression()), !dbg !1194
 ; call core::intrinsics::is_aligned_and_not_null
-  %_7.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %3) #10, !dbg !1196
+  %_7.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %3) #10, !dbg !1196
   br i1 %_7.i, label %bb5.i, label %bb4.i, !dbg !1196
 
 bb4.i:                                            ; preds = %bb1
@@ -2029,7 +2030,7 @@ bb4.i:                                            ; preds = %bb1
 
 bb5.i:                                            ; preds = %bb1
 ; call core::intrinsics::is_aligned_and_not_null
-  %_9.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %5) #10, !dbg !1198
+  %_9.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %5) #10, !dbg !1198
   %8 = zext i1 %_9.i to i8, !dbg !1196
   store i8 %8, ptr %_6.i, align 1, !dbg !1196
   br label %bb6.i, !dbg !1196
@@ -2045,7 +2046,7 @@ bb1.i:                                            ; preds = %bb6.i
 
 bb2.i:                                            ; preds = %bb6.i
 ; call core::intrinsics::is_nonoverlapping
-  %_11.i = call zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17h30ac5373771a6525E(ptr %3, ptr %5, i64 %7) #10, !dbg !1199
+  %_11.i = call zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17hca626f424669f518E(ptr %3, ptr %5, i64 %7) #10, !dbg !1199
   %11 = zext i1 %_11.i to i8, !dbg !1196
   store i8 %11, ptr %_5.i, align 1, !dbg !1196
   br label %bb3.i, !dbg !1196
@@ -2054,14 +2055,14 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %12 = load i8, ptr %_5.i, align 1, !dbg !1200, !range !242, !noundef !24
   %13 = trunc i8 %12 to i1, !dbg !1200
   %_4.i = xor i1 %13, true, !dbg !1200
-  br i1 %_4.i, label %bb10.i, label %_ZN4core3ptr19swap_nonoverlapping7runtime17h090780e3a02004a0E.exit, !dbg !1200
+  br i1 %_4.i, label %bb10.i, label %_ZN4core3ptr19swap_nonoverlapping7runtime17hdd2ae9fc0b7e0fd4E.exit, !dbg !1200
 
 bb10.i:                                           ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_546a48d82dbbd37bfd409d4513b73f46, i64 166) #11, !dbg !1201
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_546a48d82dbbd37bfd409d4513b73f46, i64 166) #11, !dbg !1201
   unreachable, !dbg !1201
 
-_ZN4core3ptr19swap_nonoverlapping7runtime17h090780e3a02004a0E.exit: ; preds = %bb3.i
+_ZN4core3ptr19swap_nonoverlapping7runtime17hdd2ae9fc0b7e0fd4E.exit: ; preds = %bb3.i
   br label %bb2, !dbg !1186
 
 bb3:                                              ; preds = %bb2
@@ -2106,7 +2107,7 @@ bb15:                                             ; preds = %bb9
 
 panic:                                            ; preds = %bb9
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_a8d2d57d37571df30f9c47ba3b3c586b) #11, !dbg !1218
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_a8d2d57d37571df30f9c47ba3b3c586b) #11, !dbg !1218
   unreachable, !dbg !1218
 
 bb5:                                              ; preds = %bb3, %bb10
@@ -2116,7 +2117,7 @@ bb5:                                              ; preds = %bb3, %bb10
 
 bb48:                                             ; preds = %bb35, %bb5
 ; call core::ptr::swap_nonoverlapping_simple_untyped
-  call void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17hed2629c2161e45feE(ptr %x, ptr %y, i64 %count) #10, !dbg !1220
+  call void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h6f8d6edc19e55a5dE(ptr %x, ptr %y, i64 %count) #10, !dbg !1220
   br label %bb49, !dbg !1220
 
 bb16:                                             ; preds = %bb5
@@ -2141,7 +2142,7 @@ bb24:                                             ; preds = %bb18
 
 panic1:                                           ; preds = %bb18
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.6, i64 57, ptr align 8 @alloc_1c99eb2e2429202974a1788dce7f6920) #11, !dbg !1221
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.6, i64 57, ptr align 8 @alloc_1c99eb2e2429202974a1788dce7f6920) #11, !dbg !1221
   unreachable, !dbg !1221
 
 bb19:                                             ; preds = %bb17, %bb24
@@ -2154,12 +2155,12 @@ bb32:                                             ; preds = %bb19
   br i1 %_40, label %bb34, label %bb33, !dbg !1222
 
 bb25:                                             ; preds = %bb19
-  store ptr %x, ptr %self.dbg.spill.i20, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i20, metadata !1223, metadata !DIExpression()), !dbg !1230
+  store ptr %x, ptr %self.dbg.spill.i18, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i18, metadata !1223, metadata !DIExpression()), !dbg !1230
   store ptr %x, ptr %x.dbg.spill3, align 8, !dbg !1221
   call void @llvm.dbg.declare(metadata ptr %x.dbg.spill3, metadata !1170, metadata !DIExpression()), !dbg !1232
-  store ptr %y, ptr %self.dbg.spill.i19, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i19, metadata !1223, metadata !DIExpression()), !dbg !1233
+  store ptr %y, ptr %self.dbg.spill.i17, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i17, metadata !1223, metadata !DIExpression()), !dbg !1233
   store ptr %y, ptr %y.dbg.spill5, align 8, !dbg !1232
   call void @llvm.dbg.declare(metadata ptr %y.dbg.spill5, metadata !1172, metadata !DIExpression()), !dbg !1235
   %_35 = icmp eq i64 8, 0, !dbg !1235
@@ -2176,19 +2177,19 @@ bb30:                                             ; preds = %bb25
 
 panic6:                                           ; preds = %bb25
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_1c99eb2e2429202974a1788dce7f6920) #11, !dbg !1235
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_1c99eb2e2429202974a1788dce7f6920) #11, !dbg !1235
   unreachable, !dbg !1235
 
 bb31:                                             ; preds = %bb30
   store i64 %_36.0, ptr %count.dbg.spill8, align 8, !dbg !1235
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill8, metadata !1174, metadata !DIExpression()), !dbg !1236
 ; call core::ptr::swap_nonoverlapping_simple_untyped
-  call void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h2756a2f44b36c0c2E(ptr %x, ptr %y, i64 %_36.0) #10, !dbg !1236
+  call void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h593087bdf4b7a30cE(ptr %x, ptr %y, i64 %_36.0) #10, !dbg !1236
   br label %bb49, !dbg !1236
 
 panic7:                                           ; preds = %bb30
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_1c99eb2e2429202974a1788dce7f6920) #11, !dbg !1235
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_1c99eb2e2429202974a1788dce7f6920) #11, !dbg !1235
   unreachable, !dbg !1235
 
 bb49:                                             ; preds = %bb48, %bb47, %bb31
@@ -2212,7 +2213,7 @@ bb40:                                             ; preds = %bb34
 
 panic9:                                           ; preds = %bb34
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.6, i64 57, ptr align 8 @alloc_aee30a4ba5cd6160a04cfc5ee6f29e2a) #11, !dbg !1222
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.6, i64 57, ptr align 8 @alloc_aee30a4ba5cd6160a04cfc5ee6f29e2a) #11, !dbg !1222
   unreachable, !dbg !1222
 
 bb35:                                             ; preds = %bb33, %bb40
@@ -2221,12 +2222,12 @@ bb35:                                             ; preds = %bb33, %bb40
   br i1 %34, label %bb41, label %bb48, !dbg !1222
 
 bb41:                                             ; preds = %bb35
-  store ptr %x, ptr %self.dbg.spill.i18, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i18, metadata !1238, metadata !DIExpression()), !dbg !1245
+  store ptr %x, ptr %self.dbg.spill.i20, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i20, metadata !1238, metadata !DIExpression()), !dbg !1245
   store ptr %x, ptr %x.dbg.spill11, align 8, !dbg !1222
   call void @llvm.dbg.declare(metadata ptr %x.dbg.spill11, metadata !1176, metadata !DIExpression()), !dbg !1247
-  store ptr %y, ptr %self.dbg.spill.i17, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i17, metadata !1238, metadata !DIExpression()), !dbg !1248
+  store ptr %y, ptr %self.dbg.spill.i19, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i19, metadata !1238, metadata !DIExpression()), !dbg !1248
   store ptr %y, ptr %y.dbg.spill13, align 8, !dbg !1247
   call void @llvm.dbg.declare(metadata ptr %y.dbg.spill13, metadata !1179, metadata !DIExpression()), !dbg !1250
   %_54 = icmp eq i64 1, 0, !dbg !1250
@@ -2243,25 +2244,25 @@ bb46:                                             ; preds = %bb41
 
 panic14:                                          ; preds = %bb41
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_aee30a4ba5cd6160a04cfc5ee6f29e2a) #11, !dbg !1250
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_aee30a4ba5cd6160a04cfc5ee6f29e2a) #11, !dbg !1250
   unreachable, !dbg !1250
 
 bb47:                                             ; preds = %bb46
   store i64 %_55.0, ptr %count.dbg.spill16, align 8, !dbg !1250
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill16, metadata !1181, metadata !DIExpression()), !dbg !1251
 ; call core::ptr::swap_nonoverlapping_simple_untyped
-  call void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h97bc86d9d3c3b08bE(ptr %x, ptr %y, i64 %_55.0) #10, !dbg !1251
+  call void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17hcd8cc9a1d19a10f2E(ptr %x, ptr %y, i64 %_55.0) #10, !dbg !1251
   br label %bb49, !dbg !1251
 
 panic15:                                          ; preds = %bb46
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_aee30a4ba5cd6160a04cfc5ee6f29e2a) #11, !dbg !1250
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_aee30a4ba5cd6160a04cfc5ee6f29e2a) #11, !dbg !1250
   unreachable, !dbg !1250
 }
 
 ; core::ptr::slice_from_raw_parts
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @_ZN4core3ptr20slice_from_raw_parts17hcf229f673cb6d2cdE(ptr %data, i64 %len) unnamed_addr #0 !dbg !1252 {
+define { ptr, i64 } @_ZN4core3ptr20slice_from_raw_parts17h1f77dfc268ff9a51E(ptr %data, i64 %len) unnamed_addr #0 !dbg !1252 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %len.dbg.spill = alloca i64, align 8
@@ -2273,7 +2274,7 @@ start:
   store ptr %data, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !555, metadata !DIExpression()), !dbg !1260
 ; call core::ptr::metadata::from_raw_parts
-  %0 = call { ptr, i64 } @_ZN4core3ptr8metadata14from_raw_parts17h99df9cb90eb85491E(ptr %data, i64 %len) #10, !dbg !1262
+  %0 = call { ptr, i64 } @_ZN4core3ptr8metadata14from_raw_parts17h10442d77236c3ed1E(ptr %data, i64 %len) #10, !dbg !1262
   %1 = extractvalue { ptr, i64 } %0, 0, !dbg !1262
   %2 = extractvalue { ptr, i64 } %0, 1, !dbg !1262
   %3 = insertvalue { ptr, i64 } poison, ptr %1, 0, !dbg !1263
@@ -2283,7 +2284,7 @@ start:
 
 ; core::ptr::drop_in_place<u32>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr24drop_in_place$LT$u32$GT$17h5dcf02aa7ca6dd71E"(ptr %_1) unnamed_addr #0 !dbg !1264 {
+define internal void @"_ZN4core3ptr24drop_in_place$LT$u32$GT$17h64e6676b01e9e33dE"(ptr %_1) unnamed_addr #0 !dbg !1264 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2293,7 +2294,7 @@ start:
 
 ; core::ptr::drop_in_place<u64>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr24drop_in_place$LT$u64$GT$17h934378307490d0a7E"(ptr %_1) unnamed_addr #0 !dbg !1273 {
+define internal void @"_ZN4core3ptr24drop_in_place$LT$u64$GT$17h50a192d1e7832168E"(ptr %_1) unnamed_addr #0 !dbg !1273 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2303,7 +2304,7 @@ start:
 
 ; core::ptr::slice_from_raw_parts_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @_ZN4core3ptr24slice_from_raw_parts_mut17hdbb067706a3044e6E(ptr %data, i64 %len) unnamed_addr #0 !dbg !1280 {
+define { ptr, i64 } @_ZN4core3ptr24slice_from_raw_parts_mut17h60c099831c83210dE(ptr %data, i64 %len) unnamed_addr #0 !dbg !1280 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %len.dbg.spill = alloca i64, align 8
@@ -2315,7 +2316,7 @@ start:
   store ptr %data, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1288, metadata !DIExpression()), !dbg !1294
 ; call core::ptr::metadata::from_raw_parts_mut
-  %0 = call { ptr, i64 } @_ZN4core3ptr8metadata18from_raw_parts_mut17h6749e544aeec16a3E(ptr %data, i64 %len) #10, !dbg !1296
+  %0 = call { ptr, i64 } @_ZN4core3ptr8metadata18from_raw_parts_mut17h6fde41364fd87138E(ptr %data, i64 %len) #10, !dbg !1296
   %1 = extractvalue { ptr, i64 } %0, 0, !dbg !1296
   %2 = extractvalue { ptr, i64 } %0, 1, !dbg !1296
   %3 = insertvalue { ptr, i64 } poison, ptr %1, 0, !dbg !1297
@@ -2325,7 +2326,7 @@ start:
 
 ; core::ptr::drop_in_place<&u8>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr27drop_in_place$LT$$RF$u8$GT$17h93e56f135775a23bE"(ptr %_1) unnamed_addr #0 !dbg !1298 {
+define internal void @"_ZN4core3ptr27drop_in_place$LT$$RF$u8$GT$17h75cd57b67ffca4a4E"(ptr %_1) unnamed_addr #0 !dbg !1298 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2335,7 +2336,7 @@ start:
 
 ; core::ptr::drop_in_place<&u32>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr28drop_in_place$LT$$RF$u32$GT$17hae2ed7f265841b70E"(ptr %_1) unnamed_addr #0 !dbg !1307 {
+define internal void @"_ZN4core3ptr28drop_in_place$LT$$RF$u32$GT$17h1d73533f704e0351E"(ptr %_1) unnamed_addr #0 !dbg !1307 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2345,7 +2346,7 @@ start:
 
 ; core::ptr::drop_in_place<&u64>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr28drop_in_place$LT$$RF$u64$GT$17h12dd31e77c1ef066E"(ptr %_1) unnamed_addr #0 !dbg !1316 {
+define internal void @"_ZN4core3ptr28drop_in_place$LT$$RF$u64$GT$17h8f16d595b7ffdd46E"(ptr %_1) unnamed_addr #0 !dbg !1316 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2355,7 +2356,7 @@ start:
 
 ; core::ptr::swap_nonoverlapping_simple_untyped
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17hed2629c2161e45feE(ptr %x, ptr %y, i64 %count) unnamed_addr #0 !dbg !1325 {
+define void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h6f8d6edc19e55a5dE(ptr %x, ptr %y, i64 %count) unnamed_addr #0 !dbg !1325 {
 start:
   %0 = alloca ptr, align 8
   %count.dbg.spill.i13 = alloca i64, align 8
@@ -2433,7 +2434,7 @@ bb4:                                              ; preds = %bb3
   store ptr %_3.i15, ptr %y.dbg.spill6, align 8, !dbg !1394
   call void @llvm.dbg.declare(metadata ptr %y.dbg.spill6, metadata !1339, metadata !DIExpression()), !dbg !1395
 ; call core::mem::swap_simple
-  call void @_ZN4core3mem11swap_simple17h18530e83179ae6f8E(ptr align 8 %_3.i, ptr align 8 %_3.i15) #10, !dbg !1396
+  call void @_ZN4core3mem11swap_simple17h03f5c9db8511937bE(ptr align 8 %_3.i, ptr align 8 %_3.i15) #10, !dbg !1396
   %4 = load i64, ptr %i, align 8, !dbg !1397, !noundef !24
   %5 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %4, i64 1), !dbg !1397
   %_18.0 = extractvalue { i64, i1 } %5, 0, !dbg !1397
@@ -2447,13 +2448,13 @@ bb8:                                              ; preds = %bb4
 
 panic:                                            ; preds = %bb4
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_dbabcbd9c3313ee88be66af0b6b2af23) #11, !dbg !1397
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_dbabcbd9c3313ee88be66af0b6b2af23) #11, !dbg !1397
   unreachable, !dbg !1397
 }
 
 ; core::ptr::read
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr4read17h1eb71283f48defa5E(ptr sret(%"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>") %0, ptr %src) unnamed_addr #0 !dbg !1398 {
+define void @_ZN4core3ptr4read17hbb43da3dbb7d0cc0E(ptr sret(%"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>") %0, ptr %src) unnamed_addr #0 !dbg !1398 {
 start:
   %src.dbg.spill.i = alloca ptr, align 8
   %src.dbg.spill = alloca ptr, align 8
@@ -2462,7 +2463,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %src.dbg.spill, metadata !1402, metadata !DIExpression()), !dbg !1403
   br i1 true, label %bb1, label %bb2, !dbg !1404
 
-bb2:                                              ; preds = %_ZN4core3ptr4read7runtime17h1ec553cce7cfc6a0E.exit, %start
+bb2:                                              ; preds = %_ZN4core3ptr4read7runtime17h6a16677aec8d9d6fE.exit, %start
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %0, ptr align 8 %src, i64 24, i1 false), !dbg !1405
   ret void, !dbg !1406
 
@@ -2472,22 +2473,22 @@ bb1:                                              ; preds = %start
   store ptr %1, ptr %src.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %src.dbg.spill.i, metadata !1407, metadata !DIExpression()), !dbg !1413
 ; call core::intrinsics::is_aligned_and_not_null
-  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h22d81bef441ca05fE(ptr %1) #10, !dbg !1415
+  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h9c7df8c71b1caecfE(ptr %1) #10, !dbg !1415
   %_2.i = xor i1 %_3.i, true, !dbg !1417
-  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr4read7runtime17h1ec553cce7cfc6a0E.exit, !dbg !1417
+  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr4read7runtime17h6a16677aec8d9d6fE.exit, !dbg !1417
 
 bb2.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_981fd9513041e1603a1d1d7b668a749d, i64 101) #11, !dbg !1418
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_981fd9513041e1603a1d1d7b668a749d, i64 101) #11, !dbg !1418
   unreachable, !dbg !1418
 
-_ZN4core3ptr4read7runtime17h1ec553cce7cfc6a0E.exit: ; preds = %bb1
+_ZN4core3ptr4read7runtime17h6a16677aec8d9d6fE.exit: ; preds = %bb1
   br label %bb2, !dbg !1404
 }
 
 ; core::ptr::read
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %0, ptr %src) unnamed_addr #0 !dbg !1419 {
+define void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %0, ptr %src) unnamed_addr #0 !dbg !1419 {
 start:
   %src.dbg.spill.i = alloca ptr, align 8
   %src.dbg.spill = alloca ptr, align 8
@@ -2496,7 +2497,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %src.dbg.spill, metadata !1423, metadata !DIExpression()), !dbg !1424
   br i1 true, label %bb1, label %bb2, !dbg !1425
 
-bb2:                                              ; preds = %_ZN4core3ptr4read7runtime17h73bebe9dbbcc7f29E.exit, %start
+bb2:                                              ; preds = %_ZN4core3ptr4read7runtime17hb6c3804ed21ff3bfE.exit, %start
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %0, ptr align 8 %src, i64 24, i1 false), !dbg !1426
   ret void, !dbg !1427
 
@@ -2506,49 +2507,22 @@ bb1:                                              ; preds = %start
   store ptr %1, ptr %src.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %src.dbg.spill.i, metadata !1428, metadata !DIExpression()), !dbg !1433
 ; call core::intrinsics::is_aligned_and_not_null
-  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %1) #10, !dbg !1435
+  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %1) #10, !dbg !1435
   %_2.i = xor i1 %_3.i, true, !dbg !1437
-  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr4read7runtime17h73bebe9dbbcc7f29E.exit, !dbg !1437
+  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr4read7runtime17hb6c3804ed21ff3bfE.exit, !dbg !1437
 
 bb2.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_981fd9513041e1603a1d1d7b668a749d, i64 101) #11, !dbg !1438
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_981fd9513041e1603a1d1d7b668a749d, i64 101) #11, !dbg !1438
   unreachable, !dbg !1438
 
-_ZN4core3ptr4read7runtime17h73bebe9dbbcc7f29E.exit: ; preds = %bb1
+_ZN4core3ptr4read7runtime17hb6c3804ed21ff3bfE.exit: ; preds = %bb1
   br label %bb2, !dbg !1425
 }
 
 ; core::ptr::swap
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr4swap17he01192a45aa21ed8E(ptr %x, ptr %y) unnamed_addr #0 !dbg !1439 {
-start:
-  %self.dbg.spill.i1 = alloca ptr, align 8
-  %self.dbg.spill.i = alloca ptr, align 8
-  %y.dbg.spill = alloca ptr, align 8
-  %x.dbg.spill = alloca ptr, align 8
-  %tmp = alloca %"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>", align 8
-  store ptr %x, ptr %x.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %x.dbg.spill, metadata !1443, metadata !DIExpression()), !dbg !1447
-  store ptr %y, ptr %y.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %y.dbg.spill, metadata !1444, metadata !DIExpression()), !dbg !1448
-  call void @llvm.dbg.declare(metadata ptr %tmp, metadata !1445, metadata !DIExpression()), !dbg !1449
-  store ptr %tmp, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1450, metadata !DIExpression()), !dbg !1456
-; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %x, ptr %tmp, i64 1) #10, !dbg !1458
-; call core::intrinsics::copy
-  call void @_ZN4core10intrinsics4copy17h66502225802bac67E(ptr %y, ptr %x, i64 1) #10, !dbg !1459
-  store ptr %tmp, ptr %self.dbg.spill.i1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !1460, metadata !DIExpression()), !dbg !1466
-; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %tmp, ptr %y, i64 1) #10, !dbg !1468
-  ret void, !dbg !1469
-}
-
-; core::ptr::swap
-; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr4swap17he6717c36f4a67645E(ptr %x, ptr %y) unnamed_addr #0 !dbg !1470 {
+define void @_ZN4core3ptr4swap17h0e2ea319ec4718d9E(ptr %x, ptr %y) unnamed_addr #0 !dbg !1439 {
 start:
   %0 = alloca i64, align 8
   %self.dbg.spill.i1 = alloca ptr, align 8
@@ -2557,28 +2531,55 @@ start:
   %x.dbg.spill = alloca ptr, align 8
   %tmp = alloca i64, align 8
   store ptr %x, ptr %x.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %x.dbg.spill, metadata !1474, metadata !DIExpression()), !dbg !1485
+  call void @llvm.dbg.declare(metadata ptr %x.dbg.spill, metadata !1443, metadata !DIExpression()), !dbg !1454
   store ptr %y, ptr %y.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %y.dbg.spill, metadata !1475, metadata !DIExpression()), !dbg !1486
-  call void @llvm.dbg.declare(metadata ptr %tmp, metadata !1476, metadata !DIExpression()), !dbg !1487
-  %1 = load i64, ptr %0, align 8, !dbg !1488
-  store i64 %1, ptr %tmp, align 8, !dbg !1493
+  call void @llvm.dbg.declare(metadata ptr %y.dbg.spill, metadata !1444, metadata !DIExpression()), !dbg !1455
+  call void @llvm.dbg.declare(metadata ptr %tmp, metadata !1445, metadata !DIExpression()), !dbg !1456
+  %1 = load i64, ptr %0, align 8, !dbg !1457
+  store i64 %1, ptr %tmp, align 8, !dbg !1463
   store ptr %tmp, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1494, metadata !DIExpression()), !dbg !1500
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1464, metadata !DIExpression()), !dbg !1470
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h47de7969a9985aacE(ptr %x, ptr %tmp, i64 1) #10, !dbg !1502
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h7f2962754de9d15aE(ptr %x, ptr %tmp, i64 1) #10, !dbg !1472
 ; call core::intrinsics::copy
-  call void @_ZN4core10intrinsics4copy17h41ae0f12b9944baeE(ptr %y, ptr %x, i64 1) #10, !dbg !1503
+  call void @_ZN4core10intrinsics4copy17h5da12744d50e3203E(ptr %y, ptr %x, i64 1) #10, !dbg !1473
+  store ptr %tmp, ptr %self.dbg.spill.i1, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !1474, metadata !DIExpression()), !dbg !1480
+; call core::intrinsics::copy_nonoverlapping
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h7f2962754de9d15aE(ptr %tmp, ptr %y, i64 1) #10, !dbg !1482
+  ret void, !dbg !1483
+}
+
+; core::ptr::swap
+; Function Attrs: inlinehint noredzone nounwind
+define void @_ZN4core3ptr4swap17h773c6fcf72392d61E(ptr %x, ptr %y) unnamed_addr #0 !dbg !1484 {
+start:
+  %self.dbg.spill.i1 = alloca ptr, align 8
+  %self.dbg.spill.i = alloca ptr, align 8
+  %y.dbg.spill = alloca ptr, align 8
+  %x.dbg.spill = alloca ptr, align 8
+  %tmp = alloca %"core::mem::maybe_uninit::MaybeUninit<bootinfo::memory_map::MemoryRegion>", align 8
+  store ptr %x, ptr %x.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %x.dbg.spill, metadata !1488, metadata !DIExpression()), !dbg !1492
+  store ptr %y, ptr %y.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %y.dbg.spill, metadata !1489, metadata !DIExpression()), !dbg !1493
+  call void @llvm.dbg.declare(metadata ptr %tmp, metadata !1490, metadata !DIExpression()), !dbg !1494
+  store ptr %tmp, ptr %self.dbg.spill.i, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1495, metadata !DIExpression()), !dbg !1500
+; call core::intrinsics::copy_nonoverlapping
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %x, ptr %tmp, i64 1) #10, !dbg !1502
+; call core::intrinsics::copy
+  call void @_ZN4core10intrinsics4copy17h3cd453a57eee73c7E(ptr %y, ptr %x, i64 1) #10, !dbg !1503
   store ptr %tmp, ptr %self.dbg.spill.i1, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !1504, metadata !DIExpression()), !dbg !1510
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h47de7969a9985aacE(ptr %tmp, ptr %y, i64 1) #10, !dbg !1512
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %tmp, ptr %y, i64 1) #10, !dbg !1512
   ret void, !dbg !1513
 }
 
 ; core::ptr::drop_in_place<bootloader::bootinfo::TlsTemplate>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr54drop_in_place$LT$bootloader..bootinfo..TlsTemplate$GT$17hd451f3452808e2d0E"(ptr %_1) unnamed_addr #0 !dbg !1514 {
+define internal void @"_ZN4core3ptr54drop_in_place$LT$bootloader..bootinfo..TlsTemplate$GT$17h89f6b485ba3376efE"(ptr %_1) unnamed_addr #0 !dbg !1514 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2588,7 +2589,7 @@ start:
 
 ; core::ptr::write
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr5write17h70546c85884fe256E(ptr %dst, ptr %src) unnamed_addr #0 !dbg !1523 {
+define void @_ZN4core3ptr5write17h43a35b295addb75dE(ptr %dst, ptr %src) unnamed_addr #0 !dbg !1523 {
 start:
   %dst.dbg.spill.i = alloca ptr, align 8
   %dst.dbg.spill = alloca ptr, align 8
@@ -2598,7 +2599,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %src, metadata !1528, metadata !DIExpression()), !dbg !1530
   br i1 true, label %bb1, label %bb2, !dbg !1531
 
-bb2:                                              ; preds = %_ZN4core3ptr5write7runtime17h8a96a1a81401513eE.exit, %start
+bb2:                                              ; preds = %_ZN4core3ptr5write7runtime17hf68f63d16a6241adE.exit, %start
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %dst, ptr align 8 %src, i64 24, i1 false), !dbg !1532
   ret void, !dbg !1533
 
@@ -2608,22 +2609,22 @@ bb1:                                              ; preds = %start
   store ptr %0, ptr %dst.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill.i, metadata !1534, metadata !DIExpression()), !dbg !1540
 ; call core::intrinsics::is_aligned_and_not_null
-  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %0) #10, !dbg !1542
+  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %0) #10, !dbg !1542
   %_2.i = xor i1 %_3.i, true, !dbg !1544
-  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr5write7runtime17h8a96a1a81401513eE.exit, !dbg !1544
+  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr5write7runtime17hf68f63d16a6241adE.exit, !dbg !1544
 
 bb2.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_b7474065d782af00c4610bb4ef55210b, i64 102) #11, !dbg !1545
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_b7474065d782af00c4610bb4ef55210b, i64 102) #11, !dbg !1545
   unreachable, !dbg !1545
 
-_ZN4core3ptr5write7runtime17h8a96a1a81401513eE.exit: ; preds = %bb1
+_ZN4core3ptr5write7runtime17hf68f63d16a6241adE.exit: ; preds = %bb1
   br label %bb2, !dbg !1531
 }
 
 ; core::ptr::write
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr5write17h994fca2b514745e7E(ptr %dst, ptr %src) unnamed_addr #0 !dbg !1546 {
+define void @_ZN4core3ptr5write17hfb75c4d0a63c148aE(ptr %dst, ptr %src) unnamed_addr #0 !dbg !1546 {
 start:
   %dst.dbg.spill.i = alloca ptr, align 8
   %dst.dbg.spill = alloca ptr, align 8
@@ -2633,7 +2634,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %src, metadata !1551, metadata !DIExpression()), !dbg !1553
   br i1 true, label %bb1, label %bb2, !dbg !1554
 
-bb2:                                              ; preds = %_ZN4core3ptr5write7runtime17hb326500a9accb466E.exit, %start
+bb2:                                              ; preds = %_ZN4core3ptr5write7runtime17hda75868777bc587cE.exit, %start
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %dst, ptr align 8 %src, i64 24, i1 false), !dbg !1555
   ret void, !dbg !1556
 
@@ -2643,22 +2644,22 @@ bb1:                                              ; preds = %start
   store ptr %0, ptr %dst.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill.i, metadata !1557, metadata !DIExpression()), !dbg !1562
 ; call core::intrinsics::is_aligned_and_not_null
-  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h22d81bef441ca05fE(ptr %0) #10, !dbg !1564
+  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h9c7df8c71b1caecfE(ptr %0) #10, !dbg !1564
   %_2.i = xor i1 %_3.i, true, !dbg !1566
-  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr5write7runtime17hb326500a9accb466E.exit, !dbg !1566
+  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr5write7runtime17hda75868777bc587cE.exit, !dbg !1566
 
 bb2.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_b7474065d782af00c4610bb4ef55210b, i64 102) #11, !dbg !1567
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_b7474065d782af00c4610bb4ef55210b, i64 102) #11, !dbg !1567
   unreachable, !dbg !1567
 
-_ZN4core3ptr5write7runtime17hb326500a9accb466E.exit: ; preds = %bb1
+_ZN4core3ptr5write7runtime17hda75868777bc587cE.exit: ; preds = %bb1
   br label %bb2, !dbg !1554
 }
 
 ; core::ptr::drop_in_place<bootloader::bootinfo::memory_map::MemoryMap>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr64drop_in_place$LT$bootloader..bootinfo..memory_map..MemoryMap$GT$17hd2d4cd0598932281E"(ptr %_1) unnamed_addr #0 !dbg !1568 {
+define internal void @"_ZN4core3ptr64drop_in_place$LT$bootloader..bootinfo..memory_map..MemoryMap$GT$17hab76927217d1a271E"(ptr %_1) unnamed_addr #0 !dbg !1568 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2668,7 +2669,7 @@ start:
 
 ; core::ptr::drop_in_place<bootloader::bootinfo::memory_map::FrameRange>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr65drop_in_place$LT$bootloader..bootinfo..memory_map..FrameRange$GT$17h940e07a5cfd69181E"(ptr %_1) unnamed_addr #0 !dbg !1577 {
+define internal void @"_ZN4core3ptr65drop_in_place$LT$bootloader..bootinfo..memory_map..FrameRange$GT$17h65f52f7c0d10a5feE"(ptr %_1) unnamed_addr #0 !dbg !1577 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2678,7 +2679,7 @@ start:
 
 ; core::ptr::drop_in_place<&bootloader::bootinfo::memory_map::MemoryRegion>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr71drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegion$GT$17h3e7bbd2e13e5f413E"(ptr %_1) unnamed_addr #0 !dbg !1586 {
+define internal void @"_ZN4core3ptr71drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegion$GT$17h765a6f3749029cc9E"(ptr %_1) unnamed_addr #0 !dbg !1586 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2688,7 +2689,7 @@ start:
 
 ; core::ptr::drop_in_place<&bootloader::bootinfo::memory_map::MemoryRegionType>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr75drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegionType$GT$17hdef642da1c075729E"(ptr %_1) unnamed_addr #0 !dbg !1593 {
+define internal void @"_ZN4core3ptr75drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegionType$GT$17h94a111edabab3532E"(ptr %_1) unnamed_addr #0 !dbg !1593 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -2698,7 +2699,7 @@ start:
 
 ; core::ptr::mut_ptr::<impl *mut T>::is_null::runtime_impl
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null12runtime_impl17h648679ac73433738E"(ptr %ptr) unnamed_addr #0 !dbg !1602 {
+define internal zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null12runtime_impl17h44fc8a2d01881e62E"(ptr %ptr) unnamed_addr #0 !dbg !1602 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %self.dbg.spill.i = alloca ptr, align 8
@@ -2716,7 +2717,7 @@ start:
 
 ; core::ptr::mut_ptr::<impl *mut T>::is_null
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h86ccb2481b2d062dE"(ptr %self) unnamed_addr #0 !dbg !1629 {
+define zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17hb672574d80ca0956E"(ptr %self) unnamed_addr #0 !dbg !1629 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca ptr, align 8
@@ -2725,62 +2726,62 @@ start:
   store ptr %self, ptr %_2, align 8, !dbg !1635
   %0 = load ptr, ptr %_2, align 8, !dbg !1636, !noundef !24
 ; call core::ptr::mut_ptr::<impl *mut T>::is_null::runtime_impl
-  %1 = call zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null12runtime_impl17h648679ac73433738E"(ptr %0) #10, !dbg !1636
+  %1 = call zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null12runtime_impl17h44fc8a2d01881e62E"(ptr %0) #10, !dbg !1636
   ret i1 %1, !dbg !1637
 }
 
 ; core::ptr::metadata::from_raw_parts
 ; Function Attrs: inlinehint noredzone nounwind
-define ptr @_ZN4core3ptr8metadata14from_raw_parts17h41595670b0a6873cE(ptr %data_address) unnamed_addr #0 !dbg !1638 {
-start:
-  %metadata.dbg.spill = alloca {}, align 1
-  %data_address.dbg.spill = alloca ptr, align 8
-  %_4 = alloca %"core::ptr::metadata::PtrComponents<bootinfo::memory_map::MemoryRegion>", align 8
-  %_3 = alloca %"core::ptr::metadata::PtrRepr<bootinfo::memory_map::MemoryRegion>", align 8
-  store ptr %data_address, ptr %data_address.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %data_address.dbg.spill, metadata !1644, metadata !DIExpression()), !dbg !1646
-  call void @llvm.dbg.declare(metadata ptr %metadata.dbg.spill, metadata !1645, metadata !DIExpression()), !dbg !1647
-  store ptr %data_address, ptr %_4, align 8, !dbg !1648
-  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_3, ptr align 8 %_4, i64 8, i1 false), !dbg !1649
-  %0 = load ptr, ptr %_3, align 8, !dbg !1649, !noundef !24
-  ret ptr %0, !dbg !1650
-}
-
-; core::ptr::metadata::from_raw_parts
-; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @_ZN4core3ptr8metadata14from_raw_parts17h99df9cb90eb85491E(ptr %data_address, i64 %metadata) unnamed_addr #0 !dbg !1651 {
+define { ptr, i64 } @_ZN4core3ptr8metadata14from_raw_parts17h10442d77236c3ed1E(ptr %data_address, i64 %metadata) unnamed_addr #0 !dbg !1638 {
 start:
   %metadata.dbg.spill = alloca i64, align 8
   %data_address.dbg.spill = alloca ptr, align 8
   %_4 = alloca { ptr, i64 }, align 8
   %_3 = alloca %"core::ptr::metadata::PtrRepr<[bootinfo::memory_map::MemoryRegion]>", align 8
   store ptr %data_address, ptr %data_address.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %data_address.dbg.spill, metadata !1655, metadata !DIExpression()), !dbg !1657
+  call void @llvm.dbg.declare(metadata ptr %data_address.dbg.spill, metadata !1644, metadata !DIExpression()), !dbg !1646
   store i64 %metadata, ptr %metadata.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %metadata.dbg.spill, metadata !1645, metadata !DIExpression()), !dbg !1647
+  store ptr %data_address, ptr %_4, align 8, !dbg !1648
+  %0 = getelementptr inbounds { ptr, i64 }, ptr %_4, i32 0, i32 1, !dbg !1648
+  store i64 %metadata, ptr %0, align 8, !dbg !1648
+  %1 = getelementptr inbounds { ptr, i64 }, ptr %_4, i32 0, i32 0, !dbg !1649
+  %2 = load ptr, ptr %1, align 8, !dbg !1649, !noundef !24
+  %3 = getelementptr inbounds { ptr, i64 }, ptr %_4, i32 0, i32 1, !dbg !1649
+  %4 = load i64, ptr %3, align 8, !dbg !1649, !noundef !24
+  %5 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 0, !dbg !1649
+  store ptr %2, ptr %5, align 8, !dbg !1649
+  %6 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 1, !dbg !1649
+  store i64 %4, ptr %6, align 8, !dbg !1649
+  %7 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 0, !dbg !1649
+  %8 = load ptr, ptr %7, align 8, !dbg !1649, !noundef !24
+  %9 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 1, !dbg !1649
+  %10 = load i64, ptr %9, align 8, !dbg !1649, !noundef !24
+  %11 = insertvalue { ptr, i64 } poison, ptr %8, 0, !dbg !1650
+  %12 = insertvalue { ptr, i64 } %11, i64 %10, 1, !dbg !1650
+  ret { ptr, i64 } %12, !dbg !1650
+}
+
+; core::ptr::metadata::from_raw_parts
+; Function Attrs: inlinehint noredzone nounwind
+define ptr @_ZN4core3ptr8metadata14from_raw_parts17h796581e358ab9c69E(ptr %data_address) unnamed_addr #0 !dbg !1651 {
+start:
+  %metadata.dbg.spill = alloca {}, align 1
+  %data_address.dbg.spill = alloca ptr, align 8
+  %_4 = alloca %"core::ptr::metadata::PtrComponents<bootinfo::memory_map::MemoryRegion>", align 8
+  %_3 = alloca %"core::ptr::metadata::PtrRepr<bootinfo::memory_map::MemoryRegion>", align 8
+  store ptr %data_address, ptr %data_address.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %data_address.dbg.spill, metadata !1655, metadata !DIExpression()), !dbg !1657
   call void @llvm.dbg.declare(metadata ptr %metadata.dbg.spill, metadata !1656, metadata !DIExpression()), !dbg !1658
   store ptr %data_address, ptr %_4, align 8, !dbg !1659
-  %0 = getelementptr inbounds { ptr, i64 }, ptr %_4, i32 0, i32 1, !dbg !1659
-  store i64 %metadata, ptr %0, align 8, !dbg !1659
-  %1 = getelementptr inbounds { ptr, i64 }, ptr %_4, i32 0, i32 0, !dbg !1660
-  %2 = load ptr, ptr %1, align 8, !dbg !1660, !noundef !24
-  %3 = getelementptr inbounds { ptr, i64 }, ptr %_4, i32 0, i32 1, !dbg !1660
-  %4 = load i64, ptr %3, align 8, !dbg !1660, !noundef !24
-  %5 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 0, !dbg !1660
-  store ptr %2, ptr %5, align 8, !dbg !1660
-  %6 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 1, !dbg !1660
-  store i64 %4, ptr %6, align 8, !dbg !1660
-  %7 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 0, !dbg !1660
-  %8 = load ptr, ptr %7, align 8, !dbg !1660, !noundef !24
-  %9 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 1, !dbg !1660
-  %10 = load i64, ptr %9, align 8, !dbg !1660, !noundef !24
-  %11 = insertvalue { ptr, i64 } poison, ptr %8, 0, !dbg !1661
-  %12 = insertvalue { ptr, i64 } %11, i64 %10, 1, !dbg !1661
-  ret { ptr, i64 } %12, !dbg !1661
+  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_3, ptr align 8 %_4, i64 8, i1 false), !dbg !1660
+  %0 = load ptr, ptr %_3, align 8, !dbg !1660, !noundef !24
+  ret ptr %0, !dbg !1661
 }
 
 ; core::ptr::metadata::from_raw_parts_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @_ZN4core3ptr8metadata18from_raw_parts_mut17h6749e544aeec16a3E(ptr %data_address, i64 %metadata) unnamed_addr #0 !dbg !1662 {
+define { ptr, i64 } @_ZN4core3ptr8metadata18from_raw_parts_mut17h6fde41364fd87138E(ptr %data_address, i64 %metadata) unnamed_addr #0 !dbg !1662 {
 start:
   %metadata.dbg.spill = alloca i64, align 8
   %data_address.dbg.spill = alloca ptr, align 8
@@ -2812,7 +2813,7 @@ start:
 
 ; core::ptr::metadata::metadata
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr8metadata8metadata17h5619d0fa90eff891E(ptr %ptr) unnamed_addr #0 !dbg !1673 {
+define void @_ZN4core3ptr8metadata8metadata17h10d4367dd2a80f38E(ptr %ptr) unnamed_addr #0 !dbg !1673 {
 start:
   %ptr.dbg.spill = alloca ptr, align 8
   %_2 = alloca %"core::ptr::metadata::PtrRepr<bootinfo::memory_map::MemoryRegion>", align 8
@@ -2824,7 +2825,7 @@ start:
 
 ; core::ptr::metadata::metadata
 ; Function Attrs: inlinehint noredzone nounwind
-define i64 @_ZN4core3ptr8metadata8metadata17hb74b1e80e659b76aE(ptr %ptr.0, i64 %ptr.1) unnamed_addr #0 !dbg !1679 {
+define i64 @_ZN4core3ptr8metadata8metadata17h65a66bab20766f97E(ptr %ptr.0, i64 %ptr.1) unnamed_addr #0 !dbg !1679 {
 start:
   %ptr.dbg.spill = alloca { ptr, i64 }, align 8
   %_2 = alloca %"core::ptr::metadata::PtrRepr<[bootinfo::memory_map::MemoryRegion]>", align 8
@@ -2844,7 +2845,7 @@ start:
 
 ; core::ptr::non_null::NonNull<T>::new_unchecked
 ; Function Attrs: inlinehint noredzone nounwind
-define ptr @"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17hd63d665a11e5e7feE"(ptr %ptr) unnamed_addr #0 !dbg !1687 {
+define ptr @"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17h3e41b89f8c82f0c2E"(ptr %ptr) unnamed_addr #0 !dbg !1687 {
 start:
   %ptr.dbg.spill.i = alloca ptr, align 8
   %ptr.dbg.spill = alloca ptr, align 8
@@ -2854,7 +2855,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !1692, metadata !DIExpression()), !dbg !1693
   br i1 true, label %bb1, label %bb2, !dbg !1694
 
-bb2:                                              ; preds = %"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h614ad1635b32869cE.exit", %start
+bb2:                                              ; preds = %"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h9adb18d699a74379E.exit", %start
   store ptr %ptr, ptr %0, align 8, !dbg !1695
   %1 = load ptr, ptr %0, align 8, !dbg !1696, !nonnull !24, !noundef !24
   ret ptr %1, !dbg !1696
@@ -2865,46 +2866,46 @@ bb1:                                              ; preds = %start
   store ptr %2, ptr %ptr.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill.i, metadata !1697, metadata !DIExpression()), !dbg !1702
 ; call core::ptr::mut_ptr::<impl *mut T>::is_null
-  %_4.i = call zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h86ccb2481b2d062dE"(ptr %2) #10, !dbg !1704
+  %_4.i = call zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17hb672574d80ca0956E"(ptr %2) #10, !dbg !1704
   %_3.i = xor i1 %_4.i, true, !dbg !1706
-  br i1 %_4.i, label %bb2.i, label %"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h614ad1635b32869cE.exit", !dbg !1707
+  br i1 %_4.i, label %bb2.i, label %"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h9adb18d699a74379E.exit", !dbg !1707
 
 bb2.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_20b3d155afd5c58c42e598b7e6d186ef, i64 93) #11, !dbg !1708
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_20b3d155afd5c58c42e598b7e6d186ef, i64 93) #11, !dbg !1708
   unreachable, !dbg !1708
 
-"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h614ad1635b32869cE.exit": ; preds = %bb1
+"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h9adb18d699a74379E.exit": ; preds = %bb1
   br label %bb2, !dbg !1694
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h8ef422c6d56e179dE"(ptr %self) unnamed_addr #0 !dbg !1709 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17hccadd5f30647ea68E"(ptr %self) unnamed_addr #0 !dbg !1709 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !1711, metadata !DIExpression()), !dbg !1712
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned_to
-  %0 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h2cbca68c57b5fb3eE"(ptr %self, i64 8) #10, !dbg !1713
+  %0 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17he58f6b7ae3510282E"(ptr %self, i64 8) #10, !dbg !1713
   ret i1 %0, !dbg !1714
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17hdce19ac4ca451d04E"(ptr %self) unnamed_addr #0 !dbg !1715 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17he71e0796d8ebfcb4E"(ptr %self) unnamed_addr #0 !dbg !1715 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !1717, metadata !DIExpression()), !dbg !1718
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned_to
-  %0 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h72639b08bb9cc62fE"(ptr %self, i64 8) #10, !dbg !1719
+  %0 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h774812514fa4f0a5E"(ptr %self, i64 8) #10, !dbg !1719
   ret i1 %0, !dbg !1720
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned_to::runtime_impl
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17hcace55ccebbd2f00E"(ptr %ptr, i64 %align) unnamed_addr #0 !dbg !1721 {
+define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17h507731741d992a1aE"(ptr %ptr, i64 %align) unnamed_addr #0 !dbg !1721 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %self.dbg.spill.i = alloca ptr, align 8
@@ -2931,13 +2932,13 @@ bb2:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_62bc2c890ddc30f006544617e59d1e71) #11, !dbg !1747
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_62bc2c890ddc30f006544617e59d1e71) #11, !dbg !1747
   unreachable, !dbg !1747
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned_to
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h2cbca68c57b5fb3eE"(ptr %self, i64 %align) unnamed_addr #0 !dbg !1750 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h774812514fa4f0a5E"(ptr %self, i64 %align) unnamed_addr #0 !dbg !1750 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %0 = alloca i64, align 8
@@ -2965,28 +2966,28 @@ start:
 
 bb4:                                              ; preds = %start
   store ptr %self, ptr %self.dbg.spill.i1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !1765, metadata !DIExpression()), !dbg !1771
-  store ptr %self, ptr %_8, align 8, !dbg !1773
-  %4 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !1773
-  store i64 %align, ptr %4, align 8, !dbg !1773
-  %5 = load ptr, ptr %_8, align 8, !dbg !1774, !noundef !24
-  %6 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !1774
-  %7 = load i64, ptr %6, align 8, !dbg !1774, !noundef !24
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !555, metadata !DIExpression()), !dbg !1765
+  store ptr %self, ptr %_8, align 8, !dbg !1767
+  %4 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !1767
+  store i64 %align, ptr %4, align 8, !dbg !1767
+  %5 = load ptr, ptr %_8, align 8, !dbg !1768, !noundef !24
+  %6 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !1768
+  %7 = load i64, ptr %6, align 8, !dbg !1768, !noundef !24
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned_to::runtime_impl
-  %8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17hcace55ccebbd2f00E"(ptr %5, i64 %7) #10, !dbg !1774
-  ret i1 %8, !dbg !1775
+  %8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17h507731741d992a1aE"(ptr %5, i64 %7) #10, !dbg !1768
+  ret i1 %8, !dbg !1769
 
 bb2:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hcf96160f8d888857E(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_60ac762d06592b2ab3358175d7a7c295, i64 1) #10, !dbg !1776
+  call void @_ZN4core3fmt9Arguments9new_const17h0c49114209049e8bE(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_60ac762d06592b2ab3358175d7a7c295, i64 1) #10, !dbg !1770
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_6, ptr align 8 @alloc_96632254c3ae610e82e64a0469a9df2d) #11, !dbg !1776
-  unreachable, !dbg !1776
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_6, ptr align 8 @alloc_96632254c3ae610e82e64a0469a9df2d) #11, !dbg !1770
+  unreachable, !dbg !1770
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned_to
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h72639b08bb9cc62fE"(ptr %self, i64 %align) unnamed_addr #0 !dbg !1777 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17he58f6b7ae3510282E"(ptr %self, i64 %align) unnamed_addr #0 !dbg !1771 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %0 = alloca i64, align 8
@@ -2997,24 +2998,24 @@ start:
   %_8 = alloca { ptr, i64 }, align 8
   %_6 = alloca %"core::fmt::Arguments<'_>", align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !1781, metadata !DIExpression()), !dbg !1783
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !1775, metadata !DIExpression()), !dbg !1777
   store i64 %align, ptr %align.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %align.dbg.spill, metadata !1782, metadata !DIExpression()), !dbg !1784
+  call void @llvm.dbg.declare(metadata ptr %align.dbg.spill, metadata !1776, metadata !DIExpression()), !dbg !1778
   store i64 %align, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1202, metadata !DIExpression()), !dbg !1785
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1202, metadata !DIExpression()), !dbg !1779
   store i64 %align, ptr %self.dbg.spill.i.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i.i, metadata !1207, metadata !DIExpression()), !dbg !1787
-  %1 = call i64 @llvm.ctpop.i64(i64 %align), !dbg !1789
-  store i64 %1, ptr %0, align 8, !dbg !1789
-  %_2.i.i = load i64, ptr %0, align 8, !dbg !1789, !noundef !24
-  %2 = trunc i64 %_2.i.i to i32, !dbg !1789
-  %3 = icmp eq i32 %2, 1, !dbg !1790
-  %_3 = xor i1 %3, true, !dbg !1791
-  br i1 %_3, label %bb2, label %bb4, !dbg !1791
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i.i, metadata !1207, metadata !DIExpression()), !dbg !1781
+  %1 = call i64 @llvm.ctpop.i64(i64 %align), !dbg !1783
+  store i64 %1, ptr %0, align 8, !dbg !1783
+  %_2.i.i = load i64, ptr %0, align 8, !dbg !1783, !noundef !24
+  %2 = trunc i64 %_2.i.i to i32, !dbg !1783
+  %3 = icmp eq i32 %2, 1, !dbg !1784
+  %_3 = xor i1 %3, true, !dbg !1785
+  br i1 %_3, label %bb2, label %bb4, !dbg !1785
 
 bb4:                                              ; preds = %start
   store ptr %self, ptr %self.dbg.spill.i1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !555, metadata !DIExpression()), !dbg !1792
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !1786, metadata !DIExpression()), !dbg !1792
   store ptr %self, ptr %_8, align 8, !dbg !1794
   %4 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !1794
   store i64 %align, ptr %4, align 8, !dbg !1794
@@ -3022,20 +3023,20 @@ bb4:                                              ; preds = %start
   %6 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !1795
   %7 = load i64, ptr %6, align 8, !dbg !1795, !noundef !24
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned_to::runtime_impl
-  %8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17hcace55ccebbd2f00E"(ptr %5, i64 %7) #10, !dbg !1795
+  %8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17h507731741d992a1aE"(ptr %5, i64 %7) #10, !dbg !1795
   ret i1 %8, !dbg !1796
 
 bb2:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hcf96160f8d888857E(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_60ac762d06592b2ab3358175d7a7c295, i64 1) #10, !dbg !1797
+  call void @_ZN4core3fmt9Arguments9new_const17h0c49114209049e8bE(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_60ac762d06592b2ab3358175d7a7c295, i64 1) #10, !dbg !1797
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_6, ptr align 8 @alloc_96632254c3ae610e82e64a0469a9df2d) #11, !dbg !1797
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_6, ptr align 8 @alloc_96632254c3ae610e82e64a0469a9df2d) #11, !dbg !1797
   unreachable, !dbg !1797
 }
 
 ; core::ptr::const_ptr::<impl *const T>::with_metadata_of
 ; Function Attrs: inlinehint noredzone nounwind
-define ptr @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$16with_metadata_of17hfc3ccbb2353f1fc9E"(ptr %self, ptr %meta) unnamed_addr #0 !dbg !1798 {
+define ptr @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$16with_metadata_of17h7f44a7e53a5d27a0E"(ptr %self, ptr %meta) unnamed_addr #0 !dbg !1798 {
 start:
   %meta.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -3044,15 +3045,15 @@ start:
   store ptr %meta, ptr %meta.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %meta.dbg.spill, metadata !1804, metadata !DIExpression()), !dbg !1808
 ; call core::ptr::metadata::metadata
-  call void @_ZN4core3ptr8metadata8metadata17h5619d0fa90eff891E(ptr %meta) #10, !dbg !1809
+  call void @_ZN4core3ptr8metadata8metadata17h10d4367dd2a80f38E(ptr %meta) #10, !dbg !1809
 ; call core::ptr::metadata::from_raw_parts
-  %0 = call ptr @_ZN4core3ptr8metadata14from_raw_parts17h41595670b0a6873cE(ptr %self) #10, !dbg !1810
+  %0 = call ptr @_ZN4core3ptr8metadata14from_raw_parts17h796581e358ab9c69E(ptr %self) #10, !dbg !1810
   ret ptr %0, !dbg !1811
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_null::runtime_impl
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h5e7318db8978ec9cE"(ptr %ptr) unnamed_addr #0 !dbg !1812 {
+define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h4b67602774e5c54dE"(ptr %ptr) unnamed_addr #0 !dbg !1812 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %self.dbg.spill.i = alloca ptr, align 8
@@ -3070,7 +3071,7 @@ start:
 
 ; core::ptr::const_ptr::<impl *const T>::is_null
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h8887dc6f95652e18E"(ptr %self) unnamed_addr #0 !dbg !1836 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hb34f08b01fbed2d9E"(ptr %self) unnamed_addr #0 !dbg !1836 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca ptr, align 8
@@ -3079,13 +3080,13 @@ start:
   store ptr %self, ptr %_2, align 8, !dbg !1840
   %0 = load ptr, ptr %_2, align 8, !dbg !1841, !noundef !24
 ; call core::ptr::const_ptr::<impl *const T>::is_null::runtime_impl
-  %1 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h5e7318db8978ec9cE"(ptr %0) #10, !dbg !1841
+  %1 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h4b67602774e5c54dE"(ptr %0) #10, !dbg !1841
   ret i1 %1, !dbg !1842
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_null
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17ha32a967971c7c509E"(ptr %self) unnamed_addr #0 !dbg !1843 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hed584459377ed975E"(ptr %self) unnamed_addr #0 !dbg !1843 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca ptr, align 8
@@ -3094,13 +3095,13 @@ start:
   store ptr %self, ptr %_2, align 8, !dbg !1847
   %0 = load ptr, ptr %_2, align 8, !dbg !1848, !noundef !24
 ; call core::ptr::const_ptr::<impl *const T>::is_null::runtime_impl
-  %1 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h5e7318db8978ec9cE"(ptr %0) #10, !dbg !1848
+  %1 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h4b67602774e5c54dE"(ptr %0) #10, !dbg !1848
   ret i1 %1, !dbg !1849
 }
 
 ; core::ptr::const_ptr::<impl *const T>::sub_ptr
 ; Function Attrs: inlinehint noredzone nounwind
-define i64 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr17h06c6bc4eee71ac18E"(ptr %self, ptr %origin) unnamed_addr #0 !dbg !1850 {
+define i64 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr17h3d6dc8453250b48cE"(ptr %self, ptr %origin) unnamed_addr #0 !dbg !1850 {
 start:
   %origin.dbg.spill.i = alloca ptr, align 8
   %this.dbg.spill.i = alloca ptr, align 8
@@ -3117,7 +3118,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %origin.dbg.spill, metadata !1855, metadata !DIExpression()), !dbg !1862
   br i1 true, label %bb1, label %bb2, !dbg !1863
 
-bb2:                                              ; preds = %"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17hb2ef1e613bc93a5eE.exit", %start
+bb2:                                              ; preds = %"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17h5decbad9266da9b2E.exit", %start
   store i64 24, ptr %pointee_size.dbg.spill, align 8, !dbg !1864
   call void @llvm.dbg.declare(metadata ptr %pointee_size.dbg.spill, metadata !1858, metadata !DIExpression()), !dbg !1865
   %_9 = icmp ult i64 0, 24, !dbg !1866
@@ -3136,14 +3137,14 @@ bb1:                                              ; preds = %start
   call void @llvm.dbg.declare(metadata ptr %origin.dbg.spill.i, metadata !1873, metadata !DIExpression()), !dbg !1874
   %_4.i = icmp uge ptr %2, %4, !dbg !1876
   %_3.i = xor i1 %_4.i, true, !dbg !1878
-  br i1 %_3.i, label %bb1.i, label %"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17hb2ef1e613bc93a5eE.exit", !dbg !1878
+  br i1 %_3.i, label %bb1.i, label %"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17h5decbad9266da9b2E.exit", !dbg !1878
 
 bb1.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_cb50775363ffdd1238910b6e9573721d, i64 71) #11, !dbg !1879
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_cb50775363ffdd1238910b6e9573721d, i64 71) #11, !dbg !1879
   unreachable, !dbg !1879
 
-"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17hb2ef1e613bc93a5eE.exit": ; preds = %bb1
+"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17h5decbad9266da9b2E.exit": ; preds = %bb1
   br label %bb2, !dbg !1863
 
 bb4:                                              ; preds = %bb2
@@ -3173,13 +3174,13 @@ bb8:                                              ; preds = %bb6
 
 bb7:                                              ; preds = %bb6
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_ec595fc0e82ef92fc59bd74f68296eae, i64 73, ptr align 8 @alloc_054967ab02808043e6941783e8d3de80) #11, !dbg !1881
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_ec595fc0e82ef92fc59bd74f68296eae, i64 73, ptr align 8 @alloc_054967ab02808043e6941783e8d3de80) #11, !dbg !1881
   unreachable, !dbg !1881
 }
 
 ; core::ptr::const_ptr::<impl *const [T]>::len
 ; Function Attrs: inlinehint noredzone nounwind
-define i64 @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3c5ccfd32d4e1d7aE"(ptr %self.0, i64 %self.1) unnamed_addr #0 !dbg !1884 {
+define i64 @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3a7bf3213f5f2ac5E"(ptr %self.0, i64 %self.1) unnamed_addr #0 !dbg !1884 {
 start:
   %self.dbg.spill = alloca { ptr, i64 }, align 8
   %0 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 0
@@ -3188,13 +3189,13 @@ start:
   store i64 %self.1, ptr %1, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !1887, metadata !DIExpression()), !dbg !1888
 ; call core::ptr::metadata::metadata
-  %2 = call i64 @_ZN4core3ptr8metadata8metadata17hb74b1e80e659b76aE(ptr %self.0, i64 %self.1) #10, !dbg !1889
+  %2 = call i64 @_ZN4core3ptr8metadata8metadata17h65a66bab20766f97E(ptr %self.0, i64 %self.1) #10, !dbg !1889
   ret i64 %2, !dbg !1890
 }
 
 ; core::ptr::const_ptr::<impl *const [T]>::as_ptr
 ; Function Attrs: inlinehint noredzone nounwind
-define ptr @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17h0da60db6e72722a9E"(ptr %self.0, i64 %self.1) unnamed_addr #0 !dbg !1891 {
+define ptr @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17hdc3d6574984ebdc5E"(ptr %self.0, i64 %self.1) unnamed_addr #0 !dbg !1891 {
 start:
   %self.dbg.spill = alloca { ptr, i64 }, align 8
   %0 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 0
@@ -3207,7 +3208,7 @@ start:
 
 ; core::array::<impl core::ops::index::Index<I> for [T; N]>::index
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN4core5array85_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$5index17h4f80189d8756a89fE"(ptr align 8 %self, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !1898 {
+define { ptr, i64 } @"_ZN4core5array85_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$5index17h9a0dd1216442d89cE"(ptr align 8 %self, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !1898 {
 start:
   %index.dbg.spill = alloca { i64, i64 }, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -3219,7 +3220,7 @@ start:
   store i64 %index.1, ptr %2, align 8
   call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !1907, metadata !DIExpression()), !dbg !1911
 ; call core::slice::index::<impl core::ops::index::Index<I> for [T]>::index
-  %3 = call { ptr, i64 } @"_ZN4core5slice5index74_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$5index17h4f7d591ff27b6834E"(ptr align 8 %self, i64 64, i64 %index.0, i64 %index.1, ptr align 8 %0) #10, !dbg !1912
+  %3 = call { ptr, i64 } @"_ZN4core5slice5index74_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$5index17h344fe8345ce5e45fE"(ptr align 8 %self, i64 64, i64 %index.0, i64 %index.1, ptr align 8 %0) #10, !dbg !1912
   %4 = extractvalue { ptr, i64 } %3, 0, !dbg !1912
   %5 = extractvalue { ptr, i64 } %3, 1, !dbg !1912
   %6 = insertvalue { ptr, i64 } poison, ptr %4, 0, !dbg !1913
@@ -3229,7 +3230,7 @@ start:
 
 ; core::array::<impl core::ops::index::IndexMut<I> for [T; N]>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN4core5array88_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9index_mut17hc06ee4dd410cd4b2E"(ptr align 8 %self, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !1914 {
+define { ptr, i64 } @"_ZN4core5array88_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9index_mut17hd9cecf2e30ba055bE"(ptr align 8 %self, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !1914 {
 start:
   %index.dbg.spill = alloca { i64, i64 }, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -3241,7 +3242,7 @@ start:
   store i64 %index.1, ptr %2, align 8
   call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !1921, metadata !DIExpression()), !dbg !1923
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %3 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h2eed47309c4795c2E"(ptr align 8 %self, i64 64, i64 %index.0, i64 %index.1, ptr align 8 %0) #10, !dbg !1924
+  %3 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc032faa00f725839E"(ptr align 8 %self, i64 64, i64 %index.0, i64 %index.1, ptr align 8 %0) #10, !dbg !1924
   %_3.0 = extractvalue { ptr, i64 } %3, 0, !dbg !1924
   %_3.1 = extractvalue { ptr, i64 } %3, 1, !dbg !1924
   %4 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !1925
@@ -3251,7 +3252,7 @@ start:
 
 ; core::slice::<impl [T]>::split_at_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17had3b8fecb5ddaee3E"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %0, ptr align 8 %self.0, i64 %self.1, i64 %mid, ptr align 8 %1) unnamed_addr #0 !dbg !1926 {
+define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17h10104258bc233bdfE"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %0, ptr align 8 %self.0, i64 %self.1, i64 %mid, ptr align 8 %1) unnamed_addr #0 !dbg !1926 {
 start:
   %mid.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca { ptr, i64 }, align 8
@@ -3268,18 +3269,18 @@ start:
 
 bb2:                                              ; preds = %start
 ; call core::slice::<impl [T]>::split_at_mut_unchecked
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked17he725c0b448fb6b8aE"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %0, ptr align 8 %self.0, i64 %self.1, i64 %mid) #10, !dbg !1941
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked17h7b6d14daaeb5d4c2E"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %0, ptr align 8 %self.0, i64 %self.1, i64 %mid) #10, !dbg !1941
   ret void, !dbg !1942
 
 bb1:                                              ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_fddaeef1fe1a23c45402ef8f58614acb, i64 35, ptr align 8 %1) #11, !dbg !1940
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_fddaeef1fe1a23c45402ef8f58614acb, i64 35, ptr align 8 %1) #11, !dbg !1940
   unreachable, !dbg !1940
 }
 
 ; core::slice::<impl [T]>::get_unchecked
 ; Function Attrs: inlinehint noredzone nounwind
-define align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %self.0, i64 %self.1, i64 %index) unnamed_addr #0 !dbg !1943 {
+define align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %self.0, i64 %self.1, i64 %index) unnamed_addr #0 !dbg !1943 {
 start:
   %index.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca { ptr, i64 }, align 8
@@ -3291,13 +3292,13 @@ start:
   store i64 %index, ptr %index.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !1948, metadata !DIExpression()), !dbg !1952
 ; call <usize as core::slice::index::SliceIndex<[T]>>::get_unchecked
-  %_3 = call ptr @"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17hfed71cb03bf45bb2E"(i64 %index, ptr %self.0, i64 %self.1) #10, !dbg !1953
+  %_3 = call ptr @"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h5548ba9342f449cdE"(i64 %index, ptr %self.0, i64 %self.1) #10, !dbg !1953
   ret ptr %_3, !dbg !1954
 }
 
 ; core::slice::<impl [T]>::as_mut_ptr_range
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16as_mut_ptr_range17hdee795a0c039ffa3E"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !1955 {
+define { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16as_mut_ptr_range17he17f6b0d029fd985E"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !1955 {
 start:
   %self.dbg.spill.i4 = alloca { ptr, i64 }, align 8
   %0 = alloca ptr, align 8
@@ -3347,7 +3348,7 @@ start:
 
 ; core::slice::<impl [T]>::sort_unstable_by
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by17h3aa2a951514a8962E"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !1991 {
+define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by17h1469e3c20acb32dcE"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !1991 {
 start:
   %self.dbg.spill = alloca { ptr, i64 }, align 8
   %_4 = alloca ptr, align 8
@@ -3361,13 +3362,13 @@ start:
   store ptr %compare, ptr %_4, align 8, !dbg !2001
   %2 = load ptr, ptr %_4, align 8, !dbg !2002, !nonnull !24, !align !2003, !noundef !24
 ; call core::slice::sort::quicksort
-  call void @_ZN4core5slice4sort9quicksort17h12fd022706c4f4b1E(ptr align 8 %self.0, i64 %self.1, ptr align 1 %2) #10, !dbg !2002
+  call void @_ZN4core5slice4sort9quicksort17h94d07ae98e0185c1E(ptr align 8 %self.0, i64 %self.1, ptr align 1 %2) #10, !dbg !2002
   ret void, !dbg !2004
 }
 
 ; core::slice::<impl [T]>::sort_unstable_by::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %_1, ptr align 8 %a, ptr align 8 %b) unnamed_addr #0 !dbg !2005 {
+define zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %_1, ptr align 8 %a, ptr align 8 %b) unnamed_addr #0 !dbg !2005 {
 start:
   %b.dbg.spill = alloca ptr, align 8
   %a.dbg.spill = alloca ptr, align 8
@@ -3389,16 +3390,16 @@ start:
   %3 = getelementptr inbounds { ptr, ptr }, ptr %_6, i32 0, i32 1, !dbg !2015
   %4 = load ptr, ptr %3, align 8, !dbg !2015, !nonnull !24, !align !525, !noundef !24
 ; call bootloader::bootinfo::memory_map::MemoryMap::sort::{{closure}}
-  %5 = call i8 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h518903dc53964686E"(ptr align 1 %_8, ptr align 8 %2, ptr align 8 %4) #10, !dbg !2015, !range !745
+  %5 = call i8 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17hcf06a7110d2196cfE"(ptr align 1 %_8, ptr align 8 %2, ptr align 8 %4) #10, !dbg !2015, !range !745
   store i8 %5, ptr %_5, align 1, !dbg !2015
 ; call <core::cmp::Ordering as core::cmp::PartialEq>::eq
-  %6 = call zeroext i1 @"_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17h530dbbcd41019221E"(ptr align 1 %_5, ptr align 1 @alloc_9a72dc1c87ddefcce62e4b5ab68e5150) #10, !dbg !2015
+  %6 = call zeroext i1 @"_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17hae4bcd0612431f5dE"(ptr align 1 %_5, ptr align 1 @alloc_9a72dc1c87ddefcce62e4b5ab68e5150) #10, !dbg !2015
   ret i1 %6, !dbg !2016
 }
 
 ; core::slice::<impl [T]>::split_at_mut_unchecked
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked17he725c0b448fb6b8aE"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %0, ptr align 8 %self.0, i64 %self.1, i64 %mid) unnamed_addr #0 !dbg !2017 {
+define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked17h7b6d14daaeb5d4c2E"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %0, ptr align 8 %self.0, i64 %self.1, i64 %mid) unnamed_addr #0 !dbg !2017 {
 start:
   %len.dbg.spill.i = alloca i64, align 8
   %mid.dbg.spill.i = alloca i64, align 8
@@ -3430,9 +3431,9 @@ start:
   call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !2025, metadata !DIExpression()), !dbg !2034
   br i1 true, label %bb2, label %bb3, !dbg !2035
 
-bb3:                                              ; preds = %"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h1d933de8fb407671E.exit", %start
+bb3:                                              ; preds = %"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h2d70b1c04acfc903E.exit", %start
 ; call core::slice::raw::from_raw_parts_mut
-  %5 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17h54c3e257c974b9a9E(ptr %self.0, i64 %mid) #10, !dbg !2036
+  %5 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hccaf5218f5329f38E(ptr %self.0, i64 %mid) #10, !dbg !2036
   %_10.0 = extractvalue { ptr, i64 } %5, 0, !dbg !2036
   %_10.1 = extractvalue { ptr, i64 } %5, 1, !dbg !2036
   store ptr %self.0, ptr %self.dbg.spill.i, align 8
@@ -3464,19 +3465,19 @@ bb2:                                              ; preds = %start
   call void @llvm.dbg.declare(metadata ptr %len.dbg.spill.i, metadata !2051, metadata !DIExpression()), !dbg !2052
   %_4.i = icmp ule i64 %9, %11, !dbg !2054
   %_3.i4 = xor i1 %_4.i, true, !dbg !2056
-  br i1 %_3.i4, label %bb1.i, label %"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h1d933de8fb407671E.exit", !dbg !2056
+  br i1 %_3.i4, label %bb1.i, label %"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h2d70b1c04acfc903E.exit", !dbg !2056
 
 bb1.i:                                            ; preds = %bb2
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_3dc073651148de734d2593768efc16e9, i64 104) #11, !dbg !2057
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_3dc073651148de734d2593768efc16e9, i64 104) #11, !dbg !2057
   unreachable, !dbg !2057
 
-"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h1d933de8fb407671E.exit": ; preds = %bb2
+"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h2d70b1c04acfc903E.exit": ; preds = %bb2
   br label %bb3, !dbg !2035
 
 bb6:                                              ; preds = %bb3
 ; call core::slice::raw::from_raw_parts_mut
-  %12 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17h54c3e257c974b9a9E(ptr %_3.i, i64 %_17.0) #10, !dbg !2058
+  %12 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hccaf5218f5329f38E(ptr %_3.i, i64 %_17.0) #10, !dbg !2058
   %_13.0 = extractvalue { ptr, i64 } %12, 0, !dbg !2058
   %_13.1 = extractvalue { ptr, i64 } %12, 1, !dbg !2058
   %13 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 0, !dbg !2059
@@ -3492,13 +3493,13 @@ bb6:                                              ; preds = %bb3
 
 panic:                                            ; preds = %bb3
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_4a6cc2814e9c70d90675aafc22034495) #11, !dbg !2044
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_76fa8839e346213ef9d31b2afdb0086d) #11, !dbg !2044
   unreachable, !dbg !2044
 }
 
 ; core::slice::<impl [T]>::iter
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h8f73af22612f7cb1E"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !2061 {
+define { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17ha65af8c6724a8cb2E"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !2061 {
 start:
   %self.dbg.spill = alloca { ptr, i64 }, align 8
   %0 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 0
@@ -3507,7 +3508,7 @@ start:
   store i64 %self.1, ptr %1, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !2065, metadata !DIExpression()), !dbg !2066
 ; call core::slice::iter::Iter<T>::new
-  %2 = call { ptr, ptr } @"_ZN4core5slice4iter13Iter$LT$T$GT$3new17h60940c1ef41d07b9E"(ptr align 8 %self.0, i64 %self.1) #10, !dbg !2067
+  %2 = call { ptr, ptr } @"_ZN4core5slice4iter13Iter$LT$T$GT$3new17h45935e871f67cbafE"(ptr align 8 %self.0, i64 %self.1) #10, !dbg !2067
   %3 = extractvalue { ptr, ptr } %2, 0, !dbg !2067
   %4 = extractvalue { ptr, ptr } %2, 1, !dbg !2067
   %5 = insertvalue { ptr, ptr } poison, ptr %3, 0, !dbg !2068
@@ -3517,7 +3518,7 @@ start:
 
 ; core::slice::<impl [T]>::swap
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %self.0, i64 %self.1, i64 %a, i64 %b, ptr align 8 %0) unnamed_addr #0 !dbg !2069 {
+define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %self.0, i64 %self.1, i64 %a, i64 %b, ptr align 8 %0) unnamed_addr #0 !dbg !2069 {
 start:
   %pb.dbg.spill = alloca ptr, align 8
   %pa.dbg.spill = alloca ptr, align 8
@@ -3547,7 +3548,7 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %a, i64 %self.1, ptr align 8 %0) #11, !dbg !2083
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %a, i64 %self.1, ptr align 8 %0) #11, !dbg !2083
   unreachable, !dbg !2083
 
 bb2:                                              ; preds = %bb1
@@ -3555,18 +3556,18 @@ bb2:                                              ; preds = %bb1
   store ptr %pb, ptr %pb.dbg.spill, align 8, !dbg !2087
   call void @llvm.dbg.declare(metadata ptr %pb.dbg.spill, metadata !2078, metadata !DIExpression()), !dbg !2088
 ; call core::ptr::swap
-  call void @_ZN4core3ptr4swap17he01192a45aa21ed8E(ptr %pa, ptr %pb) #10, !dbg !2089
+  call void @_ZN4core3ptr4swap17h773c6fcf72392d61E(ptr %pa, ptr %pb) #10, !dbg !2089
   ret void, !dbg !2090
 
 panic1:                                           ; preds = %bb1
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %b, i64 %self.1, ptr align 8 %0) #11, !dbg !2086
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %b, i64 %self.1, ptr align 8 %0) #11, !dbg !2086
   unreachable, !dbg !2086
 }
 
 ; core::slice::<impl [T]>::reverse
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse17h5f2c081d4f44ade6E"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !2091 {
+define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse17h3af714df98c7c6a4E"(ptr align 8 %self.0, i64 %self.1) unnamed_addr #0 !dbg !2091 {
 start:
   %0 = alloca ptr, align 8
   %count.dbg.spill.i1 = alloca i64, align 8
@@ -3592,7 +3593,7 @@ start:
   store i64 %half_len, ptr %half_len.dbg.spill, align 8, !dbg !2105
   call void @llvm.dbg.declare(metadata ptr %half_len.dbg.spill, metadata !2096, metadata !DIExpression()), !dbg !2106
 ; call core::slice::<impl [T]>::as_mut_ptr_range
-  %3 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16as_mut_ptr_range17hdee795a0c039ffa3E"(ptr align 8 %self.0, i64 %self.1) #10, !dbg !2107
+  %3 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16as_mut_ptr_range17he17f6b0d029fd985E"(ptr align 8 %self.0, i64 %self.1) #10, !dbg !2107
   %_8.0 = extractvalue { ptr, ptr } %3, 0, !dbg !2107
   %_8.1 = extractvalue { ptr, ptr } %3, 1, !dbg !2107
   store ptr %_8.0, ptr %start.dbg.spill, align 8, !dbg !2108
@@ -3600,7 +3601,7 @@ start:
   store ptr %_8.1, ptr %end.dbg.spill, align 8, !dbg !2110
   call void @llvm.dbg.declare(metadata ptr %end.dbg.spill, metadata !2100, metadata !DIExpression()), !dbg !2111
 ; call core::slice::raw::from_raw_parts_mut
-  %4 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17h54c3e257c974b9a9E(ptr %_8.0, i64 %half_len) #10, !dbg !2112
+  %4 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hccaf5218f5329f38E(ptr %_8.0, i64 %half_len) #10, !dbg !2112
   %_12.0 = extractvalue { ptr, i64 } %4, 0, !dbg !2112
   %_12.1 = extractvalue { ptr, i64 } %4, 1, !dbg !2112
   store ptr %_8.1, ptr %self.dbg.spill.i, align 8
@@ -3622,7 +3623,7 @@ start:
   store ptr %6, ptr %0, align 8, !dbg !2142
   %_3.i = load ptr, ptr %0, align 8, !dbg !2142, !noundef !24
 ; call core::slice::raw::from_raw_parts_mut
-  %7 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17h54c3e257c974b9a9E(ptr %_3.i, i64 %half_len) #10, !dbg !2143
+  %7 = call { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hccaf5218f5329f38E(ptr %_3.i, i64 %half_len) #10, !dbg !2143
   %_13.0 = extractvalue { ptr, i64 } %7, 0, !dbg !2143
   %_13.1 = extractvalue { ptr, i64 } %7, 1, !dbg !2143
   %8 = getelementptr inbounds { ptr, i64 }, ptr %_11, i32 0, i32 0, !dbg !2144
@@ -3654,13 +3655,13 @@ start:
   store i64 %back_half.1, ptr %21, align 8, !dbg !2147
   call void @llvm.dbg.declare(metadata ptr %back_half.dbg.spill, metadata !2103, metadata !DIExpression()), !dbg !2148
 ; call core::slice::<impl [T]>::reverse::revswap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse7revswap17h790f7b49ef9b2c1aE"(ptr align 8 %front_half.0, i64 %front_half.1, ptr align 8 %back_half.0, i64 %back_half.1, i64 %half_len) #10, !dbg !2149
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse7revswap17h53a77804a111e4f9E"(ptr align 8 %front_half.0, i64 %front_half.1, ptr align 8 %back_half.0, i64 %back_half.1, i64 %half_len) #10, !dbg !2149
   ret void, !dbg !2150
 }
 
 ; core::slice::<impl [T]>::reverse::revswap
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse7revswap17h790f7b49ef9b2c1aE"(ptr align 8 %a.0, i64 %a.1, ptr align 8 %b.0, i64 %b.1, i64 %n) unnamed_addr #0 !dbg !2151 {
+define void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse7revswap17h53a77804a111e4f9E"(ptr align 8 %a.0, i64 %a.1, ptr align 8 %b.0, i64 %b.1, i64 %n) unnamed_addr #0 !dbg !2151 {
 start:
   %b.dbg.spill6 = alloca { ptr, i64 }, align 8
   %a.dbg.spill3 = alloca { ptr, i64 }, align 8
@@ -3696,20 +3697,20 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %bb1
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_dd0dc542054f5a3bd5e0287046a20794, i64 30, ptr align 8 @alloc_9bc869464e7f5dcda873bc5fba3167ae) #11, !dbg !2168
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_dd0dc542054f5a3bd5e0287046a20794, i64 30, ptr align 8 @alloc_ecc9899c650d8314fba3084b3c654203) #11, !dbg !2168
   unreachable, !dbg !2168
 
 bb6:                                              ; preds = %bb4, %bb3
   store i64 %n, ptr %_21, align 8, !dbg !2171
   %4 = load i64, ptr %_21, align 8, !dbg !2172, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %5 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc63cb5ffefaf6af8E"(ptr align 8 %a.0, i64 %a.1, i64 %4, ptr align 8 @alloc_3aa494a7a9b07e5c1a0696cee8170daa) #10, !dbg !2172
+  %5 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hd96e5c003167cd0eE"(ptr align 8 %a.0, i64 %a.1, i64 %4, ptr align 8 @alloc_2216ac2b12fee1f72596cee1b2a48660) #10, !dbg !2172
   %_20.0 = extractvalue { ptr, i64 } %5, 0, !dbg !2172
   %_20.1 = extractvalue { ptr, i64 } %5, 1, !dbg !2172
   store i64 %n, ptr %_24, align 8, !dbg !2173
   %6 = load i64, ptr %_24, align 8, !dbg !2174, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %7 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc63cb5ffefaf6af8E"(ptr align 8 %b.0, i64 %b.1, i64 %6, ptr align 8 @alloc_fb8f45380652987d6b5bbea56a8e912e) #10, !dbg !2174
+  %7 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hd96e5c003167cd0eE"(ptr align 8 %b.0, i64 %b.1, i64 %6, ptr align 8 @alloc_5c5f0f88f9e7a84c338861be835ff420) #10, !dbg !2174
   %_23.0 = extractvalue { ptr, i64 } %7, 0, !dbg !2174
   %_23.1 = extractvalue { ptr, i64 } %7, 1, !dbg !2174
   %8 = getelementptr inbounds { ptr, i64 }, ptr %_18, i32 0, i32 0, !dbg !2175
@@ -3750,7 +3751,7 @@ bb4:                                              ; preds = %bb3
 
 bb5:                                              ; preds = %bb4
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_deedf7aeab1a7c66b5420b58a4093bcc, i64 30, ptr align 8 @alloc_b8749fb97ee29c7317ad030bd8942a48) #11, !dbg !2169
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_deedf7aeab1a7c66b5420b58a4093bcc, i64 30, ptr align 8 @alloc_ff56e0ff16b9da2be75af81ae63895bc) #11, !dbg !2169
   unreachable, !dbg !2169
 
 bb9:                                              ; preds = %bb16, %bb6
@@ -3776,7 +3777,7 @@ bb11:                                             ; preds = %bb10
 
 panic:                                            ; preds = %bb10
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_30, i64 %a.12, ptr align 8 @alloc_2d6a2ee37e528966f03d3441dddee676) #11, !dbg !2186
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_30, i64 %a.12, ptr align 8 @alloc_3802366fa986a65287f2fa3ffe444552) #11, !dbg !2186
   unreachable, !dbg !2186
 
 bb12:                                             ; preds = %bb11
@@ -3788,7 +3789,7 @@ bb12:                                             ; preds = %bb11
 
 panic7:                                           ; preds = %bb11
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_aa932769fb5b51c12790c6d75b182bf2) #11, !dbg !2188
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_932be07abcf6e404c637b3e479c1e7c9) #11, !dbg !2188
   unreachable, !dbg !2188
 
 bb13:                                             ; preds = %bb12
@@ -3798,13 +3799,13 @@ bb13:                                             ; preds = %bb12
 
 panic8:                                           ; preds = %bb12
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_aa932769fb5b51c12790c6d75b182bf2) #11, !dbg !2188
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_932be07abcf6e404c637b3e479c1e7c9) #11, !dbg !2188
   unreachable, !dbg !2188
 
 bb14:                                             ; preds = %bb13
   %_33 = getelementptr inbounds [0 x %"bootinfo::memory_map::MemoryRegion"], ptr %b.04, i64 0, i64 %_38.0, !dbg !2191
 ; call core::mem::swap
-  call void @_ZN4core3mem4swap17h5bdd38adc05b73abE(ptr align 8 %_29, ptr align 8 %_33) #10, !dbg !2192
+  call void @_ZN4core3mem4swap17h477820c24705d26aE(ptr align 8 %_29, ptr align 8 %_33) #10, !dbg !2192
   %26 = load i64, ptr %i, align 8, !dbg !2193, !noundef !24
   %27 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %26, i64 1), !dbg !2193
   %_41.0 = extractvalue { i64, i1 } %27, 0, !dbg !2193
@@ -3814,7 +3815,7 @@ bb14:                                             ; preds = %bb13
 
 panic9:                                           ; preds = %bb13
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_38.0, i64 %b.15, ptr align 8 @alloc_6014d62b444cee9e42a5ca2bfd6b4613) #11, !dbg !2190
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_38.0, i64 %b.15, ptr align 8 @alloc_1fe2ed67373e408d8a88dd6dd998e88a) #11, !dbg !2190
   unreachable, !dbg !2190
 
 bb16:                                             ; preds = %bb14
@@ -3823,13 +3824,13 @@ bb16:                                             ; preds = %bb14
 
 panic10:                                          ; preds = %bb14
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_c070e7c146c652ff4ec0b63c99b2e746) #11, !dbg !2193
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_6827e7b7bc8d29e581436027f00ebf5a) #11, !dbg !2193
   unreachable, !dbg !2193
 }
 
 ; core::slice::raw::from_raw_parts_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17h54c3e257c974b9a9E(ptr %data, i64 %len) unnamed_addr #0 !dbg !2194 {
+define { ptr, i64 } @_ZN4core5slice3raw18from_raw_parts_mut17hccaf5218f5329f38E(ptr %data, i64 %len) unnamed_addr #0 !dbg !2194 {
 start:
   %len.dbg.spill.i = alloca i64, align 8
   %data.dbg.spill.i = alloca ptr, align 8
@@ -3843,9 +3844,9 @@ start:
   call void @llvm.dbg.declare(metadata ptr %len.dbg.spill, metadata !2201, metadata !DIExpression()), !dbg !2203
   br i1 true, label %bb1, label %bb2, !dbg !2204
 
-bb2:                                              ; preds = %_ZN4core5slice3raw18from_raw_parts_mut7runtime17h0f2edeb8b7ffe6dbE.exit, %start
+bb2:                                              ; preds = %_ZN4core5slice3raw18from_raw_parts_mut7runtime17hc491df7d60379b46E.exit, %start
 ; call core::ptr::slice_from_raw_parts_mut
-  %0 = call { ptr, i64 } @_ZN4core3ptr24slice_from_raw_parts_mut17hdbb067706a3044e6E(ptr %data, i64 %len) #10, !dbg !2205
+  %0 = call { ptr, i64 } @_ZN4core3ptr24slice_from_raw_parts_mut17h60c099831c83210dE(ptr %data, i64 %len) #10, !dbg !2205
   %_6.0 = extractvalue { ptr, i64 } %0, 0, !dbg !2205
   %_6.1 = extractvalue { ptr, i64 } %0, 1, !dbg !2205
   %1 = insertvalue { ptr, i64 } poison, ptr %_6.0, 0, !dbg !2206
@@ -3864,7 +3865,7 @@ bb1:                                              ; preds = %start
   store i64 %6, ptr %len.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %len.dbg.spill.i, metadata !2213, metadata !DIExpression()), !dbg !2214
 ; call core::intrinsics::is_aligned_and_not_null
-  %_5.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E(ptr %4) #10, !dbg !2216
+  %_5.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE(ptr %4) #10, !dbg !2216
   br i1 %_5.i, label %bb2.i, label %bb1.i, !dbg !2216
 
 bb1.i:                                            ; preds = %bb1
@@ -3873,7 +3874,7 @@ bb1.i:                                            ; preds = %bb1
 
 bb2.i:                                            ; preds = %bb1
 ; call core::intrinsics::is_valid_allocation_size
-  %_7.i = call zeroext i1 @_ZN4core10intrinsics24is_valid_allocation_size17h7ac2add6c8684074E(i64 %6) #10, !dbg !2218
+  %_7.i = call zeroext i1 @_ZN4core10intrinsics24is_valid_allocation_size17h02832c510035953dE(i64 %6) #10, !dbg !2218
   %7 = zext i1 %_7.i to i8, !dbg !2216
   store i8 %7, ptr %_4.i, align 1, !dbg !2216
   br label %bb3.i, !dbg !2216
@@ -3882,20 +3883,20 @@ bb3.i:                                            ; preds = %bb2.i, %bb1.i
   %8 = load i8, ptr %_4.i, align 1, !dbg !2219, !range !242, !noundef !24
   %9 = trunc i8 %8 to i1, !dbg !2219
   %_3.i = xor i1 %9, true, !dbg !2219
-  br i1 %_3.i, label %bb6.i, label %_ZN4core5slice3raw18from_raw_parts_mut7runtime17h0f2edeb8b7ffe6dbE.exit, !dbg !2219
+  br i1 %_3.i, label %bb6.i, label %_ZN4core5slice3raw18from_raw_parts_mut7runtime17hc491df7d60379b46E.exit, !dbg !2219
 
 bb6.i:                                            ; preds = %bb3.i
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_d685bb4d9a1abf4f5af46d1af0d9ef8a, i64 166) #11, !dbg !2220
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_d685bb4d9a1abf4f5af46d1af0d9ef8a, i64 166) #11, !dbg !2220
   unreachable, !dbg !2220
 
-_ZN4core5slice3raw18from_raw_parts_mut7runtime17h0f2edeb8b7ffe6dbE.exit: ; preds = %bb3.i
+_ZN4core5slice3raw18from_raw_parts_mut7runtime17hc491df7d60379b46E.exit: ; preds = %bb3.i
   br label %bb2, !dbg !2204
 }
 
 ; core::slice::iter::Iter<T>::new
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, ptr } @"_ZN4core5slice4iter13Iter$LT$T$GT$3new17h60940c1ef41d07b9E"(ptr align 8 %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !2221 {
+define { ptr, ptr } @"_ZN4core5slice4iter13Iter$LT$T$GT$3new17h45935e871f67cbafE"(ptr align 8 %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !2221 {
 start:
   %self.dbg.spill.i6 = alloca { ptr, i64 }, align 8
   %0 = alloca ptr, align 8
@@ -3928,7 +3929,7 @@ start:
   store ptr %slice.0, ptr %ptr.dbg.spill, align 8, !dbg !2238
   call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !2225, metadata !DIExpression()), !dbg !2239
 ; call core::ptr::const_ptr::<impl *const T>::is_null
-  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h8887dc6f95652e18E"(ptr %slice.0) #10, !dbg !2240
+  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hb34f08b01fbed2d9E"(ptr %slice.0) #10, !dbg !2240
   %_3 = xor i1 %_4, true, !dbg !2241
   call void @llvm.assume(i1 %_3), !dbg !2242
   br i1 false, label %bb3, label %bb4, !dbg !2243
@@ -3967,13 +3968,13 @@ bb3:                                              ; preds = %start
   store ptr %8, ptr %1, align 8, !dbg !2284
   %9 = load ptr, ptr %1, align 8, !dbg !2284, !noundef !24
 ; call core::ptr::const_ptr::<impl *const T>::with_metadata_of
-  %10 = call ptr @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$16with_metadata_of17hfc3ccbb2353f1fc9E"(ptr %9, ptr %slice.0) #10, !dbg !2285
+  %10 = call ptr @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$16with_metadata_of17h7f44a7e53a5d27a0E"(ptr %9, ptr %slice.0) #10, !dbg !2285
   store ptr %10, ptr %end, align 8, !dbg !2286
   br label %bb5, !dbg !2286
 
 bb5:                                              ; preds = %bb4, %bb3
 ; call core::ptr::non_null::NonNull<T>::new_unchecked
-  %_12 = call ptr @"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17hd63d665a11e5e7feE"(ptr %slice.0) #10, !dbg !2287
+  %_12 = call ptr @"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17h3e41b89f8c82f0c2E"(ptr %slice.0) #10, !dbg !2287
   %_15 = load ptr, ptr %end, align 8, !dbg !2288, !noundef !24
   %11 = getelementptr inbounds { ptr, ptr }, ptr %2, i32 0, i32 1, !dbg !2289
   store ptr %_12, ptr %11, align 8, !dbg !2289
@@ -3989,7 +3990,7 @@ bb5:                                              ; preds = %bb4, %bb3
 
 ; core::slice::sort::insert_head
 ; Function Attrs: noredzone nounwind
-define void @_ZN4core5slice4sort11insert_head17h198b56fb29fbeed4E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #1 !dbg !2291 {
+define void @_ZN4core5slice4sort11insert_head17h67550a7e9e4d71d0E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #1 !dbg !2291 {
 start:
   %self.dbg.spill.i30 = alloca ptr, align 8
   %self.dbg.spill.i29 = alloca ptr, align 8
@@ -4051,9 +4052,9 @@ start:
 
 bb3:                                              ; preds = %bb1, %start
 ; call core::slice::<impl [T]>::get_unchecked
-  %_12 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.0, i64 %v.1, i64 1) #10, !dbg !2315
+  %_12 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.0, i64 %v.1, i64 1) #10, !dbg !2315
 ; call core::slice::<impl [T]>::get_unchecked
-  %_15 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.0, i64 %v.1, i64 0) #10, !dbg !2316
+  %_15 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.0, i64 %v.1, i64 0) #10, !dbg !2316
   store ptr %_12, ptr %_10, align 8, !dbg !2317
   %8 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 1, !dbg !2317
   store ptr %_15, ptr %8, align 8, !dbg !2317
@@ -4062,7 +4063,7 @@ bb3:                                              ; preds = %bb1, %start
   %11 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 1, !dbg !2317
   %12 = load ptr, ptr %11, align 8, !dbg !2317, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_9 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %10, ptr align 8 %12) #10, !dbg !2317
+  %_9 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %10, ptr align 8 %12) #10, !dbg !2317
   br i1 %_9, label %bb7, label %bb31, !dbg !2317
 
 bb1:                                              ; preds = %start
@@ -4072,7 +4073,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %bb1
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_140877f72603b53a2926afdc5b6562c1, i64 30, ptr align 8 @alloc_6932146a2b5945f5118e7e865cb7ff4c) #11, !dbg !2314
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_140877f72603b53a2926afdc5b6562c1, i64 30, ptr align 8 @alloc_6932146a2b5945f5118e7e865cb7ff4c) #11, !dbg !2314
   unreachable, !dbg !2314
 
 bb31:                                             ; preds = %bb30, %bb3
@@ -4086,7 +4087,7 @@ bb7:                                              ; preds = %bb3
   store ptr %v.0, ptr %arr_ptr.dbg.spill, align 8, !dbg !2322
   call void @llvm.dbg.declare(metadata ptr %arr_ptr.dbg.spill, metadata !2298, metadata !DIExpression()), !dbg !2323
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_19, ptr %v.0) #10, !dbg !2324
+  call void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_19, ptr %v.0) #10, !dbg !2324
   call void @llvm.dbg.declare(metadata ptr %_19, metadata !1014, metadata !DIExpression()), !dbg !2325
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %tmp, ptr align 8 %_19, i64 24, i1 false), !dbg !2327
   store ptr %tmp, ptr %self.dbg.spill.i30, align 8
@@ -4127,7 +4128,7 @@ bb7:                                              ; preds = %bb3
   store ptr %v.0, ptr %3, align 8, !dbg !2358
   %_3.i18 = load ptr, ptr %3, align 8, !dbg !2358, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_3.i15, ptr %_3.i18, i64 1) #10, !dbg !2359
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_3.i15, ptr %_3.i18, i64 1) #10, !dbg !2359
   store i64 2, ptr %_36, align 8, !dbg !2360
   %17 = getelementptr inbounds { i64, i64 }, ptr %_36, i32 0, i32 1, !dbg !2360
   store i64 %v.1, ptr %17, align 8, !dbg !2360
@@ -4136,7 +4137,7 @@ bb7:                                              ; preds = %bb3
   %20 = getelementptr inbounds { i64, i64 }, ptr %_36, i32 0, i32 1, !dbg !2360
   %21 = load i64, ptr %20, align 8, !dbg !2360, !noundef !24
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %22 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64 %19, i64 %21) #10, !dbg !2360
+  %22 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64 %19, i64 %21) #10, !dbg !2360
   %_35.0 = extractvalue { i64, i64 } %22, 0, !dbg !2360
   %_35.1 = extractvalue { i64, i64 } %22, 1, !dbg !2360
   %23 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !2360
@@ -4147,7 +4148,7 @@ bb7:                                              ; preds = %bb3
 
 bb17:                                             ; preds = %bb26, %bb7
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %25 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8 %iter) #10, !dbg !2313
+  %25 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8 %iter) #10, !dbg !2313
   store { i64, i64 } %25, ptr %_40, align 8, !dbg !2313
   %_42 = load i64, ptr %_40, align 8, !dbg !2313, !range !1071, !noundef !24
   %26 = icmp eq i64 %_42, 0, !dbg !2313
@@ -4155,7 +4156,7 @@ bb17:                                             ; preds = %bb26, %bb7
 
 bb30:                                             ; preds = %bb19, %bb17
 ; call core::ptr::drop_in_place<core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>>
-  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h14860f460f28eaf1E"(ptr %hole) #10, !dbg !2362
+  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h1cb7c39fa811be84E"(ptr %hole) #10, !dbg !2362
   br label %bb31, !dbg !2362
 
 bb19:                                             ; preds = %bb17
@@ -4164,7 +4165,7 @@ bb19:                                             ; preds = %bb17
   store i64 %i, ptr %i.dbg.spill, align 8, !dbg !2363
   call void @llvm.dbg.declare(metadata ptr %i.dbg.spill, metadata !2306, metadata !DIExpression()), !dbg !2364
 ; call core::slice::<impl [T]>::get_unchecked
-  %28 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.0, i64 %v.1, i64 %i) #10, !dbg !2365
+  %28 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.0, i64 %v.1, i64 %i) #10, !dbg !2365
   store ptr %28, ptr %_48, align 8, !dbg !2365
   %_63 = load ptr, ptr %_48, align 8, !dbg !2366, !nonnull !24, !align !525, !noundef !24
   store ptr %tmp, ptr %self.dbg.spill.i29, align 8
@@ -4177,7 +4178,7 @@ bb19:                                             ; preds = %bb17
   %32 = getelementptr inbounds { ptr, ptr }, ptr %_46, i32 0, i32 1, !dbg !2369
   %33 = load ptr, ptr %32, align 8, !dbg !2369, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_45 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %31, ptr align 8 %33) #10, !dbg !2369
+  %_45 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %31, ptr align 8 %33) #10, !dbg !2369
   %_44 = xor i1 %_45, true, !dbg !2370
   br i1 %_44, label %bb30, label %bb24, !dbg !2370
 
@@ -4214,7 +4215,7 @@ bb26:                                             ; preds = %bb24
   store ptr %36, ptr %1, align 8, !dbg !2385
   %_3.i24 = load ptr, ptr %1, align 8, !dbg !2385, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_3.i21, ptr %_3.i24, i64 1) #10, !dbg !2386
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_3.i21, ptr %_3.i24, i64 1) #10, !dbg !2386
   store ptr %v.0, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !276, metadata !DIExpression()), !dbg !2387
   store i64 %i, ptr %count.dbg.spill.i, align 8
@@ -4232,13 +4233,13 @@ bb26:                                             ; preds = %bb24
 
 panic:                                            ; preds = %bb24
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_2b18b37ae84d61762f070ebc082ffd36) #11, !dbg !2378
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_2b18b37ae84d61762f070ebc082ffd36) #11, !dbg !2378
   unreachable, !dbg !2378
 }
 
 ; core::slice::sort::insert_tail
 ; Function Attrs: noredzone nounwind
-define void @_ZN4core5slice4sort11insert_tail17h1514de253c6181e8E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #1 !dbg !2395 {
+define void @_ZN4core5slice4sort11insert_tail17hd0bdf14e6c88c9a4E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #1 !dbg !2395 {
 start:
   %self.dbg.spill.i24 = alloca ptr, align 8
   %self.dbg.spill.i23 = alloca ptr, align 8
@@ -4315,7 +4316,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %bb1
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_140877f72603b53a2926afdc5b6562c1, i64 30, ptr align 8 @alloc_141337dbddbbf875f1e651a897c1c26f) #11, !dbg !2428
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_140877f72603b53a2926afdc5b6562c1, i64 30, ptr align 8 @alloc_141337dbddbbf875f1e651a897c1c26f) #11, !dbg !2428
   unreachable, !dbg !2428
 
 bb5:                                              ; preds = %bb3
@@ -4359,12 +4360,12 @@ bb5:                                              ; preds = %bb3
   %13 = getelementptr inbounds { ptr, ptr }, ptr %_17, i32 0, i32 1, !dbg !2457
   %14 = load ptr, ptr %13, align 8, !dbg !2457, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_16 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %12, ptr align 8 %14) #10, !dbg !2457
+  %_16 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %12, ptr align 8 %14) #10, !dbg !2457
   br i1 %_16, label %bb9, label %bb28, !dbg !2457
 
 panic:                                            ; preds = %bb3
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_90f4b6dda14e5cb7081926ef9c658315) #11, !dbg !2433
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_90f4b6dda14e5cb7081926ef9c658315) #11, !dbg !2433
   unreachable, !dbg !2433
 
 bb28:                                             ; preds = %bb27, %bb5
@@ -4372,7 +4373,7 @@ bb28:                                             ; preds = %bb27, %bb5
 
 bb9:                                              ; preds = %bb5
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_23, ptr %_3.i18) #10, !dbg !2459
+  call void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_23, ptr %_3.i18) #10, !dbg !2459
   call void @llvm.dbg.declare(metadata ptr %_23, metadata !1014, metadata !DIExpression()), !dbg !2460
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %tmp, ptr align 8 %_23, i64 24, i1 false), !dbg !2462
   store ptr %tmp, ptr %self.dbg.spill.i24, align 8
@@ -4400,7 +4401,7 @@ bb9:                                              ; preds = %bb5
   %17 = getelementptr inbounds { ptr, ptr }, ptr %hole, i32 0, i32 1, !dbg !2478
   %_35 = load ptr, ptr %17, align 8, !dbg !2478, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_35, ptr %_3.i18, i64 1) #10, !dbg !2479
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_35, ptr %_3.i18, i64 1) #10, !dbg !2479
   %_41.0 = sub i64 %_13.0, 1, !dbg !2480
   %_41.1 = icmp ult i64 %_13.0, 1, !dbg !2480
   %18 = call i1 @llvm.expect.i1(i1 %_41.1, i1 false), !dbg !2480
@@ -4415,11 +4416,11 @@ bb15:                                             ; preds = %bb9
   %22 = getelementptr inbounds { i64, i64 }, ptr %_39, i32 0, i32 1, !dbg !2481
   %23 = load i64, ptr %22, align 8, !dbg !2481, !noundef !24
 ; call core::iter::traits::iterator::Iterator::rev
-  %24 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17h8aacf02eab854b71E(i64 %21, i64 %23) #10, !dbg !2481
+  %24 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17hf5ab0050f6bb174fE(i64 %21, i64 %23) #10, !dbg !2481
   %_38.0 = extractvalue { i64, i64 } %24, 0, !dbg !2481
   %_38.1 = extractvalue { i64, i64 } %24, 1, !dbg !2481
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %25 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h7d1ad3d13c2c46beE"(i64 %_38.0, i64 %_38.1) #10, !dbg !2481
+  %25 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h14aa4416da42ac93E"(i64 %_38.0, i64 %_38.1) #10, !dbg !2481
   %_37.0 = extractvalue { i64, i64 } %25, 0, !dbg !2481
   %_37.1 = extractvalue { i64, i64 } %25, 1, !dbg !2481
   %26 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !2481
@@ -4430,12 +4431,12 @@ bb15:                                             ; preds = %bb9
 
 panic1:                                           ; preds = %bb9
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_e41efc6332efd19972427a8ca6f9ac9d) #11, !dbg !2480
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_e41efc6332efd19972427a8ca6f9ac9d) #11, !dbg !2480
   unreachable, !dbg !2480
 
 bb18:                                             ; preds = %bb25, %bb15
 ; call <core::iter::adapters::rev::Rev<I> as core::iter::traits::iterator::Iterator>::next
-  %28 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80eeb9b610c0f8dcE"(ptr align 8 %iter) #10, !dbg !2427
+  %28 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h847b0b0c10613cf4E"(ptr align 8 %iter) #10, !dbg !2427
   store { i64, i64 } %28, ptr %_43, align 8, !dbg !2427
   %_45 = load i64, ptr %_43, align 8, !dbg !2427, !range !1071, !noundef !24
   %29 = icmp eq i64 %_45, 0, !dbg !2427
@@ -4443,7 +4444,7 @@ bb18:                                             ; preds = %bb25, %bb15
 
 bb27:                                             ; preds = %bb20, %bb18
 ; call core::ptr::drop_in_place<core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>>
-  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h14860f460f28eaf1E"(ptr %hole) #10, !dbg !2483
+  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h1cb7c39fa811be84E"(ptr %hole) #10, !dbg !2483
   br label %bb28, !dbg !2483
 
 bb20:                                             ; preds = %bb18
@@ -4474,7 +4475,7 @@ bb20:                                             ; preds = %bb18
   %35 = getelementptr inbounds { ptr, ptr }, ptr %_51, i32 0, i32 1, !dbg !2497
   %36 = load ptr, ptr %35, align 8, !dbg !2497, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_50 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %34, ptr align 8 %36) #10, !dbg !2497
+  %_50 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %34, ptr align 8 %36) #10, !dbg !2497
   %_49 = xor i1 %_50, true, !dbg !2498
   br i1 %_49, label %bb27, label %bb25, !dbg !2498
 
@@ -4485,7 +4486,7 @@ bb25:                                             ; preds = %bb20
   %37 = getelementptr inbounds { ptr, ptr }, ptr %hole, i32 0, i32 1, !dbg !2499
   %_59 = load ptr, ptr %37, align 8, !dbg !2499, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_3.i21, ptr %_59, i64 1) #10, !dbg !2500
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_3.i21, ptr %_59, i64 1) #10, !dbg !2500
   %38 = getelementptr inbounds { ptr, ptr }, ptr %hole, i32 0, i32 1, !dbg !2501
   store ptr %_3.i21, ptr %38, align 8, !dbg !2501
   br label %bb18, !dbg !2482
@@ -4493,7 +4494,7 @@ bb25:                                             ; preds = %bb20
 
 ; core::slice::sort::choose_pivot
 ; Function Attrs: noredzone nounwind
-define { i64, i8 } @_ZN4core5slice4sort12choose_pivot17h7431f8aec081fae7E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #1 !dbg !2502 {
+define { i64, i8 } @_ZN4core5slice4sort12choose_pivot17hdf0d84ebbadba3eeE(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #1 !dbg !2502 {
 start:
   %len.dbg.spill = alloca i64, align 8
   %is_less.dbg.spill = alloca ptr, align 8
@@ -4544,7 +4545,7 @@ bb2:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_912dd1c737b966744c5b309cc20a3d47) #11, !dbg !2550
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_912dd1c737b966744c5b309cc20a3d47) #11, !dbg !2550
   unreachable, !dbg !2550
 
 bb4:                                              ; preds = %bb2
@@ -4558,7 +4559,7 @@ bb4:                                              ; preds = %bb2
 
 panic1:                                           ; preds = %bb2
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_7aff2c5e0ce2b115fc6c1e2cef0aaf8b) #11, !dbg !2551
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_7aff2c5e0ce2b115fc6c1e2cef0aaf8b) #11, !dbg !2551
   unreachable, !dbg !2551
 
 bb6:                                              ; preds = %bb4
@@ -4569,7 +4570,7 @@ bb6:                                              ; preds = %bb4
 
 panic2:                                           ; preds = %bb4
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_51fd6fd3cd9ef520ddfe39086f06b289) #11, !dbg !2552
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_51fd6fd3cd9ef520ddfe39086f06b289) #11, !dbg !2552
   unreachable, !dbg !2552
 
 bb12:                                             ; preds = %bb11, %bb6
@@ -4602,7 +4603,7 @@ bb11:                                             ; preds = %bb8, %bb7
   %18 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_41, i32 0, i32 2, !dbg !2559
   %19 = load ptr, ptr %18, align 8, !dbg !2559, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h3a650c08162e1ac4E"(ptr align 8 %sort3, ptr align 8 %15, ptr align 8 %17, ptr align 8 %19) #10, !dbg !2559
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h248303348bad4de6E"(ptr align 8 %sort3, ptr align 8 %15, ptr align 8 %17, ptr align 8 %19) #10, !dbg !2559
   br label %bb12, !dbg !2559
 
 bb8:                                              ; preds = %bb7
@@ -4610,20 +4611,20 @@ bb8:                                              ; preds = %bb7
   store ptr %a, ptr %_29, align 8, !dbg !2561
   %20 = load ptr, ptr %_29, align 8, !dbg !2561, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h61f2be3fe05b648dE"(ptr align 8 %sort_adjacent, ptr align 8 %20) #10, !dbg !2561
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h14927ba65a6970e2E"(ptr align 8 %sort_adjacent, ptr align 8 %20) #10, !dbg !2561
   store ptr %b, ptr %_33, align 8, !dbg !2562
   %21 = load ptr, ptr %_33, align 8, !dbg !2562, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h61f2be3fe05b648dE"(ptr align 8 %sort_adjacent, ptr align 8 %21) #10, !dbg !2562
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h14927ba65a6970e2E"(ptr align 8 %sort_adjacent, ptr align 8 %21) #10, !dbg !2562
   store ptr %c, ptr %_37, align 8, !dbg !2563
   %22 = load ptr, ptr %_37, align 8, !dbg !2563, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h61f2be3fe05b648dE"(ptr align 8 %sort_adjacent, ptr align 8 %22) #10, !dbg !2563
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h14927ba65a6970e2E"(ptr align 8 %sort_adjacent, ptr align 8 %22) #10, !dbg !2563
   br label %bb11, !dbg !2563
 
 bb14:                                             ; preds = %bb12
 ; call core::slice::<impl [T]>::reverse
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse17h5f2c081d4f44ade6E"(ptr align 8 %v.0, i64 %v.1) #10, !dbg !2564
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse17h3af714df98c7c6a4E"(ptr align 8 %v.0, i64 %v.1) #10, !dbg !2564
   %_53.0 = sub i64 %v.1, 1, !dbg !2565
   %_53.1 = icmp ult i64 %v.1, 1, !dbg !2565
   %23 = call i1 @llvm.expect.i1(i1 %_53.1, i1 false), !dbg !2565
@@ -4659,7 +4660,7 @@ bb16:                                             ; preds = %bb14
 
 panic3:                                           ; preds = %bb14
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6a8eb4c18787545063c119f92681aeff) #11, !dbg !2565
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6a8eb4c18787545063c119f92681aeff) #11, !dbg !2565
   unreachable, !dbg !2565
 
 bb17:                                             ; preds = %bb16
@@ -4670,85 +4671,71 @@ bb17:                                             ; preds = %bb16
 
 panic4:                                           ; preds = %bb16
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6a8eb4c18787545063c119f92681aeff) #11, !dbg !2565
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6a8eb4c18787545063c119f92681aeff) #11, !dbg !2565
   unreachable, !dbg !2565
 }
 
 ; core::slice::sort::choose_pivot::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h2477a29118dc29d5E"(ptr align 8 %_1, ptr align 8 %a, ptr align 8 %b) unnamed_addr #0 !dbg !2573 {
+define void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h14927ba65a6970e2E"(ptr align 8 %_1, ptr align 8 %a) unnamed_addr #0 !dbg !2573 {
 start:
-  %b.dbg.spill = alloca ptr, align 8
+  %tmp.dbg.spill = alloca i64, align 8
   %a.dbg.spill = alloca ptr, align 8
   %_1.dbg.spill = alloca ptr, align 8
-  %_5 = alloca { ptr, ptr }, align 8
+  %_10 = alloca i64, align 8
+  %_7 = alloca i64, align 8
+  %_5 = alloca { ptr, ptr, ptr }, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2579, metadata !DIExpression(DW_OP_deref, DW_OP_plus_uconst, 16, DW_OP_deref)), !dbg !2582
-  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2580, metadata !DIExpression(DW_OP_deref, DW_OP_deref)), !dbg !2583
-  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2581, metadata !DIExpression(DW_OP_deref, DW_OP_plus_uconst, 24, DW_OP_deref)), !dbg !2584
+  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2579, metadata !DIExpression(DW_OP_deref, DW_OP_deref)), !dbg !2582
   store ptr %a, ptr %a.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %a.dbg.spill, metadata !2577, metadata !DIExpression()), !dbg !2585
-  store ptr %b, ptr %b.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %b.dbg.spill, metadata !2578, metadata !DIExpression()), !dbg !2586
-  %0 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 1, !dbg !2587
-  %_16 = load ptr, ptr %0, align 8, !dbg !2587, !nonnull !24, !align !525, !noundef !24
-  %1 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 0, !dbg !2588
-  %_17.0 = load ptr, ptr %1, align 8, !dbg !2588, !nonnull !24, !align !525, !noundef !24
-  %2 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 1, !dbg !2588
-  %_17.1 = load i64, ptr %2, align 8, !dbg !2588, !noundef !24
-  %_8 = load i64, ptr %b, align 8, !dbg !2589, !noundef !24
-; call core::slice::<impl [T]>::get_unchecked
-  %_7 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %_17.0, i64 %_17.1, i64 %_8) #10, !dbg !2588
-  %3 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 0, !dbg !2590
-  %_18.0 = load ptr, ptr %3, align 8, !dbg !2590, !nonnull !24, !align !525, !noundef !24
-  %4 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 1, !dbg !2590
-  %_18.1 = load i64, ptr %4, align 8, !dbg !2590, !noundef !24
-  %_11 = load i64, ptr %a, align 8, !dbg !2591, !noundef !24
-; call core::slice::<impl [T]>::get_unchecked
-  %_10 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %_18.0, i64 %_18.1, i64 %_11) #10, !dbg !2590
-  store ptr %_7, ptr %_5, align 8, !dbg !2587
-  %5 = getelementptr inbounds { ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2587
-  store ptr %_10, ptr %5, align 8, !dbg !2587
-  %6 = getelementptr inbounds { ptr, ptr }, ptr %_5, i32 0, i32 0, !dbg !2587
-  %7 = load ptr, ptr %6, align 8, !dbg !2587, !nonnull !24, !align !525, !noundef !24
-  %8 = getelementptr inbounds { ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2587
-  %9 = load ptr, ptr %8, align 8, !dbg !2587, !nonnull !24, !align !525, !noundef !24
-; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_4 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %_16, ptr align 8 %7, ptr align 8 %9) #10, !dbg !2587
-  br i1 %_4, label %bb4, label %bb7, !dbg !2587
+  call void @llvm.dbg.declare(metadata ptr %a.dbg.spill, metadata !2578, metadata !DIExpression()), !dbg !2583
+  %tmp = load i64, ptr %a, align 8, !dbg !2584, !noundef !24
+  store i64 %tmp, ptr %tmp.dbg.spill, align 8, !dbg !2584
+  call void @llvm.dbg.declare(metadata ptr %tmp.dbg.spill, metadata !2580, metadata !DIExpression()), !dbg !2585
+  %_12 = load ptr, ptr %_1, align 8, !dbg !2586, !nonnull !24, !align !525, !noundef !24
+  %_8.0 = sub i64 %tmp, 1, !dbg !2587
+  %_8.1 = icmp ult i64 %tmp, 1, !dbg !2587
+  %0 = call i1 @llvm.expect.i1(i1 %_8.1, i1 false), !dbg !2587
+  br i1 %0, label %panic, label %bb1, !dbg !2587
 
-bb7:                                              ; preds = %bb6, %start
-  ret void, !dbg !2592
+bb1:                                              ; preds = %start
+  store i64 %_8.0, ptr %_7, align 8, !dbg !2587
+  %1 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %tmp, i64 1), !dbg !2588
+  %_11.0 = extractvalue { i64, i1 } %1, 0, !dbg !2588
+  %_11.1 = extractvalue { i64, i1 } %1, 1, !dbg !2588
+  %2 = call i1 @llvm.expect.i1(i1 %_11.1, i1 false), !dbg !2588
+  br i1 %2, label %panic1, label %bb2, !dbg !2588
 
-bb4:                                              ; preds = %start
-; call core::ptr::swap
-  call void @_ZN4core3ptr4swap17he6717c36f4a67645E(ptr %a, ptr %b) #10, !dbg !2593
-  %10 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 2, !dbg !2594
-  %_19 = load ptr, ptr %10, align 8, !dbg !2594, !nonnull !24, !align !525, !noundef !24
-  %11 = load i64, ptr %_19, align 8, !dbg !2594, !noundef !24
-  %12 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %11, i64 1), !dbg !2594
-  %_15.0 = extractvalue { i64, i1 } %12, 0, !dbg !2594
-  %_15.1 = extractvalue { i64, i1 } %12, 1, !dbg !2594
-  %13 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 2, !dbg !2594
-  %_20 = load ptr, ptr %13, align 8, !dbg !2594, !nonnull !24, !align !525, !noundef !24
-  %14 = call i1 @llvm.expect.i1(i1 %_15.1, i1 false), !dbg !2594
-  br i1 %14, label %panic, label %bb6, !dbg !2594
-
-bb6:                                              ; preds = %bb4
-  %15 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 2, !dbg !2594
-  %_21 = load ptr, ptr %15, align 8, !dbg !2594, !nonnull !24, !align !525, !noundef !24
-  store i64 %_15.0, ptr %_21, align 8, !dbg !2594
-  br label %bb7, !dbg !2595
-
-panic:                                            ; preds = %bb4
+panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_8b1cf5b76b10a43810ba75cdb94336e8) #11, !dbg !2594
-  unreachable, !dbg !2594
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_4e8855159810091534f04a19bbe30782) #11, !dbg !2587
+  unreachable, !dbg !2587
+
+bb2:                                              ; preds = %bb1
+  store i64 %_11.0, ptr %_10, align 8, !dbg !2588
+  store ptr %_7, ptr %_5, align 8, !dbg !2586
+  %3 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2586
+  store ptr %a, ptr %3, align 8, !dbg !2586
+  %4 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 2, !dbg !2586
+  store ptr %_10, ptr %4, align 8, !dbg !2586
+  %5 = load ptr, ptr %_5, align 8, !dbg !2586, !nonnull !24, !align !525, !noundef !24
+  %6 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2586
+  %7 = load ptr, ptr %6, align 8, !dbg !2586, !nonnull !24, !align !525, !noundef !24
+  %8 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 2, !dbg !2586
+  %9 = load ptr, ptr %8, align 8, !dbg !2586, !nonnull !24, !align !525, !noundef !24
+; call core::slice::sort::choose_pivot::{{closure}}
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h248303348bad4de6E"(ptr align 8 %_12, ptr align 8 %5, ptr align 8 %7, ptr align 8 %9) #10, !dbg !2586
+  ret void, !dbg !2589
+
+panic1:                                           ; preds = %bb1
+; call core::panicking::panic
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_787d88f30b9a4c9abd6abb658d261d97) #11, !dbg !2588
+  unreachable, !dbg !2588
 }
 
 ; core::slice::sort::choose_pivot::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h3a650c08162e1ac4E"(ptr align 8 %_1, ptr align 8 %a, ptr align 8 %b, ptr align 8 %c) unnamed_addr #0 !dbg !2596 {
+define void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h248303348bad4de6E"(ptr align 8 %_1, ptr align 8 %a, ptr align 8 %b, ptr align 8 %c) unnamed_addr #0 !dbg !2590 {
 start:
   %c.dbg.spill = alloca ptr, align 8
   %b.dbg.spill = alloca ptr, align 8
@@ -4758,107 +4745,121 @@ start:
   %_8 = alloca { ptr, ptr }, align 8
   %_6 = alloca { ptr, ptr }, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2603, metadata !DIExpression(DW_OP_deref, DW_OP_deref)), !dbg !2604
+  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2597, metadata !DIExpression(DW_OP_deref, DW_OP_deref)), !dbg !2598
   store ptr %a, ptr %a.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %a.dbg.spill, metadata !2600, metadata !DIExpression()), !dbg !2605
+  call void @llvm.dbg.declare(metadata ptr %a.dbg.spill, metadata !2594, metadata !DIExpression()), !dbg !2599
   store ptr %b, ptr %b.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %b.dbg.spill, metadata !2601, metadata !DIExpression()), !dbg !2606
+  call void @llvm.dbg.declare(metadata ptr %b.dbg.spill, metadata !2595, metadata !DIExpression()), !dbg !2600
   store ptr %c, ptr %c.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !2602, metadata !DIExpression()), !dbg !2607
-  %_11 = load ptr, ptr %_1, align 8, !dbg !2608, !nonnull !24, !align !525, !noundef !24
-  store ptr %a, ptr %_6, align 8, !dbg !2608
-  %0 = getelementptr inbounds { ptr, ptr }, ptr %_6, i32 0, i32 1, !dbg !2608
-  store ptr %b, ptr %0, align 8, !dbg !2608
-  %1 = getelementptr inbounds { ptr, ptr }, ptr %_6, i32 0, i32 0, !dbg !2608
-  %2 = load ptr, ptr %1, align 8, !dbg !2608, !nonnull !24, !align !525, !noundef !24
-  %3 = getelementptr inbounds { ptr, ptr }, ptr %_6, i32 0, i32 1, !dbg !2608
-  %4 = load ptr, ptr %3, align 8, !dbg !2608, !nonnull !24, !align !525, !noundef !24
+  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !2596, metadata !DIExpression()), !dbg !2601
+  %_11 = load ptr, ptr %_1, align 8, !dbg !2602, !nonnull !24, !align !525, !noundef !24
+  store ptr %a, ptr %_6, align 8, !dbg !2602
+  %0 = getelementptr inbounds { ptr, ptr }, ptr %_6, i32 0, i32 1, !dbg !2602
+  store ptr %b, ptr %0, align 8, !dbg !2602
+  %1 = getelementptr inbounds { ptr, ptr }, ptr %_6, i32 0, i32 0, !dbg !2602
+  %2 = load ptr, ptr %1, align 8, !dbg !2602, !nonnull !24, !align !525, !noundef !24
+  %3 = getelementptr inbounds { ptr, ptr }, ptr %_6, i32 0, i32 1, !dbg !2602
+  %4 = load ptr, ptr %3, align 8, !dbg !2602, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h2477a29118dc29d5E"(ptr align 8 %_11, ptr align 8 %2, ptr align 8 %4) #10, !dbg !2608
-  %_12 = load ptr, ptr %_1, align 8, !dbg !2609, !nonnull !24, !align !525, !noundef !24
-  store ptr %b, ptr %_8, align 8, !dbg !2609
-  %5 = getelementptr inbounds { ptr, ptr }, ptr %_8, i32 0, i32 1, !dbg !2609
-  store ptr %c, ptr %5, align 8, !dbg !2609
-  %6 = getelementptr inbounds { ptr, ptr }, ptr %_8, i32 0, i32 0, !dbg !2609
-  %7 = load ptr, ptr %6, align 8, !dbg !2609, !nonnull !24, !align !525, !noundef !24
-  %8 = getelementptr inbounds { ptr, ptr }, ptr %_8, i32 0, i32 1, !dbg !2609
-  %9 = load ptr, ptr %8, align 8, !dbg !2609, !nonnull !24, !align !525, !noundef !24
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h9fc612905aef3d78E"(ptr align 8 %_11, ptr align 8 %2, ptr align 8 %4) #10, !dbg !2602
+  %_12 = load ptr, ptr %_1, align 8, !dbg !2603, !nonnull !24, !align !525, !noundef !24
+  store ptr %b, ptr %_8, align 8, !dbg !2603
+  %5 = getelementptr inbounds { ptr, ptr }, ptr %_8, i32 0, i32 1, !dbg !2603
+  store ptr %c, ptr %5, align 8, !dbg !2603
+  %6 = getelementptr inbounds { ptr, ptr }, ptr %_8, i32 0, i32 0, !dbg !2603
+  %7 = load ptr, ptr %6, align 8, !dbg !2603, !nonnull !24, !align !525, !noundef !24
+  %8 = getelementptr inbounds { ptr, ptr }, ptr %_8, i32 0, i32 1, !dbg !2603
+  %9 = load ptr, ptr %8, align 8, !dbg !2603, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h2477a29118dc29d5E"(ptr align 8 %_12, ptr align 8 %7, ptr align 8 %9) #10, !dbg !2609
-  %_13 = load ptr, ptr %_1, align 8, !dbg !2610, !nonnull !24, !align !525, !noundef !24
-  store ptr %a, ptr %_10, align 8, !dbg !2610
-  %10 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 1, !dbg !2610
-  store ptr %b, ptr %10, align 8, !dbg !2610
-  %11 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 0, !dbg !2610
-  %12 = load ptr, ptr %11, align 8, !dbg !2610, !nonnull !24, !align !525, !noundef !24
-  %13 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 1, !dbg !2610
-  %14 = load ptr, ptr %13, align 8, !dbg !2610, !nonnull !24, !align !525, !noundef !24
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h9fc612905aef3d78E"(ptr align 8 %_12, ptr align 8 %7, ptr align 8 %9) #10, !dbg !2603
+  %_13 = load ptr, ptr %_1, align 8, !dbg !2604, !nonnull !24, !align !525, !noundef !24
+  store ptr %a, ptr %_10, align 8, !dbg !2604
+  %10 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 1, !dbg !2604
+  store ptr %b, ptr %10, align 8, !dbg !2604
+  %11 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 0, !dbg !2604
+  %12 = load ptr, ptr %11, align 8, !dbg !2604, !nonnull !24, !align !525, !noundef !24
+  %13 = getelementptr inbounds { ptr, ptr }, ptr %_10, i32 0, i32 1, !dbg !2604
+  %14 = load ptr, ptr %13, align 8, !dbg !2604, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h2477a29118dc29d5E"(ptr align 8 %_13, ptr align 8 %12, ptr align 8 %14) #10, !dbg !2610
-  ret void, !dbg !2611
+  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h9fc612905aef3d78E"(ptr align 8 %_13, ptr align 8 %12, ptr align 8 %14) #10, !dbg !2604
+  ret void, !dbg !2605
 }
 
 ; core::slice::sort::choose_pivot::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h61f2be3fe05b648dE"(ptr align 8 %_1, ptr align 8 %a) unnamed_addr #0 !dbg !2612 {
+define void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h9fc612905aef3d78E"(ptr align 8 %_1, ptr align 8 %a, ptr align 8 %b) unnamed_addr #0 !dbg !2606 {
 start:
-  %tmp.dbg.spill = alloca i64, align 8
+  %b.dbg.spill = alloca ptr, align 8
   %a.dbg.spill = alloca ptr, align 8
   %_1.dbg.spill = alloca ptr, align 8
-  %_10 = alloca i64, align 8
-  %_7 = alloca i64, align 8
-  %_5 = alloca { ptr, ptr, ptr }, align 8
+  %_5 = alloca { ptr, ptr }, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2618, metadata !DIExpression(DW_OP_deref, DW_OP_deref)), !dbg !2621
+  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2612, metadata !DIExpression(DW_OP_deref, DW_OP_plus_uconst, 16, DW_OP_deref)), !dbg !2615
+  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2613, metadata !DIExpression(DW_OP_deref, DW_OP_deref)), !dbg !2616
+  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2614, metadata !DIExpression(DW_OP_deref, DW_OP_plus_uconst, 24, DW_OP_deref)), !dbg !2617
   store ptr %a, ptr %a.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %a.dbg.spill, metadata !2617, metadata !DIExpression()), !dbg !2622
-  %tmp = load i64, ptr %a, align 8, !dbg !2623, !noundef !24
-  store i64 %tmp, ptr %tmp.dbg.spill, align 8, !dbg !2623
-  call void @llvm.dbg.declare(metadata ptr %tmp.dbg.spill, metadata !2619, metadata !DIExpression()), !dbg !2624
-  %_12 = load ptr, ptr %_1, align 8, !dbg !2625, !nonnull !24, !align !525, !noundef !24
-  %_8.0 = sub i64 %tmp, 1, !dbg !2626
-  %_8.1 = icmp ult i64 %tmp, 1, !dbg !2626
-  %0 = call i1 @llvm.expect.i1(i1 %_8.1, i1 false), !dbg !2626
-  br i1 %0, label %panic, label %bb1, !dbg !2626
+  call void @llvm.dbg.declare(metadata ptr %a.dbg.spill, metadata !2610, metadata !DIExpression()), !dbg !2618
+  store ptr %b, ptr %b.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %b.dbg.spill, metadata !2611, metadata !DIExpression()), !dbg !2619
+  %0 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 1, !dbg !2620
+  %_16 = load ptr, ptr %0, align 8, !dbg !2620, !nonnull !24, !align !525, !noundef !24
+  %1 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 0, !dbg !2621
+  %_17.0 = load ptr, ptr %1, align 8, !dbg !2621, !nonnull !24, !align !525, !noundef !24
+  %2 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 1, !dbg !2621
+  %_17.1 = load i64, ptr %2, align 8, !dbg !2621, !noundef !24
+  %_8 = load i64, ptr %b, align 8, !dbg !2622, !noundef !24
+; call core::slice::<impl [T]>::get_unchecked
+  %_7 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %_17.0, i64 %_17.1, i64 %_8) #10, !dbg !2621
+  %3 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 0, !dbg !2623
+  %_18.0 = load ptr, ptr %3, align 8, !dbg !2623, !nonnull !24, !align !525, !noundef !24
+  %4 = getelementptr inbounds { ptr, i64 }, ptr %_1, i32 0, i32 1, !dbg !2623
+  %_18.1 = load i64, ptr %4, align 8, !dbg !2623, !noundef !24
+  %_11 = load i64, ptr %a, align 8, !dbg !2624, !noundef !24
+; call core::slice::<impl [T]>::get_unchecked
+  %_10 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %_18.0, i64 %_18.1, i64 %_11) #10, !dbg !2623
+  store ptr %_7, ptr %_5, align 8, !dbg !2620
+  %5 = getelementptr inbounds { ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2620
+  store ptr %_10, ptr %5, align 8, !dbg !2620
+  %6 = getelementptr inbounds { ptr, ptr }, ptr %_5, i32 0, i32 0, !dbg !2620
+  %7 = load ptr, ptr %6, align 8, !dbg !2620, !nonnull !24, !align !525, !noundef !24
+  %8 = getelementptr inbounds { ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2620
+  %9 = load ptr, ptr %8, align 8, !dbg !2620, !nonnull !24, !align !525, !noundef !24
+; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
+  %_4 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %_16, ptr align 8 %7, ptr align 8 %9) #10, !dbg !2620
+  br i1 %_4, label %bb4, label %bb7, !dbg !2620
 
-bb1:                                              ; preds = %start
-  store i64 %_8.0, ptr %_7, align 8, !dbg !2626
-  %1 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %tmp, i64 1), !dbg !2627
-  %_11.0 = extractvalue { i64, i1 } %1, 0, !dbg !2627
-  %_11.1 = extractvalue { i64, i1 } %1, 1, !dbg !2627
-  %2 = call i1 @llvm.expect.i1(i1 %_11.1, i1 false), !dbg !2627
-  br i1 %2, label %panic1, label %bb2, !dbg !2627
+bb7:                                              ; preds = %bb6, %start
+  ret void, !dbg !2625
 
-panic:                                            ; preds = %start
+bb4:                                              ; preds = %start
+; call core::ptr::swap
+  call void @_ZN4core3ptr4swap17h0e2ea319ec4718d9E(ptr %a, ptr %b) #10, !dbg !2626
+  %10 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 2, !dbg !2627
+  %_19 = load ptr, ptr %10, align 8, !dbg !2627, !nonnull !24, !align !525, !noundef !24
+  %11 = load i64, ptr %_19, align 8, !dbg !2627, !noundef !24
+  %12 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %11, i64 1), !dbg !2627
+  %_15.0 = extractvalue { i64, i1 } %12, 0, !dbg !2627
+  %_15.1 = extractvalue { i64, i1 } %12, 1, !dbg !2627
+  %13 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 2, !dbg !2627
+  %_20 = load ptr, ptr %13, align 8, !dbg !2627, !nonnull !24, !align !525, !noundef !24
+  %14 = call i1 @llvm.expect.i1(i1 %_15.1, i1 false), !dbg !2627
+  br i1 %14, label %panic, label %bb6, !dbg !2627
+
+bb6:                                              ; preds = %bb4
+  %15 = getelementptr inbounds %"[closure@core::slice::sort::choose_pivot<bootinfo::memory_map::MemoryRegion, [closure@core::slice::<impl [bootinfo::memory_map::MemoryRegion]>::sort_unstable_by<[closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/bootinfo/memory_map.rs:40:39: 40:47]>::{closure#0}]>::{closure#0}]", ptr %_1, i32 0, i32 2, !dbg !2627
+  %_21 = load ptr, ptr %15, align 8, !dbg !2627, !nonnull !24, !align !525, !noundef !24
+  store i64 %_15.0, ptr %_21, align 8, !dbg !2627
+  br label %bb7, !dbg !2628
+
+panic:                                            ; preds = %bb4
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_4e8855159810091534f04a19bbe30782) #11, !dbg !2626
-  unreachable, !dbg !2626
-
-bb2:                                              ; preds = %bb1
-  store i64 %_11.0, ptr %_10, align 8, !dbg !2627
-  store ptr %_7, ptr %_5, align 8, !dbg !2625
-  %3 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2625
-  store ptr %a, ptr %3, align 8, !dbg !2625
-  %4 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 2, !dbg !2625
-  store ptr %_10, ptr %4, align 8, !dbg !2625
-  %5 = load ptr, ptr %_5, align 8, !dbg !2625, !nonnull !24, !align !525, !noundef !24
-  %6 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 1, !dbg !2625
-  %7 = load ptr, ptr %6, align 8, !dbg !2625, !nonnull !24, !align !525, !noundef !24
-  %8 = getelementptr inbounds { ptr, ptr, ptr }, ptr %_5, i32 0, i32 2, !dbg !2625
-  %9 = load ptr, ptr %8, align 8, !dbg !2625, !nonnull !24, !align !525, !noundef !24
-; call core::slice::sort::choose_pivot::{{closure}}
-  call void @"_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h3a650c08162e1ac4E"(ptr align 8 %_12, ptr align 8 %5, ptr align 8 %7, ptr align 8 %9) #10, !dbg !2625
-  ret void, !dbg !2628
-
-panic1:                                           ; preds = %bb1
-; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_787d88f30b9a4c9abd6abb658d261d97) #11, !dbg !2627
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_8b1cf5b76b10a43810ba75cdb94336e8) #11, !dbg !2627
   unreachable, !dbg !2627
 }
 
 ; core::slice::sort::break_patterns
 ; Function Attrs: cold noredzone nounwind
-define void @_ZN4core5slice4sort14break_patterns17h72794f22b3ba7970E(ptr align 8 %v.0, i64 %v.1) unnamed_addr #2 !dbg !2629 {
+define void @_ZN4core5slice4sort14break_patterns17h82cd5aee6393f6f0E(ptr align 8 %v.0, i64 %v.1) unnamed_addr #2 !dbg !2629 {
 start:
   %i.dbg.spill = alloca i64, align 8
   %pos.dbg.spill = alloca i64, align 8
@@ -4892,7 +4893,7 @@ bb1:                                              ; preds = %start
   store i64 %v.1, ptr %seed, align 8, !dbg !2661
   store ptr %seed, ptr %gen_usize, align 8, !dbg !2662
 ; call core::num::<impl usize>::next_power_of_two
-  %modulus = call i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$17next_power_of_two17h8bf2ba1ae5ba97f7E"(i64 %v.1) #10, !dbg !2663
+  %modulus = call i64 @"_ZN4core3num23_$LT$impl$u20$usize$GT$17next_power_of_two17h5ea7db227970baadE"(i64 %v.1) #10, !dbg !2663
   store i64 %modulus, ptr %modulus.dbg.spill, align 8, !dbg !2663
   call void @llvm.dbg.declare(metadata ptr %modulus.dbg.spill, metadata !2642, metadata !DIExpression()), !dbg !2664
   %_10 = udiv i64 %v.1, 4, !dbg !2665
@@ -4913,7 +4914,7 @@ bb4:                                              ; preds = %bb1
   %7 = getelementptr inbounds { i64, i64 }, ptr %_14, i32 0, i32 1, !dbg !2667
   %8 = load i64, ptr %7, align 8, !dbg !2667, !noundef !24
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %9 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64 %6, i64 %8) #10, !dbg !2667
+  %9 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64 %6, i64 %8) #10, !dbg !2667
   %_13.0 = extractvalue { i64, i64 } %9, 0, !dbg !2667
   %_13.1 = extractvalue { i64, i64 } %9, 1, !dbg !2667
   %10 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !2667
@@ -4924,12 +4925,12 @@ bb4:                                              ; preds = %bb1
 
 panic:                                            ; preds = %bb1
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_2745df5dada1022057bbf8b1e08b9408) #11, !dbg !2665
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_2745df5dada1022057bbf8b1e08b9408) #11, !dbg !2665
   unreachable, !dbg !2665
 
 bb6:                                              ; preds = %bb16, %bb4
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %12 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8 %iter) #10, !dbg !2655
+  %12 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8 %iter) #10, !dbg !2655
   store { i64, i64 } %12, ptr %_16, align 8, !dbg !2655
   %_18 = load i64, ptr %_16, align 8, !dbg !2655, !range !1071, !noundef !24
   %13 = icmp eq i64 %_18, 0, !dbg !2655
@@ -4941,7 +4942,7 @@ bb8:                                              ; preds = %bb6
   store i64 %i, ptr %i.dbg.spill, align 8, !dbg !2669
   call void @llvm.dbg.declare(metadata ptr %i.dbg.spill, metadata !2648, metadata !DIExpression()), !dbg !2670
 ; call core::slice::sort::break_patterns::{{closure}}
-  %_21 = call i64 @"_ZN4core5slice4sort14break_patterns28_$u7b$$u7b$closure$u7d$$u7d$17h8f558857698948e1E"(ptr align 8 %gen_usize) #10, !dbg !2671
+  %_21 = call i64 @"_ZN4core5slice4sort14break_patterns28_$u7b$$u7b$closure$u7d$$u7d$17h375e7847504c062bE"(ptr align 8 %gen_usize) #10, !dbg !2671
   %_25.0 = sub i64 %modulus, 1, !dbg !2672
   %_25.1 = icmp ult i64 %modulus, 1, !dbg !2672
   %15 = call i1 @llvm.expect.i1(i1 %_25.1, i1 false), !dbg !2672
@@ -4959,7 +4960,7 @@ bb11:                                             ; preds = %bb8
 
 panic1:                                           ; preds = %bb8
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c3165b226cb3c0c182e30d6993318b09) #11, !dbg !2672
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c3165b226cb3c0c182e30d6993318b09) #11, !dbg !2672
   unreachable, !dbg !2672
 
 bb14:                                             ; preds = %bb13, %bb11
@@ -4981,7 +4982,7 @@ bb13:                                             ; preds = %bb12
 
 panic2:                                           ; preds = %bb12
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c938216ce784d5d7b6bb0e8f59c85beb) #11, !dbg !2675
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c938216ce784d5d7b6bb0e8f59c85beb) #11, !dbg !2675
   unreachable, !dbg !2675
 
 bb15:                                             ; preds = %bb14
@@ -4993,24 +4994,24 @@ bb15:                                             ; preds = %bb14
 
 panic3:                                           ; preds = %bb14
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_55987e570b17d50f773e204af1733715) #11, !dbg !2674
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_55987e570b17d50f773e204af1733715) #11, !dbg !2674
   unreachable, !dbg !2674
 
 bb16:                                             ; preds = %bb15
   %_34 = load i64, ptr %other, align 8, !dbg !2677, !noundef !24
 ; call core::slice::<impl [T]>::swap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %v.0, i64 %v.1, i64 %_33.0, i64 %_34, ptr align 8 @alloc_dd29033771d55fdf04aba4a1982901e8) #10, !dbg !2678
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %v.0, i64 %v.1, i64 %_33.0, i64 %_34, ptr align 8 @alloc_dd29033771d55fdf04aba4a1982901e8) #10, !dbg !2678
   br label %bb6, !dbg !2678
 
 panic4:                                           ; preds = %bb15
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_55987e570b17d50f773e204af1733715) #11, !dbg !2674
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_55987e570b17d50f773e204af1733715) #11, !dbg !2674
   unreachable, !dbg !2674
 }
 
 ; core::slice::sort::break_patterns::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define i64 @"_ZN4core5slice4sort14break_patterns28_$u7b$$u7b$closure$u7d$$u7d$17h8f558857698948e1E"(ptr align 8 %_1) unnamed_addr #0 !dbg !2679 {
+define i64 @"_ZN4core5slice4sort14break_patterns28_$u7b$$u7b$closure$u7d$$u7d$17h375e7847504c062bE"(ptr align 8 %_1) unnamed_addr #0 !dbg !2679 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   %r1 = alloca i64, align 8
@@ -5085,7 +5086,7 @@ bb9:                                              ; preds = %bb5, %bb1
 
 ; core::slice::sort::partition_equal
 ; Function Attrs: noredzone nounwind
-define i64 @_ZN4core5slice4sort15partition_equal17hb4484c2331abd190E(ptr align 8 %v.0, i64 %v.1, i64 %pivot, ptr align 8 %is_less) unnamed_addr #1 !dbg !2715 {
+define i64 @_ZN4core5slice4sort15partition_equal17hba39e6a444f93f25E(ptr align 8 %v.0, i64 %v.1, i64 %pivot, ptr align 8 %is_less) unnamed_addr #1 !dbg !2715 {
 start:
   %self.dbg.spill.i23 = alloca ptr, align 8
   %self.dbg.spill.i22 = alloca ptr, align 8
@@ -5132,9 +5133,9 @@ start:
   call void @llvm.dbg.declare(metadata ptr %l, metadata !2733, metadata !DIExpression()), !dbg !2744
   call void @llvm.dbg.declare(metadata ptr %r, metadata !2735, metadata !DIExpression()), !dbg !2745
 ; call core::slice::<impl [T]>::swap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %pivot, ptr align 8 @alloc_f8322b69080b1e19bc4df073038a414d) #10, !dbg !2746
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %pivot, ptr align 8 @alloc_f8322b69080b1e19bc4df073038a414d) #10, !dbg !2746
 ; call core::slice::<impl [T]>::split_at_mut
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17had3b8fecb5ddaee3E"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_7, ptr align 8 %v.0, i64 %v.1, i64 1, ptr align 8 @alloc_23975e137ecce848c3167e283c742672) #10, !dbg !2747
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17h10104258bc233bdfE"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_7, ptr align 8 %v.0, i64 %v.1, i64 1, ptr align 8 @alloc_23975e137ecce848c3167e283c742672) #10, !dbg !2747
   %4 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 0, !dbg !2748
   %pivot.0 = load ptr, ptr %4, align 8, !dbg !2748, !nonnull !24, !align !525, !noundef !24
   %5 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 1, !dbg !2748
@@ -5163,7 +5164,7 @@ bb3:                                              ; preds = %start
   store ptr %pivot5, ptr %pivot.dbg.spill6, align 8, !dbg !2753
   call void @llvm.dbg.declare(metadata ptr %pivot.dbg.spill6, metadata !2725, metadata !DIExpression()), !dbg !2754
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_13, ptr %pivot5) #10, !dbg !2755
+  call void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_13, ptr %pivot5) #10, !dbg !2755
   call void @llvm.dbg.declare(metadata ptr %_13, metadata !1014, metadata !DIExpression()), !dbg !2756
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %tmp, ptr align 8 %_13, i64 24, i1 false), !dbg !2758
   store ptr %tmp, ptr %self.dbg.spill.i23, align 8
@@ -5181,7 +5182,7 @@ bb3:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 0, i64 %pivot.1, ptr align 8 @alloc_3ea9d353dbaea466ca156be00652f893) #11, !dbg !2752
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 0, i64 %pivot.1, ptr align 8 @alloc_3ea9d353dbaea466ca156be00652f893) #11, !dbg !2752
   unreachable, !dbg !2752
 
 bb8:                                              ; preds = %bb33, %bb15, %bb3
@@ -5197,7 +5198,7 @@ bb9:                                              ; preds = %bb8
 bb10:                                             ; preds = %bb8
   %_37 = load i64, ptr %l, align 8, !dbg !2771, !noundef !24
 ; call core::slice::<impl [T]>::get_unchecked
-  %_35 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.02, i64 %v.13, i64 %_37) #10, !dbg !2772
+  %_35 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.02, i64 %v.13, i64 %_37) #10, !dbg !2772
   store ptr %tmp, ptr %_33, align 8, !dbg !2773
   %15 = getelementptr inbounds { ptr, ptr }, ptr %_33, i32 0, i32 1, !dbg !2773
   store ptr %_35, ptr %15, align 8, !dbg !2773
@@ -5206,7 +5207,7 @@ bb10:                                             ; preds = %bb8
   %18 = getelementptr inbounds { ptr, ptr }, ptr %_33, i32 0, i32 1, !dbg !2773
   %19 = load ptr, ptr %18, align 8, !dbg !2773, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_32 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %17, ptr align 8 %19) #10, !dbg !2773
+  %_32 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %17, ptr align 8 %19) #10, !dbg !2773
   %_31 = xor i1 %_32, true, !dbg !2774
   %20 = zext i1 %_31 to i8, !dbg !2769
   store i8 %20, ptr %_27, align 1, !dbg !2769
@@ -5237,7 +5238,7 @@ bb15:                                             ; preds = %bb14
 
 panic8:                                           ; preds = %bb14
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_a23b538f7d9197acefade9a7784184c2) #11, !dbg !2777
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_a23b538f7d9197acefade9a7784184c2) #11, !dbg !2777
   unreachable, !dbg !2777
 
 bb17:                                             ; preds = %bb16
@@ -5253,7 +5254,7 @@ bb18:                                             ; preds = %bb16
 
 bb20:                                             ; preds = %bb18
 ; call core::slice::<impl [T]>::get_unchecked
-  %_46 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.02, i64 %v.13, i64 %_50.0) #10, !dbg !2780
+  %_46 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.02, i64 %v.13, i64 %_50.0) #10, !dbg !2780
   store ptr %tmp, ptr %_44, align 8, !dbg !2781
   %27 = getelementptr inbounds { ptr, ptr }, ptr %_44, i32 0, i32 1, !dbg !2781
   store ptr %_46, ptr %27, align 8, !dbg !2781
@@ -5262,14 +5263,14 @@ bb20:                                             ; preds = %bb18
   %30 = getelementptr inbounds { ptr, ptr }, ptr %_44, i32 0, i32 1, !dbg !2781
   %31 = load ptr, ptr %30, align 8, !dbg !2781, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_43 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %29, ptr align 8 %31) #10, !dbg !2781
+  %_43 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %29, ptr align 8 %31) #10, !dbg !2781
   %32 = zext i1 %_43 to i8, !dbg !2775
   store i8 %32, ptr %_39, align 1, !dbg !2775
   br label %bb19, !dbg !2775
 
 panic9:                                           ; preds = %bb18
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_3aa499bef66e3a89497706d0904ac653) #11, !dbg !2779
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_3aa499bef66e3a89497706d0904ac653) #11, !dbg !2779
   unreachable, !dbg !2779
 
 bb19:                                             ; preds = %bb17, %bb20
@@ -5296,7 +5297,7 @@ bb24:                                             ; preds = %bb23
 
 panic10:                                          ; preds = %bb23
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6b88286adc8b79b2ce0db9f94ea83bc3) #11, !dbg !2784
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6b88286adc8b79b2ce0db9f94ea83bc3) #11, !dbg !2784
   unreachable, !dbg !2784
 
 bb27:                                             ; preds = %bb25
@@ -5316,12 +5317,12 @@ bb26:                                             ; preds = %bb25
 
 bb34:                                             ; preds = %bb26
 ; call core::ptr::drop_in_place<core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>>
-  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h14860f460f28eaf1E"(ptr %_pivot_guard) #10, !dbg !2788
+  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h1cb7c39fa811be84E"(ptr %_pivot_guard) #10, !dbg !2788
   ret i64 %_66.0, !dbg !2789
 
 panic11:                                          ; preds = %bb26
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_10d6a7449345760a13244dcd4f3e8edd) #11, !dbg !2787
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_10d6a7449345760a13244dcd4f3e8edd) #11, !dbg !2787
   unreachable, !dbg !2787
 
 bb28:                                             ; preds = %bb27
@@ -5357,7 +5358,7 @@ bb28:                                             ; preds = %bb27
   store ptr %43, ptr %0, align 8, !dbg !2809
   %_3.i20 = load ptr, ptr %0, align 8, !dbg !2809, !noundef !24
 ; call core::ptr::swap
-  call void @_ZN4core3ptr4swap17he01192a45aa21ed8E(ptr %_3.i, ptr %_3.i20) #10, !dbg !2810
+  call void @_ZN4core3ptr4swap17h773c6fcf72392d61E(ptr %_3.i, ptr %_3.i20) #10, !dbg !2810
   %44 = load i64, ptr %l, align 8, !dbg !2811, !noundef !24
   %45 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %44, i64 1), !dbg !2811
   %_64.0 = extractvalue { i64, i1 } %45, 0, !dbg !2811
@@ -5367,7 +5368,7 @@ bb28:                                             ; preds = %bb27
 
 panic12:                                          ; preds = %bb27
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_894987bd31137d43dbfbf66922648de6) #11, !dbg !2786
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_894987bd31137d43dbfbf66922648de6) #11, !dbg !2786
   unreachable, !dbg !2786
 
 bb33:                                             ; preds = %bb28
@@ -5376,13 +5377,13 @@ bb33:                                             ; preds = %bb28
 
 panic13:                                          ; preds = %bb28
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_bae318ebda80fadd5948c94c31acdbd2) #11, !dbg !2811
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_bae318ebda80fadd5948c94c31acdbd2) #11, !dbg !2811
   unreachable, !dbg !2811
 }
 
 ; core::slice::sort::partition_in_blocks
 ; Function Attrs: noredzone nounwind
-define i64 @_ZN4core5slice4sort19partition_in_blocks17hc74552b90147a34bE(ptr align 8 %v.0, i64 %v.1, ptr align 8 %pivot, ptr align 8 %is_less) unnamed_addr #1 !dbg !2812 {
+define i64 @_ZN4core5slice4sort19partition_in_blocks17h0278288873d9962cE(ptr align 8 %v.0, i64 %v.1, ptr align 8 %pivot, ptr align 8 %is_less) unnamed_addr #1 !dbg !2812 {
 start:
   %small.dbg.spill.i195 = alloca i8, align 1
   %small.dbg.spill.i194 = alloca i8, align 1
@@ -5656,12 +5657,12 @@ start:
   store i64 0, ptr %addr.dbg.spill.i.i180, align 8
   call void @llvm.dbg.declare(metadata ptr %addr.dbg.spill.i.i180, metadata !2913, metadata !DIExpression()), !dbg !2918
 ; call core::ptr::metadata::from_raw_parts_mut
-  %32 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hb47dcef0fd8d9f3eE(ptr null) #10, !dbg !2924
+  %32 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hd9bd820ad9b48ef6E(ptr null) #10, !dbg !2924
   store ptr %32, ptr %start_l, align 8, !dbg !2925
   store i64 0, ptr %addr.dbg.spill.i.i179, align 8
   call void @llvm.dbg.declare(metadata ptr %addr.dbg.spill.i.i179, metadata !2913, metadata !DIExpression()), !dbg !2926
 ; call core::ptr::metadata::from_raw_parts_mut
-  %33 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hb47dcef0fd8d9f3eE(ptr null) #10, !dbg !2929
+  %33 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hd9bd820ad9b48ef6E(ptr null) #10, !dbg !2929
   store ptr %33, ptr %end_l, align 8, !dbg !2930
   %34 = load i8, ptr %26, align 1, !dbg !2931
   %35 = getelementptr inbounds [128 x i8], ptr %offsets_l, i64 0, i64 0, !dbg !2936
@@ -5683,12 +5684,12 @@ start:
   store i64 0, ptr %addr.dbg.spill.i.i178, align 8
   call void @llvm.dbg.declare(metadata ptr %addr.dbg.spill.i.i178, metadata !2913, metadata !DIExpression()), !dbg !2946
 ; call core::ptr::metadata::from_raw_parts_mut
-  %37 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hb47dcef0fd8d9f3eE(ptr null) #10, !dbg !2949
+  %37 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hd9bd820ad9b48ef6E(ptr null) #10, !dbg !2949
   store ptr %37, ptr %start_r, align 8, !dbg !2950
   store i64 0, ptr %addr.dbg.spill.i.i, align 8
   call void @llvm.dbg.declare(metadata ptr %addr.dbg.spill.i.i, metadata !2913, metadata !DIExpression()), !dbg !2951
 ; call core::ptr::metadata::from_raw_parts_mut
-  %38 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hb47dcef0fd8d9f3eE(ptr null) #10, !dbg !2954
+  %38 = call ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hd9bd820ad9b48ef6E(ptr null) #10, !dbg !2954
   store ptr %38, ptr %end_r, align 8, !dbg !2955
   %39 = load i8, ptr %27, align 1, !dbg !2956
   %40 = getelementptr inbounds [128 x i8], ptr %offsets_r, i64 0, i64 0, !dbg !2958
@@ -5699,7 +5700,7 @@ bb9:                                              ; preds = %bb103, %start
   %_21 = load ptr, ptr %l, align 8, !dbg !2960, !noundef !24
   %_22 = load ptr, ptr %r, align 8, !dbg !2961, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %_20 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %_21, ptr %_22) #10, !dbg !2962
+  %_20 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %_21, ptr %_22) #10, !dbg !2962
   %41 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 2, i64 128), !dbg !2963
   %_24.0 = extractvalue { i64, i1 } %41, 0, !dbg !2963
   %_24.1 = extractvalue { i64, i1 } %41, 1, !dbg !2963
@@ -5715,7 +5716,7 @@ bb11:                                             ; preds = %bb9
 
 panic:                                            ; preds = %bb9
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_fe4e881dfa6c70f91499a9b97cada070) #11, !dbg !2963
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_fe4e881dfa6c70f91499a9b97cada070) #11, !dbg !2963
   unreachable, !dbg !2963
 
 bb37:                                             ; preds = %bb35, %bb32, %bb11
@@ -5728,7 +5729,7 @@ bb12:                                             ; preds = %bb11
   %_26 = load ptr, ptr %l, align 8, !dbg !2968, !noundef !24
   %_27 = load ptr, ptr %r, align 8, !dbg !2969, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %44 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %_26, ptr %_27) #10, !dbg !2970
+  %44 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %_26, ptr %_27) #10, !dbg !2970
   store i64 %44, ptr %rem, align 8, !dbg !2970
   %_30 = load ptr, ptr %start_l, align 8, !dbg !2971, !noundef !24
   %_31 = load ptr, ptr %end_l, align 8, !dbg !2972, !noundef !24
@@ -5771,7 +5772,7 @@ bb18:                                             ; preds = %bb17
 
 panic5:                                           ; preds = %bb17
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_2417cbaa5b767dc07fcb426311fbedcd) #11, !dbg !2977
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_2417cbaa5b767dc07fcb426311fbedcd) #11, !dbg !2977
   unreachable, !dbg !2977
 
 bb21:                                             ; preds = %bb19
@@ -5810,7 +5811,7 @@ bb25:                                             ; preds = %bb23
 
 panic6:                                           ; preds = %bb23
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_7d4914bfaafcfa4692cc10dc5496d4e2) #11, !dbg !2987
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_7d4914bfaafcfa4692cc10dc5496d4e2) #11, !dbg !2987
   unreachable, !dbg !2987
 
 bb32:                                             ; preds = %bb30, %bb26
@@ -5840,14 +5841,14 @@ bb30:                                             ; preds = %bb28, %bb29
 
 bb31:                                             ; preds = %bb30
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_8221bdf38a3766feb9723f333c95dc9e, i64 54, ptr align 8 @alloc_d98b9ce84085f5d91faa526ef2b40520) #11, !dbg !2984
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_8221bdf38a3766feb9723f333c95dc9e, i64 54, ptr align 8 @alloc_d98b9ce84085f5d91faa526ef2b40520) #11, !dbg !2984
   unreachable, !dbg !2984
 
 bb33:                                             ; preds = %bb32
   %_61 = load ptr, ptr %l, align 8, !dbg !2996, !noundef !24
   %_62 = load ptr, ptr %r, align 8, !dbg !2997, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %_60 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %_61, ptr %_62) #10, !dbg !2998
+  %_60 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %_61, ptr %_62) #10, !dbg !2998
   %_64 = load i64, ptr %block_l, align 8, !dbg !2999, !noundef !24
   %_65 = load i64, ptr %block_r, align 8, !dbg !3000, !noundef !24
   %55 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %_64, i64 %_65), !dbg !2999
@@ -5863,12 +5864,12 @@ bb35:                                             ; preds = %bb33
 
 panic7:                                           ; preds = %bb33
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_5d32d2daaec9cf0d402f2dc37af0ea6f) #11, !dbg !2999
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_5d32d2daaec9cf0d402f2dc37af0ea6f) #11, !dbg !2999
   unreachable, !dbg !2999
 
 bb36:                                             ; preds = %bb35
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_a3f9d5911d83d2dfd6ee66814bbe6049, i64 50, ptr align 8 @alloc_ea197cb372011b0fee90d7558b246bfb) #11, !dbg !2993
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_a3f9d5911d83d2dfd6ee66814bbe6049, i64 50, ptr align 8 @alloc_ea197cb372011b0fee90d7558b246bfb) #11, !dbg !2993
   unreachable, !dbg !2993
 
 bb48:                                             ; preds = %bb41, %bb37
@@ -5900,7 +5901,7 @@ bb38:                                             ; preds = %bb37
   %63 = getelementptr inbounds { i64, i64 }, ptr %_77, i32 0, i32 1, !dbg !3030
   %64 = load i64, ptr %63, align 8, !dbg !3030, !noundef !24
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %65 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64 %62, i64 %64) #10, !dbg !3030
+  %65 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64 %62, i64 %64) #10, !dbg !3030
   %_76.0 = extractvalue { i64, i64 } %65, 0, !dbg !3030
   %_76.1 = extractvalue { i64, i64 } %65, 1, !dbg !3030
   %66 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !3030
@@ -5911,7 +5912,7 @@ bb38:                                             ; preds = %bb37
 
 bb41:                                             ; preds = %bb43, %bb38
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %68 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8 %iter) #10, !dbg !2902
+  %68 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8 %iter) #10, !dbg !2902
   store { i64, i64 } %68, ptr %_80, align 8, !dbg !2902
   %_82 = load i64, ptr %_80, align 8, !dbg !2902, !range !1071, !noundef !24
   %69 = icmp eq i64 %_82, 0, !dbg !2902
@@ -5935,7 +5936,7 @@ bb43:                                             ; preds = %bb41
   %76 = getelementptr inbounds { ptr, ptr }, ptr %_89, i32 0, i32 1, !dbg !3037
   %77 = load ptr, ptr %76, align 8, !dbg !3037, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_88 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %75, ptr align 8 %77) #10, !dbg !3037
+  %_88 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %75, ptr align 8 %77) #10, !dbg !3037
   %_87 = xor i1 %_88, true, !dbg !3038
   %_86 = zext i1 %_87 to i64, !dbg !3038
   store ptr %_85, ptr %self.dbg.spill.i30, align 8
@@ -5969,13 +5970,13 @@ bb58:                                             ; preds = %bb52, %bb48
   %_119 = load ptr, ptr %start_l, align 8, !dbg !3068, !noundef !24
   %_120 = load ptr, ptr %end_l, align 8, !dbg !3069, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %_118 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17hf4823b1fe1b736f8E(ptr %_119, ptr %_120) #10, !dbg !3070
+  %_118 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h9add440eded0fcbeE(ptr %_119, ptr %_120) #10, !dbg !3070
   %_122 = load ptr, ptr %start_r, align 8, !dbg !3071, !noundef !24
   %_123 = load ptr, ptr %end_r, align 8, !dbg !3072, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %_121 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17hf4823b1fe1b736f8E(ptr %_122, ptr %_123) #10, !dbg !3073
+  %_121 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h9add440eded0fcbeE(ptr %_122, ptr %_123) #10, !dbg !3073
 ; call core::cmp::min
-  %count = call i64 @_ZN4core3cmp3min17hf3463562417c7eceE(i64 %_118, i64 %_121) #10, !dbg !3074
+  %count = call i64 @_ZN4core3cmp3min17h4d553dd5f023dc41E(i64 %_118, i64 %_121) #10, !dbg !3074
   store i64 %count, ptr %count.dbg.spill, align 8, !dbg !3074
   call void @llvm.dbg.declare(metadata ptr %count.dbg.spill, metadata !2865, metadata !DIExpression()), !dbg !3075
   %_124 = icmp ugt i64 %count, 0, !dbg !3076
@@ -6004,7 +6005,7 @@ bb49:                                             ; preds = %bb48
   %86 = getelementptr inbounds { i64, i64 }, ptr %_102, i32 0, i32 1, !dbg !3086
   %87 = load i64, ptr %86, align 8, !dbg !3086, !noundef !24
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %88 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64 %85, i64 %87) #10, !dbg !3086
+  %88 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64 %85, i64 %87) #10, !dbg !3086
   %_101.0 = extractvalue { i64, i64 } %88, 0, !dbg !3086
   %_101.1 = extractvalue { i64, i64 } %88, 1, !dbg !3086
   %89 = getelementptr inbounds { i64, i64 }, ptr %iter2, i32 0, i32 0, !dbg !3086
@@ -6015,7 +6016,7 @@ bb49:                                             ; preds = %bb48
 
 bb52:                                             ; preds = %bb54, %bb49
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %91 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8 %iter2) #10, !dbg !2904
+  %91 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8 %iter2) #10, !dbg !2904
   store { i64, i64 } %91, ptr %_105, align 8, !dbg !2904
   %_107 = load i64, ptr %_105, align 8, !dbg !2904, !range !1071, !noundef !24
   %92 = icmp eq i64 %_107, 0, !dbg !2904
@@ -6058,7 +6059,7 @@ bb54:                                             ; preds = %bb52
   %100 = getelementptr inbounds { ptr, ptr }, ptr %_115, i32 0, i32 1, !dbg !3107
   %101 = load ptr, ptr %100, align 8, !dbg !3107, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_114 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %99, ptr align 8 %101) #10, !dbg !3107
+  %_114 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %99, ptr align 8 %101) #10, !dbg !3107
   %_113 = zext i1 %_114 to i64, !dbg !3107
   store ptr %_112, ptr %self.dbg.spill.i28, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i28, metadata !3039, metadata !DIExpression()), !dbg !3108
@@ -6099,7 +6100,7 @@ bb62:                                             ; preds = %bb58
   store ptr %105, ptr %14, align 8, !dbg !3137
   %_3.i135 = load ptr, ptr %14, align 8, !dbg !3137, !noundef !24
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %tmp, ptr %_3.i135) #10, !dbg !3138
+  call void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %tmp, ptr %_3.i135) #10, !dbg !3138
   %_135 = load ptr, ptr %r, align 8, !dbg !3139, !noundef !24
   %106 = load ptr, ptr %start_r, align 8, !dbg !3139, !noundef !24
   %_138 = load i8, ptr %106, align 1, !dbg !3139, !noundef !24
@@ -6149,7 +6150,7 @@ bb67:                                             ; preds = %bb62
   store ptr %114, ptr %13, align 8, !dbg !3166
   %_3.i138 = load ptr, ptr %13, align 8, !dbg !3166, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_3.i105, ptr %_3.i138, i64 1) #10, !dbg !3167
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_3.i105, ptr %_3.i138, i64 1) #10, !dbg !3167
   store i64 1, ptr %_145, align 8, !dbg !3168
   %115 = getelementptr inbounds { i64, i64 }, ptr %_145, i32 0, i32 1, !dbg !3168
   store i64 %count, ptr %115, align 8, !dbg !3168
@@ -6158,7 +6159,7 @@ bb67:                                             ; preds = %bb62
   %118 = getelementptr inbounds { i64, i64 }, ptr %_145, i32 0, i32 1, !dbg !3168
   %119 = load i64, ptr %118, align 8, !dbg !3168, !noundef !24
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %120 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64 %117, i64 %119) #10, !dbg !3168
+  %120 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64 %117, i64 %119) #10, !dbg !3168
   %_144.0 = extractvalue { i64, i64 } %120, 0, !dbg !3168
   %_144.1 = extractvalue { i64, i64 } %120, 1, !dbg !3168
   %121 = getelementptr inbounds { i64, i64 }, ptr %iter3, i32 0, i32 0, !dbg !3168
@@ -6169,12 +6170,12 @@ bb67:                                             ; preds = %bb62
 
 panic10:                                          ; preds = %bb62
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_0a48b3a7e93a3fb66a7841c604466c03) #11, !dbg !3139
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_0a48b3a7e93a3fb66a7841c604466c03) #11, !dbg !3139
   unreachable, !dbg !3139
 
 bb73:                                             ; preds = %bb86, %bb67
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %123 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8 %iter3) #10, !dbg !2906
+  %123 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8 %iter3) #10, !dbg !2906
   store { i64, i64 } %123, ptr %_148, align 8, !dbg !2906
   %_150 = load i64, ptr %_148, align 8, !dbg !2906, !range !1071, !noundef !24
   %124 = icmp eq i64 %_150, 0, !dbg !2906
@@ -6259,7 +6260,7 @@ bb81:                                             ; preds = %bb75
   store ptr %138, ptr %23, align 8, !dbg !3210
   %_3.i108 = load ptr, ptr %23, align 8, !dbg !3210, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_3.i141, ptr %_3.i108, i64 1) #10, !dbg !3211
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_3.i141, ptr %_3.i108, i64 1) #10, !dbg !3211
   %_166 = load ptr, ptr %start_r, align 8, !dbg !3212, !noundef !24
   store ptr %_166, ptr %self.dbg.spill.i24, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i24, metadata !3039, metadata !DIExpression()), !dbg !3213
@@ -6287,7 +6288,7 @@ bb81:                                             ; preds = %bb75
 
 panic11:                                          ; preds = %bb75
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_255f6db4d0c02746fb4a9b785ea6e516) #11, !dbg !3194
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_255f6db4d0c02746fb4a9b785ea6e516) #11, !dbg !3194
   unreachable, !dbg !3194
 
 bb86:                                             ; preds = %bb81
@@ -6327,12 +6328,12 @@ bb86:                                             ; preds = %bb81
   store ptr %148, ptr %11, align 8, !dbg !3248
   %_3.i144 = load ptr, ptr %11, align 8, !dbg !3248, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_3.i111, ptr %_3.i144, i64 1) #10, !dbg !3249
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_3.i111, ptr %_3.i144, i64 1) #10, !dbg !3249
   br label %bb73, !dbg !3249
 
 panic12:                                          ; preds = %bb81
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_3fa281490ed5627b0d5acda868d81af0) #11, !dbg !3221
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_3fa281490ed5627b0d5acda868d81af0) #11, !dbg !3221
   unreachable, !dbg !3221
 
 bb91:                                             ; preds = %bb76
@@ -6355,10 +6356,10 @@ bb91:                                             ; preds = %bb76
   store ptr %150, ptr %21, align 8, !dbg !3262
   %_3.i114 = load ptr, ptr %21, align 8, !dbg !3262, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %tmp, ptr %_3.i114, i64 1) #10, !dbg !3263
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %tmp, ptr %_3.i114, i64 1) #10, !dbg !3263
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_189, ptr align 8 %tmp, i64 24, i1 false), !dbg !3264
 ; call core::mem::forget
-  call void @_ZN4core3mem6forget17h9ad22200b7c444dfE(ptr %_189) #10, !dbg !3265
+  call void @_ZN4core3mem6forget17h0df2bf7708e9d6b0E(ptr %_189) #10, !dbg !3265
   %_191 = load ptr, ptr %start_l, align 8, !dbg !3266, !noundef !24
   store ptr %_191, ptr %self.dbg.spill.i22, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i22, metadata !3039, metadata !DIExpression()), !dbg !3267
@@ -6389,7 +6390,7 @@ bb91:                                             ; preds = %bb76
 
 panic13:                                          ; preds = %bb76
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_2107e90e8c7dda0adfd21e59e3b7e9ee) #11, !dbg !3170
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_2107e90e8c7dda0adfd21e59e3b7e9ee) #11, !dbg !3170
   unreachable, !dbg !3170
 
 bb100:                                            ; preds = %bb98, %bb97
@@ -6467,7 +6468,7 @@ bb107:                                            ; preds = %bb105
   %_213 = load ptr, ptr %l, align 8, !dbg !3323, !noundef !24
   %_214 = load ptr, ptr %r, align 8, !dbg !3324, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %156 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %_213, ptr %_214) #10, !dbg !3325
+  %156 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %_213, ptr %_214) #10, !dbg !3325
   store i64 %156, ptr %_212, align 8, !dbg !3325
   store ptr %_212, ptr %_210, align 8, !dbg !3320
   %157 = getelementptr inbounds { ptr, ptr }, ptr %_210, i32 0, i32 1, !dbg !3320
@@ -6491,7 +6492,7 @@ bb109:                                            ; preds = %bb107
   store ptr null, ptr %159, align 8, !dbg !2907
   %160 = load i8, ptr %kind, align 1, !dbg !2907, !range !3327, !noundef !24
 ; call core::panicking::assert_failed
-  call void @_ZN4core9panicking13assert_failed17h383a6105ab32c166E(i8 %160, ptr align 8 %left_val, ptr align 8 %right_val, ptr %_224, ptr align 8 @alloc_23d83fb97dc5ddd699c8f80f695d1b3b) #11, !dbg !2907
+  call void @_ZN4core9panicking13assert_failed17h37772a198d8fdd9eE(i8 %160, ptr align 8 %left_val, ptr align 8 %right_val, ptr %_224, ptr align 8 @alloc_23d83fb97dc5ddd699c8f80f695d1b3b) #11, !dbg !2907
   unreachable, !dbg !2907
 
 bb118:                                            ; preds = %bb110
@@ -6501,7 +6502,7 @@ bb118:                                            ; preds = %bb110
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i183, metadata !1971, metadata !DIExpression()), !dbg !3328
   %_240 = load ptr, ptr %r, align 8, !dbg !3330, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %162 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %v.0, ptr %_240) #10, !dbg !3331
+  %162 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %v.0, ptr %_240) #10, !dbg !3331
   store i64 %162, ptr %28, align 8, !dbg !3331
   br label %bb136, !dbg !3331
 
@@ -6561,7 +6562,7 @@ bb111:                                            ; preds = %bb110
   store ptr %167, ptr %19, align 8, !dbg !3374
   %_3.i120 = load ptr, ptr %19, align 8, !dbg !3374, !noundef !24
 ; call core::ptr::swap
-  call void @_ZN4core3ptr4swap17he01192a45aa21ed8E(ptr %_3.i150, ptr %_3.i120) #10, !dbg !3375
+  call void @_ZN4core3ptr4swap17h773c6fcf72392d61E(ptr %_3.i150, ptr %_3.i120) #10, !dbg !3375
   %_238 = load ptr, ptr %r, align 8, !dbg !3376, !noundef !24
   store ptr %_238, ptr %self.dbg.spill.i55, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i55, metadata !2113, metadata !DIExpression()), !dbg !3377
@@ -6594,7 +6595,7 @@ bb121:                                            ; preds = %bb106
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i181, metadata !1971, metadata !DIExpression()), !dbg !3392
   %_278 = load ptr, ptr %l, align 8, !dbg !3394, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %171 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %v.0, ptr %_278) #10, !dbg !3395
+  %171 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %v.0, ptr %_278) #10, !dbg !3395
   store i64 %171, ptr %28, align 8, !dbg !3395
   br label %bb136, !dbg !3395
 
@@ -6611,7 +6612,7 @@ bb122:                                            ; preds = %bb120
   %_248 = load ptr, ptr %l, align 8, !dbg !3399, !noundef !24
   %_249 = load ptr, ptr %r, align 8, !dbg !3400, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %172 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %_248, ptr %_249) #10, !dbg !3401
+  %172 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %_248, ptr %_249) #10, !dbg !3401
   store i64 %172, ptr %_247, align 8, !dbg !3401
   store ptr %_247, ptr %_245, align 8, !dbg !3396
   %173 = getelementptr inbounds { ptr, ptr }, ptr %_245, i32 0, i32 1, !dbg !3396
@@ -6635,7 +6636,7 @@ bb124:                                            ; preds = %bb122
   store ptr null, ptr %175, align 8, !dbg !2908
   %176 = load i8, ptr %kind4, align 1, !dbg !2908, !range !3327, !noundef !24
 ; call core::panicking::assert_failed
-  call void @_ZN4core9panicking13assert_failed17h383a6105ab32c166E(i8 %176, ptr align 8 %left_val14, ptr align 8 %right_val16, ptr %_259, ptr align 8 @alloc_fbd29d12e7b221b5790588e8407e814c) #11, !dbg !2908
+  call void @_ZN4core9panicking13assert_failed17h37772a198d8fdd9eE(i8 %176, ptr align 8 %left_val14, ptr align 8 %right_val16, ptr %_259, ptr align 8 @alloc_fbd29d12e7b221b5790588e8407e814c) #11, !dbg !2908
   unreachable, !dbg !2908
 
 bb133:                                            ; preds = %bb125
@@ -6645,7 +6646,7 @@ bb133:                                            ; preds = %bb125
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i182, metadata !1971, metadata !DIExpression()), !dbg !3403
   %_276 = load ptr, ptr %l, align 8, !dbg !3405, !noundef !24
 ; call core::slice::sort::partition_in_blocks::width
-  %178 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %v.0, ptr %_276) #10, !dbg !3406
+  %178 = call i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %v.0, ptr %_276) #10, !dbg !3406
   store i64 %178, ptr %28, align 8, !dbg !3406
   br label %bb136, !dbg !3406
 
@@ -6702,7 +6703,7 @@ bb129:                                            ; preds = %bb126
   store ptr %185, ptr %17, align 8, !dbg !3440
   %_3.i126 = load ptr, ptr %17, align 8, !dbg !3440, !noundef !24
 ; call core::ptr::swap
-  call void @_ZN4core3ptr4swap17he01192a45aa21ed8E(ptr %_266, ptr %_3.i126) #10, !dbg !3441
+  call void @_ZN4core3ptr4swap17h773c6fcf72392d61E(ptr %_266, ptr %_3.i126) #10, !dbg !3441
   %_274 = load ptr, ptr %l, align 8, !dbg !3442, !noundef !24
   store ptr %_274, ptr %self.dbg.spill.i32, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i32, metadata !276, metadata !DIExpression()), !dbg !3443
@@ -6720,13 +6721,13 @@ bb129:                                            ; preds = %bb126
 
 panic18:                                          ; preds = %bb126
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_0ba58876d11be66a75ed3c6ebb0e6bf5) #11, !dbg !3427
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_0ba58876d11be66a75ed3c6ebb0e6bf5) #11, !dbg !3427
   unreachable, !dbg !3427
 }
 
 ; core::slice::sort::partition_in_blocks::width
 ; Function Attrs: noredzone nounwind
-define i64 @_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE(ptr %l, ptr %r) unnamed_addr #1 !dbg !3452 {
+define i64 @_ZN4core5slice4sort19partition_in_blocks5width17h9add440eded0fcbeE(ptr %l, ptr %r) unnamed_addr #1 !dbg !3452 {
 start:
   %self.dbg.spill.i5 = alloca ptr, align 8
   %self.dbg.spill.i4 = alloca ptr, align 8
@@ -6738,54 +6739,54 @@ start:
   call void @llvm.dbg.declare(metadata ptr %l.dbg.spill, metadata !3457, metadata !DIExpression()), !dbg !3459
   store ptr %r, ptr %r.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %r.dbg.spill, metadata !3458, metadata !DIExpression()), !dbg !3460
-  %_4 = icmp ugt i64 24, 0, !dbg !3461
+  %_4 = icmp ugt i64 1, 0, !dbg !3461
   %_3 = xor i1 %_4, true, !dbg !3462
   br i1 %_3, label %bb2, label %bb3, !dbg !3462
 
 bb3:                                              ; preds = %start
   store ptr %r, ptr %self.dbg.spill.i2, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i2, metadata !3463, metadata !DIExpression()), !dbg !3468
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i2, metadata !1609, metadata !DIExpression()), !dbg !3463
   store ptr %r, ptr %self.dbg.spill.i4, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i4, metadata !1288, metadata !DIExpression()), !dbg !3470
-  %0 = ptrtoint ptr %r to i64, !dbg !3472
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i4, metadata !1618, metadata !DIExpression()), !dbg !3465
+  %0 = ptrtoint ptr %r to i64, !dbg !3467
   store ptr %l, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !3463, metadata !DIExpression()), !dbg !3473
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1609, metadata !DIExpression()), !dbg !3468
   store ptr %l, ptr %self.dbg.spill.i5, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i5, metadata !1288, metadata !DIExpression()), !dbg !3475
-  %1 = ptrtoint ptr %l to i64, !dbg !3477
-  %_10.0 = sub i64 %0, %1, !dbg !3478
-  %_10.1 = icmp ult i64 %0, %1, !dbg !3478
-  %2 = call i1 @llvm.expect.i1(i1 %_10.1, i1 false), !dbg !3478
-  br i1 %2, label %panic, label %bb6, !dbg !3478
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i5, metadata !1618, metadata !DIExpression()), !dbg !3470
+  %1 = ptrtoint ptr %l to i64, !dbg !3472
+  %_10.0 = sub i64 %0, %1, !dbg !3473
+  %_10.1 = icmp ult i64 %0, %1, !dbg !3473
+  %2 = call i1 @llvm.expect.i1(i1 %_10.1, i1 false), !dbg !3473
+  br i1 %2, label %panic, label %bb6, !dbg !3473
 
 bb2:                                              ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_60cd9f07f649265b0b23f897aad9bad7, i64 41, ptr align 8 @alloc_9dd923649e31f13c3223b59f17507a2e) #11, !dbg !3462
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_60cd9f07f649265b0b23f897aad9bad7, i64 41, ptr align 8 @alloc_9dd923649e31f13c3223b59f17507a2e) #11, !dbg !3462
   unreachable, !dbg !3462
 
 bb6:                                              ; preds = %bb3
-  %_12 = icmp eq i64 24, 0, !dbg !3478
-  %3 = call i1 @llvm.expect.i1(i1 %_12, i1 false), !dbg !3478
-  br i1 %3, label %panic1, label %bb8, !dbg !3478
+  %_12 = icmp eq i64 1, 0, !dbg !3473
+  %3 = call i1 @llvm.expect.i1(i1 %_12, i1 false), !dbg !3473
+  br i1 %3, label %panic1, label %bb8, !dbg !3473
 
 panic:                                            ; preds = %bb3
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3478
-  unreachable, !dbg !3478
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3473
+  unreachable, !dbg !3473
 
 bb8:                                              ; preds = %bb6
-  %4 = udiv i64 %_10.0, 24, !dbg !3478
-  ret i64 %4, !dbg !3479
+  %4 = udiv i64 %_10.0, 1, !dbg !3473
+  ret i64 %4, !dbg !3474
 
 panic1:                                           ; preds = %bb6
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3478
-  unreachable, !dbg !3478
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3473
+  unreachable, !dbg !3473
 }
 
 ; core::slice::sort::partition_in_blocks::width
 ; Function Attrs: noredzone nounwind
-define i64 @_ZN4core5slice4sort19partition_in_blocks5width17hf4823b1fe1b736f8E(ptr %l, ptr %r) unnamed_addr #1 !dbg !3480 {
+define i64 @_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E(ptr %l, ptr %r) unnamed_addr #1 !dbg !3475 {
 start:
   %self.dbg.spill.i5 = alloca ptr, align 8
   %self.dbg.spill.i4 = alloca ptr, align 8
@@ -6794,23 +6795,23 @@ start:
   %r.dbg.spill = alloca ptr, align 8
   %l.dbg.spill = alloca ptr, align 8
   store ptr %l, ptr %l.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %l.dbg.spill, metadata !3484, metadata !DIExpression()), !dbg !3486
+  call void @llvm.dbg.declare(metadata ptr %l.dbg.spill, metadata !3479, metadata !DIExpression()), !dbg !3481
   store ptr %r, ptr %r.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %r.dbg.spill, metadata !3485, metadata !DIExpression()), !dbg !3487
-  %_4 = icmp ugt i64 1, 0, !dbg !3488
-  %_3 = xor i1 %_4, true, !dbg !3489
-  br i1 %_3, label %bb2, label %bb3, !dbg !3489
+  call void @llvm.dbg.declare(metadata ptr %r.dbg.spill, metadata !3480, metadata !DIExpression()), !dbg !3482
+  %_4 = icmp ugt i64 24, 0, !dbg !3483
+  %_3 = xor i1 %_4, true, !dbg !3484
+  br i1 %_3, label %bb2, label %bb3, !dbg !3484
 
 bb3:                                              ; preds = %start
   store ptr %r, ptr %self.dbg.spill.i2, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i2, metadata !1609, metadata !DIExpression()), !dbg !3490
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i2, metadata !3485, metadata !DIExpression()), !dbg !3490
   store ptr %r, ptr %self.dbg.spill.i4, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i4, metadata !1618, metadata !DIExpression()), !dbg !3492
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i4, metadata !1288, metadata !DIExpression()), !dbg !3492
   %0 = ptrtoint ptr %r to i64, !dbg !3494
   store ptr %l, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !1609, metadata !DIExpression()), !dbg !3495
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !3485, metadata !DIExpression()), !dbg !3495
   store ptr %l, ptr %self.dbg.spill.i5, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i5, metadata !1618, metadata !DIExpression()), !dbg !3497
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i5, metadata !1288, metadata !DIExpression()), !dbg !3497
   %1 = ptrtoint ptr %l to i64, !dbg !3499
   %_10.0 = sub i64 %0, %1, !dbg !3500
   %_10.1 = icmp ult i64 %0, %1, !dbg !3500
@@ -6819,32 +6820,32 @@ bb3:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_60cd9f07f649265b0b23f897aad9bad7, i64 41, ptr align 8 @alloc_9dd923649e31f13c3223b59f17507a2e) #11, !dbg !3489
-  unreachable, !dbg !3489
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_60cd9f07f649265b0b23f897aad9bad7, i64 41, ptr align 8 @alloc_9dd923649e31f13c3223b59f17507a2e) #11, !dbg !3484
+  unreachable, !dbg !3484
 
 bb6:                                              ; preds = %bb3
-  %_12 = icmp eq i64 1, 0, !dbg !3500
+  %_12 = icmp eq i64 24, 0, !dbg !3500
   %3 = call i1 @llvm.expect.i1(i1 %_12, i1 false), !dbg !3500
   br i1 %3, label %panic1, label %bb8, !dbg !3500
 
 panic:                                            ; preds = %bb3
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3500
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3500
   unreachable, !dbg !3500
 
 bb8:                                              ; preds = %bb6
-  %4 = udiv i64 %_10.0, 1, !dbg !3500
+  %4 = udiv i64 %_10.0, 24, !dbg !3500
   ret i64 %4, !dbg !3501
 
 panic1:                                           ; preds = %bb6
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3500
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.3, i64 25, ptr align 8 @alloc_c103c0ba323341afbed17e7fe7e651ca) #11, !dbg !3500
   unreachable, !dbg !3500
 }
 
 ; core::slice::sort::partial_insertion_sort
 ; Function Attrs: cold noredzone nounwind
-define zeroext i1 @_ZN4core5slice4sort22partial_insertion_sort17hc7d90be9e8a3ebc6E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #2 !dbg !3502 {
+define zeroext i1 @_ZN4core5slice4sort22partial_insertion_sort17h5b3f6178349b7fb4E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less) unnamed_addr #2 !dbg !3502 {
 start:
   %len.dbg.spill = alloca i64, align 8
   %is_less.dbg.spill = alloca ptr, align 8
@@ -6878,7 +6879,7 @@ start:
   %6 = getelementptr inbounds { i64, i64 }, ptr %_7, i32 0, i32 1, !dbg !3521
   %7 = load i64, ptr %6, align 8, !dbg !3521, !noundef !24
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %8 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64 %5, i64 %7) #10, !dbg !3521
+  %8 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64 %5, i64 %7) #10, !dbg !3521
   %_6.0 = extractvalue { i64, i64 } %8, 0, !dbg !3521
   %_6.1 = extractvalue { i64, i64 } %8, 1, !dbg !3521
   %9 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !3521
@@ -6889,7 +6890,7 @@ start:
 
 bb2:                                              ; preds = %bb25, %bb21, %start
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %11 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8 %iter) #10, !dbg !3517
+  %11 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8 %iter) #10, !dbg !3517
   store { i64, i64 } %11, ptr %_9, align 8, !dbg !3517
   %_11 = load i64, ptr %_9, align 8, !dbg !3517, !range !1071, !noundef !24
   %12 = icmp eq i64 %_11, 0, !dbg !3517
@@ -6914,7 +6915,7 @@ bb7:                                              ; preds = %bb6
 bb8:                                              ; preds = %bb6
   %_21 = load i64, ptr %i, align 8, !dbg !3526, !noundef !24
 ; call core::slice::<impl [T]>::get_unchecked
-  %_19 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.0, i64 %v.1, i64 %_21) #10, !dbg !3527
+  %_19 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.0, i64 %v.1, i64 %_21) #10, !dbg !3527
   %_26 = load i64, ptr %i, align 8, !dbg !3528, !noundef !24
   %_27.0 = sub i64 %_26, 1, !dbg !3528
   %_27.1 = icmp ult i64 %_26, 1, !dbg !3528
@@ -6923,7 +6924,7 @@ bb8:                                              ; preds = %bb6
 
 bb11:                                             ; preds = %bb8
 ; call core::slice::<impl [T]>::get_unchecked
-  %_23 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.0, i64 %v.1, i64 %_27.0) #10, !dbg !3529
+  %_23 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.0, i64 %v.1, i64 %_27.0) #10, !dbg !3529
   store ptr %_19, ptr %_17, align 8, !dbg !3530
   %14 = getelementptr inbounds { ptr, ptr }, ptr %_17, i32 0, i32 1, !dbg !3530
   store ptr %_23, ptr %14, align 8, !dbg !3530
@@ -6932,7 +6933,7 @@ bb11:                                             ; preds = %bb8
   %17 = getelementptr inbounds { ptr, ptr }, ptr %_17, i32 0, i32 1, !dbg !3530
   %18 = load ptr, ptr %17, align 8, !dbg !3530, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_16 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %16, ptr align 8 %18) #10, !dbg !3530
+  %_16 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %16, ptr align 8 %18) #10, !dbg !3530
   %_15 = xor i1 %_16, true, !dbg !3531
   %19 = zext i1 %_15 to i8, !dbg !3525
   store i8 %19, ptr %_12, align 1, !dbg !3525
@@ -6940,7 +6941,7 @@ bb11:                                             ; preds = %bb8
 
 panic:                                            ; preds = %bb8
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_bd81c17235b1444753a1935a813b485f) #11, !dbg !3528
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_bd81c17235b1444753a1935a813b485f) #11, !dbg !3528
   unreachable, !dbg !3528
 
 bb9:                                              ; preds = %bb7, %bb11
@@ -6967,7 +6968,7 @@ bb15:                                             ; preds = %bb14
 
 panic1:                                           ; preds = %bb14
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_e743259f65f79dce5fdf7e439c96cb01) #11, !dbg !3533
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_e743259f65f79dce5fdf7e439c96cb01) #11, !dbg !3533
   unreachable, !dbg !3533
 
 bb18:                                             ; preds = %bb16
@@ -6997,14 +6998,14 @@ bb19:                                             ; preds = %bb18
 bb21:                                             ; preds = %bb20
   %_36 = load i64, ptr %i, align 8, !dbg !3542, !noundef !24
 ; call core::slice::<impl [T]>::swap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %v.0, i64 %v.1, i64 %_35.0, i64 %_36, ptr align 8 @alloc_0cd04c6390f55d83a74a72e18ad99930) #10, !dbg !3543
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %v.0, i64 %v.1, i64 %_35.0, i64 %_36, ptr align 8 @alloc_0cd04c6390f55d83a74a72e18ad99930) #10, !dbg !3543
   %_38 = load i64, ptr %i, align 8, !dbg !3544, !noundef !24
   %_37 = icmp uge i64 %_38, 2, !dbg !3544
   br i1 %_37, label %bb23, label %bb2, !dbg !3544
 
 panic2:                                           ; preds = %bb20
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_2300fc4e056106188d3f21c349fb8e76) #11, !dbg !3540
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_2300fc4e056106188d3f21c349fb8e76) #11, !dbg !3540
   unreachable, !dbg !3540
 
 bb23:                                             ; preds = %bb21
@@ -7012,7 +7013,7 @@ bb23:                                             ; preds = %bb21
   store i64 %_43, ptr %_42, align 8, !dbg !3546
   %28 = load i64, ptr %_42, align 8, !dbg !3547, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %29 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc63cb5ffefaf6af8E"(ptr align 8 %v.0, i64 %v.1, i64 %28, ptr align 8 @alloc_5f37f9a166db798315b708b1541f42a2) #10, !dbg !3547
+  %29 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hd96e5c003167cd0eE"(ptr align 8 %v.0, i64 %v.1, i64 %28, ptr align 8 @alloc_5f37f9a166db798315b708b1541f42a2) #10, !dbg !3547
   %_41.0 = extractvalue { ptr, i64 } %29, 0, !dbg !3547
   %_41.1 = extractvalue { ptr, i64 } %29, 1, !dbg !3547
   %_45 = load i64, ptr %i, align 8, !dbg !3548, !noundef !24
@@ -7023,27 +7024,27 @@ bb23:                                             ; preds = %bb21
 
 bb25:                                             ; preds = %bb23
 ; call core::slice::sort::insertion_sort_shift_left
-  call void @_ZN4core5slice4sort25insertion_sort_shift_left17h979a51d65324b32eE(ptr align 8 %_41.0, i64 %_41.1, i64 %_46.0, ptr align 8 %is_less) #10, !dbg !3549
+  call void @_ZN4core5slice4sort25insertion_sort_shift_left17h4143b28fcc8504deE(ptr align 8 %_41.0, i64 %_41.1, i64 %_46.0, ptr align 8 %is_less) #10, !dbg !3549
   %_51 = load i64, ptr %i, align 8, !dbg !3550, !noundef !24
   store i64 %_51, ptr %_50, align 8, !dbg !3551
   %31 = load i64, ptr %_50, align 8, !dbg !3552, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %32 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc63cb5ffefaf6af8E"(ptr align 8 %v.0, i64 %v.1, i64 %31, ptr align 8 @alloc_59f135123cded1fb506d3f148328939a) #10, !dbg !3552
+  %32 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hd96e5c003167cd0eE"(ptr align 8 %v.0, i64 %v.1, i64 %31, ptr align 8 @alloc_59f135123cded1fb506d3f148328939a) #10, !dbg !3552
   %_49.0 = extractvalue { ptr, i64 } %32, 0, !dbg !3552
   %_49.1 = extractvalue { ptr, i64 } %32, 1, !dbg !3552
 ; call core::slice::sort::insertion_sort_shift_right
-  call void @_ZN4core5slice4sort26insertion_sort_shift_right17hc4f690f748a8675bE(ptr align 8 %_49.0, i64 %_49.1, i64 1, ptr align 8 %is_less) #10, !dbg !3553
+  call void @_ZN4core5slice4sort26insertion_sort_shift_right17h4488f0ed37ef92c7E(ptr align 8 %_49.0, i64 %_49.1, i64 1, ptr align 8 %is_less) #10, !dbg !3553
   br label %bb2, !dbg !3553
 
 panic3:                                           ; preds = %bb23
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_51848abd31708fd9bd4e978ad4e2fdf6) #11, !dbg !3548
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_51848abd31708fd9bd4e978ad4e2fdf6) #11, !dbg !3548
   unreachable, !dbg !3548
 }
 
 ; core::slice::sort::insertion_sort_shift_left
 ; Function Attrs: noinline noredzone nounwind
-define void @_ZN4core5slice4sort25insertion_sort_shift_left17h979a51d65324b32eE(ptr align 8 %v.0, i64 %v.1, i64 %offset, ptr align 8 %is_less) unnamed_addr #3 !dbg !3554 {
+define void @_ZN4core5slice4sort25insertion_sort_shift_left17h4143b28fcc8504deE(ptr align 8 %v.0, i64 %v.1, i64 %offset, ptr align 8 %is_less) unnamed_addr #3 !dbg !3554 {
 start:
   %i.dbg.spill = alloca i64, align 8
   %len.dbg.spill = alloca i64, align 8
@@ -7095,7 +7096,7 @@ bb5:                                              ; preds = %bb3
   %9 = getelementptr inbounds { i64, i64 }, ptr %_11, i32 0, i32 1, !dbg !3576
   %10 = load i64, ptr %9, align 8, !dbg !3576, !noundef !24
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %11 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64 %8, i64 %10) #10, !dbg !3576
+  %11 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64 %8, i64 %10) #10, !dbg !3576
   %_10.0 = extractvalue { i64, i64 } %11, 0, !dbg !3576
   %_10.1 = extractvalue { i64, i64 } %11, 1, !dbg !3576
   %12 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !3576
@@ -7106,12 +7107,12 @@ bb5:                                              ; preds = %bb3
 
 bb4:                                              ; preds = %bb3
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_5429279aa16fa0cdfc25e6fc8726a06a, i64 46, ptr align 8 @alloc_99bb945c879f5888798b28005543a365) #11, !dbg !3575
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_5429279aa16fa0cdfc25e6fc8726a06a, i64 46, ptr align 8 @alloc_99bb945c879f5888798b28005543a365) #11, !dbg !3575
   unreachable, !dbg !3575
 
 bb7:                                              ; preds = %bb9, %bb5
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %14 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8 %iter) #10, !dbg !3570
+  %14 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8 %iter) #10, !dbg !3570
   store { i64, i64 } %14, ptr %_13, align 8, !dbg !3570
   %_15 = load i64, ptr %_13, align 8, !dbg !3570, !range !1071, !noundef !24
   %15 = icmp eq i64 %_15, 0, !dbg !3570
@@ -7128,11 +7129,11 @@ bb9:                                              ; preds = %bb7
   store i64 %i, ptr %_20, align 8, !dbg !3581
   %17 = load i64, ptr %_20, align 8, !dbg !3582, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %18 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h48ccfe8b1cad8501E"(ptr align 8 %v.0, i64 %v.1, i64 %17, ptr align 8 @alloc_73eebdc85b9e117e5d0f01368c59f59c) #10, !dbg !3582
+  %18 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hbb2cb149a01fae1bE"(ptr align 8 %v.0, i64 %v.1, i64 %17, ptr align 8 @alloc_73eebdc85b9e117e5d0f01368c59f59c) #10, !dbg !3582
   %_19.0 = extractvalue { ptr, i64 } %18, 0, !dbg !3582
   %_19.1 = extractvalue { ptr, i64 } %18, 1, !dbg !3582
 ; call core::slice::sort::insert_tail
-  call void @_ZN4core5slice4sort11insert_tail17h1514de253c6181e8E(ptr align 8 %_19.0, i64 %_19.1, ptr align 8 %is_less) #10, !dbg !3583
+  call void @_ZN4core5slice4sort11insert_tail17hd0bdf14e6c88c9a4E(ptr align 8 %_19.0, i64 %_19.1, ptr align 8 %is_less) #10, !dbg !3583
   br label %bb7, !dbg !3583
 
 bb10:                                             ; No predecessors!
@@ -7141,7 +7142,7 @@ bb10:                                             ; No predecessors!
 
 ; core::slice::sort::insertion_sort_shift_right
 ; Function Attrs: noinline noredzone nounwind
-define void @_ZN4core5slice4sort26insertion_sort_shift_right17hc4f690f748a8675bE(ptr align 8 %v.0, i64 %v.1, i64 %offset, ptr align 8 %is_less) unnamed_addr #3 !dbg !3584 {
+define void @_ZN4core5slice4sort26insertion_sort_shift_right17h4488f0ed37ef92c7E(ptr align 8 %v.0, i64 %v.1, i64 %offset, ptr align 8 %is_less) unnamed_addr #3 !dbg !3584 {
 start:
   %i.dbg.spill = alloca i64, align 8
   %len.dbg.spill = alloca i64, align 8
@@ -7209,11 +7210,11 @@ bb8:                                              ; preds = %bb3
   %12 = getelementptr inbounds { i64, i64 }, ptr %_14, i32 0, i32 1, !dbg !3605
   %13 = load i64, ptr %12, align 8, !dbg !3605, !noundef !24
 ; call core::iter::traits::iterator::Iterator::rev
-  %14 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17h8aacf02eab854b71E(i64 %11, i64 %13) #10, !dbg !3605
+  %14 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17hf5ab0050f6bb174fE(i64 %11, i64 %13) #10, !dbg !3605
   %_13.0 = extractvalue { i64, i64 } %14, 0, !dbg !3605
   %_13.1 = extractvalue { i64, i64 } %14, 1, !dbg !3605
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %15 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h7d1ad3d13c2c46beE"(i64 %_13.0, i64 %_13.1) #10, !dbg !3605
+  %15 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h14aa4416da42ac93E"(i64 %_13.0, i64 %_13.1) #10, !dbg !3605
   %_12.0 = extractvalue { i64, i64 } %15, 0, !dbg !3605
   %_12.1 = extractvalue { i64, i64 } %15, 1, !dbg !3605
   %16 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !3605
@@ -7224,12 +7225,12 @@ bb8:                                              ; preds = %bb3
 
 bb7:                                              ; preds = %bb3
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_6973cb22fd5a814eff7046b5b9169c77, i64 58, ptr align 8 @alloc_15caf4948137b9f7be8cedfe4929bfd3) #11, !dbg !3604
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_6973cb22fd5a814eff7046b5b9169c77, i64 58, ptr align 8 @alloc_15caf4948137b9f7be8cedfe4929bfd3) #11, !dbg !3604
   unreachable, !dbg !3604
 
 bb11:                                             ; preds = %bb13, %bb8
 ; call <core::iter::adapters::rev::Rev<I> as core::iter::traits::iterator::Iterator>::next
-  %18 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80eeb9b610c0f8dcE"(ptr align 8 %iter) #10, !dbg !3598
+  %18 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h847b0b0c10613cf4E"(ptr align 8 %iter) #10, !dbg !3598
   store { i64, i64 } %18, ptr %_16, align 8, !dbg !3598
   %_18 = load i64, ptr %_16, align 8, !dbg !3598, !range !1071, !noundef !24
   %19 = icmp eq i64 %_18, 0, !dbg !3598
@@ -7251,11 +7252,11 @@ bb13:                                             ; preds = %bb11
   %24 = getelementptr inbounds { i64, i64 }, ptr %_23, i32 0, i32 1, !dbg !3611
   %25 = load i64, ptr %24, align 8, !dbg !3611, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %26 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h2eed47309c4795c2E"(ptr align 8 %v.0, i64 %v.1, i64 %23, i64 %25, ptr align 8 @alloc_9da74b8166775a21c862af0758b35f3d) #10, !dbg !3611
+  %26 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc032faa00f725839E"(ptr align 8 %v.0, i64 %v.1, i64 %23, i64 %25, ptr align 8 @alloc_9da74b8166775a21c862af0758b35f3d) #10, !dbg !3611
   %_22.0 = extractvalue { ptr, i64 } %26, 0, !dbg !3611
   %_22.1 = extractvalue { ptr, i64 } %26, 1, !dbg !3611
 ; call core::slice::sort::insert_head
-  call void @_ZN4core5slice4sort11insert_head17h198b56fb29fbeed4E(ptr align 8 %_22.0, i64 %_22.1, ptr align 8 %is_less) #10, !dbg !3612
+  call void @_ZN4core5slice4sort11insert_head17h67550a7e9e4d71d0E(ptr align 8 %_22.0, i64 %_22.1, ptr align 8 %is_less) #10, !dbg !3612
   br label %bb11, !dbg !3612
 
 bb14:                                             ; No predecessors!
@@ -7264,7 +7265,7 @@ bb14:                                             ; No predecessors!
 
 ; core::slice::sort::recurse
 ; Function Attrs: noredzone nounwind
-define void @_ZN4core5slice4sort7recurse17h67bb0b27e7485c54E(ptr align 8 %0, i64 %1, ptr align 8 %is_less, ptr align 8 %2, i32 %3) unnamed_addr #1 !dbg !3613 {
+define void @_ZN4core5slice4sort7recurse17h36519255d1639a21E(ptr align 8 %0, i64 %1, ptr align 8 %is_less, ptr align 8 %2, i32 %3) unnamed_addr #1 !dbg !3613 {
 start:
   %pivot.dbg.spill9 = alloca ptr, align 8
   %right.dbg.spill7 = alloca { ptr, i64 }, align 8
@@ -7337,7 +7338,7 @@ bb3:                                              ; preds = %bb2
   %10 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3671
   %_12.1 = load i64, ptr %10, align 8, !dbg !3671, !noundef !24
 ; call core::slice::sort::insertion_sort_shift_left
-  call void @_ZN4core5slice4sort25insertion_sort_shift_left17h979a51d65324b32eE(ptr align 8 %_12.0, i64 %_12.1, i64 1, ptr align 8 %is_less) #10, !dbg !3672
+  call void @_ZN4core5slice4sort25insertion_sort_shift_left17h4143b28fcc8504deE(ptr align 8 %_12.0, i64 %_12.1, i64 1, ptr align 8 %is_less) #10, !dbg !3672
   br label %bb39, !dbg !3672
 
 bb5:                                              ; preds = %bb4
@@ -7346,7 +7347,7 @@ bb5:                                              ; preds = %bb4
   %12 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3673
   %_15.1 = load i64, ptr %12, align 8, !dbg !3673, !noundef !24
 ; call core::slice::sort::heapsort
-  call void @_ZN4core5slice4sort8heapsort17h49e35196ac746939E(ptr align 8 %_15.0, i64 %_15.1, ptr align 8 %is_less) #10, !dbg !3674
+  call void @_ZN4core5slice4sort8heapsort17hfa422968b8706bebE(ptr align 8 %_15.0, i64 %_15.1, ptr align 8 %is_less) #10, !dbg !3674
   br label %bb39, !dbg !3674
 
 bb6:                                              ; preds = %bb4
@@ -7361,7 +7362,7 @@ bb10:                                             ; preds = %bb9, %bb6
   %15 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3677
   %_24.1 = load i64, ptr %15, align 8, !dbg !3677, !noundef !24
 ; call core::slice::sort::choose_pivot
-  %16 = call { i64, i8 } @_ZN4core5slice4sort12choose_pivot17h7431f8aec081fae7E(ptr align 8 %_24.0, i64 %_24.1, ptr align 8 %is_less) #10, !dbg !3678
+  %16 = call { i64, i8 } @_ZN4core5slice4sort12choose_pivot17hdf0d84ebbadba3eeE(ptr align 8 %_24.0, i64 %_24.1, ptr align 8 %is_less) #10, !dbg !3678
   %_23.0 = extractvalue { i64, i8 } %16, 0, !dbg !3678
   %17 = extractvalue { i64, i8 } %16, 1, !dbg !3678
   %_23.1 = trunc i8 %17 to i1, !dbg !3678
@@ -7380,7 +7381,7 @@ bb7:                                              ; preds = %bb6
   %21 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3684
   %_19.1 = load i64, ptr %21, align 8, !dbg !3684, !noundef !24
 ; call core::slice::sort::break_patterns
-  call void @_ZN4core5slice4sort14break_patterns17h72794f22b3ba7970E(ptr align 8 %_19.0, i64 %_19.1) #10, !dbg !3685
+  call void @_ZN4core5slice4sort14break_patterns17h82cd5aee6393f6f0E(ptr align 8 %_19.0, i64 %_19.1) #10, !dbg !3685
   %22 = load i32, ptr %limit, align 4, !dbg !3686, !noundef !24
   %_20.0 = sub i32 %22, 1, !dbg !3686
   %_20.1 = icmp ult i32 %22, 1, !dbg !3686
@@ -7393,7 +7394,7 @@ bb9:                                              ; preds = %bb7
 
 panic:                                            ; preds = %bb7
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_afed1504fcd128c4005dc410e4c81be0) #11, !dbg !3686
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_afed1504fcd128c4005dc410e4c81be0) #11, !dbg !3686
   unreachable, !dbg !3686
 
 bb15:                                             ; preds = %bb10
@@ -7440,7 +7441,7 @@ bb18:                                             ; preds = %bb14
   %36 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3690
   %_30.1 = load i64, ptr %36, align 8, !dbg !3690, !noundef !24
 ; call core::slice::sort::partial_insertion_sort
-  %_29 = call zeroext i1 @_ZN4core5slice4sort22partial_insertion_sort17hc7d90be9e8a3ebc6E(ptr align 8 %_30.0, i64 %_30.1, ptr align 8 %is_less) #10, !dbg !3691
+  %_29 = call zeroext i1 @_ZN4core5slice4sort22partial_insertion_sort17h5b3f6178349b7fb4E(ptr align 8 %_30.0, i64 %_30.1, ptr align 8 %is_less) #10, !dbg !3691
   br i1 %_29, label %bb39, label %bb20, !dbg !3691
 
 bb21:                                             ; preds = %bb20
@@ -7461,7 +7462,7 @@ bb27:                                             ; preds = %bb22, %bb20
   %42 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3694
   %_49.1 = load i64, ptr %42, align 8, !dbg !3694, !noundef !24
 ; call core::slice::sort::partition
-  %43 = call { i64, i8 } @_ZN4core5slice4sort9partition17hf98e6f20df429ee3E(ptr align 8 %_49.0, i64 %_49.1, i64 %_23.0, ptr align 8 %is_less) #10, !dbg !3695
+  %43 = call { i64, i8 } @_ZN4core5slice4sort9partition17h25d65a2c3f5d3defE(ptr align 8 %_49.0, i64 %_49.1, i64 %_23.0, ptr align 8 %is_less) #10, !dbg !3695
   %_48.0 = extractvalue { i64, i8 } %43, 0, !dbg !3695
   %44 = extractvalue { i64, i8 } %43, 1, !dbg !3695
   %_48.1 = trunc i8 %44 to i1, !dbg !3695
@@ -7489,13 +7490,13 @@ bb22:                                             ; preds = %bb21
   %54 = getelementptr inbounds { ptr, ptr }, ptr %_35, i32 0, i32 1, !dbg !3702
   %55 = load ptr, ptr %54, align 8, !dbg !3702, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_34 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %53, ptr align 8 %55) #10, !dbg !3702
+  %_34 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %53, ptr align 8 %55) #10, !dbg !3702
   %_33 = xor i1 %_34, true, !dbg !3703
   br i1 %_33, label %bb24, label %bb27, !dbg !3703
 
 panic1:                                           ; preds = %bb21
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_23.0, i64 %_37, ptr align 8 @alloc_587605405deda51184d8e058ecd3dd79) #11, !dbg !3693
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_23.0, i64 %_37, ptr align 8 @alloc_587605405deda51184d8e058ecd3dd79) #11, !dbg !3693
   unreachable, !dbg !3693
 
 bb24:                                             ; preds = %bb22
@@ -7504,7 +7505,7 @@ bb24:                                             ; preds = %bb22
   %57 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3704
   %_40.1 = load i64, ptr %57, align 8, !dbg !3704, !noundef !24
 ; call core::slice::sort::partition_equal
-  %mid = call i64 @_ZN4core5slice4sort15partition_equal17hb4484c2331abd190E(ptr align 8 %_40.0, i64 %_40.1, i64 %_23.0, ptr align 8 %is_less) #10, !dbg !3705
+  %mid = call i64 @_ZN4core5slice4sort15partition_equal17hba39e6a444f93f25E(ptr align 8 %_40.0, i64 %_40.1, i64 %_23.0, ptr align 8 %is_less) #10, !dbg !3705
   store i64 %mid, ptr %mid.dbg.spill, align 8, !dbg !3705
   call void @llvm.dbg.declare(metadata ptr %mid.dbg.spill, metadata !3643, metadata !DIExpression()), !dbg !3706
   %58 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 0, !dbg !3707
@@ -7514,7 +7515,7 @@ bb24:                                             ; preds = %bb22
   store i64 %mid, ptr %_44, align 8, !dbg !3708
   %60 = load i64, ptr %_44, align 8, !dbg !3707, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %61 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17he29b2023f52fc844E"(ptr align 8 %_43.0, i64 %_43.1, i64 %60, ptr align 8 @alloc_696cf6b9c96fa15d1a2bc76997b92dc8) #10, !dbg !3707
+  %61 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17ha0483327d2a5e568E"(ptr align 8 %_43.0, i64 %_43.1, i64 %60, ptr align 8 @alloc_696cf6b9c96fa15d1a2bc76997b92dc8) #10, !dbg !3707
   %_42.0 = extractvalue { ptr, i64 } %61, 0, !dbg !3707
   %_42.1 = extractvalue { ptr, i64 } %61, 1, !dbg !3707
   %62 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 0, !dbg !3709
@@ -7525,7 +7526,7 @@ bb24:                                             ; preds = %bb22
 
 bb29:                                             ; preds = %bb27
 ; call core::cmp::min
-  %_50 = call i64 @_ZN4core3cmp3min17hf3463562417c7eceE(i64 %_48.0, i64 %_52.0) #10, !dbg !3712
+  %_50 = call i64 @_ZN4core3cmp3min17h4d553dd5f023dc41E(i64 %_48.0, i64 %_52.0) #10, !dbg !3712
   %_53 = udiv i64 %_8.1, 8, !dbg !3713
   %64 = icmp uge i64 %_50, %_53, !dbg !3714
   %65 = zext i1 %64 to i8, !dbg !3714
@@ -7537,7 +7538,7 @@ bb29:                                             ; preds = %bb27
   %68 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3716
   %_58.1 = load i64, ptr %68, align 8, !dbg !3716, !noundef !24
 ; call core::slice::<impl [T]>::split_at_mut
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17had3b8fecb5ddaee3E"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_57, ptr align 8 %_58.0, i64 %_58.1, i64 %_48.0, ptr align 8 @alloc_971270e5ffee50b341d575bd26c9235e) #10, !dbg !3716
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17h10104258bc233bdfE"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_57, ptr align 8 %_58.0, i64 %_58.1, i64 %_48.0, ptr align 8 @alloc_971270e5ffee50b341d575bd26c9235e) #10, !dbg !3716
   %69 = getelementptr inbounds { ptr, i64 }, ptr %_57, i32 0, i32 0, !dbg !3717
   %left.0 = load ptr, ptr %69, align 8, !dbg !3717, !nonnull !24, !align !525, !noundef !24
   %70 = getelementptr inbounds { ptr, i64 }, ptr %_57, i32 0, i32 1, !dbg !3717
@@ -7558,7 +7559,7 @@ bb29:                                             ; preds = %bb27
   store i64 %right.1, ptr %77, align 8, !dbg !3719
   call void @llvm.dbg.declare(metadata ptr %right.dbg.spill, metadata !3650, metadata !DIExpression()), !dbg !3720
 ; call core::slice::<impl [T]>::split_at_mut
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17had3b8fecb5ddaee3E"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_61, ptr align 8 %right.0, i64 %right.1, i64 1, ptr align 8 @alloc_06bcb3e9440cff471acdc9917714413b) #10, !dbg !3721
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17h10104258bc233bdfE"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_61, ptr align 8 %right.0, i64 %right.1, i64 1, ptr align 8 @alloc_06bcb3e9440cff471acdc9917714413b) #10, !dbg !3721
   %78 = getelementptr inbounds { ptr, i64 }, ptr %_61, i32 0, i32 0, !dbg !3722
   %pivot.0 = load ptr, ptr %78, align 8, !dbg !3722, !nonnull !24, !align !525, !noundef !24
   %79 = getelementptr inbounds { ptr, i64 }, ptr %_61, i32 0, i32 1, !dbg !3722
@@ -7584,7 +7585,7 @@ bb29:                                             ; preds = %bb27
 
 panic3:                                           ; preds = %bb27
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6a2abb486c72767951ddbfabb5cef306) #11, !dbg !3700
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_6a2abb486c72767951ddbfabb5cef306) #11, !dbg !3700
   unreachable, !dbg !3700
 
 bb34:                                             ; preds = %bb29
@@ -7596,7 +7597,7 @@ bb34:                                             ; preds = %bb29
 
 panic8:                                           ; preds = %bb29
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 0, i64 %pivot.1, ptr align 8 @alloc_f8fe30ccfa6c382fc0c6802f54db9165) #11, !dbg !3726
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 0, i64 %pivot.1, ptr align 8 @alloc_f8fe30ccfa6c382fc0c6802f54db9165) #11, !dbg !3726
   unreachable, !dbg !3726
 
 bb37:                                             ; preds = %bb34
@@ -7604,7 +7605,7 @@ bb37:                                             ; preds = %bb34
   %_77 = load i32, ptr %limit, align 4, !dbg !3731, !noundef !24
   %88 = load ptr, ptr %_76, align 8, !dbg !3732, !align !525, !noundef !24
 ; call core::slice::sort::recurse
-  call void @_ZN4core5slice4sort7recurse17h67bb0b27e7485c54E(ptr align 8 %right.05, i64 %right.16, ptr align 8 %is_less, ptr align 8 %88, i32 %_77) #10, !dbg !3732
+  call void @_ZN4core5slice4sort7recurse17h36519255d1639a21E(ptr align 8 %right.05, i64 %right.16, ptr align 8 %is_less, ptr align 8 %88, i32 %_77) #10, !dbg !3732
   %89 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 0, !dbg !3733
   store ptr %left.0, ptr %89, align 8, !dbg !3733
   %90 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3733
@@ -7615,7 +7616,7 @@ bb35:                                             ; preds = %bb34
   %_72 = load ptr, ptr %pred, align 8, !dbg !3735, !align !525, !noundef !24
   %_73 = load i32, ptr %limit, align 4, !dbg !3736, !noundef !24
 ; call core::slice::sort::recurse
-  call void @_ZN4core5slice4sort7recurse17h67bb0b27e7485c54E(ptr align 8 %left.0, i64 %left.1, ptr align 8 %is_less, ptr align 8 %_72, i32 %_73) #10, !dbg !3737
+  call void @_ZN4core5slice4sort7recurse17h36519255d1639a21E(ptr align 8 %left.0, i64 %left.1, ptr align 8 %is_less, ptr align 8 %_72, i32 %_73) #10, !dbg !3737
   %91 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 0, !dbg !3738
   store ptr %right.05, ptr %91, align 8, !dbg !3738
   %92 = getelementptr inbounds { ptr, i64 }, ptr %v, i32 0, i32 1, !dbg !3738
@@ -7628,7 +7629,7 @@ bb35:                                             ; preds = %bb34
 
 ; core::slice::sort::heapsort
 ; Function Attrs: cold noredzone nounwind
-define void @_ZN4core5slice4sort8heapsort17h49e35196ac746939E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %0) unnamed_addr #2 !dbg !3741 {
+define void @_ZN4core5slice4sort8heapsort17hfa422968b8706bebE(ptr align 8 %v.0, i64 %v.1, ptr align 8 %0) unnamed_addr #2 !dbg !3741 {
 start:
   %i.dbg.spill3 = alloca i64, align 8
   %i.dbg.spill = alloca i64, align 8
@@ -7664,11 +7665,11 @@ start:
   %6 = getelementptr inbounds { i64, i64 }, ptr %_7, i32 0, i32 1, !dbg !3768
   %7 = load i64, ptr %6, align 8, !dbg !3768, !noundef !24
 ; call core::iter::traits::iterator::Iterator::rev
-  %8 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17h8aacf02eab854b71E(i64 %5, i64 %7) #10, !dbg !3768
+  %8 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17hf5ab0050f6bb174fE(i64 %5, i64 %7) #10, !dbg !3768
   %_6.0 = extractvalue { i64, i64 } %8, 0, !dbg !3768
   %_6.1 = extractvalue { i64, i64 } %8, 1, !dbg !3768
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %9 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h7d1ad3d13c2c46beE"(i64 %_6.0, i64 %_6.1) #10, !dbg !3768
+  %9 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h14aa4416da42ac93E"(i64 %_6.0, i64 %_6.1) #10, !dbg !3768
   %_5.0 = extractvalue { i64, i64 } %9, 0, !dbg !3768
   %_5.1 = extractvalue { i64, i64 } %9, 1, !dbg !3768
   %10 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !3768
@@ -7679,7 +7680,7 @@ start:
 
 bb4:                                              ; preds = %bb6, %start
 ; call <core::iter::adapters::rev::Rev<I> as core::iter::traits::iterator::Iterator>::next
-  %12 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80eeb9b610c0f8dcE"(ptr align 8 %iter) #10, !dbg !3764
+  %12 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h847b0b0c10613cf4E"(ptr align 8 %iter) #10, !dbg !3764
   store { i64, i64 } %12, ptr %_13, align 8, !dbg !3764
   %_15 = load i64, ptr %_13, align 8, !dbg !3764, !range !1071, !noundef !24
   %13 = icmp eq i64 %_15, 0, !dbg !3764
@@ -7694,11 +7695,11 @@ bb8:                                              ; preds = %bb4
   %17 = getelementptr inbounds { i64, i64 }, ptr %_22, i32 0, i32 1, !dbg !3770
   %18 = load i64, ptr %17, align 8, !dbg !3770, !noundef !24
 ; call core::iter::traits::iterator::Iterator::rev
-  %19 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17h8aacf02eab854b71E(i64 %16, i64 %18) #10, !dbg !3770
+  %19 = call { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17hf5ab0050f6bb174fE(i64 %16, i64 %18) #10, !dbg !3770
   %_21.0 = extractvalue { i64, i64 } %19, 0, !dbg !3770
   %_21.1 = extractvalue { i64, i64 } %19, 1, !dbg !3770
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %20 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h7d1ad3d13c2c46beE"(i64 %_21.0, i64 %_21.1) #10, !dbg !3770
+  %20 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h14aa4416da42ac93E"(i64 %_21.0, i64 %_21.1) #10, !dbg !3770
   %_20.0 = extractvalue { i64, i64 } %20, 0, !dbg !3770
   %_20.1 = extractvalue { i64, i64 } %20, 1, !dbg !3770
   %21 = getelementptr inbounds { i64, i64 }, ptr %iter1, i32 0, i32 0, !dbg !3770
@@ -7725,12 +7726,12 @@ bb6:                                              ; preds = %bb4
   %31 = getelementptr inbounds { { ptr, i64 }, i64 }, ptr %_19, i32 0, i32 1, !dbg !3774
   %32 = load i64, ptr %31, align 8, !dbg !3774, !noundef !24
 ; call core::slice::sort::heapsort::{{closure}}
-  call void @"_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h9a8cf1de39cb1214E"(ptr align 8 %sift_down, ptr align 8 %28, i64 %30, i64 %32) #10, !dbg !3774
+  call void @"_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h3a408e774416e0dcE"(ptr align 8 %sift_down, ptr align 8 %28, i64 %30, i64 %32) #10, !dbg !3774
   br label %bb4, !dbg !3774
 
 bb11:                                             ; preds = %bb13, %bb8
 ; call <core::iter::adapters::rev::Rev<I> as core::iter::traits::iterator::Iterator>::next
-  %33 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80eeb9b610c0f8dcE"(ptr align 8 %iter1) #10, !dbg !3765
+  %33 = call { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h847b0b0c10613cf4E"(ptr align 8 %iter1) #10, !dbg !3765
   store { i64, i64 } %33, ptr %_26, align 8, !dbg !3765
   %_28 = load i64, ptr %_26, align 8, !dbg !3765, !range !1071, !noundef !24
   %34 = icmp eq i64 %_28, 0, !dbg !3765
@@ -7745,11 +7746,11 @@ bb13:                                             ; preds = %bb11
   store i64 %i2, ptr %i.dbg.spill3, align 8, !dbg !3776
   call void @llvm.dbg.declare(metadata ptr %i.dbg.spill3, metadata !3757, metadata !DIExpression()), !dbg !3777
 ; call core::slice::<impl [T]>::swap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %i2, ptr align 8 @alloc_dc7cc06f65f47d89307805f9ed1e1cb4) #10, !dbg !3778
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %i2, ptr align 8 @alloc_dc7cc06f65f47d89307805f9ed1e1cb4) #10, !dbg !3778
   store i64 %i2, ptr %_36, align 8, !dbg !3779
   %36 = load i64, ptr %_36, align 8, !dbg !3780, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %37 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc63cb5ffefaf6af8E"(ptr align 8 %v.0, i64 %v.1, i64 %36, ptr align 8 @alloc_218d542ba7d42d9731521fd943356c38) #10, !dbg !3780
+  %37 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hd96e5c003167cd0eE"(ptr align 8 %v.0, i64 %v.1, i64 %36, ptr align 8 @alloc_218d542ba7d42d9731521fd943356c38) #10, !dbg !3780
   %_35.0 = extractvalue { ptr, i64 } %37, 0, !dbg !3780
   %_35.1 = extractvalue { ptr, i64 } %37, 1, !dbg !3780
   %38 = getelementptr inbounds { ptr, i64 }, ptr %_33, i32 0, i32 0, !dbg !3781
@@ -7765,7 +7766,7 @@ bb13:                                             ; preds = %bb11
   %45 = getelementptr inbounds { { ptr, i64 }, i64 }, ptr %_33, i32 0, i32 1, !dbg !3781
   %46 = load i64, ptr %45, align 8, !dbg !3781, !noundef !24
 ; call core::slice::sort::heapsort::{{closure}}
-  call void @"_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h9a8cf1de39cb1214E"(ptr align 8 %sift_down, ptr align 8 %42, i64 %44, i64 %46) #10, !dbg !3781
+  call void @"_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h3a408e774416e0dcE"(ptr align 8 %sift_down, ptr align 8 %42, i64 %44, i64 %46) #10, !dbg !3781
   br label %bb11, !dbg !3781
 
 bb7:                                              ; No predecessors!
@@ -7774,7 +7775,7 @@ bb7:                                              ; No predecessors!
 
 ; core::slice::sort::heapsort::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h9a8cf1de39cb1214E"(ptr align 8 %_1, ptr align 8 %v.0, i64 %v.1, i64 %0) unnamed_addr #0 !dbg !3782 {
+define void @"_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h3a408e774416e0dcE"(ptr align 8 %_1, ptr align 8 %v.0, i64 %v.1, i64 %0) unnamed_addr #0 !dbg !3782 {
 start:
   %v.dbg.spill = alloca { ptr, i64 }, align 8
   %_1.dbg.spill = alloca ptr, align 8
@@ -7811,7 +7812,7 @@ bb2:                                              ; preds = %bb1
 
 panic:                                            ; preds = %bb1
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_8c633453631874cfb45135c562495182) #11, !dbg !3798
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_8c633453631874cfb45135c562495182) #11, !dbg !3798
   unreachable, !dbg !3798
 
 bb3:                                              ; preds = %bb2
@@ -7822,7 +7823,7 @@ bb3:                                              ; preds = %bb2
 
 panic1:                                           ; preds = %bb2
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_8c633453631874cfb45135c562495182) #11, !dbg !3798
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_8c633453631874cfb45135c562495182) #11, !dbg !3798
   unreachable, !dbg !3798
 
 bb4:                                              ; preds = %bb3
@@ -7842,7 +7843,7 @@ bb5:                                              ; preds = %bb4
 
 panic2:                                           ; preds = %bb4
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_cced75eb33ad0d231589a125c7f2c71e) #11, !dbg !3800
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_cced75eb33ad0d231589a125c7f2c71e) #11, !dbg !3800
   unreachable, !dbg !3800
 
 bb12:                                             ; preds = %bb11, %bb5
@@ -7870,7 +7871,7 @@ bb7:                                              ; preds = %bb6
 
 panic3:                                           ; preds = %bb6
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_23, i64 %v.1, ptr align 8 @alloc_02d41e7169598a3cfcfd3f0d1c833ec2) #11, !dbg !3807
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_23, i64 %v.1, ptr align 8 @alloc_02d41e7169598a3cfcfd3f0d1c833ec2) #11, !dbg !3807
   unreachable, !dbg !3807
 
 bb8:                                              ; preds = %bb7
@@ -7880,7 +7881,7 @@ bb8:                                              ; preds = %bb7
 
 panic4:                                           ; preds = %bb7
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_794be56d42be9995e3a84c84d26159ed) #11, !dbg !3809
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_794be56d42be9995e3a84c84d26159ed) #11, !dbg !3809
   unreachable, !dbg !3809
 
 bb9:                                              ; preds = %bb8
@@ -7893,7 +7894,7 @@ bb9:                                              ; preds = %bb8
   %17 = getelementptr inbounds { ptr, ptr }, ptr %_21, i32 0, i32 1, !dbg !3805
   %18 = load ptr, ptr %17, align 8, !dbg !3805, !nonnull !24, !align !525, !noundef !24
 ; call core::ops::function::impls::<impl core::ops::function::FnMut<A> for &mut F>::call_mut
-  %_20 = call zeroext i1 @"_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17hdc67ec61149bda50E"(ptr align 8 %_48, ptr align 8 %16, ptr align 8 %18) #10, !dbg !3805
+  %_20 = call zeroext i1 @"_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17h0dcc23ef895e1408E"(ptr align 8 %_48, ptr align 8 %16, ptr align 8 %18) #10, !dbg !3805
   %_19 = zext i1 %_20 to i64, !dbg !3805
   %19 = load i64, ptr %child, align 8, !dbg !3812, !noundef !24
   %20 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %19, i64 %_19), !dbg !3812
@@ -7904,7 +7905,7 @@ bb9:                                              ; preds = %bb8
 
 panic5:                                           ; preds = %bb8
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_29.0, i64 %v.1, ptr align 8 @alloc_d32b57d7e285e3b164a125d44291af3f) #11, !dbg !3810
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_29.0, i64 %v.1, ptr align 8 @alloc_d32b57d7e285e3b164a125d44291af3f) #11, !dbg !3810
   unreachable, !dbg !3810
 
 bb11:                                             ; preds = %bb9
@@ -7913,7 +7914,7 @@ bb11:                                             ; preds = %bb9
 
 panic6:                                           ; preds = %bb9
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_3f7ac4164e6f54924783af0ed6bc3c8d) #11, !dbg !3812
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_3f7ac4164e6f54924783af0ed6bc3c8d) #11, !dbg !3812
   unreachable, !dbg !3812
 
 bb13:                                             ; preds = %bb12
@@ -7925,7 +7926,7 @@ bb13:                                             ; preds = %bb12
 
 panic7:                                           ; preds = %bb12
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_37, i64 %v.1, ptr align 8 @alloc_5714221f35142e87516e8a17190398c5) #11, !dbg !3804
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_37, i64 %v.1, ptr align 8 @alloc_5714221f35142e87516e8a17190398c5) #11, !dbg !3804
   unreachable, !dbg !3804
 
 bb14:                                             ; preds = %bb13
@@ -7938,20 +7939,20 @@ bb14:                                             ; preds = %bb13
   %26 = getelementptr inbounds { ptr, ptr }, ptr %_35, i32 0, i32 1, !dbg !3802
   %27 = load ptr, ptr %26, align 8, !dbg !3802, !nonnull !24, !align !525, !noundef !24
 ; call core::ops::function::impls::<impl core::ops::function::FnMut<A> for &mut F>::call_mut
-  %_34 = call zeroext i1 @"_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17hdc67ec61149bda50E"(ptr align 8 %_49, ptr align 8 %25, ptr align 8 %27) #10, !dbg !3802
+  %_34 = call zeroext i1 @"_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17h0dcc23ef895e1408E"(ptr align 8 %_49, ptr align 8 %25, ptr align 8 %27) #10, !dbg !3802
   %_33 = xor i1 %_34, true, !dbg !3818
   br i1 %_33, label %bb18, label %bb16, !dbg !3818
 
 panic8:                                           ; preds = %bb13
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_41, i64 %v.1, ptr align 8 @alloc_8b3b0b984669970c12a2c2d899b23d16) #11, !dbg !3816
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_41, i64 %v.1, ptr align 8 @alloc_8b3b0b984669970c12a2c2d899b23d16) #11, !dbg !3816
   unreachable, !dbg !3816
 
 bb16:                                             ; preds = %bb14
   %_45 = load i64, ptr %node, align 8, !dbg !3819, !noundef !24
   %_46 = load i64, ptr %child, align 8, !dbg !3820, !noundef !24
 ; call core::slice::<impl [T]>::swap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %v.0, i64 %v.1, i64 %_45, i64 %_46, ptr align 8 @alloc_4685547f2c3cd5dc1819afd3ce6280d4) #10, !dbg !3821
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %v.0, i64 %v.1, i64 %_45, i64 %_46, ptr align 8 @alloc_4685547f2c3cd5dc1819afd3ce6280d4) #10, !dbg !3821
   %_47 = load i64, ptr %child, align 8, !dbg !3822, !noundef !24
   store i64 %_47, ptr %node, align 8, !dbg !3823
   br label %bb1, !dbg !3796
@@ -7959,7 +7960,7 @@ bb16:                                             ; preds = %bb14
 
 ; core::slice::sort::partition
 ; Function Attrs: noredzone nounwind
-define { i64, i8 } @_ZN4core5slice4sort9partition17hf98e6f20df429ee3E(ptr align 8 %v.0, i64 %v.1, i64 %pivot, ptr align 8 %is_less) unnamed_addr #1 !dbg !3824 {
+define { i64, i8 } @_ZN4core5slice4sort9partition17h25d65a2c3f5d3defE(ptr align 8 %v.0, i64 %v.1, i64 %pivot, ptr align 8 %is_less) unnamed_addr #1 !dbg !3824 {
 start:
   %self.dbg.spill.i12 = alloca ptr, align 8
   %self.dbg.spill.i = alloca ptr, align 8
@@ -7999,9 +8000,9 @@ start:
   call void @llvm.dbg.declare(metadata ptr %l, metadata !3845, metadata !DIExpression()), !dbg !3854
   call void @llvm.dbg.declare(metadata ptr %r, metadata !3847, metadata !DIExpression()), !dbg !3855
 ; call core::slice::<impl [T]>::swap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %pivot, ptr align 8 @alloc_a32d8ca4e4d506b0d34a470e4dcb5cd1) #10, !dbg !3856
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %pivot, ptr align 8 @alloc_a32d8ca4e4d506b0d34a470e4dcb5cd1) #10, !dbg !3856
 ; call core::slice::<impl [T]>::split_at_mut
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17had3b8fecb5ddaee3E"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_10, ptr align 8 %v.0, i64 %v.1, i64 1, ptr align 8 @alloc_e52ab9305e2b15d74c4e9ac02c87db27) #10, !dbg !3857
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17h10104258bc233bdfE"(ptr sret({ { ptr, i64 }, { ptr, i64 } }) %_10, ptr align 8 %v.0, i64 %v.1, i64 1, ptr align 8 @alloc_e52ab9305e2b15d74c4e9ac02c87db27) #10, !dbg !3857
   %3 = getelementptr inbounds { ptr, i64 }, ptr %_10, i32 0, i32 0, !dbg !3858
   %pivot.0 = load ptr, ptr %3, align 8, !dbg !3858, !nonnull !24, !align !525, !noundef !24
   %4 = getelementptr inbounds { ptr, i64 }, ptr %_10, i32 0, i32 1, !dbg !3858
@@ -8030,7 +8031,7 @@ bb3:                                              ; preds = %start
   store ptr %pivot5, ptr %pivot.dbg.spill6, align 8, !dbg !3863
   call void @llvm.dbg.declare(metadata ptr %pivot.dbg.spill6, metadata !3837, metadata !DIExpression()), !dbg !3864
 ; call core::ptr::read
-  call void @_ZN4core3ptr4read17hcf8a75dda28c31bfE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_16, ptr %pivot5) #10, !dbg !3865
+  call void @_ZN4core3ptr4read17hd2e1ba373cca635eE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_16, ptr %pivot5) #10, !dbg !3865
   call void @llvm.dbg.declare(metadata ptr %_16, metadata !1014, metadata !DIExpression()), !dbg !3866
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %tmp, ptr align 8 %_16, i64 24, i1 false), !dbg !3868
   store ptr %tmp, ptr %self.dbg.spill.i12, align 8
@@ -8048,7 +8049,7 @@ bb3:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 0, i64 %pivot.1, ptr align 8 @alloc_0b2a738361d208826a072b92b3acda46) #11, !dbg !3862
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 0, i64 %pivot.1, ptr align 8 @alloc_0b2a738361d208826a072b92b3acda46) #11, !dbg !3862
   unreachable, !dbg !3862
 
 bb8:                                              ; preds = %bb15, %bb3
@@ -8064,7 +8065,7 @@ bb9:                                              ; preds = %bb8
 bb10:                                             ; preds = %bb8
   %_39 = load i64, ptr %l, align 8, !dbg !3881, !noundef !24
 ; call core::slice::<impl [T]>::get_unchecked
-  %_37 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.02, i64 %v.13, i64 %_39) #10, !dbg !3882
+  %_37 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.02, i64 %v.13, i64 %_39) #10, !dbg !3882
   store ptr %_37, ptr %_35, align 8, !dbg !3883
   %14 = getelementptr inbounds { ptr, ptr }, ptr %_35, i32 0, i32 1, !dbg !3883
   store ptr %tmp, ptr %14, align 8, !dbg !3883
@@ -8073,7 +8074,7 @@ bb10:                                             ; preds = %bb8
   %17 = getelementptr inbounds { ptr, ptr }, ptr %_35, i32 0, i32 1, !dbg !3883
   %18 = load ptr, ptr %17, align 8, !dbg !3883, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_34 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %16, ptr align 8 %18) #10, !dbg !3883
+  %_34 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %16, ptr align 8 %18) #10, !dbg !3883
   %19 = zext i1 %_34 to i8, !dbg !3879
   store i8 %19, ptr %_30, align 1, !dbg !3879
   br label %bb11, !dbg !3879
@@ -8103,7 +8104,7 @@ bb15:                                             ; preds = %bb14
 
 panic8:                                           ; preds = %bb14
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_96c6545aa6432add279027414fe61766) #11, !dbg !3886
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_96c6545aa6432add279027414fe61766) #11, !dbg !3886
   unreachable, !dbg !3886
 
 bb17:                                             ; preds = %bb16
@@ -8119,7 +8120,7 @@ bb18:                                             ; preds = %bb16
 
 bb20:                                             ; preds = %bb18
 ; call core::slice::<impl [T]>::get_unchecked
-  %_49 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE"(ptr align 8 %v.02, i64 %v.13, i64 %_53.0) #10, !dbg !3888
+  %_49 = call align 8 ptr @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE"(ptr align 8 %v.02, i64 %v.13, i64 %_53.0) #10, !dbg !3888
   store ptr %_49, ptr %_47, align 8, !dbg !3889
   %26 = getelementptr inbounds { ptr, ptr }, ptr %_47, i32 0, i32 1, !dbg !3889
   store ptr %tmp, ptr %26, align 8, !dbg !3889
@@ -8128,7 +8129,7 @@ bb20:                                             ; preds = %bb18
   %29 = getelementptr inbounds { ptr, ptr }, ptr %_47, i32 0, i32 1, !dbg !3889
   %30 = load ptr, ptr %29, align 8, !dbg !3889, !nonnull !24, !align !525, !noundef !24
 ; call core::slice::<impl [T]>::sort_unstable_by::{{closure}}
-  %_46 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E"(ptr align 8 %is_less, ptr align 8 %28, ptr align 8 %30) #10, !dbg !3889
+  %_46 = call zeroext i1 @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E"(ptr align 8 %is_less, ptr align 8 %28, ptr align 8 %30) #10, !dbg !3889
   %_45 = xor i1 %_46, true, !dbg !3890
   %31 = zext i1 %_45 to i8, !dbg !3884
   store i8 %31, ptr %_41, align 1, !dbg !3884
@@ -8136,7 +8137,7 @@ bb20:                                             ; preds = %bb18
 
 panic9:                                           ; preds = %bb18
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_0b6e8a57da681e1fb7c4d0e2204e6a73) #11, !dbg !3887
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_0b6e8a57da681e1fb7c4d0e2204e6a73) #11, !dbg !3887
   unreachable, !dbg !3887
 
 bb19:                                             ; preds = %bb17, %bb20
@@ -8156,11 +8157,11 @@ bb25:                                             ; preds = %bb19
   %37 = getelementptr inbounds { i64, i64 }, ptr %_60, i32 0, i32 1, !dbg !3894
   %38 = load i64, ptr %37, align 8, !dbg !3894, !noundef !24
 ; call core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-  %39 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h2eed47309c4795c2E"(ptr align 8 %v.02, i64 %v.13, i64 %36, i64 %38, ptr align 8 @alloc_b0c68aa41aa72af376e4904f7447f27d) #10, !dbg !3894
+  %39 = call { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc032faa00f725839E"(ptr align 8 %v.02, i64 %v.13, i64 %36, i64 %38, ptr align 8 @alloc_b0c68aa41aa72af376e4904f7447f27d) #10, !dbg !3894
   %_59.0 = extractvalue { ptr, i64 } %39, 0, !dbg !3894
   %_59.1 = extractvalue { ptr, i64 } %39, 1, !dbg !3894
 ; call core::slice::sort::partition_in_blocks
-  %_57 = call i64 @_ZN4core5slice4sort19partition_in_blocks17hc74552b90147a34bE(ptr align 8 %_59.0, i64 %_59.1, ptr align 8 %tmp, ptr align 8 %is_less) #10, !dbg !3895
+  %_57 = call i64 @_ZN4core5slice4sort19partition_in_blocks17h0278288873d9962cE(ptr align 8 %_59.0, i64 %_59.1, ptr align 8 %tmp, ptr align 8 %is_less) #10, !dbg !3895
   %40 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %_56, i64 %_57), !dbg !3891
   %_63.0 = extractvalue { i64, i1 } %40, 0, !dbg !3891
   %_63.1 = extractvalue { i64, i1 } %40, 1, !dbg !3891
@@ -8180,7 +8181,7 @@ bb24:                                             ; preds = %bb23
 
 panic10:                                          ; preds = %bb23
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_a38e39bd8e066eb11cb79be2a1a30355) #11, !dbg !3896
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_a38e39bd8e066eb11cb79be2a1a30355) #11, !dbg !3896
   unreachable, !dbg !3896
 
 bb28:                                             ; preds = %bb25
@@ -8192,7 +8193,7 @@ bb28:                                             ; preds = %bb25
   %45 = zext i1 %_64 to i8, !dbg !3900
   store i8 %45, ptr %44, align 8, !dbg !3900
 ; call core::ptr::drop_in_place<core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>>
-  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h14860f460f28eaf1E"(ptr %_pivot_guard) #10, !dbg !3901
+  call void @"_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h1cb7c39fa811be84E"(ptr %_pivot_guard) #10, !dbg !3901
   %mid = load i64, ptr %_6, align 8, !dbg !3902, !noundef !24
   store i64 %mid, ptr %mid.dbg.spill, align 8, !dbg !3902
   call void @llvm.dbg.declare(metadata ptr %mid.dbg.spill, metadata !3831, metadata !DIExpression()), !dbg !3903
@@ -8203,7 +8204,7 @@ bb28:                                             ; preds = %bb25
   store i8 %48, ptr %was_partitioned.dbg.spill, align 1, !dbg !3904
   call void @llvm.dbg.declare(metadata ptr %was_partitioned.dbg.spill, metadata !3833, metadata !DIExpression()), !dbg !3905
 ; call core::slice::<impl [T]>::swap
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %mid, ptr align 8 @alloc_62f31cc339340f8d2589d3fbbff1b89f) #10, !dbg !3906
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E"(ptr align 8 %v.0, i64 %v.1, i64 0, i64 %mid, ptr align 8 @alloc_62f31cc339340f8d2589d3fbbff1b89f) #10, !dbg !3906
   store i64 %mid, ptr %0, align 8, !dbg !3907
   %49 = getelementptr inbounds { i64, i8 }, ptr %0, i32 0, i32 1, !dbg !3907
   %50 = zext i1 %was_partitioned to i8, !dbg !3907
@@ -8220,13 +8221,13 @@ bb28:                                             ; preds = %bb25
 
 panic11:                                          ; preds = %bb25
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_b173b94e8487e85973e5816a197e44e8) #11, !dbg !3891
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_b173b94e8487e85973e5816a197e44e8) #11, !dbg !3891
   unreachable, !dbg !3891
 }
 
 ; core::slice::sort::quicksort
 ; Function Attrs: noredzone nounwind
-define void @_ZN4core5slice4sort9quicksort17h12fd022706c4f4b1E(ptr align 8 %v.0, i64 %v.1, ptr align 1 %0) unnamed_addr #1 !dbg !3909 {
+define void @_ZN4core5slice4sort9quicksort17h94d07ae98e0185c1E(ptr align 8 %v.0, i64 %v.1, ptr align 1 %0) unnamed_addr #1 !dbg !3909 {
 start:
   %1 = alloca i64, align 8
   %self.dbg.spill.i = alloca i64, align 8
@@ -8267,18 +8268,18 @@ bb4:                                              ; preds = %bb2
   store ptr null, ptr %_11, align 8, !dbg !3930
   %7 = load ptr, ptr %_11, align 8, !dbg !3931, !align !525, !noundef !24
 ; call core::slice::sort::recurse
-  call void @_ZN4core5slice4sort7recurse17h67bb0b27e7485c54E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less, ptr align 8 %7, i32 %_8.0) #10, !dbg !3931
+  call void @_ZN4core5slice4sort7recurse17h36519255d1639a21E(ptr align 8 %v.0, i64 %v.1, ptr align 8 %is_less, ptr align 8 %7, i32 %_8.0) #10, !dbg !3931
   br label %bb6, !dbg !3927
 
 panic:                                            ; preds = %bb2
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_da17763e772b00039467b49b69f200eb) #11, !dbg !3926
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_da17763e772b00039467b49b69f200eb) #11, !dbg !3926
   unreachable, !dbg !3926
 }
 
 ; core::slice::index::<impl core::ops::index::Index<I> for [T]>::index
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN4core5slice5index74_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$5index17h4f7d591ff27b6834E"(ptr align 8 %self.0, i64 %self.1, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !3932 {
+define { ptr, i64 } @"_ZN4core5slice5index74_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$5index17h344fe8345ce5e45fE"(ptr align 8 %self.0, i64 %self.1, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !3932 {
 start:
   %index.dbg.spill = alloca { i64, i64 }, align 8
   %self.dbg.spill = alloca { ptr, i64 }, align 8
@@ -8293,7 +8294,7 @@ start:
   store i64 %index.1, ptr %4, align 8
   call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3938, metadata !DIExpression()), !dbg !3940
 ; call <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::index
-  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$5index17hef54beb91de143f3E"(i64 %index.0, i64 %index.1, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3941
+  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$5index17h16af271770283f30E"(i64 %index.0, i64 %index.1, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3941
   %6 = extractvalue { ptr, i64 } %5, 0, !dbg !3941
   %7 = extractvalue { ptr, i64 } %5, 1, !dbg !3941
   %8 = insertvalue { ptr, i64 } poison, ptr %6, 0, !dbg !3942
@@ -8303,7 +8304,51 @@ start:
 
 ; core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h2eed47309c4795c2E"(ptr align 8 %self.0, i64 %self.1, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !3943 {
+define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17ha0483327d2a5e568E"(ptr align 8 %self.0, i64 %self.1, i64 %index, ptr align 8 %0) unnamed_addr #0 !dbg !3943 {
+start:
+  %index.dbg.spill = alloca i64, align 8
+  %self.dbg.spill = alloca { ptr, i64 }, align 8
+  %1 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 0
+  store ptr %self.0, ptr %1, align 8
+  %2 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 1
+  store i64 %self.1, ptr %2, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3948, metadata !DIExpression()), !dbg !3952
+  store i64 %index, ptr %index.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3949, metadata !DIExpression()), !dbg !3953
+; call <core::ops::range::RangeFrom<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
+  %3 = call { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h8d4efffb94d8cdd2E"(i64 %index, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3954
+  %_3.0 = extractvalue { ptr, i64 } %3, 0, !dbg !3954
+  %_3.1 = extractvalue { ptr, i64 } %3, 1, !dbg !3954
+  %4 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !3955
+  %5 = insertvalue { ptr, i64 } %4, i64 %_3.1, 1, !dbg !3955
+  ret { ptr, i64 } %5, !dbg !3955
+}
+
+; core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
+; Function Attrs: inlinehint noredzone nounwind
+define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hbb2cb149a01fae1bE"(ptr align 8 %self.0, i64 %self.1, i64 %index, ptr align 8 %0) unnamed_addr #0 !dbg !3956 {
+start:
+  %index.dbg.spill = alloca i64, align 8
+  %self.dbg.spill = alloca { ptr, i64 }, align 8
+  %1 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 0
+  store ptr %self.0, ptr %1, align 8
+  %2 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 1
+  store i64 %self.1, ptr %2, align 8
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3960, metadata !DIExpression()), !dbg !3964
+  store i64 %index, ptr %index.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3961, metadata !DIExpression()), !dbg !3965
+; call <core::ops::range::RangeToInclusive<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
+  %3 = call { ptr, i64 } @"_ZN117_$LT$core..ops..range..RangeToInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h5fc6f6ee90b4473eE"(i64 %index, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3966
+  %_3.0 = extractvalue { ptr, i64 } %3, 0, !dbg !3966
+  %_3.1 = extractvalue { ptr, i64 } %3, 1, !dbg !3966
+  %4 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !3967
+  %5 = insertvalue { ptr, i64 } %4, i64 %_3.1, 1, !dbg !3967
+  ret { ptr, i64 } %5, !dbg !3967
+}
+
+; core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
+; Function Attrs: inlinehint noredzone nounwind
+define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc032faa00f725839E"(ptr align 8 %self.0, i64 %self.1, i64 %index.0, i64 %index.1, ptr align 8 %0) unnamed_addr #0 !dbg !3968 {
 start:
   %index.dbg.spill = alloca { i64, i64 }, align 8
   %self.dbg.spill = alloca { ptr, i64 }, align 8
@@ -8311,68 +8356,24 @@ start:
   store ptr %self.0, ptr %1, align 8
   %2 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 1
   store i64 %self.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3948, metadata !DIExpression()), !dbg !3950
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3972, metadata !DIExpression()), !dbg !3974
   %3 = getelementptr inbounds { i64, i64 }, ptr %index.dbg.spill, i32 0, i32 0
   store i64 %index.0, ptr %3, align 8
   %4 = getelementptr inbounds { i64, i64 }, ptr %index.dbg.spill, i32 0, i32 1
   store i64 %index.1, ptr %4, align 8
-  call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3949, metadata !DIExpression()), !dbg !3951
+  call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3973, metadata !DIExpression()), !dbg !3975
 ; call <core::ops::range::Range<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
-  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hc7bb6ed126f23147E"(i64 %index.0, i64 %index.1, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3952
-  %_3.0 = extractvalue { ptr, i64 } %5, 0, !dbg !3952
-  %_3.1 = extractvalue { ptr, i64 } %5, 1, !dbg !3952
-  %6 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !3953
-  %7 = insertvalue { ptr, i64 } %6, i64 %_3.1, 1, !dbg !3953
-  ret { ptr, i64 } %7, !dbg !3953
+  %5 = call { ptr, i64 } @"_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h71d141a80ac11235E"(i64 %index.0, i64 %index.1, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3976
+  %_3.0 = extractvalue { ptr, i64 } %5, 0, !dbg !3976
+  %_3.1 = extractvalue { ptr, i64 } %5, 1, !dbg !3976
+  %6 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !3977
+  %7 = insertvalue { ptr, i64 } %6, i64 %_3.1, 1, !dbg !3977
+  ret { ptr, i64 } %7, !dbg !3977
 }
 
 ; core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h48ccfe8b1cad8501E"(ptr align 8 %self.0, i64 %self.1, i64 %index, ptr align 8 %0) unnamed_addr #0 !dbg !3954 {
-start:
-  %index.dbg.spill = alloca i64, align 8
-  %self.dbg.spill = alloca { ptr, i64 }, align 8
-  %1 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 0
-  store ptr %self.0, ptr %1, align 8
-  %2 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 1
-  store i64 %self.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3958, metadata !DIExpression()), !dbg !3962
-  store i64 %index, ptr %index.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3959, metadata !DIExpression()), !dbg !3963
-; call <core::ops::range::RangeToInclusive<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
-  %3 = call { ptr, i64 } @"_ZN117_$LT$core..ops..range..RangeToInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h9555939660343c9eE"(i64 %index, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3964
-  %_3.0 = extractvalue { ptr, i64 } %3, 0, !dbg !3964
-  %_3.1 = extractvalue { ptr, i64 } %3, 1, !dbg !3964
-  %4 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !3965
-  %5 = insertvalue { ptr, i64 } %4, i64 %_3.1, 1, !dbg !3965
-  ret { ptr, i64 } %5, !dbg !3965
-}
-
-; core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc63cb5ffefaf6af8E"(ptr align 8 %self.0, i64 %self.1, i64 %index, ptr align 8 %0) unnamed_addr #0 !dbg !3966 {
-start:
-  %index.dbg.spill = alloca i64, align 8
-  %self.dbg.spill = alloca { ptr, i64 }, align 8
-  %1 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 0
-  store ptr %self.0, ptr %1, align 8
-  %2 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 1
-  store i64 %self.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3970, metadata !DIExpression()), !dbg !3974
-  store i64 %index, ptr %index.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3971, metadata !DIExpression()), !dbg !3975
-; call <core::ops::range::RangeTo<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
-  %3 = call { ptr, i64 } @"_ZN108_$LT$core..ops..range..RangeTo$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hee6af4a418ddd650E"(i64 %index, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3976
-  %_3.0 = extractvalue { ptr, i64 } %3, 0, !dbg !3976
-  %_3.1 = extractvalue { ptr, i64 } %3, 1, !dbg !3976
-  %4 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !3977
-  %5 = insertvalue { ptr, i64 } %4, i64 %_3.1, 1, !dbg !3977
-  ret { ptr, i64 } %5, !dbg !3977
-}
-
-; core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
-; Function Attrs: inlinehint noredzone nounwind
-define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17he29b2023f52fc844E"(ptr align 8 %self.0, i64 %self.1, i64 %index, ptr align 8 %0) unnamed_addr #0 !dbg !3978 {
+define { ptr, i64 } @"_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hd96e5c003167cd0eE"(ptr align 8 %self.0, i64 %self.1, i64 %index, ptr align 8 %0) unnamed_addr #0 !dbg !3978 {
 start:
   %index.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca { ptr, i64 }, align 8
@@ -8383,8 +8384,8 @@ start:
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3982, metadata !DIExpression()), !dbg !3986
   store i64 %index, ptr %index.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %index.dbg.spill, metadata !3983, metadata !DIExpression()), !dbg !3987
-; call <core::ops::range::RangeFrom<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
-  %3 = call { ptr, i64 } @"_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hb9f7e43bfb5a58c9E"(i64 %index, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3988
+; call <core::ops::range::RangeTo<usize> as core::slice::index::SliceIndex<[T]>>::index_mut
+  %3 = call { ptr, i64 } @"_ZN108_$LT$core..ops..range..RangeTo$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h019cc67149b61e3fE"(i64 %index, ptr align 8 %self.0, i64 %self.1, ptr align 8 %0) #10, !dbg !3988
   %_3.0 = extractvalue { ptr, i64 } %3, 0, !dbg !3988
   %_3.1 = extractvalue { ptr, i64 } %3, 1, !dbg !3988
   %4 = insertvalue { ptr, i64 } poison, ptr %_3.0, 0, !dbg !3989
@@ -8394,7 +8395,7 @@ start:
 
 ; core::option::Option<T>::unwrap_or
 ; Function Attrs: inlinehint noredzone nounwind
-define void @"_ZN4core6option15Option$LT$T$GT$9unwrap_or17h15729337ae01dd2fE"(ptr sret(%"bootinfo::TlsTemplate") %0, ptr %self, ptr %default) unnamed_addr #0 !dbg !3990 {
+define void @"_ZN4core6option15Option$LT$T$GT$9unwrap_or17hb5bc13490eac9104E"(ptr sret(%"bootinfo::TlsTemplate") %0, ptr %self, ptr %default) unnamed_addr #0 !dbg !3990 {
 start:
   %_5 = alloca i8, align 1
   %x = alloca %"bootinfo::TlsTemplate", align 8
@@ -8435,7 +8436,7 @@ bb5:                                              ; preds = %bb6
 
 ; <core::cmp::Ordering as core::cmp::PartialEq>::eq
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17h530dbbcd41019221E"(ptr align 1 %self, ptr align 1 %other) unnamed_addr #0 !dbg !4021 {
+define internal zeroext i1 @"_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17hae4bcd0612431f5dE"(ptr align 1 %self, ptr align 1 %other) unnamed_addr #0 !dbg !4021 {
 start:
   %__arg1_tag.dbg.spill = alloca i8, align 1
   %__self_tag.dbg.spill = alloca i8, align 1
@@ -8457,7 +8458,7 @@ start:
 
 ; <I as core::iter::traits::collect::IntoIterator>::into_iter
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h8af5423956ab47bbE"(ptr %self.0, ptr %self.1) unnamed_addr #0 !dbg !4037 {
+define { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h6f1bfcac0ddec601E"(ptr %self.0, ptr %self.1) unnamed_addr #0 !dbg !4037 {
 start:
   %self.dbg.spill = alloca { ptr, ptr }, align 8
   %0 = getelementptr inbounds { ptr, ptr }, ptr %self.dbg.spill, i32 0, i32 0
@@ -8472,7 +8473,7 @@ start:
 
 ; <usize as core::slice::index::SliceIndex<[T]>>::get_unchecked
 ; Function Attrs: inlinehint noredzone nounwind
-define ptr @"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17hfed71cb03bf45bb2E"(i64 %self, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !4049 {
+define ptr @"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h5548ba9342f449cdE"(i64 %self, ptr %slice.0, i64 %slice.1) unnamed_addr #0 !dbg !4049 {
 start:
   %slice.dbg.spill.i = alloca { ptr, i64 }, align 8
   %this.dbg.spill.i = alloca i64, align 8
@@ -8494,9 +8495,9 @@ start:
   call void @llvm.dbg.declare(metadata ptr %slice.dbg.spill, metadata !4055, metadata !DIExpression()), !dbg !4060
   br i1 true, label %bb1, label %bb2, !dbg !4061
 
-bb2:                                              ; preds = %"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hb89a6143e593e4e5E.exit", %start
+bb2:                                              ; preds = %"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hdc1ff58b63223638E.exit", %start
 ; call core::ptr::const_ptr::<impl *const [T]>::as_ptr
-  %_6 = call ptr @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17h0da60db6e72722a9E"(ptr %slice.0, i64 %slice.1) #10, !dbg !4062
+  %_6 = call ptr @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17hdc3d6574984ebdc5E"(ptr %slice.0, i64 %slice.1) #10, !dbg !4062
   store ptr %_6, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !200, metadata !DIExpression()), !dbg !4063
   store i64 %self, ptr %count.dbg.spill.i, align 8
@@ -8530,23 +8531,23 @@ bb1:                                              ; preds = %start
   store i64 %13, ptr %14, align 8
   call void @llvm.dbg.declare(metadata ptr %slice.dbg.spill.i, metadata !4077, metadata !DIExpression()), !dbg !4078
 ; call core::ptr::const_ptr::<impl *const [T]>::len
-  %_5.i = call i64 @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3c5ccfd32d4e1d7aE"(ptr %11, i64 %13) #10, !dbg !4080
+  %_5.i = call i64 @"_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3a7bf3213f5f2ac5E"(ptr %11, i64 %13) #10, !dbg !4080
   %_4.i = icmp ult i64 %8, %_5.i, !dbg !4082
   %_3.i = xor i1 %_4.i, true, !dbg !4083
-  br i1 %_3.i, label %bb2.i, label %"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hb89a6143e593e4e5E.exit", !dbg !4083
+  br i1 %_3.i, label %bb2.i, label %"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hdc1ff58b63223638E.exit", !dbg !4083
 
 bb2.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1 @alloc_b3b3c2a7efcea294ef431b7ed1abebea, i64 97) #11, !dbg !4084
+  call void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1 @alloc_b3b3c2a7efcea294ef431b7ed1abebea, i64 97) #11, !dbg !4084
   unreachable, !dbg !4084
 
-"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hb89a6143e593e4e5E.exit": ; preds = %bb1
+"_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hdc1ff58b63223638E.exit": ; preds = %bb1
   br label %bb2, !dbg !4061
 }
 
 ; <core::slice::sort::InsertionHole<T> as core::ops::drop::Drop>::drop
 ; Function Attrs: noredzone nounwind
-define void @"_ZN83_$LT$core..slice..sort..InsertionHole$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17hc11065f685b18269E"(ptr align 8 %self) unnamed_addr #1 !dbg !4085 {
+define void @"_ZN83_$LT$core..slice..sort..InsertionHole$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h15ddc8e48d95ec0bE"(ptr align 8 %self) unnamed_addr #1 !dbg !4085 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -8555,13 +8556,13 @@ start:
   %0 = getelementptr inbounds { ptr, ptr }, ptr %self, i32 0, i32 1, !dbg !4094
   %_4 = load ptr, ptr %0, align 8, !dbg !4094, !noundef !24
 ; call core::intrinsics::copy_nonoverlapping
-  call void @_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E(ptr %_3, ptr %_4, i64 1) #10, !dbg !4095
+  call void @_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E(ptr %_3, ptr %_4, i64 1) #10, !dbg !4095
   ret void, !dbg !4096
 }
 
 ; <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: inlinehint noredzone nounwind
-define align 8 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h2beee56cf310e2bbE"(ptr align 8 %self) unnamed_addr #0 !dbg !4097 {
+define align 8 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17he876426d7fcbf6a9E"(ptr align 8 %self) unnamed_addr #0 !dbg !4097 {
 start:
   %self.dbg.spill.i5.i = alloca ptr, align 8
   %self.dbg.spill.i4.i = alloca ptr, align 8
@@ -8585,7 +8586,7 @@ start:
   store ptr %_5, ptr %self.dbg.spill.i1, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !4107, metadata !DIExpression()), !dbg !4112
 ; call core::ptr::mut_ptr::<impl *mut T>::is_null
-  %_3 = call zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h86ccb2481b2d062dE"(ptr %_5) #10, !dbg !4106
+  %_3 = call zeroext i1 @"_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17hb672574d80ca0956E"(ptr %_5) #10, !dbg !4106
   %_2 = xor i1 %_3, true, !dbg !4114
   call void @llvm.assume(i1 %_2), !dbg !4115
   br i1 true, label %bb3, label %bb5, !dbg !4116
@@ -8602,7 +8603,7 @@ bb5:                                              ; preds = %bb3, %start
 bb3:                                              ; preds = %start
   %_9 = load ptr, ptr %self, align 8, !dbg !4120, !noundef !24
 ; call core::ptr::const_ptr::<impl *const T>::is_null
-  %_8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h8887dc6f95652e18E"(ptr %_9) #10, !dbg !4120
+  %_8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hb34f08b01fbed2d9E"(ptr %_9) #10, !dbg !4120
   %_7 = xor i1 %_8, true, !dbg !4121
   call void @llvm.assume(i1 %_7), !dbg !4122
   br label %bb5, !dbg !4123
@@ -8634,7 +8635,7 @@ bb8:                                              ; preds = %bb5
   store ptr %7, ptr %0, align 8, !dbg !4148
   %_3.i.i = load ptr, ptr %0, align 8, !dbg !4148, !noundef !24
 ; call core::ptr::non_null::NonNull<T>::new_unchecked
-  %_10.i = call ptr @"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17hd63d665a11e5e7feE"(ptr %_3.i.i) #10, !dbg !4149
+  %_10.i = call ptr @"_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17h3e41b89f8c82f0c2E"(ptr %_3.i.i) #10, !dbg !4149
   %8 = getelementptr inbounds { ptr, ptr }, ptr %self, i32 0, i32 1, !dbg !4150
   store ptr %_10.i, ptr %8, align 8, !dbg !4150
   store ptr %_9.i, ptr %1, align 8, !dbg !4151
@@ -8653,7 +8654,7 @@ bb10:                                             ; preds = %bb8, %bb7
 
 ; <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::position
 ; Function Attrs: inlinehint noredzone nounwind
-define { i64, i64 } @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$8position17hd865531d1166ca3dE"(ptr align 8 %self) unnamed_addr #0 !dbg !4157 {
+define { i64, i64 } @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$8position17h9e7d7494f81db591E"(ptr align 8 %self) unnamed_addr #0 !dbg !4157 {
 start:
   %self.dbg.spill.i7 = alloca ptr, align 8
   %self.dbg.spill.i6 = alloca ptr, align 8
@@ -8688,7 +8689,7 @@ bb5:                                              ; preds = %start
   store ptr %start1, ptr %self.dbg.spill.i4, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i4, metadata !4107, metadata !DIExpression()), !dbg !4180
 ; call core::ptr::const_ptr::<impl *const T>::sub_ptr
-  %2 = call i64 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr17h06c6bc4eee71ac18E"(ptr %_10, ptr %start1) #10, !dbg !4179
+  %2 = call i64 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr17h3d6dc8453250b48cE"(ptr %_10, ptr %start1) #10, !dbg !4179
   store i64 %2, ptr %n, align 8, !dbg !4179
   br label %bb7, !dbg !4179
 
@@ -8702,7 +8703,7 @@ bb1:                                              ; preds = %start
   store ptr %start1, ptr %self.dbg.spill.i5, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i5, metadata !4107, metadata !DIExpression()), !dbg !4187
   store ptr %start1, ptr %self.dbg.spill.i2, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i2, metadata !3463, metadata !DIExpression()), !dbg !4189
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i2, metadata !3485, metadata !DIExpression()), !dbg !4189
   store ptr %start1, ptr %self.dbg.spill.i3, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i3, metadata !1288, metadata !DIExpression()), !dbg !4191
   %4 = ptrtoint ptr %start1 to i64, !dbg !4193
@@ -8720,7 +8721,7 @@ bb7:                                              ; preds = %bb5, %bb1
 
 bb8:                                              ; preds = %bb14, %bb7
 ; call <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::next
-  %6 = call align 8 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h2beee56cf310e2bbE"(ptr align 8 %self) #10, !dbg !4206
+  %6 = call align 8 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17he876426d7fcbf6a9E"(ptr align 8 %self) #10, !dbg !4206
   store ptr %6, ptr %_14, align 8, !dbg !4206
   %7 = load ptr, ptr %_14, align 8, !dbg !4207, !noundef !24
   %8 = ptrtoint ptr %7 to i64, !dbg !4207
@@ -8736,7 +8737,7 @@ bb10:                                             ; preds = %bb8
   store ptr %x, ptr %_19, align 8, !dbg !4209
   %11 = load ptr, ptr %_19, align 8, !dbg !4209, !nonnull !24, !align !525, !noundef !24
 ; call bootloader::bootinfo::memory_map::MemoryMap::sort::{{closure}}
-  %_17 = call zeroext i1 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h7104e28a97ef0c5fE"(ptr align 1 %predicate, ptr align 8 %11) #10, !dbg !4209
+  %_17 = call zeroext i1 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h9cbf6bfd45457db2E"(ptr align 1 %predicate, ptr align 8 %11) #10, !dbg !4209
   br i1 %_17, label %bb12, label %bb13, !dbg !4209
 
 bb15:                                             ; preds = %bb8
@@ -8777,18 +8778,18 @@ bb14:                                             ; preds = %bb13
 
 panic:                                            ; preds = %bb13
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_0943d9cf8c1b2e3a95fc7ea34abb4c1f) #11, !dbg !4213
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_0943d9cf8c1b2e3a95fc7ea34abb4c1f) #11, !dbg !4213
   unreachable, !dbg !4213
 }
 
 ; bootloader::bootinfo::memory_map::MemoryMap::new
 ; Function Attrs: noredzone nounwind
-define void @_ZN10bootloader8bootinfo10memory_map9MemoryMap3new17h3aff69e4347c246eE(ptr sret(%"bootinfo::memory_map::MemoryMap") %0) unnamed_addr #1 !dbg !4219 {
+define void @_ZN10bootloader8bootinfo10memory_map9MemoryMap3new17h68ca61913f5d4357E(ptr sret(%"bootinfo::memory_map::MemoryMap") %0) unnamed_addr #1 !dbg !4219 {
 start:
   %_2 = alloca %"bootinfo::memory_map::MemoryRegion", align 8
   %_1 = alloca [64 x %"bootinfo::memory_map::MemoryRegion"], align 8
 ; call bootloader::bootinfo::memory_map::MemoryRegion::empty
-  call void @_ZN10bootloader8bootinfo10memory_map12MemoryRegion5empty17h9d32b5f768766851E(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_2) #10, !dbg !4223
+  call void @_ZN10bootloader8bootinfo10memory_map12MemoryRegion5empty17h2bde3157c7a10c0dE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %_2) #10, !dbg !4223
   %1 = getelementptr inbounds [64 x %"bootinfo::memory_map::MemoryRegion"], ptr %_1, i64 0, i64 0, !dbg !4224
   %2 = getelementptr inbounds [64 x %"bootinfo::memory_map::MemoryRegion"], ptr %_1, i64 0, i64 64, !dbg !4224
   br label %repeat_loop_header, !dbg !4224
@@ -8812,28 +8813,28 @@ repeat_loop_next:                                 ; preds = %repeat_loop_header
 
 ; bootloader::bootinfo::memory_map::MemoryMap::add_region
 ; Function Attrs: noredzone nounwind
-define void @_ZN10bootloader8bootinfo10memory_map9MemoryMap10add_region17hc58fb3652f4eb79cE(ptr align 8 %self, ptr %region) unnamed_addr #1 !dbg !4227 {
+define void @_ZN10bootloader8bootinfo10memory_map9MemoryMap10add_region17h3da4def24ec5127aE(ptr align 8 %self, ptr %region) unnamed_addr #1 !dbg !4227 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4232, metadata !DIExpression()), !dbg !4234
   call void @llvm.dbg.declare(metadata ptr %region, metadata !4233, metadata !DIExpression()), !dbg !4235
 ; call bootloader::bootinfo::memory_map::MemoryMap::next_entry_index
-  %_5 = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17h248c00c629806dc8E(ptr align 8 %self) #10, !dbg !4236
+  %_5 = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17hecfd655f1433eaa0E(ptr align 8 %self) #10, !dbg !4236
   %_4 = icmp ult i64 %_5, 64, !dbg !4236
   %_3 = xor i1 %_4, true, !dbg !4237
   br i1 %_3, label %bb2, label %bb3, !dbg !4237
 
 bb3:                                              ; preds = %start
 ; call bootloader::bootinfo::memory_map::MemoryMap::next_entry_index
-  %_8 = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17h248c00c629806dc8E(ptr align 8 %self) #10, !dbg !4238
+  %_8 = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17hecfd655f1433eaa0E(ptr align 8 %self) #10, !dbg !4238
   %_11 = icmp ult i64 %_8, 64, !dbg !4239
   %0 = call i1 @llvm.expect.i1(i1 %_11, i1 true), !dbg !4239
   br i1 %0, label %bb5, label %panic, !dbg !4239
 
 bb2:                                              ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @alloc_377fe4797e3690987ab15f0122f4880b, i64 37, ptr align 8 @alloc_7196c88dea27a90737fe52164bfa6d4b) #11, !dbg !4237
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @alloc_377fe4797e3690987ab15f0122f4880b, i64 37, ptr align 8 @alloc_7196c88dea27a90737fe52164bfa6d4b) #11, !dbg !4237
   unreachable, !dbg !4237
 
 bb5:                                              ; preds = %bb3
@@ -8849,25 +8850,25 @@ bb5:                                              ; preds = %bb3
 
 panic:                                            ; preds = %bb3
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64 %_8, i64 64, ptr align 8 @alloc_e65e0ba17a4d9de8b42e16f5ae86b726) #11, !dbg !4239
+  call void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64 %_8, i64 64, ptr align 8 @alloc_e65e0ba17a4d9de8b42e16f5ae86b726) #11, !dbg !4239
   unreachable, !dbg !4239
 
 bb6:                                              ; preds = %bb5
   %6 = getelementptr inbounds %"bootinfo::memory_map::MemoryMap", ptr %self, i32 0, i32 1, !dbg !4240
   store i64 %_12.0, ptr %6, align 8, !dbg !4240
 ; call bootloader::bootinfo::memory_map::MemoryMap::sort
-  call void @_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort17he535241d1cfbe782E(ptr align 8 %self) #10, !dbg !4241
+  call void @_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort17h188c5014c9f32560E(ptr align 8 %self) #10, !dbg !4241
   ret void, !dbg !4242
 
 panic1:                                           ; preds = %bb5
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_6248fd711ab5313acabe549160484394) #11, !dbg !4240
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_6248fd711ab5313acabe549160484394) #11, !dbg !4240
   unreachable, !dbg !4240
 }
 
 ; bootloader::bootinfo::memory_map::MemoryMap::sort
 ; Function Attrs: noredzone nounwind
-define void @_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort17he535241d1cfbe782E(ptr align 8 %self) unnamed_addr #1 !dbg !4243 {
+define void @_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort17h188c5014c9f32560E(ptr align 8 %self) unnamed_addr #1 !dbg !4243 {
 start:
   %first_zero_index.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -8876,12 +8877,12 @@ start:
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4247, metadata !DIExpression()), !dbg !4250
 ; call core::slice::<impl [T]>::sort_unstable_by
-  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by17h3aa2a951514a8962E"(ptr align 8 %self, i64 64) #10, !dbg !4251
+  call void @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by17h1469e3c20acb32dcE"(ptr align 8 %self, i64 64) #10, !dbg !4251
 ; call core::slice::<impl [T]>::iter
-  %0 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h8f73af22612f7cb1E"(ptr align 8 %self, i64 64) #10, !dbg !4252
+  %0 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17ha65af8c6724a8cb2E"(ptr align 8 %self, i64 64) #10, !dbg !4252
   store { ptr, ptr } %0, ptr %_7, align 8, !dbg !4252
 ; call <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::position
-  %1 = call { i64, i64 } @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$8position17hd865531d1166ca3dE"(ptr align 8 %_7) #10, !dbg !4252
+  %1 = call { i64, i64 } @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$8position17h9e7d7494f81db591E"(ptr align 8 %_7) #10, !dbg !4252
   store { i64, i64 } %1, ptr %_5, align 8, !dbg !4252
   %_10 = load i64, ptr %_5, align 8, !dbg !4253, !range !1071, !noundef !24
   %2 = icmp eq i64 %_10, 1, !dbg !4253
@@ -8902,7 +8903,7 @@ bb5:                                              ; preds = %bb4, %start
 
 ; bootloader::bootinfo::memory_map::MemoryMap::sort::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i8 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h518903dc53964686E"(ptr align 1 %_1, ptr align 8 %r1, ptr align 8 %r2) unnamed_addr #0 !dbg !4258 {
+define internal i8 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17hcf06a7110d2196cfE"(ptr align 1 %_1, ptr align 8 %r1, ptr align 8 %r2) unnamed_addr #0 !dbg !4258 {
 start:
   %r2.dbg.spill = alloca ptr, align 8
   %r1.dbg.spill = alloca ptr, align 8
@@ -8917,12 +8918,12 @@ start:
   call void @llvm.dbg.declare(metadata ptr %r2.dbg.spill, metadata !4263, metadata !DIExpression()), !dbg !4269
   call void @llvm.dbg.declare(metadata ptr %ordering, metadata !4264, metadata !DIExpression()), !dbg !4270
 ; call bootloader::bootinfo::memory_map::FrameRange::is_empty
-  %_4 = call zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17h8a72c899702540f4E(ptr align 8 %r1) #10, !dbg !4271
+  %_4 = call zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17hb8edc9f026bfaf4dE(ptr align 8 %r1) #10, !dbg !4271
   br i1 %_4, label %bb2, label %bb3, !dbg !4271
 
 bb3:                                              ; preds = %start
 ; call bootloader::bootinfo::memory_map::FrameRange::is_empty
-  %_6 = call zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17h8a72c899702540f4E(ptr align 8 %r2) #10, !dbg !4272
+  %_6 = call zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17hb8edc9f026bfaf4dE(ptr align 8 %r2) #10, !dbg !4272
   br i1 %_6, label %bb5, label %bb6, !dbg !4272
 
 bb2:                                              ; preds = %start
@@ -8935,10 +8936,10 @@ bb11:                                             ; preds = %bb10, %bb9, %bb5, %
 
 bb6:                                              ; preds = %bb3
 ; call core::cmp::impls::<impl core::cmp::Ord for u64>::cmp
-  %2 = call i8 @"_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h3f053a9c0b80c8c7E"(ptr align 8 %r1, ptr align 8 %r2) #10, !dbg !4276, !range !745
+  %2 = call i8 @"_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h5032906cd42a2baaE"(ptr align 8 %r1, ptr align 8 %r2) #10, !dbg !4276, !range !745
   store i8 %2, ptr %ordering, align 1, !dbg !4276
 ; call <core::cmp::Ordering as core::cmp::PartialEq>::eq
-  %_11 = call zeroext i1 @"_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17h530dbbcd41019221E"(ptr align 1 %ordering, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #10, !dbg !4277
+  %_11 = call zeroext i1 @"_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17hae4bcd0612431f5dE"(ptr align 1 %ordering, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #10, !dbg !4277
   br i1 %_11, label %bb9, label %bb10, !dbg !4277
 
 bb5:                                              ; preds = %bb3
@@ -8954,14 +8955,14 @@ bb9:                                              ; preds = %bb6
   %_13 = getelementptr inbounds { i64, i64 }, ptr %r1, i32 0, i32 1, !dbg !4282
   %_14 = getelementptr inbounds { i64, i64 }, ptr %r2, i32 0, i32 1, !dbg !4283
 ; call core::cmp::impls::<impl core::cmp::Ord for u64>::cmp
-  %4 = call i8 @"_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h3f053a9c0b80c8c7E"(ptr align 8 %_13, ptr align 8 %_14) #10, !dbg !4282, !range !745
+  %4 = call i8 @"_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h5032906cd42a2baaE"(ptr align 8 %_13, ptr align 8 %_14) #10, !dbg !4282, !range !745
   store i8 %4, ptr %0, align 1, !dbg !4282
   br label %bb11, !dbg !4282
 }
 
 ; bootloader::bootinfo::memory_map::MemoryMap::sort::{{closure}}
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h7104e28a97ef0c5fE"(ptr align 1 %_1, ptr align 8 %r) unnamed_addr #0 !dbg !4284 {
+define internal zeroext i1 @"_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h9cbf6bfd45457db2E"(ptr align 1 %_1, ptr align 8 %r) unnamed_addr #0 !dbg !4284 {
 start:
   %r.dbg.spill = alloca ptr, align 8
   %_1.dbg.spill = alloca ptr, align 8
@@ -8970,13 +8971,13 @@ start:
   store ptr %r, ptr %r.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %r.dbg.spill, metadata !4289, metadata !DIExpression()), !dbg !4292
 ; call bootloader::bootinfo::memory_map::FrameRange::is_empty
-  %0 = call zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17h8a72c899702540f4E(ptr align 8 %r) #10, !dbg !4293
+  %0 = call zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17hb8edc9f026bfaf4dE(ptr align 8 %r) #10, !dbg !4293
   ret i1 %0, !dbg !4294
 }
 
 ; bootloader::bootinfo::memory_map::MemoryMap::next_entry_index
 ; Function Attrs: noredzone nounwind
-define internal i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17h248c00c629806dc8E(ptr align 8 %self) unnamed_addr #1 !dbg !4295 {
+define internal i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17hecfd655f1433eaa0E(ptr align 8 %self) unnamed_addr #1 !dbg !4295 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -8988,14 +8989,14 @@ start:
 
 ; <bootloader::bootinfo::memory_map::MemoryMap as core::ops::deref::Deref>::deref
 ; Function Attrs: noredzone nounwind
-define { ptr, i64 } @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..Deref$GT$5deref17hb5b493a853152156E"(ptr align 8 %self) unnamed_addr #1 !dbg !4304 {
+define { ptr, i64 } @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..Deref$GT$5deref17h3cd90a1c3fb66c2cE"(ptr align 8 %self) unnamed_addr #1 !dbg !4304 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_4 = alloca { i64, i64 }, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4309, metadata !DIExpression()), !dbg !4310
 ; call bootloader::bootinfo::memory_map::MemoryMap::next_entry_index
-  %_5 = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17h248c00c629806dc8E(ptr align 8 %self) #10, !dbg !4311
+  %_5 = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17hecfd655f1433eaa0E(ptr align 8 %self) #10, !dbg !4311
   store i64 0, ptr %_4, align 8, !dbg !4312
   %0 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 1, !dbg !4312
   store i64 %_5, ptr %0, align 8, !dbg !4312
@@ -9004,7 +9005,7 @@ start:
   %3 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 1, !dbg !4313
   %4 = load i64, ptr %3, align 8, !dbg !4313, !noundef !24
 ; call core::array::<impl core::ops::index::Index<I> for [T; N]>::index
-  %5 = call { ptr, i64 } @"_ZN4core5array85_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$5index17h4f80189d8756a89fE"(ptr align 8 %self, i64 %2, i64 %4, ptr align 8 @alloc_bc412f3c128804cf7932bd162091bc4c) #10, !dbg !4313
+  %5 = call { ptr, i64 } @"_ZN4core5array85_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$5index17h9a0dd1216442d89cE"(ptr align 8 %self, i64 %2, i64 %4, ptr align 8 @alloc_bc412f3c128804cf7932bd162091bc4c) #10, !dbg !4313
   %_2.0 = extractvalue { ptr, i64 } %5, 0, !dbg !4313
   %_2.1 = extractvalue { ptr, i64 } %5, 1, !dbg !4313
   %6 = insertvalue { ptr, i64 } poison, ptr %_2.0, 0, !dbg !4314
@@ -9014,7 +9015,7 @@ start:
 
 ; <bootloader::bootinfo::memory_map::MemoryMap as core::ops::deref::DerefMut>::deref_mut
 ; Function Attrs: noredzone nounwind
-define { ptr, i64 } @"_ZN90_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h30bab5fe609b1404E"(ptr align 8 %self) unnamed_addr #1 !dbg !4315 {
+define { ptr, i64 } @"_ZN90_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h28a68e3e28705219E"(ptr align 8 %self) unnamed_addr #1 !dbg !4315 {
 start:
   %next_index.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -9022,7 +9023,7 @@ start:
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4320, metadata !DIExpression()), !dbg !4323
 ; call bootloader::bootinfo::memory_map::MemoryMap::next_entry_index
-  %next_index = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17h248c00c629806dc8E(ptr align 8 %self) #10, !dbg !4324
+  %next_index = call i64 @_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17hecfd655f1433eaa0E(ptr align 8 %self) #10, !dbg !4324
   store i64 %next_index, ptr %next_index.dbg.spill, align 8, !dbg !4324
   call void @llvm.dbg.declare(metadata ptr %next_index.dbg.spill, metadata !4321, metadata !DIExpression()), !dbg !4325
   store i64 0, ptr %_6, align 8, !dbg !4326
@@ -9033,7 +9034,7 @@ start:
   %3 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 1, !dbg !4327
   %4 = load i64, ptr %3, align 8, !dbg !4327, !noundef !24
 ; call core::array::<impl core::ops::index::IndexMut<I> for [T; N]>::index_mut
-  %5 = call { ptr, i64 } @"_ZN4core5array88_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9index_mut17hc06ee4dd410cd4b2E"(ptr align 8 %self, i64 %2, i64 %4, ptr align 8 @alloc_db57840325994cb1e9e58dfeb27e1cf2) #10, !dbg !4327
+  %5 = call { ptr, i64 } @"_ZN4core5array88_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9index_mut17hd9cecf2e30ba055bE"(ptr align 8 %self, i64 %2, i64 %4, ptr align 8 @alloc_db57840325994cb1e9e58dfeb27e1cf2) #10, !dbg !4327
   %_4.0 = extractvalue { ptr, i64 } %5, 0, !dbg !4327
   %_4.1 = extractvalue { ptr, i64 } %5, 1, !dbg !4327
   %6 = insertvalue { ptr, i64 } poison, ptr %_4.0, 0, !dbg !4328
@@ -9043,7 +9044,7 @@ start:
 
 ; <bootloader::bootinfo::memory_map::MemoryMap as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN80_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..fmt..Debug$GT$3fmt17h9737d89a1f4e8994E"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4329 {
+define zeroext i1 @"_ZN80_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..fmt..Debug$GT$3fmt17h946aba19ea4022cfE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4329 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -9053,25 +9054,25 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !4335, metadata !DIExpression()), !dbg !4337
 ; call core::fmt::Formatter::debug_list
-  call void @_ZN4core3fmt9Formatter10debug_list17hf44a0ea569d6c2caE(ptr sret(%"core::fmt::builders::DebugList<'_, '_>") %_6, ptr align 8 %f) #10, !dbg !4338
+  call void @_ZN4core3fmt9Formatter10debug_list17h3291fbb276689019E(ptr sret(%"core::fmt::builders::DebugList<'_, '_>") %_6, ptr align 8 %f) #10, !dbg !4338
 ; call <bootloader::bootinfo::memory_map::MemoryMap as core::ops::deref::Deref>::deref
-  %0 = call { ptr, i64 } @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..Deref$GT$5deref17hb5b493a853152156E"(ptr align 8 %self) #10, !dbg !4339
+  %0 = call { ptr, i64 } @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..Deref$GT$5deref17h3cd90a1c3fb66c2cE"(ptr align 8 %self) #10, !dbg !4339
   %_9.0 = extractvalue { ptr, i64 } %0, 0, !dbg !4339
   %_9.1 = extractvalue { ptr, i64 } %0, 1, !dbg !4339
 ; call core::slice::<impl [T]>::iter
-  %1 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h8f73af22612f7cb1E"(ptr align 8 %_9.0, i64 %_9.1) #10, !dbg !4339
+  %1 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17ha65af8c6724a8cb2E"(ptr align 8 %_9.0, i64 %_9.1) #10, !dbg !4339
   %_7.0 = extractvalue { ptr, ptr } %1, 0, !dbg !4339
   %_7.1 = extractvalue { ptr, ptr } %1, 1, !dbg !4339
 ; call core::fmt::builders::DebugList::entries
-  %_4 = call align 8 ptr @_ZN4core3fmt8builders9DebugList7entries17h3d2e4fa43e1d7009E(ptr align 8 %_6, ptr %_7.0, ptr %_7.1) #10, !dbg !4338
+  %_4 = call align 8 ptr @_ZN4core3fmt8builders9DebugList7entries17h7d93063a04bf6cc7E(ptr align 8 %_6, ptr %_7.0, ptr %_7.1) #10, !dbg !4338
 ; call core::fmt::builders::DebugList::finish
-  %2 = call zeroext i1 @_ZN4core3fmt8builders9DebugList6finish17h8386d39d175a1a26E(ptr align 8 %_4) #10, !dbg !4338
+  %2 = call zeroext i1 @_ZN4core3fmt8builders9DebugList6finish17hbeb8e651fd2f809cE(ptr align 8 %_4) #10, !dbg !4338
   ret i1 %2, !dbg !4340
 }
 
 ; bootloader::bootinfo::memory_map::MemoryRegion::empty
 ; Function Attrs: noredzone nounwind
-define void @_ZN10bootloader8bootinfo10memory_map12MemoryRegion5empty17h9d32b5f768766851E(ptr sret(%"bootinfo::memory_map::MemoryRegion") %0) unnamed_addr #1 !dbg !4341 {
+define void @_ZN10bootloader8bootinfo10memory_map12MemoryRegion5empty17h2bde3157c7a10c0dE(ptr sret(%"bootinfo::memory_map::MemoryRegion") %0) unnamed_addr #1 !dbg !4341 {
 start:
   %_2 = alloca i32, align 4
   %_1 = alloca { i64, i64 }, align 8
@@ -9095,7 +9096,7 @@ start:
 
 ; bootloader::bootinfo::memory_map::FrameRange::new
 ; Function Attrs: noredzone nounwind
-define { i64, i64 } @_ZN10bootloader8bootinfo10memory_map10FrameRange3new17h5c37249ca6b03321E(i64 %start_addr, i64 %end_addr) unnamed_addr #1 !dbg !4349 {
+define { i64, i64 } @_ZN10bootloader8bootinfo10memory_map10FrameRange3new17h3bb43e6b2c1de0d6E(i64 %start_addr, i64 %end_addr) unnamed_addr #1 !dbg !4349 {
 start:
   %last_byte.dbg.spill = alloca i64, align 8
   %end_addr.dbg.spill = alloca i64, align 8
@@ -9123,7 +9124,7 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_cad8f68633be23a5a8047bc131d14ec3) #11, !dbg !4359
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_cad8f68633be23a5a8047bc131d14ec3) #11, !dbg !4359
   unreachable, !dbg !4359
 
 bb4:                                              ; preds = %bb1
@@ -9140,13 +9141,13 @@ bb4:                                              ; preds = %bb1
 
 panic1:                                           ; preds = %bb1
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_9e0090e7731cd791b1d2228aa613acc1) #11, !dbg !4362
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_9e0090e7731cd791b1d2228aa613acc1) #11, !dbg !4362
   unreachable, !dbg !4362
 }
 
 ; bootloader::bootinfo::memory_map::FrameRange::is_empty
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17h8a72c899702540f4E(ptr align 8 %self) unnamed_addr #1 !dbg !4365 {
+define zeroext i1 @_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17hb8edc9f026bfaf4dE(ptr align 8 %self) unnamed_addr #1 !dbg !4365 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -9160,7 +9161,7 @@ start:
 
 ; bootloader::bootinfo::memory_map::FrameRange::start_addr
 ; Function Attrs: noredzone nounwind
-define i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange10start_addr17hdc0b480a37f19d6cE(ptr align 8 %self) unnamed_addr #1 !dbg !4375 {
+define i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange10start_addr17he1ef9a069b3c8cc0E(ptr align 8 %self) unnamed_addr #1 !dbg !4375 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -9177,13 +9178,13 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_57ce308cfbee0eeaa37d0e2ac37f242e) #11, !dbg !4381
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_57ce308cfbee0eeaa37d0e2ac37f242e) #11, !dbg !4381
   unreachable, !dbg !4381
 }
 
 ; bootloader::bootinfo::memory_map::FrameRange::end_addr
 ; Function Attrs: noredzone nounwind
-define i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange8end_addr17h0ff075a254e98d63E(ptr align 8 %self) unnamed_addr #1 !dbg !4383 {
+define i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange8end_addr17hdc6f3e7a1789b533E(ptr align 8 %self) unnamed_addr #1 !dbg !4383 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -9201,13 +9202,13 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_4848cdfc410b3d9eebbe30a8648bbf6f) #11, !dbg !4387
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.5, i64 33, ptr align 8 @alloc_4848cdfc410b3d9eebbe30a8648bbf6f) #11, !dbg !4387
   unreachable, !dbg !4387
 }
 
 ; <bootloader::bootinfo::memory_map::FrameRange as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN81_$LT$bootloader..bootinfo..memory_map..FrameRange$u20$as$u20$core..fmt..Debug$GT$3fmt17h7c1866d775acbc7fE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4389 {
+define zeroext i1 @"_ZN81_$LT$bootloader..bootinfo..memory_map..FrameRange$u20$as$u20$core..fmt..Debug$GT$3fmt17hb984a4e1d3634888E"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4389 {
 start:
   %width.dbg.spill.i1 = alloca { i64, i64 }, align 8
   %precision.dbg.spill.i2 = alloca { i64, i64 }, align 8
@@ -9243,17 +9244,17 @@ start:
   store ptr %f, ptr %f.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %f.dbg.spill, metadata !4395, metadata !DIExpression()), !dbg !4397
 ; call bootloader::bootinfo::memory_map::FrameRange::start_addr
-  %0 = call i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange10start_addr17hdc0b480a37f19d6cE(ptr align 8 %self) #10, !dbg !4398
+  %0 = call i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange10start_addr17he1ef9a069b3c8cc0E(ptr align 8 %self) #10, !dbg !4398
   store i64 %0, ptr %_10, align 8, !dbg !4398
 ; call core::fmt::ArgumentV1::new_lower_hex
-  %1 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV113new_lower_hex17h49377683266f663dE(ptr align 8 %_10) #10, !dbg !4399
+  %1 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV113new_lower_hex17h5c75358a2fa21259E(ptr align 8 %_10) #10, !dbg !4399
   %_8.0 = extractvalue { ptr, ptr } %1, 0, !dbg !4399
   %_8.1 = extractvalue { ptr, ptr } %1, 1, !dbg !4399
 ; call bootloader::bootinfo::memory_map::FrameRange::end_addr
-  %2 = call i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange8end_addr17h0ff075a254e98d63E(ptr align 8 %self) #10, !dbg !4400
+  %2 = call i64 @_ZN10bootloader8bootinfo10memory_map10FrameRange8end_addr17hdc6f3e7a1789b533E(ptr align 8 %self) #10, !dbg !4400
   store i64 %2, ptr %_13, align 8, !dbg !4400
 ; call core::fmt::ArgumentV1::new_lower_hex
-  %3 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV113new_lower_hex17h49377683266f663dE(ptr align 8 %_13) #10, !dbg !4399
+  %3 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV113new_lower_hex17h5c75358a2fa21259E(ptr align 8 %_13) #10, !dbg !4399
   %_11.0 = extractvalue { ptr, ptr } %3, 0, !dbg !4399
   %_11.1 = extractvalue { ptr, ptr } %3, 1, !dbg !4399
   %4 = getelementptr inbounds [2 x { ptr, ptr }], ptr %_7, i64 0, i64 0, !dbg !4399
@@ -9359,15 +9360,15 @@ start:
   %47 = getelementptr inbounds [2 x %"core::fmt::rt::v1::Argument"], ptr %_16, i64 0, i64 1, !dbg !4399
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %47, ptr align 8 %_21, i64 56, i1 false), !dbg !4399
 ; call core::fmt::Arguments::new_v1_formatted
-  call void @_ZN4core3fmt9Arguments16new_v1_formatted17h5801c682b8271facE(ptr sret(%"core::fmt::Arguments<'_>") %_3, ptr align 8 @alloc_b835a9d6c252fc7d7d9309678c4406b9, i64 3, ptr align 8 %_7, i64 2, ptr align 8 %_16, i64 2) #10, !dbg !4399
+  call void @_ZN4core3fmt9Arguments16new_v1_formatted17hda5d41df8690ec0fE(ptr sret(%"core::fmt::Arguments<'_>") %_3, ptr align 8 @alloc_b835a9d6c252fc7d7d9309678c4406b9, i64 3, ptr align 8 %_7, i64 2, ptr align 8 %_16, i64 2) #10, !dbg !4399
 ; call core::fmt::Formatter::write_fmt
-  %48 = call zeroext i1 @_ZN4core3fmt9Formatter9write_fmt17h35ea0ce90f54657bE(ptr align 8 %f, ptr %_3) #10, !dbg !4399
+  %48 = call zeroext i1 @_ZN4core3fmt9Formatter9write_fmt17h4df076899a0c09a3E(ptr align 8 %f, ptr %_3) #10, !dbg !4399
   ret i1 %48, !dbg !4432
 }
 
 ; <bootloader::bootinfo::memory_map::MemoryRegion as core::convert::From<bootloader::bootinfo::memory_map::E820MemoryRegion>>::from
 ; Function Attrs: noredzone nounwind
-define void @"_ZN144_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..convert..From$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$GT$$GT$4from17he4d3e71dbfcc5bdeE"(ptr sret(%"bootinfo::memory_map::MemoryRegion") %0, ptr %region) unnamed_addr #1 !dbg !4433 {
+define void @"_ZN144_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..convert..From$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$GT$$GT$4from17h95b7b21449197a42E"(ptr sret(%"bootinfo::memory_map::MemoryRegion") %0, ptr %region) unnamed_addr #1 !dbg !4433 {
 start:
   %_9 = alloca [1 x { ptr, ptr }], align 8
   %_5 = alloca %"core::fmt::Arguments<'_>", align 8
@@ -9391,7 +9392,7 @@ bb1:                                              ; preds = %start
   %4 = load i32, ptr %3, align 8, !dbg !4453, !noundef !24
   store i32 %4, ptr %t, align 4, !dbg !4453
 ; call core::fmt::ArgumentV1::new_display
-  %5 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV111new_display17ha9f1046bf78f68d8E(ptr align 4 %t) #10, !dbg !4454
+  %5 = call { ptr, ptr } @_ZN4core3fmt10ArgumentV111new_display17h52e03c1c3cc9e763E(ptr align 4 %t) #10, !dbg !4454
   %_10.0 = extractvalue { ptr, ptr } %5, 0, !dbg !4454
   %_10.1 = extractvalue { ptr, ptr } %5, 1, !dbg !4454
   %6 = getelementptr inbounds [1 x { ptr, ptr }], ptr %_9, i64 0, i64 0, !dbg !4454
@@ -9400,9 +9401,9 @@ bb1:                                              ; preds = %start
   %8 = getelementptr inbounds { ptr, ptr }, ptr %6, i32 0, i32 1, !dbg !4454
   store ptr %_10.1, ptr %8, align 8, !dbg !4454
 ; call core::fmt::Arguments::new_v1
-  call void @_ZN4core3fmt9Arguments6new_v117h17505f2ad5a51ba3E(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_0a0c8f921f96ace4b9d73a9fb1f3a7e8, i64 1, ptr align 8 %_9, i64 1) #10, !dbg !4454
+  call void @_ZN4core3fmt9Arguments6new_v117h2bfadc962778ad00E(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_0a0c8f921f96ace4b9d73a9fb1f3a7e8, i64 1, ptr align 8 %_9, i64 1) #10, !dbg !4454
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr %_5, ptr align 8 @alloc_7aa2ce3965daa798a811db4359705d8b) #11, !dbg !4454
+  call void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr %_5, ptr align 8 @alloc_7aa2ce3965daa798a811db4359705d8b) #11, !dbg !4454
   unreachable, !dbg !4454
 
 bb2:                                              ; preds = %start
@@ -9438,7 +9439,7 @@ bb9:                                              ; preds = %bb2, %bb3, %bb4, %b
 
 bb10:                                             ; preds = %bb9
 ; call bootloader::bootinfo::memory_map::FrameRange::new
-  %12 = call { i64, i64 } @_ZN10bootloader8bootinfo10memory_map10FrameRange3new17h5c37249ca6b03321E(i64 %_13, i64 %_17.0) #10, !dbg !4463
+  %12 = call { i64, i64 } @_ZN10bootloader8bootinfo10memory_map10FrameRange3new17h3bb43e6b2c1de0d6E(i64 %_13, i64 %_17.0) #10, !dbg !4463
   %_12.0 = extractvalue { i64, i64 } %12, 0, !dbg !4463
   %_12.1 = extractvalue { i64, i64 } %12, 1, !dbg !4463
   %_18 = load i32, ptr %region_type, align 4, !dbg !4464, !range !4347, !noundef !24
@@ -9452,13 +9453,13 @@ bb10:                                             ; preds = %bb9
 
 panic:                                            ; preds = %bb9
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_82eaa0d65834937aa85ffd9cf79e73a5) #11, !dbg !4461
+  call void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_82eaa0d65834937aa85ffd9cf79e73a5) #11, !dbg !4461
   unreachable, !dbg !4461
 }
 
 ; bootloader::bootinfo::BootInfo::new
 ; Function Attrs: noredzone nounwind
-define void @_ZN10bootloader8bootinfo8BootInfo3new17h783582ddacc11b7aE(ptr sret(%"bootinfo::BootInfo") %0, ptr %memory_map, ptr %tls_template, i64 %recursive_page_table_addr, i64 %physical_memory_offset) unnamed_addr #1 !dbg !4467 {
+define void @_ZN10bootloader8bootinfo8BootInfo3new17hcece7abe60e3d3fbE(ptr sret(%"bootinfo::BootInfo") %0, ptr %memory_map, ptr %tls_template, i64 %recursive_page_table_addr, i64 %physical_memory_offset) unnamed_addr #1 !dbg !4467 {
 start:
   %1 = alloca %"core::option::Option<bootinfo::TlsTemplate>", align 8
   %physical_memory_offset.dbg.spill = alloca i64, align 8
@@ -9480,7 +9481,7 @@ start:
   store i64 0, ptr %3, align 8, !dbg !4488
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %1, ptr align 8 %tls_template, i64 32, i1 false), !dbg !4489
 ; call core::option::Option<T>::unwrap_or
-  call void @"_ZN4core6option15Option$LT$T$GT$9unwrap_or17h15729337ae01dd2fE"(ptr sret(%"bootinfo::TlsTemplate") %tls_template1, ptr %1, ptr %_6) #10, !dbg !4489
+  call void @"_ZN4core6option15Option$LT$T$GT$9unwrap_or17hb5bc13490eac9104E"(ptr sret(%"bootinfo::TlsTemplate") %tls_template1, ptr %1, ptr %_6) #10, !dbg !4489
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_7, ptr align 8 %tls_template1, i64 24, i1 false), !dbg !4490
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %0, ptr align 8 %memory_map, i64 1544, i1 false), !dbg !4491
   %4 = getelementptr inbounds %"bootinfo::BootInfo", ptr %0, i32 0, i32 1, !dbg !4491
@@ -9492,7 +9493,7 @@ start:
 
 ; bootloader::bootinfo::BootInfo::tls_template
 ; Function Attrs: noredzone nounwind
-define void @_ZN10bootloader8bootinfo8BootInfo12tls_template17hccafdc12d553cb5aE(ptr sret(%"core::option::Option<bootinfo::TlsTemplate>") %0, ptr align 8 %self) unnamed_addr #1 !dbg !4493 {
+define void @_ZN10bootloader8bootinfo8BootInfo12tls_template17he0819d67f002f0fbE(ptr sret(%"core::option::Option<bootinfo::TlsTemplate>") %0, ptr align 8 %self) unnamed_addr #1 !dbg !4493 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_4 = alloca %"bootinfo::TlsTemplate", align 8
@@ -9522,7 +9523,7 @@ bb3:                                              ; preds = %bb2, %bb1
 
 ; <bootloader::bootinfo::memory_map::MemoryRegion as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN83_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h47f12e6d2557594cE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4506 {
+define zeroext i1 @"_ZN83_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h6909f28b8cb986d8E"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4506 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -9534,13 +9535,13 @@ start:
   %0 = getelementptr inbounds %"bootinfo::memory_map::MemoryRegion", ptr %self, i32 0, i32 1, !dbg !4514
   store ptr %0, ptr %_10, align 8, !dbg !4514
 ; call core::fmt::Formatter::debug_struct_field2_finish
-  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field2_finish17hc2440ea8e87fbe70E(ptr align 8 %f, ptr align 1 @alloc_2fa382d66c8b05cee83d1e636a456d83, i64 12, ptr align 1 @alloc_c6d312f4fb2564cdde1868738b40e953, i64 5, ptr align 1 %self, ptr align 8 @vtable.7, ptr align 1 @alloc_24a09d864e93eaea8a967d85ad5fb14b, i64 11, ptr align 1 %_10, ptr align 8 @vtable.8) #10, !dbg !4513
+  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field2_finish17h8ae96c39b7aa1261E(ptr align 8 %f, ptr align 1 @alloc_2fa382d66c8b05cee83d1e636a456d83, i64 12, ptr align 1 @alloc_c6d312f4fb2564cdde1868738b40e953, i64 5, ptr align 1 %self, ptr align 8 @vtable.7, ptr align 1 @alloc_24a09d864e93eaea8a967d85ad5fb14b, i64 11, ptr align 1 %_10, ptr align 8 @vtable.8) #10, !dbg !4513
   ret i1 %1, !dbg !4515
 }
 
 ; <bootloader::bootinfo::memory_map::MemoryRegionType as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryRegionType$u20$as$u20$core..fmt..Debug$GT$3fmt17hb40c95ac774d70e6E"(ptr align 4 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4516 {
+define zeroext i1 @"_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryRegionType$u20$as$u20$core..fmt..Debug$GT$3fmt17h5288c65a4929f4acE"(ptr align 4 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4516 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -9683,13 +9684,13 @@ bb17:                                             ; preds = %bb3, %bb4, %bb5, %b
   %33 = getelementptr inbounds { ptr, i64 }, ptr %_3, i32 0, i32 1, !dbg !4523
   %34 = load i64, ptr %33, align 8, !dbg !4523, !noundef !24
 ; call core::fmt::Formatter::write_str
-  %35 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8 %f, ptr align 1 %32, i64 %34) #10, !dbg !4523
+  %35 = call zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8 %f, ptr align 1 %32, i64 %34) #10, !dbg !4523
   ret i1 %35, !dbg !4525
 }
 
 ; <bootloader::bootinfo::memory_map::E820MemoryRegion as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN87_$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h7e3b1ebee09953ebE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4526 {
+define zeroext i1 @"_ZN87_$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h0392a824fd6c03cfE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4526 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -9703,13 +9704,13 @@ start:
   %0 = getelementptr inbounds %"bootinfo::memory_map::E820MemoryRegion", ptr %self, i32 0, i32 3, !dbg !4537
   store ptr %0, ptr %_16, align 8, !dbg !4537
 ; call core::fmt::Formatter::debug_struct_field4_finish
-  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field4_finish17ha1695794fba5b6abE(ptr align 8 %f, ptr align 1 @alloc_bee533f45c59e636f24e3b92e9dcf8a1, i64 16, ptr align 1 @alloc_e896abd190c076ac3d64221d9ae37a51, i64 10, ptr align 1 %self, ptr align 8 @vtable.9, ptr align 1 @alloc_f92b1a49cd2fef011d7606f6333298f2, i64 3, ptr align 1 %_9, ptr align 8 @vtable.9, ptr align 1 @alloc_24a09d864e93eaea8a967d85ad5fb14b, i64 11, ptr align 1 %_12, ptr align 8 @vtable.a, ptr align 1 @alloc_3453f215b747c0edd0eebf0fbcea5172, i64 24, ptr align 1 %_16, ptr align 8 @vtable.b) #10, !dbg !4534
+  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field4_finish17h6eeab8f9ff50812eE(ptr align 8 %f, ptr align 1 @alloc_bee533f45c59e636f24e3b92e9dcf8a1, i64 16, ptr align 1 @alloc_e896abd190c076ac3d64221d9ae37a51, i64 10, ptr align 1 %self, ptr align 8 @vtable.9, ptr align 1 @alloc_f92b1a49cd2fef011d7606f6333298f2, i64 3, ptr align 1 %_9, ptr align 8 @vtable.9, ptr align 1 @alloc_24a09d864e93eaea8a967d85ad5fb14b, i64 11, ptr align 1 %_12, ptr align 8 @vtable.a, ptr align 1 @alloc_3453f215b747c0edd0eebf0fbcea5172, i64 24, ptr align 1 %_16, ptr align 8 @vtable.b) #10, !dbg !4534
   ret i1 %1, !dbg !4538
 }
 
 ; <bootloader::bootinfo::BootInfo as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN67_$LT$bootloader..bootinfo..BootInfo$u20$as$u20$core..fmt..Debug$GT$3fmt17hfcf2fd56c64748cfE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4539 {
+define zeroext i1 @"_ZN67_$LT$bootloader..bootinfo..BootInfo$u20$as$u20$core..fmt..Debug$GT$3fmt17h91cfb0aa0d181cbeE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4539 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -9722,13 +9723,13 @@ start:
   %0 = getelementptr inbounds %"bootinfo::BootInfo", ptr %self, i32 0, i32 2, !dbg !4548
   store ptr %0, ptr %_13, align 8, !dbg !4548
 ; call core::fmt::Formatter::debug_struct_field3_finish
-  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field3_finish17hb744a301d291fb66E(ptr align 8 %f, ptr align 1 @alloc_1f9c4cc73f4140a97f2cf1f721646a68, i64 8, ptr align 1 @alloc_9edc7a92f8d25561ab6dc7613f63189d, i64 10, ptr align 1 %self, ptr align 8 @vtable.c, ptr align 1 @alloc_1cbcc15d14c439465e35578ac36229c9, i64 12, ptr align 1 %_9, ptr align 8 @vtable.d, ptr align 1 @alloc_b0bb0c7a0f8be091d3fc1c11116fce9b, i64 15, ptr align 1 %_13, ptr align 8 @vtable.e) #10, !dbg !4546
+  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field3_finish17h09a1d014bb475cf8E(ptr align 8 %f, ptr align 1 @alloc_1f9c4cc73f4140a97f2cf1f721646a68, i64 8, ptr align 1 @alloc_9edc7a92f8d25561ab6dc7613f63189d, i64 10, ptr align 1 %self, ptr align 8 @vtable.c, ptr align 1 @alloc_1cbcc15d14c439465e35578ac36229c9, i64 12, ptr align 1 %_9, ptr align 8 @vtable.d, ptr align 1 @alloc_b0bb0c7a0f8be091d3fc1c11116fce9b, i64 15, ptr align 1 %_13, ptr align 8 @vtable.e) #10, !dbg !4546
   ret i1 %1, !dbg !4549
 }
 
 ; <bootloader::bootinfo::TlsTemplate as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN70_$LT$bootloader..bootinfo..TlsTemplate$u20$as$u20$core..fmt..Debug$GT$3fmt17hd389f09cb59dcb2aE"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4550 {
+define zeroext i1 @"_ZN70_$LT$bootloader..bootinfo..TlsTemplate$u20$as$u20$core..fmt..Debug$GT$3fmt17hd721ca5c2a0151c5E"(ptr align 8 %self, ptr align 8 %f) unnamed_addr #1 !dbg !4550 {
 start:
   %f.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -9741,7 +9742,7 @@ start:
   %0 = getelementptr inbounds %"bootinfo::TlsTemplate", ptr %self, i32 0, i32 2, !dbg !4560
   store ptr %0, ptr %_13, align 8, !dbg !4560
 ; call core::fmt::Formatter::debug_struct_field3_finish
-  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field3_finish17hb744a301d291fb66E(ptr align 8 %f, ptr align 1 @alloc_db9f6246386b35b655b2a4a0bfe4b5d7, i64 11, ptr align 1 @alloc_e896abd190c076ac3d64221d9ae37a51, i64 10, ptr align 1 %self, ptr align 8 @vtable.9, ptr align 1 @alloc_586126a6b84f2dd36fa1e3b3e4c38ef1, i64 9, ptr align 1 %_9, ptr align 8 @vtable.9, ptr align 1 @alloc_6a7e1d6cb9743b05f95a08c478d87c6e, i64 8, ptr align 1 %_13, ptr align 8 @vtable.f) #10, !dbg !4558
+  %1 = call zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field3_finish17h09a1d014bb475cf8E(ptr align 8 %f, ptr align 1 @alloc_db9f6246386b35b655b2a4a0bfe4b5d7, i64 11, ptr align 1 @alloc_e896abd190c076ac3d64221d9ae37a51, i64 10, ptr align 1 %self, ptr align 8 @vtable.9, ptr align 1 @alloc_586126a6b84f2dd36fa1e3b3e4c38ef1, i64 9, ptr align 1 %_9, ptr align 8 @vtable.9, ptr align 1 @alloc_6a7e1d6cb9743b05f95a08c478d87c6e, i64 8, ptr align 1 %_13, ptr align 8 @vtable.f) #10, !dbg !4558
   ret i1 %1, !dbg !4561
 }
 
@@ -9750,103 +9751,103 @@ declare void @llvm.dbg.declare(metadata, metadata, metadata) #4
 
 ; core::panicking::panic_nounwind
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking14panic_nounwind17h4573e3544b1244f5E(ptr align 1, i64) unnamed_addr #5
+declare void @_ZN4core9panicking14panic_nounwind17h771057849d273458E(ptr align 1, i64) unnamed_addr #5
 
 ; core::slice::index::slice_index_order_fail
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core5slice5index22slice_index_order_fail17h3a73883734c7d871E(i64, i64, ptr align 8) unnamed_addr #5
+declare void @_ZN4core5slice5index22slice_index_order_fail17h49bde6a7f8cb847aE(i64, i64, ptr align 8) unnamed_addr #5
 
 ; core::slice::index::slice_end_index_len_fail
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core5slice5index24slice_end_index_len_fail17hac0fdec05618e01fE(i64, i64, ptr align 8) unnamed_addr #5
+declare void @_ZN4core5slice5index24slice_end_index_len_fail17hcb085bdc18b82b69E(i64, i64, ptr align 8) unnamed_addr #5
 
 ; core::slice::index::slice_start_index_len_fail
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core5slice5index26slice_start_index_len_fail17he5dc540bc7c1eda1E(i64, i64, ptr align 8) unnamed_addr #5
+declare void @_ZN4core5slice5index26slice_start_index_len_fail17h4127f60ad7a09cbdE(i64, i64, ptr align 8) unnamed_addr #5
 
 ; core::ops::range::RangeInclusive<Idx>::end
 ; Function Attrs: inlinehint noredzone nounwind
-declare align 8 ptr @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3end17hc84d02dca1ce1660E"(ptr align 8) unnamed_addr #0
+declare align 8 ptr @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3end17h92165a95a3b8a6b5E"(ptr align 8) unnamed_addr #0
 
 ; core::slice::index::slice_end_index_overflow_fail
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core5slice5index29slice_end_index_overflow_fail17h6f79fc3290077011E(ptr align 8) unnamed_addr #5
+declare void @_ZN4core5slice5index29slice_end_index_overflow_fail17h8781b928e640c989E(ptr align 8) unnamed_addr #5
 
 ; core::ops::range::RangeInclusive<Idx>::new
 ; Function Attrs: inlinehint noredzone nounwind
-declare void @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3new17h6e1589f1e89e1696E"(ptr sret(%"core::ops::range::RangeInclusive<usize>"), i64, i64) unnamed_addr #0
+declare void @"_ZN4core3ops5range25RangeInclusive$LT$Idx$GT$3new17h9d68c8f933949b4fE"(ptr sret(%"core::ops::range::RangeInclusive<usize>"), i64, i64) unnamed_addr #0
 
-; core::option::Option<T>::unwrap
+; core::option::Option<T>::expect
 ; Function Attrs: inlinehint noredzone nounwind
-declare i64 @"_ZN4core6option15Option$LT$T$GT$6unwrap17h6b9c7dcddc3eb64aE"(i64, i64, ptr align 8) unnamed_addr #0
+declare i64 @"_ZN4core6option15Option$LT$T$GT$6expect17hdeba9ca718bed0bfE"(i64, i64, ptr align 1, i64, ptr align 8) unnamed_addr #0
 
 ; Function Attrs: nocallback nofree nosync nounwind willreturn memory(none)
 declare i1 @llvm.expect.i1(i1, i1) #6
 
 ; core::panicking::panic
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking5panic17h277234a6cd982fe5E(ptr align 1, i64, ptr align 8) unnamed_addr #5
+declare void @_ZN4core9panicking5panic17hb13461d508d8b20bE(ptr align 1, i64, ptr align 8) unnamed_addr #5
 
 ; Function Attrs: nocallback nofree nounwind willreturn memory(argmem: readwrite)
 declare void @llvm.memcpy.p0.p0.i64(ptr noalias nocapture writeonly, ptr noalias nocapture readonly, i64, i1 immarg) #7
 
 ; core::intrinsics::is_aligned_and_not_null
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h54e3a64a8d80a0c2E(ptr) unnamed_addr #1
+declare zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h98a96d04b4c67285E(ptr) unnamed_addr #1
 
 ; core::intrinsics::is_nonoverlapping
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17hdfa133b4c9e6bfe0E(ptr, ptr, i64) unnamed_addr #1
+declare zeroext i1 @_ZN4core10intrinsics17is_nonoverlapping17he2d4d5851e6335c6E(ptr, ptr, i64) unnamed_addr #1
 
 ; Function Attrs: nocallback nofree nounwind willreturn memory(argmem: readwrite)
 declare void @llvm.memmove.p0.p0.i64(ptr nocapture writeonly, ptr nocapture readonly, i64, i1 immarg) #7
 
 ; core::fmt::num::<impl core::fmt::LowerHex for u64>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u64$GT$3fmt17hceee1cc64e7ed24aE"(ptr align 8, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u64$GT$3fmt17h1cb1a13e067490d6E"(ptr align 8, ptr align 8) unnamed_addr #1
 
 ; core::fmt::ArgumentV1::new
 ; Function Attrs: inlinehint noredzone nounwind
-declare { ptr, ptr } @_ZN4core3fmt10ArgumentV13new17hff38262718737e36E(ptr align 8, ptr) unnamed_addr #0
+declare { ptr, ptr } @_ZN4core3fmt10ArgumentV13new17hcd024a23899bed53E(ptr align 8, ptr) unnamed_addr #0
 
 ; core::fmt::Formatter::debug_lower_hex
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter15debug_lower_hex17h41ca6b16ba65727eE(ptr align 8) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt9Formatter15debug_lower_hex17h121685f0bd3428f6E(ptr align 8) unnamed_addr #1
 
 ; core::fmt::num::<impl core::fmt::LowerHex for u32>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u32$GT$3fmt17h87cb2e342e5141a4E"(ptr align 4, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for$u20$u32$GT$3fmt17h8bfa2e9223c7e4a2E"(ptr align 4, ptr align 8) unnamed_addr #1
 
 ; core::fmt::Formatter::debug_upper_hex
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter15debug_upper_hex17h1b93910475cacd94E(ptr align 8) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt9Formatter15debug_upper_hex17h08e1aba76b1c06abE(ptr align 8) unnamed_addr #1
 
 ; core::fmt::num::<impl core::fmt::UpperHex for u32>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u32$GT$3fmt17h2f2ab6e4739c3556E"(ptr align 4, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u32$GT$3fmt17h8dae69749bf3c377E"(ptr align 4, ptr align 8) unnamed_addr #1
 
 ; core::fmt::num::imp::<impl core::fmt::Display for u32>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u32$GT$3fmt17h9c863612f56988d3E"(ptr align 4, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u32$GT$3fmt17h04ef4c863faf69deE"(ptr align 4, ptr align 8) unnamed_addr #1
 
 ; core::fmt::num::<impl core::fmt::UpperHex for u64>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u64$GT$3fmt17h66713fc47818d59eE"(ptr align 8, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..UpperHex$u20$for$u20$u64$GT$3fmt17h0c0917c16a84cc24E"(ptr align 8, ptr align 8) unnamed_addr #1
 
 ; core::fmt::num::imp::<impl core::fmt::Display for u64>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u64$GT$3fmt17ha7e2c62b9562228dE"(ptr align 8, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN4core3fmt3num3imp52_$LT$impl$u20$core..fmt..Display$u20$for$u20$u64$GT$3fmt17h625724b56576f797E"(ptr align 8, ptr align 8) unnamed_addr #1
 
 ; core::fmt::builders::DebugList::entry
 ; Function Attrs: noredzone nounwind
-declare align 8 ptr @_ZN4core3fmt8builders9DebugList5entry17h7271bd8a3d508d11E(ptr align 8, ptr align 1, ptr align 8) unnamed_addr #1
+declare align 8 ptr @_ZN4core3fmt8builders9DebugList5entry17h9d9136ba0b6afa57E(ptr align 8, ptr align 1, ptr align 8) unnamed_addr #1
 
 ; Function Attrs: nocallback nofree nosync nounwind speculatable willreturn memory(none)
 declare { i64, i1 } @llvm.uadd.with.overflow.i64(i64, i64) #4
 
 ; core::panicking::panic_fmt
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking9panic_fmt17hcab56c0eeadf4812E(ptr, ptr align 8) unnamed_addr #5
+declare void @_ZN4core9panicking9panic_fmt17hd0df995a10fc3e64E(ptr, ptr align 8) unnamed_addr #5
 
 ; Function Attrs: nocallback nofree nosync nounwind speculatable willreturn memory(none)
 declare i64 @llvm.ctpop.i64(i64) #4
@@ -9859,97 +9860,97 @@ declare { i64, i1 } @llvm.umul.with.overflow.i64(i64, i64) #4
 
 ; core::ptr::swap_nonoverlapping_simple_untyped
 ; Function Attrs: inlinehint noredzone nounwind
-declare void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h2756a2f44b36c0c2E(ptr, ptr, i64) unnamed_addr #0
+declare void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h593087bdf4b7a30cE(ptr, ptr, i64) unnamed_addr #0
 
 ; core::ptr::swap_nonoverlapping_simple_untyped
 ; Function Attrs: inlinehint noredzone nounwind
-declare void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h97bc86d9d3c3b08bE(ptr, ptr, i64) unnamed_addr #0
+declare void @_ZN4core3ptr34swap_nonoverlapping_simple_untyped17hcd8cc9a1d19a10f2E(ptr, ptr, i64) unnamed_addr #0
 
 ; core::ptr::metadata::from_raw_parts_mut
 ; Function Attrs: inlinehint noredzone nounwind
-declare ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hb47dcef0fd8d9f3eE(ptr) unnamed_addr #0
+declare ptr @_ZN4core3ptr8metadata18from_raw_parts_mut17hd9bd820ad9b48ef6E(ptr) unnamed_addr #0
 
 ; core::panicking::panic_bounds_check
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking18panic_bounds_check17h19acf4b7d21fbddfE(i64, i64, ptr align 8) unnamed_addr #5
+declare void @_ZN4core9panicking18panic_bounds_check17h9dc439079ada2e8cE(i64, i64, ptr align 8) unnamed_addr #5
 
 ; Function Attrs: nocallback nofree nosync nounwind willreturn memory(inaccessiblemem: readwrite)
 declare void @llvm.assume(i1 noundef) #8
 
 ; <I as core::iter::traits::collect::IntoIterator>::into_iter
 ; Function Attrs: inlinehint noredzone nounwind
-declare { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hf1e3ba51008b82e5E"(i64, i64) unnamed_addr #0
+declare { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h848c6fa4a5d91ca0E"(i64, i64) unnamed_addr #0
 
 ; core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
 ; Function Attrs: inlinehint noredzone nounwind
-declare { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h1df758b10b9b351bE"(ptr align 8) unnamed_addr #0
+declare { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h52f941d513838256E"(ptr align 8) unnamed_addr #0
 
 ; core::iter::traits::iterator::Iterator::rev
 ; Function Attrs: inlinehint noredzone nounwind
-declare { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17h8aacf02eab854b71E(i64, i64) unnamed_addr #0
+declare { i64, i64 } @_ZN4core4iter6traits8iterator8Iterator3rev17hf5ab0050f6bb174fE(i64, i64) unnamed_addr #0
 
 ; <I as core::iter::traits::collect::IntoIterator>::into_iter
 ; Function Attrs: inlinehint noredzone nounwind
-declare { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h7d1ad3d13c2c46beE"(i64, i64) unnamed_addr #0
+declare { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h14aa4416da42ac93E"(i64, i64) unnamed_addr #0
 
 ; <core::iter::adapters::rev::Rev<I> as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: inlinehint noredzone nounwind
-declare { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80eeb9b610c0f8dcE"(ptr align 8) unnamed_addr #0
+declare { i64, i64 } @"_ZN98_$LT$core..iter..adapters..rev..Rev$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h847b0b0c10613cf4E"(ptr align 8) unnamed_addr #0
 
 ; Function Attrs: nocallback nofree nounwind willreturn memory(argmem: write)
 declare void @llvm.memset.p0.i64(ptr nocapture writeonly, i8, i64, i1 immarg) #9
 
 ; core::cmp::min
 ; Function Attrs: inlinehint noredzone nounwind
-declare i64 @_ZN4core3cmp3min17hf3463562417c7eceE(i64, i64) unnamed_addr #0
+declare i64 @_ZN4core3cmp3min17h4d553dd5f023dc41E(i64, i64) unnamed_addr #0
 
 ; core::panicking::assert_failed
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking13assert_failed17h383a6105ab32c166E(i8, ptr align 8, ptr align 8, ptr, ptr align 8) unnamed_addr #5
+declare void @_ZN4core9panicking13assert_failed17h37772a198d8fdd9eE(i8, ptr align 8, ptr align 8, ptr, ptr align 8) unnamed_addr #5
 
 ; core::fmt::Formatter::debug_list
 ; Function Attrs: noredzone nounwind
-declare void @_ZN4core3fmt9Formatter10debug_list17hf44a0ea569d6c2caE(ptr sret(%"core::fmt::builders::DebugList<'_, '_>"), ptr align 8) unnamed_addr #1
+declare void @_ZN4core3fmt9Formatter10debug_list17h3291fbb276689019E(ptr sret(%"core::fmt::builders::DebugList<'_, '_>"), ptr align 8) unnamed_addr #1
 
 ; core::fmt::builders::DebugList::finish
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt8builders9DebugList6finish17h8386d39d175a1a26E(ptr align 8) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt8builders9DebugList6finish17hbeb8e651fd2f809cE(ptr align 8) unnamed_addr #1
 
 ; core::fmt::Formatter::write_fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter9write_fmt17h35ea0ce90f54657bE(ptr align 8, ptr) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt9Formatter9write_fmt17h4df076899a0c09a3E(ptr align 8, ptr) unnamed_addr #1
 
 ; core::fmt::ArgumentV1::new_display
 ; Function Attrs: inlinehint noredzone nounwind
-declare { ptr, ptr } @_ZN4core3fmt10ArgumentV111new_display17ha9f1046bf78f68d8E(ptr align 4) unnamed_addr #0
+declare { ptr, ptr } @_ZN4core3fmt10ArgumentV111new_display17h52e03c1c3cc9e763E(ptr align 4) unnamed_addr #0
 
 ; core::fmt::Formatter::debug_struct_field2_finish
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field2_finish17hc2440ea8e87fbe70E(ptr align 8, ptr align 1, i64, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field2_finish17h8ae96c39b7aa1261E(ptr align 8, ptr align 1, i64, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8) unnamed_addr #1
 
 ; core::fmt::Formatter::write_str
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter9write_str17hc0b86645fa2707c5E(ptr align 8, ptr align 1, i64) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt9Formatter9write_str17h2443c20e213b1292E(ptr align 8, ptr align 1, i64) unnamed_addr #1
 
 ; <&T as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h03207b162034f1bcE"(ptr align 8, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h442781ef0c4c5cb6E"(ptr align 8, ptr align 8) unnamed_addr #1
 
 ; core::fmt::Formatter::debug_struct_field4_finish
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field4_finish17ha1695794fba5b6abE(ptr align 8, ptr align 1, i64, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field4_finish17h6eeab8f9ff50812eE(ptr align 8, ptr align 1, i64, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8) unnamed_addr #1
 
 ; <&T as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h65f399967d7391c0E"(ptr align 8, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17hfa3fdfc684a59af8E"(ptr align 8, ptr align 8) unnamed_addr #1
 
 ; core::fmt::Formatter::debug_struct_field3_finish
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field3_finish17hb744a301d291fb66E(ptr align 8, ptr align 1, i64, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8) unnamed_addr #1
+declare zeroext i1 @_ZN4core3fmt9Formatter26debug_struct_field3_finish17h09a1d014bb475cf8E(ptr align 8, ptr align 1, i64, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8, ptr align 1, i64, ptr align 1, ptr align 8) unnamed_addr #1
 
 ; <&T as core::fmt::Debug>::fmt
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h91a47dc815968b8cE"(ptr align 8, ptr align 8) unnamed_addr #1
+declare zeroext i1 @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h9e1f8f9e6c8a32e8E"(ptr align 8, ptr align 8) unnamed_addr #1
 
 attributes #0 = { inlinehint noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
 attributes #1 = { noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
@@ -9970,7 +9971,7 @@ attributes #11 = { noreturn nounwind }
 !0 = !DIGlobalVariableExpression(var: !1, expr: !DIExpression())
 !1 = distinct !DIGlobalVariable(name: "<&bootloader::bootinfo::memory_map::MemoryRegion as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !3, isLocal: true, isDefinition: true)
 !2 = !DIFile(filename: "<unknown>", directory: "")
-!3 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&bootloader::bootinfo::memory_map::MemoryRegion as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !4, vtableHolder: !12, templateParams: !24, identifier: "8903efa6076539e15e28763a6be0cf6c")
+!3 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&bootloader::bootinfo::memory_map::MemoryRegion as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !4, vtableHolder: !12, templateParams: !24, identifier: "49a98cf9a9f9bff9930dadd9da67d98f")
 !4 = !{!5, !8, !10, !11}
 !5 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !3, file: !2, baseType: !6, size: 64, align: 64)
 !6 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const ()", baseType: !7, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -9980,13 +9981,13 @@ attributes #11 = { noreturn nounwind }
 !10 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !3, file: !2, baseType: !9, size: 64, align: 64, offset: 128)
 !11 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !3, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
 !12 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&bootloader::bootinfo::memory_map::MemoryRegion", baseType: !13, size: 64, align: 64, dwarfAddressSpace: 0)
-!13 = !DICompositeType(tag: DW_TAG_structure_type, name: "MemoryRegion", scope: !14, file: !2, size: 192, align: 64, elements: !17, templateParams: !24, identifier: "62d93edd8ba33aa0f946d68fbf657bcb")
+!13 = !DICompositeType(tag: DW_TAG_structure_type, name: "MemoryRegion", scope: !14, file: !2, size: 192, align: 64, elements: !17, templateParams: !24, identifier: "ecb75b35f2608f65a535f3646dc01de0")
 !14 = !DINamespace(name: "memory_map", scope: !15)
 !15 = !DINamespace(name: "bootinfo", scope: !16)
 !16 = !DINamespace(name: "bootloader", scope: null)
 !17 = !{!18, !25}
 !18 = !DIDerivedType(tag: DW_TAG_member, name: "range", scope: !13, file: !2, baseType: !19, size: 128, align: 64)
-!19 = !DICompositeType(tag: DW_TAG_structure_type, name: "FrameRange", scope: !14, file: !2, size: 128, align: 64, elements: !20, templateParams: !24, identifier: "951912ac5cd44af84191536704321a3")
+!19 = !DICompositeType(tag: DW_TAG_structure_type, name: "FrameRange", scope: !14, file: !2, size: 128, align: 64, elements: !20, templateParams: !24, identifier: "112cbab4ad25ced52f10f572bcc704df")
 !20 = !{!21, !23}
 !21 = !DIDerivedType(tag: DW_TAG_member, name: "start_frame_number", scope: !19, file: !2, baseType: !22, size: 64, align: 64)
 !22 = !DIBasicType(name: "u64", size: 64, encoding: DW_ATE_unsigned)
@@ -10013,7 +10014,7 @@ attributes #11 = { noreturn nounwind }
 !43 = !DIEnumerator(name: "NonExhaustive", value: 14, isUnsigned: true)
 !44 = !DIGlobalVariableExpression(var: !45, expr: !DIExpression())
 !45 = distinct !DIGlobalVariable(name: "<bootloader::bootinfo::memory_map::FrameRange as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !46, isLocal: true, isDefinition: true)
-!46 = !DICompositeType(tag: DW_TAG_structure_type, name: "<bootloader::bootinfo::memory_map::FrameRange as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !47, vtableHolder: !19, templateParams: !24, identifier: "fde891d61fdbe9ec50808b0ad6f8feb6")
+!46 = !DICompositeType(tag: DW_TAG_structure_type, name: "<bootloader::bootinfo::memory_map::FrameRange as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !47, vtableHolder: !19, templateParams: !24, identifier: "4d26d3043116cf9f8477535b73079936")
 !47 = !{!48, !49, !50, !51}
 !48 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !46, file: !2, baseType: !6, size: 64, align: 64)
 !49 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !46, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -10021,7 +10022,7 @@ attributes #11 = { noreturn nounwind }
 !51 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !46, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
 !52 = !DIGlobalVariableExpression(var: !53, expr: !DIExpression())
 !53 = distinct !DIGlobalVariable(name: "<&bootloader::bootinfo::memory_map::MemoryRegionType as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !54, isLocal: true, isDefinition: true)
-!54 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&bootloader::bootinfo::memory_map::MemoryRegionType as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !55, vtableHolder: !60, templateParams: !24, identifier: "ee3dba1c98f440defb52cab9c9c34c2")
+!54 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&bootloader::bootinfo::memory_map::MemoryRegionType as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !55, vtableHolder: !60, templateParams: !24, identifier: "977a8011d883e23391391804014ee82b")
 !55 = !{!56, !57, !58, !59}
 !56 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !54, file: !2, baseType: !6, size: 64, align: 64)
 !57 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !54, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -10030,7 +10031,7 @@ attributes #11 = { noreturn nounwind }
 !60 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&bootloader::bootinfo::memory_map::MemoryRegionType", baseType: !26, size: 64, align: 64, dwarfAddressSpace: 0)
 !61 = !DIGlobalVariableExpression(var: !62, expr: !DIExpression())
 !62 = distinct !DIGlobalVariable(name: "<u64 as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !63, isLocal: true, isDefinition: true)
-!63 = !DICompositeType(tag: DW_TAG_structure_type, name: "<u64 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !64, vtableHolder: !22, templateParams: !24, identifier: "651342a23dd28bf3b43591e743ad2be6")
+!63 = !DICompositeType(tag: DW_TAG_structure_type, name: "<u64 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !64, vtableHolder: !22, templateParams: !24, identifier: "c754d1de9801452d1e4a757ed9fefd9")
 !64 = !{!65, !66, !67, !68}
 !65 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !63, file: !2, baseType: !6, size: 64, align: 64)
 !66 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !63, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -10038,7 +10039,7 @@ attributes #11 = { noreturn nounwind }
 !68 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !63, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
 !69 = !DIGlobalVariableExpression(var: !70, expr: !DIExpression())
 !70 = distinct !DIGlobalVariable(name: "<u32 as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !71, isLocal: true, isDefinition: true)
-!71 = !DICompositeType(tag: DW_TAG_structure_type, name: "<u32 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !72, vtableHolder: !27, templateParams: !24, identifier: "9a50413855c1bf1dc3d017ea33a4cf53")
+!71 = !DICompositeType(tag: DW_TAG_structure_type, name: "<u32 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !72, vtableHolder: !27, templateParams: !24, identifier: "d1f8935a8f2857bb21ea95c8e69fee2b")
 !72 = !{!73, !74, !75, !76}
 !73 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !71, file: !2, baseType: !6, size: 64, align: 64)
 !74 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !71, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -10046,7 +10047,7 @@ attributes #11 = { noreturn nounwind }
 !76 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !71, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
 !77 = !DIGlobalVariableExpression(var: !78, expr: !DIExpression())
 !78 = distinct !DIGlobalVariable(name: "<&u32 as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !79, isLocal: true, isDefinition: true)
-!79 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&u32 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !80, vtableHolder: !85, templateParams: !24, identifier: "a1796ee89ddeeaf5f4c580736da82908")
+!79 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&u32 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !80, vtableHolder: !85, templateParams: !24, identifier: "70c3db0d87e68f786e30133d4eed2ad4")
 !80 = !{!81, !82, !83, !84}
 !81 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !79, file: !2, baseType: !6, size: 64, align: 64)
 !82 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !79, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -10055,13 +10056,13 @@ attributes #11 = { noreturn nounwind }
 !85 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&u32", baseType: !27, size: 64, align: 64, dwarfAddressSpace: 0)
 !86 = !DIGlobalVariableExpression(var: !87, expr: !DIExpression())
 !87 = distinct !DIGlobalVariable(name: "<bootloader::bootinfo::memory_map::MemoryMap as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !88, isLocal: true, isDefinition: true)
-!88 = !DICompositeType(tag: DW_TAG_structure_type, name: "<bootloader::bootinfo::memory_map::MemoryMap as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !89, vtableHolder: !94, templateParams: !24, identifier: "d8cf9bd3c3e35cdfd58e2dee26135d29")
+!88 = !DICompositeType(tag: DW_TAG_structure_type, name: "<bootloader::bootinfo::memory_map::MemoryMap as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !89, vtableHolder: !94, templateParams: !24, identifier: "1da373a37b4b35fa9e64e255d4d1155a")
 !89 = !{!90, !91, !92, !93}
 !90 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !88, file: !2, baseType: !6, size: 64, align: 64)
 !91 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !88, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !92 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !88, file: !2, baseType: !9, size: 64, align: 64, offset: 128)
 !93 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !88, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
-!94 = !DICompositeType(tag: DW_TAG_structure_type, name: "MemoryMap", scope: !14, file: !2, size: 12352, align: 64, elements: !95, templateParams: !24, identifier: "229215dcf55b42f0c069fbd7bbdf916a")
+!94 = !DICompositeType(tag: DW_TAG_structure_type, name: "MemoryMap", scope: !14, file: !2, size: 12352, align: 64, elements: !95, templateParams: !24, identifier: "9577bce8478abb5633a29e3922f47e2a")
 !95 = !{!96, !100}
 !96 = !DIDerivedType(tag: DW_TAG_member, name: "entries", scope: !94, file: !2, baseType: !97, size: 12288, align: 64)
 !97 = !DICompositeType(tag: DW_TAG_array_type, baseType: !13, size: 12288, align: 64, elements: !98)
@@ -10070,20 +10071,20 @@ attributes #11 = { noreturn nounwind }
 !100 = !DIDerivedType(tag: DW_TAG_member, name: "next_entry_index", scope: !94, file: !2, baseType: !22, size: 64, align: 64, offset: 12288)
 !101 = !DIGlobalVariableExpression(var: !102, expr: !DIExpression())
 !102 = distinct !DIGlobalVariable(name: "<bootloader::bootinfo::TlsTemplate as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !103, isLocal: true, isDefinition: true)
-!103 = !DICompositeType(tag: DW_TAG_structure_type, name: "<bootloader::bootinfo::TlsTemplate as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !104, vtableHolder: !109, templateParams: !24, identifier: "dbb547db4f56072f7e4c99f8406b49c8")
+!103 = !DICompositeType(tag: DW_TAG_structure_type, name: "<bootloader::bootinfo::TlsTemplate as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !104, vtableHolder: !109, templateParams: !24, identifier: "6f979842614fb146929cce5a3a950bf7")
 !104 = !{!105, !106, !107, !108}
 !105 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !103, file: !2, baseType: !6, size: 64, align: 64)
 !106 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !103, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !107 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !103, file: !2, baseType: !9, size: 64, align: 64, offset: 128)
 !108 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !103, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
-!109 = !DICompositeType(tag: DW_TAG_structure_type, name: "TlsTemplate", scope: !15, file: !2, size: 192, align: 64, elements: !110, templateParams: !24, identifier: "6eeabf7cdb205ad274988842f7b7b543")
+!109 = !DICompositeType(tag: DW_TAG_structure_type, name: "TlsTemplate", scope: !15, file: !2, size: 192, align: 64, elements: !110, templateParams: !24, identifier: "8b305510c7b24eb826814b08c8e35f32")
 !110 = !{!111, !112, !113}
 !111 = !DIDerivedType(tag: DW_TAG_member, name: "start_addr", scope: !109, file: !2, baseType: !22, size: 64, align: 64)
 !112 = !DIDerivedType(tag: DW_TAG_member, name: "file_size", scope: !109, file: !2, baseType: !22, size: 64, align: 64, offset: 64)
 !113 = !DIDerivedType(tag: DW_TAG_member, name: "mem_size", scope: !109, file: !2, baseType: !22, size: 64, align: 64, offset: 128)
 !114 = !DIGlobalVariableExpression(var: !115, expr: !DIExpression())
 !115 = distinct !DIGlobalVariable(name: "<&u8 as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !116, isLocal: true, isDefinition: true)
-!116 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&u8 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !117, vtableHolder: !122, templateParams: !24, identifier: "54c2724b2adb1eb31351269ada2d013")
+!116 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&u8 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !117, vtableHolder: !122, templateParams: !24, identifier: "38617f96018f3f3bdbfa7fba37326502")
 !117 = !{!118, !119, !120, !121}
 !118 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !116, file: !2, baseType: !6, size: 64, align: 64)
 !119 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !116, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -10093,7 +10094,7 @@ attributes #11 = { noreturn nounwind }
 !123 = !DIBasicType(name: "u8", size: 8, encoding: DW_ATE_unsigned)
 !124 = !DIGlobalVariableExpression(var: !125, expr: !DIExpression())
 !125 = distinct !DIGlobalVariable(name: "<&u64 as core::fmt::Debug>::{vtable}", scope: null, file: !2, type: !126, isLocal: true, isDefinition: true)
-!126 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&u64 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !127, vtableHolder: !132, templateParams: !24, identifier: "72a8f41c2039c0da2413a8ce1c63be0")
+!126 = !DICompositeType(tag: DW_TAG_structure_type, name: "<&u64 as core::fmt::Debug>::{vtable_type}", file: !2, size: 256, align: 64, flags: DIFlagArtificial, elements: !127, vtableHolder: !132, templateParams: !24, identifier: "1b08b7a4e7385b895c167827c053e0d5")
 !127 = !{!128, !129, !130, !131}
 !128 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !126, file: !2, baseType: !6, size: 64, align: 64)
 !129 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !126, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -10103,8 +10104,8 @@ attributes #11 = { noreturn nounwind }
 !133 = !{i32 8, !"PIC Level", i32 2}
 !134 = !{i32 2, !"Dwarf Version", i32 4}
 !135 = !{i32 2, !"Debug Info Version", i32 3}
-!136 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !137, producer: "clang LLVM (rustc version 1.71.0-nightly (d0f204e4d 2023-04-16))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !138, globals: !162, splitDebugInlining: false)
-!137 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/lib.rs/@/bootloader.df17fe0f-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23")
+!136 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !137, producer: "clang LLVM (rustc version 1.71.0-nightly (39c6804b9 2023-04-19))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !138, globals: !162, splitDebugInlining: false)
+!137 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23/src/lib.rs/@/bootloader.1f3bd46d6a4ebe1c-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23")
 !138 = !{!26, !139, !149, !156}
 !139 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "Alignment", scope: !140, file: !2, baseType: !123, size: 8, align: 8, flags: DIFlagEnumClass, elements: !144)
 !140 = !DINamespace(name: "v1", scope: !141)
@@ -10130,19 +10131,19 @@ attributes #11 = { noreturn nounwind }
 !160 = !DIEnumerator(name: "Ne", value: 1, isUnsigned: true)
 !161 = !DIEnumerator(name: "Match", value: 2, isUnsigned: true)
 !162 = !{!0, !44, !52, !61, !69, !77, !86, !101, !114, !124}
-!163 = distinct !DISubprogram(name: "get_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h5b3ffffb25ed1251E", scope: !165, file: !164, line: 374, type: !168, scopeLine: 374, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !183)
-!164 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/index.rs", directory: "", checksumkind: CSK_MD5, checksum: "1350c165f4aa6e79d8fe4fa0de29c328")
+!163 = distinct !DISubprogram(name: "get_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h4c54c58de0d8ed23E", scope: !165, file: !164, line: 371, type: !168, scopeLine: 371, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !183)
+!164 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/index.rs", directory: "", checksumkind: CSK_MD5, checksum: "d107e626d2145c8c7d098a7b217e6306")
 !165 = !DINamespace(name: "{impl#4}", scope: !166)
 !166 = !DINamespace(name: "index", scope: !167)
 !167 = !DINamespace(name: "slice", scope: !143)
 !168 = !DISubroutineType(types: !169)
 !169 = !{!170, !175, !170}
-!170 = !DICompositeType(tag: DW_TAG_structure_type, name: "*const [bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !171, templateParams: !24, identifier: "41ca5b65a2205ef22700cb118a5ae0d")
+!170 = !DICompositeType(tag: DW_TAG_structure_type, name: "*const [bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !171, templateParams: !24, identifier: "63bf7c02573293222d02f75520413385")
 !171 = !{!172, !174}
 !172 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !170, file: !2, baseType: !173, size: 64, align: 64)
 !173 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !13, size: 64, align: 64, dwarfAddressSpace: 0)
 !174 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !170, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
-!175 = !DICompositeType(tag: DW_TAG_structure_type, name: "Range<usize>", scope: !176, file: !2, size: 128, align: 64, elements: !178, templateParams: !181, identifier: "affb821d2ef067ad9b92b5e9467b6ff1")
+!175 = !DICompositeType(tag: DW_TAG_structure_type, name: "Range<usize>", scope: !176, file: !2, size: 128, align: 64, elements: !178, templateParams: !181, identifier: "a03c8b420abc34aa26dc7c9454c3a97c")
 !176 = !DINamespace(name: "range", scope: !177)
 !177 = !DINamespace(name: "ops", scope: !143)
 !178 = !{!179, !180}
@@ -10151,25 +10152,25 @@ attributes #11 = { noreturn nounwind }
 !181 = !{!182}
 !182 = !DITemplateTypeParameter(name: "Idx", type: !9)
 !183 = !{!184, !185, !186, !188}
-!184 = !DILocalVariable(name: "self", arg: 1, scope: !163, file: !164, line: 374, type: !175)
-!185 = !DILocalVariable(name: "slice", arg: 2, scope: !163, file: !164, line: 374, type: !170)
-!186 = !DILocalVariable(name: "this", scope: !187, file: !164, line: 375, type: !175, align: 8)
-!187 = distinct !DILexicalBlock(scope: !163, file: !164, line: 375, column: 9)
-!188 = !DILocalVariable(name: "new_len", scope: !189, file: !164, line: 386, type: !9, align: 8)
-!189 = distinct !DILexicalBlock(scope: !187, file: !164, line: 386, column: 13)
+!184 = !DILocalVariable(name: "self", arg: 1, scope: !163, file: !164, line: 371, type: !175)
+!185 = !DILocalVariable(name: "slice", arg: 2, scope: !163, file: !164, line: 371, type: !170)
+!186 = !DILocalVariable(name: "this", scope: !187, file: !164, line: 372, type: !175, align: 8)
+!187 = distinct !DILexicalBlock(scope: !163, file: !164, line: 372, column: 9)
+!188 = !DILocalVariable(name: "new_len", scope: !189, file: !164, line: 383, type: !9, align: 8)
+!189 = distinct !DILexicalBlock(scope: !187, file: !164, line: 383, column: 13)
 !190 = !{!191}
 !191 = !DITemplateTypeParameter(name: "T", type: !13)
-!192 = !DILocation(line: 374, column: 29, scope: !163)
-!193 = !DILocation(line: 374, column: 35, scope: !163)
-!194 = !DILocation(line: 375, column: 13, scope: !187)
-!195 = !DILocation(line: 375, column: 20, scope: !163)
-!196 = !DILocation(line: 381, column: 13, scope: !187)
-!197 = !DILocation(line: 386, column: 27, scope: !187)
-!198 = !DILocation(line: 386, column: 17, scope: !189)
-!199 = !DILocation(line: 387, column: 39, scope: !189)
+!192 = !DILocation(line: 371, column: 29, scope: !163)
+!193 = !DILocation(line: 371, column: 35, scope: !163)
+!194 = !DILocation(line: 372, column: 13, scope: !187)
+!195 = !DILocation(line: 372, column: 20, scope: !163)
+!196 = !DILocation(line: 378, column: 13, scope: !187)
+!197 = !DILocation(line: 383, column: 27, scope: !187)
+!198 = !DILocation(line: 383, column: 17, scope: !189)
+!199 = !DILocation(line: 384, column: 39, scope: !189)
 !200 = !DILocalVariable(name: "self", arg: 1, scope: !201, file: !202, line: 915, type: !208)
-!201 = distinct !DISubprogram(name: "add<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$3add17hcb59f9090580c29eE", scope: !203, file: !202, line: 915, type: !206, scopeLine: 915, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !209)
-!202 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "2a21946c6980740609ff35bdd2bfdb1c")
+!201 = distinct !DISubprogram(name: "add<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$3add17h632ba02808db498bE", scope: !203, file: !202, line: 915, type: !206, scopeLine: 915, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !209)
+!202 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "bdc703bf15683313735b9c5aaf2bed9f")
 !203 = !DINamespace(name: "{impl#0}", scope: !204)
 !204 = !DINamespace(name: "const_ptr", scope: !205)
 !205 = !DINamespace(name: "ptr", scope: !143)
@@ -10179,10 +10180,10 @@ attributes #11 = { noreturn nounwind }
 !209 = !{!200, !210}
 !210 = !DILocalVariable(name: "count", arg: 2, scope: !201, file: !202, line: 915, type: !9)
 !211 = !DILocation(line: 915, column: 29, scope: !201, inlinedAt: !212)
-!212 = distinct !DILocation(line: 387, column: 39, scope: !189)
+!212 = distinct !DILocation(line: 384, column: 39, scope: !189)
 !213 = !DILocation(line: 915, column: 35, scope: !201, inlinedAt: !212)
 !214 = !DILocalVariable(name: "self", arg: 1, scope: !215, file: !202, line: 460, type: !208)
-!215 = distinct !DISubprogram(name: "offset<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$6offset17hb9151504a933d008E", scope: !203, file: !202, line: 460, type: !216, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !219)
+!215 = distinct !DISubprogram(name: "offset<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$6offset17h3c6ea61e4c22a2aaE", scope: !203, file: !202, line: 460, type: !216, scopeLine: 460, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !219)
 !216 = !DISubroutineType(types: !217)
 !217 = !{!208, !208, !218}
 !218 = !DIBasicType(name: "isize", size: 64, encoding: DW_ATE_signed)
@@ -10192,49 +10193,49 @@ attributes #11 = { noreturn nounwind }
 !222 = distinct !DILocation(line: 920, column: 18, scope: !201, inlinedAt: !212)
 !223 = !DILocation(line: 460, column: 38, scope: !215, inlinedAt: !222)
 !224 = !DILocation(line: 465, column: 18, scope: !215, inlinedAt: !222)
-!225 = !DILocation(line: 387, column: 13, scope: !189)
-!226 = !DILocation(line: 389, column: 6, scope: !163)
+!225 = !DILocation(line: 384, column: 13, scope: !189)
+!226 = !DILocation(line: 386, column: 6, scope: !163)
 !227 = !DILocalVariable(name: "this", arg: 1, scope: !228, file: !229, line: 2484, type: !175)
-!228 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h6e79f2bf5825ede3E", scope: !230, file: !229, line: 2484, type: !231, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !233)
-!229 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/intrinsics.rs", directory: "", checksumkind: CSK_MD5, checksum: "3a443bdaf0a09f89f5b2fb75aa981800")
+!228 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17h9cd1bd1f26c4aab9E", scope: !230, file: !229, line: 2484, type: !231, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !233)
+!229 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/intrinsics.rs", directory: "", checksumkind: CSK_MD5, checksum: "275c4f9af6c6ff08216f4f2da85e76cf")
 !230 = !DINamespace(name: "get_unchecked", scope: !165)
 !231 = !DISubroutineType(types: !232)
 !232 = !{null, !175, !170}
 !233 = !{!227, !234}
 !234 = !DILocalVariable(name: "slice", arg: 2, scope: !228, file: !229, line: 2484, type: !170)
 !235 = !DILocation(line: 2484, column: 39, scope: !228, inlinedAt: !236)
-!236 = distinct !DILocation(line: 381, column: 13, scope: !187)
-!237 = !DILocation(line: 384, column: 17, scope: !238, inlinedAt: !236)
+!236 = distinct !DILocation(line: 378, column: 13, scope: !187)
+!237 = !DILocation(line: 381, column: 17, scope: !238, inlinedAt: !236)
 !238 = !DILexicalBlockFile(scope: !228, file: !164, discriminator: 0)
-!239 = !DILocation(line: 384, column: 55, scope: !238, inlinedAt: !236)
-!240 = !DILocation(line: 384, column: 43, scope: !238, inlinedAt: !236)
+!239 = !DILocation(line: 381, column: 55, scope: !238, inlinedAt: !236)
+!240 = !DILocation(line: 381, column: 43, scope: !238, inlinedAt: !236)
 !241 = !DILocation(line: 2485, column: 20, scope: !228, inlinedAt: !236)
 !242 = !{i8 0, i8 2}
 !243 = !DILocation(line: 2487, column: 21, scope: !228, inlinedAt: !236)
-!244 = distinct !DISubprogram(name: "get_unchecked_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h5c0b3f9eebf0ed73E", scope: !165, file: !164, line: 392, type: !245, scopeLine: 392, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !251)
+!244 = distinct !DISubprogram(name: "get_unchecked_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h6a3f95e11b33d7c3E", scope: !165, file: !164, line: 389, type: !245, scopeLine: 389, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !251)
 !245 = !DISubroutineType(types: !246)
 !246 = !{!247, !175, !247}
-!247 = !DICompositeType(tag: DW_TAG_structure_type, name: "*mut [bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !248, templateParams: !24, identifier: "c3d6250ebf7bf4c0457753125f8888cf")
+!247 = !DICompositeType(tag: DW_TAG_structure_type, name: "*mut [bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !248, templateParams: !24, identifier: "4659bd321f7380e946c69fbff19c11dc")
 !248 = !{!249, !250}
 !249 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !247, file: !2, baseType: !173, size: 64, align: 64)
 !250 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !247, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !251 = !{!252, !253, !254, !256}
-!252 = !DILocalVariable(name: "self", arg: 1, scope: !244, file: !164, line: 392, type: !175)
-!253 = !DILocalVariable(name: "slice", arg: 2, scope: !244, file: !164, line: 392, type: !247)
-!254 = !DILocalVariable(name: "this", scope: !255, file: !164, line: 393, type: !175, align: 8)
-!255 = distinct !DILexicalBlock(scope: !244, file: !164, line: 393, column: 9)
-!256 = !DILocalVariable(name: "new_len", scope: !257, file: !164, line: 401, type: !9, align: 8)
-!257 = distinct !DILexicalBlock(scope: !255, file: !164, line: 401, column: 13)
-!258 = !DILocation(line: 392, column: 33, scope: !244)
-!259 = !DILocation(line: 392, column: 39, scope: !244)
-!260 = !DILocation(line: 393, column: 13, scope: !255)
-!261 = !DILocation(line: 393, column: 20, scope: !244)
-!262 = !DILocation(line: 396, column: 13, scope: !255)
-!263 = !DILocation(line: 401, column: 27, scope: !255)
-!264 = !DILocation(line: 401, column: 17, scope: !257)
+!252 = !DILocalVariable(name: "self", arg: 1, scope: !244, file: !164, line: 389, type: !175)
+!253 = !DILocalVariable(name: "slice", arg: 2, scope: !244, file: !164, line: 389, type: !247)
+!254 = !DILocalVariable(name: "this", scope: !255, file: !164, line: 390, type: !175, align: 8)
+!255 = distinct !DILexicalBlock(scope: !244, file: !164, line: 390, column: 9)
+!256 = !DILocalVariable(name: "new_len", scope: !257, file: !164, line: 398, type: !9, align: 8)
+!257 = distinct !DILexicalBlock(scope: !255, file: !164, line: 398, column: 13)
+!258 = !DILocation(line: 389, column: 33, scope: !244)
+!259 = !DILocation(line: 389, column: 39, scope: !244)
+!260 = !DILocation(line: 390, column: 13, scope: !255)
+!261 = !DILocation(line: 390, column: 20, scope: !244)
+!262 = !DILocation(line: 393, column: 13, scope: !255)
+!263 = !DILocation(line: 398, column: 27, scope: !255)
+!264 = !DILocation(line: 398, column: 17, scope: !257)
 !265 = !DILocalVariable(name: "self", arg: 1, scope: !266, file: !267, line: 2014, type: !247)
-!266 = distinct !DISubprogram(name: "as_mut_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr41_$LT$impl$u20$$BP$mut$u20$$u5b$T$u5d$$GT$10as_mut_ptr17h1fdfe9707467a422E", scope: !268, file: !267, line: 2014, type: !270, scopeLine: 2014, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !273)
-!267 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "11087a90ad8f3b9862444e143466697a")
+!266 = distinct !DISubprogram(name: "as_mut_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr41_$LT$impl$u20$$BP$mut$u20$$u5b$T$u5d$$GT$10as_mut_ptr17h2fb6bee08668f294E", scope: !268, file: !267, line: 2014, type: !270, scopeLine: 2014, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !273)
+!267 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "133d7d3c37c674125ee9e1c682a4b571")
 !268 = !DINamespace(name: "{impl#1}", scope: !269)
 !269 = !DINamespace(name: "mut_ptr", scope: !205)
 !270 = !DISubroutineType(types: !271)
@@ -10242,19 +10243,19 @@ attributes #11 = { noreturn nounwind }
 !272 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut bootloader::bootinfo::memory_map::MemoryRegion", baseType: !13, size: 64, align: 64, dwarfAddressSpace: 0)
 !273 = !{!265}
 !274 = !DILocation(line: 2014, column: 29, scope: !266, inlinedAt: !275)
-!275 = distinct !DILocation(line: 402, column: 43, scope: !257)
+!275 = distinct !DILocation(line: 399, column: 43, scope: !257)
 !276 = !DILocalVariable(name: "self", arg: 1, scope: !277, file: !267, line: 1015, type: !272)
-!277 = distinct !DISubprogram(name: "add<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17hfa694270c80e6c18E", scope: !278, file: !267, line: 1015, type: !279, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !281)
+!277 = distinct !DISubprogram(name: "add<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17h7d131e33b29a8884E", scope: !278, file: !267, line: 1015, type: !279, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !281)
 !278 = !DINamespace(name: "{impl#0}", scope: !269)
 !279 = !DISubroutineType(types: !280)
 !280 = !{!272, !272, !9}
 !281 = !{!276, !282}
 !282 = !DILocalVariable(name: "count", arg: 2, scope: !277, file: !267, line: 1015, type: !9)
 !283 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !284)
-!284 = distinct !DILocation(line: 402, column: 43, scope: !257)
+!284 = distinct !DILocation(line: 399, column: 43, scope: !257)
 !285 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !284)
 !286 = !DILocalVariable(name: "self", arg: 1, scope: !287, file: !267, line: 472, type: !272)
-!287 = distinct !DISubprogram(name: "offset<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17h261b88c28bceb1a8E", scope: !278, file: !267, line: 472, type: !288, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !290)
+!287 = distinct !DISubprogram(name: "offset<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17h1f9d0b729f83c220E", scope: !278, file: !267, line: 472, type: !288, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !290)
 !288 = !DISubroutineType(types: !289)
 !289 = !{!272, !272, !218}
 !290 = !{!286, !291}
@@ -10263,39 +10264,39 @@ attributes #11 = { noreturn nounwind }
 !293 = distinct !DILocation(line: 1020, column: 18, scope: !277, inlinedAt: !284)
 !294 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !293)
 !295 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !293)
-!296 = !DILocation(line: 402, column: 13, scope: !257)
-!297 = !DILocation(line: 404, column: 6, scope: !244)
+!296 = !DILocation(line: 399, column: 13, scope: !257)
+!297 = !DILocation(line: 401, column: 6, scope: !244)
 !298 = !DILocalVariable(name: "this", arg: 1, scope: !299, file: !229, line: 2484, type: !175)
-!299 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h81734ee76a1eb463E", scope: !300, file: !229, line: 2484, type: !301, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !303)
+!299 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut7runtime17h0294ca926293e977E", scope: !300, file: !229, line: 2484, type: !301, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !303)
 !300 = !DINamespace(name: "get_unchecked_mut", scope: !165)
 !301 = !DISubroutineType(types: !302)
 !302 = !{null, !175, !247}
 !303 = !{!298, !304}
 !304 = !DILocalVariable(name: "slice", arg: 2, scope: !299, file: !229, line: 2484, type: !247)
 !305 = !DILocation(line: 2484, column: 39, scope: !299, inlinedAt: !306)
-!306 = distinct !DILocation(line: 396, column: 13, scope: !255)
-!307 = !DILocation(line: 399, column: 17, scope: !308, inlinedAt: !306)
+!306 = distinct !DILocation(line: 393, column: 13, scope: !255)
+!307 = !DILocation(line: 396, column: 17, scope: !308, inlinedAt: !306)
 !308 = !DILexicalBlockFile(scope: !299, file: !164, discriminator: 0)
 !309 = !DILocalVariable(name: "self", arg: 1, scope: !310, file: !267, line: 1878, type: !247)
-!310 = distinct !DISubprogram(name: "len<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr41_$LT$impl$u20$$BP$mut$u20$$u5b$T$u5d$$GT$3len17hc7274f183d25375eE", scope: !268, file: !267, line: 1878, type: !311, scopeLine: 1878, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !313)
+!310 = distinct !DISubprogram(name: "len<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr41_$LT$impl$u20$$BP$mut$u20$$u5b$T$u5d$$GT$3len17he950eb1d6fd468aeE", scope: !268, file: !267, line: 1878, type: !311, scopeLine: 1878, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !313)
 !311 = !DISubroutineType(types: !312)
 !312 = !{!9, !247}
 !313 = !{!309}
 !314 = !DILocation(line: 1878, column: 22, scope: !310, inlinedAt: !315)
-!315 = distinct !DILocation(line: 399, column: 55, scope: !308, inlinedAt: !306)
+!315 = distinct !DILocation(line: 396, column: 55, scope: !308, inlinedAt: !306)
 !316 = !DILocation(line: 1879, column: 9, scope: !310, inlinedAt: !315)
-!317 = !DILocation(line: 399, column: 43, scope: !308, inlinedAt: !306)
+!317 = !DILocation(line: 396, column: 43, scope: !308, inlinedAt: !306)
 !318 = !DILocation(line: 2485, column: 20, scope: !299, inlinedAt: !306)
 !319 = !DILocation(line: 2487, column: 21, scope: !299, inlinedAt: !306)
-!320 = distinct !DISubprogram(name: "index<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$5index17hef54beb91de143f3E", scope: !165, file: !164, line: 407, type: !321, scopeLine: 407, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !340)
+!320 = distinct !DISubprogram(name: "index<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$5index17h16af271770283f30E", scope: !165, file: !164, line: 404, type: !321, scopeLine: 404, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !340)
 !321 = !DISubroutineType(types: !322)
 !322 = !{!323, !175, !323, !327}
-!323 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !324, templateParams: !24, identifier: "208acf44f3b71de47aae4817c6f9cebb")
+!323 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !324, templateParams: !24, identifier: "49b00a020c30c96d4d88f8c7aea535c4")
 !324 = !{!325, !326}
 !325 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !323, file: !2, baseType: !173, size: 64, align: 64)
 !326 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !323, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !327 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::panic::location::Location", baseType: !328, size: 64, align: 64, dwarfAddressSpace: 0)
-!328 = !DICompositeType(tag: DW_TAG_structure_type, name: "Location", scope: !329, file: !2, size: 192, align: 64, elements: !331, templateParams: !24, identifier: "24a132ec608676bf484e0b39817cad59")
+!328 = !DICompositeType(tag: DW_TAG_structure_type, name: "Location", scope: !329, file: !2, size: 192, align: 64, elements: !331, templateParams: !24, identifier: "890f479934f1e71d4972eb7472510a5")
 !329 = !DINamespace(name: "location", scope: !330)
 !330 = !DINamespace(name: "panic", scope: !143)
 !331 = !{!332, !338, !339}
@@ -10308,164 +10309,164 @@ attributes #11 = { noreturn nounwind }
 !338 = !DIDerivedType(tag: DW_TAG_member, name: "line", scope: !328, file: !2, baseType: !27, size: 32, align: 32, offset: 128)
 !339 = !DIDerivedType(tag: DW_TAG_member, name: "col", scope: !328, file: !2, baseType: !27, size: 32, align: 32, offset: 160)
 !340 = !{!341, !342}
-!341 = !DILocalVariable(name: "self", arg: 1, scope: !320, file: !164, line: 407, type: !175)
-!342 = !DILocalVariable(name: "slice", arg: 2, scope: !320, file: !164, line: 407, type: !323)
-!343 = !DILocation(line: 407, column: 14, scope: !320)
-!344 = !DILocation(line: 407, column: 20, scope: !320)
-!345 = !DILocation(line: 408, column: 12, scope: !320)
-!346 = !DILocation(line: 410, column: 19, scope: !320)
-!347 = !DILocation(line: 409, column: 13, scope: !320)
-!348 = !DILocation(line: 414, column: 20, scope: !320)
-!349 = !DILocation(line: 415, column: 6, scope: !320)
-!350 = !DILocation(line: 411, column: 13, scope: !320)
-!351 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hc7bb6ed126f23147E", scope: !165, file: !164, line: 418, type: !352, scopeLine: 418, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !358)
+!341 = !DILocalVariable(name: "self", arg: 1, scope: !320, file: !164, line: 404, type: !175)
+!342 = !DILocalVariable(name: "slice", arg: 2, scope: !320, file: !164, line: 404, type: !323)
+!343 = !DILocation(line: 404, column: 14, scope: !320)
+!344 = !DILocation(line: 404, column: 20, scope: !320)
+!345 = !DILocation(line: 405, column: 12, scope: !320)
+!346 = !DILocation(line: 407, column: 19, scope: !320)
+!347 = !DILocation(line: 406, column: 13, scope: !320)
+!348 = !DILocation(line: 411, column: 20, scope: !320)
+!349 = !DILocation(line: 412, column: 6, scope: !320)
+!350 = !DILocation(line: 408, column: 13, scope: !320)
+!351 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h71d141a80ac11235E", scope: !165, file: !164, line: 415, type: !352, scopeLine: 415, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !358)
 !352 = !DISubroutineType(types: !353)
 !353 = !{!354, !175, !354, !327}
-!354 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut [bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !355, templateParams: !24, identifier: "b6fb89fc68d3c77a5a9708aa24d6ae26")
+!354 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut [bootloader::bootinfo::memory_map::MemoryRegion]", file: !2, size: 128, align: 64, elements: !355, templateParams: !24, identifier: "f27ce4fdc7e02475ba5b096cd06541f2")
 !355 = !{!356, !357}
 !356 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !354, file: !2, baseType: !173, size: 64, align: 64)
 !357 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !354, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !358 = !{!359, !360}
-!359 = !DILocalVariable(name: "self", arg: 1, scope: !351, file: !164, line: 418, type: !175)
-!360 = !DILocalVariable(name: "slice", arg: 2, scope: !351, file: !164, line: 418, type: !354)
-!361 = !DILocation(line: 418, column: 18, scope: !351)
-!362 = !DILocation(line: 418, column: 24, scope: !351)
-!363 = !DILocation(line: 419, column: 12, scope: !351)
-!364 = !DILocation(line: 421, column: 19, scope: !351)
-!365 = !DILocation(line: 420, column: 13, scope: !351)
-!366 = !DILocation(line: 425, column: 24, scope: !351)
-!367 = !DILocation(line: 426, column: 6, scope: !351)
-!368 = !DILocation(line: 422, column: 13, scope: !351)
-!369 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN108_$LT$core..ops..range..RangeTo$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hee6af4a418ddd650E", scope: !370, file: !164, line: 462, type: !371, scopeLine: 462, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !376)
+!359 = !DILocalVariable(name: "self", arg: 1, scope: !351, file: !164, line: 415, type: !175)
+!360 = !DILocalVariable(name: "slice", arg: 2, scope: !351, file: !164, line: 415, type: !354)
+!361 = !DILocation(line: 415, column: 18, scope: !351)
+!362 = !DILocation(line: 415, column: 24, scope: !351)
+!363 = !DILocation(line: 416, column: 12, scope: !351)
+!364 = !DILocation(line: 418, column: 19, scope: !351)
+!365 = !DILocation(line: 417, column: 13, scope: !351)
+!366 = !DILocation(line: 422, column: 24, scope: !351)
+!367 = !DILocation(line: 423, column: 6, scope: !351)
+!368 = !DILocation(line: 419, column: 13, scope: !351)
+!369 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN108_$LT$core..ops..range..RangeTo$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h019cc67149b61e3fE", scope: !370, file: !164, line: 459, type: !371, scopeLine: 459, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !376)
 !370 = !DINamespace(name: "{impl#5}", scope: !166)
 !371 = !DISubroutineType(types: !372)
 !372 = !{!354, !373, !354, !327}
-!373 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeTo<usize>", scope: !176, file: !2, size: 64, align: 64, elements: !374, templateParams: !181, identifier: "9070d5ae45b45995c91dfb6b5ad4ffc1")
+!373 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeTo<usize>", scope: !176, file: !2, size: 64, align: 64, elements: !374, templateParams: !181, identifier: "d7d8c5d76cb0a1f2acb6cba66e82806")
 !374 = !{!375}
 !375 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !373, file: !2, baseType: !9, size: 64, align: 64)
 !376 = !{!377, !378}
-!377 = !DILocalVariable(name: "self", arg: 1, scope: !369, file: !164, line: 462, type: !373)
-!378 = !DILocalVariable(name: "slice", arg: 2, scope: !369, file: !164, line: 462, type: !354)
-!379 = !DILocation(line: 462, column: 18, scope: !369)
-!380 = !DILocation(line: 462, column: 24, scope: !369)
-!381 = !DILocation(line: 463, column: 9, scope: !369)
-!382 = !DILocation(line: 464, column: 6, scope: !369)
-!383 = distinct !DISubprogram(name: "get_unchecked_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17hd253cfe71e348022E", scope: !384, file: !164, line: 489, type: !385, scopeLine: 489, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !390)
+!377 = !DILocalVariable(name: "self", arg: 1, scope: !369, file: !164, line: 459, type: !373)
+!378 = !DILocalVariable(name: "slice", arg: 2, scope: !369, file: !164, line: 459, type: !354)
+!379 = !DILocation(line: 459, column: 18, scope: !369)
+!380 = !DILocation(line: 459, column: 24, scope: !369)
+!381 = !DILocation(line: 460, column: 9, scope: !369)
+!382 = !DILocation(line: 461, column: 6, scope: !369)
+!383 = distinct !DISubprogram(name: "get_unchecked_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h986931a3255f49bbE", scope: !384, file: !164, line: 486, type: !385, scopeLine: 486, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !390)
 !384 = !DINamespace(name: "{impl#6}", scope: !166)
 !385 = !DISubroutineType(types: !386)
 !386 = !{!247, !387, !247}
-!387 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeFrom<usize>", scope: !176, file: !2, size: 64, align: 64, elements: !388, templateParams: !181, identifier: "f57de976b31ca4cfbd343fdb3a994ff4")
+!387 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeFrom<usize>", scope: !176, file: !2, size: 64, align: 64, elements: !388, templateParams: !181, identifier: "ec23a888a0e54c8a7e373b55ae3006b1")
 !388 = !{!389}
 !389 = !DIDerivedType(tag: DW_TAG_member, name: "start", scope: !387, file: !2, baseType: !9, size: 64, align: 64)
 !390 = !{!391, !392}
-!391 = !DILocalVariable(name: "self", arg: 1, scope: !383, file: !164, line: 489, type: !387)
-!392 = !DILocalVariable(name: "slice", arg: 2, scope: !383, file: !164, line: 489, type: !247)
-!393 = !DILocation(line: 489, column: 33, scope: !383)
-!394 = !DILocation(line: 489, column: 39, scope: !383)
+!391 = !DILocalVariable(name: "self", arg: 1, scope: !383, file: !164, line: 486, type: !387)
+!392 = !DILocalVariable(name: "slice", arg: 2, scope: !383, file: !164, line: 486, type: !247)
+!393 = !DILocation(line: 486, column: 33, scope: !383)
+!394 = !DILocation(line: 486, column: 39, scope: !383)
 !395 = !DILocation(line: 1878, column: 22, scope: !310, inlinedAt: !396)
-!396 = distinct !DILocation(line: 491, column: 31, scope: !383)
+!396 = distinct !DILocation(line: 488, column: 31, scope: !383)
 !397 = !DILocation(line: 1879, column: 9, scope: !310, inlinedAt: !396)
-!398 = !DILocation(line: 491, column: 18, scope: !383)
-!399 = !DILocation(line: 492, column: 6, scope: !383)
-!400 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17hb9f7e43bfb5a58c9E", scope: !384, file: !164, line: 504, type: !401, scopeLine: 504, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !403)
+!398 = !DILocation(line: 488, column: 18, scope: !383)
+!399 = !DILocation(line: 489, column: 6, scope: !383)
+!400 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN110_$LT$core..ops..range..RangeFrom$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h8d4efffb94d8cdd2E", scope: !384, file: !164, line: 501, type: !401, scopeLine: 501, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !403)
 !401 = !DISubroutineType(types: !402)
 !402 = !{!354, !387, !354, !327}
 !403 = !{!404, !405}
-!404 = !DILocalVariable(name: "self", arg: 1, scope: !400, file: !164, line: 504, type: !387)
-!405 = !DILocalVariable(name: "slice", arg: 2, scope: !400, file: !164, line: 504, type: !354)
-!406 = !DILocation(line: 504, column: 18, scope: !400)
-!407 = !DILocation(line: 504, column: 24, scope: !400)
-!408 = !DILocation(line: 505, column: 12, scope: !400)
-!409 = !DILocation(line: 509, column: 24, scope: !400)
-!410 = !DILocation(line: 510, column: 6, scope: !400)
-!411 = !DILocation(line: 506, column: 13, scope: !400)
-!412 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN115_$LT$core..ops..range..RangeInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17haaefb11c55fdb42bE", scope: !413, file: !164, line: 585, type: !414, scopeLine: 585, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !422)
+!404 = !DILocalVariable(name: "self", arg: 1, scope: !400, file: !164, line: 501, type: !387)
+!405 = !DILocalVariable(name: "slice", arg: 2, scope: !400, file: !164, line: 501, type: !354)
+!406 = !DILocation(line: 501, column: 18, scope: !400)
+!407 = !DILocation(line: 501, column: 24, scope: !400)
+!408 = !DILocation(line: 502, column: 12, scope: !400)
+!409 = !DILocation(line: 506, column: 24, scope: !400)
+!410 = !DILocation(line: 507, column: 6, scope: !400)
+!411 = !DILocation(line: 503, column: 13, scope: !400)
+!412 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN115_$LT$core..ops..range..RangeInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h841da8ad177dd699E", scope: !413, file: !164, line: 582, type: !414, scopeLine: 582, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !422)
 !413 = !DINamespace(name: "{impl#8}", scope: !166)
 !414 = !DISubroutineType(types: !415)
 !415 = !{!354, !416, !354, !327}
-!416 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeInclusive<usize>", scope: !176, file: !2, size: 192, align: 64, elements: !417, templateParams: !181, identifier: "c3d4d44a3e02317da17f2599f7ce7774")
+!416 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeInclusive<usize>", scope: !176, file: !2, size: 192, align: 64, elements: !417, templateParams: !181, identifier: "3dce45bfdef72e2563e1bc1092d84fb6")
 !417 = !{!418, !419, !420}
 !418 = !DIDerivedType(tag: DW_TAG_member, name: "start", scope: !416, file: !2, baseType: !9, size: 64, align: 64)
 !419 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !416, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !420 = !DIDerivedType(tag: DW_TAG_member, name: "exhausted", scope: !416, file: !2, baseType: !421, size: 8, align: 8, offset: 128)
 !421 = !DIBasicType(name: "bool", size: 8, encoding: DW_ATE_boolean)
 !422 = !{!423, !424}
-!423 = !DILocalVariable(name: "self", arg: 1, scope: !412, file: !164, line: 585, type: !416)
-!424 = !DILocalVariable(name: "slice", arg: 2, scope: !412, file: !164, line: 585, type: !354)
-!425 = !DILocation(line: 585, column: 18, scope: !412)
-!426 = !DILocation(line: 585, column: 24, scope: !412)
-!427 = !DILocation(line: 586, column: 13, scope: !412)
-!428 = !DILocation(line: 586, column: 12, scope: !412)
-!429 = !DILocation(line: 589, column: 9, scope: !412)
-!430 = !DILocation(line: 590, column: 6, scope: !412)
-!431 = !DILocation(line: 587, column: 13, scope: !412)
-!432 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN117_$LT$core..ops..range..RangeToInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h9555939660343c9eE", scope: !433, file: !164, line: 626, type: !434, scopeLine: 626, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !439)
+!423 = !DILocalVariable(name: "self", arg: 1, scope: !412, file: !164, line: 582, type: !416)
+!424 = !DILocalVariable(name: "slice", arg: 2, scope: !412, file: !164, line: 582, type: !354)
+!425 = !DILocation(line: 582, column: 18, scope: !412)
+!426 = !DILocation(line: 582, column: 24, scope: !412)
+!427 = !DILocation(line: 583, column: 13, scope: !412)
+!428 = !DILocation(line: 583, column: 12, scope: !412)
+!429 = !DILocation(line: 586, column: 9, scope: !412)
+!430 = !DILocation(line: 587, column: 6, scope: !412)
+!431 = !DILocation(line: 584, column: 13, scope: !412)
+!432 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN117_$LT$core..ops..range..RangeToInclusive$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$9index_mut17h5fc6f6ee90b4473eE", scope: !433, file: !164, line: 623, type: !434, scopeLine: 623, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !439)
 !433 = !DINamespace(name: "{impl#9}", scope: !166)
 !434 = !DISubroutineType(types: !435)
 !435 = !{!354, !436, !354, !327}
-!436 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeToInclusive<usize>", scope: !176, file: !2, size: 64, align: 64, elements: !437, templateParams: !181, identifier: "47a3fc841551c6af239fb7cc117833ee")
+!436 = !DICompositeType(tag: DW_TAG_structure_type, name: "RangeToInclusive<usize>", scope: !176, file: !2, size: 64, align: 64, elements: !437, templateParams: !181, identifier: "f347254651f403709b92e811de409f95")
 !437 = !{!438}
 !438 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !436, file: !2, baseType: !9, size: 64, align: 64)
 !439 = !{!440, !441}
-!440 = !DILocalVariable(name: "self", arg: 1, scope: !432, file: !164, line: 626, type: !436)
-!441 = !DILocalVariable(name: "slice", arg: 2, scope: !432, file: !164, line: 626, type: !354)
-!442 = !DILocation(line: 626, column: 18, scope: !432)
-!443 = !DILocation(line: 626, column: 24, scope: !432)
-!444 = !DILocation(line: 627, column: 9, scope: !432)
-!445 = !DILocation(line: 628, column: 6, scope: !432)
-!446 = distinct !DISubprogram(name: "fmt<bootloader::bootinfo::memory_map::MemoryRegionType>", linkageName: "_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h32082bad30d2c159E", scope: !448, file: !447, line: 2418, type: !449, scopeLine: 2418, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !507, retainedNodes: !504)
+!440 = !DILocalVariable(name: "self", arg: 1, scope: !432, file: !164, line: 623, type: !436)
+!441 = !DILocalVariable(name: "slice", arg: 2, scope: !432, file: !164, line: 623, type: !354)
+!442 = !DILocation(line: 623, column: 18, scope: !432)
+!443 = !DILocation(line: 623, column: 24, scope: !432)
+!444 = !DILocation(line: 624, column: 9, scope: !432)
+!445 = !DILocation(line: 625, column: 6, scope: !432)
+!446 = distinct !DISubprogram(name: "fmt<bootloader::bootinfo::memory_map::MemoryRegionType>", linkageName: "_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h774e5ed9883a620cE", scope: !448, file: !447, line: 2418, type: !449, scopeLine: 2418, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !507, retainedNodes: !504)
 !447 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "182f86c33f08a6043ea29a144b857881")
 !448 = !DINamespace(name: "{impl#59}", scope: !142)
 !449 = !DISubroutineType(types: !450)
 !450 = !{!451, !469, !470}
-!451 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !452, file: !2, size: 8, align: 8, elements: !453, templateParams: !24, identifier: "1c6ce168e24238e83c13ec35dde7d382")
+!451 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !452, file: !2, size: 8, align: 8, elements: !453, templateParams: !24, identifier: "b7fb26f737e54d12fa01aa3853cdbeae")
 !452 = !DINamespace(name: "result", scope: !143)
 !453 = !{!454}
-!454 = !DICompositeType(tag: DW_TAG_variant_part, scope: !451, file: !2, size: 8, align: 8, elements: !455, templateParams: !24, identifier: "42dfca7da53f7734270db51480dbcc24", discriminator: !468)
+!454 = !DICompositeType(tag: DW_TAG_variant_part, scope: !451, file: !2, size: 8, align: 8, elements: !455, templateParams: !24, identifier: "a92bdd2eb05472a8bda434c249c29302", discriminator: !468)
 !455 = !{!456, !464}
 !456 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !454, file: !2, baseType: !457, size: 8, align: 8, extraData: i64 0)
-!457 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !451, file: !2, size: 8, align: 8, elements: !458, templateParams: !460, identifier: "4d011f8c16a13f53ec25b197c7b1903")
+!457 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !451, file: !2, size: 8, align: 8, elements: !458, templateParams: !460, identifier: "bb2249fac7fb973c2c787a4c375e7dc3")
 !458 = !{!459}
 !459 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !457, file: !2, baseType: !7, align: 8, offset: 8)
 !460 = !{!461, !462}
 !461 = !DITemplateTypeParameter(name: "T", type: !7)
 !462 = !DITemplateTypeParameter(name: "E", type: !463)
-!463 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !142, file: !2, align: 8, elements: !24, identifier: "d361babf030d8dcc5fc2146a5e622473")
+!463 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !142, file: !2, align: 8, elements: !24, identifier: "db1174efc0a2f975f4813d5134979630")
 !464 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !454, file: !2, baseType: !465, size: 8, align: 8, extraData: i64 1)
-!465 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !451, file: !2, size: 8, align: 8, elements: !466, templateParams: !460, identifier: "c5af1e4fa5907b7a524a9ebbd4a5ec10")
+!465 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !451, file: !2, size: 8, align: 8, elements: !466, templateParams: !460, identifier: "eb015aef3c84d8cf3918a665d11906a1")
 !466 = !{!467}
 !467 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !465, file: !2, baseType: !463, align: 8, offset: 8)
 !468 = !DIDerivedType(tag: DW_TAG_member, scope: !451, file: !2, baseType: !123, size: 8, align: 8, flags: DIFlagArtificial)
 !469 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&&bootloader::bootinfo::memory_map::MemoryRegionType", baseType: !60, size: 64, align: 64, dwarfAddressSpace: 0)
 !470 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::fmt::Formatter", baseType: !471, size: 64, align: 64, dwarfAddressSpace: 0)
-!471 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !142, file: !2, size: 512, align: 64, elements: !472, templateParams: !24, identifier: "a3b888d0a58016a3ad42c934cf971ea3")
+!471 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !142, file: !2, size: 512, align: 64, elements: !472, templateParams: !24, identifier: "4518b2a8833c3639e2a18f19d8d2d035")
 !472 = !{!473, !474, !476, !477, !492, !493}
 !473 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !471, file: !2, baseType: !27, size: 32, align: 32, offset: 384)
 !474 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !471, file: !2, baseType: !475, size: 32, align: 32, offset: 416)
 !475 = !DIBasicType(name: "char", size: 32, encoding: DW_ATE_UTF)
 !476 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !471, file: !2, baseType: !139, size: 8, align: 8, offset: 448)
 !477 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !471, file: !2, baseType: !478, size: 128, align: 64, offset: 128)
-!478 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !479, file: !2, size: 128, align: 64, elements: !480, templateParams: !24, identifier: "8d57b0310dad0e81a52a7e1f827929d")
+!478 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !479, file: !2, size: 128, align: 64, elements: !480, templateParams: !24, identifier: "e509e62aca398ad985d4d7108c999fce")
 !479 = !DINamespace(name: "option", scope: !143)
 !480 = !{!481}
-!481 = !DICompositeType(tag: DW_TAG_variant_part, scope: !478, file: !2, size: 128, align: 64, elements: !482, templateParams: !24, identifier: "1503e6327b896c262eca127cbc35ec74", discriminator: !491)
+!481 = !DICompositeType(tag: DW_TAG_variant_part, scope: !478, file: !2, size: 128, align: 64, elements: !482, templateParams: !24, identifier: "b800028c0f41e5f65055b3206ca16e40", discriminator: !491)
 !482 = !{!483, !487}
 !483 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !481, file: !2, baseType: !484, size: 128, align: 64, extraData: i64 0)
-!484 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !478, file: !2, size: 128, align: 64, elements: !24, templateParams: !485, identifier: "b9a11c756332445b5e317b2b2625f528")
+!484 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !478, file: !2, size: 128, align: 64, elements: !24, templateParams: !485, identifier: "c64b01d4e9024c6089607fba201241ac")
 !485 = !{!486}
 !486 = !DITemplateTypeParameter(name: "T", type: !9)
 !487 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !481, file: !2, baseType: !488, size: 128, align: 64, extraData: i64 1)
-!488 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !478, file: !2, size: 128, align: 64, elements: !489, templateParams: !485, identifier: "87159a1745a522a36bc4a0700aab6dc3")
+!488 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !478, file: !2, size: 128, align: 64, elements: !489, templateParams: !485, identifier: "d909f9aede69ded5e6a3f34da3cb5ef3")
 !489 = !{!490}
 !490 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !488, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !491 = !DIDerivedType(tag: DW_TAG_member, scope: !478, file: !2, baseType: !22, size: 64, align: 64, flags: DIFlagArtificial)
 !492 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !471, file: !2, baseType: !478, size: 128, align: 64, offset: 256)
 !493 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !471, file: !2, baseType: !494, size: 128, align: 64)
-!494 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !2, size: 128, align: 64, elements: !495, templateParams: !24, identifier: "b58efcb3df0f0beb9aa098f750459fd2")
+!494 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !2, size: 128, align: 64, elements: !495, templateParams: !24, identifier: "f9270966a9fda351195f72d6edc0f59a")
 !495 = !{!496, !499}
 !496 = !DIDerivedType(tag: DW_TAG_member, name: "pointer", scope: !494, file: !2, baseType: !497, size: 64, align: 64)
 !497 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !498, size: 64, align: 64, dwarfAddressSpace: 0)
-!498 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !2, align: 8, elements: !24, identifier: "bcfe988c4f0dd1d50291e24ffc6447")
+!498 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !2, align: 8, elements: !24, identifier: "26797fbb1ceb902d1b523adeae52178")
 !499 = !DIDerivedType(tag: DW_TAG_member, name: "vtable", scope: !494, file: !2, baseType: !500, size: 64, align: 64, offset: 64)
 !500 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&[usize; 3]", baseType: !501, size: 64, align: 64, dwarfAddressSpace: 0)
 !501 = !DICompositeType(tag: DW_TAG_array_type, baseType: !9, size: 192, align: 64, elements: !502)
@@ -10482,7 +10483,7 @@ attributes #11 = { noreturn nounwind }
 !512 = !{i64 4}
 !513 = !DILocation(line: 2418, column: 62, scope: !446)
 !514 = !DILocation(line: 2418, column: 84, scope: !446)
-!515 = distinct !DISubprogram(name: "fmt<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17he49a6232630c6b52E", scope: !448, file: !447, line: 2418, type: !516, scopeLine: 2418, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !519)
+!515 = distinct !DISubprogram(name: "fmt<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17hd79519092e6154abE", scope: !448, file: !447, line: 2418, type: !516, scopeLine: 2418, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !519)
 !516 = !DISubroutineType(types: !517)
 !517 = !{!451, !518, !470}
 !518 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&&bootloader::bootinfo::memory_map::MemoryRegion", baseType: !12, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -10495,7 +10496,7 @@ attributes #11 = { noreturn nounwind }
 !525 = !{i64 8}
 !526 = !DILocation(line: 2418, column: 62, scope: !515)
 !527 = !DILocation(line: 2418, column: 84, scope: !515)
-!528 = distinct !DISubprogram(name: "is_nonoverlapping<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics17is_nonoverlapping17h30ac5373771a6525E", scope: !529, file: !229, line: 2519, type: !530, scopeLine: 2519, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !532)
+!528 = distinct !DISubprogram(name: "is_nonoverlapping<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics17is_nonoverlapping17hca626f424669f518E", scope: !529, file: !229, line: 2519, type: !530, scopeLine: 2519, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !532)
 !529 = !DINamespace(name: "intrinsics", scope: !143)
 !530 = !DISubroutineType(types: !531)
 !531 = !{!421, !208, !208, !9}
@@ -10509,21 +10510,21 @@ attributes #11 = { noreturn nounwind }
 !539 = distinct !DILexicalBlock(scope: !537, file: !229, line: 2521, column: 5)
 !540 = !DILocalVariable(name: "size", scope: !541, file: !229, line: 2522, type: !9, align: 8)
 !541 = distinct !DILexicalBlock(scope: !539, file: !229, line: 2522, column: 5)
-!542 = !DILocalVariable(name: "diff", scope: !543, file: !229, line: 2523, type: !9, align: 8)
-!543 = distinct !DILexicalBlock(scope: !541, file: !229, line: 2523, column: 5)
+!542 = !DILocalVariable(name: "diff", scope: !543, file: !229, line: 2525, type: !9, align: 8)
+!543 = distinct !DILexicalBlock(scope: !541, file: !229, line: 2525, column: 5)
 !544 = !DILocation(line: 2519, column: 36, scope: !528)
 !545 = !DILocation(line: 2519, column: 51, scope: !528)
 !546 = !DILocation(line: 2519, column: 66, scope: !528)
-!547 = !DILocation(line: 2523, column: 9, scope: !543)
+!547 = !DILocation(line: 2525, column: 9, scope: !543)
 !548 = !DILocalVariable(name: "self", arg: 1, scope: !549, file: !202, line: 203, type: !208)
-!549 = distinct !DISubprogram(name: "addr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17h97ed64ae2190fc3dE", scope: !203, file: !202, line: 203, type: !550, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !552)
+!549 = distinct !DISubprogram(name: "addr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17hfd37a35cd9a231b9E", scope: !203, file: !202, line: 203, type: !550, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !552)
 !550 = !DISubroutineType(types: !551)
 !551 = !{!9, !208}
 !552 = !{!548}
 !553 = !DILocation(line: 203, column: 17, scope: !549, inlinedAt: !554)
 !554 = distinct !DILocation(line: 2520, column: 21, scope: !528)
 !555 = !DILocalVariable(name: "self", arg: 1, scope: !556, file: !202, line: 58, type: !208)
-!556 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17hf0b89bfd9574b66aE", scope: !203, file: !202, line: 58, type: !557, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !560, retainedNodes: !559)
+!556 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17hda6fe2a511473d6eE", scope: !203, file: !202, line: 58, type: !557, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !560, retainedNodes: !559)
 !557 = !DISubroutineType(types: !558)
 !558 = !{!6, !208}
 !559 = !{!555}
@@ -10543,99 +10544,99 @@ attributes #11 = { noreturn nounwind }
 !573 = !DILocation(line: 2521, column: 9, scope: !539)
 !574 = !DILocation(line: 2522, column: 16, scope: !539)
 !575 = !DILocation(line: 2522, column: 9, scope: !541)
-!576 = !DILocation(line: 2523, column: 19, scope: !541)
-!577 = !DILocation(line: 2523, column: 74, scope: !541)
-!578 = !DILocation(line: 2523, column: 43, scope: !541)
-!579 = !DILocation(line: 2523, column: 16, scope: !541)
-!580 = !DILocation(line: 2526, column: 5, scope: !543)
-!581 = !DILocation(line: 2527, column: 2, scope: !528)
-!582 = distinct !DISubprogram(name: "copy_nonoverlapping<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping17h0c1cf47528b46787E", scope: !529, file: !229, line: 2619, type: !583, scopeLine: 2619, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !585)
+!576 = !DILocation(line: 2525, column: 19, scope: !541)
+!577 = !DILocation(line: 2525, column: 74, scope: !541)
+!578 = !DILocation(line: 2525, column: 43, scope: !541)
+!579 = !DILocation(line: 2525, column: 16, scope: !541)
+!580 = !DILocation(line: 2528, column: 5, scope: !543)
+!581 = !DILocation(line: 2529, column: 2, scope: !528)
+!582 = distinct !DISubprogram(name: "copy_nonoverlapping<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping17h032d2385a00da541E", scope: !529, file: !229, line: 2621, type: !583, scopeLine: 2621, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !585)
 !583 = !DISubroutineType(types: !584)
 !584 = !{null, !208, !272, !9}
 !585 = !{!586, !587, !588}
-!586 = !DILocalVariable(name: "src", arg: 1, scope: !582, file: !229, line: 2619, type: !208)
-!587 = !DILocalVariable(name: "dst", arg: 2, scope: !582, file: !229, line: 2619, type: !272)
-!588 = !DILocalVariable(name: "count", arg: 3, scope: !582, file: !229, line: 2619, type: !9)
-!589 = !DILocation(line: 2619, column: 44, scope: !582)
-!590 = !DILocation(line: 2619, column: 59, scope: !582)
-!591 = !DILocation(line: 2619, column: 72, scope: !582)
-!592 = !DILocation(line: 2629, column: 9, scope: !582)
-!593 = !DILocation(line: 2637, column: 9, scope: !582)
-!594 = !DILocation(line: 2639, column: 2, scope: !582)
+!586 = !DILocalVariable(name: "src", arg: 1, scope: !582, file: !229, line: 2621, type: !208)
+!587 = !DILocalVariable(name: "dst", arg: 2, scope: !582, file: !229, line: 2621, type: !272)
+!588 = !DILocalVariable(name: "count", arg: 3, scope: !582, file: !229, line: 2621, type: !9)
+!589 = !DILocation(line: 2621, column: 44, scope: !582)
+!590 = !DILocation(line: 2621, column: 59, scope: !582)
+!591 = !DILocation(line: 2621, column: 72, scope: !582)
+!592 = !DILocation(line: 2631, column: 9, scope: !582)
+!593 = !DILocation(line: 2639, column: 9, scope: !582)
+!594 = !DILocation(line: 2641, column: 2, scope: !582)
 !595 = !DILocalVariable(name: "src", arg: 1, scope: !596, file: !229, line: 2484, type: !208)
-!596 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping7runtime17hcde02cb2d666fe7eE", scope: !597, file: !229, line: 2484, type: !583, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !598)
+!596 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping7runtime17h6eb0d1d74970170eE", scope: !597, file: !229, line: 2484, type: !583, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !598)
 !597 = !DINamespace(name: "copy_nonoverlapping", scope: !529)
 !598 = !{!595, !599, !600}
 !599 = !DILocalVariable(name: "dst", arg: 2, scope: !596, file: !229, line: 2484, type: !272)
 !600 = !DILocalVariable(name: "count", arg: 3, scope: !596, file: !229, line: 2484, type: !9)
 !601 = !DILocation(line: 2484, column: 39, scope: !596, inlinedAt: !602)
-!602 = distinct !DILocation(line: 2629, column: 9, scope: !582)
-!603 = !DILocation(line: 2633, column: 13, scope: !596, inlinedAt: !602)
-!604 = !DILocation(line: 2634, column: 20, scope: !596, inlinedAt: !602)
-!605 = !DILocation(line: 2635, column: 20, scope: !596, inlinedAt: !602)
+!602 = distinct !DILocation(line: 2631, column: 9, scope: !582)
+!603 = !DILocation(line: 2635, column: 13, scope: !596, inlinedAt: !602)
+!604 = !DILocation(line: 2636, column: 20, scope: !596, inlinedAt: !602)
+!605 = !DILocation(line: 2637, column: 20, scope: !596, inlinedAt: !602)
 !606 = !DILocation(line: 2485, column: 20, scope: !596, inlinedAt: !602)
 !607 = !DILocation(line: 2487, column: 21, scope: !596, inlinedAt: !602)
-!608 = distinct !DISubprogram(name: "copy_nonoverlapping<usize>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping17h47de7969a9985aacE", scope: !529, file: !229, line: 2619, type: !609, scopeLine: 2619, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !613)
+!608 = distinct !DISubprogram(name: "copy_nonoverlapping<usize>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping17h7f2962754de9d15aE", scope: !529, file: !229, line: 2621, type: !609, scopeLine: 2621, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !613)
 !609 = !DISubroutineType(types: !610)
 !610 = !{null, !611, !612, !9}
 !611 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const usize", baseType: !9, size: 64, align: 64, dwarfAddressSpace: 0)
 !612 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut usize", baseType: !9, size: 64, align: 64, dwarfAddressSpace: 0)
 !613 = !{!614, !615, !616}
-!614 = !DILocalVariable(name: "src", arg: 1, scope: !608, file: !229, line: 2619, type: !611)
-!615 = !DILocalVariable(name: "dst", arg: 2, scope: !608, file: !229, line: 2619, type: !612)
-!616 = !DILocalVariable(name: "count", arg: 3, scope: !608, file: !229, line: 2619, type: !9)
-!617 = !DILocation(line: 2619, column: 44, scope: !608)
-!618 = !DILocation(line: 2619, column: 59, scope: !608)
-!619 = !DILocation(line: 2619, column: 72, scope: !608)
-!620 = !DILocation(line: 2629, column: 9, scope: !608)
-!621 = !DILocation(line: 2637, column: 9, scope: !608)
-!622 = !DILocation(line: 2639, column: 2, scope: !608)
+!614 = !DILocalVariable(name: "src", arg: 1, scope: !608, file: !229, line: 2621, type: !611)
+!615 = !DILocalVariable(name: "dst", arg: 2, scope: !608, file: !229, line: 2621, type: !612)
+!616 = !DILocalVariable(name: "count", arg: 3, scope: !608, file: !229, line: 2621, type: !9)
+!617 = !DILocation(line: 2621, column: 44, scope: !608)
+!618 = !DILocation(line: 2621, column: 59, scope: !608)
+!619 = !DILocation(line: 2621, column: 72, scope: !608)
+!620 = !DILocation(line: 2631, column: 9, scope: !608)
+!621 = !DILocation(line: 2639, column: 9, scope: !608)
+!622 = !DILocation(line: 2641, column: 2, scope: !608)
 !623 = !DILocalVariable(name: "src", arg: 1, scope: !624, file: !229, line: 2484, type: !611)
-!624 = distinct !DISubprogram(name: "runtime<usize>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping7runtime17hf945eed718cc1d5cE", scope: !597, file: !229, line: 2484, type: !609, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !625)
+!624 = distinct !DISubprogram(name: "runtime<usize>", linkageName: "_ZN4core10intrinsics19copy_nonoverlapping7runtime17hc3a18a29ffcefb4fE", scope: !597, file: !229, line: 2484, type: !609, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !625)
 !625 = !{!623, !626, !627}
 !626 = !DILocalVariable(name: "dst", arg: 2, scope: !624, file: !229, line: 2484, type: !612)
 !627 = !DILocalVariable(name: "count", arg: 3, scope: !624, file: !229, line: 2484, type: !9)
 !628 = !DILocation(line: 2484, column: 39, scope: !624, inlinedAt: !629)
-!629 = distinct !DILocation(line: 2629, column: 9, scope: !608)
-!630 = !DILocation(line: 2633, column: 13, scope: !624, inlinedAt: !629)
-!631 = !DILocation(line: 2634, column: 20, scope: !624, inlinedAt: !629)
-!632 = !DILocation(line: 2635, column: 20, scope: !624, inlinedAt: !629)
+!629 = distinct !DILocation(line: 2631, column: 9, scope: !608)
+!630 = !DILocation(line: 2635, column: 13, scope: !624, inlinedAt: !629)
+!631 = !DILocation(line: 2636, column: 20, scope: !624, inlinedAt: !629)
+!632 = !DILocation(line: 2637, column: 20, scope: !624, inlinedAt: !629)
 !633 = !DILocation(line: 2485, column: 20, scope: !624, inlinedAt: !629)
 !634 = !DILocation(line: 2487, column: 21, scope: !624, inlinedAt: !629)
-!635 = distinct !DISubprogram(name: "is_aligned_and_not_null<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core10intrinsics23is_aligned_and_not_null17h22d81bef441ca05fE", scope: !529, file: !229, line: 2503, type: !636, scopeLine: 2503, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !649)
+!635 = distinct !DISubprogram(name: "is_aligned_and_not_null<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics23is_aligned_and_not_null17h0c0c2f3a25804f0bE", scope: !529, file: !229, line: 2503, type: !636, scopeLine: 2503, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !638)
 !636 = !DISubroutineType(types: !637)
-!637 = !{!421, !638}
-!638 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !639, size: 64, align: 64, dwarfAddressSpace: 0)
-!639 = !DICompositeType(tag: DW_TAG_union_type, name: "MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !640, file: !2, size: 192, align: 64, elements: !642, templateParams: !190, identifier: "bb5e089c107ec0c13320d41b7ec215dc")
-!640 = !DINamespace(name: "maybe_uninit", scope: !641)
-!641 = !DINamespace(name: "mem", scope: !143)
-!642 = !{!643, !644}
-!643 = !DIDerivedType(tag: DW_TAG_member, name: "uninit", scope: !639, file: !2, baseType: !7, align: 8)
-!644 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !639, file: !2, baseType: !645, size: 192, align: 64)
-!645 = !DICompositeType(tag: DW_TAG_structure_type, name: "ManuallyDrop<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !646, file: !2, size: 192, align: 64, elements: !647, templateParams: !190, identifier: "767c26ec6b388c142cebb6c264bc8867")
-!646 = !DINamespace(name: "manually_drop", scope: !641)
-!647 = !{!648}
-!648 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !645, file: !2, baseType: !13, size: 192, align: 64)
-!649 = !{!650}
-!650 = !DILocalVariable(name: "ptr", arg: 1, scope: !635, file: !229, line: 2503, type: !638)
-!651 = !{!652}
-!652 = !DITemplateTypeParameter(name: "T", type: !639)
-!653 = !DILocation(line: 2503, column: 42, scope: !635)
-!654 = !DILocation(line: 2504, column: 6, scope: !635)
-!655 = !DILocation(line: 2504, column: 5, scope: !635)
-!656 = !DILocation(line: 2504, column: 23, scope: !635)
-!657 = !DILocation(line: 2505, column: 2, scope: !635)
-!658 = distinct !DISubprogram(name: "is_aligned_and_not_null<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics23is_aligned_and_not_null17he2ff876c590ad743E", scope: !529, file: !229, line: 2503, type: !659, scopeLine: 2503, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !661)
-!659 = !DISubroutineType(types: !660)
-!660 = !{!421, !208}
+!637 = !{!421, !208}
+!638 = !{!639}
+!639 = !DILocalVariable(name: "ptr", arg: 1, scope: !635, file: !229, line: 2503, type: !208)
+!640 = !DILocation(line: 2503, column: 42, scope: !635)
+!641 = !DILocation(line: 2504, column: 6, scope: !635)
+!642 = !DILocation(line: 2504, column: 5, scope: !635)
+!643 = !DILocation(line: 2504, column: 23, scope: !635)
+!644 = !DILocation(line: 2505, column: 2, scope: !635)
+!645 = distinct !DISubprogram(name: "is_aligned_and_not_null<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core10intrinsics23is_aligned_and_not_null17h9c7df8c71b1caecfE", scope: !529, file: !229, line: 2503, type: !646, scopeLine: 2503, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !659)
+!646 = !DISubroutineType(types: !647)
+!647 = !{!421, !648}
+!648 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !649, size: 64, align: 64, dwarfAddressSpace: 0)
+!649 = !DICompositeType(tag: DW_TAG_union_type, name: "MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !650, file: !2, size: 192, align: 64, elements: !652, templateParams: !190, identifier: "bcb32fa87c67bbc889c9f5471a14b4b8")
+!650 = !DINamespace(name: "maybe_uninit", scope: !651)
+!651 = !DINamespace(name: "mem", scope: !143)
+!652 = !{!653, !654}
+!653 = !DIDerivedType(tag: DW_TAG_member, name: "uninit", scope: !649, file: !2, baseType: !7, align: 8)
+!654 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !649, file: !2, baseType: !655, size: 192, align: 64)
+!655 = !DICompositeType(tag: DW_TAG_structure_type, name: "ManuallyDrop<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !656, file: !2, size: 192, align: 64, elements: !657, templateParams: !190, identifier: "6956b46b06cd0b4f8daac4244564fce8")
+!656 = !DINamespace(name: "manually_drop", scope: !651)
+!657 = !{!658}
+!658 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !655, file: !2, baseType: !13, size: 192, align: 64)
+!659 = !{!660}
+!660 = !DILocalVariable(name: "ptr", arg: 1, scope: !645, file: !229, line: 2503, type: !648)
 !661 = !{!662}
-!662 = !DILocalVariable(name: "ptr", arg: 1, scope: !658, file: !229, line: 2503, type: !208)
-!663 = !DILocation(line: 2503, column: 42, scope: !658)
-!664 = !DILocation(line: 2504, column: 6, scope: !658)
-!665 = !DILocation(line: 2504, column: 5, scope: !658)
-!666 = !DILocation(line: 2504, column: 23, scope: !658)
-!667 = !DILocation(line: 2505, column: 2, scope: !658)
-!668 = distinct !DISubprogram(name: "is_valid_allocation_size<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics24is_valid_allocation_size17h7ac2add6c8684074E", scope: !529, file: !229, line: 2509, type: !669, scopeLine: 2509, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !671)
+!662 = !DITemplateTypeParameter(name: "T", type: !649)
+!663 = !DILocation(line: 2503, column: 42, scope: !645)
+!664 = !DILocation(line: 2504, column: 6, scope: !645)
+!665 = !DILocation(line: 2504, column: 5, scope: !645)
+!666 = !DILocation(line: 2504, column: 23, scope: !645)
+!667 = !DILocation(line: 2505, column: 2, scope: !645)
+!668 = distinct !DISubprogram(name: "is_valid_allocation_size<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics24is_valid_allocation_size17h02832c510035953dE", scope: !529, file: !229, line: 2509, type: !669, scopeLine: 2509, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !671)
 !669 = !DISubroutineType(types: !670)
 !670 = !{!421, !9}
 !671 = !{!672, !673}
@@ -10647,81 +10648,81 @@ attributes #11 = { noreturn nounwind }
 !677 = !DILocation(line: 2510, column: 9, scope: !674)
 !678 = !DILocation(line: 2514, column: 5, scope: !674)
 !679 = !DILocation(line: 2515, column: 2, scope: !668)
-!680 = distinct !DISubprogram(name: "copy<usize>", linkageName: "_ZN4core10intrinsics4copy17h41ae0f12b9944baeE", scope: !529, file: !229, line: 2710, type: !609, scopeLine: 2710, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !681)
+!680 = distinct !DISubprogram(name: "copy<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics4copy17h3cd453a57eee73c7E", scope: !529, file: !229, line: 2712, type: !583, scopeLine: 2712, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !681)
 !681 = !{!682, !683, !684}
-!682 = !DILocalVariable(name: "src", arg: 1, scope: !680, file: !229, line: 2710, type: !611)
-!683 = !DILocalVariable(name: "dst", arg: 2, scope: !680, file: !229, line: 2710, type: !612)
-!684 = !DILocalVariable(name: "count", arg: 3, scope: !680, file: !229, line: 2710, type: !9)
-!685 = !DILocation(line: 2710, column: 29, scope: !680)
-!686 = !DILocation(line: 2710, column: 44, scope: !680)
-!687 = !DILocation(line: 2710, column: 57, scope: !680)
-!688 = !DILocation(line: 2719, column: 9, scope: !680)
-!689 = !DILocation(line: 2724, column: 9, scope: !680)
-!690 = !DILocation(line: 2726, column: 2, scope: !680)
-!691 = !DILocalVariable(name: "src", arg: 1, scope: !692, file: !229, line: 2484, type: !611)
-!692 = distinct !DISubprogram(name: "runtime<usize>", linkageName: "_ZN4core10intrinsics4copy7runtime17he478a87d4fed4c30E", scope: !693, file: !229, line: 2484, type: !694, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !696)
+!682 = !DILocalVariable(name: "src", arg: 1, scope: !680, file: !229, line: 2712, type: !208)
+!683 = !DILocalVariable(name: "dst", arg: 2, scope: !680, file: !229, line: 2712, type: !272)
+!684 = !DILocalVariable(name: "count", arg: 3, scope: !680, file: !229, line: 2712, type: !9)
+!685 = !DILocation(line: 2712, column: 29, scope: !680)
+!686 = !DILocation(line: 2712, column: 44, scope: !680)
+!687 = !DILocation(line: 2712, column: 57, scope: !680)
+!688 = !DILocation(line: 2721, column: 9, scope: !680)
+!689 = !DILocation(line: 2726, column: 9, scope: !680)
+!690 = !DILocation(line: 2728, column: 2, scope: !680)
+!691 = !DILocalVariable(name: "src", arg: 1, scope: !692, file: !229, line: 2484, type: !208)
+!692 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics4copy7runtime17h481e461e63cc2895E", scope: !693, file: !229, line: 2484, type: !694, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !696)
 !693 = !DINamespace(name: "copy", scope: !529)
 !694 = !DISubroutineType(types: !695)
-!695 = !{null, !611, !612}
+!695 = !{null, !208, !272}
 !696 = !{!691, !697}
-!697 = !DILocalVariable(name: "dst", arg: 2, scope: !692, file: !229, line: 2484, type: !612)
+!697 = !DILocalVariable(name: "dst", arg: 2, scope: !692, file: !229, line: 2484, type: !272)
 !698 = !DILocation(line: 2484, column: 39, scope: !692, inlinedAt: !699)
-!699 = distinct !DILocation(line: 2719, column: 9, scope: !680)
-!700 = !DILocation(line: 2722, column: 13, scope: !692, inlinedAt: !699)
-!701 = !DILocation(line: 2722, column: 45, scope: !692, inlinedAt: !699)
+!699 = distinct !DILocation(line: 2721, column: 9, scope: !680)
+!700 = !DILocation(line: 2724, column: 13, scope: !692, inlinedAt: !699)
+!701 = !DILocation(line: 2724, column: 45, scope: !692, inlinedAt: !699)
 !702 = !DILocation(line: 2485, column: 20, scope: !692, inlinedAt: !699)
 !703 = !DILocation(line: 2487, column: 21, scope: !692, inlinedAt: !699)
-!704 = distinct !DISubprogram(name: "copy<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics4copy17h66502225802bac67E", scope: !529, file: !229, line: 2710, type: !583, scopeLine: 2710, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !705)
+!704 = distinct !DISubprogram(name: "copy<usize>", linkageName: "_ZN4core10intrinsics4copy17h5da12744d50e3203E", scope: !529, file: !229, line: 2712, type: !609, scopeLine: 2712, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !705)
 !705 = !{!706, !707, !708}
-!706 = !DILocalVariable(name: "src", arg: 1, scope: !704, file: !229, line: 2710, type: !208)
-!707 = !DILocalVariable(name: "dst", arg: 2, scope: !704, file: !229, line: 2710, type: !272)
-!708 = !DILocalVariable(name: "count", arg: 3, scope: !704, file: !229, line: 2710, type: !9)
-!709 = !DILocation(line: 2710, column: 29, scope: !704)
-!710 = !DILocation(line: 2710, column: 44, scope: !704)
-!711 = !DILocation(line: 2710, column: 57, scope: !704)
-!712 = !DILocation(line: 2719, column: 9, scope: !704)
-!713 = !DILocation(line: 2724, column: 9, scope: !704)
-!714 = !DILocation(line: 2726, column: 2, scope: !704)
-!715 = !DILocalVariable(name: "src", arg: 1, scope: !716, file: !229, line: 2484, type: !208)
-!716 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core10intrinsics4copy7runtime17h780360ddb06f6cb8E", scope: !693, file: !229, line: 2484, type: !717, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !719)
+!706 = !DILocalVariable(name: "src", arg: 1, scope: !704, file: !229, line: 2712, type: !611)
+!707 = !DILocalVariable(name: "dst", arg: 2, scope: !704, file: !229, line: 2712, type: !612)
+!708 = !DILocalVariable(name: "count", arg: 3, scope: !704, file: !229, line: 2712, type: !9)
+!709 = !DILocation(line: 2712, column: 29, scope: !704)
+!710 = !DILocation(line: 2712, column: 44, scope: !704)
+!711 = !DILocation(line: 2712, column: 57, scope: !704)
+!712 = !DILocation(line: 2721, column: 9, scope: !704)
+!713 = !DILocation(line: 2726, column: 9, scope: !704)
+!714 = !DILocation(line: 2728, column: 2, scope: !704)
+!715 = !DILocalVariable(name: "src", arg: 1, scope: !716, file: !229, line: 2484, type: !611)
+!716 = distinct !DISubprogram(name: "runtime<usize>", linkageName: "_ZN4core10intrinsics4copy7runtime17h9e5648a412671d18E", scope: !693, file: !229, line: 2484, type: !717, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !719)
 !717 = !DISubroutineType(types: !718)
-!718 = !{null, !208, !272}
+!718 = !{null, !611, !612}
 !719 = !{!715, !720}
-!720 = !DILocalVariable(name: "dst", arg: 2, scope: !716, file: !229, line: 2484, type: !272)
+!720 = !DILocalVariable(name: "dst", arg: 2, scope: !716, file: !229, line: 2484, type: !612)
 !721 = !DILocation(line: 2484, column: 39, scope: !716, inlinedAt: !722)
-!722 = distinct !DILocation(line: 2719, column: 9, scope: !704)
-!723 = !DILocation(line: 2722, column: 13, scope: !716, inlinedAt: !722)
-!724 = !DILocation(line: 2722, column: 45, scope: !716, inlinedAt: !722)
+!722 = distinct !DILocation(line: 2721, column: 9, scope: !704)
+!723 = !DILocation(line: 2724, column: 13, scope: !716, inlinedAt: !722)
+!724 = !DILocation(line: 2724, column: 45, scope: !716, inlinedAt: !722)
 !725 = !DILocation(line: 2485, column: 20, scope: !716, inlinedAt: !722)
 !726 = !DILocation(line: 2487, column: 21, scope: !716, inlinedAt: !722)
-!727 = distinct !DISubprogram(name: "cmp", linkageName: "_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h3f053a9c0b80c8c7E", scope: !729, file: !728, line: 1415, type: !731, scopeLine: 1415, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !733)
-!728 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/cmp.rs", directory: "", checksumkind: CSK_MD5, checksum: "1600eb58139fc5bc9fc1d10b55c4e0c1")
+!727 = distinct !DISubprogram(name: "cmp", linkageName: "_ZN4core3cmp5impls48_$LT$impl$u20$core..cmp..Ord$u20$for$u20$u64$GT$3cmp17h5032906cd42a2baaE", scope: !729, file: !728, line: 1374, type: !731, scopeLine: 1374, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !733)
+!728 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/cmp.rs", directory: "", checksumkind: CSK_MD5, checksum: "d28b13db3114a44402c696d9b1c4f5b9")
 !729 = !DINamespace(name: "{impl#63}", scope: !730)
 !730 = !DINamespace(name: "impls", scope: !150)
 !731 = !DISubroutineType(types: !732)
 !732 = !{!149, !132, !132}
 !733 = !{!734, !735}
-!734 = !DILocalVariable(name: "self", arg: 1, scope: !727, file: !728, line: 1415, type: !132)
-!735 = !DILocalVariable(name: "other", arg: 2, scope: !727, file: !728, line: 1415, type: !132)
-!736 = !DILocation(line: 1415, column: 24, scope: !727)
-!737 = !DILocation(line: 1415, column: 31, scope: !727)
-!738 = !DILocation(line: 1418, column: 24, scope: !727)
-!739 = !DILocation(line: 1418, column: 32, scope: !727)
-!740 = !DILocation(line: 1419, column: 29, scope: !727)
-!741 = !DILocation(line: 1419, column: 38, scope: !727)
-!742 = !DILocation(line: 1418, column: 41, scope: !727)
-!743 = !DILocation(line: 1418, column: 21, scope: !727)
-!744 = !DILocation(line: 1421, column: 18, scope: !727)
+!734 = !DILocalVariable(name: "self", arg: 1, scope: !727, file: !728, line: 1374, type: !132)
+!735 = !DILocalVariable(name: "other", arg: 2, scope: !727, file: !728, line: 1374, type: !132)
+!736 = !DILocation(line: 1374, column: 24, scope: !727)
+!737 = !DILocation(line: 1374, column: 31, scope: !727)
+!738 = !DILocation(line: 1377, column: 24, scope: !727)
+!739 = !DILocation(line: 1377, column: 32, scope: !727)
+!740 = !DILocation(line: 1378, column: 29, scope: !727)
+!741 = !DILocation(line: 1378, column: 38, scope: !727)
+!742 = !DILocation(line: 1377, column: 41, scope: !727)
+!743 = !DILocation(line: 1377, column: 21, scope: !727)
+!744 = !DILocation(line: 1380, column: 18, scope: !727)
 !745 = !{i8 -1, i8 2}
-!746 = !DILocation(line: 1420, column: 28, scope: !727)
-!747 = !DILocation(line: 1419, column: 26, scope: !727)
-!748 = !DILocation(line: 1419, column: 47, scope: !727)
-!749 = distinct !DISubprogram(name: "new_lower_hex<u64>", linkageName: "_ZN4core3fmt10ArgumentV113new_lower_hex17h49377683266f663dE", scope: !750, file: !447, line: 329, type: !760, scopeLine: 329, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !764, retainedNodes: !762)
-!750 = !DICompositeType(tag: DW_TAG_structure_type, name: "ArgumentV1", scope: !142, file: !2, size: 128, align: 64, elements: !751, templateParams: !24, identifier: "3c2ef6ebf262caba6e43777d9c298823")
+!746 = !DILocation(line: 1379, column: 28, scope: !727)
+!747 = !DILocation(line: 1378, column: 26, scope: !727)
+!748 = !DILocation(line: 1378, column: 47, scope: !727)
+!749 = distinct !DISubprogram(name: "new_lower_hex<u64>", linkageName: "_ZN4core3fmt10ArgumentV113new_lower_hex17h5c75358a2fa21259E", scope: !750, file: !447, line: 329, type: !760, scopeLine: 329, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !764, retainedNodes: !762)
+!750 = !DICompositeType(tag: DW_TAG_structure_type, name: "ArgumentV1", scope: !142, file: !2, size: 128, align: 64, elements: !751, templateParams: !24, identifier: "4e3593181d4a3fd7c7588e4c93e285e5")
 !751 = !{!752, !756}
 !752 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !750, file: !2, baseType: !753, size: 64, align: 64)
 !753 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::fmt::{extern#0}::Opaque", baseType: !754, size: 64, align: 64, dwarfAddressSpace: 0)
-!754 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !755, file: !2, align: 8, elements: !24, identifier: "43185ab61ba6b0b799bd1bef1620bc0b")
+!754 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !755, file: !2, align: 8, elements: !24, identifier: "9d957b9cbc95a5d52c57994d133a21d2")
 !755 = !DINamespace(name: "{extern#0}", scope: !142)
 !756 = !DIDerivedType(tag: DW_TAG_member, name: "formatter", scope: !750, file: !2, baseType: !757, size: 64, align: 64, offset: 64)
 !757 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "fn(&core::fmt::{extern#0}::Opaque, &mut core::fmt::Formatter) -> core::result::Result<(), core::fmt::Error>", baseType: !758, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -10736,7 +10737,7 @@ attributes #11 = { noreturn nounwind }
 !766 = !DILocation(line: 329, column: 30, scope: !749)
 !767 = !DILocation(line: 330, column: 13, scope: !749)
 !768 = !DILocation(line: 331, column: 10, scope: !749)
-!769 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u32$GT$3fmt17hf349b60677dd9891E", scope: !771, file: !770, line: 185, type: !773, scopeLine: 185, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !775)
+!769 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u32$GT$3fmt17h1e03dcc8c6b9ff18E", scope: !771, file: !770, line: 185, type: !773, scopeLine: 185, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !775)
 !770 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/num.rs", directory: "", checksumkind: CSK_MD5, checksum: "02359a317e793c1b82de7b934f87f847")
 !771 = !DINamespace(name: "{impl#86}", scope: !772)
 !772 = !DINamespace(name: "num", scope: !142)
@@ -10753,7 +10754,7 @@ attributes #11 = { noreturn nounwind }
 !783 = !DILocation(line: 193, column: 14, scope: !769)
 !784 = !DILocation(line: 191, column: 21, scope: !769)
 !785 = !DILocation(line: 189, column: 21, scope: !769)
-!786 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u64$GT$3fmt17h6cc99aabc8dc9a21E", scope: !787, file: !770, line: 185, type: !788, scopeLine: 185, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !790)
+!786 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN4core3fmt3num50_$LT$impl$u20$core..fmt..Debug$u20$for$u20$u64$GT$3fmt17haf45b493f50037cbE", scope: !787, file: !770, line: 185, type: !788, scopeLine: 185, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !790)
 !787 = !DINamespace(name: "{impl#87}", scope: !772)
 !788 = !DISubroutineType(types: !789)
 !789 = !{!451, !132, !470}
@@ -10768,13 +10769,13 @@ attributes #11 = { noreturn nounwind }
 !798 = !DILocation(line: 193, column: 14, scope: !786)
 !799 = !DILocation(line: 191, column: 21, scope: !786)
 !800 = !DILocation(line: 189, column: 21, scope: !786)
-!801 = distinct !DISubprogram(name: "entries<&bootloader::bootinfo::memory_map::MemoryRegion, core::slice::iter::Iter<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3fmt8builders9DebugList7entries17h3d2e4fa43e1d7009E", scope: !803, file: !802, line: 627, type: !812, scopeLine: 627, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !836, retainedNodes: !829)
+!801 = distinct !DISubprogram(name: "entries<&bootloader::bootinfo::memory_map::MemoryRegion, core::slice::iter::Iter<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3fmt8builders9DebugList7entries17h7d93063a04bf6cc7E", scope: !803, file: !802, line: 627, type: !812, scopeLine: 627, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !836, retainedNodes: !829)
 !802 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/builders.rs", directory: "", checksumkind: CSK_MD5, checksum: "3a909d1cde985fb0d953605fd1b0e0e2")
-!803 = !DICompositeType(tag: DW_TAG_structure_type, name: "DebugList", scope: !804, file: !2, size: 128, align: 64, elements: !805, templateParams: !24, identifier: "9ea564596e2c9e1b661a8626c1eb3eed")
+!803 = !DICompositeType(tag: DW_TAG_structure_type, name: "DebugList", scope: !804, file: !2, size: 128, align: 64, elements: !805, templateParams: !24, identifier: "8d779ae6a213cbf8ad2e057ff52af294")
 !804 = !DINamespace(name: "builders", scope: !142)
 !805 = !{!806}
 !806 = !DIDerivedType(tag: DW_TAG_member, name: "inner", scope: !803, file: !2, baseType: !807, size: 128, align: 64)
-!807 = !DICompositeType(tag: DW_TAG_structure_type, name: "DebugInner", scope: !804, file: !2, size: 128, align: 64, elements: !808, templateParams: !24, identifier: "834020fb28782bbe6224c9026860e130")
+!807 = !DICompositeType(tag: DW_TAG_structure_type, name: "DebugInner", scope: !804, file: !2, size: 128, align: 64, elements: !808, templateParams: !24, identifier: "db8ca05499b1b1b885cc6d98a6d31808")
 !808 = !{!809, !810, !811}
 !809 = !DIDerivedType(tag: DW_TAG_member, name: "fmt", scope: !807, file: !2, baseType: !470, size: 64, align: 64)
 !810 = !DIDerivedType(tag: DW_TAG_member, name: "result", scope: !807, file: !2, baseType: !451, size: 8, align: 8, offset: 64)
@@ -10782,17 +10783,17 @@ attributes #11 = { noreturn nounwind }
 !812 = !DISubroutineType(types: !813)
 !813 = !{!814, !814, !815}
 !814 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::fmt::builders::DebugList", baseType: !803, size: 64, align: 64, dwarfAddressSpace: 0)
-!815 = !DICompositeType(tag: DW_TAG_structure_type, name: "Iter<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !816, file: !2, size: 128, align: 64, elements: !817, templateParams: !190, identifier: "daa4c0e32d98d76ef37ede96396bc911")
+!815 = !DICompositeType(tag: DW_TAG_structure_type, name: "Iter<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !816, file: !2, size: 128, align: 64, elements: !817, templateParams: !190, identifier: "5527bb770a443a9ab29beb6b77afbda")
 !816 = !DINamespace(name: "iter", scope: !167)
 !817 = !{!818, !823, !824}
 !818 = !DIDerivedType(tag: DW_TAG_member, name: "ptr", scope: !815, file: !2, baseType: !819, size: 64, align: 64, offset: 64)
-!819 = !DICompositeType(tag: DW_TAG_structure_type, name: "NonNull<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !820, file: !2, size: 64, align: 64, elements: !821, templateParams: !190, identifier: "566a50520184008e1d84ad19b9680afc")
+!819 = !DICompositeType(tag: DW_TAG_structure_type, name: "NonNull<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !820, file: !2, size: 64, align: 64, elements: !821, templateParams: !190, identifier: "3e8b82a9a0eabdc9e9719731ac901fd4")
 !820 = !DINamespace(name: "non_null", scope: !205)
 !821 = !{!822}
 !822 = !DIDerivedType(tag: DW_TAG_member, name: "pointer", scope: !819, file: !2, baseType: !208, size: 64, align: 64)
 !823 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !815, file: !2, baseType: !208, size: 64, align: 64)
 !824 = !DIDerivedType(tag: DW_TAG_member, name: "_marker", scope: !815, file: !2, baseType: !825, align: 8)
-!825 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<&bootloader::bootinfo::memory_map::MemoryRegion>", scope: !826, file: !2, align: 8, elements: !24, templateParams: !827, identifier: "975e914dba03338a39be6ef7dd465601")
+!825 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<&bootloader::bootinfo::memory_map::MemoryRegion>", scope: !826, file: !2, align: 8, elements: !24, templateParams: !827, identifier: "cf1e1404922de81e61c63eecee415081")
 !826 = !DINamespace(name: "marker", scope: !143)
 !827 = !{!828}
 !828 = !DITemplateTypeParameter(name: "T", type: !12)
@@ -10816,8 +10817,8 @@ attributes #11 = { noreturn nounwind }
 !846 = !DILocation(line: 632, column: 13, scope: !833)
 !847 = !DILocation(line: 633, column: 13, scope: !835)
 !848 = !DILocation(line: 634, column: 9, scope: !833)
-!849 = distinct !DISubprogram(name: "new_v1_formatted", linkageName: "_ZN4core3fmt9Arguments16new_v1_formatted17h5801c682b8271facE", scope: !850, file: !447, line: 443, type: !909, scopeLine: 443, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !914)
-!850 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !142, file: !2, size: 384, align: 64, elements: !851, templateParams: !24, identifier: "dc49042afee2f796a8fa4685389c4b18")
+!849 = distinct !DISubprogram(name: "new_v1_formatted", linkageName: "_ZN4core3fmt9Arguments16new_v1_formatted17hda5d41df8690ec0fE", scope: !850, file: !447, line: 443, type: !909, scopeLine: 443, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !914)
+!850 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !142, file: !2, size: 384, align: 64, elements: !851, templateParams: !24, identifier: "1c46a498dd7b956f4c3a670fdfba5262")
 !851 = !{!852, !858, !903}
 !852 = !DIDerivedType(tag: DW_TAG_member, name: "pieces", scope: !850, file: !2, baseType: !853, size: 128, align: 64, offset: 128)
 !853 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[&str]", file: !2, size: 128, align: 64, elements: !854, templateParams: !24, identifier: "d76b83877ddcb5cca61caf6bdca727ac")
@@ -10826,59 +10827,59 @@ attributes #11 = { noreturn nounwind }
 !856 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !333, size: 64, align: 64, dwarfAddressSpace: 0)
 !857 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !853, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !858 = !DIDerivedType(tag: DW_TAG_member, name: "fmt", scope: !850, file: !2, baseType: !859, size: 128, align: 64)
-!859 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::v1::Argument]>", scope: !479, file: !2, size: 128, align: 64, elements: !860, templateParams: !24, identifier: "62d362416a1eb41bf984638792a73145")
+!859 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::v1::Argument]>", scope: !479, file: !2, size: 128, align: 64, elements: !860, templateParams: !24, identifier: "d25d924bb8d51dd413c49dbfa1f11f1")
 !860 = !{!861}
-!861 = !DICompositeType(tag: DW_TAG_variant_part, scope: !859, file: !2, size: 128, align: 64, elements: !862, templateParams: !24, identifier: "51527d667cbd19b863d93073f3cc474", discriminator: !902)
+!861 = !DICompositeType(tag: DW_TAG_variant_part, scope: !859, file: !2, size: 128, align: 64, elements: !862, templateParams: !24, identifier: "759788f84997b99f6bc91fe0c57058ba", discriminator: !902)
 !862 = !{!863, !898}
 !863 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !861, file: !2, baseType: !864, size: 128, align: 64, extraData: i64 0)
-!864 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !859, file: !2, size: 128, align: 64, elements: !24, templateParams: !865, identifier: "66a59c7143972a6588bd1a9c8246e60f")
+!864 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !859, file: !2, size: 128, align: 64, elements: !24, templateParams: !865, identifier: "82efcd94523cf9c0b17ac37e82724639")
 !865 = !{!866}
 !866 = !DITemplateTypeParameter(name: "T", type: !867)
-!867 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::v1::Argument]", file: !2, size: 128, align: 64, elements: !868, templateParams: !24, identifier: "66b60dbaad43783577fb935928e2ac56")
+!867 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::v1::Argument]", file: !2, size: 128, align: 64, elements: !868, templateParams: !24, identifier: "de3ba5e1dd56fab311eb54a28d6cb95f")
 !868 = !{!869, !897}
 !869 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !867, file: !2, baseType: !870, size: 64, align: 64)
 !870 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !871, size: 64, align: 64, dwarfAddressSpace: 0)
-!871 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !140, file: !2, size: 448, align: 64, elements: !872, templateParams: !24, identifier: "1b0f53c51c2a0850dc27a4ea7530e9b2")
+!871 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !140, file: !2, size: 448, align: 64, elements: !872, templateParams: !24, identifier: "9bee5132fe724679d94d9aaa78899300")
 !872 = !{!873, !874}
 !873 = !DIDerivedType(tag: DW_TAG_member, name: "position", scope: !871, file: !2, baseType: !9, size: 64, align: 64, offset: 384)
 !874 = !DIDerivedType(tag: DW_TAG_member, name: "format", scope: !871, file: !2, baseType: !875, size: 384, align: 64)
-!875 = !DICompositeType(tag: DW_TAG_structure_type, name: "FormatSpec", scope: !140, file: !2, size: 384, align: 64, elements: !876, templateParams: !24, identifier: "4ceb8823bbeb709d93b7ffb6ddd40132")
+!875 = !DICompositeType(tag: DW_TAG_structure_type, name: "FormatSpec", scope: !140, file: !2, size: 384, align: 64, elements: !876, templateParams: !24, identifier: "65fce75b527475dfcd89c81174c5b112")
 !876 = !{!877, !878, !879, !880, !896}
 !877 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !875, file: !2, baseType: !475, size: 32, align: 32, offset: 288)
 !878 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !875, file: !2, baseType: !139, size: 8, align: 8, offset: 320)
 !879 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !875, file: !2, baseType: !27, size: 32, align: 32, offset: 256)
 !880 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !875, file: !2, baseType: !881, size: 128, align: 64)
-!881 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !140, file: !2, size: 128, align: 64, elements: !882, templateParams: !24, identifier: "beb49147a723c973b15fc19c2245c821")
+!881 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !140, file: !2, size: 128, align: 64, elements: !882, templateParams: !24, identifier: "eb274483ac6a1a818973f8ef56806ce6")
 !882 = !{!883}
-!883 = !DICompositeType(tag: DW_TAG_variant_part, scope: !881, file: !2, size: 128, align: 64, elements: !884, templateParams: !24, identifier: "c9db73f716fc865c39b9a87ace47fe10", discriminator: !895)
+!883 = !DICompositeType(tag: DW_TAG_variant_part, scope: !881, file: !2, size: 128, align: 64, elements: !884, templateParams: !24, identifier: "1383065eb0a1d3eb5559cfa60c22a70d", discriminator: !895)
 !884 = !{!885, !889, !893}
 !885 = !DIDerivedType(tag: DW_TAG_member, name: "Is", scope: !883, file: !2, baseType: !886, size: 128, align: 64, extraData: i64 0)
-!886 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !881, file: !2, size: 128, align: 64, elements: !887, templateParams: !24, identifier: "db0b97f002b1fae3dbc4ebdd853ff355")
+!886 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !881, file: !2, size: 128, align: 64, elements: !887, templateParams: !24, identifier: "284bf6fbe777a447ca6ded9ea5417274")
 !887 = !{!888}
 !888 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !886, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !889 = !DIDerivedType(tag: DW_TAG_member, name: "Param", scope: !883, file: !2, baseType: !890, size: 128, align: 64, extraData: i64 1)
-!890 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !881, file: !2, size: 128, align: 64, elements: !891, templateParams: !24, identifier: "49d2632f301eeedc951f3431bb382902")
+!890 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !881, file: !2, size: 128, align: 64, elements: !891, templateParams: !24, identifier: "47998f14b9dfef6b1e659ae3b3c1ad7f")
 !891 = !{!892}
 !892 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !890, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !893 = !DIDerivedType(tag: DW_TAG_member, name: "Implied", scope: !883, file: !2, baseType: !894, size: 128, align: 64, extraData: i64 2)
-!894 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !881, file: !2, size: 128, align: 64, elements: !24, identifier: "afc023622f1fd60e7b29fd0e4f997a04")
+!894 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !881, file: !2, size: 128, align: 64, elements: !24, identifier: "a9ac2edd79b7a2c052d84739de651359")
 !895 = !DIDerivedType(tag: DW_TAG_member, scope: !881, file: !2, baseType: !22, size: 64, align: 64, flags: DIFlagArtificial)
 !896 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !875, file: !2, baseType: !881, size: 128, align: 64, offset: 128)
 !897 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !867, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !898 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !861, file: !2, baseType: !899, size: 128, align: 64)
-!899 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !859, file: !2, size: 128, align: 64, elements: !900, templateParams: !865, identifier: "45eaeac90b0c2cad515177aa4ad012c0")
+!899 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !859, file: !2, size: 128, align: 64, elements: !900, templateParams: !865, identifier: "ecb4a60835a68b86ac55d46be42b6cd5")
 !900 = !{!901}
 !901 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !899, file: !2, baseType: !867, size: 128, align: 64)
 !902 = !DIDerivedType(tag: DW_TAG_member, scope: !859, file: !2, baseType: !22, size: 64, align: 64, flags: DIFlagArtificial)
 !903 = !DIDerivedType(tag: DW_TAG_member, name: "args", scope: !850, file: !2, baseType: !904, size: 128, align: 64, offset: 256)
-!904 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::ArgumentV1]", file: !2, size: 128, align: 64, elements: !905, templateParams: !24, identifier: "83fd9dd078f03ba333a6c21d9c3331b7")
+!904 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::ArgumentV1]", file: !2, size: 128, align: 64, elements: !905, templateParams: !24, identifier: "1ef2a88983c14e17bd3824c1adc5cb")
 !905 = !{!906, !908}
 !906 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !904, file: !2, baseType: !907, size: 64, align: 64)
 !907 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !750, size: 64, align: 64, dwarfAddressSpace: 0)
 !908 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !904, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
 !909 = !DISubroutineType(types: !910)
 !910 = !{!850, !853, !904, !867, !911}
-!911 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeArg", scope: !142, file: !2, align: 8, elements: !912, templateParams: !24, identifier: "4faa2d0373bebf10eea7ffc10aef50")
+!911 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeArg", scope: !142, file: !2, align: 8, elements: !912, templateParams: !24, identifier: "87fa5f455e1e5965cb07ce17624e505b")
 !912 = !{!913}
 !913 = !DIDerivedType(tag: DW_TAG_member, name: "_private", scope: !911, file: !2, baseType: !7, align: 8)
 !914 = !{!915, !916, !917, !918, !919}
@@ -10894,7 +10895,7 @@ attributes #11 = { noreturn nounwind }
 !924 = !DILocation(line: 449, column: 34, scope: !849)
 !925 = !DILocation(line: 449, column: 9, scope: !849)
 !926 = !DILocation(line: 450, column: 6, scope: !849)
-!927 = distinct !DISubprogram(name: "new_v1", linkageName: "_ZN4core3fmt9Arguments6new_v117h17505f2ad5a51ba3E", scope: !850, file: !447, line: 412, type: !928, scopeLine: 412, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !930)
+!927 = distinct !DISubprogram(name: "new_v1", linkageName: "_ZN4core3fmt9Arguments6new_v117h2bfadc962778ad00E", scope: !850, file: !447, line: 412, type: !928, scopeLine: 412, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !930)
 !928 = !DISubroutineType(types: !929)
 !929 = !{!850, !853, !904}
 !930 = !{!931, !932}
@@ -10909,7 +10910,7 @@ attributes #11 = { noreturn nounwind }
 !939 = !DILocation(line: 416, column: 9, scope: !927)
 !940 = !DILocation(line: 417, column: 6, scope: !927)
 !941 = !DILocation(line: 414, column: 13, scope: !927)
-!942 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17hcf96160f8d888857E", scope: !850, file: !447, line: 399, type: !943, scopeLine: 399, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !945)
+!942 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17h0c49114209049e8bE", scope: !850, file: !447, line: 399, type: !943, scopeLine: 399, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !945)
 !943 = !DISubroutineType(types: !944)
 !944 = !{!850, !853}
 !945 = !{!946}
@@ -10920,17 +10921,17 @@ attributes #11 = { noreturn nounwind }
 !950 = !DILocation(line: 403, column: 9, scope: !942)
 !951 = !DILocation(line: 404, column: 6, scope: !942)
 !952 = !DILocation(line: 401, column: 13, scope: !942)
-!953 = distinct !DISubprogram(name: "swap_simple<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3mem11swap_simple17h18530e83179ae6f8E", scope: !641, file: !954, line: 763, type: !955, scopeLine: 763, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !958)
+!953 = distinct !DISubprogram(name: "swap_simple<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3mem11swap_simple17h03f5c9db8511937bE", scope: !651, file: !954, line: 763, type: !955, scopeLine: 763, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !958)
 !954 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/mem/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "d20d11efdf2289b0b0de68a76bdca89c")
 !955 = !DISubroutineType(types: !956)
 !956 = !{null, !957, !957}
-!957 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !639, size: 64, align: 64, dwarfAddressSpace: 0)
+!957 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !649, size: 64, align: 64, dwarfAddressSpace: 0)
 !958 = !{!959, !960, !961, !963}
 !959 = !DILocalVariable(name: "x", arg: 1, scope: !953, file: !954, line: 763, type: !957)
 !960 = !DILocalVariable(name: "y", arg: 2, scope: !953, file: !954, line: 763, type: !957)
-!961 = !DILocalVariable(name: "a", scope: !962, file: !954, line: 780, type: !639, align: 8)
+!961 = !DILocalVariable(name: "a", scope: !962, file: !954, line: 780, type: !649, align: 8)
 !962 = distinct !DILexicalBlock(scope: !953, file: !954, line: 780, column: 9)
-!963 = !DILocalVariable(name: "b", scope: !964, file: !954, line: 781, type: !639, align: 8)
+!963 = !DILocalVariable(name: "b", scope: !964, file: !954, line: 781, type: !649, align: 8)
 !964 = distinct !DILexicalBlock(scope: !962, file: !954, line: 781, column: 9)
 !965 = !DILocation(line: 763, column: 36, scope: !953)
 !966 = !DILocation(line: 763, column: 47, scope: !953)
@@ -10943,7 +10944,7 @@ attributes #11 = { noreturn nounwind }
 !973 = !DILocation(line: 783, column: 23, scope: !964)
 !974 = !DILocation(line: 783, column: 9, scope: !964)
 !975 = !DILocation(line: 785, column: 2, scope: !953)
-!976 = distinct !DISubprogram(name: "swap_simple<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem11swap_simple17he65d78d163df400fE", scope: !641, file: !954, line: 763, type: !977, scopeLine: 763, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !980)
+!976 = distinct !DISubprogram(name: "swap_simple<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem11swap_simple17h074bb468a9d232e4E", scope: !651, file: !954, line: 763, type: !977, scopeLine: 763, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !980)
 !977 = !DISubroutineType(types: !978)
 !978 = !{null, !979, !979}
 !979 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut bootloader::bootinfo::memory_map::MemoryRegion", baseType: !13, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -10965,7 +10966,7 @@ attributes #11 = { noreturn nounwind }
 !995 = !DILocation(line: 783, column: 23, scope: !986)
 !996 = !DILocation(line: 783, column: 9, scope: !986)
 !997 = !DILocation(line: 785, column: 2, scope: !976)
-!998 = distinct !DISubprogram(name: "swap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem4swap17h5bdd38adc05b73abE", scope: !641, file: !954, line: 726, type: !977, scopeLine: 726, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !999)
+!998 = distinct !DISubprogram(name: "swap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem4swap17h477820c24705d26aE", scope: !651, file: !954, line: 726, type: !977, scopeLine: 726, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !999)
 !999 = !{!1000, !1001}
 !1000 = !DILocalVariable(name: "x", arg: 1, scope: !998, file: !954, line: 726, type: !979)
 !1001 = !DILocalVariable(name: "y", arg: 2, scope: !998, file: !954, line: 726, type: !979)
@@ -10975,24 +10976,24 @@ attributes #11 = { noreturn nounwind }
 !1005 = !DILocation(line: 755, column: 5, scope: !998)
 !1006 = !DILocation(line: 744, column: 29, scope: !998)
 !1007 = !DILocation(line: 756, column: 2, scope: !998)
-!1008 = distinct !DISubprogram(name: "forget<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem6forget17h9ad22200b7c444dfE", scope: !641, file: !954, line: 148, type: !1009, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1011)
+!1008 = distinct !DISubprogram(name: "forget<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem6forget17h0df2bf7708e9d6b0E", scope: !651, file: !954, line: 148, type: !1009, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1011)
 !1009 = !DISubroutineType(types: !1010)
 !1010 = !{null, !13}
 !1011 = !{!1012}
 !1012 = !DILocalVariable(name: "t", arg: 1, scope: !1008, file: !954, line: 148, type: !13)
 !1013 = !DILocation(line: 148, column: 24, scope: !1008)
 !1014 = !DILocalVariable(name: "value", arg: 1, scope: !1015, file: !1016, line: 70, type: !13)
-!1015 = distinct !DISubprogram(name: "new<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem13manually_drop21ManuallyDrop$LT$T$GT$3new17h544ca00c57e6fc49E", scope: !645, file: !1016, line: 70, type: !1017, scopeLine: 70, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1019)
-!1016 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/mem/manually_drop.rs", directory: "", checksumkind: CSK_MD5, checksum: "a34f39f0c1c25c8378cd3f4ec0bf00c3")
+!1015 = distinct !DISubprogram(name: "new<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem13manually_drop21ManuallyDrop$LT$T$GT$3new17haa82cd91e4c9308bE", scope: !655, file: !1016, line: 70, type: !1017, scopeLine: 70, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1019)
+!1016 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/mem/manually_drop.rs", directory: "", checksumkind: CSK_MD5, checksum: "757172e61d55c773a9468e6d26f74706")
 !1017 = !DISubroutineType(types: !1018)
-!1018 = !{!645, !13}
+!1018 = !{!655, !13}
 !1019 = !{!1014}
 !1020 = !DILocation(line: 70, column: 22, scope: !1015, inlinedAt: !1021)
 !1021 = distinct !DILocation(line: 149, column: 13, scope: !1008)
 !1022 = !DILocation(line: 71, column: 9, scope: !1015, inlinedAt: !1021)
 !1023 = !DILocation(line: 150, column: 2, scope: !1008)
-!1024 = distinct !DISubprogram(name: "checked_mul", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h1a50449d966bb29fE", scope: !1026, file: !1025, line: 576, type: !1028, scopeLine: 576, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1030)
-!1025 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "b2a733f80e3cd43066f918bdafc87bd0")
+!1024 = distinct !DISubprogram(name: "checked_mul", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17hf7ec3245fedf3771E", scope: !1026, file: !1025, line: 576, type: !1028, scopeLine: 576, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1030)
+!1025 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "9f9a8c2611080e433b531f707b01187e")
 !1026 = !DINamespace(name: "{impl#11}", scope: !1027)
 !1027 = !DINamespace(name: "num", scope: !143)
 !1028 = !DISubroutineType(types: !1029)
@@ -11006,7 +11007,7 @@ attributes #11 = { noreturn nounwind }
 !1036 = !DILocation(line: 576, column: 34, scope: !1024)
 !1037 = !DILocation(line: 576, column: 40, scope: !1024)
 !1038 = !DILocalVariable(name: "self", arg: 1, scope: !1039, file: !1025, line: 1702, type: !9)
-!1039 = distinct !DISubprogram(name: "overflowing_mul", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$15overflowing_mul17h8615fd76a999d673E", scope: !1026, file: !1025, line: 1702, type: !1040, scopeLine: 1702, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1046)
+!1039 = distinct !DISubprogram(name: "overflowing_mul", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$15overflowing_mul17hd4b138126ff63b67E", scope: !1026, file: !1025, line: 1702, type: !1040, scopeLine: 1702, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1046)
 !1040 = !DISubroutineType(types: !1041)
 !1041 = !{!1042, !9, !9}
 !1042 = !DICompositeType(tag: DW_TAG_structure_type, name: "(usize, bool)", file: !2, size: 128, align: 64, elements: !1043, templateParams: !24, identifier: "4030f8452435be378048c6d8b59c8539")
@@ -11039,7 +11040,7 @@ attributes #11 = { noreturn nounwind }
 !1069 = !DILocation(line: 578, column: 30, scope: !1034)
 !1070 = !DILocation(line: 579, column: 10, scope: !1024)
 !1071 = !{i64 0, i64 2}
-!1072 = distinct !DISubprogram(name: "next_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$17next_power_of_two17h8bf2ba1ae5ba97f7E", scope: !1026, file: !1025, line: 2216, type: !1073, scopeLine: 2216, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1075)
+!1072 = distinct !DISubprogram(name: "next_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$17next_power_of_two17h5ea7db227970baadE", scope: !1026, file: !1025, line: 2216, type: !1073, scopeLine: 2216, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1075)
 !1073 = !DISubroutineType(types: !1074)
 !1074 = !{!9, !9}
 !1075 = !{!1076}
@@ -11047,7 +11048,7 @@ attributes #11 = { noreturn nounwind }
 !1077 = !DILocation(line: 2216, column: 40, scope: !1072)
 !1078 = !DILocation(line: 2217, column: 13, scope: !1072)
 !1079 = !DILocation(line: 2218, column: 10, scope: !1072)
-!1080 = distinct !DISubprogram(name: "one_less_than_next_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$31one_less_than_next_power_of_two17h4e0f18f6ae969078E", scope: !1026, file: !1025, line: 2184, type: !1073, scopeLine: 2184, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1081)
+!1080 = distinct !DISubprogram(name: "one_less_than_next_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$31one_less_than_next_power_of_two17h07bfb0193e2bc9a1E", scope: !1026, file: !1025, line: 2184, type: !1073, scopeLine: 2184, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1081)
 !1081 = !{!1082, !1083, !1085}
 !1082 = !DILocalVariable(name: "self", arg: 1, scope: !1080, file: !1025, line: 2184, type: !9)
 !1083 = !DILocalVariable(name: "p", scope: !1084, file: !1025, line: 2187, type: !9, align: 8)
@@ -11063,28 +11064,28 @@ attributes #11 = { noreturn nounwind }
 !1093 = !DILocation(line: 2192, column: 30, scope: !1084)
 !1094 = !DILocation(line: 2192, column: 17, scope: !1086)
 !1095 = !DILocation(line: 2193, column: 13, scope: !1086)
-!1096 = distinct !DISubprogram(name: "into_slice_range", linkageName: "_ZN4core3ops5range27RangeInclusive$LT$usize$GT$16into_slice_range17hb8c48996da4fecadE", scope: !416, file: !1097, line: 454, type: !1098, scopeLine: 454, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1100)
-!1097 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/range.rs", directory: "", checksumkind: CSK_MD5, checksum: "c1aecaf6a5b28eb8d294ea6247bce985")
+!1096 = distinct !DISubprogram(name: "into_slice_range", linkageName: "_ZN4core3ops5range27RangeInclusive$LT$usize$GT$16into_slice_range17h1feef5a233c74608E", scope: !416, file: !1097, line: 450, type: !1098, scopeLine: 450, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1100)
+!1097 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/range.rs", directory: "", checksumkind: CSK_MD5, checksum: "9d2b5da18cc97d04b655a6220a6da08d")
 !1098 = !DISubroutineType(types: !1099)
 !1099 = !{!175, !416}
 !1100 = !{!1101, !1102, !1104}
-!1101 = !DILocalVariable(name: "self", arg: 1, scope: !1096, file: !1097, line: 454, type: !416)
-!1102 = !DILocalVariable(name: "exclusive_end", scope: !1103, file: !1097, line: 458, type: !9, align: 8)
-!1103 = distinct !DILexicalBlock(scope: !1096, file: !1097, line: 458, column: 9)
-!1104 = !DILocalVariable(name: "start", scope: !1105, file: !1097, line: 459, type: !9, align: 8)
-!1105 = distinct !DILexicalBlock(scope: !1103, file: !1097, line: 459, column: 9)
-!1106 = !DILocation(line: 454, column: 42, scope: !1096)
-!1107 = !DILocation(line: 459, column: 13, scope: !1105)
-!1108 = !DILocation(line: 458, column: 29, scope: !1096)
-!1109 = !DILocation(line: 458, column: 13, scope: !1103)
-!1110 = !DILocation(line: 459, column: 24, scope: !1103)
-!1111 = !DILocation(line: 459, column: 64, scope: !1103)
-!1112 = !DILocation(line: 459, column: 21, scope: !1103)
-!1113 = !DILocation(line: 459, column: 41, scope: !1103)
-!1114 = !DILocation(line: 460, column: 9, scope: !1105)
-!1115 = !DILocation(line: 461, column: 6, scope: !1096)
-!1116 = distinct !DISubprogram(name: "call_mut<(&bootloader::bootinfo::memory_map::MemoryRegion, &bootloader::bootinfo::memory_map::MemoryRegion), core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17hdc67ec61149bda50E", scope: !1118, file: !1117, line: 297, type: !1121, scopeLine: 297, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1141, retainedNodes: !1134)
-!1117 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs", directory: "", checksumkind: CSK_MD5, checksum: "56fb008eac3df8d06ce524ffb023f0b6")
+!1101 = !DILocalVariable(name: "self", arg: 1, scope: !1096, file: !1097, line: 450, type: !416)
+!1102 = !DILocalVariable(name: "exclusive_end", scope: !1103, file: !1097, line: 454, type: !9, align: 8)
+!1103 = distinct !DILexicalBlock(scope: !1096, file: !1097, line: 454, column: 9)
+!1104 = !DILocalVariable(name: "start", scope: !1105, file: !1097, line: 455, type: !9, align: 8)
+!1105 = distinct !DILexicalBlock(scope: !1103, file: !1097, line: 455, column: 9)
+!1106 = !DILocation(line: 450, column: 42, scope: !1096)
+!1107 = !DILocation(line: 455, column: 13, scope: !1105)
+!1108 = !DILocation(line: 454, column: 29, scope: !1096)
+!1109 = !DILocation(line: 454, column: 13, scope: !1103)
+!1110 = !DILocation(line: 455, column: 24, scope: !1103)
+!1111 = !DILocation(line: 455, column: 64, scope: !1103)
+!1112 = !DILocation(line: 455, column: 21, scope: !1103)
+!1113 = !DILocation(line: 455, column: 41, scope: !1103)
+!1114 = !DILocation(line: 456, column: 9, scope: !1105)
+!1115 = !DILocation(line: 457, column: 6, scope: !1096)
+!1116 = distinct !DISubprogram(name: "call_mut<(&bootloader::bootinfo::memory_map::MemoryRegion, &bootloader::bootinfo::memory_map::MemoryRegion), core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core3ops8function5impls79_$LT$impl$u20$core..ops..function..FnMut$LT$A$GT$$u20$for$u20$$RF$mut$u20$F$GT$8call_mut17h0dcc23ef895e1408E", scope: !1118, file: !1117, line: 293, type: !1121, scopeLine: 293, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1141, retainedNodes: !1134)
+!1117 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs", directory: "", checksumkind: CSK_MD5, checksum: "cfb73adf0f4bb6df3856d6eaf613e707")
 !1118 = !DINamespace(name: "{impl#3}", scope: !1119)
 !1119 = !DINamespace(name: "impls", scope: !1120)
 !1120 = !DINamespace(name: "function", scope: !177)
@@ -11092,35 +11093,35 @@ attributes #11 = { noreturn nounwind }
 !1122 = !{!421, !1123, !12, !12}
 !1123 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", baseType: !1124, size: 64, align: 64, dwarfAddressSpace: 0)
 !1124 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", baseType: !1125, size: 64, align: 64, dwarfAddressSpace: 0)
-!1125 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", scope: !1126, file: !2, size: 64, align: 64, elements: !1128, templateParams: !24, identifier: "7963ad5763285cc2da2814de01080d05")
+!1125 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", scope: !1126, file: !2, size: 64, align: 64, elements: !1128, templateParams: !24, identifier: "6cd50a4ff08c664fd35b205cb642c4d2")
 !1126 = !DINamespace(name: "sort_unstable_by", scope: !1127)
 !1127 = !DINamespace(name: "{impl#0}", scope: !167)
 !1128 = !{!1129}
 !1129 = !DIDerivedType(tag: DW_TAG_member, name: "_ref__compare", scope: !1125, file: !2, baseType: !1130, size: 64, align: 64)
 !1130 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}", baseType: !1131, size: 64, align: 64, dwarfAddressSpace: 0)
-!1131 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}", scope: !1132, file: !2, align: 8, elements: !24, identifier: "396cd59c5ac19e23e844f756a8be9213")
+!1131 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}", scope: !1132, file: !2, align: 8, elements: !24, identifier: "2d0a4432bf52f0a54bfe30ab5af16fc9")
 !1132 = !DINamespace(name: "sort", scope: !1133)
 !1133 = !DINamespace(name: "{impl#0}", scope: !14)
 !1134 = !{!1135, !1136}
-!1135 = !DILocalVariable(name: "self", arg: 1, scope: !1116, file: !1117, line: 297, type: !1123)
-!1136 = !DILocalVariable(name: "args", arg: 2, scope: !1116, file: !1117, line: 297, type: !1137)
-!1137 = !DICompositeType(tag: DW_TAG_structure_type, name: "(&bootloader::bootinfo::memory_map::MemoryRegion, &bootloader::bootinfo::memory_map::MemoryRegion)", file: !2, size: 128, align: 64, elements: !1138, templateParams: !24, identifier: "6310b6d709333fe66715e11a88c4206a")
+!1135 = !DILocalVariable(name: "self", arg: 1, scope: !1116, file: !1117, line: 293, type: !1123)
+!1136 = !DILocalVariable(name: "args", arg: 2, scope: !1116, file: !1117, line: 293, type: !1137)
+!1137 = !DICompositeType(tag: DW_TAG_structure_type, name: "(&bootloader::bootinfo::memory_map::MemoryRegion, &bootloader::bootinfo::memory_map::MemoryRegion)", file: !2, size: 128, align: 64, elements: !1138, templateParams: !24, identifier: "393f88e2ab7aef5831c4b234aac5a456")
 !1138 = !{!1139, !1140}
 !1139 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !1137, file: !2, baseType: !12, size: 64, align: 64)
 !1140 = !DIDerivedType(tag: DW_TAG_member, name: "__1", scope: !1137, file: !2, baseType: !12, size: 64, align: 64, offset: 64)
 !1141 = !{!1142, !1143}
 !1142 = !DITemplateTypeParameter(name: "A", type: !1137)
 !1143 = !DITemplateTypeParameter(name: "F", type: !1125)
-!1144 = !DILocation(line: 297, column: 40, scope: !1116)
-!1145 = !DILocation(line: 297, column: 51, scope: !1116)
-!1146 = !DILocation(line: 298, column: 13, scope: !1116)
-!1147 = !DILocation(line: 299, column: 10, scope: !1116)
-!1148 = distinct !DISubprogram(name: "drop_in_place<core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h14860f460f28eaf1E", scope: !205, file: !1149, line: 490, type: !1150, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1160, retainedNodes: !1158)
-!1149 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "4b0ac29df94a7dc1bf2bc7efca5e253a")
+!1144 = !DILocation(line: 293, column: 40, scope: !1116)
+!1145 = !DILocation(line: 293, column: 51, scope: !1116)
+!1146 = !DILocation(line: 294, column: 13, scope: !1116)
+!1147 = !DILocation(line: 295, column: 10, scope: !1116)
+!1148 = distinct !DISubprogram(name: "drop_in_place<core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr107drop_in_place$LT$core..slice..sort..InsertionHole$LT$bootloader..bootinfo..memory_map..MemoryRegion$GT$$GT$17h1cb7c39fa811be84E", scope: !205, file: !1149, line: 490, type: !1150, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1160, retainedNodes: !1158)
+!1149 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "ed5a5b94ce68ef0bd15ed78a0be1f1f0")
 !1150 = !DISubroutineType(types: !1151)
 !1151 = !{null, !1152}
 !1152 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::slice::sort::InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !1153, size: 64, align: 64, dwarfAddressSpace: 0)
-!1153 = !DICompositeType(tag: DW_TAG_structure_type, name: "InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !1154, file: !2, size: 128, align: 64, elements: !1155, templateParams: !190, identifier: "a5694e2c3e4c902abab789d688e2e8df")
+!1153 = !DICompositeType(tag: DW_TAG_structure_type, name: "InsertionHole<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !1154, file: !2, size: 128, align: 64, elements: !1155, templateParams: !190, identifier: "2c5d8d0ebf2560c1b7f8b54e79ec743c")
 !1154 = !DINamespace(name: "sort", scope: !167)
 !1155 = !{!1156, !1157}
 !1156 = !DIDerivedType(tag: DW_TAG_member, name: "src", scope: !1153, file: !2, baseType: !208, size: 64, align: 64)
@@ -11130,7 +11131,7 @@ attributes #11 = { noreturn nounwind }
 !1160 = !{!1161}
 !1161 = !DITemplateTypeParameter(name: "T", type: !1153)
 !1162 = !DILocation(line: 490, column: 1, scope: !1148)
-!1163 = distinct !DISubprogram(name: "swap_nonoverlapping<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr19swap_nonoverlapping17he69e527d7f0d58b1E", scope: !205, file: !1149, line: 902, type: !1164, scopeLine: 902, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1166)
+!1163 = distinct !DISubprogram(name: "swap_nonoverlapping<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr19swap_nonoverlapping17h540c69c045de4bb4E", scope: !205, file: !1149, line: 902, type: !1164, scopeLine: 902, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1166)
 !1164 = !DISubroutineType(types: !1165)
 !1165 = !{null, !272, !272, !9}
 !1166 = !{!1167, !1168, !1169, !1170, !1172, !1174, !1176, !1179, !1181}
@@ -11156,7 +11157,7 @@ attributes #11 = { noreturn nounwind }
 !1186 = !DILocation(line: 925, column: 9, scope: !1163)
 !1187 = !DILocation(line: 938, column: 8, scope: !1163)
 !1188 = !DILocalVariable(name: "x", arg: 1, scope: !1189, file: !229, line: 2484, type: !272)
-!1189 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr19swap_nonoverlapping7runtime17h090780e3a02004a0E", scope: !1190, file: !229, line: 2484, type: !1164, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1191)
+!1189 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr19swap_nonoverlapping7runtime17hdd2ae9fc0b7e0fd4E", scope: !1190, file: !229, line: 2484, type: !1164, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1191)
 !1190 = !DINamespace(name: "swap_nonoverlapping", scope: !205)
 !1191 = !{!1188, !1192, !1193}
 !1192 = !DILocalVariable(name: "y", arg: 2, scope: !1189, file: !229, line: 2484, type: !272)
@@ -11170,12 +11171,12 @@ attributes #11 = { noreturn nounwind }
 !1200 = !DILocation(line: 2485, column: 20, scope: !1189, inlinedAt: !1195)
 !1201 = !DILocation(line: 2487, column: 21, scope: !1189, inlinedAt: !1195)
 !1202 = !DILocalVariable(name: "self", arg: 1, scope: !1203, file: !1025, line: 2169, type: !9)
-!1203 = distinct !DISubprogram(name: "is_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$15is_power_of_two17h0c20e87b2d82c530E", scope: !1026, file: !1025, line: 2169, type: !669, scopeLine: 2169, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1204)
+!1203 = distinct !DISubprogram(name: "is_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$15is_power_of_two17h10a26130217e7fecE", scope: !1026, file: !1025, line: 2169, type: !669, scopeLine: 2169, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1204)
 !1204 = !{!1202}
 !1205 = !DILocation(line: 2169, column: 38, scope: !1203, inlinedAt: !1206)
 !1206 = distinct !DILocation(line: 939, column: 14, scope: !1163)
 !1207 = !DILocalVariable(name: "self", arg: 1, scope: !1208, file: !1025, line: 106, type: !9)
-!1208 = distinct !DISubprogram(name: "count_ones", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$10count_ones17hfacc0f9731cbc4e3E", scope: !1026, file: !1025, line: 106, type: !1209, scopeLine: 106, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1211)
+!1208 = distinct !DISubprogram(name: "count_ones", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$10count_ones17hc261f83f3aec2ac5E", scope: !1026, file: !1025, line: 106, type: !1209, scopeLine: 106, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1211)
 !1209 = !DISubroutineType(types: !1210)
 !1210 = !{!27, !9}
 !1211 = !{!1207}
@@ -11191,7 +11192,7 @@ attributes #11 = { noreturn nounwind }
 !1221 = !DILocation(line: 942, column: 9, scope: !1163)
 !1222 = !DILocation(line: 943, column: 9, scope: !1163)
 !1223 = !DILocalVariable(name: "self", arg: 1, scope: !1224, file: !267, line: 57, type: !272)
-!1224 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, usize>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17h76b6ec7b23ec236dE", scope: !278, file: !267, line: 57, type: !1225, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1228, retainedNodes: !1227)
+!1224 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, usize>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17h869cfb1da12e14abE", scope: !278, file: !267, line: 57, type: !1225, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1228, retainedNodes: !1227)
 !1225 = !DISubroutineType(types: !1226)
 !1226 = !{!612, !272}
 !1227 = !{!1223}
@@ -11206,7 +11207,7 @@ attributes #11 = { noreturn nounwind }
 !1236 = !DILocation(line: 942, column: 9, scope: !1175)
 !1237 = !DILocation(line: 948, column: 2, scope: !1163)
 !1238 = !DILocalVariable(name: "self", arg: 1, scope: !1239, file: !267, line: 57, type: !272)
-!1239 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17h4900a8081760c81eE", scope: !278, file: !267, line: 57, type: !1240, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1243, retainedNodes: !1242)
+!1239 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17h9bfcb2577d1948ddE", scope: !278, file: !267, line: 57, type: !1240, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1243, retainedNodes: !1242)
 !1240 = !DISubroutineType(types: !1241)
 !1241 = !{!1178, !272}
 !1242 = !{!1238}
@@ -11219,7 +11220,7 @@ attributes #11 = { noreturn nounwind }
 !1249 = distinct !DILocation(line: 943, column: 9, scope: !1177)
 !1250 = !DILocation(line: 943, column: 9, scope: !1180)
 !1251 = !DILocation(line: 943, column: 9, scope: !1182)
-!1252 = distinct !DISubprogram(name: "slice_from_raw_parts<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr20slice_from_raw_parts17hcf229f673cb6d2cdE", scope: !205, file: !1149, line: 733, type: !1253, scopeLine: 733, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1255)
+!1252 = distinct !DISubprogram(name: "slice_from_raw_parts<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr20slice_from_raw_parts17h1f77dfc268ff9a51E", scope: !205, file: !1149, line: 733, type: !1253, scopeLine: 733, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1255)
 !1253 = !DISubroutineType(types: !1254)
 !1254 = !{!170, !208, !9}
 !1255 = !{!1256, !1257}
@@ -11231,7 +11232,7 @@ attributes #11 = { noreturn nounwind }
 !1261 = distinct !DILocation(line: 734, column: 20, scope: !1252)
 !1262 = !DILocation(line: 734, column: 5, scope: !1252)
 !1263 = !DILocation(line: 735, column: 2, scope: !1252)
-!1264 = distinct !DISubprogram(name: "drop_in_place<u32>", linkageName: "_ZN4core3ptr24drop_in_place$LT$u32$GT$17h5dcf02aa7ca6dd71E", scope: !205, file: !1149, line: 490, type: !1265, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1270, retainedNodes: !1268)
+!1264 = distinct !DISubprogram(name: "drop_in_place<u32>", linkageName: "_ZN4core3ptr24drop_in_place$LT$u32$GT$17h64e6676b01e9e33dE", scope: !205, file: !1149, line: 490, type: !1265, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1270, retainedNodes: !1268)
 !1265 = !DISubroutineType(types: !1266)
 !1266 = !{null, !1267}
 !1267 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut u32", baseType: !27, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11240,14 +11241,14 @@ attributes #11 = { noreturn nounwind }
 !1270 = !{!1271}
 !1271 = !DITemplateTypeParameter(name: "T", type: !27)
 !1272 = !DILocation(line: 490, column: 1, scope: !1264)
-!1273 = distinct !DISubprogram(name: "drop_in_place<u64>", linkageName: "_ZN4core3ptr24drop_in_place$LT$u64$GT$17h934378307490d0a7E", scope: !205, file: !1149, line: 490, type: !1274, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !764, retainedNodes: !1277)
+!1273 = distinct !DISubprogram(name: "drop_in_place<u64>", linkageName: "_ZN4core3ptr24drop_in_place$LT$u64$GT$17h50a192d1e7832168E", scope: !205, file: !1149, line: 490, type: !1274, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !764, retainedNodes: !1277)
 !1274 = !DISubroutineType(types: !1275)
 !1275 = !{null, !1276}
 !1276 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut u64", baseType: !22, size: 64, align: 64, dwarfAddressSpace: 0)
 !1277 = !{!1278}
 !1278 = !DILocalVariable(arg: 1, scope: !1273, file: !1149, line: 490, type: !1276)
 !1279 = !DILocation(line: 490, column: 1, scope: !1273)
-!1280 = distinct !DISubprogram(name: "slice_from_raw_parts_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr24slice_from_raw_parts_mut17hdbb067706a3044e6E", scope: !205, file: !1149, line: 765, type: !1281, scopeLine: 765, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1283)
+!1280 = distinct !DISubprogram(name: "slice_from_raw_parts_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr24slice_from_raw_parts_mut17h60c099831c83210dE", scope: !205, file: !1149, line: 765, type: !1281, scopeLine: 765, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1283)
 !1281 = !DISubroutineType(types: !1282)
 !1282 = !{!247, !272, !9}
 !1283 = !{!1284, !1285}
@@ -11256,7 +11257,7 @@ attributes #11 = { noreturn nounwind }
 !1286 = !DILocation(line: 765, column: 42, scope: !1280)
 !1287 = !DILocation(line: 765, column: 56, scope: !1280)
 !1288 = !DILocalVariable(name: "self", arg: 1, scope: !1289, file: !267, line: 57, type: !272)
-!1289 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, ()>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17h22a8476215024709E", scope: !278, file: !267, line: 57, type: !1290, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !560, retainedNodes: !1293)
+!1289 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, ()>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17he161e367c9373ae0E", scope: !278, file: !267, line: 57, type: !1290, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !560, retainedNodes: !1293)
 !1290 = !DISubroutineType(types: !1291)
 !1291 = !{!1292, !272}
 !1292 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut ()", baseType: !7, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11265,7 +11266,7 @@ attributes #11 = { noreturn nounwind }
 !1295 = distinct !DILocation(line: 766, column: 24, scope: !1280)
 !1296 = !DILocation(line: 766, column: 5, scope: !1280)
 !1297 = !DILocation(line: 767, column: 2, scope: !1280)
-!1298 = distinct !DISubprogram(name: "drop_in_place<&u8>", linkageName: "_ZN4core3ptr27drop_in_place$LT$$RF$u8$GT$17h93e56f135775a23bE", scope: !205, file: !1149, line: 490, type: !1299, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1304, retainedNodes: !1302)
+!1298 = distinct !DISubprogram(name: "drop_in_place<&u8>", linkageName: "_ZN4core3ptr27drop_in_place$LT$$RF$u8$GT$17h75cd57b67ffca4a4E", scope: !205, file: !1149, line: 490, type: !1299, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1304, retainedNodes: !1302)
 !1299 = !DISubroutineType(types: !1300)
 !1300 = !{null, !1301}
 !1301 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &u8", baseType: !122, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11274,7 +11275,7 @@ attributes #11 = { noreturn nounwind }
 !1304 = !{!1305}
 !1305 = !DITemplateTypeParameter(name: "T", type: !122)
 !1306 = !DILocation(line: 490, column: 1, scope: !1298)
-!1307 = distinct !DISubprogram(name: "drop_in_place<&u32>", linkageName: "_ZN4core3ptr28drop_in_place$LT$$RF$u32$GT$17hae2ed7f265841b70E", scope: !205, file: !1149, line: 490, type: !1308, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1313, retainedNodes: !1311)
+!1307 = distinct !DISubprogram(name: "drop_in_place<&u32>", linkageName: "_ZN4core3ptr28drop_in_place$LT$$RF$u32$GT$17h1d73533f704e0351E", scope: !205, file: !1149, line: 490, type: !1308, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1313, retainedNodes: !1311)
 !1308 = !DISubroutineType(types: !1309)
 !1309 = !{null, !1310}
 !1310 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &u32", baseType: !85, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11283,7 +11284,7 @@ attributes #11 = { noreturn nounwind }
 !1313 = !{!1314}
 !1314 = !DITemplateTypeParameter(name: "T", type: !85)
 !1315 = !DILocation(line: 490, column: 1, scope: !1307)
-!1316 = distinct !DISubprogram(name: "drop_in_place<&u64>", linkageName: "_ZN4core3ptr28drop_in_place$LT$$RF$u64$GT$17h12dd31e77c1ef066E", scope: !205, file: !1149, line: 490, type: !1317, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1322, retainedNodes: !1320)
+!1316 = distinct !DISubprogram(name: "drop_in_place<&u64>", linkageName: "_ZN4core3ptr28drop_in_place$LT$$RF$u64$GT$17h8f16d595b7ffdd46E", scope: !205, file: !1149, line: 490, type: !1317, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1322, retainedNodes: !1320)
 !1317 = !DISubroutineType(types: !1318)
 !1318 = !{null, !1319}
 !1319 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &u64", baseType: !132, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11292,14 +11293,14 @@ attributes #11 = { noreturn nounwind }
 !1322 = !{!1323}
 !1323 = !DITemplateTypeParameter(name: "T", type: !132)
 !1324 = !DILocation(line: 490, column: 1, scope: !1316)
-!1325 = distinct !DISubprogram(name: "swap_nonoverlapping_simple_untyped<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr34swap_nonoverlapping_simple_untyped17hed2629c2161e45feE", scope: !205, file: !1149, line: 956, type: !1164, scopeLine: 956, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1326)
+!1325 = distinct !DISubprogram(name: "swap_nonoverlapping_simple_untyped<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr34swap_nonoverlapping_simple_untyped17h6f8d6edc19e55a5dE", scope: !205, file: !1149, line: 956, type: !1164, scopeLine: 956, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1326)
 !1326 = !{!1327, !1328, !1329, !1330, !1333, !1335, !1337, !1339}
 !1327 = !DILocalVariable(name: "x", arg: 1, scope: !1325, file: !1149, line: 956, type: !272)
 !1328 = !DILocalVariable(name: "y", arg: 2, scope: !1325, file: !1149, line: 956, type: !272)
 !1329 = !DILocalVariable(name: "count", arg: 3, scope: !1325, file: !1149, line: 956, type: !9)
 !1330 = !DILocalVariable(name: "x", scope: !1331, file: !1149, line: 957, type: !1332, align: 8)
 !1331 = distinct !DILexicalBlock(scope: !1325, file: !1149, line: 957, column: 5)
-!1332 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !639, size: 64, align: 64, dwarfAddressSpace: 0)
+!1332 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !649, size: 64, align: 64, dwarfAddressSpace: 0)
 !1333 = !DILocalVariable(name: "y", scope: !1334, file: !1149, line: 958, type: !1332, align: 8)
 !1334 = distinct !DILexicalBlock(scope: !1331, file: !1149, line: 958, column: 5)
 !1335 = !DILocalVariable(name: "i", scope: !1336, file: !1149, line: 959, type: !9, align: 8)
@@ -11313,12 +11314,12 @@ attributes #11 = { noreturn nounwind }
 !1343 = !DILocation(line: 956, column: 77, scope: !1325)
 !1344 = !DILocation(line: 959, column: 9, scope: !1336)
 !1345 = !DILocalVariable(name: "self", arg: 1, scope: !1346, file: !267, line: 57, type: !272)
-!1346 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17h18a04cf15d9a3b36E", scope: !278, file: !267, line: 57, type: !1347, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1350, retainedNodes: !1349)
+!1346 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17h4847b658ae143adaE", scope: !278, file: !267, line: 57, type: !1347, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1350, retainedNodes: !1349)
 !1347 = !DISubroutineType(types: !1348)
 !1348 = !{!1332, !272}
 !1349 = !{!1345}
 !1350 = !{!191, !1351}
-!1351 = !DITemplateTypeParameter(name: "U", type: !639)
+!1351 = !DITemplateTypeParameter(name: "U", type: !649)
 !1352 = !DILocation(line: 57, column: 26, scope: !1346, inlinedAt: !1353)
 !1353 = distinct !DILocation(line: 957, column: 13, scope: !1325)
 !1354 = !DILocation(line: 957, column: 13, scope: !1325)
@@ -11333,7 +11334,7 @@ attributes #11 = { noreturn nounwind }
 !1363 = !DILocation(line: 970, column: 2, scope: !1325)
 !1364 = !DILocation(line: 962, column: 38, scope: !1336)
 !1365 = !DILocalVariable(name: "self", arg: 1, scope: !1366, file: !267, line: 1015, type: !1332)
-!1366 = distinct !DISubprogram(name: "add<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17h4c08626400ba287bE", scope: !278, file: !267, line: 1015, type: !1367, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1369)
+!1366 = distinct !DISubprogram(name: "add<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17h6fe0b16fe491ca1cE", scope: !278, file: !267, line: 1015, type: !1367, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1369)
 !1367 = !DISubroutineType(types: !1368)
 !1368 = !{!1332, !1332, !9}
 !1369 = !{!1365, !1370}
@@ -11342,7 +11343,7 @@ attributes #11 = { noreturn nounwind }
 !1372 = distinct !DILocation(line: 962, column: 32, scope: !1336)
 !1373 = !DILocation(line: 1015, column: 35, scope: !1366, inlinedAt: !1372)
 !1374 = !DILocalVariable(name: "self", arg: 1, scope: !1375, file: !267, line: 472, type: !1332)
-!1375 = distinct !DISubprogram(name: "offset<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17hd2f07a3a088cef77E", scope: !278, file: !267, line: 472, type: !1376, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1378)
+!1375 = distinct !DISubprogram(name: "offset<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17h6c18822b091e61e7E", scope: !278, file: !267, line: 472, type: !1376, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1378)
 !1376 = !DISubroutineType(types: !1377)
 !1377 = !{!1332, !1332, !218}
 !1378 = !{!1374, !1379}
@@ -11365,20 +11366,20 @@ attributes #11 = { noreturn nounwind }
 !1395 = !DILocation(line: 965, column: 13, scope: !1340)
 !1396 = !DILocation(line: 966, column: 9, scope: !1340)
 !1397 = !DILocation(line: 968, column: 9, scope: !1340)
-!1398 = distinct !DISubprogram(name: "read<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr4read17h1eb71283f48defa5E", scope: !205, file: !1149, line: 1137, type: !1399, scopeLine: 1137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1401)
+!1398 = distinct !DISubprogram(name: "read<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr4read17hbb43da3dbb7d0cc0E", scope: !205, file: !1149, line: 1137, type: !1399, scopeLine: 1137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1401)
 !1399 = !DISubroutineType(types: !1400)
-!1400 = !{!639, !638}
+!1400 = !{!649, !648}
 !1401 = !{!1402}
-!1402 = !DILocalVariable(name: "src", arg: 1, scope: !1398, file: !1149, line: 1137, type: !638)
+!1402 = !DILocalVariable(name: "src", arg: 1, scope: !1398, file: !1149, line: 1137, type: !648)
 !1403 = !DILocation(line: 1137, column: 29, scope: !1398)
 !1404 = !DILocation(line: 1166, column: 9, scope: !1398)
 !1405 = !DILocation(line: 1188, column: 13, scope: !1398)
 !1406 = !DILocation(line: 1191, column: 2, scope: !1398)
-!1407 = !DILocalVariable(name: "src", arg: 1, scope: !1408, file: !229, line: 2484, type: !638)
-!1408 = distinct !DISubprogram(name: "runtime<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr4read7runtime17h1ec553cce7cfc6a0E", scope: !1409, file: !229, line: 2484, type: !1410, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1412)
+!1407 = !DILocalVariable(name: "src", arg: 1, scope: !1408, file: !229, line: 2484, type: !648)
+!1408 = distinct !DISubprogram(name: "runtime<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr4read7runtime17h6a16677aec8d9d6fE", scope: !1409, file: !229, line: 2484, type: !1410, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1412)
 !1409 = !DINamespace(name: "read", scope: !205)
 !1410 = !DISubroutineType(types: !1411)
-!1411 = !{null, !638}
+!1411 = !{null, !648}
 !1412 = !{!1407}
 !1413 = !DILocation(line: 2484, column: 39, scope: !1408, inlinedAt: !1414)
 !1414 = distinct !DILocation(line: 1166, column: 9, scope: !1398)
@@ -11386,7 +11387,7 @@ attributes #11 = { noreturn nounwind }
 !1416 = !DILexicalBlockFile(scope: !1408, file: !1149, discriminator: 0)
 !1417 = !DILocation(line: 2485, column: 20, scope: !1408, inlinedAt: !1414)
 !1418 = !DILocation(line: 2487, column: 21, scope: !1408, inlinedAt: !1414)
-!1419 = distinct !DISubprogram(name: "read<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr4read17hcf8a75dda28c31bfE", scope: !205, file: !1149, line: 1137, type: !1420, scopeLine: 1137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1422)
+!1419 = distinct !DISubprogram(name: "read<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr4read17hd2e1ba373cca635eE", scope: !205, file: !1149, line: 1137, type: !1420, scopeLine: 1137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1422)
 !1420 = !DISubroutineType(types: !1421)
 !1421 = !{!13, !208}
 !1422 = !{!1423}
@@ -11396,7 +11397,7 @@ attributes #11 = { noreturn nounwind }
 !1426 = !DILocation(line: 1188, column: 13, scope: !1419)
 !1427 = !DILocation(line: 1191, column: 2, scope: !1419)
 !1428 = !DILocalVariable(name: "src", arg: 1, scope: !1429, file: !229, line: 2484, type: !208)
-!1429 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr4read7runtime17h73bebe9dbbcc7f29E", scope: !1409, file: !229, line: 2484, type: !1430, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1432)
+!1429 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr4read7runtime17hb6c3804ed21ff3bfE", scope: !1409, file: !229, line: 2484, type: !1430, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1432)
 !1430 = !DISubroutineType(types: !1431)
 !1431 = !{null, !208}
 !1432 = !{!1428}
@@ -11406,82 +11407,82 @@ attributes #11 = { noreturn nounwind }
 !1436 = !DILexicalBlockFile(scope: !1429, file: !1149, discriminator: 0)
 !1437 = !DILocation(line: 2485, column: 20, scope: !1429, inlinedAt: !1434)
 !1438 = !DILocation(line: 2487, column: 21, scope: !1429, inlinedAt: !1434)
-!1439 = distinct !DISubprogram(name: "swap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr4swap17he01192a45aa21ed8E", scope: !205, file: !1149, line: 841, type: !1440, scopeLine: 841, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1442)
+!1439 = distinct !DISubprogram(name: "swap<usize>", linkageName: "_ZN4core3ptr4swap17h0e2ea319ec4718d9E", scope: !205, file: !1149, line: 841, type: !1440, scopeLine: 841, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !1442)
 !1440 = !DISubroutineType(types: !1441)
-!1441 = !{null, !272, !272}
+!1441 = !{null, !612, !612}
 !1442 = !{!1443, !1444, !1445}
-!1443 = !DILocalVariable(name: "x", arg: 1, scope: !1439, file: !1149, line: 841, type: !272)
-!1444 = !DILocalVariable(name: "y", arg: 2, scope: !1439, file: !1149, line: 841, type: !272)
-!1445 = !DILocalVariable(name: "tmp", scope: !1446, file: !1149, line: 844, type: !639, align: 8)
+!1443 = !DILocalVariable(name: "x", arg: 1, scope: !1439, file: !1149, line: 841, type: !612)
+!1444 = !DILocalVariable(name: "y", arg: 2, scope: !1439, file: !1149, line: 841, type: !612)
+!1445 = !DILocalVariable(name: "tmp", scope: !1446, file: !1149, line: 844, type: !1447, align: 8)
 !1446 = distinct !DILexicalBlock(scope: !1439, file: !1149, line: 844, column: 5)
-!1447 = !DILocation(line: 841, column: 29, scope: !1439)
-!1448 = !DILocation(line: 841, column: 40, scope: !1439)
-!1449 = !DILocation(line: 844, column: 9, scope: !1446)
-!1450 = !DILocalVariable(name: "self", arg: 1, scope: !1451, file: !1452, line: 567, type: !957)
-!1451 = distinct !DISubprogram(name: "as_mut_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$10as_mut_ptr17h0f6a742de80bd477E", scope: !639, file: !1452, line: 567, type: !1453, scopeLine: 567, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1455)
-!1452 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/mem/maybe_uninit.rs", directory: "", checksumkind: CSK_MD5, checksum: "f766c2fae7f7dc5e1122680af4641eb4")
-!1453 = !DISubroutineType(types: !1454)
-!1454 = !{!272, !957}
-!1455 = !{!1450}
-!1456 = !DILocation(line: 567, column: 29, scope: !1451, inlinedAt: !1457)
-!1457 = distinct !DILocation(line: 852, column: 32, scope: !1446)
-!1458 = !DILocation(line: 852, column: 9, scope: !1446)
-!1459 = !DILocation(line: 853, column: 9, scope: !1446)
-!1460 = !DILocalVariable(name: "self", arg: 1, scope: !1461, file: !1452, line: 528, type: !1464)
-!1461 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6as_ptr17hd68dba26a6afeb79E", scope: !639, file: !1452, line: 528, type: !1462, scopeLine: 528, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1465)
-!1462 = !DISubroutineType(types: !1463)
-!1463 = !{!208, !1464}
-!1464 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !639, size: 64, align: 64, dwarfAddressSpace: 0)
-!1465 = !{!1460}
-!1466 = !DILocation(line: 528, column: 25, scope: !1461, inlinedAt: !1467)
-!1467 = distinct !DILocation(line: 854, column: 29, scope: !1446)
-!1468 = !DILocation(line: 854, column: 9, scope: !1446)
-!1469 = !DILocation(line: 856, column: 2, scope: !1439)
-!1470 = distinct !DISubprogram(name: "swap<usize>", linkageName: "_ZN4core3ptr4swap17he6717c36f4a67645E", scope: !205, file: !1149, line: 841, type: !1471, scopeLine: 841, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !1473)
-!1471 = !DISubroutineType(types: !1472)
-!1472 = !{null, !612, !612}
-!1473 = !{!1474, !1475, !1476}
-!1474 = !DILocalVariable(name: "x", arg: 1, scope: !1470, file: !1149, line: 841, type: !612)
-!1475 = !DILocalVariable(name: "y", arg: 2, scope: !1470, file: !1149, line: 841, type: !612)
-!1476 = !DILocalVariable(name: "tmp", scope: !1477, file: !1149, line: 844, type: !1478, align: 8)
-!1477 = distinct !DILexicalBlock(scope: !1470, file: !1149, line: 844, column: 5)
-!1478 = !DICompositeType(tag: DW_TAG_union_type, name: "MaybeUninit<usize>", scope: !640, file: !2, size: 64, align: 64, elements: !1479, templateParams: !485, identifier: "2e6b7498058d8d539fd4b9e5546874cf")
-!1479 = !{!1480, !1481}
-!1480 = !DIDerivedType(tag: DW_TAG_member, name: "uninit", scope: !1478, file: !2, baseType: !7, align: 8)
-!1481 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !1478, file: !2, baseType: !1482, size: 64, align: 64)
-!1482 = !DICompositeType(tag: DW_TAG_structure_type, name: "ManuallyDrop<usize>", scope: !646, file: !2, size: 64, align: 64, elements: !1483, templateParams: !485, identifier: "f4d3ae02eff33f7bffeab366459f271a")
-!1483 = !{!1484}
-!1484 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !1482, file: !2, baseType: !9, size: 64, align: 64)
-!1485 = !DILocation(line: 841, column: 29, scope: !1470)
-!1486 = !DILocation(line: 841, column: 40, scope: !1470)
-!1487 = !DILocation(line: 844, column: 9, scope: !1477)
-!1488 = !DILocation(line: 315, column: 6, scope: !1489, inlinedAt: !1492)
-!1489 = distinct !DISubprogram(name: "uninit<usize>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6uninit17hdd64dce8c7bdc26fE", scope: !1478, file: !1452, line: 313, type: !1490, scopeLine: 313, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !24)
-!1490 = !DISubroutineType(types: !1491)
-!1491 = !{!1478}
-!1492 = distinct !DILocation(line: 844, column: 19, scope: !1470)
-!1493 = !DILocation(line: 844, column: 19, scope: !1470)
-!1494 = !DILocalVariable(name: "self", arg: 1, scope: !1495, file: !1452, line: 567, type: !1498)
-!1495 = distinct !DISubprogram(name: "as_mut_ptr<usize>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$10as_mut_ptr17ha7b6f052e52172e0E", scope: !1478, file: !1452, line: 567, type: !1496, scopeLine: 567, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !1499)
-!1496 = !DISubroutineType(types: !1497)
-!1497 = !{!612, !1498}
-!1498 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::mem::maybe_uninit::MaybeUninit<usize>", baseType: !1478, size: 64, align: 64, dwarfAddressSpace: 0)
-!1499 = !{!1494}
-!1500 = !DILocation(line: 567, column: 29, scope: !1495, inlinedAt: !1501)
-!1501 = distinct !DILocation(line: 852, column: 32, scope: !1477)
-!1502 = !DILocation(line: 852, column: 9, scope: !1477)
-!1503 = !DILocation(line: 853, column: 9, scope: !1477)
-!1504 = !DILocalVariable(name: "self", arg: 1, scope: !1505, file: !1452, line: 528, type: !1508)
-!1505 = distinct !DISubprogram(name: "as_ptr<usize>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6as_ptr17h792b102cf279441fE", scope: !1478, file: !1452, line: 528, type: !1506, scopeLine: 528, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !1509)
+!1447 = !DICompositeType(tag: DW_TAG_union_type, name: "MaybeUninit<usize>", scope: !650, file: !2, size: 64, align: 64, elements: !1448, templateParams: !485, identifier: "d5cb736fb3e82ee0e1961c16c1a6ffc6")
+!1448 = !{!1449, !1450}
+!1449 = !DIDerivedType(tag: DW_TAG_member, name: "uninit", scope: !1447, file: !2, baseType: !7, align: 8)
+!1450 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !1447, file: !2, baseType: !1451, size: 64, align: 64)
+!1451 = !DICompositeType(tag: DW_TAG_structure_type, name: "ManuallyDrop<usize>", scope: !656, file: !2, size: 64, align: 64, elements: !1452, templateParams: !485, identifier: "9a570d3d9d4b87ee14f15bf86e64b8ae")
+!1452 = !{!1453}
+!1453 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !1451, file: !2, baseType: !9, size: 64, align: 64)
+!1454 = !DILocation(line: 841, column: 29, scope: !1439)
+!1455 = !DILocation(line: 841, column: 40, scope: !1439)
+!1456 = !DILocation(line: 844, column: 9, scope: !1446)
+!1457 = !DILocation(line: 315, column: 6, scope: !1458, inlinedAt: !1462)
+!1458 = distinct !DISubprogram(name: "uninit<usize>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6uninit17h38160f1c83337e6bE", scope: !1447, file: !1459, line: 313, type: !1460, scopeLine: 313, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !24)
+!1459 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/mem/maybe_uninit.rs", directory: "", checksumkind: CSK_MD5, checksum: "f766c2fae7f7dc5e1122680af4641eb4")
+!1460 = !DISubroutineType(types: !1461)
+!1461 = !{!1447}
+!1462 = distinct !DILocation(line: 844, column: 19, scope: !1439)
+!1463 = !DILocation(line: 844, column: 19, scope: !1439)
+!1464 = !DILocalVariable(name: "self", arg: 1, scope: !1465, file: !1459, line: 567, type: !1468)
+!1465 = distinct !DISubprogram(name: "as_mut_ptr<usize>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$10as_mut_ptr17h5224d08d40d37d59E", scope: !1447, file: !1459, line: 567, type: !1466, scopeLine: 567, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !1469)
+!1466 = !DISubroutineType(types: !1467)
+!1467 = !{!612, !1468}
+!1468 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::mem::maybe_uninit::MaybeUninit<usize>", baseType: !1447, size: 64, align: 64, dwarfAddressSpace: 0)
+!1469 = !{!1464}
+!1470 = !DILocation(line: 567, column: 29, scope: !1465, inlinedAt: !1471)
+!1471 = distinct !DILocation(line: 852, column: 32, scope: !1446)
+!1472 = !DILocation(line: 852, column: 9, scope: !1446)
+!1473 = !DILocation(line: 853, column: 9, scope: !1446)
+!1474 = !DILocalVariable(name: "self", arg: 1, scope: !1475, file: !1459, line: 528, type: !1478)
+!1475 = distinct !DISubprogram(name: "as_ptr<usize>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6as_ptr17hdc63f6f6be831348E", scope: !1447, file: !1459, line: 528, type: !1476, scopeLine: 528, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !485, retainedNodes: !1479)
+!1476 = !DISubroutineType(types: !1477)
+!1477 = !{!611, !1478}
+!1478 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::mem::maybe_uninit::MaybeUninit<usize>", baseType: !1447, size: 64, align: 64, dwarfAddressSpace: 0)
+!1479 = !{!1474}
+!1480 = !DILocation(line: 528, column: 25, scope: !1475, inlinedAt: !1481)
+!1481 = distinct !DILocation(line: 854, column: 29, scope: !1446)
+!1482 = !DILocation(line: 854, column: 9, scope: !1446)
+!1483 = !DILocation(line: 856, column: 2, scope: !1439)
+!1484 = distinct !DISubprogram(name: "swap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr4swap17h773c6fcf72392d61E", scope: !205, file: !1149, line: 841, type: !1485, scopeLine: 841, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1487)
+!1485 = !DISubroutineType(types: !1486)
+!1486 = !{null, !272, !272}
+!1487 = !{!1488, !1489, !1490}
+!1488 = !DILocalVariable(name: "x", arg: 1, scope: !1484, file: !1149, line: 841, type: !272)
+!1489 = !DILocalVariable(name: "y", arg: 2, scope: !1484, file: !1149, line: 841, type: !272)
+!1490 = !DILocalVariable(name: "tmp", scope: !1491, file: !1149, line: 844, type: !649, align: 8)
+!1491 = distinct !DILexicalBlock(scope: !1484, file: !1149, line: 844, column: 5)
+!1492 = !DILocation(line: 841, column: 29, scope: !1484)
+!1493 = !DILocation(line: 841, column: 40, scope: !1484)
+!1494 = !DILocation(line: 844, column: 9, scope: !1491)
+!1495 = !DILocalVariable(name: "self", arg: 1, scope: !1496, file: !1459, line: 567, type: !957)
+!1496 = distinct !DISubprogram(name: "as_mut_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$10as_mut_ptr17h72f150538160e0aeE", scope: !649, file: !1459, line: 567, type: !1497, scopeLine: 567, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1499)
+!1497 = !DISubroutineType(types: !1498)
+!1498 = !{!272, !957}
+!1499 = !{!1495}
+!1500 = !DILocation(line: 567, column: 29, scope: !1496, inlinedAt: !1501)
+!1501 = distinct !DILocation(line: 852, column: 32, scope: !1491)
+!1502 = !DILocation(line: 852, column: 9, scope: !1491)
+!1503 = !DILocation(line: 853, column: 9, scope: !1491)
+!1504 = !DILocalVariable(name: "self", arg: 1, scope: !1505, file: !1459, line: 528, type: !1508)
+!1505 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6as_ptr17hdf8f9e8175e09c43E", scope: !649, file: !1459, line: 528, type: !1506, scopeLine: 528, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1509)
 !1506 = !DISubroutineType(types: !1507)
-!1507 = !{!611, !1508}
-!1508 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::mem::maybe_uninit::MaybeUninit<usize>", baseType: !1478, size: 64, align: 64, dwarfAddressSpace: 0)
+!1507 = !{!208, !1508}
+!1508 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !649, size: 64, align: 64, dwarfAddressSpace: 0)
 !1509 = !{!1504}
 !1510 = !DILocation(line: 528, column: 25, scope: !1505, inlinedAt: !1511)
-!1511 = distinct !DILocation(line: 854, column: 29, scope: !1477)
-!1512 = !DILocation(line: 854, column: 9, scope: !1477)
-!1513 = !DILocation(line: 856, column: 2, scope: !1470)
-!1514 = distinct !DISubprogram(name: "drop_in_place<bootloader::bootinfo::TlsTemplate>", linkageName: "_ZN4core3ptr54drop_in_place$LT$bootloader..bootinfo..TlsTemplate$GT$17hd451f3452808e2d0E", scope: !205, file: !1149, line: 490, type: !1515, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1520, retainedNodes: !1518)
+!1511 = distinct !DILocation(line: 854, column: 29, scope: !1491)
+!1512 = !DILocation(line: 854, column: 9, scope: !1491)
+!1513 = !DILocation(line: 856, column: 2, scope: !1484)
+!1514 = distinct !DISubprogram(name: "drop_in_place<bootloader::bootinfo::TlsTemplate>", linkageName: "_ZN4core3ptr54drop_in_place$LT$bootloader..bootinfo..TlsTemplate$GT$17h89f6b485ba3376efE", scope: !205, file: !1149, line: 490, type: !1515, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1520, retainedNodes: !1518)
 !1515 = !DISubroutineType(types: !1516)
 !1516 = !{null, !1517}
 !1517 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut bootloader::bootinfo::TlsTemplate", baseType: !109, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11490,7 +11491,7 @@ attributes #11 = { noreturn nounwind }
 !1520 = !{!1521}
 !1521 = !DITemplateTypeParameter(name: "T", type: !109)
 !1522 = !DILocation(line: 490, column: 1, scope: !1514)
-!1523 = distinct !DISubprogram(name: "write<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr5write17h70546c85884fe256E", scope: !205, file: !1149, line: 1369, type: !1524, scopeLine: 1369, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1526)
+!1523 = distinct !DISubprogram(name: "write<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr5write17h43a35b295addb75dE", scope: !205, file: !1149, line: 1369, type: !1524, scopeLine: 1369, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1526)
 !1524 = !DISubroutineType(types: !1525)
 !1525 = !{null, !272, !13}
 !1526 = !{!1527, !1528}
@@ -11502,7 +11503,7 @@ attributes #11 = { noreturn nounwind }
 !1532 = !DILocation(line: 1386, column: 9, scope: !1523)
 !1533 = !DILocation(line: 1389, column: 2, scope: !1523)
 !1534 = !DILocalVariable(name: "dst", arg: 1, scope: !1535, file: !229, line: 2484, type: !272)
-!1535 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr5write7runtime17h8a96a1a81401513eE", scope: !1536, file: !229, line: 2484, type: !1537, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1539)
+!1535 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr5write7runtime17hf68f63d16a6241adE", scope: !1536, file: !229, line: 2484, type: !1537, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1539)
 !1536 = !DINamespace(name: "write", scope: !205)
 !1537 = !DISubroutineType(types: !1538)
 !1538 = !{null, !272}
@@ -11513,19 +11514,19 @@ attributes #11 = { noreturn nounwind }
 !1543 = !DILexicalBlockFile(scope: !1535, file: !1149, discriminator: 0)
 !1544 = !DILocation(line: 2485, column: 20, scope: !1535, inlinedAt: !1541)
 !1545 = !DILocation(line: 2487, column: 21, scope: !1535, inlinedAt: !1541)
-!1546 = distinct !DISubprogram(name: "write<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr5write17h994fca2b514745e7E", scope: !205, file: !1149, line: 1369, type: !1547, scopeLine: 1369, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1549)
+!1546 = distinct !DISubprogram(name: "write<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr5write17hfb75c4d0a63c148aE", scope: !205, file: !1149, line: 1369, type: !1547, scopeLine: 1369, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1549)
 !1547 = !DISubroutineType(types: !1548)
-!1548 = !{null, !1332, !639}
+!1548 = !{null, !1332, !649}
 !1549 = !{!1550, !1551}
 !1550 = !DILocalVariable(name: "dst", arg: 1, scope: !1546, file: !1149, line: 1369, type: !1332)
-!1551 = !DILocalVariable(name: "src", arg: 2, scope: !1546, file: !1149, line: 1369, type: !639)
+!1551 = !DILocalVariable(name: "src", arg: 2, scope: !1546, file: !1149, line: 1369, type: !649)
 !1552 = !DILocation(line: 1369, column: 30, scope: !1546)
 !1553 = !DILocation(line: 1369, column: 43, scope: !1546)
 !1554 = !DILocation(line: 1382, column: 9, scope: !1546)
 !1555 = !DILocation(line: 1386, column: 9, scope: !1546)
 !1556 = !DILocation(line: 1389, column: 2, scope: !1546)
 !1557 = !DILocalVariable(name: "dst", arg: 1, scope: !1558, file: !229, line: 2484, type: !1332)
-!1558 = distinct !DISubprogram(name: "runtime<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr5write7runtime17hb326500a9accb466E", scope: !1536, file: !229, line: 2484, type: !1559, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1561)
+!1558 = distinct !DISubprogram(name: "runtime<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr5write7runtime17hda75868777bc587cE", scope: !1536, file: !229, line: 2484, type: !1559, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1561)
 !1559 = !DISubroutineType(types: !1560)
 !1560 = !{null, !1332}
 !1561 = !{!1557}
@@ -11535,7 +11536,7 @@ attributes #11 = { noreturn nounwind }
 !1565 = !DILexicalBlockFile(scope: !1558, file: !1149, discriminator: 0)
 !1566 = !DILocation(line: 2485, column: 20, scope: !1558, inlinedAt: !1563)
 !1567 = !DILocation(line: 2487, column: 21, scope: !1558, inlinedAt: !1563)
-!1568 = distinct !DISubprogram(name: "drop_in_place<bootloader::bootinfo::memory_map::MemoryMap>", linkageName: "_ZN4core3ptr64drop_in_place$LT$bootloader..bootinfo..memory_map..MemoryMap$GT$17hd2d4cd0598932281E", scope: !205, file: !1149, line: 490, type: !1569, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1574, retainedNodes: !1572)
+!1568 = distinct !DISubprogram(name: "drop_in_place<bootloader::bootinfo::memory_map::MemoryMap>", linkageName: "_ZN4core3ptr64drop_in_place$LT$bootloader..bootinfo..memory_map..MemoryMap$GT$17hab76927217d1a271E", scope: !205, file: !1149, line: 490, type: !1569, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1574, retainedNodes: !1572)
 !1569 = !DISubroutineType(types: !1570)
 !1570 = !{null, !1571}
 !1571 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut bootloader::bootinfo::memory_map::MemoryMap", baseType: !94, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11544,7 +11545,7 @@ attributes #11 = { noreturn nounwind }
 !1574 = !{!1575}
 !1575 = !DITemplateTypeParameter(name: "T", type: !94)
 !1576 = !DILocation(line: 490, column: 1, scope: !1568)
-!1577 = distinct !DISubprogram(name: "drop_in_place<bootloader::bootinfo::memory_map::FrameRange>", linkageName: "_ZN4core3ptr65drop_in_place$LT$bootloader..bootinfo..memory_map..FrameRange$GT$17h940e07a5cfd69181E", scope: !205, file: !1149, line: 490, type: !1578, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1583, retainedNodes: !1581)
+!1577 = distinct !DISubprogram(name: "drop_in_place<bootloader::bootinfo::memory_map::FrameRange>", linkageName: "_ZN4core3ptr65drop_in_place$LT$bootloader..bootinfo..memory_map..FrameRange$GT$17h65f52f7c0d10a5feE", scope: !205, file: !1149, line: 490, type: !1578, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1583, retainedNodes: !1581)
 !1578 = !DISubroutineType(types: !1579)
 !1579 = !{null, !1580}
 !1580 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut bootloader::bootinfo::memory_map::FrameRange", baseType: !19, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11553,14 +11554,14 @@ attributes #11 = { noreturn nounwind }
 !1583 = !{!1584}
 !1584 = !DITemplateTypeParameter(name: "T", type: !19)
 !1585 = !DILocation(line: 490, column: 1, scope: !1577)
-!1586 = distinct !DISubprogram(name: "drop_in_place<&bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr71drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegion$GT$17h3e7bbd2e13e5f413E", scope: !205, file: !1149, line: 490, type: !1587, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !827, retainedNodes: !1590)
+!1586 = distinct !DISubprogram(name: "drop_in_place<&bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr71drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegion$GT$17h765a6f3749029cc9E", scope: !205, file: !1149, line: 490, type: !1587, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !827, retainedNodes: !1590)
 !1587 = !DISubroutineType(types: !1588)
 !1588 = !{null, !1589}
 !1589 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &bootloader::bootinfo::memory_map::MemoryRegion", baseType: !12, size: 64, align: 64, dwarfAddressSpace: 0)
 !1590 = !{!1591}
 !1591 = !DILocalVariable(arg: 1, scope: !1586, file: !1149, line: 490, type: !1589)
 !1592 = !DILocation(line: 490, column: 1, scope: !1586)
-!1593 = distinct !DISubprogram(name: "drop_in_place<&bootloader::bootinfo::memory_map::MemoryRegionType>", linkageName: "_ZN4core3ptr75drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegionType$GT$17hdef642da1c075729E", scope: !205, file: !1149, line: 490, type: !1594, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1599, retainedNodes: !1597)
+!1593 = distinct !DISubprogram(name: "drop_in_place<&bootloader::bootinfo::memory_map::MemoryRegionType>", linkageName: "_ZN4core3ptr75drop_in_place$LT$$RF$bootloader..bootinfo..memory_map..MemoryRegionType$GT$17h94a111edabab3532E", scope: !205, file: !1149, line: 490, type: !1594, scopeLine: 490, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1599, retainedNodes: !1597)
 !1594 = !DISubroutineType(types: !1595)
 !1595 = !{null, !1596}
 !1596 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &bootloader::bootinfo::memory_map::MemoryRegionType", baseType: !60, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11569,7 +11570,7 @@ attributes #11 = { noreturn nounwind }
 !1599 = !{!1600}
 !1600 = !DITemplateTypeParameter(name: "T", type: !60)
 !1601 = !DILocation(line: 490, column: 1, scope: !1593)
-!1602 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null12runtime_impl17h648679ac73433738E", scope: !1603, file: !267, line: 35, type: !1604, scopeLine: 35, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1606)
+!1602 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null12runtime_impl17h44fc8a2d01881e62E", scope: !1603, file: !267, line: 35, type: !1604, scopeLine: 35, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1606)
 !1603 = !DINamespace(name: "is_null", scope: !278)
 !1604 = !DISubroutineType(types: !1605)
 !1605 = !{!421, !1178}
@@ -11577,7 +11578,7 @@ attributes #11 = { noreturn nounwind }
 !1607 = !DILocalVariable(name: "ptr", arg: 1, scope: !1602, file: !267, line: 35, type: !1178)
 !1608 = !DILocation(line: 35, column: 25, scope: !1602)
 !1609 = !DILocalVariable(name: "self", arg: 1, scope: !1610, file: !267, line: 209, type: !1178)
-!1610 = distinct !DISubprogram(name: "addr<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4addr17h842c6dbdfb9e5b1dE", scope: !278, file: !267, line: 209, type: !1611, scopeLine: 209, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !1613)
+!1610 = distinct !DISubprogram(name: "addr<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4addr17h6da8ce4032f8a308E", scope: !278, file: !267, line: 209, type: !1611, scopeLine: 209, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !1613)
 !1611 = !DISubroutineType(types: !1612)
 !1612 = !{!9, !1178}
 !1613 = !{!1609}
@@ -11586,7 +11587,7 @@ attributes #11 = { noreturn nounwind }
 !1616 = !DILocation(line: 209, column: 17, scope: !1610, inlinedAt: !1617)
 !1617 = distinct !DILocation(line: 36, column: 13, scope: !1602)
 !1618 = !DILocalVariable(name: "self", arg: 1, scope: !1619, file: !267, line: 57, type: !1178)
-!1619 = distinct !DISubprogram(name: "cast<u8, ()>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17hea02b1f7b95342e2E", scope: !278, file: !267, line: 57, type: !1620, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1623, retainedNodes: !1622)
+!1619 = distinct !DISubprogram(name: "cast<u8, ()>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4cast17hfd8f26c2f42b29cfE", scope: !278, file: !267, line: 57, type: !1620, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1623, retainedNodes: !1622)
 !1620 = !DISubroutineType(types: !1621)
 !1621 = !{!1292, !1178}
 !1622 = !{!1618}
@@ -11596,7 +11597,7 @@ attributes #11 = { noreturn nounwind }
 !1626 = !DILocation(line: 213, column: 18, scope: !1610, inlinedAt: !1617)
 !1627 = !DILocation(line: 36, column: 13, scope: !1602)
 !1628 = !DILocation(line: 37, column: 10, scope: !1602)
-!1629 = distinct !DISubprogram(name: "is_null<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17h86ccb2481b2d062dE", scope: !278, file: !267, line: 33, type: !1630, scopeLine: 33, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1632)
+!1629 = distinct !DISubprogram(name: "is_null<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$7is_null17hb672574d80ca0956E", scope: !278, file: !267, line: 33, type: !1630, scopeLine: 33, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1632)
 !1630 = !DISubroutineType(types: !1631)
 !1631 = !{!421, !272}
 !1632 = !{!1633}
@@ -11605,31 +11606,31 @@ attributes #11 = { noreturn nounwind }
 !1635 = !DILocation(line: 50, column: 36, scope: !1629)
 !1636 = !DILocation(line: 50, column: 18, scope: !1629)
 !1637 = !DILocation(line: 51, column: 6, scope: !1629)
-!1638 = distinct !DISubprogram(name: "from_raw_parts<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8metadata14from_raw_parts17h41595670b0a6873cE", scope: !1640, file: !1639, line: 111, type: !1641, scopeLine: 111, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1643)
+!1638 = distinct !DISubprogram(name: "from_raw_parts<[bootloader::bootinfo::memory_map::MemoryRegion]>", linkageName: "_ZN4core3ptr8metadata14from_raw_parts17h10442d77236c3ed1E", scope: !1640, file: !1639, line: 111, type: !1641, scopeLine: 111, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1643)
 !1639 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/metadata.rs", directory: "", checksumkind: CSK_MD5, checksum: "1e1a461bde75de7a93357ca7e628f393")
 !1640 = !DINamespace(name: "metadata", scope: !205)
 !1641 = !DISubroutineType(types: !1642)
-!1642 = !{!208, !6, !7}
+!1642 = !{!170, !6, !9}
 !1643 = !{!1644, !1645}
 !1644 = !DILocalVariable(name: "data_address", arg: 1, scope: !1638, file: !1639, line: 112, type: !6)
-!1645 = !DILocalVariable(name: "metadata", arg: 2, scope: !1638, file: !1639, line: 113, type: !7)
+!1645 = !DILocalVariable(name: "metadata", arg: 2, scope: !1638, file: !1639, line: 113, type: !9)
 !1646 = !DILocation(line: 112, column: 5, scope: !1638)
 !1647 = !DILocation(line: 113, column: 5, scope: !1638)
 !1648 = !DILocation(line: 118, column: 36, scope: !1638)
 !1649 = !DILocation(line: 118, column: 14, scope: !1638)
 !1650 = !DILocation(line: 119, column: 2, scope: !1638)
-!1651 = distinct !DISubprogram(name: "from_raw_parts<[bootloader::bootinfo::memory_map::MemoryRegion]>", linkageName: "_ZN4core3ptr8metadata14from_raw_parts17h99df9cb90eb85491E", scope: !1640, file: !1639, line: 111, type: !1652, scopeLine: 111, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1654)
+!1651 = distinct !DISubprogram(name: "from_raw_parts<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8metadata14from_raw_parts17h796581e358ab9c69E", scope: !1640, file: !1639, line: 111, type: !1652, scopeLine: 111, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1654)
 !1652 = !DISubroutineType(types: !1653)
-!1653 = !{!170, !6, !9}
+!1653 = !{!208, !6, !7}
 !1654 = !{!1655, !1656}
 !1655 = !DILocalVariable(name: "data_address", arg: 1, scope: !1651, file: !1639, line: 112, type: !6)
-!1656 = !DILocalVariable(name: "metadata", arg: 2, scope: !1651, file: !1639, line: 113, type: !9)
+!1656 = !DILocalVariable(name: "metadata", arg: 2, scope: !1651, file: !1639, line: 113, type: !7)
 !1657 = !DILocation(line: 112, column: 5, scope: !1651)
 !1658 = !DILocation(line: 113, column: 5, scope: !1651)
 !1659 = !DILocation(line: 118, column: 36, scope: !1651)
 !1660 = !DILocation(line: 118, column: 14, scope: !1651)
 !1661 = !DILocation(line: 119, column: 2, scope: !1651)
-!1662 = distinct !DISubprogram(name: "from_raw_parts_mut<[bootloader::bootinfo::memory_map::MemoryRegion]>", linkageName: "_ZN4core3ptr8metadata18from_raw_parts_mut17h6749e544aeec16a3E", scope: !1640, file: !1639, line: 128, type: !1663, scopeLine: 128, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1665)
+!1662 = distinct !DISubprogram(name: "from_raw_parts_mut<[bootloader::bootinfo::memory_map::MemoryRegion]>", linkageName: "_ZN4core3ptr8metadata18from_raw_parts_mut17h6fde41364fd87138E", scope: !1640, file: !1639, line: 128, type: !1663, scopeLine: 128, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1665)
 !1663 = !DISubroutineType(types: !1664)
 !1664 = !{!247, !1292, !9}
 !1665 = !{!1666, !1667}
@@ -11640,13 +11641,13 @@ attributes #11 = { noreturn nounwind }
 !1670 = !DILocation(line: 135, column: 36, scope: !1662)
 !1671 = !DILocation(line: 135, column: 14, scope: !1662)
 !1672 = !DILocation(line: 136, column: 2, scope: !1662)
-!1673 = distinct !DISubprogram(name: "metadata<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8metadata8metadata17h5619d0fa90eff891E", scope: !1640, file: !1639, line: 94, type: !1430, scopeLine: 94, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1674)
+!1673 = distinct !DISubprogram(name: "metadata<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8metadata8metadata17h10d4367dd2a80f38E", scope: !1640, file: !1639, line: 94, type: !1430, scopeLine: 94, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1674)
 !1674 = !{!1675}
 !1675 = !DILocalVariable(name: "ptr", arg: 1, scope: !1673, file: !1639, line: 94, type: !208)
 !1676 = !DILocation(line: 94, column: 34, scope: !1673)
 !1677 = !DILocation(line: 98, column: 14, scope: !1673)
 !1678 = !DILocation(line: 99, column: 2, scope: !1673)
-!1679 = distinct !DISubprogram(name: "metadata<[bootloader::bootinfo::memory_map::MemoryRegion]>", linkageName: "_ZN4core3ptr8metadata8metadata17hb74b1e80e659b76aE", scope: !1640, file: !1639, line: 94, type: !1680, scopeLine: 94, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1682)
+!1679 = distinct !DISubprogram(name: "metadata<[bootloader::bootinfo::memory_map::MemoryRegion]>", linkageName: "_ZN4core3ptr8metadata8metadata17h65a66bab20766f97E", scope: !1640, file: !1639, line: 94, type: !1680, scopeLine: 94, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1682)
 !1680 = !DISubroutineType(types: !1681)
 !1681 = !{!9, !170}
 !1682 = !{!1683}
@@ -11654,8 +11655,8 @@ attributes #11 = { noreturn nounwind }
 !1684 = !DILocation(line: 94, column: 34, scope: !1679)
 !1685 = !DILocation(line: 98, column: 14, scope: !1679)
 !1686 = !DILocation(line: 99, column: 2, scope: !1679)
-!1687 = distinct !DISubprogram(name: "new_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17hd63d665a11e5e7feE", scope: !819, file: !1688, line: 197, type: !1689, scopeLine: 197, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1691)
-!1688 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs", directory: "", checksumkind: CSK_MD5, checksum: "e2305a7f679119ef3d1d85e2bcd47c5d")
+!1687 = distinct !DISubprogram(name: "new_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked17h3e41b89f8c82f0c2E", scope: !819, file: !1688, line: 197, type: !1689, scopeLine: 197, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1691)
+!1688 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs", directory: "", checksumkind: CSK_MD5, checksum: "0934e1faf1d0a2260f9da293f7ce200e")
 !1689 = !DISubroutineType(types: !1690)
 !1690 = !{!819, !272}
 !1691 = !{!1692}
@@ -11665,7 +11666,7 @@ attributes #11 = { noreturn nounwind }
 !1695 = !DILocation(line: 201, column: 13, scope: !1687)
 !1696 = !DILocation(line: 203, column: 6, scope: !1687)
 !1697 = !DILocalVariable(name: "ptr", arg: 1, scope: !1698, file: !229, line: 2484, type: !272)
-!1698 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h614ad1635b32869cE", scope: !1699, file: !229, line: 2484, type: !1537, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1701)
+!1698 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8non_null16NonNull$LT$T$GT$13new_unchecked7runtime17h9adb18d699a74379E", scope: !1699, file: !229, line: 2484, type: !1537, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1701)
 !1699 = !DINamespace(name: "new_unchecked", scope: !1700)
 !1700 = !DINamespace(name: "{impl#3}", scope: !820)
 !1701 = !{!1697}
@@ -11676,19 +11677,19 @@ attributes #11 = { noreturn nounwind }
 !1706 = !DILocation(line: 200, column: 133, scope: !1705, inlinedAt: !1703)
 !1707 = !DILocation(line: 2485, column: 20, scope: !1698, inlinedAt: !1703)
 !1708 = !DILocation(line: 2487, column: 21, scope: !1698, inlinedAt: !1703)
-!1709 = distinct !DISubprogram(name: "is_aligned<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h8ef422c6d56e179dE", scope: !203, file: !202, line: 1448, type: !636, scopeLine: 1448, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1710)
+!1709 = distinct !DISubprogram(name: "is_aligned<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17hccadd5f30647ea68E", scope: !203, file: !202, line: 1448, type: !646, scopeLine: 1448, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1710)
 !1710 = !{!1711}
-!1711 = !DILocalVariable(name: "self", arg: 1, scope: !1709, file: !202, line: 1448, type: !638)
+!1711 = !DILocalVariable(name: "self", arg: 1, scope: !1709, file: !202, line: 1448, type: !648)
 !1712 = !DILocation(line: 1448, column: 29, scope: !1709)
 !1713 = !DILocation(line: 1452, column: 9, scope: !1709)
 !1714 = !DILocation(line: 1453, column: 6, scope: !1709)
-!1715 = distinct !DISubprogram(name: "is_aligned<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17hdce19ac4ca451d04E", scope: !203, file: !202, line: 1448, type: !659, scopeLine: 1448, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1716)
+!1715 = distinct !DISubprogram(name: "is_aligned<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17he71e0796d8ebfcb4E", scope: !203, file: !202, line: 1448, type: !636, scopeLine: 1448, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1716)
 !1716 = !{!1717}
 !1717 = !DILocalVariable(name: "self", arg: 1, scope: !1715, file: !202, line: 1448, type: !208)
 !1718 = !DILocation(line: 1448, column: 29, scope: !1715)
 !1719 = !DILocation(line: 1452, column: 9, scope: !1715)
 !1720 = !DILocation(line: 1453, column: 6, scope: !1715)
-!1721 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17hcace55ccebbd2f00E", scope: !1722, file: !202, line: 1570, type: !1723, scopeLine: 1570, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1725)
+!1721 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17h507731741d992a1aE", scope: !1722, file: !202, line: 1570, type: !1723, scopeLine: 1570, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1725)
 !1722 = !DINamespace(name: "is_aligned_to", scope: !203)
 !1723 = !DISubroutineType(types: !1724)
 !1724 = !{!421, !6, !9}
@@ -11698,7 +11699,7 @@ attributes #11 = { noreturn nounwind }
 !1728 = !DILocation(line: 1570, column: 25, scope: !1721)
 !1729 = !DILocation(line: 1570, column: 41, scope: !1721)
 !1730 = !DILocalVariable(name: "self", arg: 1, scope: !1731, file: !202, line: 203, type: !6)
-!1731 = distinct !DISubprogram(name: "addr<()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17he5d3b2756779ed47E", scope: !203, file: !202, line: 203, type: !1732, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1735, retainedNodes: !1734)
+!1731 = distinct !DISubprogram(name: "addr<()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17h118e9d644eb9d2c6E", scope: !203, file: !202, line: 203, type: !1732, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1735, retainedNodes: !1734)
 !1732 = !DISubroutineType(types: !1733)
 !1733 = !{!9, !6}
 !1734 = !{!1730}
@@ -11706,7 +11707,7 @@ attributes #11 = { noreturn nounwind }
 !1736 = !DILocation(line: 203, column: 17, scope: !1731, inlinedAt: !1737)
 !1737 = distinct !DILocation(line: 1571, column: 13, scope: !1721)
 !1738 = !DILocalVariable(name: "self", arg: 1, scope: !1739, file: !202, line: 58, type: !6)
-!1739 = distinct !DISubprogram(name: "cast<(), ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h9feec5abb78a754bE", scope: !203, file: !202, line: 58, type: !1740, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1743, retainedNodes: !1742)
+!1739 = distinct !DISubprogram(name: "cast<(), ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h7dc328a1711a2a56E", scope: !203, file: !202, line: 58, type: !1740, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1743, retainedNodes: !1742)
 !1740 = !DISubroutineType(types: !1741)
 !1741 = !{!6, !6}
 !1742 = !{!1738}
@@ -11717,11 +11718,11 @@ attributes #11 = { noreturn nounwind }
 !1747 = !DILocation(line: 1571, column: 26, scope: !1721)
 !1748 = !DILocation(line: 1571, column: 13, scope: !1721)
 !1749 = !DILocation(line: 1572, column: 10, scope: !1721)
-!1750 = distinct !DISubprogram(name: "is_aligned_to<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h2cbca68c57b5fb3eE", scope: !203, file: !202, line: 1564, type: !1751, scopeLine: 1564, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1753)
+!1750 = distinct !DISubprogram(name: "is_aligned_to<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h774812514fa4f0a5E", scope: !203, file: !202, line: 1564, type: !1751, scopeLine: 1564, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1753)
 !1751 = !DISubroutineType(types: !1752)
-!1752 = !{!421, !638, !9}
+!1752 = !{!421, !208, !9}
 !1753 = !{!1754, !1755}
-!1754 = !DILocalVariable(name: "self", arg: 1, scope: !1750, file: !202, line: 1564, type: !638)
+!1754 = !DILocalVariable(name: "self", arg: 1, scope: !1750, file: !202, line: 1564, type: !208)
 !1755 = !DILocalVariable(name: "align", arg: 2, scope: !1750, file: !202, line: 1564, type: !9)
 !1756 = !DILocation(line: 1564, column: 32, scope: !1750)
 !1757 = !DILocation(line: 1564, column: 38, scope: !1750)
@@ -11732,40 +11733,40 @@ attributes #11 = { noreturn nounwind }
 !1762 = !DILocation(line: 107, column: 13, scope: !1208, inlinedAt: !1761)
 !1763 = !DILocation(line: 2170, column: 13, scope: !1203, inlinedAt: !1759)
 !1764 = !DILocation(line: 1565, column: 12, scope: !1750)
-!1765 = !DILocalVariable(name: "self", arg: 1, scope: !1766, file: !202, line: 58, type: !638)
-!1766 = distinct !DISubprogram(name: "cast<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17hadc546933c13a894E", scope: !203, file: !202, line: 58, type: !1767, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1770, retainedNodes: !1769)
-!1767 = !DISubroutineType(types: !1768)
-!1768 = !{!6, !638}
-!1769 = !{!1765}
-!1770 = !{!652, !561}
-!1771 = !DILocation(line: 58, column: 26, scope: !1766, inlinedAt: !1772)
-!1772 = distinct !DILocation(line: 1584, column: 37, scope: !1750)
-!1773 = !DILocation(line: 1584, column: 36, scope: !1750)
-!1774 = !DILocation(line: 1584, column: 18, scope: !1750)
-!1775 = !DILocation(line: 1585, column: 6, scope: !1750)
-!1776 = !DILocation(line: 1566, column: 13, scope: !1750)
-!1777 = distinct !DISubprogram(name: "is_aligned_to<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17h72639b08bb9cc62fE", scope: !203, file: !202, line: 1564, type: !1778, scopeLine: 1564, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1780)
-!1778 = !DISubroutineType(types: !1779)
-!1779 = !{!421, !208, !9}
-!1780 = !{!1781, !1782}
-!1781 = !DILocalVariable(name: "self", arg: 1, scope: !1777, file: !202, line: 1564, type: !208)
-!1782 = !DILocalVariable(name: "align", arg: 2, scope: !1777, file: !202, line: 1564, type: !9)
-!1783 = !DILocation(line: 1564, column: 32, scope: !1777)
-!1784 = !DILocation(line: 1564, column: 38, scope: !1777)
-!1785 = !DILocation(line: 2169, column: 38, scope: !1203, inlinedAt: !1786)
-!1786 = distinct !DILocation(line: 1565, column: 13, scope: !1777)
-!1787 = !DILocation(line: 106, column: 33, scope: !1208, inlinedAt: !1788)
-!1788 = distinct !DILocation(line: 2170, column: 13, scope: !1203, inlinedAt: !1786)
-!1789 = !DILocation(line: 107, column: 13, scope: !1208, inlinedAt: !1788)
-!1790 = !DILocation(line: 2170, column: 13, scope: !1203, inlinedAt: !1786)
-!1791 = !DILocation(line: 1565, column: 12, scope: !1777)
-!1792 = !DILocation(line: 58, column: 26, scope: !556, inlinedAt: !1793)
-!1793 = distinct !DILocation(line: 1584, column: 37, scope: !1777)
-!1794 = !DILocation(line: 1584, column: 36, scope: !1777)
-!1795 = !DILocation(line: 1584, column: 18, scope: !1777)
-!1796 = !DILocation(line: 1585, column: 6, scope: !1777)
-!1797 = !DILocation(line: 1566, column: 13, scope: !1777)
-!1798 = distinct !DISubprogram(name: "with_metadata_of<u8, bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$16with_metadata_of17hfc3ccbb2353f1fc9E", scope: !203, file: !202, line: 94, type: !1799, scopeLine: 94, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1805, retainedNodes: !1802)
+!1765 = !DILocation(line: 58, column: 26, scope: !556, inlinedAt: !1766)
+!1766 = distinct !DILocation(line: 1584, column: 37, scope: !1750)
+!1767 = !DILocation(line: 1584, column: 36, scope: !1750)
+!1768 = !DILocation(line: 1584, column: 18, scope: !1750)
+!1769 = !DILocation(line: 1585, column: 6, scope: !1750)
+!1770 = !DILocation(line: 1566, column: 13, scope: !1750)
+!1771 = distinct !DISubprogram(name: "is_aligned_to<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17he58f6b7ae3510282E", scope: !203, file: !202, line: 1564, type: !1772, scopeLine: 1564, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1774)
+!1772 = !DISubroutineType(types: !1773)
+!1773 = !{!421, !648, !9}
+!1774 = !{!1775, !1776}
+!1775 = !DILocalVariable(name: "self", arg: 1, scope: !1771, file: !202, line: 1564, type: !648)
+!1776 = !DILocalVariable(name: "align", arg: 2, scope: !1771, file: !202, line: 1564, type: !9)
+!1777 = !DILocation(line: 1564, column: 32, scope: !1771)
+!1778 = !DILocation(line: 1564, column: 38, scope: !1771)
+!1779 = !DILocation(line: 2169, column: 38, scope: !1203, inlinedAt: !1780)
+!1780 = distinct !DILocation(line: 1565, column: 13, scope: !1771)
+!1781 = !DILocation(line: 106, column: 33, scope: !1208, inlinedAt: !1782)
+!1782 = distinct !DILocation(line: 2170, column: 13, scope: !1203, inlinedAt: !1780)
+!1783 = !DILocation(line: 107, column: 13, scope: !1208, inlinedAt: !1782)
+!1784 = !DILocation(line: 2170, column: 13, scope: !1203, inlinedAt: !1780)
+!1785 = !DILocation(line: 1565, column: 12, scope: !1771)
+!1786 = !DILocalVariable(name: "self", arg: 1, scope: !1787, file: !202, line: 58, type: !648)
+!1787 = distinct !DISubprogram(name: "cast<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17hbec5763564b9b35fE", scope: !203, file: !202, line: 58, type: !1788, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1791, retainedNodes: !1790)
+!1788 = !DISubroutineType(types: !1789)
+!1789 = !{!6, !648}
+!1790 = !{!1786}
+!1791 = !{!662, !561}
+!1792 = !DILocation(line: 58, column: 26, scope: !1787, inlinedAt: !1793)
+!1793 = distinct !DILocation(line: 1584, column: 37, scope: !1771)
+!1794 = !DILocation(line: 1584, column: 36, scope: !1771)
+!1795 = !DILocation(line: 1584, column: 18, scope: !1771)
+!1796 = !DILocation(line: 1585, column: 6, scope: !1771)
+!1797 = !DILocation(line: 1566, column: 13, scope: !1771)
+!1798 = distinct !DISubprogram(name: "with_metadata_of<u8, bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$16with_metadata_of17h7f44a7e53a5d27a0E", scope: !203, file: !202, line: 94, type: !1799, scopeLine: 94, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1805, retainedNodes: !1802)
 !1799 = !DISubroutineType(types: !1800)
 !1800 = !{!208, !1801, !208}
 !1801 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const u8", baseType: !123, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -11779,7 +11780,7 @@ attributes #11 = { noreturn nounwind }
 !1809 = !DILocation(line: 98, column: 48, scope: !1798)
 !1810 = !DILocation(line: 98, column: 9, scope: !1798)
 !1811 = !DILocation(line: 99, column: 6, scope: !1798)
-!1812 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h5e7318db8978ec9cE", scope: !1813, file: !202, line: 36, type: !1814, scopeLine: 36, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1816)
+!1812 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h4b67602774e5c54dE", scope: !1813, file: !202, line: 36, type: !1814, scopeLine: 36, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !1816)
 !1813 = !DINamespace(name: "is_null", scope: !203)
 !1814 = !DISubroutineType(types: !1815)
 !1815 = !{!421, !1801}
@@ -11787,14 +11788,14 @@ attributes #11 = { noreturn nounwind }
 !1817 = !DILocalVariable(name: "ptr", arg: 1, scope: !1812, file: !202, line: 36, type: !1801)
 !1818 = !DILocation(line: 36, column: 25, scope: !1812)
 !1819 = !DILocalVariable(name: "self", arg: 1, scope: !1820, file: !202, line: 203, type: !1801)
-!1820 = distinct !DISubprogram(name: "addr<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17h11f5568b1d930658E", scope: !203, file: !202, line: 203, type: !1821, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !1823)
+!1820 = distinct !DISubprogram(name: "addr<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17he3164bc318108240E", scope: !203, file: !202, line: 203, type: !1821, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !1823)
 !1821 = !DISubroutineType(types: !1822)
 !1822 = !{!9, !1801}
 !1823 = !{!1819}
 !1824 = !DILocation(line: 203, column: 17, scope: !1820, inlinedAt: !1825)
 !1825 = distinct !DILocation(line: 37, column: 13, scope: !1812)
 !1826 = !DILocalVariable(name: "self", arg: 1, scope: !1827, file: !202, line: 58, type: !1801)
-!1827 = distinct !DISubprogram(name: "cast<u8, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17hac000b1efe72ceb8E", scope: !203, file: !202, line: 58, type: !1828, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1623, retainedNodes: !1830)
+!1827 = distinct !DISubprogram(name: "cast<u8, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h1d1a4667809707f9E", scope: !203, file: !202, line: 58, type: !1828, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1623, retainedNodes: !1830)
 !1828 = !DISubroutineType(types: !1829)
 !1829 = !{!6, !1801}
 !1830 = !{!1826}
@@ -11803,21 +11804,21 @@ attributes #11 = { noreturn nounwind }
 !1833 = !DILocation(line: 207, column: 18, scope: !1820, inlinedAt: !1825)
 !1834 = !DILocation(line: 37, column: 13, scope: !1812)
 !1835 = !DILocation(line: 38, column: 10, scope: !1812)
-!1836 = distinct !DISubprogram(name: "is_null<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h8887dc6f95652e18E", scope: !203, file: !202, line: 34, type: !659, scopeLine: 34, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1837)
+!1836 = distinct !DISubprogram(name: "is_null<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hb34f08b01fbed2d9E", scope: !203, file: !202, line: 34, type: !636, scopeLine: 34, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1837)
 !1837 = !{!1838}
 !1838 = !DILocalVariable(name: "self", arg: 1, scope: !1836, file: !202, line: 34, type: !208)
 !1839 = !DILocation(line: 34, column: 26, scope: !1836)
 !1840 = !DILocation(line: 51, column: 36, scope: !1836)
 !1841 = !DILocation(line: 51, column: 18, scope: !1836)
 !1842 = !DILocation(line: 52, column: 6, scope: !1836)
-!1843 = distinct !DISubprogram(name: "is_null<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17ha32a967971c7c509E", scope: !203, file: !202, line: 34, type: !636, scopeLine: 34, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !651, retainedNodes: !1844)
+!1843 = distinct !DISubprogram(name: "is_null<core::mem::maybe_uninit::MaybeUninit<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hed584459377ed975E", scope: !203, file: !202, line: 34, type: !646, scopeLine: 34, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !661, retainedNodes: !1844)
 !1844 = !{!1845}
-!1845 = !DILocalVariable(name: "self", arg: 1, scope: !1843, file: !202, line: 34, type: !638)
+!1845 = !DILocalVariable(name: "self", arg: 1, scope: !1843, file: !202, line: 34, type: !648)
 !1846 = !DILocation(line: 34, column: 26, scope: !1843)
 !1847 = !DILocation(line: 51, column: 36, scope: !1843)
 !1848 = !DILocation(line: 51, column: 18, scope: !1843)
 !1849 = !DILocation(line: 52, column: 6, scope: !1843)
-!1850 = distinct !DISubprogram(name: "sub_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr17h06c6bc4eee71ac18E", scope: !203, file: !202, line: 781, type: !1851, scopeLine: 781, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1853)
+!1850 = distinct !DISubprogram(name: "sub_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr17h3d6dc8453250b48cE", scope: !203, file: !202, line: 781, type: !1851, scopeLine: 781, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1853)
 !1851 = !DISubroutineType(types: !1852)
 !1852 = !{!9, !208, !208}
 !1853 = !{!1854, !1855, !1856, !1858}
@@ -11835,7 +11836,7 @@ attributes #11 = { noreturn nounwind }
 !1865 = !DILocation(line: 795, column: 13, scope: !1859)
 !1866 = !DILocation(line: 796, column: 17, scope: !1859)
 !1867 = !DILocalVariable(name: "this", arg: 1, scope: !1868, file: !229, line: 2484, type: !208)
-!1868 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17hb2ef1e613bc93a5eE", scope: !1869, file: !229, line: 2484, type: !1870, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1872)
+!1868 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7sub_ptr7runtime17h5decbad9266da9b2E", scope: !1869, file: !229, line: 2484, type: !1870, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1872)
 !1869 = !DINamespace(name: "sub_ptr", scope: !203)
 !1870 = !DISubroutineType(types: !1871)
 !1871 = !{null, !208, !208}
@@ -11851,245 +11852,245 @@ attributes #11 = { noreturn nounwind }
 !1881 = !DILocation(line: 796, column: 9, scope: !1859)
 !1882 = !DILocation(line: 798, column: 18, scope: !1859)
 !1883 = !DILocation(line: 799, column: 6, scope: !1850)
-!1884 = distinct !DISubprogram(name: "len<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3c5ccfd32d4e1d7aE", scope: !1885, file: !202, line: 1609, type: !1680, scopeLine: 1609, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1886)
+!1884 = distinct !DISubprogram(name: "len<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$3len17h3a7bf3213f5f2ac5E", scope: !1885, file: !202, line: 1609, type: !1680, scopeLine: 1609, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1886)
 !1885 = !DINamespace(name: "{impl#1}", scope: !204)
 !1886 = !{!1887}
 !1887 = !DILocalVariable(name: "self", arg: 1, scope: !1884, file: !202, line: 1609, type: !170)
 !1888 = !DILocation(line: 1609, column: 22, scope: !1884)
 !1889 = !DILocation(line: 1610, column: 9, scope: !1884)
 !1890 = !DILocation(line: 1611, column: 6, scope: !1884)
-!1891 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17h0da60db6e72722a9E", scope: !1885, file: !202, line: 1629, type: !1892, scopeLine: 1629, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1894)
+!1891 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17hdc3d6574984ebdc5E", scope: !1885, file: !202, line: 1629, type: !1892, scopeLine: 1629, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1894)
 !1892 = !DISubroutineType(types: !1893)
 !1893 = !{!208, !170}
 !1894 = !{!1895}
 !1895 = !DILocalVariable(name: "self", arg: 1, scope: !1891, file: !202, line: 1629, type: !170)
 !1896 = !DILocation(line: 1629, column: 25, scope: !1891)
 !1897 = !DILocation(line: 1631, column: 6, scope: !1891)
-!1898 = distinct !DISubprogram(name: "index<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>, 64>", linkageName: "_ZN4core5array85_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$5index17h4f80189d8756a89fE", scope: !1900, file: !1899, line: 347, type: !1902, scopeLine: 347, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !1905)
-!1899 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/array/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "a3c36e35ceb67ad777a82e040f0657ec")
+!1898 = distinct !DISubprogram(name: "index<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>, 64>", linkageName: "_ZN4core5array85_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$5index17h9a0dd1216442d89cE", scope: !1900, file: !1899, line: 343, type: !1902, scopeLine: 343, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !1905)
+!1899 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/array/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "c10b88427730288d6cfd9f0a1aea93aa")
 !1900 = !DINamespace(name: "{impl#15}", scope: !1901)
 !1901 = !DINamespace(name: "array", scope: !143)
 !1902 = !DISubroutineType(types: !1903)
 !1903 = !{!323, !1904, !175, !327}
 !1904 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&[bootloader::bootinfo::memory_map::MemoryRegion; 64]", baseType: !97, size: 64, align: 64, dwarfAddressSpace: 0)
 !1905 = !{!1906, !1907}
-!1906 = !DILocalVariable(name: "self", arg: 1, scope: !1898, file: !1899, line: 347, type: !1904)
-!1907 = !DILocalVariable(name: "index", arg: 2, scope: !1898, file: !1899, line: 347, type: !175)
+!1906 = !DILocalVariable(name: "self", arg: 1, scope: !1898, file: !1899, line: 343, type: !1904)
+!1907 = !DILocalVariable(name: "index", arg: 2, scope: !1898, file: !1899, line: 343, type: !175)
 !1908 = !{!191, !1909}
 !1909 = !DITemplateTypeParameter(name: "I", type: !175)
-!1910 = !DILocation(line: 347, column: 14, scope: !1898)
-!1911 = !DILocation(line: 347, column: 21, scope: !1898)
-!1912 = !DILocation(line: 348, column: 9, scope: !1898)
-!1913 = !DILocation(line: 349, column: 6, scope: !1898)
-!1914 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>, 64>", linkageName: "_ZN4core5array88_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9index_mut17hc06ee4dd410cd4b2E", scope: !1915, file: !1899, line: 359, type: !1916, scopeLine: 359, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !1919)
+!1910 = !DILocation(line: 343, column: 14, scope: !1898)
+!1911 = !DILocation(line: 343, column: 21, scope: !1898)
+!1912 = !DILocation(line: 344, column: 9, scope: !1898)
+!1913 = !DILocation(line: 345, column: 6, scope: !1898)
+!1914 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>, 64>", linkageName: "_ZN4core5array88_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9index_mut17hd9cecf2e30ba055bE", scope: !1915, file: !1899, line: 354, type: !1916, scopeLine: 354, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !1919)
 !1915 = !DINamespace(name: "{impl#16}", scope: !1901)
 !1916 = !DISubroutineType(types: !1917)
 !1917 = !{!354, !1918, !175, !327}
 !1918 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut [bootloader::bootinfo::memory_map::MemoryRegion; 64]", baseType: !97, size: 64, align: 64, dwarfAddressSpace: 0)
 !1919 = !{!1920, !1921}
-!1920 = !DILocalVariable(name: "self", arg: 1, scope: !1914, file: !1899, line: 359, type: !1918)
-!1921 = !DILocalVariable(name: "index", arg: 2, scope: !1914, file: !1899, line: 359, type: !175)
-!1922 = !DILocation(line: 359, column: 18, scope: !1914)
-!1923 = !DILocation(line: 359, column: 29, scope: !1914)
-!1924 = !DILocation(line: 360, column: 9, scope: !1914)
-!1925 = !DILocation(line: 361, column: 6, scope: !1914)
-!1926 = distinct !DISubprogram(name: "split_at_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17had3b8fecb5ddaee3E", scope: !1127, file: !1927, line: 1636, type: !1928, scopeLine: 1636, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1934)
-!1927 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "0b3adda84e3d0ea3eafbebcfb4ca210d")
+!1920 = !DILocalVariable(name: "self", arg: 1, scope: !1914, file: !1899, line: 354, type: !1918)
+!1921 = !DILocalVariable(name: "index", arg: 2, scope: !1914, file: !1899, line: 354, type: !175)
+!1922 = !DILocation(line: 354, column: 18, scope: !1914)
+!1923 = !DILocation(line: 354, column: 29, scope: !1914)
+!1924 = !DILocation(line: 355, column: 9, scope: !1914)
+!1925 = !DILocation(line: 356, column: 6, scope: !1914)
+!1926 = distinct !DISubprogram(name: "split_at_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$12split_at_mut17h10104258bc233bdfE", scope: !1127, file: !1927, line: 1631, type: !1928, scopeLine: 1631, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1934)
+!1927 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "1dd2d212af5a5d0df0b628e72655c4a9")
 !1928 = !DISubroutineType(types: !1929)
 !1929 = !{!1930, !354, !9, !327}
-!1930 = !DICompositeType(tag: DW_TAG_structure_type, name: "(&mut [bootloader::bootinfo::memory_map::MemoryRegion], &mut [bootloader::bootinfo::memory_map::MemoryRegion])", file: !2, size: 256, align: 64, elements: !1931, templateParams: !24, identifier: "7e5dd12e3d3bbe4dfc7dc6130afde437")
+!1930 = !DICompositeType(tag: DW_TAG_structure_type, name: "(&mut [bootloader::bootinfo::memory_map::MemoryRegion], &mut [bootloader::bootinfo::memory_map::MemoryRegion])", file: !2, size: 256, align: 64, elements: !1931, templateParams: !24, identifier: "f5a709112de4e2b03572595766c19a79")
 !1931 = !{!1932, !1933}
 !1932 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !1930, file: !2, baseType: !354, size: 128, align: 64)
 !1933 = !DIDerivedType(tag: DW_TAG_member, name: "__1", scope: !1930, file: !2, baseType: !354, size: 128, align: 64, offset: 128)
 !1934 = !{!1935, !1936}
-!1935 = !DILocalVariable(name: "self", arg: 1, scope: !1926, file: !1927, line: 1636, type: !354)
-!1936 = !DILocalVariable(name: "mid", arg: 2, scope: !1926, file: !1927, line: 1636, type: !9)
-!1937 = !DILocation(line: 1636, column: 31, scope: !1926)
-!1938 = !DILocation(line: 1636, column: 42, scope: !1926)
-!1939 = !DILocation(line: 1637, column: 17, scope: !1926)
-!1940 = !DILocation(line: 1637, column: 9, scope: !1926)
-!1941 = !DILocation(line: 1640, column: 18, scope: !1926)
-!1942 = !DILocation(line: 1641, column: 6, scope: !1926)
-!1943 = distinct !DISubprogram(name: "get_unchecked<bootloader::bootinfo::memory_map::MemoryRegion, usize>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h57b3b09511a522dbE", scope: !1127, file: !1927, line: 398, type: !1944, scopeLine: 398, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1949, retainedNodes: !1946)
+!1935 = !DILocalVariable(name: "self", arg: 1, scope: !1926, file: !1927, line: 1631, type: !354)
+!1936 = !DILocalVariable(name: "mid", arg: 2, scope: !1926, file: !1927, line: 1631, type: !9)
+!1937 = !DILocation(line: 1631, column: 31, scope: !1926)
+!1938 = !DILocation(line: 1631, column: 42, scope: !1926)
+!1939 = !DILocation(line: 1632, column: 17, scope: !1926)
+!1940 = !DILocation(line: 1632, column: 9, scope: !1926)
+!1941 = !DILocation(line: 1635, column: 18, scope: !1926)
+!1942 = !DILocation(line: 1636, column: 6, scope: !1926)
+!1943 = distinct !DISubprogram(name: "get_unchecked<bootloader::bootinfo::memory_map::MemoryRegion, usize>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h91b5199d07f1f68dE", scope: !1127, file: !1927, line: 395, type: !1944, scopeLine: 395, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1949, retainedNodes: !1946)
 !1944 = !DISubroutineType(types: !1945)
 !1945 = !{!12, !323, !9}
 !1946 = !{!1947, !1948}
-!1947 = !DILocalVariable(name: "self", arg: 1, scope: !1943, file: !1927, line: 398, type: !323)
-!1948 = !DILocalVariable(name: "index", arg: 2, scope: !1943, file: !1927, line: 398, type: !9)
+!1947 = !DILocalVariable(name: "self", arg: 1, scope: !1943, file: !1927, line: 395, type: !323)
+!1948 = !DILocalVariable(name: "index", arg: 2, scope: !1943, file: !1927, line: 395, type: !9)
 !1949 = !{!191, !1950}
 !1950 = !DITemplateTypeParameter(name: "I", type: !9)
-!1951 = !DILocation(line: 398, column: 42, scope: !1943)
-!1952 = !DILocation(line: 398, column: 49, scope: !1943)
-!1953 = !DILocation(line: 405, column: 20, scope: !1943)
-!1954 = !DILocation(line: 406, column: 6, scope: !1943)
-!1955 = distinct !DISubprogram(name: "as_mut_ptr_range<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16as_mut_ptr_range17hdee795a0c039ffa3E", scope: !1127, file: !1927, line: 586, type: !1956, scopeLine: 586, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1964)
+!1951 = !DILocation(line: 395, column: 36, scope: !1943)
+!1952 = !DILocation(line: 395, column: 43, scope: !1943)
+!1953 = !DILocation(line: 402, column: 20, scope: !1943)
+!1954 = !DILocation(line: 403, column: 6, scope: !1943)
+!1955 = distinct !DISubprogram(name: "as_mut_ptr_range<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16as_mut_ptr_range17he17f6b0d029fd985E", scope: !1127, file: !1927, line: 582, type: !1956, scopeLine: 582, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1964)
 !1956 = !DISubroutineType(types: !1957)
 !1957 = !{!1958, !354}
-!1958 = !DICompositeType(tag: DW_TAG_structure_type, name: "Range<*mut bootloader::bootinfo::memory_map::MemoryRegion>", scope: !176, file: !2, size: 128, align: 64, elements: !1959, templateParams: !1962, identifier: "55373e39fee675b1932a766b705c4091")
+!1958 = !DICompositeType(tag: DW_TAG_structure_type, name: "Range<*mut bootloader::bootinfo::memory_map::MemoryRegion>", scope: !176, file: !2, size: 128, align: 64, elements: !1959, templateParams: !1962, identifier: "219e381b2b633ca7a1172f0f1accffc")
 !1959 = !{!1960, !1961}
 !1960 = !DIDerivedType(tag: DW_TAG_member, name: "start", scope: !1958, file: !2, baseType: !272, size: 64, align: 64)
 !1961 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !1958, file: !2, baseType: !272, size: 64, align: 64, offset: 64)
 !1962 = !{!1963}
 !1963 = !DITemplateTypeParameter(name: "Idx", type: !272)
 !1964 = !{!1965, !1966, !1968}
-!1965 = !DILocalVariable(name: "self", arg: 1, scope: !1955, file: !1927, line: 586, type: !354)
-!1966 = !DILocalVariable(name: "start", scope: !1967, file: !1927, line: 587, type: !272, align: 8)
-!1967 = distinct !DILexicalBlock(scope: !1955, file: !1927, line: 587, column: 9)
-!1968 = !DILocalVariable(name: "end", scope: !1969, file: !1927, line: 589, type: !272, align: 8)
-!1969 = distinct !DILexicalBlock(scope: !1967, file: !1927, line: 589, column: 9)
-!1970 = !DILocation(line: 586, column: 35, scope: !1955)
-!1971 = !DILocalVariable(name: "self", arg: 1, scope: !1972, file: !1927, line: 506, type: !354)
-!1972 = distinct !DISubprogram(name: "as_mut_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17h858094a99ae5b802E", scope: !1127, file: !1927, line: 506, type: !1973, scopeLine: 506, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1975)
+!1965 = !DILocalVariable(name: "self", arg: 1, scope: !1955, file: !1927, line: 582, type: !354)
+!1966 = !DILocalVariable(name: "start", scope: !1967, file: !1927, line: 583, type: !272, align: 8)
+!1967 = distinct !DILexicalBlock(scope: !1955, file: !1927, line: 583, column: 9)
+!1968 = !DILocalVariable(name: "end", scope: !1969, file: !1927, line: 585, type: !272, align: 8)
+!1969 = distinct !DILexicalBlock(scope: !1967, file: !1927, line: 585, column: 9)
+!1970 = !DILocation(line: 582, column: 35, scope: !1955)
+!1971 = !DILocalVariable(name: "self", arg: 1, scope: !1972, file: !1927, line: 502, type: !354)
+!1972 = distinct !DISubprogram(name: "as_mut_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17h88b89a6cbc2490b7E", scope: !1127, file: !1927, line: 502, type: !1973, scopeLine: 502, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !1975)
 !1973 = !DISubroutineType(types: !1974)
 !1974 = !{!272, !354}
 !1975 = !{!1971}
-!1976 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !1977)
-!1977 = distinct !DILocation(line: 587, column: 21, scope: !1955)
-!1978 = !DILocation(line: 587, column: 21, scope: !1955)
-!1979 = !DILocation(line: 587, column: 13, scope: !1967)
+!1976 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !1977)
+!1977 = distinct !DILocation(line: 583, column: 21, scope: !1955)
+!1978 = !DILocation(line: 583, column: 21, scope: !1955)
+!1979 = !DILocation(line: 583, column: 13, scope: !1967)
 !1980 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !1981)
-!1981 = distinct !DILocation(line: 589, column: 28, scope: !1967)
+!1981 = distinct !DILocation(line: 585, column: 28, scope: !1967)
 !1982 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !1981)
 !1983 = !DILocation(line: 472, column: 32, scope: !287, inlinedAt: !1984)
 !1984 = distinct !DILocation(line: 1020, column: 18, scope: !277, inlinedAt: !1981)
 !1985 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !1984)
 !1986 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !1984)
-!1987 = !DILocation(line: 589, column: 28, scope: !1967)
-!1988 = !DILocation(line: 589, column: 13, scope: !1969)
-!1989 = !DILocation(line: 590, column: 9, scope: !1969)
-!1990 = !DILocation(line: 591, column: 6, scope: !1955)
-!1991 = distinct !DISubprogram(name: "sort_unstable_by<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by17h3aa2a951514a8962E", scope: !1127, file: !1927, line: 2688, type: !1992, scopeLine: 2688, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1997, retainedNodes: !1994)
+!1987 = !DILocation(line: 585, column: 28, scope: !1967)
+!1988 = !DILocation(line: 585, column: 13, scope: !1969)
+!1989 = !DILocation(line: 586, column: 9, scope: !1969)
+!1990 = !DILocation(line: 587, column: 6, scope: !1955)
+!1991 = distinct !DISubprogram(name: "sort_unstable_by<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by17h1469e3c20acb32dcE", scope: !1127, file: !1927, line: 2683, type: !1992, scopeLine: 2683, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1997, retainedNodes: !1994)
 !1992 = !DISubroutineType(types: !1993)
 !1993 = !{null, !354, !1131}
 !1994 = !{!1995, !1996}
-!1995 = !DILocalVariable(name: "self", arg: 1, scope: !1991, file: !1927, line: 2688, type: !354)
-!1996 = !DILocalVariable(name: "compare", arg: 2, scope: !1991, file: !1927, line: 2688, type: !1131)
+!1995 = !DILocalVariable(name: "self", arg: 1, scope: !1991, file: !1927, line: 2683, type: !354)
+!1996 = !DILocalVariable(name: "compare", arg: 2, scope: !1991, file: !1927, line: 2683, type: !1131)
 !1997 = !{!191, !1998}
 !1998 = !DITemplateTypeParameter(name: "F", type: !1131)
-!1999 = !DILocation(line: 2688, column: 32, scope: !1991)
-!2000 = !DILocation(line: 2688, column: 43, scope: !1991)
-!2001 = !DILocation(line: 2692, column: 31, scope: !1991)
-!2002 = !DILocation(line: 2692, column: 9, scope: !1991)
+!1999 = !DILocation(line: 2683, column: 32, scope: !1991)
+!2000 = !DILocation(line: 2683, column: 43, scope: !1991)
+!2001 = !DILocation(line: 2687, column: 31, scope: !1991)
+!2002 = !DILocation(line: 2687, column: 9, scope: !1991)
 !2003 = !{i64 1}
-!2004 = !DILocation(line: 2693, column: 6, scope: !1991)
-!2005 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h47b78b0aec4e3ab2E", scope: !1126, file: !1927, line: 2692, type: !2006, scopeLine: 2692, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1997, retainedNodes: !2008)
+!2004 = !DILocation(line: 2688, column: 6, scope: !1991)
+!2005 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$16sort_unstable_by28_$u7b$$u7b$closure$u7d$$u7d$17h64e034a5566cb5b8E", scope: !1126, file: !1927, line: 2687, type: !2006, scopeLine: 2687, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1997, retainedNodes: !2008)
 !2006 = !DISubroutineType(types: !2007)
 !2007 = !{!421, !1124, !12, !12}
 !2008 = !{!2009, !2010, !2011}
-!2009 = !DILocalVariable(name: "a", arg: 2, scope: !2005, file: !1927, line: 2692, type: !12)
-!2010 = !DILocalVariable(name: "b", arg: 3, scope: !2005, file: !1927, line: 2692, type: !12)
-!2011 = !DILocalVariable(name: "compare", scope: !2005, file: !1927, line: 2688, type: !1131, align: 1)
-!2012 = !DILocation(line: 2688, column: 47, scope: !2005)
-!2013 = !DILocation(line: 2692, column: 32, scope: !2005)
-!2014 = !DILocation(line: 2692, column: 35, scope: !2005)
-!2015 = !DILocation(line: 2692, column: 38, scope: !2005)
-!2016 = !DILocation(line: 2692, column: 69, scope: !2005)
-!2017 = distinct !DISubprogram(name: "split_at_mut_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked17he725c0b448fb6b8aE", scope: !1127, file: !1927, line: 1744, type: !2018, scopeLine: 1744, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2020)
+!2009 = !DILocalVariable(name: "a", arg: 2, scope: !2005, file: !1927, line: 2687, type: !12)
+!2010 = !DILocalVariable(name: "b", arg: 3, scope: !2005, file: !1927, line: 2687, type: !12)
+!2011 = !DILocalVariable(name: "compare", scope: !2005, file: !1927, line: 2683, type: !1131, align: 1)
+!2012 = !DILocation(line: 2683, column: 47, scope: !2005)
+!2013 = !DILocation(line: 2687, column: 32, scope: !2005)
+!2014 = !DILocation(line: 2687, column: 35, scope: !2005)
+!2015 = !DILocation(line: 2687, column: 38, scope: !2005)
+!2016 = !DILocation(line: 2687, column: 69, scope: !2005)
+!2017 = distinct !DISubprogram(name: "split_at_mut_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked17h7b6d14daaeb5d4c2E", scope: !1127, file: !1927, line: 1739, type: !2018, scopeLine: 1739, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2020)
 !2018 = !DISubroutineType(types: !2019)
 !2019 = !{!1930, !354, !9}
 !2020 = !{!2021, !2022, !2023, !2025}
-!2021 = !DILocalVariable(name: "self", arg: 1, scope: !2017, file: !1927, line: 1744, type: !354)
-!2022 = !DILocalVariable(name: "mid", arg: 2, scope: !2017, file: !1927, line: 1744, type: !9)
-!2023 = !DILocalVariable(name: "len", scope: !2024, file: !1927, line: 1745, type: !9, align: 8)
-!2024 = distinct !DILexicalBlock(scope: !2017, file: !1927, line: 1745, column: 9)
-!2025 = !DILocalVariable(name: "ptr", scope: !2026, file: !1927, line: 1746, type: !272, align: 8)
-!2026 = distinct !DILexicalBlock(scope: !2024, file: !1927, line: 1746, column: 9)
-!2027 = !DILocation(line: 1744, column: 48, scope: !2017)
-!2028 = !DILocation(line: 1744, column: 59, scope: !2017)
-!2029 = !DILocation(line: 1745, column: 19, scope: !2017)
-!2030 = !DILocation(line: 1745, column: 13, scope: !2024)
-!2031 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !2032)
-!2032 = distinct !DILocation(line: 1746, column: 19, scope: !2024)
-!2033 = !DILocation(line: 1746, column: 19, scope: !2024)
-!2034 = !DILocation(line: 1746, column: 13, scope: !2026)
-!2035 = !DILocation(line: 1753, column: 13, scope: !2026)
-!2036 = !DILocation(line: 1757, column: 14, scope: !2026)
+!2021 = !DILocalVariable(name: "self", arg: 1, scope: !2017, file: !1927, line: 1739, type: !354)
+!2022 = !DILocalVariable(name: "mid", arg: 2, scope: !2017, file: !1927, line: 1739, type: !9)
+!2023 = !DILocalVariable(name: "len", scope: !2024, file: !1927, line: 1740, type: !9, align: 8)
+!2024 = distinct !DILexicalBlock(scope: !2017, file: !1927, line: 1740, column: 9)
+!2025 = !DILocalVariable(name: "ptr", scope: !2026, file: !1927, line: 1741, type: !272, align: 8)
+!2026 = distinct !DILexicalBlock(scope: !2024, file: !1927, line: 1741, column: 9)
+!2027 = !DILocation(line: 1739, column: 48, scope: !2017)
+!2028 = !DILocation(line: 1739, column: 59, scope: !2017)
+!2029 = !DILocation(line: 1740, column: 19, scope: !2017)
+!2030 = !DILocation(line: 1740, column: 13, scope: !2024)
+!2031 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !2032)
+!2032 = distinct !DILocation(line: 1741, column: 19, scope: !2024)
+!2033 = !DILocation(line: 1741, column: 19, scope: !2024)
+!2034 = !DILocation(line: 1741, column: 13, scope: !2026)
+!2035 = !DILocation(line: 1748, column: 13, scope: !2026)
+!2036 = !DILocation(line: 1752, column: 14, scope: !2026)
 !2037 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !2038)
-!2038 = distinct !DILocation(line: 1757, column: 63, scope: !2026)
+!2038 = distinct !DILocation(line: 1752, column: 63, scope: !2026)
 !2039 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !2038)
 !2040 = !DILocation(line: 472, column: 32, scope: !287, inlinedAt: !2041)
 !2041 = distinct !DILocation(line: 1020, column: 18, scope: !277, inlinedAt: !2038)
 !2042 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !2041)
 !2043 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !2041)
-!2044 = !DILocation(line: 1757, column: 77, scope: !2026)
+!2044 = !DILocation(line: 1752, column: 77, scope: !2026)
 !2045 = !DILocalVariable(name: "mid", arg: 1, scope: !2046, file: !229, line: 2484, type: !9)
-!2046 = distinct !DISubprogram(name: "runtime", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h1d933de8fb407671E", scope: !2047, file: !229, line: 2484, type: !2048, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !2050)
+!2046 = distinct !DISubprogram(name: "runtime", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$22split_at_mut_unchecked7runtime17h2d70b1c04acfc903E", scope: !2047, file: !229, line: 2484, type: !2048, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !2050)
 !2047 = !DINamespace(name: "split_at_mut_unchecked", scope: !1127)
 !2048 = !DISubroutineType(types: !2049)
 !2049 = !{null, !9, !9}
 !2050 = !{!2045, !2051}
 !2051 = !DILocalVariable(name: "len", arg: 2, scope: !2046, file: !229, line: 2484, type: !9)
 !2052 = !DILocation(line: 2484, column: 39, scope: !2046, inlinedAt: !2053)
-!2053 = distinct !DILocation(line: 1753, column: 13, scope: !2026)
-!2054 = !DILocation(line: 1755, column: 45, scope: !2055, inlinedAt: !2053)
+!2053 = distinct !DILocation(line: 1748, column: 13, scope: !2026)
+!2054 = !DILocation(line: 1750, column: 45, scope: !2055, inlinedAt: !2053)
 !2055 = !DILexicalBlockFile(scope: !2046, file: !1927, discriminator: 0)
 !2056 = !DILocation(line: 2485, column: 20, scope: !2046, inlinedAt: !2053)
 !2057 = !DILocation(line: 2487, column: 21, scope: !2046, inlinedAt: !2053)
-!2058 = !DILocation(line: 1757, column: 44, scope: !2026)
-!2059 = !DILocation(line: 1757, column: 13, scope: !2026)
-!2060 = !DILocation(line: 1759, column: 6, scope: !2017)
-!2061 = distinct !DISubprogram(name: "iter<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h8f73af22612f7cb1E", scope: !1127, file: !1927, line: 741, type: !2062, scopeLine: 741, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2064)
+!2058 = !DILocation(line: 1752, column: 44, scope: !2026)
+!2059 = !DILocation(line: 1752, column: 13, scope: !2026)
+!2060 = !DILocation(line: 1754, column: 6, scope: !2017)
+!2061 = distinct !DISubprogram(name: "iter<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17ha65af8c6724a8cb2E", scope: !1127, file: !1927, line: 736, type: !2062, scopeLine: 736, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2064)
 !2062 = !DISubroutineType(types: !2063)
 !2063 = !{!815, !323}
 !2064 = !{!2065}
-!2065 = !DILocalVariable(name: "self", arg: 1, scope: !2061, file: !1927, line: 741, type: !323)
-!2066 = !DILocation(line: 741, column: 17, scope: !2061)
-!2067 = !DILocation(line: 742, column: 9, scope: !2061)
-!2068 = !DILocation(line: 743, column: 6, scope: !2061)
-!2069 = distinct !DISubprogram(name: "swap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17hfb7b8b683216c806E", scope: !1127, file: !1927, line: 615, type: !2070, scopeLine: 615, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2072)
+!2065 = !DILocalVariable(name: "self", arg: 1, scope: !2061, file: !1927, line: 736, type: !323)
+!2066 = !DILocation(line: 736, column: 17, scope: !2061)
+!2067 = !DILocation(line: 737, column: 9, scope: !2061)
+!2068 = !DILocation(line: 738, column: 6, scope: !2061)
+!2069 = distinct !DISubprogram(name: "swap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4swap17h89addf5771d843b6E", scope: !1127, file: !1927, line: 611, type: !2070, scopeLine: 611, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2072)
 !2070 = !DISubroutineType(types: !2071)
 !2071 = !{null, !354, !9, !9, !327}
 !2072 = !{!2073, !2074, !2075, !2076, !2078}
-!2073 = !DILocalVariable(name: "self", arg: 1, scope: !2069, file: !1927, line: 615, type: !354)
-!2074 = !DILocalVariable(name: "a", arg: 2, scope: !2069, file: !1927, line: 615, type: !9)
-!2075 = !DILocalVariable(name: "b", arg: 3, scope: !2069, file: !1927, line: 615, type: !9)
-!2076 = !DILocalVariable(name: "pa", scope: !2077, file: !1927, line: 618, type: !272, align: 8)
-!2077 = distinct !DILexicalBlock(scope: !2069, file: !1927, line: 618, column: 9)
-!2078 = !DILocalVariable(name: "pb", scope: !2079, file: !1927, line: 619, type: !272, align: 8)
-!2079 = distinct !DILexicalBlock(scope: !2077, file: !1927, line: 619, column: 9)
-!2080 = !DILocation(line: 615, column: 23, scope: !2069)
-!2081 = !DILocation(line: 615, column: 34, scope: !2069)
-!2082 = !DILocation(line: 615, column: 44, scope: !2069)
-!2083 = !DILocation(line: 618, column: 36, scope: !2069)
-!2084 = !DILocation(line: 618, column: 18, scope: !2069)
-!2085 = !DILocation(line: 618, column: 13, scope: !2077)
-!2086 = !DILocation(line: 619, column: 36, scope: !2077)
-!2087 = !DILocation(line: 619, column: 18, scope: !2077)
-!2088 = !DILocation(line: 619, column: 13, scope: !2079)
-!2089 = !DILocation(line: 625, column: 13, scope: !2079)
-!2090 = !DILocation(line: 627, column: 6, scope: !2069)
-!2091 = distinct !DISubprogram(name: "reverse<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse17h5f2c081d4f44ade6E", scope: !1127, file: !1927, line: 683, type: !2092, scopeLine: 683, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2094)
+!2073 = !DILocalVariable(name: "self", arg: 1, scope: !2069, file: !1927, line: 611, type: !354)
+!2074 = !DILocalVariable(name: "a", arg: 2, scope: !2069, file: !1927, line: 611, type: !9)
+!2075 = !DILocalVariable(name: "b", arg: 3, scope: !2069, file: !1927, line: 611, type: !9)
+!2076 = !DILocalVariable(name: "pa", scope: !2077, file: !1927, line: 614, type: !272, align: 8)
+!2077 = distinct !DILexicalBlock(scope: !2069, file: !1927, line: 614, column: 9)
+!2078 = !DILocalVariable(name: "pb", scope: !2079, file: !1927, line: 615, type: !272, align: 8)
+!2079 = distinct !DILexicalBlock(scope: !2077, file: !1927, line: 615, column: 9)
+!2080 = !DILocation(line: 611, column: 23, scope: !2069)
+!2081 = !DILocation(line: 611, column: 34, scope: !2069)
+!2082 = !DILocation(line: 611, column: 44, scope: !2069)
+!2083 = !DILocation(line: 614, column: 36, scope: !2069)
+!2084 = !DILocation(line: 614, column: 18, scope: !2069)
+!2085 = !DILocation(line: 614, column: 13, scope: !2077)
+!2086 = !DILocation(line: 615, column: 36, scope: !2077)
+!2087 = !DILocation(line: 615, column: 18, scope: !2077)
+!2088 = !DILocation(line: 615, column: 13, scope: !2079)
+!2089 = !DILocation(line: 621, column: 13, scope: !2079)
+!2090 = !DILocation(line: 623, column: 6, scope: !2069)
+!2091 = distinct !DISubprogram(name: "reverse<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse17h3af714df98c7c6a4E", scope: !1127, file: !1927, line: 678, type: !2092, scopeLine: 678, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2094)
 !2092 = !DISubroutineType(types: !2093)
 !2093 = !{null, !354}
 !2094 = !{!2095, !2096, !2098, !2100, !2101, !2103}
-!2095 = !DILocalVariable(name: "self", arg: 1, scope: !2091, file: !1927, line: 683, type: !354)
-!2096 = !DILocalVariable(name: "half_len", scope: !2097, file: !1927, line: 684, type: !9, align: 8)
-!2097 = distinct !DILexicalBlock(scope: !2091, file: !1927, line: 684, column: 9)
-!2098 = !DILocalVariable(name: "start", scope: !2099, file: !1927, line: 685, type: !272, align: 8)
-!2099 = distinct !DILexicalBlock(scope: !2097, file: !1927, line: 685, column: 9)
-!2100 = !DILocalVariable(name: "end", scope: !2099, file: !1927, line: 685, type: !272, align: 8)
-!2101 = !DILocalVariable(name: "front_half", scope: !2102, file: !1927, line: 689, type: !354, align: 8)
-!2102 = distinct !DILexicalBlock(scope: !2099, file: !1927, line: 689, column: 9)
-!2103 = !DILocalVariable(name: "back_half", scope: !2102, file: !1927, line: 689, type: !354, align: 8)
-!2104 = !DILocation(line: 683, column: 26, scope: !2091)
-!2105 = !DILocation(line: 684, column: 24, scope: !2091)
-!2106 = !DILocation(line: 684, column: 13, scope: !2097)
-!2107 = !DILocation(line: 685, column: 36, scope: !2097)
-!2108 = !DILocation(line: 685, column: 21, scope: !2097)
-!2109 = !DILocation(line: 685, column: 21, scope: !2099)
-!2110 = !DILocation(line: 685, column: 28, scope: !2097)
-!2111 = !DILocation(line: 685, column: 28, scope: !2099)
-!2112 = !DILocation(line: 695, column: 21, scope: !2099)
+!2095 = !DILocalVariable(name: "self", arg: 1, scope: !2091, file: !1927, line: 678, type: !354)
+!2096 = !DILocalVariable(name: "half_len", scope: !2097, file: !1927, line: 679, type: !9, align: 8)
+!2097 = distinct !DILexicalBlock(scope: !2091, file: !1927, line: 679, column: 9)
+!2098 = !DILocalVariable(name: "start", scope: !2099, file: !1927, line: 680, type: !272, align: 8)
+!2099 = distinct !DILexicalBlock(scope: !2097, file: !1927, line: 680, column: 9)
+!2100 = !DILocalVariable(name: "end", scope: !2099, file: !1927, line: 680, type: !272, align: 8)
+!2101 = !DILocalVariable(name: "front_half", scope: !2102, file: !1927, line: 684, type: !354, align: 8)
+!2102 = distinct !DILexicalBlock(scope: !2099, file: !1927, line: 684, column: 9)
+!2103 = !DILocalVariable(name: "back_half", scope: !2102, file: !1927, line: 684, type: !354, align: 8)
+!2104 = !DILocation(line: 678, column: 20, scope: !2091)
+!2105 = !DILocation(line: 679, column: 24, scope: !2091)
+!2106 = !DILocation(line: 679, column: 13, scope: !2097)
+!2107 = !DILocation(line: 680, column: 36, scope: !2097)
+!2108 = !DILocation(line: 680, column: 21, scope: !2097)
+!2109 = !DILocation(line: 680, column: 21, scope: !2099)
+!2110 = !DILocation(line: 680, column: 28, scope: !2097)
+!2111 = !DILocation(line: 680, column: 28, scope: !2099)
+!2112 = !DILocation(line: 690, column: 21, scope: !2099)
 !2113 = !DILocalVariable(name: "self", arg: 1, scope: !2114, file: !267, line: 1098, type: !272)
-!2114 = distinct !DISubprogram(name: "sub<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3sub17h262c2ec756845becE", scope: !278, file: !267, line: 1098, type: !279, scopeLine: 1098, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2115)
+!2114 = distinct !DISubprogram(name: "sub<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3sub17h0f2dd9c5d6dd5546E", scope: !278, file: !267, line: 1098, type: !279, scopeLine: 1098, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2115)
 !2115 = !{!2113, !2116}
 !2116 = !DILocalVariable(name: "count", arg: 2, scope: !2114, file: !267, line: 1098, type: !9)
 !2117 = !DILocation(line: 1098, column: 29, scope: !2114, inlinedAt: !2118)
-!2118 = distinct !DILocation(line: 696, column: 47, scope: !2099)
+!2118 = distinct !DILocation(line: 691, column: 47, scope: !2099)
 !2119 = !DILocation(line: 1098, column: 35, scope: !2114, inlinedAt: !2118)
 !2120 = !DILocalVariable(name: "self", arg: 1, scope: !2121, file: !2122, line: 1358, type: !218)
-!2121 = distinct !DISubprogram(name: "wrapping_neg", linkageName: "_ZN4core3num23_$LT$impl$u20$isize$GT$12wrapping_neg17h972ea4877bb3d029E", scope: !2123, file: !2122, line: 1358, type: !2124, scopeLine: 1358, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !2126)
-!2122 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/int_macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "7c9d22d8d2e1d9742bccc1dbc079da0e")
+!2121 = distinct !DISubprogram(name: "wrapping_neg", linkageName: "_ZN4core3num23_$LT$impl$u20$isize$GT$12wrapping_neg17hf0770cb533f2de4dE", scope: !2123, file: !2122, line: 1358, type: !2124, scopeLine: 1358, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !2126)
+!2122 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/int_macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "3cc61eba9d1c401bb41e13b0ee5e5cb8")
 !2123 = !DINamespace(name: "{impl#5}", scope: !1027)
 !2124 = !DISubroutineType(types: !2125)
 !2125 = !{!218, !218}
@@ -12097,7 +12098,7 @@ attributes #11 = { noreturn nounwind }
 !2127 = !DILocation(line: 1358, column: 35, scope: !2121, inlinedAt: !2128)
 !2128 = distinct !DILocation(line: 1103, column: 30, scope: !2114, inlinedAt: !2118)
 !2129 = !DILocalVariable(name: "self", arg: 1, scope: !2130, file: !2122, line: 1183, type: !218)
-!2130 = distinct !DISubprogram(name: "wrapping_sub", linkageName: "_ZN4core3num23_$LT$impl$u20$isize$GT$12wrapping_sub17ha69f0364fec32c5dE", scope: !2123, file: !2122, line: 1183, type: !2131, scopeLine: 1183, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !2133)
+!2130 = distinct !DISubprogram(name: "wrapping_sub", linkageName: "_ZN4core3num23_$LT$impl$u20$isize$GT$12wrapping_sub17ha1392fdbd0538ba4E", scope: !2123, file: !2122, line: 1183, type: !2131, scopeLine: 1183, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !2133)
 !2131 = !DISubroutineType(types: !2132)
 !2132 = !{!218, !218, !218}
 !2133 = !{!2129, !2134}
@@ -12110,58 +12111,58 @@ attributes #11 = { noreturn nounwind }
 !2140 = distinct !DILocation(line: 1103, column: 18, scope: !2114, inlinedAt: !2118)
 !2141 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !2140)
 !2142 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !2140)
-!2143 = !DILocation(line: 696, column: 21, scope: !2099)
-!2144 = !DILocation(line: 694, column: 17, scope: !2099)
-!2145 = !DILocation(line: 689, column: 14, scope: !2099)
-!2146 = !DILocation(line: 689, column: 14, scope: !2102)
-!2147 = !DILocation(line: 689, column: 26, scope: !2099)
-!2148 = !DILocation(line: 689, column: 26, scope: !2102)
-!2149 = !DILocation(line: 703, column: 9, scope: !2102)
-!2150 = !DILocation(line: 722, column: 6, scope: !2091)
-!2151 = distinct !DISubprogram(name: "revswap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse7revswap17h790f7b49ef9b2c1aE", scope: !2152, file: !1927, line: 706, type: !2153, scopeLine: 706, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2155)
+!2143 = !DILocation(line: 691, column: 21, scope: !2099)
+!2144 = !DILocation(line: 689, column: 17, scope: !2099)
+!2145 = !DILocation(line: 684, column: 14, scope: !2099)
+!2146 = !DILocation(line: 684, column: 14, scope: !2102)
+!2147 = !DILocation(line: 684, column: 26, scope: !2099)
+!2148 = !DILocation(line: 684, column: 26, scope: !2102)
+!2149 = !DILocation(line: 698, column: 9, scope: !2102)
+!2150 = !DILocation(line: 717, column: 6, scope: !2091)
+!2151 = distinct !DISubprogram(name: "revswap<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$7reverse7revswap17h53a77804a111e4f9E", scope: !2152, file: !1927, line: 701, type: !2153, scopeLine: 701, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2155)
 !2152 = !DINamespace(name: "reverse", scope: !1127)
 !2153 = !DISubroutineType(types: !2154)
 !2154 = !{null, !354, !354, !9}
 !2155 = !{!2156, !2157, !2158, !2159, !2161, !2162}
-!2156 = !DILocalVariable(name: "a", arg: 1, scope: !2151, file: !1927, line: 706, type: !354)
-!2157 = !DILocalVariable(name: "b", arg: 2, scope: !2151, file: !1927, line: 706, type: !354)
-!2158 = !DILocalVariable(name: "n", arg: 3, scope: !2151, file: !1927, line: 706, type: !9)
-!2159 = !DILocalVariable(name: "a", scope: !2160, file: !1927, line: 714, type: !354, align: 8)
-!2160 = distinct !DILexicalBlock(scope: !2151, file: !1927, line: 714, column: 13)
-!2161 = !DILocalVariable(name: "b", scope: !2160, file: !1927, line: 714, type: !354, align: 8)
-!2162 = !DILocalVariable(name: "i", scope: !2163, file: !1927, line: 716, type: !9, align: 8)
-!2163 = distinct !DILexicalBlock(scope: !2160, file: !1927, line: 716, column: 13)
-!2164 = !DILocation(line: 706, column: 29, scope: !2151)
-!2165 = !DILocation(line: 706, column: 42, scope: !2151)
-!2166 = !DILocation(line: 706, column: 55, scope: !2151)
-!2167 = !DILocation(line: 716, column: 17, scope: !2163)
-!2168 = !DILocation(line: 707, column: 13, scope: !2151)
-!2169 = !DILocation(line: 708, column: 13, scope: !2151)
-!2170 = !DILocation(line: 707, column: 27, scope: !2151)
-!2171 = !DILocation(line: 714, column: 34, scope: !2151)
-!2172 = !DILocation(line: 714, column: 32, scope: !2151)
-!2173 = !DILocation(line: 714, column: 47, scope: !2151)
-!2174 = !DILocation(line: 714, column: 45, scope: !2151)
-!2175 = !DILocation(line: 714, column: 26, scope: !2151)
-!2176 = !DILocation(line: 714, column: 18, scope: !2151)
-!2177 = !DILocation(line: 714, column: 18, scope: !2160)
-!2178 = !DILocation(line: 714, column: 21, scope: !2151)
-!2179 = !DILocation(line: 714, column: 21, scope: !2160)
-!2180 = !DILocation(line: 716, column: 25, scope: !2160)
-!2181 = !DILocation(line: 717, column: 13, scope: !2163)
-!2182 = !DILocation(line: 708, column: 27, scope: !2151)
-!2183 = !DILocation(line: 717, column: 19, scope: !2163)
-!2184 = !DILocation(line: 721, column: 10, scope: !2151)
-!2185 = !DILocation(line: 718, column: 34, scope: !2163)
-!2186 = !DILocation(line: 718, column: 32, scope: !2163)
-!2187 = !DILocation(line: 718, column: 27, scope: !2163)
-!2188 = !DILocation(line: 718, column: 45, scope: !2163)
-!2189 = !DILocation(line: 718, column: 53, scope: !2163)
-!2190 = !DILocation(line: 718, column: 43, scope: !2163)
-!2191 = !DILocation(line: 718, column: 38, scope: !2163)
-!2192 = !DILocation(line: 718, column: 17, scope: !2163)
-!2193 = !DILocation(line: 719, column: 17, scope: !2163)
-!2194 = distinct !DISubprogram(name: "from_raw_parts_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut17h54c3e257c974b9a9E", scope: !2196, file: !2195, line: 137, type: !2197, scopeLine: 137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2199)
+!2156 = !DILocalVariable(name: "a", arg: 1, scope: !2151, file: !1927, line: 701, type: !354)
+!2157 = !DILocalVariable(name: "b", arg: 2, scope: !2151, file: !1927, line: 701, type: !354)
+!2158 = !DILocalVariable(name: "n", arg: 3, scope: !2151, file: !1927, line: 701, type: !9)
+!2159 = !DILocalVariable(name: "a", scope: !2160, file: !1927, line: 709, type: !354, align: 8)
+!2160 = distinct !DILexicalBlock(scope: !2151, file: !1927, line: 709, column: 13)
+!2161 = !DILocalVariable(name: "b", scope: !2160, file: !1927, line: 709, type: !354, align: 8)
+!2162 = !DILocalVariable(name: "i", scope: !2163, file: !1927, line: 711, type: !9, align: 8)
+!2163 = distinct !DILexicalBlock(scope: !2160, file: !1927, line: 711, column: 13)
+!2164 = !DILocation(line: 701, column: 23, scope: !2151)
+!2165 = !DILocation(line: 701, column: 36, scope: !2151)
+!2166 = !DILocation(line: 701, column: 49, scope: !2151)
+!2167 = !DILocation(line: 711, column: 17, scope: !2163)
+!2168 = !DILocation(line: 702, column: 13, scope: !2151)
+!2169 = !DILocation(line: 703, column: 13, scope: !2151)
+!2170 = !DILocation(line: 702, column: 27, scope: !2151)
+!2171 = !DILocation(line: 709, column: 34, scope: !2151)
+!2172 = !DILocation(line: 709, column: 32, scope: !2151)
+!2173 = !DILocation(line: 709, column: 47, scope: !2151)
+!2174 = !DILocation(line: 709, column: 45, scope: !2151)
+!2175 = !DILocation(line: 709, column: 26, scope: !2151)
+!2176 = !DILocation(line: 709, column: 18, scope: !2151)
+!2177 = !DILocation(line: 709, column: 18, scope: !2160)
+!2178 = !DILocation(line: 709, column: 21, scope: !2151)
+!2179 = !DILocation(line: 709, column: 21, scope: !2160)
+!2180 = !DILocation(line: 711, column: 25, scope: !2160)
+!2181 = !DILocation(line: 712, column: 13, scope: !2163)
+!2182 = !DILocation(line: 703, column: 27, scope: !2151)
+!2183 = !DILocation(line: 712, column: 19, scope: !2163)
+!2184 = !DILocation(line: 716, column: 10, scope: !2151)
+!2185 = !DILocation(line: 713, column: 34, scope: !2163)
+!2186 = !DILocation(line: 713, column: 32, scope: !2163)
+!2187 = !DILocation(line: 713, column: 27, scope: !2163)
+!2188 = !DILocation(line: 713, column: 45, scope: !2163)
+!2189 = !DILocation(line: 713, column: 53, scope: !2163)
+!2190 = !DILocation(line: 713, column: 43, scope: !2163)
+!2191 = !DILocation(line: 713, column: 38, scope: !2163)
+!2192 = !DILocation(line: 713, column: 17, scope: !2163)
+!2193 = !DILocation(line: 714, column: 17, scope: !2163)
+!2194 = distinct !DISubprogram(name: "from_raw_parts_mut<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut17hccaf5218f5329f38E", scope: !2196, file: !2195, line: 137, type: !2197, scopeLine: 137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2199)
 !2195 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/raw.rs", directory: "", checksumkind: CSK_MD5, checksum: "4e9e8b780584cc248c586456197d9cf5")
 !2196 = !DINamespace(name: "raw", scope: !167)
 !2197 = !DISubroutineType(types: !2198)
@@ -12175,7 +12176,7 @@ attributes #11 = { noreturn nounwind }
 !2205 = !DILocation(line: 145, column: 15, scope: !2194)
 !2206 = !DILocation(line: 147, column: 2, scope: !2194)
 !2207 = !DILocalVariable(name: "data", arg: 1, scope: !2208, file: !229, line: 2484, type: !272)
-!2208 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut7runtime17h0f2edeb8b7ffe6dbE", scope: !2209, file: !229, line: 2484, type: !2210, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2212)
+!2208 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice3raw18from_raw_parts_mut7runtime17hc491df7d60379b46E", scope: !2209, file: !229, line: 2484, type: !2210, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2212)
 !2209 = !DINamespace(name: "from_raw_parts_mut", scope: !2196)
 !2210 = !DISubroutineType(types: !2211)
 !2211 = !{null, !272, !9}
@@ -12188,7 +12189,7 @@ attributes #11 = { noreturn nounwind }
 !2218 = !DILocation(line: 143, column: 20, scope: !2217, inlinedAt: !2215)
 !2219 = !DILocation(line: 2485, column: 20, scope: !2208, inlinedAt: !2215)
 !2220 = !DILocation(line: 2487, column: 21, scope: !2208, inlinedAt: !2215)
-!2221 = distinct !DISubprogram(name: "new<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4iter13Iter$LT$T$GT$3new17h60940c1ef41d07b9E", scope: !815, file: !2222, line: 84, type: !2062, scopeLine: 84, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2223)
+!2221 = distinct !DISubprogram(name: "new<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4iter13Iter$LT$T$GT$3new17h45935e871f67cbafE", scope: !815, file: !2222, line: 84, type: !2062, scopeLine: 84, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2223)
 !2222 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/iter.rs", directory: "", checksumkind: CSK_MD5, checksum: "e411b17255ad853c98fae9ed49b09aee")
 !2223 = !{!2224, !2225, !2227}
 !2224 = !DILocalVariable(name: "slice", arg: 1, scope: !2221, file: !2222, line: 84, type: !323)
@@ -12198,12 +12199,12 @@ attributes #11 = { noreturn nounwind }
 !2228 = distinct !DILexicalBlock(scope: !2226, file: !2222, line: 90, column: 13)
 !2229 = !DILocation(line: 84, column: 23, scope: !2221)
 !2230 = !DILocation(line: 90, column: 17, scope: !2228)
-!2231 = !DILocalVariable(name: "self", arg: 1, scope: !2232, file: !1927, line: 476, type: !323)
-!2232 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$6as_ptr17h28bf56744c6c5137E", scope: !1127, file: !1927, line: 476, type: !2233, scopeLine: 476, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2235)
+!2231 = !DILocalVariable(name: "self", arg: 1, scope: !2232, file: !1927, line: 472, type: !323)
+!2232 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$6as_ptr17h7a881175eeda2d0eE", scope: !1127, file: !1927, line: 472, type: !2233, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2235)
 !2233 = !DISubroutineType(types: !2234)
 !2234 = !{!208, !323}
 !2235 = !{!2231}
-!2236 = !DILocation(line: 476, column: 25, scope: !2232, inlinedAt: !2237)
+!2236 = !DILocation(line: 472, column: 25, scope: !2232, inlinedAt: !2237)
 !2237 = distinct !DILocation(line: 85, column: 19, scope: !2221)
 !2238 = !DILocation(line: 85, column: 19, scope: !2221)
 !2239 = !DILocation(line: 85, column: 13, scope: !2226)
@@ -12220,21 +12221,21 @@ attributes #11 = { noreturn nounwind }
 !2250 = !DILocation(line: 465, column: 18, scope: !215, inlinedAt: !2248)
 !2251 = !DILocation(line: 91, column: 76, scope: !2226)
 !2252 = !DILocalVariable(name: "self", arg: 1, scope: !2253, file: !202, line: 1101, type: !208)
-!2253 = distinct !DISubprogram(name: "wrapping_byte_add<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$17wrapping_byte_add17hf340738ffcb21d64E", scope: !203, file: !202, line: 1101, type: !206, scopeLine: 1101, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2254)
+!2253 = distinct !DISubprogram(name: "wrapping_byte_add<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$17wrapping_byte_add17h2f1ef97cc26f1074E", scope: !203, file: !202, line: 1101, type: !206, scopeLine: 1101, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2254)
 !2254 = !{!2252, !2255}
 !2255 = !DILocalVariable(name: "count", arg: 2, scope: !2253, file: !202, line: 1101, type: !9)
 !2256 = !DILocation(line: 1101, column: 36, scope: !2253, inlinedAt: !2257)
 !2257 = distinct !DILocation(line: 91, column: 32, scope: !2226)
 !2258 = !DILocation(line: 1101, column: 42, scope: !2253, inlinedAt: !2257)
 !2259 = !DILocalVariable(name: "self", arg: 1, scope: !2260, file: !202, line: 58, type: !208)
-!2260 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h28d5ef9ccd9dd875E", scope: !203, file: !202, line: 58, type: !2261, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1243, retainedNodes: !2263)
+!2260 = distinct !DISubprogram(name: "cast<bootloader::bootinfo::memory_map::MemoryRegion, u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17hf035694269a6b3eaE", scope: !203, file: !202, line: 58, type: !2261, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1243, retainedNodes: !2263)
 !2261 = !DISubroutineType(types: !2262)
 !2262 = !{!1801, !208}
 !2263 = !{!2259}
 !2264 = !DILocation(line: 58, column: 26, scope: !2260, inlinedAt: !2265)
 !2265 = distinct !DILocation(line: 1102, column: 9, scope: !2253, inlinedAt: !2257)
 !2266 = !DILocalVariable(name: "self", arg: 1, scope: !2267, file: !202, line: 1080, type: !1801)
-!2267 = distinct !DISubprogram(name: "wrapping_add<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$12wrapping_add17h003dfca9a4d317ccE", scope: !203, file: !202, line: 1080, type: !2268, scopeLine: 1080, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !2270)
+!2267 = distinct !DISubprogram(name: "wrapping_add<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$12wrapping_add17hccde79e00212e1a6E", scope: !203, file: !202, line: 1080, type: !2268, scopeLine: 1080, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !2270)
 !2268 = !DISubroutineType(types: !2269)
 !2269 = !{!1801, !1801, !9}
 !2270 = !{!2266, !2271}
@@ -12243,7 +12244,7 @@ attributes #11 = { noreturn nounwind }
 !2273 = distinct !DILocation(line: 1102, column: 9, scope: !2253, inlinedAt: !2257)
 !2274 = !DILocation(line: 1080, column: 37, scope: !2267, inlinedAt: !2273)
 !2275 = !DILocalVariable(name: "self", arg: 1, scope: !2276, file: !202, line: 540, type: !1801)
-!2276 = distinct !DISubprogram(name: "wrapping_offset<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$15wrapping_offset17h29e079e701fae7b1E", scope: !203, file: !202, line: 540, type: !2277, scopeLine: 540, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !2279)
+!2276 = distinct !DISubprogram(name: "wrapping_offset<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$15wrapping_offset17h73e57315259be1b6E", scope: !203, file: !202, line: 540, type: !2277, scopeLine: 540, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !2279)
 !2277 = !DISubroutineType(types: !2278)
 !2278 = !{!1801, !1801, !218}
 !2279 = !{!2275, !2280}
@@ -12258,7 +12259,7 @@ attributes #11 = { noreturn nounwind }
 !2288 = !DILocation(line: 93, column: 64, scope: !2228)
 !2289 = !DILocation(line: 93, column: 13, scope: !2228)
 !2290 = !DILocation(line: 95, column: 6, scope: !2221)
-!2291 = distinct !DISubprogram(name: "insert_head<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort11insert_head17h198b56fb29fbeed4E", scope: !1154, file: !2292, line: 88, type: !2293, scopeLine: 88, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2295)
+!2291 = distinct !DISubprogram(name: "insert_head<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort11insert_head17h67550a7e9e4d71d0E", scope: !1154, file: !2292, line: 88, type: !2293, scopeLine: 88, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2295)
 !2292 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/sort.rs", directory: "", checksumkind: CSK_MD5, checksum: "2a4730537e81537c900c7577877ff201")
 !2293 = !DISubroutineType(types: !2294)
 !2294 = !{null, !354, !1124}
@@ -12267,7 +12268,7 @@ attributes #11 = { noreturn nounwind }
 !2297 = !DILocalVariable(name: "is_less", arg: 2, scope: !2291, file: !2292, line: 88, type: !1124)
 !2298 = !DILocalVariable(name: "arr_ptr", scope: !2299, file: !2292, line: 97, type: !272, align: 8)
 !2299 = distinct !DILexicalBlock(scope: !2291, file: !2292, line: 97, column: 13)
-!2300 = !DILocalVariable(name: "tmp", scope: !2301, file: !2292, line: 116, type: !645, align: 8)
+!2300 = !DILocalVariable(name: "tmp", scope: !2301, file: !2292, line: 116, type: !655, align: 8)
 !2301 = distinct !DILexicalBlock(scope: !2299, file: !2292, line: 116, column: 13)
 !2302 = !DILocalVariable(name: "hole", scope: !2303, file: !2292, line: 128, type: !1153, align: 8)
 !2303 = distinct !DILexicalBlock(scope: !2301, file: !2292, line: 128, column: 13)
@@ -12287,7 +12288,7 @@ attributes #11 = { noreturn nounwind }
 !2317 = !DILocation(line: 96, column: 12, scope: !2291)
 !2318 = !DILocation(line: 92, column: 19, scope: !2291)
 !2319 = !DILocation(line: 141, column: 2, scope: !2291)
-!2320 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !2321)
+!2320 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !2321)
 !2321 = distinct !DILocation(line: 97, column: 27, scope: !2291)
 !2322 = !DILocation(line: 97, column: 27, scope: !2291)
 !2323 = !DILocation(line: 97, column: 17, scope: !2299)
@@ -12295,14 +12296,14 @@ attributes #11 = { noreturn nounwind }
 !2325 = !DILocation(line: 70, column: 22, scope: !1015, inlinedAt: !2326)
 !2326 = distinct !DILocation(line: 116, column: 23, scope: !2299)
 !2327 = !DILocation(line: 71, column: 9, scope: !1015, inlinedAt: !2326)
-!2328 = !DILocalVariable(name: "self", arg: 1, scope: !2329, file: !1016, line: 153, type: !2333)
-!2329 = distinct !DISubprogram(name: "deref<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN91_$LT$core..mem..manually_drop..ManuallyDrop$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17hae5f84e26ba35ad0E", scope: !2330, file: !1016, line: 153, type: !2331, scopeLine: 153, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2334)
-!2330 = !DINamespace(name: "{impl#2}", scope: !646)
+!2328 = !DILocalVariable(name: "self", arg: 1, scope: !2329, file: !1016, line: 152, type: !2333)
+!2329 = distinct !DISubprogram(name: "deref<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN91_$LT$core..mem..manually_drop..ManuallyDrop$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17he20bab7a1287e66bE", scope: !2330, file: !1016, line: 152, type: !2331, scopeLine: 152, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2334)
+!2330 = !DINamespace(name: "{impl#2}", scope: !656)
 !2331 = !DISubroutineType(types: !2332)
 !2332 = !{!12, !2333}
-!2333 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::mem::manually_drop::ManuallyDrop<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !645, size: 64, align: 64, dwarfAddressSpace: 0)
+!2333 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::mem::manually_drop::ManuallyDrop<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !655, size: 64, align: 64, dwarfAddressSpace: 0)
 !2334 = !{!2328}
-!2335 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !2336)
+!2335 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !2336)
 !2336 = distinct !DILocation(line: 128, column: 50, scope: !2301)
 !2337 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !2338)
 !2338 = distinct !DILocation(line: 128, column: 62, scope: !2301)
@@ -12334,7 +12335,7 @@ attributes #11 = { noreturn nounwind }
 !2364 = !DILocation(line: 131, column: 17, scope: !2307)
 !2365 = !DILocation(line: 132, column: 30, scope: !2307)
 !2366 = !DILocation(line: 132, column: 29, scope: !2307)
-!2367 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !2368)
+!2367 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !2368)
 !2368 = distinct !DILocation(line: 132, column: 51, scope: !2307)
 !2369 = !DILocation(line: 132, column: 21, scope: !2307)
 !2370 = !DILocation(line: 132, column: 20, scope: !2307)
@@ -12362,7 +12363,7 @@ attributes #11 = { noreturn nounwind }
 !2392 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !2391)
 !2393 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !2391)
 !2394 = !DILocation(line: 136, column: 17, scope: !2307)
-!2395 = distinct !DISubprogram(name: "insert_tail<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort11insert_tail17h1514de253c6181e8E", scope: !1154, file: !2292, line: 35, type: !2293, scopeLine: 35, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2396)
+!2395 = distinct !DISubprogram(name: "insert_tail<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort11insert_tail17hd0bdf14e6c88c9a4E", scope: !1154, file: !2292, line: 35, type: !2293, scopeLine: 35, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2396)
 !2396 = !{!2397, !2398, !2399, !2401, !2403, !2405, !2407, !2409, !2419, !2421}
 !2397 = !DILocalVariable(name: "v", arg: 1, scope: !2395, file: !2292, line: 35, type: !354)
 !2398 = !DILocalVariable(name: "is_less", arg: 2, scope: !2395, file: !2292, line: 35, type: !1124)
@@ -12372,13 +12373,13 @@ attributes #11 = { noreturn nounwind }
 !2402 = distinct !DILexicalBlock(scope: !2400, file: !2292, line: 42, column: 5)
 !2403 = !DILocalVariable(name: "i_ptr", scope: !2404, file: !2292, line: 47, type: !272, align: 8)
 !2404 = distinct !DILexicalBlock(scope: !2402, file: !2292, line: 47, column: 9)
-!2405 = !DILocalVariable(name: "tmp", scope: !2406, file: !2292, line: 56, type: !645, align: 8)
+!2405 = !DILocalVariable(name: "tmp", scope: !2406, file: !2292, line: 56, type: !655, align: 8)
 !2406 = distinct !DILexicalBlock(scope: !2404, file: !2292, line: 56, column: 13)
 !2407 = !DILocalVariable(name: "hole", scope: !2408, file: !2292, line: 67, type: !1153, align: 8)
 !2408 = distinct !DILexicalBlock(scope: !2406, file: !2292, line: 67, column: 13)
 !2409 = !DILocalVariable(name: "iter", scope: !2410, file: !2292, line: 71, type: !2411, align: 8)
 !2410 = distinct !DILexicalBlock(scope: !2408, file: !2292, line: 71, column: 13)
-!2411 = !DICompositeType(tag: DW_TAG_structure_type, name: "Rev<core::ops::range::Range<usize>>", scope: !2412, file: !2, size: 128, align: 64, elements: !2415, templateParams: !2417, identifier: "806d8e6b3b494f74d7573b781c2c7f3e")
+!2411 = !DICompositeType(tag: DW_TAG_structure_type, name: "Rev<core::ops::range::Range<usize>>", scope: !2412, file: !2, size: 128, align: 64, elements: !2415, templateParams: !2417, identifier: "4c2b929ffa19c72bc7bd92327c5db545")
 !2412 = !DINamespace(name: "rev", scope: !2413)
 !2413 = !DINamespace(name: "adapters", scope: !2414)
 !2414 = !DINamespace(name: "iter", scope: !143)
@@ -12396,7 +12397,7 @@ attributes #11 = { noreturn nounwind }
 !2426 = !DILocation(line: 67, column: 17, scope: !2408)
 !2427 = !DILocation(line: 71, column: 22, scope: !2410)
 !2428 = !DILocation(line: 39, column: 5, scope: !2395)
-!2429 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !2430)
+!2429 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !2430)
 !2430 = distinct !DILocation(line: 41, column: 19, scope: !2395)
 !2431 = !DILocation(line: 41, column: 19, scope: !2395)
 !2432 = !DILocation(line: 41, column: 9, scope: !2400)
@@ -12430,7 +12431,7 @@ attributes #11 = { noreturn nounwind }
 !2460 = !DILocation(line: 70, column: 22, scope: !1015, inlinedAt: !2461)
 !2461 = distinct !DILocation(line: 56, column: 23, scope: !2404)
 !2462 = !DILocation(line: 71, column: 9, scope: !1015, inlinedAt: !2461)
-!2463 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !2464)
+!2463 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !2464)
 !2464 = distinct !DILocation(line: 67, column: 50, scope: !2406)
 !2465 = !DILocation(line: 1098, column: 29, scope: !2114, inlinedAt: !2466)
 !2466 = distinct !DILocation(line: 67, column: 62, scope: !2406)
@@ -12462,14 +12463,14 @@ attributes #11 = { noreturn nounwind }
 !2492 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !2490)
 !2493 = !DILocation(line: 72, column: 29, scope: !2420)
 !2494 = !DILocation(line: 72, column: 21, scope: !2422)
-!2495 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !2496)
+!2495 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !2496)
 !2496 = distinct !DILocation(line: 73, column: 30, scope: !2422)
 !2497 = !DILocation(line: 73, column: 21, scope: !2422)
 !2498 = !DILocation(line: 73, column: 20, scope: !2422)
 !2499 = !DILocation(line: 77, column: 49, scope: !2422)
 !2500 = !DILocation(line: 77, column: 17, scope: !2422)
 !2501 = !DILocation(line: 78, column: 17, scope: !2422)
-!2502 = distinct !DISubprogram(name: "choose_pivot<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot17h7431f8aec081fae7E", scope: !1154, file: !2292, line: 722, type: !2503, scopeLine: 722, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2505)
+!2502 = distinct !DISubprogram(name: "choose_pivot<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot17hdf0d84ebbadba3eeE", scope: !1154, file: !2292, line: 722, type: !2503, scopeLine: 722, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2505)
 !2503 = !DISubroutineType(types: !2504)
 !2504 = !{!1042, !354, !1124}
 !2505 = !{!2506, !2507, !2508, !2510, !2512, !2514, !2516, !2518, !2527, !2533}
@@ -12487,7 +12488,7 @@ attributes #11 = { noreturn nounwind }
 !2517 = distinct !DILexicalBlock(scope: !2515, file: !2292, line: 740, column: 5)
 !2518 = !DILocalVariable(name: "sort2", scope: !2519, file: !2292, line: 750, type: !2520, align: 8)
 !2519 = distinct !DILexicalBlock(scope: !2517, file: !2292, line: 750, column: 9)
-!2520 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !2521, file: !2, size: 256, align: 64, elements: !2522, templateParams: !24, identifier: "b4d1262cbbb46edbfe2dd2abb3943e25")
+!2520 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !2521, file: !2, size: 256, align: 64, elements: !2522, templateParams: !24, identifier: "90d09a9262e85e78768ec4b59915e6f")
 !2521 = !DINamespace(name: "choose_pivot", scope: !1154)
 !2522 = !{!2523, !2524, !2525}
 !2523 = !DIDerivedType(tag: DW_TAG_member, name: "_ref__is_less", scope: !2520, file: !2, baseType: !1124, size: 64, align: 64, offset: 128)
@@ -12496,13 +12497,13 @@ attributes #11 = { noreturn nounwind }
 !2526 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut usize", baseType: !9, size: 64, align: 64, dwarfAddressSpace: 0)
 !2527 = !DILocalVariable(name: "sort3", scope: !2528, file: !2292, line: 758, type: !2529, align: 8)
 !2528 = distinct !DILexicalBlock(scope: !2519, file: !2292, line: 758, column: 9)
-!2529 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#1}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !2521, file: !2, size: 64, align: 64, elements: !2530, templateParams: !24, identifier: "e31d7431e5e5cec791461c4d87398da5")
+!2529 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#1}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !2521, file: !2, size: 64, align: 64, elements: !2530, templateParams: !24, identifier: "526ef252d368ef4b9b538dd6a17260a")
 !2530 = !{!2531}
 !2531 = !DIDerivedType(tag: DW_TAG_member, name: "_ref__sort2", scope: !2529, file: !2, baseType: !2532, size: 64, align: 64)
 !2532 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::slice::sort::choose_pivot::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", baseType: !2520, size: 64, align: 64, dwarfAddressSpace: 0)
 !2533 = !DILocalVariable(name: "sort_adjacent", scope: !2534, file: !2292, line: 766, type: !2535, align: 8)
 !2534 = distinct !DILexicalBlock(scope: !2528, file: !2292, line: 766, column: 13)
-!2535 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#2}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !2521, file: !2, size: 64, align: 64, elements: !2536, templateParams: !24, identifier: "bc6f497d0ac04e2494df9af8d2e28e76")
+!2535 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#2}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !2521, file: !2, size: 64, align: 64, elements: !2536, templateParams: !24, identifier: "57e6fdefb5713be6897f4537047111fa")
 !2536 = !{!2537}
 !2537 = !DIDerivedType(tag: DW_TAG_member, name: "_ref__sort3", scope: !2535, file: !2, baseType: !2538, size: 64, align: 64)
 !2538 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::slice::sort::choose_pivot::{closure_env#1}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", baseType: !2529, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -12540,63 +12541,63 @@ attributes #11 = { noreturn nounwind }
 !2570 = !DILocation(line: 789, column: 2, scope: !2502)
 !2571 = !DILocation(line: 787, column: 20, scope: !2517)
 !2572 = !DILocation(line: 787, column: 9, scope: !2517)
-!2573 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h2477a29118dc29d5E", scope: !2521, file: !2292, line: 750, type: !2574, scopeLine: 750, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2576)
+!2573 = distinct !DISubprogram(name: "{closure#2}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h14927ba65a6970e2E", scope: !2521, file: !2292, line: 766, type: !2574, scopeLine: 766, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2577)
 !2574 = !DISubroutineType(types: !2575)
-!2575 = !{null, !2532, !2526, !2526}
-!2576 = !{!2577, !2578, !2579, !2580, !2581}
-!2577 = !DILocalVariable(name: "a", arg: 2, scope: !2573, file: !2292, line: 750, type: !2526)
-!2578 = !DILocalVariable(name: "b", arg: 3, scope: !2573, file: !2292, line: 750, type: !2526)
-!2579 = !DILocalVariable(name: "is_less", scope: !2573, file: !2292, line: 722, type: !1125, align: 8)
-!2580 = !DILocalVariable(name: "v", scope: !2573, file: !2292, line: 722, type: !13, align: 8)
-!2581 = !DILocalVariable(name: "swaps", scope: !2573, file: !2292, line: 740, type: !9, align: 8)
-!2582 = !DILocation(line: 722, column: 36, scope: !2573)
-!2583 = !DILocation(line: 722, column: 23, scope: !2573)
-!2584 = !DILocation(line: 740, column: 13, scope: !2573)
-!2585 = !DILocation(line: 750, column: 26, scope: !2573)
-!2586 = !DILocation(line: 750, column: 41, scope: !2573)
-!2587 = !DILocation(line: 751, column: 16, scope: !2573)
-!2588 = !DILocation(line: 751, column: 24, scope: !2573)
-!2589 = !DILocation(line: 751, column: 40, scope: !2573)
-!2590 = !DILocation(line: 751, column: 45, scope: !2573)
-!2591 = !DILocation(line: 751, column: 61, scope: !2573)
-!2592 = !DILocation(line: 755, column: 10, scope: !2573)
-!2593 = !DILocation(line: 752, column: 17, scope: !2573)
-!2594 = !DILocation(line: 753, column: 17, scope: !2573)
-!2595 = !DILocation(line: 751, column: 13, scope: !2573)
-!2596 = distinct !DISubprogram(name: "{closure#1}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h3a650c08162e1ac4E", scope: !2521, file: !2292, line: 758, type: !2597, scopeLine: 758, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2599)
-!2597 = !DISubroutineType(types: !2598)
-!2598 = !{null, !2538, !2526, !2526, !2526}
-!2599 = !{!2600, !2601, !2602, !2603}
-!2600 = !DILocalVariable(name: "a", arg: 2, scope: !2596, file: !2292, line: 758, type: !2526)
-!2601 = !DILocalVariable(name: "b", arg: 3, scope: !2596, file: !2292, line: 758, type: !2526)
-!2602 = !DILocalVariable(name: "c", arg: 4, scope: !2596, file: !2292, line: 758, type: !2526)
-!2603 = !DILocalVariable(name: "sort2", scope: !2596, file: !2292, line: 750, type: !2520, align: 8)
-!2604 = !DILocation(line: 750, column: 17, scope: !2596)
-!2605 = !DILocation(line: 758, column: 26, scope: !2596)
-!2606 = !DILocation(line: 758, column: 41, scope: !2596)
-!2607 = !DILocation(line: 758, column: 56, scope: !2596)
-!2608 = !DILocation(line: 759, column: 13, scope: !2596)
-!2609 = !DILocation(line: 760, column: 13, scope: !2596)
-!2610 = !DILocation(line: 761, column: 13, scope: !2596)
-!2611 = !DILocation(line: 762, column: 10, scope: !2596)
-!2612 = distinct !DISubprogram(name: "{closure#2}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h61f2be3fe05b648dE", scope: !2521, file: !2292, line: 766, type: !2613, scopeLine: 766, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2616)
-!2613 = !DISubroutineType(types: !2614)
-!2614 = !{null, !2615, !2526}
-!2615 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::slice::sort::choose_pivot::{closure_env#2}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", baseType: !2535, size: 64, align: 64, dwarfAddressSpace: 0)
-!2616 = !{!2617, !2618, !2619}
-!2617 = !DILocalVariable(name: "a", arg: 2, scope: !2612, file: !2292, line: 766, type: !2526)
-!2618 = !DILocalVariable(name: "sort3", scope: !2612, file: !2292, line: 758, type: !2529, align: 8)
-!2619 = !DILocalVariable(name: "tmp", scope: !2620, file: !2292, line: 767, type: !9, align: 8)
-!2620 = distinct !DILexicalBlock(scope: !2612, file: !2292, line: 767, column: 17)
-!2621 = !DILocation(line: 758, column: 17, scope: !2612)
-!2622 = !DILocation(line: 766, column: 38, scope: !2612)
-!2623 = !DILocation(line: 767, column: 27, scope: !2612)
-!2624 = !DILocation(line: 767, column: 21, scope: !2620)
-!2625 = !DILocation(line: 768, column: 17, scope: !2620)
-!2626 = !DILocation(line: 768, column: 28, scope: !2620)
-!2627 = !DILocation(line: 768, column: 47, scope: !2620)
-!2628 = !DILocation(line: 769, column: 14, scope: !2612)
-!2629 = distinct !DISubprogram(name: "break_patterns<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4sort14break_patterns17h72794f22b3ba7970E", scope: !1154, file: !2292, line: 673, type: !2092, scopeLine: 673, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2630)
+!2575 = !{null, !2576, !2526}
+!2576 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::slice::sort::choose_pivot::{closure_env#2}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", baseType: !2535, size: 64, align: 64, dwarfAddressSpace: 0)
+!2577 = !{!2578, !2579, !2580}
+!2578 = !DILocalVariable(name: "a", arg: 2, scope: !2573, file: !2292, line: 766, type: !2526)
+!2579 = !DILocalVariable(name: "sort3", scope: !2573, file: !2292, line: 758, type: !2529, align: 8)
+!2580 = !DILocalVariable(name: "tmp", scope: !2581, file: !2292, line: 767, type: !9, align: 8)
+!2581 = distinct !DILexicalBlock(scope: !2573, file: !2292, line: 767, column: 17)
+!2582 = !DILocation(line: 758, column: 17, scope: !2573)
+!2583 = !DILocation(line: 766, column: 38, scope: !2573)
+!2584 = !DILocation(line: 767, column: 27, scope: !2573)
+!2585 = !DILocation(line: 767, column: 21, scope: !2581)
+!2586 = !DILocation(line: 768, column: 17, scope: !2581)
+!2587 = !DILocation(line: 768, column: 28, scope: !2581)
+!2588 = !DILocation(line: 768, column: 47, scope: !2581)
+!2589 = !DILocation(line: 769, column: 14, scope: !2573)
+!2590 = distinct !DISubprogram(name: "{closure#1}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h248303348bad4de6E", scope: !2521, file: !2292, line: 758, type: !2591, scopeLine: 758, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2593)
+!2591 = !DISubroutineType(types: !2592)
+!2592 = !{null, !2538, !2526, !2526, !2526}
+!2593 = !{!2594, !2595, !2596, !2597}
+!2594 = !DILocalVariable(name: "a", arg: 2, scope: !2590, file: !2292, line: 758, type: !2526)
+!2595 = !DILocalVariable(name: "b", arg: 3, scope: !2590, file: !2292, line: 758, type: !2526)
+!2596 = !DILocalVariable(name: "c", arg: 4, scope: !2590, file: !2292, line: 758, type: !2526)
+!2597 = !DILocalVariable(name: "sort2", scope: !2590, file: !2292, line: 750, type: !2520, align: 8)
+!2598 = !DILocation(line: 750, column: 17, scope: !2590)
+!2599 = !DILocation(line: 758, column: 26, scope: !2590)
+!2600 = !DILocation(line: 758, column: 41, scope: !2590)
+!2601 = !DILocation(line: 758, column: 56, scope: !2590)
+!2602 = !DILocation(line: 759, column: 13, scope: !2590)
+!2603 = !DILocation(line: 760, column: 13, scope: !2590)
+!2604 = !DILocation(line: 761, column: 13, scope: !2590)
+!2605 = !DILocation(line: 762, column: 10, scope: !2590)
+!2606 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort12choose_pivot28_$u7b$$u7b$closure$u7d$$u7d$17h9fc612905aef3d78E", scope: !2521, file: !2292, line: 750, type: !2607, scopeLine: 750, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2609)
+!2607 = !DISubroutineType(types: !2608)
+!2608 = !{null, !2532, !2526, !2526}
+!2609 = !{!2610, !2611, !2612, !2613, !2614}
+!2610 = !DILocalVariable(name: "a", arg: 2, scope: !2606, file: !2292, line: 750, type: !2526)
+!2611 = !DILocalVariable(name: "b", arg: 3, scope: !2606, file: !2292, line: 750, type: !2526)
+!2612 = !DILocalVariable(name: "is_less", scope: !2606, file: !2292, line: 722, type: !1125, align: 8)
+!2613 = !DILocalVariable(name: "v", scope: !2606, file: !2292, line: 722, type: !13, align: 8)
+!2614 = !DILocalVariable(name: "swaps", scope: !2606, file: !2292, line: 740, type: !9, align: 8)
+!2615 = !DILocation(line: 722, column: 36, scope: !2606)
+!2616 = !DILocation(line: 722, column: 23, scope: !2606)
+!2617 = !DILocation(line: 740, column: 13, scope: !2606)
+!2618 = !DILocation(line: 750, column: 26, scope: !2606)
+!2619 = !DILocation(line: 750, column: 41, scope: !2606)
+!2620 = !DILocation(line: 751, column: 16, scope: !2606)
+!2621 = !DILocation(line: 751, column: 24, scope: !2606)
+!2622 = !DILocation(line: 751, column: 40, scope: !2606)
+!2623 = !DILocation(line: 751, column: 45, scope: !2606)
+!2624 = !DILocation(line: 751, column: 61, scope: !2606)
+!2625 = !DILocation(line: 755, column: 10, scope: !2606)
+!2626 = !DILocation(line: 752, column: 17, scope: !2606)
+!2627 = !DILocation(line: 753, column: 17, scope: !2606)
+!2628 = !DILocation(line: 751, column: 13, scope: !2606)
+!2629 = distinct !DISubprogram(name: "break_patterns<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4sort14break_patterns17h82cd5aee6393f6f0E", scope: !1154, file: !2292, line: 673, type: !2092, scopeLine: 673, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2630)
 !2630 = !{!2631, !2632, !2634, !2636, !2642, !2644, !2646, !2648, !2650}
 !2631 = !DILocalVariable(name: "v", arg: 1, scope: !2629, file: !2292, line: 673, type: !354)
 !2632 = !DILocalVariable(name: "len", scope: !2633, file: !2292, line: 674, type: !9, align: 8)
@@ -12605,7 +12606,7 @@ attributes #11 = { noreturn nounwind }
 !2635 = distinct !DILexicalBlock(scope: !2633, file: !2292, line: 676, column: 9)
 !2636 = !DILocalVariable(name: "gen_usize", scope: !2637, file: !2292, line: 677, type: !2638, align: 8)
 !2637 = distinct !DILexicalBlock(scope: !2635, file: !2292, line: 677, column: 9)
-!2638 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !2639, file: !2, size: 64, align: 64, elements: !2640, templateParams: !24, identifier: "8598398d4dac4832872f1ea1f060b03f")
+!2638 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion>", scope: !2639, file: !2, size: 64, align: 64, elements: !2640, templateParams: !24, identifier: "535d110753b07b00c3aab3c518eb77eb")
 !2639 = !DINamespace(name: "break_patterns", scope: !1154)
 !2640 = !{!2641}
 !2641 = !DIDerivedType(tag: DW_TAG_member, name: "_ref__seed", scope: !2638, file: !2, baseType: !2526, size: 64, align: 64)
@@ -12646,7 +12647,7 @@ attributes #11 = { noreturn nounwind }
 !2676 = !DILocation(line: 710, column: 13, scope: !2651)
 !2677 = !DILocation(line: 714, column: 33, scope: !2651)
 !2678 = !DILocation(line: 714, column: 13, scope: !2651)
-!2679 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4sort14break_patterns28_$u7b$$u7b$closure$u7d$$u7d$17h8f558857698948e1E", scope: !2639, file: !2292, line: 677, type: !2680, scopeLine: 677, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2683)
+!2679 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4sort14break_patterns28_$u7b$$u7b$closure$u7d$$u7d$17h375e7847504c062bE", scope: !2639, file: !2292, line: 677, type: !2680, scopeLine: 677, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !2683)
 !2680 = !DISubroutineType(types: !2681)
 !2681 = !{!9, !2682}
 !2682 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::slice::sort::break_patterns::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion>", baseType: !2638, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -12682,7 +12683,7 @@ attributes #11 = { noreturn nounwind }
 !2712 = !DILocation(line: 684, column: 17, scope: !2686)
 !2713 = !DILocation(line: 685, column: 17, scope: !2686)
 !2714 = !DILocation(line: 694, column: 10, scope: !2679)
-!2715 = distinct !DISubprogram(name: "partition_equal<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort15partition_equal17hb4484c2331abd190E", scope: !1154, file: !2292, line: 615, type: !2716, scopeLine: 615, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2718)
+!2715 = distinct !DISubprogram(name: "partition_equal<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort15partition_equal17hba39e6a444f93f25E", scope: !1154, file: !2292, line: 615, type: !2716, scopeLine: 615, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2718)
 !2716 = !DISubroutineType(types: !2717)
 !2717 = !{!9, !354, !9, !1124}
 !2718 = !{!2719, !2720, !2721, !2722, !2724, !2725, !2727, !2729, !2731, !2733, !2735, !2737}
@@ -12694,7 +12695,7 @@ attributes #11 = { noreturn nounwind }
 !2724 = !DILocalVariable(name: "v", scope: !2723, file: !2292, line: 621, type: !354, align: 8)
 !2725 = !DILocalVariable(name: "pivot", scope: !2726, file: !2292, line: 622, type: !979, align: 8)
 !2726 = distinct !DILexicalBlock(scope: !2723, file: !2292, line: 622, column: 5)
-!2727 = !DILocalVariable(name: "tmp", scope: !2728, file: !2292, line: 627, type: !645, align: 8)
+!2727 = !DILocalVariable(name: "tmp", scope: !2728, file: !2292, line: 627, type: !655, align: 8)
 !2728 = distinct !DILexicalBlock(scope: !2726, file: !2292, line: 627, column: 5)
 !2729 = !DILocalVariable(name: "_pivot_guard", scope: !2730, file: !2292, line: 628, type: !1153, align: 8)
 !2730 = distinct !DILexicalBlock(scope: !2728, file: !2292, line: 628, column: 5)
@@ -12726,10 +12727,10 @@ attributes #11 = { noreturn nounwind }
 !2756 = !DILocation(line: 70, column: 22, scope: !1015, inlinedAt: !2757)
 !2757 = distinct !DILocation(line: 627, column: 15, scope: !2726)
 !2758 = !DILocation(line: 71, column: 9, scope: !1015, inlinedAt: !2757)
-!2759 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !2760)
+!2759 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !2760)
 !2760 = distinct !DILocation(line: 628, column: 46, scope: !2728)
 !2761 = !DILocation(line: 628, column: 24, scope: !2728)
-!2762 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !2763)
+!2762 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !2763)
 !2763 = distinct !DILocation(line: 629, column: 18, scope: !2730)
 !2764 = !DILocation(line: 629, column: 17, scope: !2730)
 !2765 = !DILocation(line: 629, column: 9, scope: !2732)
@@ -12757,7 +12758,7 @@ attributes #11 = { noreturn nounwind }
 !2787 = !DILocation(line: 664, column: 5, scope: !2736)
 !2788 = !DILocation(line: 668, column: 1, scope: !2728)
 !2789 = !DILocation(line: 668, column: 2, scope: !2715)
-!2790 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !2791)
+!2790 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !2791)
 !2791 = distinct !DILocation(line: 657, column: 23, scope: !2736)
 !2792 = !DILocation(line: 657, column: 23, scope: !2736)
 !2793 = !DILocation(line: 657, column: 17, scope: !2738)
@@ -12779,7 +12780,7 @@ attributes #11 = { noreturn nounwind }
 !2809 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !2807)
 !2810 = !DILocation(line: 658, column: 13, scope: !2738)
 !2811 = !DILocation(line: 659, column: 13, scope: !2738)
-!2812 = distinct !DISubprogram(name: "partition_in_blocks<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort19partition_in_blocks17hc74552b90147a34bE", scope: !1154, file: !2292, line: 302, type: !2813, scopeLine: 302, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2815)
+!2812 = distinct !DISubprogram(name: "partition_in_blocks<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort19partition_in_blocks17h0278288873d9962cE", scope: !1154, file: !2292, line: 302, type: !2813, scopeLine: 302, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !2815)
 !2813 = !DISubroutineType(types: !2814)
 !2814 = !{!9, !354, !12, !1124}
 !2815 = !{!2816, !2817, !2818, !2819, !2821, !2823, !2825, !2827, !2839, !2841, !2843, !2845, !2847, !2849, !2851, !2853, !2855, !2857, !2859, !2861, !2863, !2865, !2867, !2869, !2871, !2876, !2877, !2880, !2883, !2884}
@@ -12797,11 +12798,11 @@ attributes #11 = { noreturn nounwind }
 !2827 = !DILocalVariable(name: "offsets_l", scope: !2828, file: !2292, line: 327, type: !2829, align: 1)
 !2828 = distinct !DILexicalBlock(scope: !2826, file: !2292, line: 327, column: 5)
 !2829 = !DICompositeType(tag: DW_TAG_array_type, baseType: !2830, size: 1024, align: 8, elements: !2837)
-!2830 = !DICompositeType(tag: DW_TAG_union_type, name: "MaybeUninit<u8>", scope: !640, file: !2, size: 8, align: 8, elements: !2831, templateParams: !1614, identifier: "c2b6b430daea55c1f18c1ee6e9c8497")
+!2830 = !DICompositeType(tag: DW_TAG_union_type, name: "MaybeUninit<u8>", scope: !650, file: !2, size: 8, align: 8, elements: !2831, templateParams: !1614, identifier: "7ba64f91850b41afcac4bab911fa4a75")
 !2831 = !{!2832, !2833}
 !2832 = !DIDerivedType(tag: DW_TAG_member, name: "uninit", scope: !2830, file: !2, baseType: !7, align: 8)
 !2833 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !2830, file: !2, baseType: !2834, size: 8, align: 8)
-!2834 = !DICompositeType(tag: DW_TAG_structure_type, name: "ManuallyDrop<u8>", scope: !646, file: !2, size: 8, align: 8, elements: !2835, templateParams: !1614, identifier: "9ec356655a374a7f97b9d9c2f5c77c8f")
+!2834 = !DICompositeType(tag: DW_TAG_structure_type, name: "ManuallyDrop<u8>", scope: !656, file: !2, size: 8, align: 8, elements: !2835, templateParams: !1614, identifier: "3a59387e616300e9bc86fad0759bcf82")
 !2835 = !{!2836}
 !2836 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !2834, file: !2, baseType: !123, size: 8, align: 8)
 !2837 = !{!2838}
@@ -12876,18 +12877,18 @@ attributes #11 = { noreturn nounwind }
 !2906 = !DILocation(line: 468, column: 26, scope: !2870)
 !2907 = !DILocation(line: 514, column: 9, scope: !2878)
 !2908 = !DILocation(line: 537, column: 9, scope: !2885)
-!2909 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !2910)
+!2909 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !2910)
 !2910 = distinct !DILocation(line: 323, column: 17, scope: !2812)
 !2911 = !DILocation(line: 323, column: 17, scope: !2812)
 !2912 = !DILocation(line: 324, column: 23, scope: !2820)
 !2913 = !DILocalVariable(name: "addr", arg: 1, scope: !2914, file: !1149, line: 593, type: !9)
-!2914 = distinct !DISubprogram(name: "invalid_mut<()>", linkageName: "_ZN4core3ptr11invalid_mut17h6d2c90e8551c7310E", scope: !205, file: !1149, line: 593, type: !2915, scopeLine: 593, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1735, retainedNodes: !2917)
+!2914 = distinct !DISubprogram(name: "invalid_mut<()>", linkageName: "_ZN4core3ptr11invalid_mut17h427802ab5f191e78E", scope: !205, file: !1149, line: 593, type: !2915, scopeLine: 593, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1735, retainedNodes: !2917)
 !2915 = !DISubroutineType(types: !2916)
 !2916 = !{!1292, !9}
 !2917 = !{!2913}
 !2918 = !DILocation(line: 593, column: 29, scope: !2914, inlinedAt: !2919)
 !2919 = distinct !DILocation(line: 537, column: 24, scope: !2920, inlinedAt: !2923)
-!2920 = distinct !DISubprogram(name: "null_mut<u8>", linkageName: "_ZN4core3ptr8null_mut17hd591c1995b646d82E", scope: !205, file: !1149, line: 536, type: !2921, scopeLine: 536, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !24)
+!2920 = distinct !DISubprogram(name: "null_mut<u8>", linkageName: "_ZN4core3ptr8null_mut17h50f58769239e0a9aE", scope: !205, file: !1149, line: 536, type: !2921, scopeLine: 536, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !24)
 !2921 = !DISubroutineType(types: !2922)
 !2922 = !{!1178}
 !2923 = distinct !DILocation(line: 325, column: 23, scope: !2822)
@@ -12899,7 +12900,7 @@ attributes #11 = { noreturn nounwind }
 !2929 = !DILocation(line: 537, column: 5, scope: !2920, inlinedAt: !2928)
 !2930 = !DILocation(line: 326, column: 21, scope: !2824)
 !2931 = !DILocation(line: 315, column: 6, scope: !2932, inlinedAt: !2935)
-!2932 = distinct !DISubprogram(name: "uninit<u8>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6uninit17h9e70b74a21dde29eE", scope: !2830, file: !1452, line: 313, type: !2933, scopeLine: 313, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !24)
+!2932 = distinct !DISubprogram(name: "uninit<u8>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$6uninit17h16b3d2362186524dE", scope: !2830, file: !1459, line: 313, type: !2933, scopeLine: 313, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !24)
 !2933 = !DISubroutineType(types: !2934)
 !2934 = !{!2830}
 !2935 = distinct !DILocation(line: 327, column: 26, scope: !2826)
@@ -12970,11 +12971,11 @@ attributes #11 = { noreturn nounwind }
 !3000 = !DILocation(line: 374, column: 52, scope: !2852)
 !3001 = !DILocation(line: 403, column: 12, scope: !2850)
 !3002 = !DILocation(line: 403, column: 23, scope: !2850)
-!3003 = !DILocalVariable(name: "this", arg: 1, scope: !3004, file: !1452, line: 1012, type: !3007)
-!3004 = distinct !DISubprogram(name: "slice_as_mut_ptr<u8>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$16slice_as_mut_ptr17h9dfdc7c40b2ded0eE", scope: !2830, file: !1452, line: 1012, type: !3005, scopeLine: 1012, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3012)
+!3003 = !DILocalVariable(name: "this", arg: 1, scope: !3004, file: !1459, line: 1012, type: !3007)
+!3004 = distinct !DISubprogram(name: "slice_as_mut_ptr<u8>", linkageName: "_ZN4core3mem12maybe_uninit20MaybeUninit$LT$T$GT$16slice_as_mut_ptr17hef6a8b7b20f21739E", scope: !2830, file: !1459, line: 1012, type: !3005, scopeLine: 1012, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3012)
 !3005 = !DISubroutineType(types: !3006)
 !3006 = !{!1178, !3007}
-!3007 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut [core::mem::maybe_uninit::MaybeUninit<u8>]", file: !2, size: 128, align: 64, elements: !3008, templateParams: !24, identifier: "94bd6238f8fb4bc167fbf872f9366381")
+!3007 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut [core::mem::maybe_uninit::MaybeUninit<u8>]", file: !2, size: 128, align: 64, elements: !3008, templateParams: !24, identifier: "94413d7fee7e6b2ad79db785a2a021b")
 !3008 = !{!3009, !3011}
 !3009 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !3007, file: !2, baseType: !3010, size: 64, align: 64)
 !3010 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !2830, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -12982,15 +12983,15 @@ attributes #11 = { noreturn nounwind }
 !3012 = !{!3003}
 !3013 = !DILocation(line: 1012, column: 35, scope: !3004, inlinedAt: !3014)
 !3014 = distinct !DILocation(line: 379, column: 23, scope: !2850)
-!3015 = !DILocalVariable(name: "self", arg: 1, scope: !3016, file: !1927, line: 506, type: !3007)
-!3016 = distinct !DISubprogram(name: "as_mut_ptr<core::mem::maybe_uninit::MaybeUninit<u8>>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17ha51344aa520f5d3bE", scope: !1127, file: !1927, line: 506, type: !3017, scopeLine: 506, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3021, retainedNodes: !3020)
+!3015 = !DILocalVariable(name: "self", arg: 1, scope: !3016, file: !1927, line: 502, type: !3007)
+!3016 = distinct !DISubprogram(name: "as_mut_ptr<core::mem::maybe_uninit::MaybeUninit<u8>>", linkageName: "_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$10as_mut_ptr17h8f3d8927823c30d3E", scope: !1127, file: !1927, line: 502, type: !3017, scopeLine: 502, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3021, retainedNodes: !3020)
 !3017 = !DISubroutineType(types: !3018)
 !3018 = !{!3019, !3007}
 !3019 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::mem::maybe_uninit::MaybeUninit<u8>", baseType: !2830, size: 64, align: 64, dwarfAddressSpace: 0)
 !3020 = !{!3015}
 !3021 = !{!3022}
 !3022 = !DITemplateTypeParameter(name: "T", type: !2830)
-!3023 = !DILocation(line: 506, column: 29, scope: !3016, inlinedAt: !3024)
+!3023 = !DILocation(line: 502, column: 29, scope: !3016, inlinedAt: !3024)
 !3024 = distinct !DILocation(line: 1013, column: 9, scope: !3004, inlinedAt: !3014)
 !3025 = !DILocation(line: 379, column: 13, scope: !2850)
 !3026 = !DILocation(line: 380, column: 21, scope: !2850)
@@ -13007,7 +13008,7 @@ attributes #11 = { noreturn nounwind }
 !3037 = !DILocation(line: 397, column: 40, scope: !2858)
 !3038 = !DILocation(line: 397, column: 39, scope: !2858)
 !3039 = !DILocalVariable(name: "self", arg: 1, scope: !3040, file: !267, line: 1015, type: !1178)
-!3040 = distinct !DISubprogram(name: "add<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17h7be9f1f41d062f41E", scope: !278, file: !267, line: 1015, type: !3041, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3043)
+!3040 = distinct !DISubprogram(name: "add<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3add17h53e2ec33861d4dcdE", scope: !278, file: !267, line: 1015, type: !3041, scopeLine: 1015, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3043)
 !3041 = !DISubroutineType(types: !3042)
 !3042 = !{!1178, !1178, !9}
 !3043 = !{!3039, !3044}
@@ -13016,7 +13017,7 @@ attributes #11 = { noreturn nounwind }
 !3046 = distinct !DILocation(line: 397, column: 29, scope: !2858)
 !3047 = !DILocation(line: 1015, column: 35, scope: !3040, inlinedAt: !3046)
 !3048 = !DILocalVariable(name: "self", arg: 1, scope: !3049, file: !267, line: 472, type: !1178)
-!3049 = distinct !DISubprogram(name: "offset<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17h40a5f54e7d5ead13E", scope: !278, file: !267, line: 472, type: !3050, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3052)
+!3049 = distinct !DISubprogram(name: "offset<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$6offset17h5946285b9fe023a1E", scope: !278, file: !267, line: 472, type: !3050, scopeLine: 472, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3052)
 !3050 = !DISubroutineType(types: !3051)
 !3051 = !{!1178, !1178, !218}
 !3052 = !{!3048, !3053}
@@ -13046,7 +13047,7 @@ attributes #11 = { noreturn nounwind }
 !3076 = !DILocation(line: 433, column: 12, scope: !2866)
 !3077 = !DILocation(line: 1012, column: 35, scope: !3004, inlinedAt: !3078)
 !3078 = distinct !DILocation(line: 405, column: 23, scope: !2850)
-!3079 = !DILocation(line: 506, column: 29, scope: !3016, inlinedAt: !3080)
+!3079 = !DILocation(line: 502, column: 29, scope: !3016, inlinedAt: !3080)
 !3080 = distinct !DILocation(line: 1013, column: 9, scope: !3004, inlinedAt: !3078)
 !3081 = !DILocation(line: 405, column: 13, scope: !2850)
 !3082 = !DILocation(line: 406, column: 21, scope: !2850)
@@ -13086,18 +13087,18 @@ attributes #11 = { noreturn nounwind }
 !3116 = !DILocation(line: 482, column: 12, scope: !2866)
 !3117 = !DILocation(line: 482, column: 23, scope: !2866)
 !3118 = !DILocation(line: 465, column: 37, scope: !2866)
-!3119 = !DILocalVariable(name: "small", arg: 1, scope: !3120, file: !3121, line: 53, type: !123)
-!3120 = distinct !DISubprogram(name: "from", linkageName: "_ZN4core7convert3num65_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$usize$GT$4from17h43754cc5e8cc59baE", scope: !3122, file: !3121, line: 53, type: !3125, scopeLine: 53, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !3127)
-!3121 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/convert/num.rs", directory: "", checksumkind: CSK_MD5, checksum: "6b2e6a5be8ada6428316dd10706356d8")
+!3119 = !DILocalVariable(name: "small", arg: 1, scope: !3120, file: !3121, line: 52, type: !123)
+!3120 = distinct !DISubprogram(name: "from", linkageName: "_ZN4core7convert3num65_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$usize$GT$4from17h7015be4f9ba71054E", scope: !3122, file: !3121, line: 52, type: !3125, scopeLine: 52, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !3127)
+!3121 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/convert/num.rs", directory: "", checksumkind: CSK_MD5, checksum: "414fe946a4d28dee13e1a0c8731be3b8")
 !3122 = !DINamespace(name: "{impl#44}", scope: !3123)
 !3123 = !DINamespace(name: "num", scope: !3124)
 !3124 = !DINamespace(name: "convert", scope: !143)
 !3125 = !DISubroutineType(types: !3126)
 !3126 = !{!9, !123}
 !3127 = !{!3119}
-!3128 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3129)
+!3128 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3129)
 !3129 = distinct !DILocation(line: 465, column: 37, scope: !2866)
-!3130 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3129)
+!3130 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3129)
 !3131 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !3132)
 !3132 = distinct !DILocation(line: 465, column: 37, scope: !2866)
 !3133 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !3132)
@@ -13107,9 +13108,9 @@ attributes #11 = { noreturn nounwind }
 !3137 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !3135)
 !3138 = !DILocation(line: 465, column: 27, scope: !2866)
 !3139 = !DILocation(line: 466, column: 42, scope: !2868)
-!3140 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3141)
+!3140 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3141)
 !3141 = distinct !DILocation(line: 466, column: 42, scope: !2868)
-!3142 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3141)
+!3142 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3141)
 !3143 = !DILocation(line: 1098, column: 29, scope: !2114, inlinedAt: !3144)
 !3144 = distinct !DILocation(line: 466, column: 42, scope: !2868)
 !3145 = !DILocation(line: 1098, column: 35, scope: !2114, inlinedAt: !3144)
@@ -13124,9 +13125,9 @@ attributes #11 = { noreturn nounwind }
 !3154 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !3153)
 !3155 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !3153)
 !3156 = !DILocation(line: 466, column: 52, scope: !2868)
-!3157 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3158)
+!3157 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3158)
 !3158 = distinct !DILocation(line: 466, column: 52, scope: !2868)
-!3159 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3158)
+!3159 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3158)
 !3160 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !3161)
 !3161 = distinct !DILocation(line: 466, column: 52, scope: !2868)
 !3162 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !3161)
@@ -13138,9 +13139,9 @@ attributes #11 = { noreturn nounwind }
 !3168 = !DILocation(line: 468, column: 26, scope: !2868)
 !3169 = !DILocation(line: 468, column: 17, scope: !2870)
 !3170 = !DILocation(line: 475, column: 48, scope: !2868)
-!3171 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3172)
+!3171 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3172)
 !3172 = distinct !DILocation(line: 475, column: 48, scope: !2868)
-!3173 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3172)
+!3173 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3172)
 !3174 = !DILocation(line: 469, column: 31, scope: !2870)
 !3175 = !DILocation(line: 1015, column: 29, scope: !3040, inlinedAt: !3176)
 !3176 = distinct !DILocation(line: 469, column: 31, scope: !2870)
@@ -13151,9 +13152,9 @@ attributes #11 = { noreturn nounwind }
 !3181 = !DILocation(line: 479, column: 18, scope: !3049, inlinedAt: !3179)
 !3182 = !DILocation(line: 469, column: 21, scope: !2870)
 !3183 = !DILocation(line: 470, column: 46, scope: !2870)
-!3184 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3185)
+!3184 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3185)
 !3185 = distinct !DILocation(line: 470, column: 46, scope: !2870)
-!3186 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3185)
+!3186 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3185)
 !3187 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !3188)
 !3188 = distinct !DILocation(line: 470, column: 46, scope: !2870)
 !3189 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !3188)
@@ -13162,9 +13163,9 @@ attributes #11 = { noreturn nounwind }
 !3192 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !3191)
 !3193 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !3191)
 !3194 = !DILocation(line: 470, column: 55, scope: !2870)
-!3195 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3196)
+!3195 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3196)
 !3196 = distinct !DILocation(line: 470, column: 55, scope: !2870)
-!3197 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3196)
+!3197 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3196)
 !3198 = !DILocation(line: 1098, column: 29, scope: !2114, inlinedAt: !3199)
 !3199 = distinct !DILocation(line: 470, column: 55, scope: !2870)
 !3200 = !DILocation(line: 1098, column: 35, scope: !2114, inlinedAt: !3199)
@@ -13189,9 +13190,9 @@ attributes #11 = { noreturn nounwind }
 !3219 = !DILocation(line: 479, column: 18, scope: !3049, inlinedAt: !3217)
 !3220 = !DILocation(line: 471, column: 21, scope: !2870)
 !3221 = !DILocation(line: 472, column: 46, scope: !2870)
-!3222 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3223)
+!3222 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3223)
 !3223 = distinct !DILocation(line: 472, column: 46, scope: !2870)
-!3224 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3223)
+!3224 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3223)
 !3225 = !DILocation(line: 1098, column: 29, scope: !2114, inlinedAt: !3226)
 !3226 = distinct !DILocation(line: 472, column: 46, scope: !2870)
 !3227 = !DILocation(line: 1098, column: 35, scope: !2114, inlinedAt: !3226)
@@ -13206,9 +13207,9 @@ attributes #11 = { noreturn nounwind }
 !3236 = !DILocation(line: 472, column: 38, scope: !287, inlinedAt: !3235)
 !3237 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !3235)
 !3238 = !DILocation(line: 472, column: 56, scope: !2870)
-!3239 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3240)
+!3239 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3240)
 !3240 = distinct !DILocation(line: 472, column: 56, scope: !2870)
-!3241 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3240)
+!3241 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3240)
 !3242 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !3243)
 !3243 = distinct !DILocation(line: 472, column: 56, scope: !2870)
 !3244 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !3243)
@@ -13295,13 +13296,13 @@ attributes #11 = { noreturn nounwind }
 !3325 = !DILocation(line: 514, column: 26, scope: !2848)
 !3326 = !DILocation(line: 514, column: 9, scope: !2872)
 !3327 = !{i8 0, i8 3}
-!3328 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !3329)
+!3328 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !3329)
 !3329 = distinct !DILocation(line: 533, column: 15, scope: !2848)
 !3330 = !DILocation(line: 533, column: 31, scope: !2848)
 !3331 = !DILocation(line: 533, column: 9, scope: !2848)
 !3332 = !DILocation(line: 528, column: 25, scope: !2848)
 !3333 = !DILocalVariable(name: "self", arg: 1, scope: !3334, file: !267, line: 1098, type: !1178)
-!3334 = distinct !DISubprogram(name: "sub<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3sub17h765ab868903aa961E", scope: !278, file: !267, line: 1098, type: !3041, scopeLine: 1098, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3335)
+!3334 = distinct !DISubprogram(name: "sub<u8>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$3sub17hed6641838314b6feE", scope: !278, file: !267, line: 1098, type: !3041, scopeLine: 1098, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3335)
 !3335 = !{!3333, !3336}
 !3336 = !DILocalVariable(name: "count", arg: 2, scope: !3334, file: !267, line: 1098, type: !9)
 !3337 = !DILocation(line: 1098, column: 29, scope: !3334, inlinedAt: !3338)
@@ -13319,9 +13320,9 @@ attributes #11 = { noreturn nounwind }
 !3349 = !DILocation(line: 528, column: 17, scope: !2848)
 !3350 = !DILocation(line: 529, column: 27, scope: !2848)
 !3351 = !DILocation(line: 529, column: 45, scope: !2848)
-!3352 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3353)
+!3352 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3353)
 !3353 = distinct !DILocation(line: 529, column: 33, scope: !2848)
-!3354 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3353)
+!3354 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3353)
 !3355 = !DILocation(line: 1015, column: 29, scope: !277, inlinedAt: !3356)
 !3356 = distinct !DILocation(line: 529, column: 27, scope: !2848)
 !3357 = !DILocation(line: 1015, column: 35, scope: !277, inlinedAt: !3356)
@@ -13359,7 +13360,7 @@ attributes #11 = { noreturn nounwind }
 !3389 = !DILocation(line: 530, column: 17, scope: !2848)
 !3390 = !DILocation(line: 515, column: 9, scope: !2848)
 !3391 = !DILocation(line: 551, column: 2, scope: !2812)
-!3392 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !3393)
+!3392 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !3393)
 !3393 = distinct !DILocation(line: 549, column: 15, scope: !2848)
 !3394 = !DILocation(line: 549, column: 31, scope: !2848)
 !3395 = !DILocation(line: 549, column: 9, scope: !2848)
@@ -13370,7 +13371,7 @@ attributes #11 = { noreturn nounwind }
 !3400 = !DILocation(line: 537, column: 35, scope: !2848)
 !3401 = !DILocation(line: 537, column: 26, scope: !2848)
 !3402 = !DILocation(line: 537, column: 9, scope: !2881)
-!3403 = !DILocation(line: 506, column: 29, scope: !1972, inlinedAt: !3404)
+!3403 = !DILocation(line: 502, column: 29, scope: !1972, inlinedAt: !3404)
 !3404 = distinct !DILocation(line: 546, column: 15, scope: !2848)
 !3405 = !DILocation(line: 546, column: 31, scope: !2848)
 !3406 = !DILocation(line: 546, column: 9, scope: !2848)
@@ -13391,9 +13392,9 @@ attributes #11 = { noreturn nounwind }
 !3421 = !DILocation(line: 542, column: 27, scope: !2848)
 !3422 = !DILocation(line: 542, column: 30, scope: !2848)
 !3423 = !DILocation(line: 542, column: 48, scope: !2848)
-!3424 = !DILocation(line: 53, column: 21, scope: !3120, inlinedAt: !3425)
+!3424 = !DILocation(line: 52, column: 21, scope: !3120, inlinedAt: !3425)
 !3425 = distinct !DILocation(line: 542, column: 36, scope: !2848)
-!3426 = !DILocation(line: 54, column: 17, scope: !3120, inlinedAt: !3425)
+!3426 = !DILocation(line: 53, column: 17, scope: !3120, inlinedAt: !3425)
 !3427 = !DILocation(line: 542, column: 36, scope: !2848)
 !3428 = !DILocation(line: 1098, column: 29, scope: !2114, inlinedAt: !3429)
 !3429 = distinct !DILocation(line: 542, column: 30, scope: !2848)
@@ -13419,57 +13420,57 @@ attributes #11 = { noreturn nounwind }
 !3449 = !DILocation(line: 479, column: 18, scope: !287, inlinedAt: !3447)
 !3450 = !DILocation(line: 543, column: 17, scope: !2848)
 !3451 = !DILocation(line: 538, column: 9, scope: !2848)
-!3452 = distinct !DISubprogram(name: "width<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4sort19partition_in_blocks5width17h0ca56088801a9cdeE", scope: !3453, file: !2292, line: 341, type: !3454, scopeLine: 341, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !3456)
+!3452 = distinct !DISubprogram(name: "width<u8>", linkageName: "_ZN4core5slice4sort19partition_in_blocks5width17h9add440eded0fcbeE", scope: !3453, file: !2292, line: 341, type: !3454, scopeLine: 341, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3456)
 !3453 = !DINamespace(name: "partition_in_blocks", scope: !1154)
 !3454 = !DISubroutineType(types: !3455)
-!3455 = !{!9, !272, !272}
+!3455 = !{!9, !1178, !1178}
 !3456 = !{!3457, !3458}
-!3457 = !DILocalVariable(name: "l", arg: 1, scope: !3452, file: !2292, line: 341, type: !272)
-!3458 = !DILocalVariable(name: "r", arg: 2, scope: !3452, file: !2292, line: 341, type: !272)
+!3457 = !DILocalVariable(name: "l", arg: 1, scope: !3452, file: !2292, line: 341, type: !1178)
+!3458 = !DILocalVariable(name: "r", arg: 2, scope: !3452, file: !2292, line: 341, type: !1178)
 !3459 = !DILocation(line: 341, column: 17, scope: !3452)
 !3460 = !DILocation(line: 341, column: 28, scope: !3452)
 !3461 = !DILocation(line: 342, column: 17, scope: !3452)
 !3462 = !DILocation(line: 342, column: 9, scope: !3452)
-!3463 = !DILocalVariable(name: "self", arg: 1, scope: !3464, file: !267, line: 209, type: !272)
-!3464 = distinct !DISubprogram(name: "addr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4addr17h309e3b760099ab33E", scope: !278, file: !267, line: 209, type: !3465, scopeLine: 209, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !3467)
-!3465 = !DISubroutineType(types: !3466)
-!3466 = !{!9, !272}
-!3467 = !{!3463}
-!3468 = !DILocation(line: 209, column: 17, scope: !3464, inlinedAt: !3469)
-!3469 = distinct !DILocation(line: 345, column: 10, scope: !3452)
-!3470 = !DILocation(line: 57, column: 26, scope: !1289, inlinedAt: !3471)
-!3471 = distinct !DILocation(line: 213, column: 33, scope: !3464, inlinedAt: !3469)
-!3472 = !DILocation(line: 213, column: 18, scope: !3464, inlinedAt: !3469)
-!3473 = !DILocation(line: 209, column: 17, scope: !3464, inlinedAt: !3474)
-!3474 = distinct !DILocation(line: 345, column: 21, scope: !3452)
-!3475 = !DILocation(line: 57, column: 26, scope: !1289, inlinedAt: !3476)
-!3476 = distinct !DILocation(line: 213, column: 33, scope: !3464, inlinedAt: !3474)
-!3477 = !DILocation(line: 213, column: 18, scope: !3464, inlinedAt: !3474)
-!3478 = !DILocation(line: 345, column: 9, scope: !3452)
-!3479 = !DILocation(line: 346, column: 6, scope: !3452)
-!3480 = distinct !DISubprogram(name: "width<u8>", linkageName: "_ZN4core5slice4sort19partition_in_blocks5width17hf4823b1fe1b736f8E", scope: !3453, file: !2292, line: 341, type: !3481, scopeLine: 341, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1614, retainedNodes: !3483)
-!3481 = !DISubroutineType(types: !3482)
-!3482 = !{!9, !1178, !1178}
-!3483 = !{!3484, !3485}
-!3484 = !DILocalVariable(name: "l", arg: 1, scope: !3480, file: !2292, line: 341, type: !1178)
-!3485 = !DILocalVariable(name: "r", arg: 2, scope: !3480, file: !2292, line: 341, type: !1178)
-!3486 = !DILocation(line: 341, column: 17, scope: !3480)
-!3487 = !DILocation(line: 341, column: 28, scope: !3480)
-!3488 = !DILocation(line: 342, column: 17, scope: !3480)
-!3489 = !DILocation(line: 342, column: 9, scope: !3480)
-!3490 = !DILocation(line: 209, column: 17, scope: !1610, inlinedAt: !3491)
-!3491 = distinct !DILocation(line: 345, column: 10, scope: !3480)
-!3492 = !DILocation(line: 57, column: 26, scope: !1619, inlinedAt: !3493)
-!3493 = distinct !DILocation(line: 213, column: 33, scope: !1610, inlinedAt: !3491)
-!3494 = !DILocation(line: 213, column: 18, scope: !1610, inlinedAt: !3491)
-!3495 = !DILocation(line: 209, column: 17, scope: !1610, inlinedAt: !3496)
-!3496 = distinct !DILocation(line: 345, column: 21, scope: !3480)
-!3497 = !DILocation(line: 57, column: 26, scope: !1619, inlinedAt: !3498)
-!3498 = distinct !DILocation(line: 213, column: 33, scope: !1610, inlinedAt: !3496)
-!3499 = !DILocation(line: 213, column: 18, scope: !1610, inlinedAt: !3496)
-!3500 = !DILocation(line: 345, column: 9, scope: !3480)
-!3501 = !DILocation(line: 346, column: 6, scope: !3480)
-!3502 = distinct !DISubprogram(name: "partial_insertion_sort<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort22partial_insertion_sort17hc7d90be9e8a3ebc6E", scope: !1154, file: !2292, line: 198, type: !3503, scopeLine: 198, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3505)
+!3463 = !DILocation(line: 209, column: 17, scope: !1610, inlinedAt: !3464)
+!3464 = distinct !DILocation(line: 345, column: 10, scope: !3452)
+!3465 = !DILocation(line: 57, column: 26, scope: !1619, inlinedAt: !3466)
+!3466 = distinct !DILocation(line: 213, column: 33, scope: !1610, inlinedAt: !3464)
+!3467 = !DILocation(line: 213, column: 18, scope: !1610, inlinedAt: !3464)
+!3468 = !DILocation(line: 209, column: 17, scope: !1610, inlinedAt: !3469)
+!3469 = distinct !DILocation(line: 345, column: 21, scope: !3452)
+!3470 = !DILocation(line: 57, column: 26, scope: !1619, inlinedAt: !3471)
+!3471 = distinct !DILocation(line: 213, column: 33, scope: !1610, inlinedAt: !3469)
+!3472 = !DILocation(line: 213, column: 18, scope: !1610, inlinedAt: !3469)
+!3473 = !DILocation(line: 345, column: 9, scope: !3452)
+!3474 = !DILocation(line: 346, column: 6, scope: !3452)
+!3475 = distinct !DISubprogram(name: "width<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4sort19partition_in_blocks5width17he7a6db8f9ccad048E", scope: !3453, file: !2292, line: 341, type: !3476, scopeLine: 341, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !3478)
+!3476 = !DISubroutineType(types: !3477)
+!3477 = !{!9, !272, !272}
+!3478 = !{!3479, !3480}
+!3479 = !DILocalVariable(name: "l", arg: 1, scope: !3475, file: !2292, line: 341, type: !272)
+!3480 = !DILocalVariable(name: "r", arg: 2, scope: !3475, file: !2292, line: 341, type: !272)
+!3481 = !DILocation(line: 341, column: 17, scope: !3475)
+!3482 = !DILocation(line: 341, column: 28, scope: !3475)
+!3483 = !DILocation(line: 342, column: 17, scope: !3475)
+!3484 = !DILocation(line: 342, column: 9, scope: !3475)
+!3485 = !DILocalVariable(name: "self", arg: 1, scope: !3486, file: !267, line: 209, type: !272)
+!3486 = distinct !DISubprogram(name: "addr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr7mut_ptr31_$LT$impl$u20$$BP$mut$u20$T$GT$4addr17h2a7fcfb87e3d2cc5E", scope: !278, file: !267, line: 209, type: !3487, scopeLine: 209, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !3489)
+!3487 = !DISubroutineType(types: !3488)
+!3488 = !{!9, !272}
+!3489 = !{!3485}
+!3490 = !DILocation(line: 209, column: 17, scope: !3486, inlinedAt: !3491)
+!3491 = distinct !DILocation(line: 345, column: 10, scope: !3475)
+!3492 = !DILocation(line: 57, column: 26, scope: !1289, inlinedAt: !3493)
+!3493 = distinct !DILocation(line: 213, column: 33, scope: !3486, inlinedAt: !3491)
+!3494 = !DILocation(line: 213, column: 18, scope: !3486, inlinedAt: !3491)
+!3495 = !DILocation(line: 209, column: 17, scope: !3486, inlinedAt: !3496)
+!3496 = distinct !DILocation(line: 345, column: 21, scope: !3475)
+!3497 = !DILocation(line: 57, column: 26, scope: !1289, inlinedAt: !3498)
+!3498 = distinct !DILocation(line: 213, column: 33, scope: !3486, inlinedAt: !3496)
+!3499 = !DILocation(line: 213, column: 18, scope: !3486, inlinedAt: !3496)
+!3500 = !DILocation(line: 345, column: 9, scope: !3475)
+!3501 = !DILocation(line: 346, column: 6, scope: !3475)
+!3502 = distinct !DISubprogram(name: "partial_insertion_sort<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort22partial_insertion_sort17h5b3f6178349b7fb4E", scope: !1154, file: !2292, line: 198, type: !3503, scopeLine: 198, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3505)
 !3503 = !DISubroutineType(types: !3504)
 !3504 = !{!421, !354, !1124}
 !3505 = !{!3506, !3507, !3508, !3510, !3512}
@@ -13521,7 +13522,7 @@ attributes #11 = { noreturn nounwind }
 !3551 = !DILocation(line: 238, column: 47, scope: !3513)
 !3552 = !DILocation(line: 238, column: 45, scope: !3513)
 !3553 = !DILocation(line: 238, column: 13, scope: !3513)
-!3554 = distinct !DISubprogram(name: "insertion_sort_shift_left<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort25insertion_sort_shift_left17h979a51d65324b32eE", scope: !1154, file: !2292, line: 148, type: !3555, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3557)
+!3554 = distinct !DISubprogram(name: "insertion_sort_shift_left<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort25insertion_sort_shift_left17h4143b28fcc8504deE", scope: !1154, file: !2292, line: 148, type: !3555, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3557)
 !3555 = !DISubroutineType(types: !3556)
 !3556 = !{null, !354, !9, !1124}
 !3557 = !{!3558, !3559, !3560, !3561, !3563, !3565}
@@ -13551,7 +13552,7 @@ attributes #11 = { noreturn nounwind }
 !3581 = !DILocation(line: 163, column: 32, scope: !3566)
 !3582 = !DILocation(line: 163, column: 30, scope: !3566)
 !3583 = !DILocation(line: 163, column: 13, scope: !3566)
-!3584 = distinct !DISubprogram(name: "insertion_sort_shift_right<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort26insertion_sort_shift_right17hc4f690f748a8675bE", scope: !1154, file: !2292, line: 173, type: !3555, scopeLine: 173, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3585)
+!3584 = distinct !DISubprogram(name: "insertion_sort_shift_right<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort26insertion_sort_shift_right17h4488f0ed37ef92c7E", scope: !1154, file: !2292, line: 173, type: !3555, scopeLine: 173, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3585)
 !3585 = !{!3586, !3587, !3588, !3589, !3591, !3593}
 !3586 = !DILocalVariable(name: "v", arg: 1, scope: !3584, file: !2292, line: 173, type: !354)
 !3587 = !DILocalVariable(name: "offset", arg: 2, scope: !3584, file: !2292, line: 173, type: !9)
@@ -13580,17 +13581,17 @@ attributes #11 = { noreturn nounwind }
 !3610 = !DILocation(line: 189, column: 32, scope: !3594)
 !3611 = !DILocation(line: 189, column: 30, scope: !3594)
 !3612 = !DILocation(line: 189, column: 13, scope: !3594)
-!3613 = distinct !DISubprogram(name: "recurse<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort7recurse17h67bb0b27e7485c54E", scope: !1154, file: !2292, line: 797, type: !3614, scopeLine: 797, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3627)
+!3613 = distinct !DISubprogram(name: "recurse<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort7recurse17h36519255d1639a21E", scope: !1154, file: !2292, line: 797, type: !3614, scopeLine: 797, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3627)
 !3614 = !DISubroutineType(types: !3615)
 !3615 = !{null, !354, !1124, !3616, !27}
-!3616 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&bootloader::bootinfo::memory_map::MemoryRegion>", scope: !479, file: !2, size: 64, align: 64, elements: !3617, templateParams: !24, identifier: "c8c6d56cd0bd3b2510571a8115b6ca9f")
+!3616 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&bootloader::bootinfo::memory_map::MemoryRegion>", scope: !479, file: !2, size: 64, align: 64, elements: !3617, templateParams: !24, identifier: "dcbac9b5f0449bf25b284825070743b8")
 !3617 = !{!3618}
-!3618 = !DICompositeType(tag: DW_TAG_variant_part, scope: !3616, file: !2, size: 64, align: 64, elements: !3619, templateParams: !24, identifier: "2a4982b4c697fc6cf71cb100779ff1ba", discriminator: !3626)
+!3618 = !DICompositeType(tag: DW_TAG_variant_part, scope: !3616, file: !2, size: 64, align: 64, elements: !3619, templateParams: !24, identifier: "79df4dd2c1641faf24af0a9fa6c87fb9", discriminator: !3626)
 !3619 = !{!3620, !3622}
 !3620 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !3618, file: !2, baseType: !3621, size: 64, align: 64, extraData: i64 0)
-!3621 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !3616, file: !2, size: 64, align: 64, elements: !24, templateParams: !827, identifier: "3b3ebbf7bccb0af3118b871867d56b4f")
+!3621 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !3616, file: !2, size: 64, align: 64, elements: !24, templateParams: !827, identifier: "9c3f13c32f7952eb52e4d1b0d0ea72c2")
 !3622 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !3618, file: !2, baseType: !3623, size: 64, align: 64)
-!3623 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !3616, file: !2, size: 64, align: 64, elements: !3624, templateParams: !827, identifier: "a2f32b48f08733dcc56375911af91a87")
+!3623 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !3616, file: !2, size: 64, align: 64, elements: !3624, templateParams: !827, identifier: "4c05bae9f1fd5cd0dc41a06f1b490a01")
 !3624 = !{!3625}
 !3625 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !3623, file: !2, baseType: !12, size: 64, align: 64)
 !3626 = !DIDerivedType(tag: DW_TAG_member, scope: !3616, file: !2, baseType: !22, size: 64, align: 64, flags: DIFlagArtificial)
@@ -13708,13 +13709,13 @@ attributes #11 = { noreturn nounwind }
 !3738 = !DILocation(line: 875, column: 13, scope: !3655)
 !3739 = !DILocation(line: 876, column: 20, scope: !3655)
 !3740 = !DILocation(line: 876, column: 13, scope: !3655)
-!3741 = distinct !DISubprogram(name: "heapsort<bootloader::bootinfo::memory_map::MemoryRegion, &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort8heapsort17h49e35196ac746939E", scope: !1154, file: !2292, line: 249, type: !2293, scopeLine: 249, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3759, retainedNodes: !3742)
+!3741 = distinct !DISubprogram(name: "heapsort<bootloader::bootinfo::memory_map::MemoryRegion, &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort8heapsort17hfa422968b8706bebE", scope: !1154, file: !2292, line: 249, type: !2293, scopeLine: 249, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3759, retainedNodes: !3742)
 !3742 = !{!3743, !3744, !3745, !3751, !3753, !3755, !3757}
 !3743 = !DILocalVariable(name: "v", arg: 1, scope: !3741, file: !2292, line: 249, type: !354)
 !3744 = !DILocalVariable(name: "is_less", arg: 2, scope: !3741, file: !2292, line: 249, type: !1124)
 !3745 = !DILocalVariable(name: "sift_down", scope: !3746, file: !2292, line: 254, type: !3747, align: 8)
 !3746 = distinct !DILexicalBlock(scope: !3741, file: !2292, line: 254, column: 5)
-!3747 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !3748, file: !2, size: 64, align: 64, elements: !3749, templateParams: !24, identifier: "e3166ecd734101111f67be77cd283e36")
+!3747 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", scope: !3748, file: !2, size: 64, align: 64, elements: !3749, templateParams: !24, identifier: "2d253c6905c45110ceaff4e09f2fbc95")
 !3748 = !DINamespace(name: "heapsort", scope: !1154)
 !3749 = !{!3750}
 !3750 = !DIDerivedType(tag: DW_TAG_member, name: "_ref__is_less", scope: !3747, file: !2, baseType: !1123, size: 64, align: 64)
@@ -13749,7 +13750,7 @@ attributes #11 = { noreturn nounwind }
 !3779 = !DILocation(line: 289, column: 26, scope: !3758)
 !3780 = !DILocation(line: 289, column: 24, scope: !3758)
 !3781 = !DILocation(line: 289, column: 9, scope: !3758)
-!3782 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion, &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h9a8cf1de39cb1214E", scope: !3748, file: !2292, line: 254, type: !3783, scopeLine: 254, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3759, retainedNodes: !3786)
+!3782 = distinct !DISubprogram(name: "{closure#0}<bootloader::bootinfo::memory_map::MemoryRegion, &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort8heapsort28_$u7b$$u7b$closure$u7d$$u7d$17h3a408e774416e0dcE", scope: !3748, file: !2292, line: 254, type: !3783, scopeLine: 254, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3759, retainedNodes: !3786)
 !3783 = !DISubroutineType(types: !3784)
 !3784 = !{null, !3785, !354, !9}
 !3785 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::slice::sort::heapsort::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, &mut core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", baseType: !3747, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -13791,7 +13792,7 @@ attributes #11 = { noreturn nounwind }
 !3821 = !DILocation(line: 276, column: 13, scope: !3791)
 !3822 = !DILocation(line: 277, column: 20, scope: !3791)
 !3823 = !DILocation(line: 277, column: 13, scope: !3791)
-!3824 = distinct !DISubprogram(name: "partition<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort9partition17hf98e6f20df429ee3E", scope: !1154, file: !2292, line: 560, type: !3825, scopeLine: 560, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3827)
+!3824 = distinct !DISubprogram(name: "partition<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort9partition17h25d65a2c3f5d3defE", scope: !1154, file: !2292, line: 560, type: !3825, scopeLine: 560, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3827)
 !3825 = !DISubroutineType(types: !3826)
 !3826 = !{!1042, !354, !9, !1124}
 !3827 = !{!3828, !3829, !3830, !3831, !3833, !3834, !3836, !3837, !3839, !3841, !3843, !3845, !3847}
@@ -13806,7 +13807,7 @@ attributes #11 = { noreturn nounwind }
 !3836 = !DILocalVariable(name: "v", scope: !3835, file: !2292, line: 567, type: !354, align: 8)
 !3837 = !DILocalVariable(name: "pivot", scope: !3838, file: !2292, line: 568, type: !979, align: 8)
 !3838 = distinct !DILexicalBlock(scope: !3835, file: !2292, line: 568, column: 9)
-!3839 = !DILocalVariable(name: "tmp", scope: !3840, file: !2292, line: 574, type: !645, align: 8)
+!3839 = !DILocalVariable(name: "tmp", scope: !3840, file: !2292, line: 574, type: !655, align: 8)
 !3840 = distinct !DILexicalBlock(scope: !3838, file: !2292, line: 574, column: 9)
 !3841 = !DILocalVariable(name: "_pivot_guard", scope: !3842, file: !2292, line: 575, type: !1153, align: 8)
 !3842 = distinct !DILexicalBlock(scope: !3840, file: !2292, line: 575, column: 9)
@@ -13836,10 +13837,10 @@ attributes #11 = { noreturn nounwind }
 !3866 = !DILocation(line: 70, column: 22, scope: !1015, inlinedAt: !3867)
 !3867 = distinct !DILocation(line: 574, column: 19, scope: !3838)
 !3868 = !DILocation(line: 71, column: 9, scope: !1015, inlinedAt: !3867)
-!3869 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !3870)
+!3869 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !3870)
 !3870 = distinct !DILocation(line: 575, column: 50, scope: !3840)
 !3871 = !DILocation(line: 575, column: 28, scope: !3840)
-!3872 = !DILocation(line: 153, column: 14, scope: !2329, inlinedAt: !3873)
+!3872 = !DILocation(line: 152, column: 14, scope: !2329, inlinedAt: !3873)
 !3873 = distinct !DILocation(line: 576, column: 22, scope: !3842)
 !3874 = !DILocation(line: 576, column: 21, scope: !3842)
 !3875 = !DILocation(line: 576, column: 13, scope: !3844)
@@ -13876,7 +13877,7 @@ attributes #11 = { noreturn nounwind }
 !3906 = !DILocation(line: 606, column: 5, scope: !3832)
 !3907 = !DILocation(line: 608, column: 5, scope: !3832)
 !3908 = !DILocation(line: 609, column: 2, scope: !3824)
-!3909 = distinct !DISubprogram(name: "quicksort<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort9quicksort17h12fd022706c4f4b1E", scope: !1154, file: !2292, line: 885, type: !3910, scopeLine: 885, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3912)
+!3909 = distinct !DISubprogram(name: "quicksort<bootloader::bootinfo::memory_map::MemoryRegion, core::slice::{impl#0}::sort_unstable_by::{closure_env#0}<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#0}>>", linkageName: "_ZN4core5slice4sort9quicksort17h94d07ae98e0185c1E", scope: !1154, file: !2292, line: 885, type: !3910, scopeLine: 885, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !2308, retainedNodes: !3912)
 !3910 = !DISubroutineType(types: !3911)
 !3911 = !{null, !354, !1125}
 !3912 = !{!3913, !3914, !3915}
@@ -13888,7 +13889,7 @@ attributes #11 = { noreturn nounwind }
 !3918 = !DILocation(line: 885, column: 37, scope: !3909)
 !3919 = !DILocation(line: 890, column: 8, scope: !3909)
 !3920 = !DILocalVariable(name: "self", arg: 1, scope: !3921, file: !1025, line: 148, type: !9)
-!3921 = distinct !DISubprogram(name: "leading_zeros", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$13leading_zeros17hf9bcf93749a642b3E", scope: !1026, file: !1025, line: 148, type: !1209, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !3922)
+!3921 = distinct !DISubprogram(name: "leading_zeros", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$13leading_zeros17h3c60c2a5375abddeE", scope: !1026, file: !1025, line: 148, type: !1209, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !3922)
 !3922 = !{!3920}
 !3923 = !DILocation(line: 148, column: 36, scope: !3921, inlinedAt: !3924)
 !3924 = distinct !DILocation(line: 895, column: 31, scope: !3909)
@@ -13899,160 +13900,160 @@ attributes #11 = { noreturn nounwind }
 !3929 = !DILocation(line: 895, column: 9, scope: !3916)
 !3930 = !DILocation(line: 897, column: 30, scope: !3916)
 !3931 = !DILocation(line: 897, column: 5, scope: !3916)
-!3932 = distinct !DISubprogram(name: "index<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>>", linkageName: "_ZN4core5slice5index74_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$5index17h4f7d591ff27b6834E", scope: !3933, file: !164, line: 18, type: !3934, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !3936)
+!3932 = distinct !DISubprogram(name: "index<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>>", linkageName: "_ZN4core5slice5index74_$LT$impl$u20$core..ops..index..Index$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$5index17h344fe8345ce5e45fE", scope: !3933, file: !164, line: 17, type: !3934, scopeLine: 17, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !3936)
 !3933 = !DINamespace(name: "{impl#0}", scope: !166)
 !3934 = !DISubroutineType(types: !3935)
 !3935 = !{!323, !323, !175, !327}
 !3936 = !{!3937, !3938}
-!3937 = !DILocalVariable(name: "self", arg: 1, scope: !3932, file: !164, line: 18, type: !323)
-!3938 = !DILocalVariable(name: "index", arg: 2, scope: !3932, file: !164, line: 18, type: !175)
-!3939 = !DILocation(line: 18, column: 14, scope: !3932)
-!3940 = !DILocation(line: 18, column: 21, scope: !3932)
-!3941 = !DILocation(line: 19, column: 9, scope: !3932)
-!3942 = !DILocation(line: 20, column: 6, scope: !3932)
-!3943 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h2eed47309c4795c2E", scope: !3944, file: !164, line: 30, type: !3945, scopeLine: 30, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !3947)
+!3937 = !DILocalVariable(name: "self", arg: 1, scope: !3932, file: !164, line: 17, type: !323)
+!3938 = !DILocalVariable(name: "index", arg: 2, scope: !3932, file: !164, line: 17, type: !175)
+!3939 = !DILocation(line: 17, column: 14, scope: !3932)
+!3940 = !DILocation(line: 17, column: 21, scope: !3932)
+!3941 = !DILocation(line: 18, column: 9, scope: !3932)
+!3942 = !DILocation(line: 19, column: 6, scope: !3932)
+!3943 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::RangeFrom<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17ha0483327d2a5e568E", scope: !3944, file: !164, line: 28, type: !3945, scopeLine: 28, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3950, retainedNodes: !3947)
 !3944 = !DINamespace(name: "{impl#1}", scope: !166)
 !3945 = !DISubroutineType(types: !3946)
-!3946 = !{!354, !354, !175, !327}
+!3946 = !{!354, !354, !387, !327}
 !3947 = !{!3948, !3949}
-!3948 = !DILocalVariable(name: "self", arg: 1, scope: !3943, file: !164, line: 30, type: !354)
-!3949 = !DILocalVariable(name: "index", arg: 2, scope: !3943, file: !164, line: 30, type: !175)
-!3950 = !DILocation(line: 30, column: 18, scope: !3943)
-!3951 = !DILocation(line: 30, column: 29, scope: !3943)
-!3952 = !DILocation(line: 31, column: 9, scope: !3943)
-!3953 = !DILocation(line: 32, column: 6, scope: !3943)
-!3954 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::RangeToInclusive<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17h48ccfe8b1cad8501E", scope: !3944, file: !164, line: 30, type: !3955, scopeLine: 30, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3960, retainedNodes: !3957)
-!3955 = !DISubroutineType(types: !3956)
-!3956 = !{!354, !354, !436, !327}
-!3957 = !{!3958, !3959}
-!3958 = !DILocalVariable(name: "self", arg: 1, scope: !3954, file: !164, line: 30, type: !354)
-!3959 = !DILocalVariable(name: "index", arg: 2, scope: !3954, file: !164, line: 30, type: !436)
-!3960 = !{!191, !3961}
-!3961 = !DITemplateTypeParameter(name: "I", type: !436)
-!3962 = !DILocation(line: 30, column: 18, scope: !3954)
-!3963 = !DILocation(line: 30, column: 29, scope: !3954)
-!3964 = !DILocation(line: 31, column: 9, scope: !3954)
-!3965 = !DILocation(line: 32, column: 6, scope: !3954)
-!3966 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::RangeTo<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc63cb5ffefaf6af8E", scope: !3944, file: !164, line: 30, type: !3967, scopeLine: 30, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3972, retainedNodes: !3969)
-!3967 = !DISubroutineType(types: !3968)
-!3968 = !{!354, !354, !373, !327}
-!3969 = !{!3970, !3971}
-!3970 = !DILocalVariable(name: "self", arg: 1, scope: !3966, file: !164, line: 30, type: !354)
-!3971 = !DILocalVariable(name: "index", arg: 2, scope: !3966, file: !164, line: 30, type: !373)
-!3972 = !{!191, !3973}
-!3973 = !DITemplateTypeParameter(name: "I", type: !373)
-!3974 = !DILocation(line: 30, column: 18, scope: !3966)
-!3975 = !DILocation(line: 30, column: 29, scope: !3966)
-!3976 = !DILocation(line: 31, column: 9, scope: !3966)
-!3977 = !DILocation(line: 32, column: 6, scope: !3966)
-!3978 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::RangeFrom<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17he29b2023f52fc844E", scope: !3944, file: !164, line: 30, type: !3979, scopeLine: 30, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3984, retainedNodes: !3981)
+!3948 = !DILocalVariable(name: "self", arg: 1, scope: !3943, file: !164, line: 28, type: !354)
+!3949 = !DILocalVariable(name: "index", arg: 2, scope: !3943, file: !164, line: 28, type: !387)
+!3950 = !{!191, !3951}
+!3951 = !DITemplateTypeParameter(name: "I", type: !387)
+!3952 = !DILocation(line: 28, column: 18, scope: !3943)
+!3953 = !DILocation(line: 28, column: 29, scope: !3943)
+!3954 = !DILocation(line: 29, column: 9, scope: !3943)
+!3955 = !DILocation(line: 30, column: 6, scope: !3943)
+!3956 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::RangeToInclusive<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hbb2cb149a01fae1bE", scope: !3944, file: !164, line: 28, type: !3957, scopeLine: 28, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3962, retainedNodes: !3959)
+!3957 = !DISubroutineType(types: !3958)
+!3958 = !{!354, !354, !436, !327}
+!3959 = !{!3960, !3961}
+!3960 = !DILocalVariable(name: "self", arg: 1, scope: !3956, file: !164, line: 28, type: !354)
+!3961 = !DILocalVariable(name: "index", arg: 2, scope: !3956, file: !164, line: 28, type: !436)
+!3962 = !{!191, !3963}
+!3963 = !DITemplateTypeParameter(name: "I", type: !436)
+!3964 = !DILocation(line: 28, column: 18, scope: !3956)
+!3965 = !DILocation(line: 28, column: 29, scope: !3956)
+!3966 = !DILocation(line: 29, column: 9, scope: !3956)
+!3967 = !DILocation(line: 30, column: 6, scope: !3956)
+!3968 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::Range<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hc032faa00f725839E", scope: !3944, file: !164, line: 28, type: !3969, scopeLine: 28, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1908, retainedNodes: !3971)
+!3969 = !DISubroutineType(types: !3970)
+!3970 = !{!354, !354, !175, !327}
+!3971 = !{!3972, !3973}
+!3972 = !DILocalVariable(name: "self", arg: 1, scope: !3968, file: !164, line: 28, type: !354)
+!3973 = !DILocalVariable(name: "index", arg: 2, scope: !3968, file: !164, line: 28, type: !175)
+!3974 = !DILocation(line: 28, column: 18, scope: !3968)
+!3975 = !DILocation(line: 28, column: 29, scope: !3968)
+!3976 = !DILocation(line: 29, column: 9, scope: !3968)
+!3977 = !DILocation(line: 30, column: 6, scope: !3968)
+!3978 = distinct !DISubprogram(name: "index_mut<bootloader::bootinfo::memory_map::MemoryRegion, core::ops::range::RangeTo<usize>>", linkageName: "_ZN4core5slice5index77_$LT$impl$u20$core..ops..index..IndexMut$LT$I$GT$$u20$for$u20$$u5b$T$u5d$$GT$9index_mut17hd96e5c003167cd0eE", scope: !3944, file: !164, line: 28, type: !3979, scopeLine: 28, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !3984, retainedNodes: !3981)
 !3979 = !DISubroutineType(types: !3980)
-!3980 = !{!354, !354, !387, !327}
+!3980 = !{!354, !354, !373, !327}
 !3981 = !{!3982, !3983}
-!3982 = !DILocalVariable(name: "self", arg: 1, scope: !3978, file: !164, line: 30, type: !354)
-!3983 = !DILocalVariable(name: "index", arg: 2, scope: !3978, file: !164, line: 30, type: !387)
+!3982 = !DILocalVariable(name: "self", arg: 1, scope: !3978, file: !164, line: 28, type: !354)
+!3983 = !DILocalVariable(name: "index", arg: 2, scope: !3978, file: !164, line: 28, type: !373)
 !3984 = !{!191, !3985}
-!3985 = !DITemplateTypeParameter(name: "I", type: !387)
-!3986 = !DILocation(line: 30, column: 18, scope: !3978)
-!3987 = !DILocation(line: 30, column: 29, scope: !3978)
-!3988 = !DILocation(line: 31, column: 9, scope: !3978)
-!3989 = !DILocation(line: 32, column: 6, scope: !3978)
-!3990 = distinct !DISubprogram(name: "unwrap_or<bootloader::bootinfo::TlsTemplate>", linkageName: "_ZN4core6option15Option$LT$T$GT$9unwrap_or17h15729337ae01dd2fE", scope: !3992, file: !3991, line: 971, type: !4003, scopeLine: 971, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1520, retainedNodes: !4005)
-!3991 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs", directory: "", checksumkind: CSK_MD5, checksum: "57ab105cef20f1dc79a065da4ca5bc2f")
-!3992 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<bootloader::bootinfo::TlsTemplate>", scope: !479, file: !2, size: 256, align: 64, elements: !3993, templateParams: !24, identifier: "2d4b64e8902d57249eb53d914406c88")
+!3985 = !DITemplateTypeParameter(name: "I", type: !373)
+!3986 = !DILocation(line: 28, column: 18, scope: !3978)
+!3987 = !DILocation(line: 28, column: 29, scope: !3978)
+!3988 = !DILocation(line: 29, column: 9, scope: !3978)
+!3989 = !DILocation(line: 30, column: 6, scope: !3978)
+!3990 = distinct !DISubprogram(name: "unwrap_or<bootloader::bootinfo::TlsTemplate>", linkageName: "_ZN4core6option15Option$LT$T$GT$9unwrap_or17hb5bc13490eac9104E", scope: !3992, file: !3991, line: 969, type: !4003, scopeLine: 969, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !1520, retainedNodes: !4005)
+!3991 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs", directory: "", checksumkind: CSK_MD5, checksum: "7fe636643511270d6f7e365434dea895")
+!3992 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<bootloader::bootinfo::TlsTemplate>", scope: !479, file: !2, size: 256, align: 64, elements: !3993, templateParams: !24, identifier: "fd18d019391bb7d718d65bfc27aa041e")
 !3993 = !{!3994}
-!3994 = !DICompositeType(tag: DW_TAG_variant_part, scope: !3992, file: !2, size: 256, align: 64, elements: !3995, templateParams: !24, identifier: "e6ee481d172c5f3283ae78d524b3eb60", discriminator: !4002)
+!3994 = !DICompositeType(tag: DW_TAG_variant_part, scope: !3992, file: !2, size: 256, align: 64, elements: !3995, templateParams: !24, identifier: "c00a9239b4394a7ec6337fa50fff0a16", discriminator: !4002)
 !3995 = !{!3996, !3998}
 !3996 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !3994, file: !2, baseType: !3997, size: 256, align: 64, extraData: i64 0)
-!3997 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !3992, file: !2, size: 256, align: 64, elements: !24, templateParams: !1520, identifier: "93c850e034933c2c99325b3e34cb240a")
+!3997 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !3992, file: !2, size: 256, align: 64, elements: !24, templateParams: !1520, identifier: "c7b40a530c121e712b6bb71332d1848b")
 !3998 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !3994, file: !2, baseType: !3999, size: 256, align: 64, extraData: i64 1)
-!3999 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !3992, file: !2, size: 256, align: 64, elements: !4000, templateParams: !1520, identifier: "7ef5de9d5104bf76b1a3a778dc675a")
+!3999 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !3992, file: !2, size: 256, align: 64, elements: !4000, templateParams: !1520, identifier: "c81bbd47ec856d61d1974524ba454216")
 !4000 = !{!4001}
 !4001 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !3999, file: !2, baseType: !109, size: 192, align: 64, offset: 64)
 !4002 = !DIDerivedType(tag: DW_TAG_member, scope: !3992, file: !2, baseType: !22, size: 64, align: 64, flags: DIFlagArtificial)
 !4003 = !DISubroutineType(types: !4004)
 !4004 = !{!109, !3992, !109}
 !4005 = !{!4006, !4007, !4008}
-!4006 = !DILocalVariable(name: "self", arg: 1, scope: !3990, file: !3991, line: 971, type: !3992)
-!4007 = !DILocalVariable(name: "default", arg: 2, scope: !3990, file: !3991, line: 971, type: !109)
-!4008 = !DILocalVariable(name: "x", scope: !4009, file: !3991, line: 976, type: !109, align: 8)
-!4009 = distinct !DILexicalBlock(scope: !3990, file: !3991, line: 976, column: 13)
-!4010 = !DILocation(line: 971, column: 28, scope: !3990)
-!4011 = !DILocation(line: 971, column: 34, scope: !3990)
-!4012 = !DILocation(line: 976, column: 18, scope: !4009)
-!4013 = !DILocation(line: 975, column: 15, scope: !3990)
-!4014 = !DILocation(line: 975, column: 9, scope: !3990)
-!4015 = !DILocation(line: 977, column: 21, scope: !3990)
-!4016 = !DILocation(line: 976, column: 18, scope: !3990)
-!4017 = !DILocation(line: 976, column: 24, scope: !4009)
-!4018 = !DILocation(line: 976, column: 24, scope: !3990)
-!4019 = !DILocation(line: 979, column: 5, scope: !3990)
-!4020 = !DILocation(line: 979, column: 6, scope: !3990)
-!4021 = distinct !DISubprogram(name: "eq", linkageName: "_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17h530dbbcd41019221E", scope: !4022, file: !728, line: 337, type: !4023, scopeLine: 337, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4026)
-!4022 = !DINamespace(name: "{impl#13}", scope: !150)
+!4006 = !DILocalVariable(name: "self", arg: 1, scope: !3990, file: !3991, line: 969, type: !3992)
+!4007 = !DILocalVariable(name: "default", arg: 2, scope: !3990, file: !3991, line: 969, type: !109)
+!4008 = !DILocalVariable(name: "x", scope: !4009, file: !3991, line: 971, type: !109, align: 8)
+!4009 = distinct !DILexicalBlock(scope: !3990, file: !3991, line: 971, column: 13)
+!4010 = !DILocation(line: 969, column: 22, scope: !3990)
+!4011 = !DILocation(line: 969, column: 28, scope: !3990)
+!4012 = !DILocation(line: 971, column: 18, scope: !4009)
+!4013 = !DILocation(line: 970, column: 15, scope: !3990)
+!4014 = !DILocation(line: 970, column: 9, scope: !3990)
+!4015 = !DILocation(line: 972, column: 21, scope: !3990)
+!4016 = !DILocation(line: 971, column: 18, scope: !3990)
+!4017 = !DILocation(line: 971, column: 24, scope: !4009)
+!4018 = !DILocation(line: 971, column: 24, scope: !3990)
+!4019 = !DILocation(line: 974, column: 5, scope: !3990)
+!4020 = !DILocation(line: 974, column: 6, scope: !3990)
+!4021 = distinct !DISubprogram(name: "eq", linkageName: "_ZN60_$LT$core..cmp..Ordering$u20$as$u20$core..cmp..PartialEq$GT$2eq17hae4bcd0612431f5dE", scope: !4022, file: !728, line: 333, type: !4023, scopeLine: 333, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4026)
+!4022 = !DINamespace(name: "{impl#7}", scope: !150)
 !4023 = !DISubroutineType(types: !4024)
 !4024 = !{!421, !4025, !4025}
 !4025 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cmp::Ordering", baseType: !149, size: 64, align: 64, dwarfAddressSpace: 0)
 !4026 = !{!4027, !4028, !4029, !4031}
-!4027 = !DILocalVariable(name: "self", arg: 1, scope: !4021, file: !728, line: 337, type: !4025)
-!4028 = !DILocalVariable(name: "other", arg: 2, scope: !4021, file: !728, line: 337, type: !4025)
-!4029 = !DILocalVariable(name: "__self_tag", scope: !4030, file: !728, line: 337, type: !151, align: 1)
-!4030 = distinct !DILexicalBlock(scope: !4021, file: !728, line: 337, column: 33)
-!4031 = !DILocalVariable(name: "__arg1_tag", scope: !4032, file: !728, line: 337, type: !151, align: 1)
-!4032 = distinct !DILexicalBlock(scope: !4030, file: !728, line: 337, column: 33)
-!4033 = !DILocation(line: 337, column: 33, scope: !4021)
-!4034 = !DILocation(line: 337, column: 33, scope: !4030)
-!4035 = !DILocation(line: 337, column: 33, scope: !4032)
-!4036 = !DILocation(line: 337, column: 42, scope: !4021)
-!4037 = distinct !DISubprogram(name: "into_iter<core::slice::iter::Iter<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h8af5423956ab47bbE", scope: !4039, file: !4038, line: 272, type: !4042, scopeLine: 272, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !4046, retainedNodes: !4044)
-!4038 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs", directory: "", checksumkind: CSK_MD5, checksum: "697d559cdba63f105535b8b53d6ea422")
+!4027 = !DILocalVariable(name: "self", arg: 1, scope: !4021, file: !728, line: 333, type: !4025)
+!4028 = !DILocalVariable(name: "other", arg: 2, scope: !4021, file: !728, line: 333, type: !4025)
+!4029 = !DILocalVariable(name: "__self_tag", scope: !4030, file: !728, line: 333, type: !151, align: 1)
+!4030 = distinct !DILexicalBlock(scope: !4021, file: !728, line: 333, column: 23)
+!4031 = !DILocalVariable(name: "__arg1_tag", scope: !4032, file: !728, line: 333, type: !151, align: 1)
+!4032 = distinct !DILexicalBlock(scope: !4030, file: !728, line: 333, column: 23)
+!4033 = !DILocation(line: 333, column: 23, scope: !4021)
+!4034 = !DILocation(line: 333, column: 23, scope: !4030)
+!4035 = !DILocation(line: 333, column: 23, scope: !4032)
+!4036 = !DILocation(line: 333, column: 32, scope: !4021)
+!4037 = distinct !DISubprogram(name: "into_iter<core::slice::iter::Iter<bootloader::bootinfo::memory_map::MemoryRegion>>", linkageName: "_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h6f1bfcac0ddec601E", scope: !4039, file: !4038, line: 271, type: !4042, scopeLine: 271, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !4046, retainedNodes: !4044)
+!4038 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs", directory: "", checksumkind: CSK_MD5, checksum: "a39b82fc812ed30b3e6ebda5fbc56490")
 !4039 = !DINamespace(name: "{impl#0}", scope: !4040)
 !4040 = !DINamespace(name: "collect", scope: !4041)
 !4041 = !DINamespace(name: "traits", scope: !2414)
 !4042 = !DISubroutineType(types: !4043)
 !4043 = !{!815, !815}
 !4044 = !{!4045}
-!4045 = !DILocalVariable(name: "self", arg: 1, scope: !4037, file: !4038, line: 272, type: !815)
+!4045 = !DILocalVariable(name: "self", arg: 1, scope: !4037, file: !4038, line: 271, type: !815)
 !4046 = !{!838}
-!4047 = !DILocation(line: 272, column: 18, scope: !4037)
-!4048 = !DILocation(line: 274, column: 6, scope: !4037)
-!4049 = distinct !DISubprogram(name: "get_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17hfed71cb03bf45bb2E", scope: !4050, file: !164, line: 230, type: !4051, scopeLine: 230, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4053)
+!4047 = !DILocation(line: 271, column: 18, scope: !4037)
+!4048 = !DILocation(line: 273, column: 6, scope: !4037)
+!4049 = distinct !DISubprogram(name: "get_unchecked<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h5548ba9342f449cdE", scope: !4050, file: !164, line: 227, type: !4051, scopeLine: 227, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4053)
 !4050 = !DINamespace(name: "{impl#2}", scope: !166)
 !4051 = !DISubroutineType(types: !4052)
 !4052 = !{!208, !9, !170}
 !4053 = !{!4054, !4055, !4056}
-!4054 = !DILocalVariable(name: "self", arg: 1, scope: !4049, file: !164, line: 230, type: !9)
-!4055 = !DILocalVariable(name: "slice", arg: 2, scope: !4049, file: !164, line: 230, type: !170)
-!4056 = !DILocalVariable(name: "this", scope: !4057, file: !164, line: 231, type: !9, align: 8)
-!4057 = distinct !DILexicalBlock(scope: !4049, file: !164, line: 231, column: 9)
-!4058 = !DILocation(line: 230, column: 29, scope: !4049)
-!4059 = !DILocation(line: 231, column: 13, scope: !4057)
-!4060 = !DILocation(line: 230, column: 35, scope: !4049)
-!4061 = !DILocation(line: 237, column: 13, scope: !4057)
-!4062 = !DILocation(line: 241, column: 13, scope: !4057)
+!4054 = !DILocalVariable(name: "self", arg: 1, scope: !4049, file: !164, line: 227, type: !9)
+!4055 = !DILocalVariable(name: "slice", arg: 2, scope: !4049, file: !164, line: 227, type: !170)
+!4056 = !DILocalVariable(name: "this", scope: !4057, file: !164, line: 228, type: !9, align: 8)
+!4057 = distinct !DILexicalBlock(scope: !4049, file: !164, line: 228, column: 9)
+!4058 = !DILocation(line: 227, column: 29, scope: !4049)
+!4059 = !DILocation(line: 228, column: 13, scope: !4057)
+!4060 = !DILocation(line: 227, column: 35, scope: !4049)
+!4061 = !DILocation(line: 234, column: 13, scope: !4057)
+!4062 = !DILocation(line: 238, column: 13, scope: !4057)
 !4063 = !DILocation(line: 915, column: 29, scope: !201, inlinedAt: !4064)
-!4064 = distinct !DILocation(line: 241, column: 13, scope: !4057)
+!4064 = distinct !DILocation(line: 238, column: 13, scope: !4057)
 !4065 = !DILocation(line: 915, column: 35, scope: !201, inlinedAt: !4064)
 !4066 = !DILocation(line: 460, column: 32, scope: !215, inlinedAt: !4067)
 !4067 = distinct !DILocation(line: 920, column: 18, scope: !201, inlinedAt: !4064)
 !4068 = !DILocation(line: 460, column: 38, scope: !215, inlinedAt: !4067)
 !4069 = !DILocation(line: 465, column: 18, scope: !215, inlinedAt: !4067)
-!4070 = !DILocation(line: 243, column: 6, scope: !4049)
+!4070 = !DILocation(line: 240, column: 6, scope: !4049)
 !4071 = !DILocalVariable(name: "this", arg: 1, scope: !4072, file: !229, line: 2484, type: !9)
-!4072 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hb89a6143e593e4e5E", scope: !4073, file: !229, line: 2484, type: !4074, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4076)
+!4072 = distinct !DISubprogram(name: "runtime<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked7runtime17hdc1ff58b63223638E", scope: !4073, file: !229, line: 2484, type: !4074, scopeLine: 2484, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4076)
 !4073 = !DINamespace(name: "get_unchecked", scope: !4050)
 !4074 = !DISubroutineType(types: !4075)
 !4075 = !{null, !9, !170}
 !4076 = !{!4071, !4077}
 !4077 = !DILocalVariable(name: "slice", arg: 2, scope: !4072, file: !229, line: 2484, type: !170)
 !4078 = !DILocation(line: 2484, column: 39, scope: !4072, inlinedAt: !4079)
-!4079 = distinct !DILocation(line: 237, column: 13, scope: !4057)
-!4080 = !DILocation(line: 239, column: 63, scope: !4081, inlinedAt: !4079)
+!4079 = distinct !DILocation(line: 234, column: 13, scope: !4057)
+!4080 = !DILocation(line: 236, column: 63, scope: !4081, inlinedAt: !4079)
 !4081 = !DILexicalBlockFile(scope: !4072, file: !164, discriminator: 0)
-!4082 = !DILocation(line: 239, column: 56, scope: !4081, inlinedAt: !4079)
+!4082 = !DILocation(line: 236, column: 56, scope: !4081, inlinedAt: !4079)
 !4083 = !DILocation(line: 2485, column: 20, scope: !4072, inlinedAt: !4079)
 !4084 = !DILocation(line: 2487, column: 21, scope: !4072, inlinedAt: !4079)
-!4085 = distinct !DISubprogram(name: "drop<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN83_$LT$core..slice..sort..InsertionHole$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17hc11065f685b18269E", scope: !4086, file: !2292, line: 23, type: !4087, scopeLine: 23, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4090)
+!4085 = distinct !DISubprogram(name: "drop<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN83_$LT$core..slice..sort..InsertionHole$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h15ddc8e48d95ec0bE", scope: !4086, file: !2292, line: 23, type: !4087, scopeLine: 23, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4090)
 !4086 = !DINamespace(name: "{impl#0}", scope: !1154)
 !4087 = !DISubroutineType(types: !4088)
 !4088 = !{null, !4089}
@@ -14064,7 +14065,7 @@ attributes #11 = { noreturn nounwind }
 !4094 = !DILocation(line: 28, column: 48, scope: !4085)
 !4095 = !DILocation(line: 28, column: 13, scope: !4085)
 !4096 = !DILocation(line: 30, column: 6, scope: !4085)
-!4097 = distinct !DISubprogram(name: "next<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h2beee56cf310e2bbE", scope: !4099, file: !4098, line: 124, type: !4100, scopeLine: 124, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4103)
+!4097 = distinct !DISubprogram(name: "next<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17he876426d7fcbf6a9E", scope: !4099, file: !4098, line: 124, type: !4100, scopeLine: 124, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4103)
 !4098 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "e0a6a70bd5f0917f8a5f1ac67ed889a4")
 !4099 = !DINamespace(name: "{impl#181}", scope: !816)
 !4100 = !DISubroutineType(types: !4101)
@@ -14075,7 +14076,7 @@ attributes #11 = { noreturn nounwind }
 !4105 = !DILocation(line: 124, column: 21, scope: !4097)
 !4106 = !DILocation(line: 132, column: 29, scope: !4097)
 !4107 = !DILocalVariable(name: "self", arg: 1, scope: !4108, file: !1688, line: 325, type: !819)
-!4108 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8non_null16NonNull$LT$T$GT$6as_ptr17hfdaa7cd6af9d16a9E", scope: !819, file: !1688, line: 325, type: !4109, scopeLine: 325, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4111)
+!4108 = distinct !DISubprogram(name: "as_ptr<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core3ptr8non_null16NonNull$LT$T$GT$6as_ptr17h6a1cad57160367dbE", scope: !819, file: !1688, line: 325, type: !4109, scopeLine: 325, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4111)
 !4109 = !DISubroutineType(types: !4110)
 !4110 = !{!272, !819}
 !4111 = !{!4107}
@@ -14092,7 +14093,7 @@ attributes #11 = { noreturn nounwind }
 !4122 = !DILocation(line: 134, column: 25, scope: !4097)
 !4123 = !DILocation(line: 133, column: 21, scope: !4097)
 !4124 = !DILocalVariable(name: "self", arg: 1, scope: !4125, file: !4098, line: 75, type: !4102)
-!4125 = distinct !DISubprogram(name: "post_inc_start<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4iter13Iter$LT$T$GT$14post_inc_start17h00f9743ed11de56cE", scope: !815, file: !4098, line: 75, type: !4126, scopeLine: 75, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4128)
+!4125 = distinct !DISubprogram(name: "post_inc_start<bootloader::bootinfo::memory_map::MemoryRegion>", linkageName: "_ZN4core5slice4iter13Iter$LT$T$GT$14post_inc_start17h698d57f9b849db51E", scope: !815, file: !4098, line: 75, type: !4126, scopeLine: 75, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !190, retainedNodes: !4128)
 !4126 = !DISubroutineType(types: !4127)
 !4127 = !{!208, !4102, !9}
 !4128 = !{!4124, !4129, !4130}
@@ -14124,10 +14125,10 @@ attributes #11 = { noreturn nounwind }
 !4154 = !DILocation(line: 136, column: 21, scope: !4097)
 !4155 = !DILocation(line: 137, column: 25, scope: !4097)
 !4156 = !DILocation(line: 142, column: 14, scope: !4097)
-!4157 = distinct !DISubprogram(name: "position<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#1}>", linkageName: "_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$8position17hd865531d1166ca3dE", scope: !4099, file: !4098, line: 278, type: !4158, scopeLine: 278, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !4172, retainedNodes: !4161)
+!4157 = distinct !DISubprogram(name: "position<bootloader::bootinfo::memory_map::MemoryRegion, bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#1}>", linkageName: "_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$8position17h9e7d7494f81db591E", scope: !4099, file: !4098, line: 278, type: !4158, scopeLine: 278, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !4172, retainedNodes: !4161)
 !4158 = !DISubroutineType(types: !4159)
 !4159 = !{!478, !4102, !4160}
-!4160 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#1}", scope: !1132, file: !2, align: 8, elements: !24, identifier: "8ea05d164bd7339643c52b4876c66bbb")
+!4160 = !DICompositeType(tag: DW_TAG_structure_type, name: "{closure_env#1}", scope: !1132, file: !2, align: 8, elements: !24, identifier: "e3a55059e53f4f0e5f96707e3cdbc948")
 !4161 = !{!4162, !4163, !4164, !4166, !4168, !4170}
 !4162 = !DILocalVariable(name: "self", arg: 1, scope: !4157, file: !4098, line: 278, type: !4102)
 !4163 = !DILocalVariable(name: "predicate", arg: 2, scope: !4157, file: !4098, line: 278, type: !4160)
@@ -14156,13 +14157,13 @@ attributes #11 = { noreturn nounwind }
 !4186 = !DILocation(line: 207, column: 18, scope: !549, inlinedAt: !4183)
 !4187 = !DILocation(line: 325, column: 25, scope: !4108, inlinedAt: !4188)
 !4188 = distinct !DILocation(line: 282, column: 25, scope: !4167)
-!4189 = !DILocation(line: 209, column: 17, scope: !3464, inlinedAt: !4190)
+!4189 = !DILocation(line: 209, column: 17, scope: !3486, inlinedAt: !4190)
 !4190 = distinct !DILocation(line: 282, column: 25, scope: !4167)
 !4191 = !DILocation(line: 57, column: 26, scope: !1289, inlinedAt: !4192)
-!4192 = distinct !DILocation(line: 213, column: 33, scope: !3464, inlinedAt: !4190)
-!4193 = !DILocation(line: 213, column: 18, scope: !3464, inlinedAt: !4190)
+!4192 = distinct !DILocation(line: 213, column: 33, scope: !3486, inlinedAt: !4190)
+!4193 = !DILocation(line: 213, column: 18, scope: !3486, inlinedAt: !4190)
 !4194 = !DILocalVariable(name: "self", arg: 1, scope: !4195, file: !1025, line: 1229, type: !9)
-!4195 = distinct !DISubprogram(name: "wrapping_sub", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$12wrapping_sub17h4f18fdc61c865ee1E", scope: !1026, file: !1025, line: 1229, type: !4196, scopeLine: 1229, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4198)
+!4195 = distinct !DISubprogram(name: "wrapping_sub", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$12wrapping_sub17hb87f774356ad9463E", scope: !1026, file: !1025, line: 1229, type: !4196, scopeLine: 1229, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4198)
 !4196 = !DISubroutineType(types: !4197)
 !4197 = !{!9, !9, !9}
 !4198 = !{!4194, !4199}
@@ -14186,7 +14187,7 @@ attributes #11 = { noreturn nounwind }
 !4216 = !DILocation(line: 288, column: 34, scope: !4171)
 !4217 = !DILocation(line: 289, column: 37, scope: !4171)
 !4218 = !DILocation(line: 289, column: 32, scope: !4171)
-!4219 = distinct !DISubprogram(name: "new", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap3new17h3aff69e4347c246eE", scope: !94, file: !4220, line: 20, type: !4221, scopeLine: 20, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !24)
+!4219 = distinct !DISubprogram(name: "new", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap3new17h68ca61913f5d4357E", scope: !94, file: !4220, line: 20, type: !4221, scopeLine: 20, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !24)
 !4220 = !DIFile(filename: "src/bootinfo/memory_map.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23", checksumkind: CSK_MD5, checksum: "e5c49912468d9331b5d84640370affee")
 !4221 = !DISubroutineType(types: !4222)
 !4222 = !{!94}
@@ -14194,7 +14195,7 @@ attributes #11 = { noreturn nounwind }
 !4224 = !DILocation(line: 22, column: 22, scope: !4219)
 !4225 = !DILocation(line: 21, column: 9, scope: !4219)
 !4226 = !DILocation(line: 25, column: 6, scope: !4219)
-!4227 = distinct !DISubprogram(name: "add_region", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap10add_region17hc58fb3652f4eb79cE", scope: !94, file: !4220, line: 27, type: !4228, scopeLine: 27, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4231)
+!4227 = distinct !DISubprogram(name: "add_region", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap10add_region17h3da4def24ec5127aE", scope: !94, file: !4220, line: 27, type: !4228, scopeLine: 27, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4231)
 !4228 = !DISubroutineType(types: !4229)
 !4229 = !{null, !4230, !13}
 !4230 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut bootloader::bootinfo::memory_map::MemoryMap", baseType: !94, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -14210,7 +14211,7 @@ attributes #11 = { noreturn nounwind }
 !4240 = !DILocation(line: 33, column: 9, scope: !4227)
 !4241 = !DILocation(line: 34, column: 9, scope: !4227)
 !4242 = !DILocation(line: 35, column: 6, scope: !4227)
-!4243 = distinct !DISubprogram(name: "sort", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort17he535241d1cfbe782E", scope: !94, file: !4220, line: 37, type: !4244, scopeLine: 37, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4246)
+!4243 = distinct !DISubprogram(name: "sort", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort17h188c5014c9f32560E", scope: !94, file: !4220, line: 37, type: !4244, scopeLine: 37, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4246)
 !4244 = !DISubroutineType(types: !4245)
 !4245 = !{null, !4230}
 !4246 = !{!4247, !4248}
@@ -14225,7 +14226,7 @@ attributes #11 = { noreturn nounwind }
 !4255 = !DILocation(line: 59, column: 13, scope: !4249)
 !4256 = !DILocation(line: 58, column: 9, scope: !4243)
 !4257 = !DILocation(line: 61, column: 6, scope: !4243)
-!4258 = distinct !DISubprogram(name: "{closure#0}", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h518903dc53964686E", scope: !1132, file: !4220, line: 40, type: !4259, scopeLine: 40, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4261)
+!4258 = distinct !DISubprogram(name: "{closure#0}", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17hcf06a7110d2196cfE", scope: !1132, file: !4220, line: 40, type: !4259, scopeLine: 40, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4261)
 !4259 = !DISubroutineType(types: !4260)
 !4260 = !{!149, !1130, !12, !12}
 !4261 = !{!4262, !4263, !4264, !4266}
@@ -14251,7 +14252,7 @@ attributes #11 = { noreturn nounwind }
 !4281 = !DILocation(line: 51, column: 17, scope: !4265)
 !4282 = !DILocation(line: 52, column: 21, scope: !4265)
 !4283 = !DILocation(line: 52, column: 51, scope: !4265)
-!4284 = distinct !DISubprogram(name: "{closure#1}", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h7104e28a97ef0c5fE", scope: !1132, file: !4220, line: 58, type: !4285, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4288)
+!4284 = distinct !DISubprogram(name: "{closure#1}", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap4sort28_$u7b$$u7b$closure$u7d$$u7d$17h9cbf6bfd45457db2E", scope: !1132, file: !4220, line: 58, type: !4285, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4288)
 !4285 = !DISubroutineType(types: !4286)
 !4286 = !{!421, !4287, !12}
 !4287 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut bootloader::bootinfo::memory_map::{impl#0}::sort::{closure_env#1}", baseType: !4160, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -14262,7 +14263,7 @@ attributes #11 = { noreturn nounwind }
 !4292 = !DILocation(line: 58, column: 71, scope: !4284)
 !4293 = !DILocation(line: 58, column: 74, scope: !4284)
 !4294 = !DILocation(line: 58, column: 92, scope: !4284)
-!4295 = distinct !DISubprogram(name: "next_entry_index", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17h248c00c629806dc8E", scope: !94, file: !4220, line: 63, type: !4296, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4299)
+!4295 = distinct !DISubprogram(name: "next_entry_index", linkageName: "_ZN10bootloader8bootinfo10memory_map9MemoryMap16next_entry_index17hecfd655f1433eaa0E", scope: !94, file: !4220, line: 63, type: !4296, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4299)
 !4296 = !DISubroutineType(types: !4297)
 !4297 = !{!9, !4298}
 !4298 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&bootloader::bootinfo::memory_map::MemoryMap", baseType: !94, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -14271,7 +14272,7 @@ attributes #11 = { noreturn nounwind }
 !4301 = !DILocation(line: 63, column: 25, scope: !4295)
 !4302 = !DILocation(line: 64, column: 9, scope: !4295)
 !4303 = !DILocation(line: 65, column: 6, scope: !4295)
-!4304 = distinct !DISubprogram(name: "deref", linkageName: "_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..Deref$GT$5deref17hb5b493a853152156E", scope: !4305, file: !4220, line: 71, type: !4306, scopeLine: 71, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4308)
+!4304 = distinct !DISubprogram(name: "deref", linkageName: "_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..Deref$GT$5deref17h3cd90a1c3fb66c2cE", scope: !4305, file: !4220, line: 71, type: !4306, scopeLine: 71, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4308)
 !4305 = !DINamespace(name: "{impl#1}", scope: !14)
 !4306 = !DISubroutineType(types: !4307)
 !4307 = !{!323, !4298}
@@ -14282,7 +14283,7 @@ attributes #11 = { noreturn nounwind }
 !4312 = !DILocation(line: 72, column: 23, scope: !4304)
 !4313 = !DILocation(line: 72, column: 10, scope: !4304)
 !4314 = !DILocation(line: 73, column: 6, scope: !4304)
-!4315 = distinct !DISubprogram(name: "deref_mut", linkageName: "_ZN90_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h30bab5fe609b1404E", scope: !4316, file: !4220, line: 77, type: !4317, scopeLine: 77, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4319)
+!4315 = distinct !DISubprogram(name: "deref_mut", linkageName: "_ZN90_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h28a68e3e28705219E", scope: !4316, file: !4220, line: 77, type: !4317, scopeLine: 77, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4319)
 !4316 = !DINamespace(name: "{impl#2}", scope: !14)
 !4317 = !DISubroutineType(types: !4318)
 !4318 = !{!354, !4230}
@@ -14296,7 +14297,7 @@ attributes #11 = { noreturn nounwind }
 !4326 = !DILocation(line: 79, column: 27, scope: !4322)
 !4327 = !DILocation(line: 79, column: 14, scope: !4322)
 !4328 = !DILocation(line: 80, column: 6, scope: !4315)
-!4329 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN80_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..fmt..Debug$GT$3fmt17h9737d89a1f4e8994E", scope: !4330, file: !4220, line: 84, type: !4331, scopeLine: 84, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4333)
+!4329 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN80_$LT$bootloader..bootinfo..memory_map..MemoryMap$u20$as$u20$core..fmt..Debug$GT$3fmt17h946aba19ea4022cfE", scope: !4330, file: !4220, line: 84, type: !4331, scopeLine: 84, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4333)
 !4330 = !DINamespace(name: "{impl#3}", scope: !14)
 !4331 = !DISubroutineType(types: !4332)
 !4332 = !{!451, !4298, !470}
@@ -14308,7 +14309,7 @@ attributes #11 = { noreturn nounwind }
 !4338 = !DILocation(line: 85, column: 9, scope: !4329)
 !4339 = !DILocation(line: 85, column: 32, scope: !4329)
 !4340 = !DILocation(line: 86, column: 6, scope: !4329)
-!4341 = distinct !DISubprogram(name: "empty", linkageName: "_ZN10bootloader8bootinfo10memory_map12MemoryRegion5empty17h9d32b5f768766851E", scope: !13, file: !4220, line: 101, type: !4342, scopeLine: 101, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !24)
+!4341 = distinct !DISubprogram(name: "empty", linkageName: "_ZN10bootloader8bootinfo10memory_map12MemoryRegion5empty17h2bde3157c7a10c0dE", scope: !13, file: !4220, line: 101, type: !4342, scopeLine: 101, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !24)
 !4342 = !DISubroutineType(types: !4343)
 !4343 = !{!13}
 !4344 = !DILocation(line: 103, column: 20, scope: !4341)
@@ -14316,7 +14317,7 @@ attributes #11 = { noreturn nounwind }
 !4346 = !DILocation(line: 102, column: 9, scope: !4341)
 !4347 = !{i32 0, i32 15}
 !4348 = !DILocation(line: 109, column: 6, scope: !4341)
-!4349 = distinct !DISubprogram(name: "new", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange3new17h5c37249ca6b03321E", scope: !19, file: !4220, line: 132, type: !4350, scopeLine: 132, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4352)
+!4349 = distinct !DISubprogram(name: "new", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange3new17h3bb43e6b2c1de0d6E", scope: !19, file: !4220, line: 132, type: !4350, scopeLine: 132, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4352)
 !4350 = !DISubroutineType(types: !4351)
 !4351 = !{!19, !22, !22}
 !4352 = !{!4353, !4354, !4355}
@@ -14332,7 +14333,7 @@ attributes #11 = { noreturn nounwind }
 !4362 = !DILocation(line: 136, column: 31, scope: !4356)
 !4363 = !DILocation(line: 134, column: 9, scope: !4356)
 !4364 = !DILocation(line: 138, column: 6, scope: !4349)
-!4365 = distinct !DISubprogram(name: "is_empty", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17h8a72c899702540f4E", scope: !19, file: !4220, line: 141, type: !4366, scopeLine: 141, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4369)
+!4365 = distinct !DISubprogram(name: "is_empty", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange8is_empty17hb8edc9f026bfaf4dE", scope: !19, file: !4220, line: 141, type: !4366, scopeLine: 141, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4369)
 !4366 = !DISubroutineType(types: !4367)
 !4367 = !{!421, !4368}
 !4368 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&bootloader::bootinfo::memory_map::FrameRange", baseType: !19, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -14342,7 +14343,7 @@ attributes #11 = { noreturn nounwind }
 !4372 = !DILocation(line: 142, column: 9, scope: !4365)
 !4373 = !DILocation(line: 142, column: 36, scope: !4365)
 !4374 = !DILocation(line: 143, column: 6, scope: !4365)
-!4375 = distinct !DISubprogram(name: "start_addr", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange10start_addr17hdc0b480a37f19d6cE", scope: !19, file: !4220, line: 146, type: !4376, scopeLine: 146, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4378)
+!4375 = distinct !DISubprogram(name: "start_addr", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange10start_addr17he1ef9a069b3c8cc0E", scope: !19, file: !4220, line: 146, type: !4376, scopeLine: 146, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4378)
 !4376 = !DISubroutineType(types: !4377)
 !4377 = !{!22, !4368}
 !4378 = !{!4379}
@@ -14350,13 +14351,13 @@ attributes #11 = { noreturn nounwind }
 !4380 = !DILocation(line: 146, column: 23, scope: !4375)
 !4381 = !DILocation(line: 147, column: 9, scope: !4375)
 !4382 = !DILocation(line: 148, column: 6, scope: !4375)
-!4383 = distinct !DISubprogram(name: "end_addr", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange8end_addr17h0ff075a254e98d63E", scope: !19, file: !4220, line: 151, type: !4376, scopeLine: 151, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4384)
+!4383 = distinct !DISubprogram(name: "end_addr", linkageName: "_ZN10bootloader8bootinfo10memory_map10FrameRange8end_addr17hdc6f3e7a1789b533E", scope: !19, file: !4220, line: 151, type: !4376, scopeLine: 151, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4384)
 !4384 = !{!4385}
 !4385 = !DILocalVariable(name: "self", arg: 1, scope: !4383, file: !4220, line: 151, type: !4368)
 !4386 = !DILocation(line: 151, column: 21, scope: !4383)
 !4387 = !DILocation(line: 152, column: 9, scope: !4383)
 !4388 = !DILocation(line: 153, column: 6, scope: !4383)
-!4389 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN81_$LT$bootloader..bootinfo..memory_map..FrameRange$u20$as$u20$core..fmt..Debug$GT$3fmt17h7c1866d775acbc7fE", scope: !4390, file: !4220, line: 157, type: !4391, scopeLine: 157, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4393)
+!4389 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN81_$LT$bootloader..bootinfo..memory_map..FrameRange$u20$as$u20$core..fmt..Debug$GT$3fmt17hb984a4e1d3634888E", scope: !4390, file: !4220, line: 157, type: !4391, scopeLine: 157, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4393)
 !4390 = !DINamespace(name: "{impl#6}", scope: !14)
 !4391 = !DISubroutineType(types: !4392)
 !4392 = !{!451, !4368, !470}
@@ -14371,7 +14372,7 @@ attributes #11 = { noreturn nounwind }
 !4401 = !{i8 0, i8 4}
 !4402 = !{i64 0, i64 3}
 !4403 = !DILocalVariable(name: "position", arg: 1, scope: !4404, file: !4405, line: 28, type: !9)
-!4404 = distinct !DISubprogram(name: "new", linkageName: "_ZN4core3fmt2rt2v18Argument3new17h5f45151c0e41afecE", scope: !871, file: !4405, line: 27, type: !4406, scopeLine: 27, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4408)
+!4404 = distinct !DISubprogram(name: "new", linkageName: "_ZN4core3fmt2rt2v18Argument3new17he32a209e12220e22E", scope: !871, file: !4405, line: 27, type: !4406, scopeLine: 27, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4408)
 !4405 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/rt/v1.rs", directory: "", checksumkind: CSK_MD5, checksum: "9501c7f9488d296f432c394ba18730ac")
 !4406 = !DISubroutineType(types: !4407)
 !4407 = !{!871, !9, !475, !139, !27, !881, !881}
@@ -14400,11 +14401,11 @@ attributes #11 = { noreturn nounwind }
 !4430 = !DILocation(line: 35, column: 34, scope: !4404, inlinedAt: !4424)
 !4431 = !DILocation(line: 35, column: 9, scope: !4404, inlinedAt: !4424)
 !4432 = !DILocation(line: 164, column: 6, scope: !4389)
-!4433 = distinct !DISubprogram(name: "from", linkageName: "_ZN144_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..convert..From$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$GT$$GT$4from17he4d3e71dbfcc5bdeE", scope: !4434, file: !4220, line: 218, type: !4435, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4443)
+!4433 = distinct !DISubprogram(name: "from", linkageName: "_ZN144_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..convert..From$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$GT$$GT$4from17h95b7b21449197a42E", scope: !4434, file: !4220, line: 218, type: !4435, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4443)
 !4434 = !DINamespace(name: "{impl#7}", scope: !14)
 !4435 = !DISubroutineType(types: !4436)
 !4436 = !{!13, !4437}
-!4437 = !DICompositeType(tag: DW_TAG_structure_type, name: "E820MemoryRegion", scope: !14, file: !2, size: 192, align: 64, elements: !4438, templateParams: !24, identifier: "a0791fd690ba595fce10a46fb84ed45f")
+!4437 = !DICompositeType(tag: DW_TAG_structure_type, name: "E820MemoryRegion", scope: !14, file: !2, size: 192, align: 64, elements: !4438, templateParams: !24, identifier: "a84511e40b3be9b321cbf7ebfed30479")
 !4438 = !{!4439, !4440, !4441, !4442}
 !4439 = !DIDerivedType(tag: DW_TAG_member, name: "start_addr", scope: !4437, file: !2, baseType: !22, size: 64, align: 64)
 !4440 = !DIDerivedType(tag: DW_TAG_member, name: "len", scope: !4437, file: !2, baseType: !22, size: 64, align: 64, offset: 64)
@@ -14434,9 +14435,9 @@ attributes #11 = { noreturn nounwind }
 !4464 = !DILocation(line: 229, column: 13, scope: !4446)
 !4465 = !DILocation(line: 227, column: 9, scope: !4446)
 !4466 = !DILocation(line: 231, column: 6, scope: !4433)
-!4467 = distinct !DISubprogram(name: "new", linkageName: "_ZN10bootloader8bootinfo8BootInfo3new17h783582ddacc11b7aE", scope: !4469, file: !4468, line: 53, type: !4474, scopeLine: 53, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4476)
+!4467 = distinct !DISubprogram(name: "new", linkageName: "_ZN10bootloader8bootinfo8BootInfo3new17hcece7abe60e3d3fbE", scope: !4469, file: !4468, line: 53, type: !4474, scopeLine: 53, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4476)
 !4468 = !DIFile(filename: "src/bootinfo/mod.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader-0.9.23", checksumkind: CSK_MD5, checksum: "a171ea6c439575860461f3a713fd0ff5")
-!4469 = !DICompositeType(tag: DW_TAG_structure_type, name: "BootInfo", scope: !15, file: !2, size: 12608, align: 64, elements: !4470, templateParams: !24, identifier: "f414b8efedc11dbec1340792f1dd4c0")
+!4469 = !DICompositeType(tag: DW_TAG_structure_type, name: "BootInfo", scope: !15, file: !2, size: 12608, align: 64, elements: !4470, templateParams: !24, identifier: "9275b620f460384c7947c89bed5381b8")
 !4470 = !{!4471, !4472, !4473}
 !4471 = !DIDerivedType(tag: DW_TAG_member, name: "memory_map", scope: !4469, file: !2, baseType: !94, size: 12352, align: 64)
 !4472 = !DIDerivedType(tag: DW_TAG_member, name: "tls_template", scope: !4469, file: !2, baseType: !109, size: 192, align: 64, offset: 12352)
@@ -14460,7 +14461,7 @@ attributes #11 = { noreturn nounwind }
 !4490 = !DILocation(line: 66, column: 13, scope: !4482)
 !4491 = !DILocation(line: 64, column: 9, scope: !4482)
 !4492 = !DILocation(line: 73, column: 6, scope: !4467)
-!4493 = distinct !DISubprogram(name: "tls_template", linkageName: "_ZN10bootloader8bootinfo8BootInfo12tls_template17hccafdc12d553cb5aE", scope: !4469, file: !4468, line: 81, type: !4494, scopeLine: 81, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4497)
+!4493 = distinct !DISubprogram(name: "tls_template", linkageName: "_ZN10bootloader8bootinfo8BootInfo12tls_template17he0819d67f002f0fbE", scope: !4469, file: !4468, line: 81, type: !4494, scopeLine: 81, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4497)
 !4494 = !DISubroutineType(types: !4495)
 !4495 = !{!3992, !4496}
 !4496 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&bootloader::bootinfo::BootInfo", baseType: !4469, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -14473,7 +14474,7 @@ attributes #11 = { noreturn nounwind }
 !4503 = !DILocation(line: 83, column: 18, scope: !4493)
 !4504 = !DILocation(line: 83, column: 13, scope: !4493)
 !4505 = !DILocation(line: 87, column: 6, scope: !4493)
-!4506 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN83_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h47f12e6d2557594cE", scope: !4507, file: !4220, line: 90, type: !4508, scopeLine: 90, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4510)
+!4506 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN83_$LT$bootloader..bootinfo..memory_map..MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h6909f28b8cb986d8E", scope: !4507, file: !4220, line: 90, type: !4508, scopeLine: 90, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4510)
 !4507 = !DINamespace(name: "{impl#8}", scope: !14)
 !4508 = !DISubroutineType(types: !4509)
 !4509 = !{!451, !12, !470}
@@ -14483,7 +14484,7 @@ attributes #11 = { noreturn nounwind }
 !4513 = !DILocation(line: 90, column: 10, scope: !4506)
 !4514 = !DILocation(line: 96, column: 5, scope: !4506)
 !4515 = !DILocation(line: 90, column: 15, scope: !4506)
-!4516 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryRegionType$u20$as$u20$core..fmt..Debug$GT$3fmt17hb40c95ac774d70e6E", scope: !4517, file: !4220, line: 168, type: !4518, scopeLine: 168, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4520)
+!4516 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN87_$LT$bootloader..bootinfo..memory_map..MemoryRegionType$u20$as$u20$core..fmt..Debug$GT$3fmt17h5288c65a4929f4acE", scope: !4517, file: !4220, line: 168, type: !4518, scopeLine: 168, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4520)
 !4517 = !DINamespace(name: "{impl#21}", scope: !14)
 !4518 = !DISubroutineType(types: !4519)
 !4519 = !{!451, !60, !470}
@@ -14493,7 +14494,7 @@ attributes #11 = { noreturn nounwind }
 !4523 = !DILocation(line: 168, column: 10, scope: !4516)
 !4524 = !DILocation(line: 168, column: 14, scope: !4516)
 !4525 = !DILocation(line: 168, column: 15, scope: !4516)
-!4526 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN87_$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h7e3b1ebee09953ebE", scope: !4527, file: !4220, line: 208, type: !4528, scopeLine: 208, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4531)
+!4526 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN87_$LT$bootloader..bootinfo..memory_map..E820MemoryRegion$u20$as$u20$core..fmt..Debug$GT$3fmt17h0392a824fd6c03cfE", scope: !4527, file: !4220, line: 208, type: !4528, scopeLine: 208, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4531)
 !4527 = !DINamespace(name: "{impl#28}", scope: !14)
 !4528 = !DISubroutineType(types: !4529)
 !4529 = !{!451, !4530, !470}
@@ -14506,7 +14507,7 @@ attributes #11 = { noreturn nounwind }
 !4536 = !DILocation(line: 213, column: 5, scope: !4526)
 !4537 = !DILocation(line: 214, column: 5, scope: !4526)
 !4538 = !DILocation(line: 208, column: 15, scope: !4526)
-!4539 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN67_$LT$bootloader..bootinfo..BootInfo$u20$as$u20$core..fmt..Debug$GT$3fmt17hfcf2fd56c64748cfE", scope: !4540, file: !4468, line: 22, type: !4541, scopeLine: 22, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4543)
+!4539 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN67_$LT$bootloader..bootinfo..BootInfo$u20$as$u20$core..fmt..Debug$GT$3fmt17h91cfb0aa0d181cbeE", scope: !4540, file: !4468, line: 22, type: !4541, scopeLine: 22, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4543)
 !4540 = !DINamespace(name: "{impl#1}", scope: !15)
 !4541 = !DISubroutineType(types: !4542)
 !4542 = !{!451, !4496, !470}
@@ -14517,7 +14518,7 @@ attributes #11 = { noreturn nounwind }
 !4547 = !DILocation(line: 45, column: 5, scope: !4539)
 !4548 = !DILocation(line: 46, column: 5, scope: !4539)
 !4549 = !DILocation(line: 22, column: 15, scope: !4539)
-!4550 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN70_$LT$bootloader..bootinfo..TlsTemplate$u20$as$u20$core..fmt..Debug$GT$3fmt17hd389f09cb59dcb2aE", scope: !4551, file: !4468, line: 103, type: !4552, scopeLine: 103, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4555)
+!4550 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN70_$LT$bootloader..bootinfo..TlsTemplate$u20$as$u20$core..fmt..Debug$GT$3fmt17hd721ca5c2a0151c5E", scope: !4551, file: !4468, line: 103, type: !4552, scopeLine: 103, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !136, templateParams: !24, retainedNodes: !4555)
 !4551 = !DINamespace(name: "{impl#2}", scope: !15)
 !4552 = !DISubroutineType(types: !4553)
 !4553 = !{!451, !4554, !470}

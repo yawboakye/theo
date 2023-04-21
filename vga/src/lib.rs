@@ -1,6 +1,7 @@
 #![no_std]
 #![allow(dead_code)]
 #![feature(custom_test_frameworks)]
+#![feature(stmt_expr_attributes)]
 
 use core::fmt::{Result, Write};
 use core::ptr::write_volatile;
@@ -232,11 +233,16 @@ impl Screen {
         match self.tfd {
             TextFlowDirection::BottomUp => {
                 for row in self.water_level..self.height() {
+                    if row == 0 {
+                        continue;
+                    }
                     // pull up from the row below.
                     self.buf.chars[row - 1] = self.buf.chars[row];
                     self.buf.chars[row] = self.blank_row;
                 }
-                self.water_level -= 1;
+
+                #[rustfmt::skip]
+                if self.water_level > 0 { self.water_level -= 1; }
                 self.recall_cursor_to_origin();
             }
 

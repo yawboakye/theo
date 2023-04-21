@@ -1,5 +1,5 @@
-; ModuleID = 'bit_field.52d4adf3-cgu.0'
-source_filename = "bit_field.52d4adf3-cgu.0"
+; ModuleID = 'bit_field.50c47182cac60304-cgu.0'
+source_filename = "bit_field.50c47182cac60304-cgu.0"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
@@ -9,5 +9,5 @@ target triple = "x86_64-obuasi-unknown-none"
 !0 = !{i32 8, !"PIC Level", i32 2}
 !1 = !{i32 2, !"Dwarf Version", i32 4}
 !2 = !{i32 2, !"Debug Info Version", i32 3}
-!3 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !4, producer: "clang LLVM (rustc version 1.71.0-nightly (d0f204e4d 2023-04-16))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, splitDebugInlining: false)
-!4 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs/@/bit_field.52d4adf3-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1")
+!3 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !4, producer: "clang LLVM (rustc version 1.71.0-nightly (39c6804b9 2023-04-19))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, splitDebugInlining: false)
+!4 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs/@/bit_field.50c47182cac60304-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1")
