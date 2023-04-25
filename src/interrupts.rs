@@ -46,3 +46,10 @@ pub fn initialize() -> () {
         }
     }
 }
+
+pub fn without_interrupts<F, R>(f: F) -> R
+where
+    F: FnOnce() -> R,
+{
+    cpu_interrupts::without_interrupts(f)
+}
