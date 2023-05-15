@@ -5,4 +5,5 @@ pub const CHAINED_PICS_OFFSET: u8 = 32;
 #[repr(u8)]
 pub enum AdjustedInterruptIndex {
     Timer = CHAINED_PICS_OFFSET,
+    Keyboard,
 }
