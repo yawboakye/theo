@@ -1,7 +1,8 @@
 // TODO(yaw): `cpu_interrupts` should try to cleanly
 // abstract this detail away from the host crate.
+use crate::peripherals;
 use cpu_interrupts::{
-    constants,
+    constants::{AdjustedInterruptIndex as Index, DOUBLE_FAULT_IST_INDEX},
     default_exception_handlers::double_fault_handler,
     global_descriptor_table,
     interrupt_descriptor_table::SafeInterruptDescriptorTable,
@@ -16,10 +17,10 @@ lazy_static! {
         unsafe {
             idt.double_fault
                 .set_handler_fn(double_fault_handler)
-                .set_stack_index(constants::DOUBLE_FAULT_IST_INDEX as u16);
+                .set_stack_index(DOUBLE_FAULT_IST_INDEX as u16);
             idt.breakpoint.set_handler_fn(breakpoint_handler);
-            idt[constants::AdjustedInterruptIndex::Timer as usize]
-                .set_handler_fn(timer_interrupt_handler);
+            idt[Index::Timer as usize].set_handler_fn(timer_interrupt_handler);
+            idt[Index::Keyboard as usize].set_handler_fn(keyboard_handler);
         }
 
         SafeInterruptDescriptorTable::from(idt)
@@ -33,6 +34,16 @@ extern "x86-interrupt" fn timer_interrupt_handler(_isf: InterruptStackFrame) {
     // i.e. when implanting the handlers into the interrupt descriptor
     // table, we should see which handlers need proper termination
     // and automatically stick this last bit in there for them.
+    notify_end_of_timer_interrupt();
+}
+
+extern "x86-interrupt" fn keyboard_handler(_isf: InterruptStackFrame) {
+    let keyboard = peripherals::KEYBOARD.lock();
+    keyboard.process_key_event(|key_event: Option<keyboard::KeyEvent>| match key_event {
+        Some(_key) => todo!(),
+        None => todo!(),
+    });
+
     notify_end_of_timer_interrupt();
 }
 
