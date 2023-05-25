@@ -8,6 +8,7 @@ use cpu_interrupts::{
     interrupt_descriptor_table::SafeInterruptDescriptorTable,
     programmable_interface_controller::{self, notify_end_of_timer_interrupt},
 };
+use keyboard::DecodedKey;
 use lazy_static::lazy_static;
 use x86_64::structures::idt::{InterruptDescriptorTable, InterruptStackFrame};
 
@@ -38,10 +39,10 @@ extern "x86-interrupt" fn timer_interrupt_handler(_isf: InterruptStackFrame) {
 }
 
 extern "x86-interrupt" fn keyboard_handler(_isf: InterruptStackFrame) {
-    let keyboard = peripherals::KEYBOARD.lock();
-    keyboard.process_key_event(|key_event: Option<keyboard::KeyEvent>| match key_event {
-        Some(_key) => todo!(),
-        None => todo!(),
+    let mut keyboard = peripherals::KEYBOARD.lock();
+    keyboard.process_decoded_key(|decoded_key: DecodedKey| match decoded_key {
+        DecodedKey::Unicode(decoded_key) => crate::print!("{decoded_key}"),
+        DecodedKey::RawKey(decoded_key) => crate::print!("{:?}", decoded_key),
     });
 
     notify_end_of_timer_interrupt();
@@ -58,7 +59,7 @@ pub fn initialize() -> () {
     }
 }
 
-pub fn without_interrupts<F, R>(f: F) -> R
+pub fn sine_interruptis<F, R>(f: F) -> R
 where
     F: FnOnce() -> R,
 {

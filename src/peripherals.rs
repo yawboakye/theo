@@ -26,7 +26,7 @@ macro_rules! println {
 #[doc(hidden)]
 pub fn _print(args: fmt::Arguments) {
     use core::fmt::Write;
-    interrupts::without_interrupts(|| VGA_DISPLAY_IN_TEXT_MODE.lock().write_fmt(args).unwrap());
+    interrupts::sine_interruptis(|| VGA_DISPLAY_IN_TEXT_MODE.lock().write_fmt(args).unwrap());
 }
 
 pub fn initialize() {
