@@ -1,5 +1,5 @@
-; ModuleID = '5b70x7mteoxs6qq'
-source_filename = "5b70x7mteoxs6qq"
+; ModuleID = '47alcp8srxohvuil'
+source_filename = "47alcp8srxohvuil"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
@@ -18,8 +18,8 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_fad0cd83b7d1858a846a172eb260e593 = private unnamed_addr constant <{ [42 x i8] }> <{ [42 x i8] c"is_aligned_to: align is not a power-of-two" }>, align 1
 @alloc_60ac762d06592b2ab3358175d7a7c295 = private unnamed_addr constant <{ ptr, [8 x i8] }> <{ ptr @alloc_fad0cd83b7d1858a846a172eb260e593, [8 x i8] c"*\00\00\00\00\00\00\00" }>, align 8
 @alloc_38eb3fe2a71bea9ddc57ce847c7c3987 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_cc91f7045aeea4ab0f301c62c00dba06, [16 x i8] c"q\00\00\00\00\00\00\00&\06\00\00\0D\00\00\00" }>, align 8
-@_ZN3vga12PI_CHAR_CODE17h9712d871dd7f287fE = internal constant <{ [1 x i8] }> <{ [1 x i8] c"\E3" }>, align 1, !dbg !0
-@_ZN3vga24VGA_COLOR_TEXT_MODE_ADDR17h97f88b84251bfb6dE = internal constant <{ [8 x i8] }> <{ [8 x i8] c"\00\80\0B\00\00\00\00\00" }>, align 8, !dbg !5
+@_ZN3vga12PI_CHAR_CODE17h14ac5d8b3a8f673dE = internal constant <{ [1 x i8] }> <{ [1 x i8] c"\E3" }>, align 1, !dbg !0
+@_ZN3vga24VGA_COLOR_TEXT_MODE_ADDR17h21432963d10cdbdbE = internal constant <{ [8 x i8] }> <{ [8 x i8] c"\00\80\0B\00\00\00\00\00" }>, align 8, !dbg !5
 @alloc_ca343366343f438024bd98a25129726d = private unnamed_addr constant <{ [14 x i8] }> <{ [14 x i8] c"vga/src/lib.rs" }>, align 1
 @alloc_63a33fc0cdd7ae3581af4ea409e14228 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_ca343366343f438024bd98a25129726d, [16 x i8] c"\0E\00\00\00\00\00\00\00g\00\00\00\09\00\00\00" }>, align 8
 @str.1 = internal constant [28 x i8] c"attempt to add with overflow"
@@ -33,15 +33,15 @@ target triple = "x86_64-obuasi-unknown-none"
 
 ; <core::iter::adapters::copied::Copied<I> as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: noredzone nounwind
-define { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h14ac179e763e7c53E"(ptr align 8 %self) unnamed_addr #0 !dbg !47 {
+define { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17he28a6449d3a865daE"(ptr align 8 %self) unnamed_addr #0 !dbg !47 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !95, metadata !DIExpression()), !dbg !97
 ; call <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::next
-  %_2 = call align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hd2efcc717ba7a400E"(ptr align 8 %self) #7, !dbg !98
+  %_2 = call align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h958227bac17e54d3E"(ptr align 8 %self) #7, !dbg !98
 ; call core::option::Option<&T>::copied
-  %0 = call { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17hb44c6c2efec68bd4E"(ptr align 1 %_2) #7, !dbg !98
+  %0 = call { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17hc093c1a81ce84f44E"(ptr align 1 %_2) #7, !dbg !98
   %1 = extractvalue { i8, i8 } %0, 0, !dbg !98
   %2 = trunc i8 %1 to i1, !dbg !98
   %3 = extractvalue { i8, i8 } %0, 1, !dbg !98
@@ -53,14 +53,14 @@ start:
 
 ; core::intrinsics::is_aligned_and_not_null
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17hba34dbe03ffee658E(ptr %ptr) unnamed_addr #0 !dbg !100 {
+define zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h335c814262d45cccE(ptr %ptr) unnamed_addr #0 !dbg !100 {
 start:
   %ptr.dbg.spill = alloca ptr, align 8
   %0 = alloca i8, align 1
   store ptr %ptr, ptr %ptr.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !115, metadata !DIExpression()), !dbg !118
 ; call core::ptr::const_ptr::<impl *const T>::is_null
-  %_3 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hd831bc0ab3d1834eE"(ptr %ptr) #7, !dbg !119
+  %_3 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17had509e6ad7e00427E"(ptr %ptr) #7, !dbg !119
   %_2 = xor i1 %_3, true, !dbg !120
   br i1 %_2, label %bb2, label %bb1, !dbg !120
 
@@ -70,7 +70,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned
-  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h1137fba6400fea0eE"(ptr %ptr) #7, !dbg !121
+  %_4 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h13966cd1cf791582E"(ptr %ptr) #7, !dbg !121
   %1 = zext i1 %_4 to i8, !dbg !120
   store i8 %1, ptr %0, align 1, !dbg !120
   br label %bb3, !dbg !120
@@ -83,7 +83,7 @@ bb3:                                              ; preds = %bb1, %bb2
 
 ; core::fmt::Arguments::new_const
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core3fmt9Arguments9new_const17hb408908830e78d4fE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #1 !dbg !124 {
+define internal void @_ZN4core3fmt9Arguments9new_const17hcb39c3984342b7ebE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #1 !dbg !124 {
 start:
   %pieces.dbg.spill = alloca { ptr, i64 }, align 8
   %_7 = alloca { ptr, i64 }, align 8
@@ -92,131 +92,131 @@ start:
   store ptr %pieces.0, ptr %1, align 8
   %2 = getelementptr inbounds { ptr, i64 }, ptr %pieces.dbg.spill, i32 0, i32 1
   store i64 %pieces.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %pieces.dbg.spill, metadata !254, metadata !DIExpression()), !dbg !255
-  %_2 = icmp ugt i64 %pieces.1, 1, !dbg !256
-  br i1 %_2, label %bb1, label %bb3, !dbg !256
+  call void @llvm.dbg.declare(metadata ptr %pieces.dbg.spill, metadata !255, metadata !DIExpression()), !dbg !256
+  %_2 = icmp ugt i64 %pieces.1, 1, !dbg !257
+  br i1 %_2, label %bb1, label %bb3, !dbg !257
 
 bb3:                                              ; preds = %start
-  store ptr null, ptr %_7, align 8, !dbg !257
-  %3 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 0, !dbg !258
-  store ptr %pieces.0, ptr %3, align 8, !dbg !258
-  %4 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 1, !dbg !258
-  store i64 %pieces.1, ptr %4, align 8, !dbg !258
-  %5 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 0, !dbg !258
-  %6 = load ptr, ptr %5, align 8, !dbg !258, !align !259, !noundef !62
-  %7 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 1, !dbg !258
-  %8 = load i64, ptr %7, align 8, !dbg !258
-  %9 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 2, !dbg !258
-  %10 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 0, !dbg !258
-  store ptr %6, ptr %10, align 8, !dbg !258
-  %11 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 1, !dbg !258
-  store i64 %8, ptr %11, align 8, !dbg !258
-  %12 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 1, !dbg !258
-  %13 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 0, !dbg !258
-  store ptr @alloc_513570631223a12912d85da2bec3b15a, ptr %13, align 8, !dbg !258
-  %14 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 1, !dbg !258
-  store i64 0, ptr %14, align 8, !dbg !258
-  ret void, !dbg !260
+  store ptr null, ptr %_7, align 8, !dbg !258
+  %3 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 0, !dbg !259
+  store ptr %pieces.0, ptr %3, align 8, !dbg !259
+  %4 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 1, !dbg !259
+  store i64 %pieces.1, ptr %4, align 8, !dbg !259
+  %5 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 0, !dbg !259
+  %6 = load ptr, ptr %5, align 8, !dbg !259, !align !260, !noundef !62
+  %7 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 1, !dbg !259
+  %8 = load i64, ptr %7, align 8, !dbg !259
+  %9 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 2, !dbg !259
+  %10 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 0, !dbg !259
+  store ptr %6, ptr %10, align 8, !dbg !259
+  %11 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 1, !dbg !259
+  store i64 %8, ptr %11, align 8, !dbg !259
+  %12 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 1, !dbg !259
+  %13 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 0, !dbg !259
+  store ptr @alloc_513570631223a12912d85da2bec3b15a, ptr %13, align 8, !dbg !259
+  %14 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 1, !dbg !259
+  store i64 0, ptr %14, align 8, !dbg !259
+  ret void, !dbg !261
 
 bb1:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hb408908830e78d4fE(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #7, !dbg !261
+  call void @_ZN4core3fmt9Arguments9new_const17hcb39c3984342b7ebE(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #7, !dbg !262
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hdd6269d09ded55c6E(ptr %_5, ptr align 8 @alloc_5eca5fde541bf3444e5a23d5419b88a4) #8, !dbg !261
-  unreachable, !dbg !261
+  call void @_ZN4core9panicking9panic_fmt17h2c59f66d276f88adE(ptr %_5, ptr align 8 @alloc_5eca5fde541bf3444e5a23d5419b88a4) #8, !dbg !262
+  unreachable, !dbg !262
 }
 
 ; core::ptr::write_volatile
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core3ptr14write_volatile17h34b638abb9ecb3b0E(ptr %dst, i8 %src.0, i8 %src.1) unnamed_addr #1 !dbg !262 {
+define void @_ZN4core3ptr14write_volatile17he7f5a5e45c64841eE(ptr %dst, i8 %src.0, i8 %src.1) unnamed_addr #1 !dbg !263 {
 start:
   %dst.dbg.spill.i = alloca ptr, align 8
   %src.dbg.spill = alloca { i8, i8 }, align 1
   %dst.dbg.spill = alloca ptr, align 8
   %_5 = alloca ptr, align 8
   store ptr %dst, ptr %dst.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill, metadata !268, metadata !DIExpression()), !dbg !270
+  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill, metadata !269, metadata !DIExpression()), !dbg !271
   %0 = getelementptr inbounds { i8, i8 }, ptr %src.dbg.spill, i32 0, i32 0
   store i8 %src.0, ptr %0, align 1
   %1 = getelementptr inbounds { i8, i8 }, ptr %src.dbg.spill, i32 0, i32 1
   store i8 %src.1, ptr %1, align 1
-  call void @llvm.dbg.declare(metadata ptr %src.dbg.spill, metadata !269, metadata !DIExpression()), !dbg !271
-  br i1 true, label %bb1, label %bb2, !dbg !272
+  call void @llvm.dbg.declare(metadata ptr %src.dbg.spill, metadata !270, metadata !DIExpression()), !dbg !272
+  br i1 true, label %bb1, label %bb2, !dbg !273
 
-bb2:                                              ; preds = %_ZN4core3ptr14write_volatile7runtime17h7781ef2b5298c073E.exit, %start
-  %2 = getelementptr inbounds { i8, i8 }, ptr %dst, i32 0, i32 0, !dbg !273
-  store volatile i8 %src.0, ptr %2, align 1, !dbg !273
-  %3 = getelementptr inbounds { i8, i8 }, ptr %dst, i32 0, i32 1, !dbg !273
-  store volatile i8 %src.1, ptr %3, align 1, !dbg !273
-  ret void, !dbg !274
+bb2:                                              ; preds = %_ZN4core3ptr14write_volatile7runtime17hcabccec63ffe8b1fE.exit, %start
+  %2 = getelementptr inbounds { i8, i8 }, ptr %dst, i32 0, i32 0, !dbg !274
+  store volatile i8 %src.0, ptr %2, align 1, !dbg !274
+  %3 = getelementptr inbounds { i8, i8 }, ptr %dst, i32 0, i32 1, !dbg !274
+  store volatile i8 %src.1, ptr %3, align 1, !dbg !274
+  ret void, !dbg !275
 
 bb1:                                              ; preds = %start
-  store ptr %dst, ptr %_5, align 8, !dbg !272
-  %4 = load ptr, ptr %_5, align 8, !dbg !272, !noundef !62
+  store ptr %dst, ptr %_5, align 8, !dbg !273
+  %4 = load ptr, ptr %_5, align 8, !dbg !273, !noundef !62
   store ptr %4, ptr %dst.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill.i, metadata !275, metadata !DIExpression()), !dbg !281
+  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill.i, metadata !276, metadata !DIExpression()), !dbg !282
 ; call core::intrinsics::is_aligned_and_not_null
-  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17hba34dbe03ffee658E(ptr %4) #7, !dbg !283
-  %_2.i = xor i1 %_3.i, true, !dbg !285
-  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr14write_volatile7runtime17h7781ef2b5298c073E.exit, !dbg !285
+  %_3.i = call zeroext i1 @_ZN4core10intrinsics23is_aligned_and_not_null17h335c814262d45cccE(ptr %4) #7, !dbg !284
+  %_2.i = xor i1 %_3.i, true, !dbg !286
+  br i1 %_2.i, label %bb2.i, label %_ZN4core3ptr14write_volatile7runtime17hcabccec63ffe8b1fE.exit, !dbg !286
 
 bb2.i:                                            ; preds = %bb1
 ; call core::panicking::panic_nounwind
-  call void @_ZN4core9panicking14panic_nounwind17h8eea4b7bcc6cf983E(ptr align 1 @alloc_a3bf71499bef7a3e66a38a17ba71b215, i64 111) #8, !dbg !286
-  unreachable, !dbg !286
+  call void @_ZN4core9panicking14panic_nounwind17h91025db35e83f9c9E(ptr align 1 @alloc_a3bf71499bef7a3e66a38a17ba71b215, i64 111) #8, !dbg !287
+  unreachable, !dbg !287
 
-_ZN4core3ptr14write_volatile7runtime17h7781ef2b5298c073E.exit: ; preds = %bb1
-  br label %bb2, !dbg !272
+_ZN4core3ptr14write_volatile7runtime17hcabccec63ffe8b1fE.exit: ; preds = %bb1
+  br label %bb2, !dbg !273
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h1137fba6400fea0eE"(ptr %self) unnamed_addr #1 !dbg !287 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h13966cd1cf791582E"(ptr %self) unnamed_addr #1 !dbg !288 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !292, metadata !DIExpression()), !dbg !293
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !293, metadata !DIExpression()), !dbg !294
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned_to
-  %0 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17hdba51d8128ed31a1E"(ptr %self, i64 1) #7, !dbg !294
-  ret i1 %0, !dbg !295
+  %0 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17haff1d3e01ed5e6a3E"(ptr %self, i64 1) #7, !dbg !295
+  ret i1 %0, !dbg !296
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned_to::runtime_impl
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17h42a0be6d32d713f8E"(ptr %ptr, i64 %align) unnamed_addr #1 !dbg !296 {
+define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17hbd0a02dab1bfb0f6E"(ptr %ptr, i64 %align) unnamed_addr #1 !dbg !297 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %self.dbg.spill.i = alloca ptr, align 8
   %align.dbg.spill = alloca i64, align 8
   %ptr.dbg.spill = alloca ptr, align 8
   store ptr %ptr, ptr %ptr.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !302, metadata !DIExpression()), !dbg !304
+  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !303, metadata !DIExpression()), !dbg !305
   store i64 %align, ptr %align.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %align.dbg.spill, metadata !303, metadata !DIExpression()), !dbg !305
+  call void @llvm.dbg.declare(metadata ptr %align.dbg.spill, metadata !304, metadata !DIExpression()), !dbg !306
   store ptr %ptr, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !306, metadata !DIExpression()), !dbg !312
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !307, metadata !DIExpression()), !dbg !313
   store ptr %ptr, ptr %self.dbg.spill.i1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !314, metadata !DIExpression()), !dbg !321
-  %0 = ptrtoint ptr %ptr to i64, !dbg !323
-  %_6.0 = sub i64 %align, 1, !dbg !324
-  %_6.1 = icmp ult i64 %align, 1, !dbg !324
-  %1 = call i1 @llvm.expect.i1(i1 %_6.1, i1 false), !dbg !324
-  br i1 %1, label %panic, label %bb2, !dbg !324
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !315, metadata !DIExpression()), !dbg !322
+  %0 = ptrtoint ptr %ptr to i64, !dbg !324
+  %_6.0 = sub i64 %align, 1, !dbg !325
+  %_6.1 = icmp ult i64 %align, 1, !dbg !325
+  %1 = call i1 @llvm.expect.i1(i1 %_6.1, i1 false), !dbg !325
+  br i1 %1, label %panic, label %bb2, !dbg !325
 
 bb2:                                              ; preds = %start
-  %_3 = and i64 %0, %_6.0, !dbg !325
-  %2 = icmp eq i64 %_3, 0, !dbg !325
-  ret i1 %2, !dbg !326
+  %_3 = and i64 %0, %_6.0, !dbg !326
+  %2 = icmp eq i64 %_3, 0, !dbg !326
+  ret i1 %2, !dbg !327
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hee5d285669f2f2eaE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_bcdcc30e858a48da2606f80aa0163c31) #8, !dbg !324
-  unreachable, !dbg !324
+  call void @_ZN4core9panicking5panic17h38d135543837e8b5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_bcdcc30e858a48da2606f80aa0163c31) #8, !dbg !325
+  unreachable, !dbg !325
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_aligned_to
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17hdba51d8128ed31a1E"(ptr %self, i64 %align) unnamed_addr #1 !dbg !327 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17haff1d3e01ed5e6a3E"(ptr %self, i64 %align) unnamed_addr #1 !dbg !328 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %0 = alloca i64, align 8
@@ -227,78 +227,78 @@ start:
   %_8 = alloca { ptr, i64 }, align 8
   %_6 = alloca %"core::fmt::Arguments<'_>", align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !331, metadata !DIExpression()), !dbg !333
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !332, metadata !DIExpression()), !dbg !334
   store i64 %align, ptr %align.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %align.dbg.spill, metadata !332, metadata !DIExpression()), !dbg !334
+  call void @llvm.dbg.declare(metadata ptr %align.dbg.spill, metadata !333, metadata !DIExpression()), !dbg !335
   store i64 %align, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !335, metadata !DIExpression()), !dbg !343
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !336, metadata !DIExpression()), !dbg !344
   store i64 %align, ptr %self.dbg.spill.i.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i.i, metadata !345, metadata !DIExpression()), !dbg !350
-  %1 = call i64 @llvm.ctpop.i64(i64 %align), !dbg !352
-  store i64 %1, ptr %0, align 8, !dbg !352
-  %_2.i.i = load i64, ptr %0, align 8, !dbg !352, !noundef !62
-  %2 = trunc i64 %_2.i.i to i32, !dbg !352
-  %3 = icmp eq i32 %2, 1, !dbg !353
-  %_3 = xor i1 %3, true, !dbg !354
-  br i1 %_3, label %bb2, label %bb4, !dbg !354
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i.i, metadata !346, metadata !DIExpression()), !dbg !351
+  %1 = call i64 @llvm.ctpop.i64(i64 %align), !dbg !353
+  store i64 %1, ptr %0, align 8, !dbg !353
+  %_2.i.i = load i64, ptr %0, align 8, !dbg !353, !noundef !62
+  %2 = trunc i64 %_2.i.i to i32, !dbg !353
+  %3 = icmp eq i32 %2, 1, !dbg !354
+  %_3 = xor i1 %3, true, !dbg !355
+  br i1 %_3, label %bb2, label %bb4, !dbg !355
 
 bb4:                                              ; preds = %start
   store ptr %self, ptr %self.dbg.spill.i1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !355, metadata !DIExpression()), !dbg !361
-  store ptr %self, ptr %_8, align 8, !dbg !363
-  %4 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !363
-  store i64 %align, ptr %4, align 8, !dbg !363
-  %5 = load ptr, ptr %_8, align 8, !dbg !364, !noundef !62
-  %6 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !364
-  %7 = load i64, ptr %6, align 8, !dbg !364, !noundef !62
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !356, metadata !DIExpression()), !dbg !362
+  store ptr %self, ptr %_8, align 8, !dbg !364
+  %4 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !364
+  store i64 %align, ptr %4, align 8, !dbg !364
+  %5 = load ptr, ptr %_8, align 8, !dbg !365, !noundef !62
+  %6 = getelementptr inbounds { ptr, i64 }, ptr %_8, i32 0, i32 1, !dbg !365
+  %7 = load i64, ptr %6, align 8, !dbg !365, !noundef !62
 ; call core::ptr::const_ptr::<impl *const T>::is_aligned_to::runtime_impl
-  %8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17h42a0be6d32d713f8E"(ptr %5, i64 %7) #7, !dbg !364
-  ret i1 %8, !dbg !365
+  %8 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17hbd0a02dab1bfb0f6E"(ptr %5, i64 %7) #7, !dbg !365
+  ret i1 %8, !dbg !366
 
 bb2:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17hb408908830e78d4fE(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_60ac762d06592b2ab3358175d7a7c295, i64 1) #7, !dbg !366
+  call void @_ZN4core3fmt9Arguments9new_const17hcb39c3984342b7ebE(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_60ac762d06592b2ab3358175d7a7c295, i64 1) #7, !dbg !367
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hdd6269d09ded55c6E(ptr %_6, ptr align 8 @alloc_38eb3fe2a71bea9ddc57ce847c7c3987) #8, !dbg !366
-  unreachable, !dbg !366
+  call void @_ZN4core9panicking9panic_fmt17h2c59f66d276f88adE(ptr %_6, ptr align 8 @alloc_38eb3fe2a71bea9ddc57ce847c7c3987) #8, !dbg !367
+  unreachable, !dbg !367
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_null::runtime_impl
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h7967f0448d4c3147E"(ptr %ptr) unnamed_addr #1 !dbg !367 {
+define internal zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17hdef50e69128c6331E"(ptr %ptr) unnamed_addr #1 !dbg !368 {
 start:
   %self.dbg.spill.i1 = alloca ptr, align 8
   %self.dbg.spill.i = alloca ptr, align 8
   %ptr.dbg.spill = alloca ptr, align 8
   store ptr %ptr, ptr %ptr.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !372, metadata !DIExpression()), !dbg !373
+  call void @llvm.dbg.declare(metadata ptr %ptr.dbg.spill, metadata !373, metadata !DIExpression()), !dbg !374
   store ptr %ptr, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !374, metadata !DIExpression()), !dbg !379
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !375, metadata !DIExpression()), !dbg !380
   store ptr %ptr, ptr %self.dbg.spill.i1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !381, metadata !DIExpression()), !dbg !387
-  %0 = ptrtoint ptr %ptr to i64, !dbg !389
-  %1 = icmp eq i64 %0, 0, !dbg !390
-  ret i1 %1, !dbg !391
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i1, metadata !382, metadata !DIExpression()), !dbg !388
+  %0 = ptrtoint ptr %ptr to i64, !dbg !390
+  %1 = icmp eq i64 %0, 0, !dbg !391
+  ret i1 %1, !dbg !392
 }
 
 ; core::ptr::const_ptr::<impl *const T>::is_null
 ; Function Attrs: inlinehint noredzone nounwind
-define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hd831bc0ab3d1834eE"(ptr %self) unnamed_addr #1 !dbg !392 {
+define zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17had509e6ad7e00427E"(ptr %self) unnamed_addr #1 !dbg !393 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_2 = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !394, metadata !DIExpression()), !dbg !395
-  store ptr %self, ptr %_2, align 8, !dbg !396
-  %0 = load ptr, ptr %_2, align 8, !dbg !397, !noundef !62
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !395, metadata !DIExpression()), !dbg !396
+  store ptr %self, ptr %_2, align 8, !dbg !397
+  %0 = load ptr, ptr %_2, align 8, !dbg !398, !noundef !62
 ; call core::ptr::const_ptr::<impl *const T>::is_null::runtime_impl
-  %1 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h7967f0448d4c3147E"(ptr %0) #7, !dbg !397
-  ret i1 %1, !dbg !398
+  %1 = call zeroext i1 @"_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17hdef50e69128c6331E"(ptr %0) #7, !dbg !398
+  ret i1 %1, !dbg !399
 }
 
 ; core::str::<impl str>::bytes
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17hc3d475c393657962E"(ptr align 1 %self.0, i64 %self.1) unnamed_addr #1 !dbg !399 {
+define internal { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17h67586fe767d6d375E"(ptr align 1 %self.0, i64 %self.1) unnamed_addr #1 !dbg !400 {
 start:
   %self.dbg.spill.i = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca { ptr, i64 }, align 8
@@ -307,58 +307,58 @@ start:
   store ptr %self.0, ptr %1, align 8
   %2 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill, i32 0, i32 1
   store i64 %self.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !410, metadata !DIExpression()), !dbg !411
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !411, metadata !DIExpression()), !dbg !412
   store ptr %self.0, ptr %self.dbg.spill.i, align 8
   %3 = getelementptr inbounds { ptr, i64 }, ptr %self.dbg.spill.i, i32 0, i32 1
   store i64 %self.1, ptr %3, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !412, metadata !DIExpression()), !dbg !421
-  %4 = insertvalue { ptr, i64 } poison, ptr %self.0, 0, !dbg !423
-  %5 = insertvalue { ptr, i64 } %4, i64 %self.1, 1, !dbg !423
-  %_5.0 = extractvalue { ptr, i64 } %5, 0, !dbg !424
-  %_5.1 = extractvalue { ptr, i64 } %5, 1, !dbg !424
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !413, metadata !DIExpression()), !dbg !422
+  %4 = insertvalue { ptr, i64 } poison, ptr %self.0, 0, !dbg !424
+  %5 = insertvalue { ptr, i64 } %4, i64 %self.1, 1, !dbg !424
+  %_5.0 = extractvalue { ptr, i64 } %5, 0, !dbg !425
+  %_5.1 = extractvalue { ptr, i64 } %5, 1, !dbg !425
 ; call core::slice::<impl [T]>::iter
-  %6 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h29352cc481936248E"(ptr align 1 %_5.0, i64 %_5.1) #7, !dbg !424
-  %_3.0 = extractvalue { ptr, ptr } %6, 0, !dbg !424
-  %_3.1 = extractvalue { ptr, ptr } %6, 1, !dbg !424
+  %6 = call { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h6024f7e5363c1a17E"(ptr align 1 %_5.0, i64 %_5.1) #7, !dbg !425
+  %_3.0 = extractvalue { ptr, ptr } %6, 0, !dbg !425
+  %_3.1 = extractvalue { ptr, ptr } %6, 1, !dbg !425
 ; call core::iter::traits::iterator::Iterator::copied
-  %7 = call { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17h0687335476d8adceE(ptr %_3.0, ptr %_3.1) #7, !dbg !424
-  %_2.0 = extractvalue { ptr, ptr } %7, 0, !dbg !424
-  %_2.1 = extractvalue { ptr, ptr } %7, 1, !dbg !424
-  %8 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !425
-  store ptr %_2.0, ptr %8, align 8, !dbg !425
-  %9 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !425
-  store ptr %_2.1, ptr %9, align 8, !dbg !425
-  %10 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !426
-  %11 = load ptr, ptr %10, align 8, !dbg !426, !nonnull !62, !noundef !62
-  %12 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !426
-  %13 = load ptr, ptr %12, align 8, !dbg !426, !noundef !62
-  %14 = insertvalue { ptr, ptr } poison, ptr %11, 0, !dbg !426
-  %15 = insertvalue { ptr, ptr } %14, ptr %13, 1, !dbg !426
-  ret { ptr, ptr } %15, !dbg !426
+  %7 = call { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17hd8a4d78f3ef903f7E(ptr %_3.0, ptr %_3.1) #7, !dbg !425
+  %_2.0 = extractvalue { ptr, ptr } %7, 0, !dbg !425
+  %_2.1 = extractvalue { ptr, ptr } %7, 1, !dbg !425
+  %8 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !426
+  store ptr %_2.0, ptr %8, align 8, !dbg !426
+  %9 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !426
+  store ptr %_2.1, ptr %9, align 8, !dbg !426
+  %10 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !427
+  %11 = load ptr, ptr %10, align 8, !dbg !427, !nonnull !62, !noundef !62
+  %12 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !427
+  %13 = load ptr, ptr %12, align 8, !dbg !427, !noundef !62
+  %14 = insertvalue { ptr, ptr } poison, ptr %11, 0, !dbg !427
+  %15 = insertvalue { ptr, ptr } %14, ptr %13, 1, !dbg !427
+  ret { ptr, ptr } %15, !dbg !427
 }
 
 ; core::iter::traits::iterator::Iterator::copied
 ; Function Attrs: noredzone nounwind
-define { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17h0687335476d8adceE(ptr %self.0, ptr %self.1) unnamed_addr #0 !dbg !427 {
+define { ptr, ptr } @_ZN4core4iter6traits8iterator8Iterator6copied17hd8a4d78f3ef903f7E(ptr %self.0, ptr %self.1) unnamed_addr #0 !dbg !428 {
 start:
   %self.dbg.spill = alloca { ptr, ptr }, align 8
   %0 = getelementptr inbounds { ptr, ptr }, ptr %self.dbg.spill, i32 0, i32 0
   store ptr %self.0, ptr %0, align 8
   %1 = getelementptr inbounds { ptr, ptr }, ptr %self.dbg.spill, i32 0, i32 1
   store ptr %self.1, ptr %1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !435, metadata !DIExpression()), !dbg !438
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !436, metadata !DIExpression()), !dbg !439
 ; call core::iter::adapters::copied::Copied<I>::new
-  %2 = call { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h0862766ae7e7ea91E"(ptr %self.0, ptr %self.1) #7, !dbg !439
-  %3 = extractvalue { ptr, ptr } %2, 0, !dbg !439
-  %4 = extractvalue { ptr, ptr } %2, 1, !dbg !439
-  %5 = insertvalue { ptr, ptr } poison, ptr %3, 0, !dbg !440
-  %6 = insertvalue { ptr, ptr } %5, ptr %4, 1, !dbg !440
-  ret { ptr, ptr } %6, !dbg !440
+  %2 = call { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h44e4d993c81d3903E"(ptr %self.0, ptr %self.1) #7, !dbg !440
+  %3 = extractvalue { ptr, ptr } %2, 0, !dbg !440
+  %4 = extractvalue { ptr, ptr } %2, 1, !dbg !440
+  %5 = insertvalue { ptr, ptr } poison, ptr %3, 0, !dbg !441
+  %6 = insertvalue { ptr, ptr } %5, ptr %4, 1, !dbg !441
+  ret { ptr, ptr } %6, !dbg !441
 }
 
 ; core::iter::adapters::copied::Copied<I>::new
 ; Function Attrs: noredzone nounwind
-define { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h0862766ae7e7ea91E"(ptr %it.0, ptr %it.1) unnamed_addr #0 !dbg !441 {
+define { ptr, ptr } @"_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h44e4d993c81d3903E"(ptr %it.0, ptr %it.1) unnamed_addr #0 !dbg !442 {
 start:
   %it.dbg.spill = alloca { ptr, ptr }, align 8
   %0 = alloca { ptr, ptr }, align 8
@@ -366,310 +366,306 @@ start:
   store ptr %it.0, ptr %1, align 8
   %2 = getelementptr inbounds { ptr, ptr }, ptr %it.dbg.spill, i32 0, i32 1
   store ptr %it.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %it.dbg.spill, metadata !443, metadata !DIExpression()), !dbg !444
-  %3 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !445
-  store ptr %it.0, ptr %3, align 8, !dbg !445
-  %4 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !445
-  store ptr %it.1, ptr %4, align 8, !dbg !445
-  %5 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !446
-  %6 = load ptr, ptr %5, align 8, !dbg !446, !nonnull !62, !noundef !62
-  %7 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !446
-  %8 = load ptr, ptr %7, align 8, !dbg !446, !noundef !62
-  %9 = insertvalue { ptr, ptr } poison, ptr %6, 0, !dbg !446
-  %10 = insertvalue { ptr, ptr } %9, ptr %8, 1, !dbg !446
-  ret { ptr, ptr } %10, !dbg !446
+  call void @llvm.dbg.declare(metadata ptr %it.dbg.spill, metadata !445, metadata !DIExpression()), !dbg !446
+  %3 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !447
+  store ptr %it.0, ptr %3, align 8, !dbg !447
+  %4 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !447
+  store ptr %it.1, ptr %4, align 8, !dbg !447
+  %5 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 0, !dbg !448
+  %6 = load ptr, ptr %5, align 8, !dbg !448, !nonnull !62, !noundef !62
+  %7 = getelementptr inbounds { ptr, ptr }, ptr %0, i32 0, i32 1, !dbg !448
+  %8 = load ptr, ptr %7, align 8, !dbg !448, !noundef !62
+  %9 = insertvalue { ptr, ptr } poison, ptr %6, 0, !dbg !448
+  %10 = insertvalue { ptr, ptr } %9, ptr %8, 1, !dbg !448
+  ret { ptr, ptr } %10, !dbg !448
 }
 
 ; core::option::Option<&T>::copied
 ; Function Attrs: noredzone nounwind
-define { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17hb44c6c2efec68bd4E"(ptr align 1 %0) unnamed_addr #0 !dbg !447 {
+define { i8, i8 } @"_ZN4core6option19Option$LT$$RF$T$GT$6copied17hc093c1a81ce84f44E"(ptr align 1 %0) unnamed_addr #0 !dbg !449 {
 start:
   %v.dbg.spill = alloca i8, align 1
   %1 = alloca { i8, i8 }, align 1
   %self = alloca ptr, align 8
   store ptr %0, ptr %self, align 8
-  call void @llvm.dbg.declare(metadata ptr %self, metadata !463, metadata !DIExpression()), !dbg !466
-  %2 = load ptr, ptr %self, align 8, !dbg !467, !noundef !62
-  %3 = ptrtoint ptr %2 to i64, !dbg !467
-  %4 = icmp eq i64 %3, 0, !dbg !467
-  %_2 = select i1 %4, i64 0, i64 1, !dbg !467
-  %5 = icmp eq i64 %_2, 0, !dbg !468
-  br i1 %5, label %bb1, label %bb3, !dbg !468
+  call void @llvm.dbg.declare(metadata ptr %self, metadata !466, metadata !DIExpression()), !dbg !469
+  %2 = load ptr, ptr %self, align 8, !dbg !470, !noundef !62
+  %3 = ptrtoint ptr %2 to i64, !dbg !470
+  %4 = icmp eq i64 %3, 0, !dbg !470
+  %_2 = select i1 %4, i64 0, i64 1, !dbg !470
+  %5 = icmp eq i64 %_2, 0, !dbg !471
+  br i1 %5, label %bb1, label %bb3, !dbg !471
 
 bb1:                                              ; preds = %start
-  store i8 0, ptr %1, align 1, !dbg !469
-  br label %bb4, !dbg !469
+  store i8 0, ptr %1, align 1, !dbg !472
+  br label %bb4, !dbg !472
 
 bb3:                                              ; preds = %start
-  %_4 = load ptr, ptr %self, align 8, !dbg !470, !nonnull !62, !align !471, !noundef !62
-  %v = load i8, ptr %_4, align 1, !dbg !470, !noundef !62
-  store i8 %v, ptr %v.dbg.spill, align 1, !dbg !470
-  call void @llvm.dbg.declare(metadata ptr %v.dbg.spill, metadata !464, metadata !DIExpression()), !dbg !472
-  %6 = getelementptr inbounds { i8, i8 }, ptr %1, i32 0, i32 1, !dbg !473
-  store i8 %v, ptr %6, align 1, !dbg !473
-  store i8 1, ptr %1, align 1, !dbg !473
-  br label %bb4, !dbg !474
+  %_4 = load ptr, ptr %self, align 8, !dbg !473, !nonnull !62, !align !474, !noundef !62
+  %v = load i8, ptr %_4, align 1, !dbg !473, !noundef !62
+  store i8 %v, ptr %v.dbg.spill, align 1, !dbg !473
+  call void @llvm.dbg.declare(metadata ptr %v.dbg.spill, metadata !467, metadata !DIExpression()), !dbg !475
+  %6 = getelementptr inbounds { i8, i8 }, ptr %1, i32 0, i32 1, !dbg !476
+  store i8 %v, ptr %6, align 1, !dbg !476
+  store i8 1, ptr %1, align 1, !dbg !476
+  br label %bb4, !dbg !477
 
 bb2:                                              ; No predecessors!
-  unreachable, !dbg !467
+  unreachable, !dbg !470
 
 bb4:                                              ; preds = %bb1, %bb3
-  %7 = getelementptr inbounds { i8, i8 }, ptr %1, i32 0, i32 0, !dbg !475
-  %8 = load i8, ptr %7, align 1, !dbg !475, !range !123, !noundef !62
-  %9 = trunc i8 %8 to i1, !dbg !475
-  %10 = getelementptr inbounds { i8, i8 }, ptr %1, i32 0, i32 1, !dbg !475
-  %11 = load i8, ptr %10, align 1, !dbg !475
-  %12 = zext i1 %9 to i8, !dbg !475
-  %13 = insertvalue { i8, i8 } poison, i8 %12, 0, !dbg !475
-  %14 = insertvalue { i8, i8 } %13, i8 %11, 1, !dbg !475
-  ret { i8, i8 } %14, !dbg !475
+  %7 = getelementptr inbounds { i8, i8 }, ptr %1, i32 0, i32 0, !dbg !478
+  %8 = load i8, ptr %7, align 1, !dbg !478, !range !123, !noundef !62
+  %9 = trunc i8 %8 to i1, !dbg !478
+  %10 = getelementptr inbounds { i8, i8 }, ptr %1, i32 0, i32 1, !dbg !478
+  %11 = load i8, ptr %10, align 1, !dbg !478
+  %12 = zext i1 %9 to i8, !dbg !478
+  %13 = insertvalue { i8, i8 } poison, i8 %12, 0, !dbg !478
+  %14 = insertvalue { i8, i8 } %13, i8 %11, 1, !dbg !478
+  ret { i8, i8 } %14, !dbg !478
 }
 
 ; <I as core::iter::traits::collect::IntoIterator>::into_iter
 ; Function Attrs: inlinehint noredzone nounwind
-define { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h26f324faf4aeee9bE"(ptr %self.0, ptr %self.1) unnamed_addr #1 !dbg !476 {
+define { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17he581b2d280c100beE"(ptr %self.0, ptr %self.1) unnamed_addr #1 !dbg !479 {
 start:
   %self.dbg.spill = alloca { ptr, ptr }, align 8
   %0 = getelementptr inbounds { ptr, ptr }, ptr %self.dbg.spill, i32 0, i32 0
   store ptr %self.0, ptr %0, align 8
   %1 = getelementptr inbounds { ptr, ptr }, ptr %self.dbg.spill, i32 0, i32 1
   store ptr %self.1, ptr %1, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !483, metadata !DIExpression()), !dbg !486
-  %2 = insertvalue { ptr, ptr } poison, ptr %self.0, 0, !dbg !487
-  %3 = insertvalue { ptr, ptr } %2, ptr %self.1, 1, !dbg !487
-  ret { ptr, ptr } %3, !dbg !487
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !486, metadata !DIExpression()), !dbg !489
+  %2 = insertvalue { ptr, ptr } poison, ptr %self.0, 0, !dbg !490
+  %3 = insertvalue { ptr, ptr } %2, ptr %self.1, 1, !dbg !490
+  ret { ptr, ptr } %3, !dbg !490
 }
 
 ; <core::str::iter::Bytes as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: inlinehint noredzone nounwind
-define internal { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80f6a3191f76d9fbE"(ptr align 8 %self) unnamed_addr #1 !dbg !488 {
+define internal { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hb04e63f86a2e6cd2E"(ptr align 8 %self) unnamed_addr #1 !dbg !491 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !495, metadata !DIExpression()), !dbg !496
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !498, metadata !DIExpression()), !dbg !499
 ; call <core::iter::adapters::copied::Copied<I> as core::iter::traits::iterator::Iterator>::next
-  %0 = call { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h14ac179e763e7c53E"(ptr align 8 %self) #7, !dbg !497
-  %1 = extractvalue { i8, i8 } %0, 0, !dbg !497
-  %2 = trunc i8 %1 to i1, !dbg !497
-  %3 = extractvalue { i8, i8 } %0, 1, !dbg !497
-  %4 = zext i1 %2 to i8, !dbg !498
-  %5 = insertvalue { i8, i8 } poison, i8 %4, 0, !dbg !498
-  %6 = insertvalue { i8, i8 } %5, i8 %3, 1, !dbg !498
-  ret { i8, i8 } %6, !dbg !498
+  %0 = call { i8, i8 } @"_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17he28a6449d3a865daE"(ptr align 8 %self) #7, !dbg !500
+  %1 = extractvalue { i8, i8 } %0, 0, !dbg !500
+  %2 = trunc i8 %1 to i1, !dbg !500
+  %3 = extractvalue { i8, i8 } %0, 1, !dbg !500
+  %4 = zext i1 %2 to i8, !dbg !501
+  %5 = insertvalue { i8, i8 } poison, i8 %4, 0, !dbg !501
+  %6 = insertvalue { i8, i8 } %5, i8 %3, 1, !dbg !501
+  ret { i8, i8 } %6, !dbg !501
 }
 
 ; vga::ColorCode::new
 ; Function Attrs: noredzone nounwind
-define internal i8 @_ZN3vga9ColorCode3new17hf4f7e3f32f034b96E(i8 %0, i8 %1) unnamed_addr #0 !dbg !499 {
+define internal i8 @_ZN3vga9ColorCode3new17hc9e82018ce75c643E(i8 %0, i8 %1) unnamed_addr #0 !dbg !502 {
 start:
   %2 = alloca i8, align 1
   %bg = alloca i8, align 1
   %fg = alloca i8, align 1
   store i8 %0, ptr %fg, align 1
   store i8 %1, ptr %bg, align 1
-  call void @llvm.dbg.declare(metadata ptr %fg, metadata !503, metadata !DIExpression()), !dbg !505
-  call void @llvm.dbg.declare(metadata ptr %bg, metadata !504, metadata !DIExpression()), !dbg !506
-  %_5 = load i8, ptr %bg, align 1, !dbg !507, !range !508, !noundef !62
-  %_6 = icmp uge i8 15, %_5, !dbg !507
-  call void @llvm.assume(i1 %_6), !dbg !507
-  %_7 = icmp ule i8 0, %_5, !dbg !507
-  call void @llvm.assume(i1 %_7), !dbg !507
-  %_4 = shl i8 %_5, 4, !dbg !507
-  %_10 = load i8, ptr %fg, align 1, !dbg !509, !range !508, !noundef !62
-  %_11 = icmp uge i8 15, %_10, !dbg !509
-  call void @llvm.assume(i1 %_11), !dbg !509
-  %_12 = icmp ule i8 0, %_10, !dbg !509
-  call void @llvm.assume(i1 %_12), !dbg !509
-  %_3 = or i8 %_4, %_10, !dbg !507
-  store i8 %_3, ptr %2, align 1, !dbg !510
-  %3 = load i8, ptr %2, align 1, !dbg !511, !noundef !62
-  ret i8 %3, !dbg !511
+  call void @llvm.dbg.declare(metadata ptr %fg, metadata !507, metadata !DIExpression()), !dbg !509
+  call void @llvm.dbg.declare(metadata ptr %bg, metadata !508, metadata !DIExpression()), !dbg !510
+  %_5 = load i8, ptr %bg, align 1, !dbg !511, !range !512, !noundef !62
+  %_6 = icmp ule i8 %_5, 15, !dbg !511
+  call void @llvm.assume(i1 %_6), !dbg !511
+  %_4 = shl i8 %_5, 4, !dbg !511
+  %_9 = load i8, ptr %fg, align 1, !dbg !513, !range !512, !noundef !62
+  %_10 = icmp ule i8 %_9, 15, !dbg !513
+  call void @llvm.assume(i1 %_10), !dbg !513
+  %_3 = or i8 %_4, %_9, !dbg !511
+  store i8 %_3, ptr %2, align 1, !dbg !514
+  %3 = load i8, ptr %2, align 1, !dbg !515, !noundef !62
+  ret i8 %3, !dbg !515
 }
 
 ; vga::ScreenChar::new
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN3vga10ScreenChar3new17h02f2761e25923a6aE(i8 %c) unnamed_addr #0 !dbg !512 {
+define internal { i8, i8 } @_ZN3vga10ScreenChar3new17h40fc70d9ea0ca51cE(i8 %c) unnamed_addr #0 !dbg !516 {
 start:
   %c.dbg.spill = alloca i8, align 1
   %_4 = alloca i8, align 1
   %_3 = alloca i8, align 1
   %0 = alloca { i8, i8 }, align 1
   store i8 %c, ptr %c.dbg.spill, align 1
-  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !516, metadata !DIExpression()), !dbg !517
-  store i8 14, ptr %_3, align 1, !dbg !518
-  store i8 1, ptr %_4, align 1, !dbg !519
-  %1 = load i8, ptr %_3, align 1, !dbg !520, !range !508, !noundef !62
-  %2 = load i8, ptr %_4, align 1, !dbg !520, !range !508, !noundef !62
+  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !521, metadata !DIExpression()), !dbg !522
+  store i8 14, ptr %_3, align 1, !dbg !523
+  store i8 1, ptr %_4, align 1, !dbg !524
+  %1 = load i8, ptr %_3, align 1, !dbg !525, !range !512, !noundef !62
+  %2 = load i8, ptr %_4, align 1, !dbg !525, !range !512, !noundef !62
 ; call vga::ColorCode::new
-  %_2 = call i8 @_ZN3vga9ColorCode3new17hf4f7e3f32f034b96E(i8 %1, i8 %2) #7, !dbg !520
-  store i8 %c, ptr %0, align 1, !dbg !521
-  %3 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !521
-  store i8 %_2, ptr %3, align 1, !dbg !521
-  %4 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 0, !dbg !522
-  %5 = load i8, ptr %4, align 1, !dbg !522, !noundef !62
-  %6 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !522
-  %7 = load i8, ptr %6, align 1, !dbg !522, !noundef !62
-  %8 = insertvalue { i8, i8 } poison, i8 %5, 0, !dbg !522
-  %9 = insertvalue { i8, i8 } %8, i8 %7, 1, !dbg !522
-  ret { i8, i8 } %9, !dbg !522
+  %_2 = call i8 @_ZN3vga9ColorCode3new17hc9e82018ce75c643E(i8 %1, i8 %2) #7, !dbg !525
+  store i8 %c, ptr %0, align 1, !dbg !526
+  %3 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !526
+  store i8 %_2, ptr %3, align 1, !dbg !526
+  %4 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 0, !dbg !527
+  %5 = load i8, ptr %4, align 1, !dbg !527, !noundef !62
+  %6 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !527
+  %7 = load i8, ptr %6, align 1, !dbg !527, !noundef !62
+  %8 = insertvalue { i8, i8 } poison, i8 %5, 0, !dbg !527
+  %9 = insertvalue { i8, i8 } %8, i8 %7, 1, !dbg !527
+  ret { i8, i8 } %9, !dbg !527
 }
 
 ; vga::ScreenChar::inverse
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN3vga10ScreenChar7inverse17h083119e746eb0b26E(i8 %c) unnamed_addr #0 !dbg !523 {
+define internal { i8, i8 } @_ZN3vga10ScreenChar7inverse17h5c5a7393a9688d2eE(i8 %c) unnamed_addr #0 !dbg !528 {
 start:
   %c.dbg.spill = alloca i8, align 1
   %_4 = alloca i8, align 1
   %_3 = alloca i8, align 1
   %0 = alloca { i8, i8 }, align 1
   store i8 %c, ptr %c.dbg.spill, align 1
-  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !525, metadata !DIExpression()), !dbg !526
-  store i8 14, ptr %_3, align 1, !dbg !527
-  store i8 1, ptr %_4, align 1, !dbg !528
-  %1 = load i8, ptr %_3, align 1, !dbg !529, !range !508, !noundef !62
-  %2 = load i8, ptr %_4, align 1, !dbg !529, !range !508, !noundef !62
+  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !531, metadata !DIExpression()), !dbg !532
+  store i8 14, ptr %_3, align 1, !dbg !533
+  store i8 1, ptr %_4, align 1, !dbg !534
+  %1 = load i8, ptr %_3, align 1, !dbg !535, !range !512, !noundef !62
+  %2 = load i8, ptr %_4, align 1, !dbg !535, !range !512, !noundef !62
 ; call vga::ColorCode::new
-  %_2 = call i8 @_ZN3vga9ColorCode3new17hf4f7e3f32f034b96E(i8 %1, i8 %2) #7, !dbg !529
-  store i8 %c, ptr %0, align 1, !dbg !530
-  %3 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !530
-  store i8 %_2, ptr %3, align 1, !dbg !530
-  %4 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 0, !dbg !531
-  %5 = load i8, ptr %4, align 1, !dbg !531, !noundef !62
-  %6 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !531
-  %7 = load i8, ptr %6, align 1, !dbg !531, !noundef !62
-  %8 = insertvalue { i8, i8 } poison, i8 %5, 0, !dbg !531
-  %9 = insertvalue { i8, i8 } %8, i8 %7, 1, !dbg !531
-  ret { i8, i8 } %9, !dbg !531
+  %_2 = call i8 @_ZN3vga9ColorCode3new17hc9e82018ce75c643E(i8 %1, i8 %2) #7, !dbg !535
+  store i8 %c, ptr %0, align 1, !dbg !536
+  %3 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !536
+  store i8 %_2, ptr %3, align 1, !dbg !536
+  %4 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 0, !dbg !537
+  %5 = load i8, ptr %4, align 1, !dbg !537, !noundef !62
+  %6 = getelementptr inbounds { i8, i8 }, ptr %0, i32 0, i32 1, !dbg !537
+  %7 = load i8, ptr %6, align 1, !dbg !537, !noundef !62
+  %8 = insertvalue { i8, i8 } poison, i8 %5, 0, !dbg !537
+  %9 = insertvalue { i8, i8 } %8, i8 %7, 1, !dbg !537
+  ret { i8, i8 } %9, !dbg !537
 }
 
 ; vga::Cursor::x
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i64 @_ZN3vga6Cursor1x17h14651252f035db8eE(ptr align 8 %self) unnamed_addr #1 !dbg !532 {
+define internal i64 @_ZN3vga6Cursor1x17h649b461a0cd6527dE(ptr align 8 %self) unnamed_addr #1 !dbg !538 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !544, metadata !DIExpression()), !dbg !545
-  %0 = load i64, ptr %self, align 8, !dbg !546, !noundef !62
-  ret i64 %0, !dbg !547
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !551, metadata !DIExpression()), !dbg !552
+  %0 = load i64, ptr %self, align 8, !dbg !553, !noundef !62
+  ret i64 %0, !dbg !554
 }
 
 ; vga::Cursor::y
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i64 @_ZN3vga6Cursor1y17h539629400d73b731E(ptr align 8 %self) unnamed_addr #1 !dbg !548 {
+define internal i64 @_ZN3vga6Cursor1y17h11e23b88c5ffd179E(ptr align 8 %self) unnamed_addr #1 !dbg !555 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !550, metadata !DIExpression()), !dbg !551
-  %0 = getelementptr inbounds { i64, i64 }, ptr %self, i32 0, i32 1, !dbg !552
-  %1 = load i64, ptr %0, align 8, !dbg !552, !noundef !62
-  ret i64 %1, !dbg !553
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !558, metadata !DIExpression()), !dbg !559
+  %0 = getelementptr inbounds { i64, i64 }, ptr %self, i32 0, i32 1, !dbg !560
+  %1 = load i64, ptr %0, align 8, !dbg !560, !noundef !62
+  ret i64 %1, !dbg !561
 }
 
 ; vga::Cursor::incr_x
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN3vga6Cursor6incr_x17h402e1c8ec0725199E(ptr align 8 %self) unnamed_addr #1 !dbg !554 {
+define internal void @_ZN3vga6Cursor6incr_x17hca3384546a527754E(ptr align 8 %self) unnamed_addr #1 !dbg !562 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !559, metadata !DIExpression()), !dbg !560
-  %0 = load i64, ptr %self, align 8, !dbg !561, !noundef !62
-  %1 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %0, i64 1), !dbg !561
-  %_2.0 = extractvalue { i64, i1 } %1, 0, !dbg !561
-  %_2.1 = extractvalue { i64, i1 } %1, 1, !dbg !561
-  %2 = call i1 @llvm.expect.i1(i1 %_2.1, i1 false), !dbg !561
-  br i1 %2, label %panic, label %bb1, !dbg !561
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !568, metadata !DIExpression()), !dbg !569
+  %0 = load i64, ptr %self, align 8, !dbg !570, !noundef !62
+  %1 = call { i64, i1 } @llvm.uadd.with.overflow.i64(i64 %0, i64 1), !dbg !570
+  %_2.0 = extractvalue { i64, i1 } %1, 0, !dbg !570
+  %_2.1 = extractvalue { i64, i1 } %1, 1, !dbg !570
+  %2 = call i1 @llvm.expect.i1(i1 %_2.1, i1 false), !dbg !570
+  br i1 %2, label %panic, label %bb1, !dbg !570
 
 bb1:                                              ; preds = %start
-  store i64 %_2.0, ptr %self, align 8, !dbg !561
-  ret void, !dbg !562
+  store i64 %_2.0, ptr %self, align 8, !dbg !570
+  ret void, !dbg !571
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hee5d285669f2f2eaE(ptr align 1 @str.1, i64 28, ptr align 8 @alloc_63a33fc0cdd7ae3581af4ea409e14228) #8, !dbg !561
-  unreachable, !dbg !561
+  call void @_ZN4core9panicking5panic17h38d135543837e8b5E(ptr align 1 @str.1, i64 28, ptr align 8 @alloc_63a33fc0cdd7ae3581af4ea409e14228) #8, !dbg !570
+  unreachable, !dbg !570
 }
 
 ; vga::Screen::width
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i64 @_ZN3vga6Screen5width17hc635fb7a9c39244fE(ptr align 8 %self) unnamed_addr #1 !dbg !563 {
+define internal i64 @_ZN3vga6Screen5width17he049df2ef71340a1E(ptr align 8 %self) unnamed_addr #1 !dbg !572 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !586, metadata !DIExpression()), !dbg !587
-  %_7 = load ptr, ptr %self, align 8, !dbg !588, !nonnull !62, !align !471, !noundef !62
-  %_3 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_7, i64 0, i64 0, !dbg !588
-  ret i64 80, !dbg !589
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !596, metadata !DIExpression()), !dbg !597
+  %_7 = load ptr, ptr %self, align 8, !dbg !598, !nonnull !62, !align !474, !noundef !62
+  %_3 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_7, i64 0, i64 0, !dbg !598
+  ret i64 80, !dbg !599
 }
 
 ; vga::Screen::height
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i64 @_ZN3vga6Screen6height17hdb77060a78e2aac1E(ptr align 8 %self) unnamed_addr #1 !dbg !590 {
+define internal i64 @_ZN3vga6Screen6height17h8bbdcbb31ac65557E(ptr align 8 %self) unnamed_addr #1 !dbg !600 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !592, metadata !DIExpression()), !dbg !593
-  %_4 = load ptr, ptr %self, align 8, !dbg !594, !nonnull !62, !align !471, !noundef !62
-  ret i64 25, !dbg !595
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !603, metadata !DIExpression()), !dbg !604
+  %_4 = load ptr, ptr %self, align 8, !dbg !605, !nonnull !62, !align !474, !noundef !62
+  ret i64 25, !dbg !606
 }
 
 ; vga::Screen::top_down_flow_screen
 ; Function Attrs: noredzone nounwind
-define internal void @_ZN3vga6Screen20top_down_flow_screen17h2a5fcfe596c705c6E(ptr sret(%Screen) %0, ptr align 1 %buf, ptr %blank_row) unnamed_addr #0 !dbg !596 {
+define internal void @_ZN3vga6Screen20top_down_flow_screen17h38a1d589728fbec4E(ptr sret(%Screen) %0, ptr align 1 %buf, ptr %blank_row) unnamed_addr #0 !dbg !607 {
 start:
   %buf.dbg.spill = alloca ptr, align 8
   %_5 = alloca { i64, i64 }, align 8
   %_4 = alloca i8, align 1
   %origin_dot = alloca { i64, i64 }, align 8
   store ptr %buf, ptr %buf.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %buf.dbg.spill, metadata !600, metadata !DIExpression()), !dbg !604
-  call void @llvm.dbg.declare(metadata ptr %blank_row, metadata !601, metadata !DIExpression()), !dbg !605
-  call void @llvm.dbg.declare(metadata ptr %origin_dot, metadata !602, metadata !DIExpression()), !dbg !606
-  store i64 0, ptr %origin_dot, align 8, !dbg !607
-  %1 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !607
-  store i64 0, ptr %1, align 8, !dbg !607
-  store i8 0, ptr %_4, align 1, !dbg !608
-  %2 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !609
-  %3 = load i64, ptr %2, align 8, !dbg !609, !noundef !62
-  %4 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !609
-  %5 = load i64, ptr %4, align 8, !dbg !609, !noundef !62
-  %6 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 0, !dbg !609
-  store i64 %3, ptr %6, align 8, !dbg !609
-  %7 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 1, !dbg !609
-  store i64 %5, ptr %7, align 8, !dbg !609
-  %8 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 1, !dbg !610
-  store i64 1, ptr %8, align 8, !dbg !610
-  %9 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 0, !dbg !610
-  %10 = load i64, ptr %9, align 8, !dbg !610, !noundef !62
-  %11 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 1, !dbg !610
-  %12 = load i64, ptr %11, align 8, !dbg !610, !noundef !62
-  %13 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 2, !dbg !610
-  %14 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 0, !dbg !610
-  store i64 %10, ptr %14, align 8, !dbg !610
-  %15 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 1, !dbg !610
-  store i64 %12, ptr %15, align 8, !dbg !610
-  %16 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !610
-  %17 = load i64, ptr %16, align 8, !dbg !610, !noundef !62
-  %18 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !610
-  %19 = load i64, ptr %18, align 8, !dbg !610, !noundef !62
-  %20 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 3, !dbg !610
-  %21 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 0, !dbg !610
-  store i64 %17, ptr %21, align 8, !dbg !610
-  %22 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 1, !dbg !610
-  store i64 %19, ptr %22, align 8, !dbg !610
-  store ptr %buf, ptr %0, align 8, !dbg !610
-  %23 = load i8, ptr %_4, align 1, !dbg !610, !range !123, !noundef !62
-  %24 = trunc i8 %23 to i1, !dbg !610
-  %25 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 5, !dbg !610
-  %26 = zext i1 %24 to i8, !dbg !610
-  store i8 %26, ptr %25, align 8, !dbg !610
-  %27 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 4, !dbg !610
-  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %27, ptr align 1 %blank_row, i64 160, i1 false), !dbg !610
-  ret void, !dbg !611
+  call void @llvm.dbg.declare(metadata ptr %buf.dbg.spill, metadata !612, metadata !DIExpression()), !dbg !616
+  call void @llvm.dbg.declare(metadata ptr %blank_row, metadata !613, metadata !DIExpression()), !dbg !617
+  call void @llvm.dbg.declare(metadata ptr %origin_dot, metadata !614, metadata !DIExpression()), !dbg !618
+  store i64 0, ptr %origin_dot, align 8, !dbg !619
+  %1 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !619
+  store i64 0, ptr %1, align 8, !dbg !619
+  store i8 0, ptr %_4, align 1, !dbg !620
+  %2 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !621
+  %3 = load i64, ptr %2, align 8, !dbg !621, !noundef !62
+  %4 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !621
+  %5 = load i64, ptr %4, align 8, !dbg !621, !noundef !62
+  %6 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 0, !dbg !621
+  store i64 %3, ptr %6, align 8, !dbg !621
+  %7 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 1, !dbg !621
+  store i64 %5, ptr %7, align 8, !dbg !621
+  %8 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 1, !dbg !622
+  store i64 1, ptr %8, align 8, !dbg !622
+  %9 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 0, !dbg !622
+  %10 = load i64, ptr %9, align 8, !dbg !622, !noundef !62
+  %11 = getelementptr inbounds { i64, i64 }, ptr %_5, i32 0, i32 1, !dbg !622
+  %12 = load i64, ptr %11, align 8, !dbg !622, !noundef !62
+  %13 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 2, !dbg !622
+  %14 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 0, !dbg !622
+  store i64 %10, ptr %14, align 8, !dbg !622
+  %15 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 1, !dbg !622
+  store i64 %12, ptr %15, align 8, !dbg !622
+  %16 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !622
+  %17 = load i64, ptr %16, align 8, !dbg !622, !noundef !62
+  %18 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !622
+  %19 = load i64, ptr %18, align 8, !dbg !622, !noundef !62
+  %20 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 3, !dbg !622
+  %21 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 0, !dbg !622
+  store i64 %17, ptr %21, align 8, !dbg !622
+  %22 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 1, !dbg !622
+  store i64 %19, ptr %22, align 8, !dbg !622
+  store ptr %buf, ptr %0, align 8, !dbg !622
+  %23 = load i8, ptr %_4, align 1, !dbg !622, !range !123, !noundef !62
+  %24 = trunc i8 %23 to i1, !dbg !622
+  %25 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 5, !dbg !622
+  %26 = zext i1 %24 to i8, !dbg !622
+  store i8 %26, ptr %25, align 8, !dbg !622
+  %27 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 4, !dbg !622
+  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %27, ptr align 1 %blank_row, i64 160, i1 false), !dbg !622
+  ret void, !dbg !623
 }
 
 ; vga::Screen::bottom_up_flow_screen
 ; Function Attrs: noredzone nounwind
-define internal void @_ZN3vga6Screen21bottom_up_flow_screen17h59581173611f8207E(ptr sret(%Screen) %0, ptr align 1 %buf, ptr %blank_row) unnamed_addr #0 !dbg !612 {
+define internal void @_ZN3vga6Screen21bottom_up_flow_screen17h4ac89a2c8dd644baE(ptr sret(%Screen) %0, ptr align 1 %buf, ptr %blank_row) unnamed_addr #0 !dbg !624 {
 start:
   %perceived_y.dbg.spill = alloca i64, align 8
   %buf.dbg.spill = alloca ptr, align 8
@@ -677,127 +673,129 @@ start:
   %_6 = alloca { i64, i64 }, align 8
   %origin_dot = alloca { i64, i64 }, align 8
   store ptr %buf, ptr %buf.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %buf.dbg.spill, metadata !614, metadata !DIExpression()), !dbg !620
-  call void @llvm.dbg.declare(metadata ptr %blank_row, metadata !615, metadata !DIExpression()), !dbg !621
-  call void @llvm.dbg.declare(metadata ptr %origin_dot, metadata !618, metadata !DIExpression()), !dbg !622
-  store i64 24, ptr %perceived_y.dbg.spill, align 8, !dbg !623
-  call void @llvm.dbg.declare(metadata ptr %perceived_y.dbg.spill, metadata !616, metadata !DIExpression()), !dbg !624
-  store i64 0, ptr %origin_dot, align 8, !dbg !625
-  %1 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !625
-  store i64 24, ptr %1, align 8, !dbg !625
-  %2 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !626
-  %3 = load i64, ptr %2, align 8, !dbg !626, !noundef !62
-  %4 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !626
-  %5 = load i64, ptr %4, align 8, !dbg !626, !noundef !62
-  %6 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 0, !dbg !626
-  store i64 %3, ptr %6, align 8, !dbg !626
-  %7 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 1, !dbg !626
-  store i64 %5, ptr %7, align 8, !dbg !626
-  store i8 1, ptr %_7, align 1, !dbg !627
-  %8 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 1, !dbg !628
-  store i64 23, ptr %8, align 8, !dbg !628
-  %9 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 0, !dbg !628
-  %10 = load i64, ptr %9, align 8, !dbg !628, !noundef !62
-  %11 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 1, !dbg !628
-  %12 = load i64, ptr %11, align 8, !dbg !628, !noundef !62
-  %13 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 2, !dbg !628
-  %14 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 0, !dbg !628
-  store i64 %10, ptr %14, align 8, !dbg !628
-  %15 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 1, !dbg !628
-  store i64 %12, ptr %15, align 8, !dbg !628
-  %16 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !628
-  %17 = load i64, ptr %16, align 8, !dbg !628, !noundef !62
-  %18 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !628
-  %19 = load i64, ptr %18, align 8, !dbg !628, !noundef !62
-  %20 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 3, !dbg !628
-  %21 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 0, !dbg !628
-  store i64 %17, ptr %21, align 8, !dbg !628
-  %22 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 1, !dbg !628
-  store i64 %19, ptr %22, align 8, !dbg !628
-  store ptr %buf, ptr %0, align 8, !dbg !628
-  %23 = load i8, ptr %_7, align 1, !dbg !628, !range !123, !noundef !62
-  %24 = trunc i8 %23 to i1, !dbg !628
-  %25 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 5, !dbg !628
-  %26 = zext i1 %24 to i8, !dbg !628
-  store i8 %26, ptr %25, align 8, !dbg !628
-  %27 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 4, !dbg !628
-  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %27, ptr align 1 %blank_row, i64 160, i1 false), !dbg !628
-  ret void, !dbg !629
+  call void @llvm.dbg.declare(metadata ptr %buf.dbg.spill, metadata !627, metadata !DIExpression()), !dbg !633
+  call void @llvm.dbg.declare(metadata ptr %blank_row, metadata !628, metadata !DIExpression()), !dbg !634
+  call void @llvm.dbg.declare(metadata ptr %origin_dot, metadata !631, metadata !DIExpression()), !dbg !635
+  store i64 24, ptr %perceived_y.dbg.spill, align 8, !dbg !636
+  call void @llvm.dbg.declare(metadata ptr %perceived_y.dbg.spill, metadata !629, metadata !DIExpression()), !dbg !637
+  store i64 0, ptr %origin_dot, align 8, !dbg !638
+  %1 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !638
+  store i64 24, ptr %1, align 8, !dbg !638
+  %2 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !639
+  %3 = load i64, ptr %2, align 8, !dbg !639, !noundef !62
+  %4 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !639
+  %5 = load i64, ptr %4, align 8, !dbg !639, !noundef !62
+  %6 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 0, !dbg !639
+  store i64 %3, ptr %6, align 8, !dbg !639
+  %7 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 1, !dbg !639
+  store i64 %5, ptr %7, align 8, !dbg !639
+  store i8 1, ptr %_7, align 1, !dbg !640
+  %8 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 1, !dbg !641
+  store i64 23, ptr %8, align 8, !dbg !641
+  %9 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 0, !dbg !641
+  %10 = load i64, ptr %9, align 8, !dbg !641, !noundef !62
+  %11 = getelementptr inbounds { i64, i64 }, ptr %_6, i32 0, i32 1, !dbg !641
+  %12 = load i64, ptr %11, align 8, !dbg !641, !noundef !62
+  %13 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 2, !dbg !641
+  %14 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 0, !dbg !641
+  store i64 %10, ptr %14, align 8, !dbg !641
+  %15 = getelementptr inbounds { i64, i64 }, ptr %13, i32 0, i32 1, !dbg !641
+  store i64 %12, ptr %15, align 8, !dbg !641
+  %16 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 0, !dbg !641
+  %17 = load i64, ptr %16, align 8, !dbg !641, !noundef !62
+  %18 = getelementptr inbounds { i64, i64 }, ptr %origin_dot, i32 0, i32 1, !dbg !641
+  %19 = load i64, ptr %18, align 8, !dbg !641, !noundef !62
+  %20 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 3, !dbg !641
+  %21 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 0, !dbg !641
+  store i64 %17, ptr %21, align 8, !dbg !641
+  %22 = getelementptr inbounds { i64, i64 }, ptr %20, i32 0, i32 1, !dbg !641
+  store i64 %19, ptr %22, align 8, !dbg !641
+  store ptr %buf, ptr %0, align 8, !dbg !641
+  %23 = load i8, ptr %_7, align 1, !dbg !641, !range !123, !noundef !62
+  %24 = trunc i8 %23 to i1, !dbg !641
+  %25 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 5, !dbg !641
+  %26 = zext i1 %24 to i8, !dbg !641
+  store i8 %26, ptr %25, align 8, !dbg !641
+  %27 = getelementptr inbounds %Screen, ptr %0, i32 0, i32 4, !dbg !641
+  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %27, ptr align 1 %blank_row, i64 160, i1 false), !dbg !641
+  ret void, !dbg !642
 }
 
 ; vga::Screen::new
 ; Function Attrs: noredzone nounwind
-define void @_ZN3vga6Screen3new17h947821f073993938E(ptr sret(%Screen) %_11, i1 zeroext %0, i8 %blank_row_char) unnamed_addr #0 !dbg !630 {
+define void @_ZN3vga6Screen3new17h17d8aa562c38b9b4E(ptr sret(%Screen) %0, i1 zeroext %1, i8 %blank_row_char) unnamed_addr #0 !dbg !643 {
 start:
-  %1 = alloca [80 x { i8, i8 }], align 1
   %2 = alloca [80 x { i8, i8 }], align 1
+  %3 = alloca [80 x { i8, i8 }], align 1
   %buf.dbg.spill = alloca ptr, align 8
   %blank_row_char.dbg.spill = alloca i8, align 1
+  %screen = alloca %Screen, align 8
   %blank_row = alloca [80 x { i8, i8 }], align 1
   %tfd = alloca i8, align 1
-  %3 = zext i1 %0 to i8
-  store i8 %3, ptr %tfd, align 1
-  call void @llvm.dbg.declare(metadata ptr %_11, metadata !640, metadata !DIExpression()), !dbg !642
-  call void @llvm.dbg.declare(metadata ptr %tfd, metadata !634, metadata !DIExpression()), !dbg !643
+  %4 = zext i1 %1 to i8
+  store i8 %4, ptr %tfd, align 1
+  call void @llvm.dbg.declare(metadata ptr %tfd, metadata !648, metadata !DIExpression()), !dbg !656
   store i8 %blank_row_char, ptr %blank_row_char.dbg.spill, align 1
-  call void @llvm.dbg.declare(metadata ptr %blank_row_char.dbg.spill, metadata !635, metadata !DIExpression()), !dbg !644
-  call void @llvm.dbg.declare(metadata ptr %blank_row, metadata !638, metadata !DIExpression()), !dbg !645
-  %_5 = load i64, ptr @_ZN3vga24VGA_COLOR_TEXT_MODE_ADDR17h97f88b84251bfb6dE, align 8, !dbg !646, !noundef !62
-  %_4 = inttoptr i64 %_5 to ptr, !dbg !647
-  store ptr %_4, ptr %buf.dbg.spill, align 8, !dbg !648
-  call void @llvm.dbg.declare(metadata ptr %buf.dbg.spill, metadata !636, metadata !DIExpression()), !dbg !649
+  call void @llvm.dbg.declare(metadata ptr %blank_row_char.dbg.spill, metadata !649, metadata !DIExpression()), !dbg !657
+  call void @llvm.dbg.declare(metadata ptr %blank_row, metadata !652, metadata !DIExpression()), !dbg !658
+  call void @llvm.dbg.declare(metadata ptr %screen, metadata !654, metadata !DIExpression()), !dbg !659
+  %_5 = load i64, ptr @_ZN3vga24VGA_COLOR_TEXT_MODE_ADDR17h21432963d10cdbdbE, align 8, !dbg !660, !noundef !62
+  %_4 = inttoptr i64 %_5 to ptr, !dbg !661
+  store ptr %_4, ptr %buf.dbg.spill, align 8, !dbg !662
+  call void @llvm.dbg.declare(metadata ptr %buf.dbg.spill, metadata !650, metadata !DIExpression()), !dbg !663
 ; call vga::ScreenChar::inverse
-  %4 = call { i8, i8 } @_ZN3vga10ScreenChar7inverse17h083119e746eb0b26E(i8 %blank_row_char) #7, !dbg !650
-  %_8.0 = extractvalue { i8, i8 } %4, 0, !dbg !650
-  %_8.1 = extractvalue { i8, i8 } %4, 1, !dbg !650
-  %5 = getelementptr inbounds [80 x { i8, i8 }], ptr %blank_row, i64 0, i64 0, !dbg !651
-  %6 = getelementptr inbounds [80 x { i8, i8 }], ptr %blank_row, i64 0, i64 80, !dbg !651
-  br label %repeat_loop_header, !dbg !651
+  %5 = call { i8, i8 } @_ZN3vga10ScreenChar7inverse17h5c5a7393a9688d2eE(i8 %blank_row_char) #7, !dbg !664
+  %_8.0 = extractvalue { i8, i8 } %5, 0, !dbg !664
+  %_8.1 = extractvalue { i8, i8 } %5, 1, !dbg !664
+  %6 = getelementptr inbounds [80 x { i8, i8 }], ptr %blank_row, i64 0, i64 0, !dbg !665
+  %7 = getelementptr inbounds [80 x { i8, i8 }], ptr %blank_row, i64 0, i64 80, !dbg !665
+  br label %repeat_loop_header, !dbg !665
 
 repeat_loop_header:                               ; preds = %repeat_loop_body, %start
-  %7 = phi ptr [ %5, %start ], [ %11, %repeat_loop_body ]
-  %8 = icmp ne ptr %7, %6
-  br i1 %8, label %repeat_loop_body, label %repeat_loop_next
+  %8 = phi ptr [ %6, %start ], [ %12, %repeat_loop_body ]
+  %9 = icmp ne ptr %8, %7
+  br i1 %9, label %repeat_loop_body, label %repeat_loop_next
 
 repeat_loop_body:                                 ; preds = %repeat_loop_header
-  %9 = getelementptr inbounds { i8, i8 }, ptr %7, i32 0, i32 0
-  store i8 %_8.0, ptr %9, align 1
-  %10 = getelementptr inbounds { i8, i8 }, ptr %7, i32 0, i32 1
-  store i8 %_8.1, ptr %10, align 1
-  %11 = getelementptr inbounds { i8, i8 }, ptr %7, i64 1
+  %10 = getelementptr inbounds { i8, i8 }, ptr %8, i32 0, i32 0
+  store i8 %_8.0, ptr %10, align 1
+  %11 = getelementptr inbounds { i8, i8 }, ptr %8, i32 0, i32 1
+  store i8 %_8.1, ptr %11, align 1
+  %12 = getelementptr inbounds { i8, i8 }, ptr %8, i64 1
   br label %repeat_loop_header
 
 repeat_loop_next:                                 ; preds = %repeat_loop_header
-  %12 = load i8, ptr %tfd, align 1, !dbg !652, !range !123, !noundef !62
-  %13 = trunc i8 %12 to i1, !dbg !652
-  %_9 = zext i1 %13 to i64, !dbg !652
-  %14 = icmp eq i64 %_9, 0, !dbg !653
-  br i1 %14, label %bb2, label %bb4, !dbg !653
+  %13 = load i8, ptr %tfd, align 1, !dbg !666, !range !123, !noundef !62
+  %14 = trunc i8 %13 to i1, !dbg !666
+  %_10 = zext i1 %14 to i64, !dbg !666
+  %15 = icmp eq i64 %_10, 0, !dbg !667
+  br i1 %15, label %bb2, label %bb4, !dbg !667
 
 bb2:                                              ; preds = %repeat_loop_next
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %1, ptr align 1 %blank_row, i64 160, i1 false), !dbg !654
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %2, ptr align 1 %blank_row, i64 160, i1 false), !dbg !668
 ; call vga::Screen::top_down_flow_screen
-  call void @_ZN3vga6Screen20top_down_flow_screen17h2a5fcfe596c705c6E(ptr sret(%Screen) %_11, ptr align 1 %_4, ptr %1) #7, !dbg !654
-  br label %bb5, !dbg !654
+  call void @_ZN3vga6Screen20top_down_flow_screen17h38a1d589728fbec4E(ptr sret(%Screen) %screen, ptr align 1 %_4, ptr %2) #7, !dbg !668
+  br label %bb5, !dbg !668
 
 bb4:                                              ; preds = %repeat_loop_next
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %2, ptr align 1 %blank_row, i64 160, i1 false), !dbg !655
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %3, ptr align 1 %blank_row, i64 160, i1 false), !dbg !669
 ; call vga::Screen::bottom_up_flow_screen
-  call void @_ZN3vga6Screen21bottom_up_flow_screen17h59581173611f8207E(ptr sret(%Screen) %_11, ptr align 1 %_4, ptr %2) #7, !dbg !655
-  br label %bb5, !dbg !655
+  call void @_ZN3vga6Screen21bottom_up_flow_screen17h4ac89a2c8dd644baE(ptr sret(%Screen) %screen, ptr align 1 %_4, ptr %3) #7, !dbg !669
+  br label %bb5, !dbg !669
 
 bb3:                                              ; No predecessors!
-  unreachable, !dbg !652
+  unreachable, !dbg !666
 
 bb5:                                              ; preds = %bb2, %bb4
 ; call vga::Screen::clear
-  call void @_ZN3vga6Screen5clear17h47fc815e41e1783bE(ptr align 8 %_11) #7, !dbg !656
-  ret void, !dbg !657
+  call void @_ZN3vga6Screen5clear17hb4df162deb2046a4E(ptr align 8 %screen) #7, !dbg !670
+  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %0, ptr align 8 %screen, i64 216, i1 false), !dbg !671
+  ret void, !dbg !672
 }
 
 ; vga::Screen::clear
 ; Function Attrs: noredzone nounwind
-define internal void @_ZN3vga6Screen5clear17h47fc815e41e1783bE(ptr align 8 %self) unnamed_addr #0 !dbg !658 {
+define internal void @_ZN3vga6Screen5clear17hb4df162deb2046a4E(ptr align 8 %self) unnamed_addr #0 !dbg !673 {
 start:
   %row.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -806,185 +804,185 @@ start:
   %iter = alloca { i64, i64 }, align 8
   %_3 = alloca { i64, i64 }, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !663, metadata !DIExpression()), !dbg !676
-  call void @llvm.dbg.declare(metadata ptr %iter, metadata !664, metadata !DIExpression()), !dbg !677
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !679, metadata !DIExpression()), !dbg !692
+  call void @llvm.dbg.declare(metadata ptr %iter, metadata !680, metadata !DIExpression()), !dbg !693
 ; call vga::Screen::height
-  %_4 = call i64 @_ZN3vga6Screen6height17hdb77060a78e2aac1E(ptr align 8 %self) #7, !dbg !678
-  store i64 0, ptr %_3, align 8, !dbg !679
-  %0 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 1, !dbg !679
-  store i64 %_4, ptr %0, align 8, !dbg !679
-  %1 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 0, !dbg !679
-  %2 = load i64, ptr %1, align 8, !dbg !679, !noundef !62
-  %3 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 1, !dbg !679
-  %4 = load i64, ptr %3, align 8, !dbg !679, !noundef !62
+  %_4 = call i64 @_ZN3vga6Screen6height17h8bbdcbb31ac65557E(ptr align 8 %self) #7, !dbg !694
+  store i64 0, ptr %_3, align 8, !dbg !695
+  %0 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 1, !dbg !695
+  store i64 %_4, ptr %0, align 8, !dbg !695
+  %1 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 0, !dbg !695
+  %2 = load i64, ptr %1, align 8, !dbg !695, !noundef !62
+  %3 = getelementptr inbounds { i64, i64 }, ptr %_3, i32 0, i32 1, !dbg !695
+  %4 = load i64, ptr %3, align 8, !dbg !695, !noundef !62
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %5 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h53fecf91b7eeff6fE"(i64 %2, i64 %4) #7, !dbg !679
-  %_2.0 = extractvalue { i64, i64 } %5, 0, !dbg !679
-  %_2.1 = extractvalue { i64, i64 } %5, 1, !dbg !679
-  %6 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !679
-  store i64 %_2.0, ptr %6, align 8, !dbg !679
-  %7 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 1, !dbg !679
-  store i64 %_2.1, ptr %7, align 8, !dbg !679
-  br label %bb3, !dbg !680
+  %5 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h2035deb76a1d3e4fE"(i64 %2, i64 %4) #7, !dbg !695
+  %_2.0 = extractvalue { i64, i64 } %5, 0, !dbg !695
+  %_2.1 = extractvalue { i64, i64 } %5, 1, !dbg !695
+  %6 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !695
+  store i64 %_2.0, ptr %6, align 8, !dbg !695
+  %7 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 1, !dbg !695
+  store i64 %_2.1, ptr %7, align 8, !dbg !695
+  br label %bb3, !dbg !696
 
 bb3:                                              ; preds = %bb8, %start
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %8 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h524561009e5d80e3E"(ptr align 8 %iter) #7, !dbg !677
-  store { i64, i64 } %8, ptr %_7, align 8, !dbg !677
-  %_9 = load i64, ptr %_7, align 8, !dbg !677, !range !681, !noundef !62
-  %9 = icmp eq i64 %_9, 0, !dbg !677
-  br i1 %9, label %bb7, label %bb5, !dbg !677
+  %8 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h3ed0813fa7c9be69E"(ptr align 8 %iter) #7, !dbg !693
+  store { i64, i64 } %8, ptr %_7, align 8, !dbg !693
+  %_9 = load i64, ptr %_7, align 8, !dbg !693, !range !697, !noundef !62
+  %9 = icmp eq i64 %_9, 0, !dbg !693
+  br i1 %9, label %bb7, label %bb5, !dbg !693
 
 bb7:                                              ; preds = %bb3
-  ret void, !dbg !682
+  ret void, !dbg !698
 
 bb5:                                              ; preds = %bb3
-  %10 = getelementptr inbounds { i64, i64 }, ptr %_7, i32 0, i32 1, !dbg !683
-  %row = load i64, ptr %10, align 8, !dbg !683, !noundef !62
-  store i64 %row, ptr %row.dbg.spill, align 8, !dbg !683
-  call void @llvm.dbg.declare(metadata ptr %row.dbg.spill, metadata !674, metadata !DIExpression()), !dbg !684
-  %11 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 4, !dbg !685
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_11, ptr align 8 %11, i64 160, i1 false), !dbg !685
-  %_13 = icmp ult i64 %row, 25, !dbg !686
-  %12 = call i1 @llvm.expect.i1(i1 %_13, i1 true), !dbg !686
-  br i1 %12, label %bb8, label %panic, !dbg !686
+  %10 = getelementptr inbounds { i64, i64 }, ptr %_7, i32 0, i32 1, !dbg !699
+  %row = load i64, ptr %10, align 8, !dbg !699, !noundef !62
+  store i64 %row, ptr %row.dbg.spill, align 8, !dbg !699
+  call void @llvm.dbg.declare(metadata ptr %row.dbg.spill, metadata !690, metadata !DIExpression()), !dbg !700
+  %11 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 4, !dbg !701
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_11, ptr align 8 %11, i64 160, i1 false), !dbg !701
+  %_13 = icmp ult i64 %row, 25, !dbg !702
+  %12 = call i1 @llvm.expect.i1(i1 %_13, i1 true), !dbg !702
+  br i1 %12, label %bb8, label %panic, !dbg !702
 
 bb6:                                              ; No predecessors!
-  unreachable, !dbg !677
+  unreachable, !dbg !693
 
 bb8:                                              ; preds = %bb5
-  %_14 = load ptr, ptr %self, align 8, !dbg !686, !nonnull !62, !align !471, !noundef !62
-  %13 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_14, i64 0, i64 %row, !dbg !686
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %13, ptr align 1 %_11, i64 160, i1 false), !dbg !686
-  br label %bb3, !dbg !680
+  %_14 = load ptr, ptr %self, align 8, !dbg !702, !nonnull !62, !align !474, !noundef !62
+  %13 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_14, i64 0, i64 %row, !dbg !702
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %13, ptr align 1 %_11, i64 160, i1 false), !dbg !702
+  br label %bb3, !dbg !696
 
 panic:                                            ; preds = %bb5
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17hba7ddab648238e64E(i64 %row, i64 25, ptr align 8 @alloc_b2ba2158d18bab94ef106f8c2b2c3b58) #8, !dbg !686
-  unreachable, !dbg !686
+  call void @_ZN4core9panicking18panic_bounds_check17h19f02e7819179f59E(i64 %row, i64 25, ptr align 8 @alloc_b2ba2158d18bab94ef106f8c2b2c3b58) #8, !dbg !702
+  unreachable, !dbg !702
 }
 
 ; vga::Screen::print_sc
 ; Function Attrs: noredzone nounwind
-define internal void @_ZN3vga6Screen8print_sc17hd9433e6ab215cdadE(ptr align 8 %self, i8 %sc.0, i8 %sc.1) unnamed_addr #0 !dbg !687 {
+define internal void @_ZN3vga6Screen8print_sc17h77cdc54f981eaff8E(ptr align 8 %self, i8 %sc.0, i8 %sc.1) unnamed_addr #0 !dbg !703 {
 start:
   %dst.dbg.spill = alloca ptr, align 8
   %sc.dbg.spill = alloca { i8, i8 }, align 1
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !691, metadata !DIExpression()), !dbg !696
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !708, metadata !DIExpression()), !dbg !713
   %0 = getelementptr inbounds { i8, i8 }, ptr %sc.dbg.spill, i32 0, i32 0
   store i8 %sc.0, ptr %0, align 1
   %1 = getelementptr inbounds { i8, i8 }, ptr %sc.dbg.spill, i32 0, i32 1
   store i8 %sc.1, ptr %1, align 1
-  call void @llvm.dbg.declare(metadata ptr %sc.dbg.spill, metadata !692, metadata !DIExpression()), !dbg !697
-  %_5 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !698
+  call void @llvm.dbg.declare(metadata ptr %sc.dbg.spill, metadata !709, metadata !DIExpression()), !dbg !714
+  %_5 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !715
 ; call vga::Cursor::y
-  %_4 = call i64 @_ZN3vga6Cursor1y17h539629400d73b731E(ptr align 8 %_5) #7, !dbg !698
-  %_7 = icmp ult i64 %_4, 25, !dbg !699
-  %2 = call i1 @llvm.expect.i1(i1 %_7, i1 true), !dbg !699
-  br i1 %2, label %bb2, label %panic, !dbg !699
+  %_4 = call i64 @_ZN3vga6Cursor1y17h11e23b88c5ffd179E(ptr align 8 %_5) #7, !dbg !715
+  %_7 = icmp ult i64 %_4, 25, !dbg !716
+  %2 = call i1 @llvm.expect.i1(i1 %_7, i1 true), !dbg !716
+  br i1 %2, label %bb2, label %panic, !dbg !716
 
 bb2:                                              ; preds = %start
-  %_9 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !700
+  %_9 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !717
 ; call vga::Cursor::x
-  %_8 = call i64 @_ZN3vga6Cursor1x17h14651252f035db8eE(ptr align 8 %_9) #7, !dbg !700
-  %_11 = icmp ult i64 %_8, 80, !dbg !699
-  %3 = call i1 @llvm.expect.i1(i1 %_11, i1 true), !dbg !699
-  br i1 %3, label %bb4, label %panic1, !dbg !699
+  %_8 = call i64 @_ZN3vga6Cursor1x17h649b461a0cd6527dE(ptr align 8 %_9) #7, !dbg !717
+  %_11 = icmp ult i64 %_8, 80, !dbg !716
+  %3 = call i1 @llvm.expect.i1(i1 %_11, i1 true), !dbg !716
+  br i1 %3, label %bb4, label %panic1, !dbg !716
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17hba7ddab648238e64E(i64 %_4, i64 25, ptr align 8 @alloc_aa1de6b3f18abd72233559e404e95cb6) #8, !dbg !699
-  unreachable, !dbg !699
+  call void @_ZN4core9panicking18panic_bounds_check17h19f02e7819179f59E(i64 %_4, i64 25, ptr align 8 @alloc_aa1de6b3f18abd72233559e404e95cb6) #8, !dbg !716
+  unreachable, !dbg !716
 
 bb4:                                              ; preds = %bb2
-  %_16 = load ptr, ptr %self, align 8, !dbg !701, !nonnull !62, !align !471, !noundef !62
-  %4 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_16, i64 0, i64 %_4, !dbg !701
-  %dst = getelementptr inbounds [80 x { i8, i8 }], ptr %4, i64 0, i64 %_8, !dbg !701
-  store ptr %dst, ptr %dst.dbg.spill, align 8, !dbg !701
-  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill, metadata !693, metadata !DIExpression()), !dbg !702
+  %_16 = load ptr, ptr %self, align 8, !dbg !718, !nonnull !62, !align !474, !noundef !62
+  %4 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_16, i64 0, i64 %_4, !dbg !718
+  %dst = getelementptr inbounds [80 x { i8, i8 }], ptr %4, i64 0, i64 %_8, !dbg !718
+  store ptr %dst, ptr %dst.dbg.spill, align 8, !dbg !718
+  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill, metadata !710, metadata !DIExpression()), !dbg !719
 ; call core::ptr::write_volatile
-  call void @_ZN4core3ptr14write_volatile17h34b638abb9ecb3b0E(ptr %dst, i8 %sc.0, i8 %sc.1) #7, !dbg !703
-  %_15 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !704
+  call void @_ZN4core3ptr14write_volatile17he7f5a5e45c64841eE(ptr %dst, i8 %sc.0, i8 %sc.1) #7, !dbg !720
+  %_15 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !721
 ; call vga::Cursor::incr_x
-  call void @_ZN3vga6Cursor6incr_x17h402e1c8ec0725199E(ptr align 8 %_15) #7, !dbg !704
-  ret void, !dbg !705
+  call void @_ZN3vga6Cursor6incr_x17hca3384546a527754E(ptr align 8 %_15) #7, !dbg !721
+  ret void, !dbg !722
 
 panic1:                                           ; preds = %bb2
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17hba7ddab648238e64E(i64 %_8, i64 80, ptr align 8 @alloc_aa1de6b3f18abd72233559e404e95cb6) #8, !dbg !699
-  unreachable, !dbg !699
+  call void @_ZN4core9panicking18panic_bounds_check17h19f02e7819179f59E(i64 %_8, i64 80, ptr align 8 @alloc_aa1de6b3f18abd72233559e404e95cb6) #8, !dbg !716
+  unreachable, !dbg !716
 }
 
 ; vga::Screen::should_wrap
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @_ZN3vga6Screen11should_wrap17h8c27f0b29b4a517cE(ptr align 8 %self) unnamed_addr #1 !dbg !706 {
+define internal zeroext i1 @_ZN3vga6Screen11should_wrap17h742299c47d796cd6E(ptr align 8 %self) unnamed_addr #1 !dbg !723 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !710, metadata !DIExpression()), !dbg !711
-  %_3 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !712
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !728, metadata !DIExpression()), !dbg !729
+  %_3 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !730
 ; call vga::Cursor::x
-  %_2 = call i64 @_ZN3vga6Cursor1x17h14651252f035db8eE(ptr align 8 %_3) #7, !dbg !712
+  %_2 = call i64 @_ZN3vga6Cursor1x17h649b461a0cd6527dE(ptr align 8 %_3) #7, !dbg !730
 ; call vga::Screen::width
-  %_4 = call i64 @_ZN3vga6Screen5width17hc635fb7a9c39244fE(ptr align 8 %self) #7, !dbg !713
-  %0 = icmp eq i64 %_2, %_4, !dbg !712
-  ret i1 %0, !dbg !714
+  %_4 = call i64 @_ZN3vga6Screen5width17he049df2ef71340a1E(ptr align 8 %self) #7, !dbg !731
+  %0 = icmp eq i64 %_2, %_4, !dbg !730
+  ret i1 %0, !dbg !732
 }
 
 ; vga::Screen::print
 ; Function Attrs: noredzone nounwind
-define internal void @_ZN3vga6Screen5print17h9162eecc616a4ed7E(ptr align 8 %self, i8 %c) unnamed_addr #0 !dbg !715 {
+define internal void @_ZN3vga6Screen5print17h08a39b3c97bd499bE(ptr align 8 %self, i8 %c) unnamed_addr #0 !dbg !733 {
 start:
   %c.dbg.spill = alloca i8, align 1
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !719, metadata !DIExpression()), !dbg !721
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !738, metadata !DIExpression()), !dbg !740
   store i8 %c, ptr %c.dbg.spill, align 1
-  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !720, metadata !DIExpression()), !dbg !722
+  call void @llvm.dbg.declare(metadata ptr %c.dbg.spill, metadata !739, metadata !DIExpression()), !dbg !741
 ; call vga::Screen::should_wrap
-  %_3 = call zeroext i1 @_ZN3vga6Screen11should_wrap17h8c27f0b29b4a517cE(ptr align 8 %self) #7, !dbg !723
-  br i1 %_3, label %bb2, label %bb3, !dbg !723
+  %_3 = call zeroext i1 @_ZN3vga6Screen11should_wrap17h742299c47d796cd6E(ptr align 8 %self) #7, !dbg !742
+  br i1 %_3, label %bb2, label %bb3, !dbg !742
 
 bb3:                                              ; preds = %bb2, %start
 ; call vga::ScreenChar::new
-  %0 = call { i8, i8 } @_ZN3vga10ScreenChar3new17h02f2761e25923a6aE(i8 %c) #7, !dbg !724
-  %_6.0 = extractvalue { i8, i8 } %0, 0, !dbg !724
-  %_6.1 = extractvalue { i8, i8 } %0, 1, !dbg !724
+  %0 = call { i8, i8 } @_ZN3vga10ScreenChar3new17h40fc70d9ea0ca51cE(i8 %c) #7, !dbg !743
+  %_6.0 = extractvalue { i8, i8 } %0, 0, !dbg !743
+  %_6.1 = extractvalue { i8, i8 } %0, 1, !dbg !743
 ; call vga::Screen::print_sc
-  call void @_ZN3vga6Screen8print_sc17hd9433e6ab215cdadE(ptr align 8 %self, i8 %_6.0, i8 %_6.1) #7, !dbg !725
-  ret void, !dbg !726
+  call void @_ZN3vga6Screen8print_sc17h77cdc54f981eaff8E(ptr align 8 %self, i8 %_6.0, i8 %_6.1) #7, !dbg !744
+  ret void, !dbg !745
 
 bb2:                                              ; preds = %start
 ; call vga::Screen::print_new_line
-  call void @_ZN3vga6Screen14print_new_line17h5228c226f79e4d41E(ptr align 8 %self) #7, !dbg !727
-  br label %bb3, !dbg !727
+  call void @_ZN3vga6Screen14print_new_line17h898feaf4523df5e9E(ptr align 8 %self) #7, !dbg !746
+  br label %bb3, !dbg !746
 }
 
 ; vga::Screen::recall_cursor_to_origin
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN3vga6Screen23recall_cursor_to_origin17h347b9e54016c85c7E(ptr align 8 %self) unnamed_addr #1 !dbg !728 {
+define internal void @_ZN3vga6Screen23recall_cursor_to_origin17h36f7c2dc6720c1ddE(ptr align 8 %self) unnamed_addr #1 !dbg !747 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !730, metadata !DIExpression()), !dbg !731
-  %0 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 3, !dbg !732
-  %1 = getelementptr inbounds { i64, i64 }, ptr %0, i32 0, i32 0, !dbg !732
-  %_2.0 = load i64, ptr %1, align 8, !dbg !732, !noundef !62
-  %2 = getelementptr inbounds { i64, i64 }, ptr %0, i32 0, i32 1, !dbg !732
-  %_2.1 = load i64, ptr %2, align 8, !dbg !732, !noundef !62
-  %3 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !733
-  %4 = getelementptr inbounds { i64, i64 }, ptr %3, i32 0, i32 0, !dbg !733
-  store i64 %_2.0, ptr %4, align 8, !dbg !733
-  %5 = getelementptr inbounds { i64, i64 }, ptr %3, i32 0, i32 1, !dbg !733
-  store i64 %_2.1, ptr %5, align 8, !dbg !733
-  ret void, !dbg !734
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !750, metadata !DIExpression()), !dbg !751
+  %0 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 3, !dbg !752
+  %1 = getelementptr inbounds { i64, i64 }, ptr %0, i32 0, i32 0, !dbg !752
+  %_2.0 = load i64, ptr %1, align 8, !dbg !752, !noundef !62
+  %2 = getelementptr inbounds { i64, i64 }, ptr %0, i32 0, i32 1, !dbg !752
+  %_2.1 = load i64, ptr %2, align 8, !dbg !752, !noundef !62
+  %3 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 2, !dbg !753
+  %4 = getelementptr inbounds { i64, i64 }, ptr %3, i32 0, i32 0, !dbg !753
+  store i64 %_2.0, ptr %4, align 8, !dbg !753
+  %5 = getelementptr inbounds { i64, i64 }, ptr %3, i32 0, i32 1, !dbg !753
+  store i64 %_2.1, ptr %5, align 8, !dbg !753
+  ret void, !dbg !754
 }
 
 ; vga::Screen::print_new_line
 ; Function Attrs: noredzone nounwind
-define internal void @_ZN3vga6Screen14print_new_line17h5228c226f79e4d41E(ptr align 8 %self) unnamed_addr #0 !dbg !735 {
+define internal void @_ZN3vga6Screen14print_new_line17h898feaf4523df5e9E(ptr align 8 %self) unnamed_addr #0 !dbg !755 {
 start:
   %row.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -994,147 +992,147 @@ start:
   %iter = alloca { i64, i64 }, align 8
   %_4 = alloca { i64, i64 }, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !737, metadata !DIExpression()), !dbg !742
-  call void @llvm.dbg.declare(metadata ptr %iter, metadata !738, metadata !DIExpression()), !dbg !743
-  %0 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 5, !dbg !744
-  %1 = load i8, ptr %0, align 8, !dbg !744, !range !123, !noundef !62
-  %2 = trunc i8 %1 to i1, !dbg !744
-  %_2 = zext i1 %2 to i64, !dbg !744
-  %3 = icmp eq i64 %_2, 0, !dbg !745
-  br i1 %3, label %bb17, label %bb2, !dbg !745
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !758, metadata !DIExpression()), !dbg !763
+  call void @llvm.dbg.declare(metadata ptr %iter, metadata !759, metadata !DIExpression()), !dbg !764
+  %0 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 5, !dbg !765
+  %1 = load i8, ptr %0, align 8, !dbg !765, !range !123, !noundef !62
+  %2 = trunc i8 %1 to i1, !dbg !765
+  %_2 = zext i1 %2 to i64, !dbg !765
+  %3 = icmp eq i64 %_2, 0, !dbg !766
+  br i1 %3, label %bb17, label %bb2, !dbg !766
 
 bb17:                                             ; preds = %bb16, %start
-  ret void, !dbg !746
+  ret void, !dbg !767
 
 bb2:                                              ; preds = %start
-  %4 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !747
-  %_5 = load i64, ptr %4, align 8, !dbg !747, !noundef !62
+  %4 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !768
+  %_5 = load i64, ptr %4, align 8, !dbg !768, !noundef !62
 ; call vga::Screen::height
-  %_6 = call i64 @_ZN3vga6Screen6height17hdb77060a78e2aac1E(ptr align 8 %self) #7, !dbg !748
-  store i64 %_5, ptr %_4, align 8, !dbg !747
-  %5 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 1, !dbg !747
-  store i64 %_6, ptr %5, align 8, !dbg !747
-  %6 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 0, !dbg !747
-  %7 = load i64, ptr %6, align 8, !dbg !747, !noundef !62
-  %8 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 1, !dbg !747
-  %9 = load i64, ptr %8, align 8, !dbg !747, !noundef !62
+  %_6 = call i64 @_ZN3vga6Screen6height17h8bbdcbb31ac65557E(ptr align 8 %self) #7, !dbg !769
+  store i64 %_5, ptr %_4, align 8, !dbg !768
+  %5 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 1, !dbg !768
+  store i64 %_6, ptr %5, align 8, !dbg !768
+  %6 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 0, !dbg !768
+  %7 = load i64, ptr %6, align 8, !dbg !768, !noundef !62
+  %8 = getelementptr inbounds { i64, i64 }, ptr %_4, i32 0, i32 1, !dbg !768
+  %9 = load i64, ptr %8, align 8, !dbg !768, !noundef !62
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %10 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h53fecf91b7eeff6fE"(i64 %7, i64 %9) #7, !dbg !747
-  %_3.0 = extractvalue { i64, i64 } %10, 0, !dbg !747
-  %_3.1 = extractvalue { i64, i64 } %10, 1, !dbg !747
-  %11 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !747
-  store i64 %_3.0, ptr %11, align 8, !dbg !747
-  %12 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 1, !dbg !747
-  store i64 %_3.1, ptr %12, align 8, !dbg !747
-  br label %bb5, !dbg !749
+  %10 = call { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h2035deb76a1d3e4fE"(i64 %7, i64 %9) #7, !dbg !768
+  %_3.0 = extractvalue { i64, i64 } %10, 0, !dbg !768
+  %_3.1 = extractvalue { i64, i64 } %10, 1, !dbg !768
+  %11 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 0, !dbg !768
+  store i64 %_3.0, ptr %11, align 8, !dbg !768
+  %12 = getelementptr inbounds { i64, i64 }, ptr %iter, i32 0, i32 1, !dbg !768
+  store i64 %_3.1, ptr %12, align 8, !dbg !768
+  br label %bb5, !dbg !770
 
 bb5:                                              ; preds = %bb13, %bb7, %bb2
 ; call core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
-  %13 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h524561009e5d80e3E"(ptr align 8 %iter) #7, !dbg !743
-  store { i64, i64 } %13, ptr %_9, align 8, !dbg !743
-  %_11 = load i64, ptr %_9, align 8, !dbg !743, !range !681, !noundef !62
-  %14 = icmp eq i64 %_11, 0, !dbg !743
-  br i1 %14, label %bb8, label %bb7, !dbg !743
+  %13 = call { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h3ed0813fa7c9be69E"(ptr align 8 %iter) #7, !dbg !764
+  store { i64, i64 } %13, ptr %_9, align 8, !dbg !764
+  %_11 = load i64, ptr %_9, align 8, !dbg !764, !range !697, !noundef !62
+  %14 = icmp eq i64 %_11, 0, !dbg !764
+  br i1 %14, label %bb8, label %bb7, !dbg !764
 
 bb8:                                              ; preds = %bb5
-  %15 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !750
-  %_24 = load i64, ptr %15, align 8, !dbg !750, !noundef !62
-  %_23 = icmp ugt i64 %_24, 0, !dbg !750
-  br i1 %_23, label %bb14, label %bb16, !dbg !750
+  %15 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !771
+  %_24 = load i64, ptr %15, align 8, !dbg !771, !noundef !62
+  %_23 = icmp ugt i64 %_24, 0, !dbg !771
+  br i1 %_23, label %bb14, label %bb16, !dbg !771
 
 bb7:                                              ; preds = %bb5
-  %16 = getelementptr inbounds { i64, i64 }, ptr %_9, i32 0, i32 1, !dbg !751
-  %row = load i64, ptr %16, align 8, !dbg !751, !noundef !62
-  store i64 %row, ptr %row.dbg.spill, align 8, !dbg !751
-  call void @llvm.dbg.declare(metadata ptr %row.dbg.spill, metadata !740, metadata !DIExpression()), !dbg !752
-  %17 = icmp eq i64 %row, 0, !dbg !753
-  br i1 %17, label %bb5, label %bb9, !dbg !753
+  %16 = getelementptr inbounds { i64, i64 }, ptr %_9, i32 0, i32 1, !dbg !772
+  %row = load i64, ptr %16, align 8, !dbg !772, !noundef !62
+  store i64 %row, ptr %row.dbg.spill, align 8, !dbg !772
+  call void @llvm.dbg.declare(metadata ptr %row.dbg.spill, metadata !761, metadata !DIExpression()), !dbg !773
+  %17 = icmp eq i64 %row, 0, !dbg !774
+  br i1 %17, label %bb5, label %bb9, !dbg !774
 
 bb1:                                              ; No predecessors!
-  unreachable, !dbg !744
+  unreachable, !dbg !765
 
 bb9:                                              ; preds = %bb7
-  %_15 = icmp ult i64 %row, 25, !dbg !754
-  %18 = call i1 @llvm.expect.i1(i1 %_15, i1 true), !dbg !754
-  br i1 %18, label %bb10, label %panic, !dbg !754
+  %_15 = icmp ult i64 %row, 25, !dbg !775
+  %18 = call i1 @llvm.expect.i1(i1 %_15, i1 true), !dbg !775
+  br i1 %18, label %bb10, label %panic, !dbg !775
 
 bb10:                                             ; preds = %bb9
-  %_27 = load ptr, ptr %self, align 8, !dbg !754, !nonnull !62, !align !471, !noundef !62
-  %19 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_27, i64 0, i64 %row, !dbg !754
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_13, ptr align 1 %19, i64 160, i1 false), !dbg !754
-  %_17.0 = sub i64 %row, 1, !dbg !755
-  %_17.1 = icmp ult i64 %row, 1, !dbg !755
-  %20 = call i1 @llvm.expect.i1(i1 %_17.1, i1 false), !dbg !755
-  br i1 %20, label %panic1, label %bb11, !dbg !755
+  %_27 = load ptr, ptr %self, align 8, !dbg !775, !nonnull !62, !align !474, !noundef !62
+  %19 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_27, i64 0, i64 %row, !dbg !775
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_13, ptr align 1 %19, i64 160, i1 false), !dbg !775
+  %_17.0 = sub i64 %row, 1, !dbg !776
+  %_17.1 = icmp ult i64 %row, 1, !dbg !776
+  %20 = call i1 @llvm.expect.i1(i1 %_17.1, i1 false), !dbg !776
+  br i1 %20, label %panic1, label %bb11, !dbg !776
 
 panic:                                            ; preds = %bb9
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17hba7ddab648238e64E(i64 %row, i64 25, ptr align 8 @alloc_d7d244e236135cde28f18a3683119354) #8, !dbg !754
-  unreachable, !dbg !754
+  call void @_ZN4core9panicking18panic_bounds_check17h19f02e7819179f59E(i64 %row, i64 25, ptr align 8 @alloc_d7d244e236135cde28f18a3683119354) #8, !dbg !775
+  unreachable, !dbg !775
 
 bb11:                                             ; preds = %bb10
-  %_19 = icmp ult i64 %_17.0, 25, !dbg !756
-  %21 = call i1 @llvm.expect.i1(i1 %_19, i1 true), !dbg !756
-  br i1 %21, label %bb12, label %panic2, !dbg !756
+  %_19 = icmp ult i64 %_17.0, 25, !dbg !777
+  %21 = call i1 @llvm.expect.i1(i1 %_19, i1 true), !dbg !777
+  br i1 %21, label %bb12, label %panic2, !dbg !777
 
 panic1:                                           ; preds = %bb10
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hee5d285669f2f2eaE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_5415f18b35c6ef7511862f024dce1661) #8, !dbg !755
-  unreachable, !dbg !755
+  call void @_ZN4core9panicking5panic17h38d135543837e8b5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_5415f18b35c6ef7511862f024dce1661) #8, !dbg !776
+  unreachable, !dbg !776
 
 bb12:                                             ; preds = %bb11
-  %_28 = load ptr, ptr %self, align 8, !dbg !756, !nonnull !62, !align !471, !noundef !62
-  %22 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_28, i64 0, i64 %_17.0, !dbg !756
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %22, ptr align 1 %_13, i64 160, i1 false), !dbg !756
-  %23 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 4, !dbg !757
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_20, ptr align 8 %23, i64 160, i1 false), !dbg !757
-  %_22 = icmp ult i64 %row, 25, !dbg !758
-  %24 = call i1 @llvm.expect.i1(i1 %_22, i1 true), !dbg !758
-  br i1 %24, label %bb13, label %panic3, !dbg !758
+  %_28 = load ptr, ptr %self, align 8, !dbg !777, !nonnull !62, !align !474, !noundef !62
+  %22 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_28, i64 0, i64 %_17.0, !dbg !777
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %22, ptr align 1 %_13, i64 160, i1 false), !dbg !777
+  %23 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 4, !dbg !778
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_20, ptr align 8 %23, i64 160, i1 false), !dbg !778
+  %_22 = icmp ult i64 %row, 25, !dbg !779
+  %24 = call i1 @llvm.expect.i1(i1 %_22, i1 true), !dbg !779
+  br i1 %24, label %bb13, label %panic3, !dbg !779
 
 panic2:                                           ; preds = %bb11
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17hba7ddab648238e64E(i64 %_17.0, i64 25, ptr align 8 @alloc_adcbcd90e6986bb3e96850745546be1d) #8, !dbg !756
-  unreachable, !dbg !756
+  call void @_ZN4core9panicking18panic_bounds_check17h19f02e7819179f59E(i64 %_17.0, i64 25, ptr align 8 @alloc_adcbcd90e6986bb3e96850745546be1d) #8, !dbg !777
+  unreachable, !dbg !777
 
 bb13:                                             ; preds = %bb12
-  %_29 = load ptr, ptr %self, align 8, !dbg !758, !nonnull !62, !align !471, !noundef !62
-  %25 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_29, i64 0, i64 %row, !dbg !758
-  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %25, ptr align 1 %_20, i64 160, i1 false), !dbg !758
-  br label %bb5, !dbg !749
+  %_29 = load ptr, ptr %self, align 8, !dbg !779, !nonnull !62, !align !474, !noundef !62
+  %25 = getelementptr inbounds [25 x [80 x { i8, i8 }]], ptr %_29, i64 0, i64 %row, !dbg !779
+  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %25, ptr align 1 %_20, i64 160, i1 false), !dbg !779
+  br label %bb5, !dbg !770
 
 panic3:                                           ; preds = %bb12
 ; call core::panicking::panic_bounds_check
-  call void @_ZN4core9panicking18panic_bounds_check17hba7ddab648238e64E(i64 %row, i64 25, ptr align 8 @alloc_00ba1f8ac0cbce313b7ba253160f05af) #8, !dbg !758
-  unreachable, !dbg !758
+  call void @_ZN4core9panicking18panic_bounds_check17h19f02e7819179f59E(i64 %row, i64 25, ptr align 8 @alloc_00ba1f8ac0cbce313b7ba253160f05af) #8, !dbg !779
+  unreachable, !dbg !779
 
 bb16:                                             ; preds = %bb15, %bb8
 ; call vga::Screen::recall_cursor_to_origin
-  call void @_ZN3vga6Screen23recall_cursor_to_origin17h347b9e54016c85c7E(ptr align 8 %self) #7, !dbg !759
-  br label %bb17, !dbg !759
+  call void @_ZN3vga6Screen23recall_cursor_to_origin17h36f7c2dc6720c1ddE(ptr align 8 %self) #7, !dbg !780
+  br label %bb17, !dbg !780
 
 bb14:                                             ; preds = %bb8
-  %26 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !760
-  %27 = load i64, ptr %26, align 8, !dbg !760, !noundef !62
-  %_25.0 = sub i64 %27, 1, !dbg !760
-  %_25.1 = icmp ult i64 %27, 1, !dbg !760
-  %28 = call i1 @llvm.expect.i1(i1 %_25.1, i1 false), !dbg !760
-  br i1 %28, label %panic4, label %bb15, !dbg !760
+  %26 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !781
+  %27 = load i64, ptr %26, align 8, !dbg !781, !noundef !62
+  %_25.0 = sub i64 %27, 1, !dbg !781
+  %_25.1 = icmp ult i64 %27, 1, !dbg !781
+  %28 = call i1 @llvm.expect.i1(i1 %_25.1, i1 false), !dbg !781
+  br i1 %28, label %panic4, label %bb15, !dbg !781
 
 bb15:                                             ; preds = %bb14
-  %29 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !760
-  store i64 %_25.0, ptr %29, align 8, !dbg !760
-  br label %bb16, !dbg !761
+  %29 = getelementptr inbounds %Screen, ptr %self, i32 0, i32 1, !dbg !781
+  store i64 %_25.0, ptr %29, align 8, !dbg !781
+  br label %bb16, !dbg !782
 
 panic4:                                           ; preds = %bb14
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hee5d285669f2f2eaE(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_5e9c4d9c4e18af9c23349bbd64580bcd) #8, !dbg !760
-  unreachable, !dbg !760
+  call void @_ZN4core9panicking5panic17h38d135543837e8b5E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_5e9c4d9c4e18af9c23349bbd64580bcd) #8, !dbg !781
+  unreachable, !dbg !781
 }
 
 ; vga::Screen::print_text
 ; Function Attrs: noredzone nounwind
-define void @_ZN3vga6Screen10print_text17hde68d2bccc37f670E(ptr align 8 %self, ptr align 1 %text.0, i64 %text.1) unnamed_addr #0 !dbg !762 {
+define void @_ZN3vga6Screen10print_text17h2a81e660c5a29280E(ptr align 8 %self, ptr align 1 %text.0, i64 %text.1) unnamed_addr #0 !dbg !783 {
 start:
   %byte.dbg.spill = alloca i8, align 1
   %text.dbg.spill = alloca { ptr, i64 }, align 8
@@ -1142,96 +1140,96 @@ start:
   %_7 = alloca { i8, i8 }, align 1
   %iter = alloca { ptr, ptr }, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !766, metadata !DIExpression()), !dbg !772
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !788, metadata !DIExpression()), !dbg !794
   %0 = getelementptr inbounds { ptr, i64 }, ptr %text.dbg.spill, i32 0, i32 0
   store ptr %text.0, ptr %0, align 8
   %1 = getelementptr inbounds { ptr, i64 }, ptr %text.dbg.spill, i32 0, i32 1
   store i64 %text.1, ptr %1, align 8
-  call void @llvm.dbg.declare(metadata ptr %text.dbg.spill, metadata !767, metadata !DIExpression()), !dbg !773
-  call void @llvm.dbg.declare(metadata ptr %iter, metadata !768, metadata !DIExpression()), !dbg !774
+  call void @llvm.dbg.declare(metadata ptr %text.dbg.spill, metadata !789, metadata !DIExpression()), !dbg !795
+  call void @llvm.dbg.declare(metadata ptr %iter, metadata !790, metadata !DIExpression()), !dbg !796
 ; call core::str::<impl str>::bytes
-  %2 = call { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17hc3d475c393657962E"(ptr align 1 %text.0, i64 %text.1) #7, !dbg !775
-  %_4.0 = extractvalue { ptr, ptr } %2, 0, !dbg !775
-  %_4.1 = extractvalue { ptr, ptr } %2, 1, !dbg !775
+  %2 = call { ptr, ptr } @"_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17h67586fe767d6d375E"(ptr align 1 %text.0, i64 %text.1) #7, !dbg !797
+  %_4.0 = extractvalue { ptr, ptr } %2, 0, !dbg !797
+  %_4.1 = extractvalue { ptr, ptr } %2, 1, !dbg !797
 ; call <I as core::iter::traits::collect::IntoIterator>::into_iter
-  %3 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h26f324faf4aeee9bE"(ptr %_4.0, ptr %_4.1) #7, !dbg !775
-  %_3.0 = extractvalue { ptr, ptr } %3, 0, !dbg !775
-  %_3.1 = extractvalue { ptr, ptr } %3, 1, !dbg !775
-  %4 = getelementptr inbounds { ptr, ptr }, ptr %iter, i32 0, i32 0, !dbg !775
-  store ptr %_3.0, ptr %4, align 8, !dbg !775
-  %5 = getelementptr inbounds { ptr, ptr }, ptr %iter, i32 0, i32 1, !dbg !775
-  store ptr %_3.1, ptr %5, align 8, !dbg !775
-  br label %bb3, !dbg !776
+  %3 = call { ptr, ptr } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17he581b2d280c100beE"(ptr %_4.0, ptr %_4.1) #7, !dbg !797
+  %_3.0 = extractvalue { ptr, ptr } %3, 0, !dbg !797
+  %_3.1 = extractvalue { ptr, ptr } %3, 1, !dbg !797
+  %4 = getelementptr inbounds { ptr, ptr }, ptr %iter, i32 0, i32 0, !dbg !797
+  store ptr %_3.0, ptr %4, align 8, !dbg !797
+  %5 = getelementptr inbounds { ptr, ptr }, ptr %iter, i32 0, i32 1, !dbg !797
+  store ptr %_3.1, ptr %5, align 8, !dbg !797
+  br label %bb3, !dbg !798
 
 bb3:                                              ; preds = %bb12, %bb10, %bb11, %start
 ; call <core::str::iter::Bytes as core::iter::traits::iterator::Iterator>::next
-  %6 = call { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80f6a3191f76d9fbE"(ptr align 8 %iter) #7, !dbg !774
-  store { i8, i8 } %6, ptr %_7, align 1, !dbg !774
-  %7 = load i8, ptr %_7, align 1, !dbg !774, !range !123, !noundef !62
-  %8 = trunc i8 %7 to i1, !dbg !774
-  %_9 = zext i1 %8 to i64, !dbg !774
-  %9 = icmp eq i64 %_9, 0, !dbg !774
-  br i1 %9, label %bb7, label %bb5, !dbg !774
+  %6 = call { i8, i8 } @"_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hb04e63f86a2e6cd2E"(ptr align 8 %iter) #7, !dbg !796
+  store { i8, i8 } %6, ptr %_7, align 1, !dbg !796
+  %7 = load i8, ptr %_7, align 1, !dbg !796, !range !123, !noundef !62
+  %8 = trunc i8 %7 to i1, !dbg !796
+  %_9 = zext i1 %8 to i64, !dbg !796
+  %9 = icmp eq i64 %_9, 0, !dbg !796
+  br i1 %9, label %bb7, label %bb5, !dbg !796
 
 bb7:                                              ; preds = %bb3
-  ret void, !dbg !777
+  ret void, !dbg !799
 
 bb5:                                              ; preds = %bb3
-  %10 = getelementptr inbounds { i8, i8 }, ptr %_7, i32 0, i32 1, !dbg !778
-  %byte = load i8, ptr %10, align 1, !dbg !778, !noundef !62
-  store i8 %byte, ptr %byte.dbg.spill, align 1, !dbg !778
-  call void @llvm.dbg.declare(metadata ptr %byte.dbg.spill, metadata !770, metadata !DIExpression()), !dbg !779
-  %_11 = icmp ule i8 32, %byte, !dbg !780
-  br i1 %_11, label %bb8, label %bb9, !dbg !780
+  %10 = getelementptr inbounds { i8, i8 }, ptr %_7, i32 0, i32 1, !dbg !800
+  %byte = load i8, ptr %10, align 1, !dbg !800, !noundef !62
+  store i8 %byte, ptr %byte.dbg.spill, align 1, !dbg !800
+  call void @llvm.dbg.declare(metadata ptr %byte.dbg.spill, metadata !792, metadata !DIExpression()), !dbg !801
+  %_11 = icmp ule i8 32, %byte, !dbg !802
+  br i1 %_11, label %bb8, label %bb9, !dbg !802
 
 bb6:                                              ; No predecessors!
-  unreachable, !dbg !774
+  unreachable, !dbg !796
 
 bb9:                                              ; preds = %bb8, %bb5
-  %11 = icmp eq i8 %byte, 10, !dbg !781
-  br i1 %11, label %bb12, label %bb10, !dbg !781
+  %11 = icmp eq i8 %byte, 10, !dbg !803
+  br i1 %11, label %bb12, label %bb10, !dbg !803
 
 bb8:                                              ; preds = %bb5
-  %_12 = icmp ule i8 %byte, 126, !dbg !780
-  br i1 %_12, label %bb11, label %bb9, !dbg !780
+  %_12 = icmp ule i8 %byte, 126, !dbg !802
+  br i1 %_12, label %bb11, label %bb9, !dbg !802
 
 bb11:                                             ; preds = %bb8
 ; call vga::Screen::print
-  call void @_ZN3vga6Screen5print17h9162eecc616a4ed7E(ptr align 8 %self, i8 %byte) #7, !dbg !782
-  br label %bb3, !dbg !782
+  call void @_ZN3vga6Screen5print17h08a39b3c97bd499bE(ptr align 8 %self, i8 %byte) #7, !dbg !804
+  br label %bb3, !dbg !804
 
 bb12:                                             ; preds = %bb9
 ; call vga::Screen::print_new_line
-  call void @_ZN3vga6Screen14print_new_line17h5228c226f79e4d41E(ptr align 8 %self) #7, !dbg !783
-  br label %bb3, !dbg !783
+  call void @_ZN3vga6Screen14print_new_line17h898feaf4523df5e9E(ptr align 8 %self) #7, !dbg !805
+  br label %bb3, !dbg !805
 
 bb10:                                             ; preds = %bb9
-  %_13 = load i8, ptr @_ZN3vga12PI_CHAR_CODE17h9712d871dd7f287fE, align 1, !dbg !784, !noundef !62
+  %_13 = load i8, ptr @_ZN3vga12PI_CHAR_CODE17h14ac5d8b3a8f673dE, align 1, !dbg !806, !noundef !62
 ; call vga::Screen::print
-  call void @_ZN3vga6Screen5print17h9162eecc616a4ed7E(ptr align 8 %self, i8 %_13) #7, !dbg !785
-  br label %bb3, !dbg !785
+  call void @_ZN3vga6Screen5print17h08a39b3c97bd499bE(ptr align 8 %self, i8 %_13) #7, !dbg !807
+  br label %bb3, !dbg !807
 }
 
 ; <vga::Screen as core::fmt::Write>::write_str
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @"_ZN48_$LT$vga..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17h4afa8fca70201c0bE"(ptr align 8 %self, ptr align 1 %text.0, i64 %text.1) unnamed_addr #0 !dbg !786 {
+define zeroext i1 @"_ZN48_$LT$vga..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17h2fa52469e35aa944E"(ptr align 8 %self, ptr align 1 %text.0, i64 %text.1) unnamed_addr #0 !dbg !808 {
 start:
   %text.dbg.spill = alloca { ptr, i64 }, align 8
   %self.dbg.spill = alloca ptr, align 8
   %0 = alloca i8, align 1
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !791, metadata !DIExpression()), !dbg !793
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !813, metadata !DIExpression()), !dbg !815
   %1 = getelementptr inbounds { ptr, i64 }, ptr %text.dbg.spill, i32 0, i32 0
   store ptr %text.0, ptr %1, align 8
   %2 = getelementptr inbounds { ptr, i64 }, ptr %text.dbg.spill, i32 0, i32 1
   store i64 %text.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %text.dbg.spill, metadata !792, metadata !DIExpression()), !dbg !794
+  call void @llvm.dbg.declare(metadata ptr %text.dbg.spill, metadata !814, metadata !DIExpression()), !dbg !816
 ; call vga::Screen::print_text
-  call void @_ZN3vga6Screen10print_text17hde68d2bccc37f670E(ptr align 8 %self, ptr align 1 %text.0, i64 %text.1) #7, !dbg !795
-  store i8 0, ptr %0, align 1, !dbg !796
-  %3 = load i8, ptr %0, align 1, !dbg !797, !range !123, !noundef !62
-  %4 = trunc i8 %3 to i1, !dbg !797
-  ret i1 %4, !dbg !797
+  call void @_ZN3vga6Screen10print_text17h2a81e660c5a29280E(ptr align 8 %self, ptr align 1 %text.0, i64 %text.1) #7, !dbg !817
+  store i8 0, ptr %0, align 1, !dbg !818
+  %3 = load i8, ptr %0, align 1, !dbg !819, !range !123, !noundef !62
+  %4 = trunc i8 %3 to i1, !dbg !819
+  ret i1 %4, !dbg !819
 }
 
 ; Function Attrs: nocallback nofree nosync nounwind speculatable willreturn memory(none)
@@ -1239,29 +1237,29 @@ declare void @llvm.dbg.declare(metadata, metadata, metadata) #2
 
 ; <core::slice::iter::Iter<T> as core::iter::traits::iterator::Iterator>::next
 ; Function Attrs: inlinehint noredzone nounwind
-declare align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hd2efcc717ba7a400E"(ptr align 8) unnamed_addr #1
+declare align 1 ptr @"_ZN91_$LT$core..slice..iter..Iter$LT$T$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h958227bac17e54d3E"(ptr align 8) unnamed_addr #1
 
 ; core::panicking::panic_fmt
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking9panic_fmt17hdd6269d09ded55c6E(ptr, ptr align 8) unnamed_addr #3
+declare void @_ZN4core9panicking9panic_fmt17h2c59f66d276f88adE(ptr, ptr align 8) unnamed_addr #3
 
 ; Function Attrs: nocallback nofree nosync nounwind speculatable willreturn memory(none)
 declare i64 @llvm.ctpop.i64(i64) #2
 
 ; core::panicking::panic_nounwind
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking14panic_nounwind17h8eea4b7bcc6cf983E(ptr align 1, i64) unnamed_addr #3
+declare void @_ZN4core9panicking14panic_nounwind17h91025db35e83f9c9E(ptr align 1, i64) unnamed_addr #3
 
 ; Function Attrs: nocallback nofree nosync nounwind willreturn memory(none)
 declare i1 @llvm.expect.i1(i1, i1) #4
 
 ; core::panicking::panic
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking5panic17hee5d285669f2f2eaE(ptr align 1, i64, ptr align 8) unnamed_addr #3
+declare void @_ZN4core9panicking5panic17h38d135543837e8b5E(ptr align 1, i64, ptr align 8) unnamed_addr #3
 
 ; core::slice::<impl [T]>::iter
 ; Function Attrs: inlinehint noredzone nounwind
-declare { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h29352cc481936248E"(ptr align 1, i64) unnamed_addr #1
+declare { ptr, ptr } @"_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$4iter17h6024f7e5363c1a17E"(ptr align 1, i64) unnamed_addr #1
 
 ; Function Attrs: nocallback nofree nosync nounwind willreturn memory(inaccessiblemem: readwrite)
 declare void @llvm.assume(i1 noundef) #5
@@ -1274,15 +1272,15 @@ declare void @llvm.memcpy.p0.p0.i64(ptr noalias nocapture writeonly, ptr noalias
 
 ; <I as core::iter::traits::collect::IntoIterator>::into_iter
 ; Function Attrs: inlinehint noredzone nounwind
-declare { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h53fecf91b7eeff6fE"(i64, i64) unnamed_addr #1
+declare { i64, i64 } @"_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h2035deb76a1d3e4fE"(i64, i64) unnamed_addr #1
 
 ; core::iter::range::<impl core::iter::traits::iterator::Iterator for core::ops::range::Range<A>>::next
 ; Function Attrs: inlinehint noredzone nounwind
-declare { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h524561009e5d80e3E"(ptr align 8) unnamed_addr #1
+declare { i64, i64 } @"_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h3ed0813fa7c9be69E"(ptr align 8) unnamed_addr #1
 
 ; core::panicking::panic_bounds_check
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking18panic_bounds_check17hba7ddab648238e64E(i64, i64, ptr align 8) unnamed_addr #3
+declare void @_ZN4core9panicking18panic_bounds_check17h19f02e7819179f59E(i64, i64, ptr align 8) unnamed_addr #3
 
 attributes #0 = { noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
 attributes #1 = { inlinehint noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
@@ -1298,18 +1296,18 @@ attributes #8 = { noreturn nounwind }
 !llvm.dbg.cu = !{!11}
 
 !0 = !DIGlobalVariableExpression(var: !1, expr: !DIExpression())
-!1 = distinct !DIGlobalVariable(name: "PI_CHAR_CODE", linkageName: "_ZN3vga12PI_CHAR_CODE17h9712d871dd7f287fE", scope: !2, file: !3, line: 30, type: !4, isLocal: true, isDefinition: true, align: 8)
+!1 = distinct !DIGlobalVariable(name: "PI_CHAR_CODE", linkageName: "_ZN3vga12PI_CHAR_CODE17h14ac5d8b3a8f673dE", scope: !2, file: !3, line: 30, type: !4, isLocal: true, isDefinition: true, align: 8)
 !2 = !DINamespace(name: "vga", scope: null)
 !3 = !DIFile(filename: "vga/src/lib.rs", directory: "/Users/yaw/self/theo", checksumkind: CSK_MD5, checksum: "6500acedd3b9b6096da095d5f2c5f037")
 !4 = !DIBasicType(name: "u8", size: 8, encoding: DW_ATE_unsigned)
 !5 = !DIGlobalVariableExpression(var: !6, expr: !DIExpression())
-!6 = distinct !DIGlobalVariable(name: "VGA_COLOR_TEXT_MODE_ADDR", linkageName: "_ZN3vga24VGA_COLOR_TEXT_MODE_ADDR17h97f88b84251bfb6dE", scope: !2, file: !3, line: 68, type: !7, isLocal: true, isDefinition: true, align: 64)
+!6 = distinct !DIGlobalVariable(name: "VGA_COLOR_TEXT_MODE_ADDR", linkageName: "_ZN3vga24VGA_COLOR_TEXT_MODE_ADDR17h21432963d10cdbdbE", scope: !2, file: !3, line: 68, type: !7, isLocal: true, isDefinition: true, align: 64)
 !7 = !DIBasicType(name: "u64", size: 64, encoding: DW_ATE_unsigned)
 !8 = !{i32 8, !"PIC Level", i32 2}
 !9 = !{i32 2, !"Dwarf Version", i32 4}
 !10 = !{i32 2, !"Debug Info Version", i32 3}
-!11 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !12, producer: "clang LLVM (rustc version 1.71.0-nightly (dbba59457 2023-05-01))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !13, globals: !46, splitDebugInlining: false)
-!12 = !DIFile(filename: "vga/src/lib.rs/@/5b70x7mteoxs6qq", directory: "/Users/yaw/self/theo")
+!11 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !12, producer: "clang LLVM (rustc version 1.71.0-nightly (5ea3f0ae0 2023-05-23))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !13, globals: !46, splitDebugInlining: false)
+!12 = !DIFile(filename: "vga/src/lib.rs/@/47alcp8srxohvuil", directory: "/Users/yaw/self/theo")
 !13 = !{!14, !24, !42}
 !14 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "Alignment", scope: !16, file: !15, baseType: !4, size: 8, align: 8, flags: DIFlagEnumClass, elements: !19)
 !15 = !DIFile(filename: "<unknown>", directory: "")
@@ -1344,7 +1342,7 @@ attributes #8 = { noreturn nounwind }
 !44 = !DIEnumerator(name: "TopDown", value: 0, isUnsigned: true)
 !45 = !DIEnumerator(name: "BottomUp", value: 1, isUnsigned: true)
 !46 = !{!0, !5}
-!47 = distinct !DISubprogram(name: "next<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h14ac179e763e7c53E", scope: !49, file: !48, line: 47, type: !53, scopeLine: 47, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !96, retainedNodes: !94)
+!47 = distinct !DISubprogram(name: "next<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN104_$LT$core..iter..adapters..copied..Copied$LT$I$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17he28a6449d3a865daE", scope: !49, file: !48, line: 47, type: !53, scopeLine: 47, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !96, retainedNodes: !94)
 !48 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/copied.rs", directory: "", checksumkind: CSK_MD5, checksum: "abbb898986bfead2aa6cf525aee62d89")
 !49 = !DINamespace(name: "{impl#1}", scope: !50)
 !50 = !DINamespace(name: "copied", scope: !51)
@@ -1352,31 +1350,31 @@ attributes #8 = { noreturn nounwind }
 !52 = !DINamespace(name: "iter", scope: !18)
 !53 = !DISubroutineType(types: !54)
 !54 = !{!55, !70}
-!55 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<u8>", scope: !56, file: !15, size: 16, align: 8, elements: !57, templateParams: !62, identifier: "d999326cdb2d86cb93875f42c3ca316")
+!55 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<u8>", scope: !56, file: !15, size: 16, align: 8, elements: !57, templateParams: !62, identifier: "7f53f21340c99df9407d99b4adaaf470")
 !56 = !DINamespace(name: "option", scope: !18)
 !57 = !{!58}
-!58 = !DICompositeType(tag: DW_TAG_variant_part, scope: !55, file: !15, size: 16, align: 8, elements: !59, templateParams: !62, identifier: "a25ceedbec3dbb2dc59d08e25327561c", discriminator: !69)
+!58 = !DICompositeType(tag: DW_TAG_variant_part, scope: !55, file: !15, size: 16, align: 8, elements: !59, templateParams: !62, identifier: "4df38de18839a56e334db4e567fe7d", discriminator: !69)
 !59 = !{!60, !65}
 !60 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !58, file: !15, baseType: !61, size: 16, align: 8, extraData: i64 0)
-!61 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !55, file: !15, size: 16, align: 8, elements: !62, templateParams: !63, identifier: "525ce36ddcf0023f6bb645832b9d8d0a")
+!61 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !55, file: !15, size: 16, align: 8, elements: !62, templateParams: !63, identifier: "b512452c8b9fbc3f9b8d9c6d8dc55126")
 !62 = !{}
 !63 = !{!64}
 !64 = !DITemplateTypeParameter(name: "T", type: !4)
 !65 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !58, file: !15, baseType: !66, size: 16, align: 8, extraData: i64 1)
-!66 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !55, file: !15, size: 16, align: 8, elements: !67, templateParams: !63, identifier: "5d588492b4cbaa2d454d6d8f02f9b09f")
+!66 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !55, file: !15, size: 16, align: 8, elements: !67, templateParams: !63, identifier: "945a35e127dfa9e1e3a6a8c91c4739bc")
 !67 = !{!68}
 !68 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !66, file: !15, baseType: !4, size: 8, align: 8, offset: 8)
 !69 = !DIDerivedType(tag: DW_TAG_member, scope: !55, file: !15, baseType: !4, size: 8, align: 8, flags: DIFlagArtificial)
 !70 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::iter::adapters::copied::Copied<core::slice::iter::Iter<u8>>", baseType: !71, size: 64, align: 64, dwarfAddressSpace: 0)
-!71 = !DICompositeType(tag: DW_TAG_structure_type, name: "Copied<core::slice::iter::Iter<u8>>", scope: !50, file: !15, size: 128, align: 64, elements: !72, templateParams: !92, identifier: "817813a15c997cde7be698c91567f656")
+!71 = !DICompositeType(tag: DW_TAG_structure_type, name: "Copied<core::slice::iter::Iter<u8>>", scope: !50, file: !15, size: 128, align: 64, elements: !72, templateParams: !92, identifier: "51f2e8f3856020fb263c0175b630d500")
 !72 = !{!73}
 !73 = !DIDerivedType(tag: DW_TAG_member, name: "it", scope: !71, file: !15, baseType: !74, size: 128, align: 64)
-!74 = !DICompositeType(tag: DW_TAG_structure_type, name: "Iter<u8>", scope: !75, file: !15, size: 128, align: 64, elements: !77, templateParams: !63, identifier: "23684d47cc0ceaab435dbd0c8abda15e")
+!74 = !DICompositeType(tag: DW_TAG_structure_type, name: "Iter<u8>", scope: !75, file: !15, size: 128, align: 64, elements: !77, templateParams: !63, identifier: "4574c6f4bf9a3b33eed67aef4235f42b")
 !75 = !DINamespace(name: "iter", scope: !76)
 !76 = !DINamespace(name: "slice", scope: !18)
 !77 = !{!78, !85, !86}
 !78 = !DIDerivedType(tag: DW_TAG_member, name: "ptr", scope: !74, file: !15, baseType: !79, size: 64, align: 64)
-!79 = !DICompositeType(tag: DW_TAG_structure_type, name: "NonNull<u8>", scope: !80, file: !15, size: 64, align: 64, elements: !82, templateParams: !63, identifier: "615429c9f980aa9c81dd21d4637ac526")
+!79 = !DICompositeType(tag: DW_TAG_structure_type, name: "NonNull<u8>", scope: !80, file: !15, size: 64, align: 64, elements: !82, templateParams: !63, identifier: "b7bfaee6714dab736e3fc06315db2e3a")
 !80 = !DINamespace(name: "non_null", scope: !81)
 !81 = !DINamespace(name: "ptr", scope: !18)
 !82 = !{!83}
@@ -1384,7 +1382,7 @@ attributes #8 = { noreturn nounwind }
 !84 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const u8", baseType: !4, size: 64, align: 64, dwarfAddressSpace: 0)
 !85 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !74, file: !15, baseType: !84, size: 64, align: 64, offset: 64)
 !86 = !DIDerivedType(tag: DW_TAG_member, name: "_marker", scope: !74, file: !15, baseType: !87, align: 8)
-!87 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<&u8>", scope: !88, file: !15, align: 8, elements: !62, templateParams: !89, identifier: "3051d3ccdfb4906ad1bc1a1818b0f8c8")
+!87 = !DICompositeType(tag: DW_TAG_structure_type, name: "PhantomData<&u8>", scope: !88, file: !15, align: 8, elements: !62, templateParams: !89, identifier: "bcbcd271163e81227be4cb3703e05050")
 !88 = !DINamespace(name: "marker", scope: !18)
 !89 = !{!90}
 !90 = !DITemplateTypeParameter(name: "T", type: !91)
@@ -1397,33 +1395,33 @@ attributes #8 = { noreturn nounwind }
 !97 = !DILocation(line: 47, column: 13, scope: !47)
 !98 = !DILocation(line: 48, column: 9, scope: !47)
 !99 = !DILocation(line: 49, column: 6, scope: !47)
-!100 = distinct !DISubprogram(name: "is_aligned_and_not_null<vga::ScreenChar>", linkageName: "_ZN4core10intrinsics23is_aligned_and_not_null17hba34dbe03ffee658E", scope: !102, file: !101, line: 2536, type: !103, scopeLine: 2536, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !114)
-!101 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/intrinsics.rs", directory: "", checksumkind: CSK_MD5, checksum: "828a1b4d689988a3236fbcb09678e111")
+!100 = distinct !DISubprogram(name: "is_aligned_and_not_null<vga::ScreenChar>", linkageName: "_ZN4core10intrinsics23is_aligned_and_not_null17h335c814262d45cccE", scope: !102, file: !101, line: 2537, type: !103, scopeLine: 2537, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !114)
+!101 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/intrinsics.rs", directory: "", checksumkind: CSK_MD5, checksum: "056d7d4c1b797c272c70fdc2c35793d9")
 !102 = !DINamespace(name: "intrinsics", scope: !18)
 !103 = !DISubroutineType(types: !104)
 !104 = !{!105, !106}
 !105 = !DIBasicType(name: "bool", size: 8, encoding: DW_ATE_boolean)
 !106 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const vga::ScreenChar", baseType: !107, size: 64, align: 64, dwarfAddressSpace: 0)
-!107 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScreenChar", scope: !2, file: !15, size: 16, align: 8, elements: !108, templateParams: !62, identifier: "802c1f988044dbc1a9d73823e0bfe966")
+!107 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScreenChar", scope: !2, file: !15, size: 16, align: 8, elements: !108, templateParams: !62, identifier: "e6bb63aa86f93414bbc648bc8d13cf00")
 !108 = !{!109, !110}
 !109 = !DIDerivedType(tag: DW_TAG_member, name: "char", scope: !107, file: !15, baseType: !4, size: 8, align: 8)
 !110 = !DIDerivedType(tag: DW_TAG_member, name: "color_code", scope: !107, file: !15, baseType: !111, size: 8, align: 8, offset: 8)
-!111 = !DICompositeType(tag: DW_TAG_structure_type, name: "ColorCode", scope: !2, file: !15, size: 8, align: 8, elements: !112, templateParams: !62, identifier: "6eb125df015b80203cbc5acebadf697")
+!111 = !DICompositeType(tag: DW_TAG_structure_type, name: "ColorCode", scope: !2, file: !15, size: 8, align: 8, elements: !112, templateParams: !62, identifier: "52a3b1fbcbeed20ebe5a3e9c40d1066c")
 !112 = !{!113}
 !113 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !111, file: !15, baseType: !4, size: 8, align: 8)
 !114 = !{!115}
-!115 = !DILocalVariable(name: "ptr", arg: 1, scope: !100, file: !101, line: 2536, type: !106)
+!115 = !DILocalVariable(name: "ptr", arg: 1, scope: !100, file: !101, line: 2537, type: !106)
 !116 = !{!117}
 !117 = !DITemplateTypeParameter(name: "T", type: !107)
-!118 = !DILocation(line: 2536, column: 42, scope: !100)
-!119 = !DILocation(line: 2537, column: 6, scope: !100)
-!120 = !DILocation(line: 2537, column: 5, scope: !100)
-!121 = !DILocation(line: 2537, column: 23, scope: !100)
-!122 = !DILocation(line: 2538, column: 2, scope: !100)
+!118 = !DILocation(line: 2537, column: 42, scope: !100)
+!119 = !DILocation(line: 2538, column: 6, scope: !100)
+!120 = !DILocation(line: 2538, column: 5, scope: !100)
+!121 = !DILocation(line: 2538, column: 23, scope: !100)
+!122 = !DILocation(line: 2539, column: 2, scope: !100)
 !123 = !{i8 0, i8 2}
-!124 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17hb408908830e78d4fE", scope: !126, file: !125, line: 297, type: !251, scopeLine: 297, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !253)
-!125 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "ef87442911d64d819773d1c3d54b7ba2")
-!126 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !17, file: !15, size: 384, align: 64, elements: !127, templateParams: !62, identifier: "84f4de322c722d4ecf7f26fdd881a12a")
+!124 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17hcb39c3984342b7ebE", scope: !126, file: !125, line: 297, type: !251, scopeLine: 297, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !253, retainedNodes: !254)
+!125 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "1a732c99c57cb2d76a548fb6f43c5e00")
+!126 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !17, file: !15, size: 384, align: 64, elements: !127, templateParams: !62, identifier: "dec2eb544c6d114a1729e13a7474f40")
 !127 = !{!128, !140, !184}
 !128 = !DIDerivedType(tag: DW_TAG_member, name: "pieces", scope: !126, file: !15, baseType: !129, size: 128, align: 64)
 !129 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[&str]", file: !15, size: 128, align: 64, elements: !130, templateParams: !62, identifier: "d76b83877ddcb5cca61caf6bdca727ac")
@@ -1438,19 +1436,19 @@ attributes #8 = { noreturn nounwind }
 !138 = !DIBasicType(name: "usize", size: 64, encoding: DW_ATE_unsigned)
 !139 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !129, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
 !140 = !DIDerivedType(tag: DW_TAG_member, name: "fmt", scope: !126, file: !15, baseType: !141, size: 128, align: 64, offset: 256)
-!141 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::Placeholder]>", scope: !56, file: !15, size: 128, align: 64, elements: !142, templateParams: !62, identifier: "45e7676749e8833fc9f6788a752fa233")
+!141 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::Placeholder]>", scope: !56, file: !15, size: 128, align: 64, elements: !142, templateParams: !62, identifier: "e23d17d3304655e6750a0ab2d9edac39")
 !142 = !{!143}
-!143 = !DICompositeType(tag: DW_TAG_variant_part, scope: !141, file: !15, size: 128, align: 64, elements: !144, templateParams: !62, identifier: "78fc5675d20b0b054937c9b243721b04", discriminator: !183)
+!143 = !DICompositeType(tag: DW_TAG_variant_part, scope: !141, file: !15, size: 128, align: 64, elements: !144, templateParams: !62, identifier: "bfd27e88b87b0ba5cd311f4e2a12036c", discriminator: !183)
 !144 = !{!145, !179}
 !145 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !143, file: !15, baseType: !146, size: 128, align: 64, extraData: i64 0)
-!146 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !141, file: !15, size: 128, align: 64, elements: !62, templateParams: !147, identifier: "7d6e0642c5fd326d5dedec8db5f1b626")
+!146 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !141, file: !15, size: 128, align: 64, elements: !62, templateParams: !147, identifier: "5aee93d5724874e8d5fc1e09008d60ef")
 !147 = !{!148}
 !148 = !DITemplateTypeParameter(name: "T", type: !149)
-!149 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Placeholder]", file: !15, size: 128, align: 64, elements: !150, templateParams: !62, identifier: "2bdd0a1d249b9615818490cbe02637d0")
+!149 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Placeholder]", file: !15, size: 128, align: 64, elements: !150, templateParams: !62, identifier: "5c2bff1ce87945dcf46beabe124a8ecc")
 !150 = !{!151, !178}
 !151 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !149, file: !15, baseType: !152, size: 64, align: 64)
 !152 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !153, size: 64, align: 64, dwarfAddressSpace: 0)
-!153 = !DICompositeType(tag: DW_TAG_structure_type, name: "Placeholder", scope: !16, file: !15, size: 448, align: 64, elements: !154, templateParams: !62, identifier: "60d1cd8e27ed5e572e6b6b32ddcefdd4")
+!153 = !DICompositeType(tag: DW_TAG_structure_type, name: "Placeholder", scope: !16, file: !15, size: 448, align: 64, elements: !154, templateParams: !62, identifier: "131f69b9dc640c7b405d0c75880ec09c")
 !154 = !{!155, !156, !158, !159, !161, !177}
 !155 = !DIDerivedType(tag: DW_TAG_member, name: "position", scope: !153, file: !15, baseType: !138, size: 64, align: 64, offset: 256)
 !156 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !153, file: !15, baseType: !157, size: 32, align: 32, offset: 320)
@@ -1459,89 +1457,89 @@ attributes #8 = { noreturn nounwind }
 !159 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !153, file: !15, baseType: !160, size: 32, align: 32, offset: 352)
 !160 = !DIBasicType(name: "u32", size: 32, encoding: DW_ATE_unsigned)
 !161 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !153, file: !15, baseType: !162, size: 128, align: 64)
-!162 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !16, file: !15, size: 128, align: 64, elements: !163, templateParams: !62, identifier: "8e436bf796d1bd1040afe66a54932e93")
+!162 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !16, file: !15, size: 128, align: 64, elements: !163, templateParams: !62, identifier: "de49f2e711729c26a3183f82a67e820b")
 !163 = !{!164}
-!164 = !DICompositeType(tag: DW_TAG_variant_part, scope: !162, file: !15, size: 128, align: 64, elements: !165, templateParams: !62, identifier: "a16b1bf0ef6abe7338d550f54b3197c9", discriminator: !176)
+!164 = !DICompositeType(tag: DW_TAG_variant_part, scope: !162, file: !15, size: 128, align: 64, elements: !165, templateParams: !62, identifier: "f8aee855d501562836c2bde1eded98b", discriminator: !176)
 !165 = !{!166, !170, !174}
 !166 = !DIDerivedType(tag: DW_TAG_member, name: "Is", scope: !164, file: !15, baseType: !167, size: 128, align: 64, extraData: i64 0)
-!167 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !162, file: !15, size: 128, align: 64, elements: !168, templateParams: !62, identifier: "bb2788de63ecf655614eae44833a9683")
+!167 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !162, file: !15, size: 128, align: 64, elements: !168, templateParams: !62, identifier: "ddb8199c8dc12775d50d3067915f0ee1")
 !168 = !{!169}
 !169 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !167, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
 !170 = !DIDerivedType(tag: DW_TAG_member, name: "Param", scope: !164, file: !15, baseType: !171, size: 128, align: 64, extraData: i64 1)
-!171 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !162, file: !15, size: 128, align: 64, elements: !172, templateParams: !62, identifier: "45b8dfec94a90db1ad28af7e19954195")
+!171 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !162, file: !15, size: 128, align: 64, elements: !172, templateParams: !62, identifier: "a474205d0b1ebc8668aca1dd185e6dd8")
 !172 = !{!173}
 !173 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !171, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
 !174 = !DIDerivedType(tag: DW_TAG_member, name: "Implied", scope: !164, file: !15, baseType: !175, size: 128, align: 64, extraData: i64 2)
-!175 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !162, file: !15, size: 128, align: 64, elements: !62, identifier: "b2dd58a70f39c2d6f76f6e2aef3afc0e")
+!175 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !162, file: !15, size: 128, align: 64, elements: !62, identifier: "78259875ca0457d6d843b6907f3ee2cd")
 !176 = !DIDerivedType(tag: DW_TAG_member, scope: !162, file: !15, baseType: !7, size: 64, align: 64, flags: DIFlagArtificial)
 !177 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !153, file: !15, baseType: !162, size: 128, align: 64, offset: 128)
 !178 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !149, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
 !179 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !143, file: !15, baseType: !180, size: 128, align: 64)
-!180 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !141, file: !15, size: 128, align: 64, elements: !181, templateParams: !147, identifier: "17825c15133f27503bca321877d808b")
+!180 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !141, file: !15, size: 128, align: 64, elements: !181, templateParams: !147, identifier: "651380f2d7c231ae75361478798df683")
 !181 = !{!182}
 !182 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !180, file: !15, baseType: !149, size: 128, align: 64)
 !183 = !DIDerivedType(tag: DW_TAG_member, scope: !141, file: !15, baseType: !7, size: 64, align: 64, flags: DIFlagArtificial)
 !184 = !DIDerivedType(tag: DW_TAG_member, name: "args", scope: !126, file: !15, baseType: !185, size: 128, align: 64, offset: 128)
-!185 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Argument]", file: !15, size: 128, align: 64, elements: !186, templateParams: !62, identifier: "b8c00ffcd99aa185b2b067e76efe6873")
+!185 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Argument]", file: !15, size: 128, align: 64, elements: !186, templateParams: !62, identifier: "7aaa4600b8b1bb5ceecb4befe265d8a8")
 !186 = !{!187, !250}
 !187 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !185, file: !15, baseType: !188, size: 64, align: 64)
 !188 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !189, size: 64, align: 64, dwarfAddressSpace: 0)
-!189 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !16, file: !15, size: 128, align: 64, elements: !190, templateParams: !62, identifier: "92df9959c1cdfbcdd7133c99bcf5419")
+!189 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !16, file: !15, size: 128, align: 64, elements: !190, templateParams: !62, identifier: "1715f8ca39c24c1465154510b099d5db")
 !190 = !{!191, !195}
 !191 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !189, file: !15, baseType: !192, size: 64, align: 64)
 !192 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::fmt::rt::{extern#0}::Opaque", baseType: !193, size: 64, align: 64, dwarfAddressSpace: 0)
-!193 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !194, file: !15, align: 8, elements: !62, identifier: "9b221ef387fa4c24dae3649531e7392e")
+!193 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !194, file: !15, align: 8, elements: !62, identifier: "b53b9c37284ad14843698905c0a781ef")
 !194 = !DINamespace(name: "{extern#0}", scope: !16)
 !195 = !DIDerivedType(tag: DW_TAG_member, name: "formatter", scope: !189, file: !15, baseType: !196, size: 64, align: 64, offset: 64)
 !196 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "fn(&core::fmt::rt::{extern#0}::Opaque, &mut core::fmt::Formatter) -> core::result::Result<(), core::fmt::Error>", baseType: !197, size: 64, align: 64, dwarfAddressSpace: 0)
 !197 = !DISubroutineType(types: !198)
 !198 = !{!199, !192, !218}
-!199 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !200, file: !15, size: 8, align: 8, elements: !201, templateParams: !62, identifier: "c7c3ce2bbdc31e3d58704c1a88c0824e")
+!199 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !200, file: !15, size: 8, align: 8, elements: !201, templateParams: !62, identifier: "22c75a34514fa785fe8d5e5737b404a")
 !200 = !DINamespace(name: "result", scope: !18)
 !201 = !{!202}
-!202 = !DICompositeType(tag: DW_TAG_variant_part, scope: !199, file: !15, size: 8, align: 8, elements: !203, templateParams: !62, identifier: "74931662ea2e848975e6c7d35e314c42", discriminator: !217)
+!202 = !DICompositeType(tag: DW_TAG_variant_part, scope: !199, file: !15, size: 8, align: 8, elements: !203, templateParams: !62, identifier: "318b8b14c370a5a4f50890e5a30a4497", discriminator: !217)
 !203 = !{!204, !213}
 !204 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !202, file: !15, baseType: !205, size: 8, align: 8, extraData: i64 0)
-!205 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !199, file: !15, size: 8, align: 8, elements: !206, templateParams: !209, identifier: "d91e207f895b5ed21304fa16506e0f28")
+!205 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !199, file: !15, size: 8, align: 8, elements: !206, templateParams: !209, identifier: "5b323728d71ad8b54f91e8647fb6c225")
 !206 = !{!207}
 !207 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !205, file: !15, baseType: !208, align: 8, offset: 8)
 !208 = !DIBasicType(name: "()", encoding: DW_ATE_unsigned)
 !209 = !{!210, !211}
 !210 = !DITemplateTypeParameter(name: "T", type: !208)
 !211 = !DITemplateTypeParameter(name: "E", type: !212)
-!212 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !17, file: !15, align: 8, elements: !62, identifier: "e283c74b9cbd588272e9778de24cf5a7")
+!212 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !17, file: !15, align: 8, elements: !62, identifier: "fc30e04e843f09017d3a1f431d2f6e0c")
 !213 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !202, file: !15, baseType: !214, size: 8, align: 8, extraData: i64 1)
-!214 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !199, file: !15, size: 8, align: 8, elements: !215, templateParams: !209, identifier: "d8a7c61bfdd1bc42e5e7ca612a3d7525")
+!214 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !199, file: !15, size: 8, align: 8, elements: !215, templateParams: !209, identifier: "a4826728ee7be77ec8568eb24e01c72")
 !215 = !{!216}
 !216 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !214, file: !15, baseType: !212, align: 8, offset: 8)
 !217 = !DIDerivedType(tag: DW_TAG_member, scope: !199, file: !15, baseType: !4, size: 8, align: 8, flags: DIFlagArtificial)
 !218 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::fmt::Formatter", baseType: !219, size: 64, align: 64, dwarfAddressSpace: 0)
-!219 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !17, file: !15, size: 512, align: 64, elements: !220, templateParams: !62, identifier: "bc7f0caae71140a04b17743f5a695b51")
+!219 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !17, file: !15, size: 512, align: 64, elements: !220, templateParams: !62, identifier: "a84a5bdbf0499ca1d68196c4b862c039")
 !220 = !{!221, !222, !223, !224, !238, !239}
 !221 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !219, file: !15, baseType: !160, size: 32, align: 32, offset: 416)
 !222 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !219, file: !15, baseType: !157, size: 32, align: 32, offset: 384)
 !223 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !219, file: !15, baseType: !14, size: 8, align: 8, offset: 448)
 !224 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !219, file: !15, baseType: !225, size: 128, align: 64)
-!225 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !56, file: !15, size: 128, align: 64, elements: !226, templateParams: !62, identifier: "8ea6b5cb0daf623655668c8afb3a46")
+!225 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !56, file: !15, size: 128, align: 64, elements: !226, templateParams: !62, identifier: "9ff7c8d78ada7de0ac9d763d1c46855f")
 !226 = !{!227}
-!227 = !DICompositeType(tag: DW_TAG_variant_part, scope: !225, file: !15, size: 128, align: 64, elements: !228, templateParams: !62, identifier: "7e31bac4b704be2591b521f49ce53126", discriminator: !237)
+!227 = !DICompositeType(tag: DW_TAG_variant_part, scope: !225, file: !15, size: 128, align: 64, elements: !228, templateParams: !62, identifier: "4121c4c375fd14965cbbd4a52ee80751", discriminator: !237)
 !228 = !{!229, !233}
 !229 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !227, file: !15, baseType: !230, size: 128, align: 64, extraData: i64 0)
-!230 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !225, file: !15, size: 128, align: 64, elements: !62, templateParams: !231, identifier: "728f4cb196695ca2ab2ce43263435122")
+!230 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !225, file: !15, size: 128, align: 64, elements: !62, templateParams: !231, identifier: "2820df4bdcb3911085cbffae781ae71")
 !231 = !{!232}
 !232 = !DITemplateTypeParameter(name: "T", type: !138)
 !233 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !227, file: !15, baseType: !234, size: 128, align: 64, extraData: i64 1)
-!234 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !225, file: !15, size: 128, align: 64, elements: !235, templateParams: !231, identifier: "2b2f9f3a1d6e4246fb431560905aff2f")
+!234 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !225, file: !15, size: 128, align: 64, elements: !235, templateParams: !231, identifier: "3de76324e4613a017cfb22686952e8ce")
 !235 = !{!236}
 !236 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !234, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
 !237 = !DIDerivedType(tag: DW_TAG_member, scope: !225, file: !15, baseType: !7, size: 64, align: 64, flags: DIFlagArtificial)
 !238 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !219, file: !15, baseType: !225, size: 128, align: 64, offset: 128)
 !239 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !219, file: !15, baseType: !240, size: 128, align: 64, offset: 256)
-!240 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !15, size: 128, align: 64, elements: !241, templateParams: !62, identifier: "2cf87fbd87715f36bd216baa1303cbf0")
+!240 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !15, size: 128, align: 64, elements: !241, templateParams: !62, identifier: "841e47680ccca04665b2034bf5815694")
 !241 = !{!242, !245}
 !242 = !DIDerivedType(tag: DW_TAG_member, name: "pointer", scope: !240, file: !15, baseType: !243, size: 64, align: 64)
 !243 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !244, size: 64, align: 64, dwarfAddressSpace: 0)
-!244 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !15, align: 8, elements: !62, identifier: "a80c365aa420df7c35abe384a2fa122f")
+!244 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !15, align: 8, elements: !62, identifier: "d63695003f7c60186849daf2e0ab45a2")
 !245 = !DIDerivedType(tag: DW_TAG_member, name: "vtable", scope: !240, file: !15, baseType: !246, size: 64, align: 64, offset: 64)
 !246 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&[usize; 3]", baseType: !247, size: 64, align: 64, dwarfAddressSpace: 0)
 !247 = !DICompositeType(tag: DW_TAG_array_type, baseType: !138, size: 192, align: 64, elements: !248)
@@ -1550,548 +1548,570 @@ attributes #8 = { noreturn nounwind }
 !250 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !185, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
 !251 = !DISubroutineType(types: !252)
 !252 = !{!126, !129}
-!253 = !{!254}
-!254 = !DILocalVariable(name: "pieces", arg: 1, scope: !124, file: !125, line: 297, type: !129)
-!255 = !DILocation(line: 297, column: 28, scope: !124)
-!256 = !DILocation(line: 298, column: 12, scope: !124)
-!257 = !DILocation(line: 301, column: 34, scope: !124)
-!258 = !DILocation(line: 301, column: 9, scope: !124)
-!259 = !{i64 8}
-!260 = !DILocation(line: 302, column: 6, scope: !124)
-!261 = !DILocation(line: 299, column: 13, scope: !124)
-!262 = distinct !DISubprogram(name: "write_volatile<vga::ScreenChar>", linkageName: "_ZN4core3ptr14write_volatile17h34b638abb9ecb3b0E", scope: !81, file: !263, line: 1601, type: !264, scopeLine: 1601, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !267)
-!263 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "d71cbcc5c5af3689983c051fcd9aec72")
-!264 = !DISubroutineType(types: !265)
-!265 = !{null, !266, !107}
-!266 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut vga::ScreenChar", baseType: !107, size: 64, align: 64, dwarfAddressSpace: 0)
-!267 = !{!268, !269}
-!268 = !DILocalVariable(name: "dst", arg: 1, scope: !262, file: !263, line: 1601, type: !266)
-!269 = !DILocalVariable(name: "src", arg: 2, scope: !262, file: !263, line: 1601, type: !107)
-!270 = !DILocation(line: 1601, column: 33, scope: !262)
-!271 = !DILocation(line: 1601, column: 46, scope: !262)
-!272 = !DILocation(line: 1604, column: 9, scope: !262)
-!273 = !DILocation(line: 1608, column: 9, scope: !262)
-!274 = !DILocation(line: 1610, column: 2, scope: !262)
-!275 = !DILocalVariable(name: "dst", arg: 1, scope: !276, file: !101, line: 2517, type: !266)
-!276 = distinct !DISubprogram(name: "runtime<vga::ScreenChar>", linkageName: "_ZN4core3ptr14write_volatile7runtime17h7781ef2b5298c073E", scope: !277, file: !101, line: 2517, type: !278, scopeLine: 2517, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !280)
-!277 = !DINamespace(name: "write_volatile", scope: !81)
-!278 = !DISubroutineType(types: !279)
-!279 = !{null, !266}
-!280 = !{!275}
-!281 = !DILocation(line: 2517, column: 39, scope: !276, inlinedAt: !282)
-!282 = distinct !DILocation(line: 1604, column: 9, scope: !262)
-!283 = !DILocation(line: 1606, column: 33, scope: !284, inlinedAt: !282)
-!284 = !DILexicalBlockFile(scope: !276, file: !263, discriminator: 0)
-!285 = !DILocation(line: 2518, column: 20, scope: !276, inlinedAt: !282)
-!286 = !DILocation(line: 2520, column: 21, scope: !276, inlinedAt: !282)
-!287 = distinct !DISubprogram(name: "is_aligned<vga::ScreenChar>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h1137fba6400fea0eE", scope: !289, file: !288, line: 1456, type: !103, scopeLine: 1456, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !291)
-!288 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "3038863dc20b91ad4f69036221337420")
-!289 = !DINamespace(name: "{impl#0}", scope: !290)
-!290 = !DINamespace(name: "const_ptr", scope: !81)
-!291 = !{!292}
-!292 = !DILocalVariable(name: "self", arg: 1, scope: !287, file: !288, line: 1456, type: !106)
-!293 = !DILocation(line: 1456, column: 29, scope: !287)
-!294 = !DILocation(line: 1460, column: 9, scope: !287)
-!295 = !DILocation(line: 1461, column: 6, scope: !287)
-!296 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17h42a0be6d32d713f8E", scope: !297, file: !288, line: 1578, type: !298, scopeLine: 1578, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !301)
-!297 = !DINamespace(name: "is_aligned_to", scope: !289)
-!298 = !DISubroutineType(types: !299)
-!299 = !{!105, !300, !138}
-!300 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const ()", baseType: !208, size: 64, align: 64, dwarfAddressSpace: 0)
-!301 = !{!302, !303}
-!302 = !DILocalVariable(name: "ptr", arg: 1, scope: !296, file: !288, line: 1578, type: !300)
-!303 = !DILocalVariable(name: "align", arg: 2, scope: !296, file: !288, line: 1578, type: !138)
-!304 = !DILocation(line: 1578, column: 25, scope: !296)
-!305 = !DILocation(line: 1578, column: 41, scope: !296)
-!306 = !DILocalVariable(name: "self", arg: 1, scope: !307, file: !288, line: 203, type: !300)
-!307 = distinct !DISubprogram(name: "addr<()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17ha0400aeee1adb84aE", scope: !289, file: !288, line: 203, type: !308, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !311, retainedNodes: !310)
-!308 = !DISubroutineType(types: !309)
-!309 = !{!138, !300}
-!310 = !{!306}
-!311 = !{!210}
-!312 = !DILocation(line: 203, column: 17, scope: !307, inlinedAt: !313)
-!313 = distinct !DILocation(line: 1579, column: 13, scope: !296)
-!314 = !DILocalVariable(name: "self", arg: 1, scope: !315, file: !288, line: 58, type: !300)
-!315 = distinct !DISubprogram(name: "cast<(), ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h3e04f6385dceea90E", scope: !289, file: !288, line: 58, type: !316, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !319, retainedNodes: !318)
-!316 = !DISubroutineType(types: !317)
-!317 = !{!300, !300}
-!318 = !{!314}
-!319 = !{!210, !320}
-!320 = !DITemplateTypeParameter(name: "U", type: !208)
-!321 = !DILocation(line: 58, column: 26, scope: !315, inlinedAt: !322)
-!322 = distinct !DILocation(line: 207, column: 33, scope: !307, inlinedAt: !313)
-!323 = !DILocation(line: 207, column: 18, scope: !307, inlinedAt: !313)
-!324 = !DILocation(line: 1579, column: 26, scope: !296)
-!325 = !DILocation(line: 1579, column: 13, scope: !296)
-!326 = !DILocation(line: 1580, column: 10, scope: !296)
-!327 = distinct !DISubprogram(name: "is_aligned_to<vga::ScreenChar>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17hdba51d8128ed31a1E", scope: !289, file: !288, line: 1572, type: !328, scopeLine: 1572, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !330)
-!328 = !DISubroutineType(types: !329)
-!329 = !{!105, !106, !138}
-!330 = !{!331, !332}
-!331 = !DILocalVariable(name: "self", arg: 1, scope: !327, file: !288, line: 1572, type: !106)
-!332 = !DILocalVariable(name: "align", arg: 2, scope: !327, file: !288, line: 1572, type: !138)
-!333 = !DILocation(line: 1572, column: 32, scope: !327)
-!334 = !DILocation(line: 1572, column: 38, scope: !327)
-!335 = !DILocalVariable(name: "self", arg: 1, scope: !336, file: !337, line: 2169, type: !138)
-!336 = distinct !DISubprogram(name: "is_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$15is_power_of_two17h374bc65ef5b20efaE", scope: !338, file: !337, line: 2169, type: !340, scopeLine: 2169, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !342)
-!337 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "9f9a8c2611080e433b531f707b01187e")
-!338 = !DINamespace(name: "{impl#11}", scope: !339)
-!339 = !DINamespace(name: "num", scope: !18)
-!340 = !DISubroutineType(types: !341)
-!341 = !{!105, !138}
-!342 = !{!335}
-!343 = !DILocation(line: 2169, column: 38, scope: !336, inlinedAt: !344)
-!344 = distinct !DILocation(line: 1573, column: 13, scope: !327)
-!345 = !DILocalVariable(name: "self", arg: 1, scope: !346, file: !337, line: 106, type: !138)
-!346 = distinct !DISubprogram(name: "count_ones", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$10count_ones17h41ac490f95dce1abE", scope: !338, file: !337, line: 106, type: !347, scopeLine: 106, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !349)
-!347 = !DISubroutineType(types: !348)
-!348 = !{!160, !138}
-!349 = !{!345}
-!350 = !DILocation(line: 106, column: 33, scope: !346, inlinedAt: !351)
-!351 = distinct !DILocation(line: 2170, column: 13, scope: !336, inlinedAt: !344)
-!352 = !DILocation(line: 107, column: 13, scope: !346, inlinedAt: !351)
-!353 = !DILocation(line: 2170, column: 13, scope: !336, inlinedAt: !344)
-!354 = !DILocation(line: 1573, column: 12, scope: !327)
-!355 = !DILocalVariable(name: "self", arg: 1, scope: !356, file: !288, line: 58, type: !106)
-!356 = distinct !DISubprogram(name: "cast<vga::ScreenChar, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h5a0a77aa018646aeE", scope: !289, file: !288, line: 58, type: !357, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !360, retainedNodes: !359)
-!357 = !DISubroutineType(types: !358)
-!358 = !{!300, !106}
-!359 = !{!355}
-!360 = !{!117, !320}
-!361 = !DILocation(line: 58, column: 26, scope: !356, inlinedAt: !362)
-!362 = distinct !DILocation(line: 1592, column: 37, scope: !327)
-!363 = !DILocation(line: 1592, column: 36, scope: !327)
-!364 = !DILocation(line: 1592, column: 18, scope: !327)
-!365 = !DILocation(line: 1593, column: 6, scope: !327)
-!366 = !DILocation(line: 1574, column: 13, scope: !327)
-!367 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17h7967f0448d4c3147E", scope: !368, file: !288, line: 36, type: !369, scopeLine: 36, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !371)
-!368 = !DINamespace(name: "is_null", scope: !289)
-!369 = !DISubroutineType(types: !370)
-!370 = !{!105, !84}
-!371 = !{!372}
-!372 = !DILocalVariable(name: "ptr", arg: 1, scope: !367, file: !288, line: 36, type: !84)
-!373 = !DILocation(line: 36, column: 25, scope: !367)
-!374 = !DILocalVariable(name: "self", arg: 1, scope: !375, file: !288, line: 203, type: !84)
-!375 = distinct !DISubprogram(name: "addr<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17h001182066d8c4619E", scope: !289, file: !288, line: 203, type: !376, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !63, retainedNodes: !378)
-!376 = !DISubroutineType(types: !377)
-!377 = !{!138, !84}
-!378 = !{!374}
-!379 = !DILocation(line: 203, column: 17, scope: !375, inlinedAt: !380)
-!380 = distinct !DILocation(line: 37, column: 13, scope: !367)
-!381 = !DILocalVariable(name: "self", arg: 1, scope: !382, file: !288, line: 58, type: !84)
-!382 = distinct !DISubprogram(name: "cast<u8, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h3b25e73136e62f64E", scope: !289, file: !288, line: 58, type: !383, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !386, retainedNodes: !385)
-!383 = !DISubroutineType(types: !384)
-!384 = !{!300, !84}
-!385 = !{!381}
-!386 = !{!64, !320}
-!387 = !DILocation(line: 58, column: 26, scope: !382, inlinedAt: !388)
-!388 = distinct !DILocation(line: 207, column: 33, scope: !375, inlinedAt: !380)
-!389 = !DILocation(line: 207, column: 18, scope: !375, inlinedAt: !380)
-!390 = !DILocation(line: 37, column: 13, scope: !367)
-!391 = !DILocation(line: 38, column: 10, scope: !367)
-!392 = distinct !DISubprogram(name: "is_null<vga::ScreenChar>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17hd831bc0ab3d1834eE", scope: !289, file: !288, line: 34, type: !103, scopeLine: 34, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !393)
-!393 = !{!394}
-!394 = !DILocalVariable(name: "self", arg: 1, scope: !392, file: !288, line: 34, type: !106)
-!395 = !DILocation(line: 34, column: 26, scope: !392)
-!396 = !DILocation(line: 51, column: 36, scope: !392)
-!397 = !DILocation(line: 51, column: 18, scope: !392)
-!398 = !DILocation(line: 52, column: 6, scope: !392)
-!399 = distinct !DISubprogram(name: "bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17hc3d475c393657962E", scope: !401, file: !400, line: 856, type: !403, scopeLine: 856, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !409)
-!400 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "8f91e5aecc982717403f5cbdc23932fe")
-!401 = !DINamespace(name: "{impl#0}", scope: !402)
-!402 = !DINamespace(name: "str", scope: !18)
-!403 = !DISubroutineType(types: !404)
-!404 = !{!405, !133}
-!405 = !DICompositeType(tag: DW_TAG_structure_type, name: "Bytes", scope: !406, file: !15, size: 128, align: 64, elements: !407, templateParams: !62, identifier: "99ffaa4bca3c23c6d9671d2fd0e5f376")
-!406 = !DINamespace(name: "iter", scope: !402)
-!407 = !{!408}
-!408 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !405, file: !15, baseType: !71, size: 128, align: 64)
-!409 = !{!410}
-!410 = !DILocalVariable(name: "self", arg: 1, scope: !399, file: !400, line: 856, type: !133)
-!411 = !DILocation(line: 856, column: 18, scope: !399)
-!412 = !DILocalVariable(name: "self", arg: 1, scope: !413, file: !400, line: 324, type: !133)
-!413 = distinct !DISubprogram(name: "as_bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$8as_bytes17h4fe199bdf74d5d82E", scope: !401, file: !400, line: 324, type: !414, scopeLine: 324, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !420)
-!414 = !DISubroutineType(types: !415)
-!415 = !{!416, !133}
-!416 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[u8]", file: !15, size: 128, align: 64, elements: !417, templateParams: !62, identifier: "4f7d759e2003ffb713a77bd933fd0146")
-!417 = !{!418, !419}
-!418 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !416, file: !15, baseType: !136, size: 64, align: 64)
-!419 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !416, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
-!420 = !{!412}
-!421 = !DILocation(line: 324, column: 27, scope: !413, inlinedAt: !422)
-!422 = distinct !DILocation(line: 857, column: 15, scope: !399)
-!423 = !DILocation(line: 327, column: 6, scope: !413, inlinedAt: !422)
-!424 = !DILocation(line: 857, column: 15, scope: !399)
-!425 = !DILocation(line: 857, column: 9, scope: !399)
-!426 = !DILocation(line: 858, column: 6, scope: !399)
-!427 = distinct !DISubprogram(name: "copied<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN4core4iter6traits8iterator8Iterator6copied17h0687335476d8adceE", scope: !429, file: !428, line: 3310, type: !432, scopeLine: 3310, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !436, retainedNodes: !434)
-!428 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs", directory: "", checksumkind: CSK_MD5, checksum: "95e88b6c652e0490e905763009955c97")
-!429 = !DINamespace(name: "Iterator", scope: !430)
-!430 = !DINamespace(name: "iterator", scope: !431)
-!431 = !DINamespace(name: "traits", scope: !52)
-!432 = !DISubroutineType(types: !433)
-!433 = !{!71, !74}
-!434 = !{!435}
-!435 = !DILocalVariable(name: "self", arg: 1, scope: !427, file: !428, line: 3310, type: !74)
-!436 = !{!437, !64}
-!437 = !DITemplateTypeParameter(name: "Self", type: !74)
-!438 = !DILocation(line: 3310, column: 26, scope: !427)
-!439 = !DILocation(line: 3315, column: 9, scope: !427)
-!440 = !DILocation(line: 3316, column: 6, scope: !427)
-!441 = distinct !DISubprogram(name: "new<core::slice::iter::Iter<u8>>", linkageName: "_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h0862766ae7e7ea91E", scope: !71, file: !48, line: 26, type: !432, scopeLine: 26, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !92, retainedNodes: !442)
-!442 = !{!443}
-!443 = !DILocalVariable(name: "it", arg: 1, scope: !441, file: !48, line: 26, type: !74)
-!444 = !DILocation(line: 26, column: 32, scope: !441)
-!445 = !DILocation(line: 27, column: 9, scope: !441)
-!446 = !DILocation(line: 28, column: 6, scope: !441)
-!447 = distinct !DISubprogram(name: "copied<u8>", linkageName: "_ZN4core6option19Option$LT$$RF$T$GT$6copied17hb44c6c2efec68bd4E", scope: !449, file: !448, line: 1810, type: !460, scopeLine: 1810, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !63, retainedNodes: !462)
-!448 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs", directory: "", checksumkind: CSK_MD5, checksum: "6a7876186cbb9dd5ab8c859a9681e99e")
-!449 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&u8>", scope: !56, file: !15, size: 64, align: 64, elements: !450, templateParams: !62, identifier: "7f79abd0e8e453efecb3a5705a890e4b")
-!450 = !{!451}
-!451 = !DICompositeType(tag: DW_TAG_variant_part, scope: !449, file: !15, size: 64, align: 64, elements: !452, templateParams: !62, identifier: "8405789f24f85d513bc5345766c6be4", discriminator: !459)
-!452 = !{!453, !455}
-!453 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !451, file: !15, baseType: !454, size: 64, align: 64, extraData: i64 0)
-!454 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !449, file: !15, size: 64, align: 64, elements: !62, templateParams: !89, identifier: "e63c080f871b4cfa4447c6078c683ea8")
-!455 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !451, file: !15, baseType: !456, size: 64, align: 64)
-!456 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !449, file: !15, size: 64, align: 64, elements: !457, templateParams: !89, identifier: "551ea0c79f5ade7df02a239be88136b7")
-!457 = !{!458}
-!458 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !456, file: !15, baseType: !91, size: 64, align: 64)
-!459 = !DIDerivedType(tag: DW_TAG_member, scope: !449, file: !15, baseType: !7, size: 64, align: 64, flags: DIFlagArtificial)
-!460 = !DISubroutineType(types: !461)
-!461 = !{!55, !449}
-!462 = !{!463, !464}
-!463 = !DILocalVariable(name: "self", arg: 1, scope: !447, file: !448, line: 1810, type: !449)
-!464 = !DILocalVariable(name: "v", scope: !465, file: !448, line: 1817, type: !4, align: 1)
-!465 = distinct !DILexicalBlock(scope: !447, file: !448, line: 1817, column: 13)
-!466 = !DILocation(line: 1810, column: 25, scope: !447)
-!467 = !DILocation(line: 1816, column: 15, scope: !447)
-!468 = !DILocation(line: 1816, column: 9, scope: !447)
-!469 = !DILocation(line: 1818, column: 21, scope: !447)
-!470 = !DILocation(line: 1817, column: 19, scope: !447)
-!471 = !{i64 1}
-!472 = !DILocation(line: 1817, column: 19, scope: !465)
-!473 = !DILocation(line: 1817, column: 25, scope: !465)
-!474 = !DILocation(line: 1817, column: 31, scope: !447)
-!475 = !DILocation(line: 1820, column: 6, scope: !447)
-!476 = distinct !DISubprogram(name: "into_iter<core::str::iter::Bytes>", linkageName: "_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17h26f324faf4aeee9bE", scope: !478, file: !477, line: 271, type: !480, scopeLine: 271, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !484, retainedNodes: !482)
-!477 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs", directory: "", checksumkind: CSK_MD5, checksum: "a39b82fc812ed30b3e6ebda5fbc56490")
-!478 = !DINamespace(name: "{impl#0}", scope: !479)
-!479 = !DINamespace(name: "collect", scope: !431)
-!480 = !DISubroutineType(types: !481)
-!481 = !{!405, !405}
-!482 = !{!483}
-!483 = !DILocalVariable(name: "self", arg: 1, scope: !476, file: !477, line: 271, type: !405)
-!484 = !{!485}
-!485 = !DITemplateTypeParameter(name: "I", type: !405)
-!486 = !DILocation(line: 271, column: 18, scope: !476)
-!487 = !DILocation(line: 273, column: 6, scope: !476)
-!488 = distinct !DISubprogram(name: "next", linkageName: "_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17h80f6a3191f76d9fbE", scope: !490, file: !489, line: 236, type: !491, scopeLine: 236, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !494)
-!489 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/iter.rs", directory: "", checksumkind: CSK_MD5, checksum: "09c36955e811d84967bcb5dbc290ce49")
-!490 = !DINamespace(name: "{impl#9}", scope: !406)
-!491 = !DISubroutineType(types: !492)
-!492 = !{!55, !493}
-!493 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::str::iter::Bytes", baseType: !405, size: 64, align: 64, dwarfAddressSpace: 0)
-!494 = !{!495}
-!495 = !DILocalVariable(name: "self", arg: 1, scope: !488, file: !489, line: 236, type: !493)
-!496 = !DILocation(line: 236, column: 13, scope: !488)
-!497 = !DILocation(line: 237, column: 9, scope: !488)
-!498 = !DILocation(line: 238, column: 6, scope: !488)
-!499 = distinct !DISubprogram(name: "new", linkageName: "_ZN3vga9ColorCode3new17hf4f7e3f32f034b96E", scope: !111, file: !3, line: 37, type: !500, scopeLine: 37, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !502)
-!500 = !DISubroutineType(types: !501)
-!501 = !{!111, !24, !24}
-!502 = !{!503, !504}
-!503 = !DILocalVariable(name: "fg", arg: 1, scope: !499, file: !3, line: 37, type: !24)
-!504 = !DILocalVariable(name: "bg", arg: 2, scope: !499, file: !3, line: 37, type: !24)
-!505 = !DILocation(line: 37, column: 12, scope: !499)
-!506 = !DILocation(line: 37, column: 23, scope: !499)
-!507 = !DILocation(line: 38, column: 19, scope: !499)
-!508 = !{i8 0, i8 16}
-!509 = !DILocation(line: 38, column: 37, scope: !499)
-!510 = !DILocation(line: 38, column: 9, scope: !499)
-!511 = !DILocation(line: 39, column: 6, scope: !499)
-!512 = distinct !DISubprogram(name: "new", linkageName: "_ZN3vga10ScreenChar3new17h02f2761e25923a6aE", scope: !107, file: !3, line: 50, type: !513, scopeLine: 50, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !515)
-!513 = !DISubroutineType(types: !514)
-!514 = !{!107, !4}
-!515 = !{!516}
-!516 = !DILocalVariable(name: "c", arg: 1, scope: !512, file: !3, line: 50, type: !4)
-!517 = !DILocation(line: 50, column: 12, scope: !512)
-!518 = !DILocation(line: 53, column: 40, scope: !512)
-!519 = !DILocation(line: 53, column: 55, scope: !512)
-!520 = !DILocation(line: 53, column: 25, scope: !512)
-!521 = !DILocation(line: 51, column: 9, scope: !512)
-!522 = !DILocation(line: 55, column: 6, scope: !512)
-!523 = distinct !DISubprogram(name: "inverse", linkageName: "_ZN3vga10ScreenChar7inverse17h083119e746eb0b26E", scope: !107, file: !3, line: 57, type: !513, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !524)
-!524 = !{!525}
-!525 = !DILocalVariable(name: "c", arg: 1, scope: !523, file: !3, line: 57, type: !4)
-!526 = !DILocation(line: 57, column: 16, scope: !523)
-!527 = !DILocation(line: 60, column: 40, scope: !523)
-!528 = !DILocation(line: 60, column: 55, scope: !523)
-!529 = !DILocation(line: 60, column: 25, scope: !523)
-!530 = !DILocation(line: 58, column: 9, scope: !523)
-!531 = !DILocation(line: 62, column: 6, scope: !523)
-!532 = distinct !DISubprogram(name: "x", linkageName: "_ZN3vga6Cursor1x17h14651252f035db8eE", scope: !533, file: !3, line: 92, type: !540, scopeLine: 92, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !543)
-!533 = !DICompositeType(tag: DW_TAG_structure_type, name: "Cursor", scope: !2, file: !15, size: 128, align: 64, elements: !534, templateParams: !62, identifier: "b9e1ac78c379d613a24da21c45684d50")
-!534 = !{!535}
-!535 = !DIDerivedType(tag: DW_TAG_member, name: "pos", scope: !533, file: !15, baseType: !536, size: 128, align: 64)
-!536 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dot", scope: !2, file: !15, size: 128, align: 64, elements: !537, templateParams: !62, identifier: "7ff22148d0b16863c4aa60ae0d000eaf")
-!537 = !{!538, !539}
-!538 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !536, file: !15, baseType: !138, size: 64, align: 64)
-!539 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !536, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
-!540 = !DISubroutineType(types: !541)
-!541 = !{!138, !542}
-!542 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&vga::Cursor", baseType: !533, size: 64, align: 64, dwarfAddressSpace: 0)
-!543 = !{!544}
-!544 = !DILocalVariable(name: "self", arg: 1, scope: !532, file: !3, line: 92, type: !542)
-!545 = !DILocation(line: 92, column: 10, scope: !532)
-!546 = !DILocation(line: 93, column: 9, scope: !532)
-!547 = !DILocation(line: 94, column: 6, scope: !532)
-!548 = distinct !DISubprogram(name: "y", linkageName: "_ZN3vga6Cursor1y17h539629400d73b731E", scope: !533, file: !3, line: 97, type: !540, scopeLine: 97, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !549)
-!549 = !{!550}
-!550 = !DILocalVariable(name: "self", arg: 1, scope: !548, file: !3, line: 97, type: !542)
-!551 = !DILocation(line: 97, column: 10, scope: !548)
-!552 = !DILocation(line: 98, column: 9, scope: !548)
-!553 = !DILocation(line: 99, column: 6, scope: !548)
-!554 = distinct !DISubprogram(name: "incr_x", linkageName: "_ZN3vga6Cursor6incr_x17h402e1c8ec0725199E", scope: !533, file: !3, line: 102, type: !555, scopeLine: 102, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !558)
-!555 = !DISubroutineType(types: !556)
-!556 = !{null, !557}
-!557 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Cursor", baseType: !533, size: 64, align: 64, dwarfAddressSpace: 0)
-!558 = !{!559}
-!559 = !DILocalVariable(name: "self", arg: 1, scope: !554, file: !3, line: 102, type: !557)
-!560 = !DILocation(line: 102, column: 15, scope: !554)
-!561 = !DILocation(line: 103, column: 9, scope: !554)
-!562 = !DILocation(line: 104, column: 6, scope: !554)
-!563 = distinct !DISubprogram(name: "width", linkageName: "_ZN3vga6Screen5width17hc635fb7a9c39244fE", scope: !564, file: !3, line: 145, type: !582, scopeLine: 145, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !585)
-!564 = !DICompositeType(tag: DW_TAG_structure_type, name: "Screen", scope: !2, file: !15, size: 1728, align: 64, elements: !565, templateParams: !62, identifier: "63a53f835d237cb8ebd6a5e966686d67")
-!565 = !{!566, !567, !568, !569, !580, !581}
-!566 = !DIDerivedType(tag: DW_TAG_member, name: "water_level", scope: !564, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
-!567 = !DIDerivedType(tag: DW_TAG_member, name: "cursor", scope: !564, file: !15, baseType: !533, size: 128, align: 64, offset: 128)
-!568 = !DIDerivedType(tag: DW_TAG_member, name: "origin", scope: !564, file: !15, baseType: !536, size: 128, align: 64, offset: 256)
-!569 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !564, file: !15, baseType: !570, size: 64, align: 64)
-!570 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Buffer", baseType: !571, size: 64, align: 64, dwarfAddressSpace: 0)
-!571 = !DICompositeType(tag: DW_TAG_structure_type, name: "Buffer", scope: !2, file: !15, size: 32000, align: 8, elements: !572, templateParams: !62, identifier: "ab546dd5a6a76b9ab28753c07b51723b")
-!572 = !{!573}
-!573 = !DIDerivedType(tag: DW_TAG_member, name: "chars", scope: !571, file: !15, baseType: !574, size: 32000, align: 8)
-!574 = !DICompositeType(tag: DW_TAG_array_type, baseType: !575, size: 32000, align: 8, elements: !578)
-!575 = !DICompositeType(tag: DW_TAG_array_type, baseType: !107, size: 1280, align: 8, elements: !576)
-!576 = !{!577}
-!577 = !DISubrange(count: 80, lowerBound: 0)
-!578 = !{!579}
-!579 = !DISubrange(count: 25, lowerBound: 0)
-!580 = !DIDerivedType(tag: DW_TAG_member, name: "tfd", scope: !564, file: !15, baseType: !42, size: 8, align: 8, offset: 1664)
-!581 = !DIDerivedType(tag: DW_TAG_member, name: "blank_row", scope: !564, file: !15, baseType: !575, size: 1280, align: 8, offset: 384)
-!582 = !DISubroutineType(types: !583)
-!583 = !{!138, !584}
-!584 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&vga::Screen", baseType: !564, size: 64, align: 64, dwarfAddressSpace: 0)
+!253 = !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17hcb39c3984342b7ebE", scope: !126, file: !125, line: 297, type: !251, scopeLine: 297, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!254 = !{!255}
+!255 = !DILocalVariable(name: "pieces", arg: 1, scope: !124, file: !125, line: 297, type: !129)
+!256 = !DILocation(line: 297, column: 28, scope: !124)
+!257 = !DILocation(line: 298, column: 12, scope: !124)
+!258 = !DILocation(line: 301, column: 34, scope: !124)
+!259 = !DILocation(line: 301, column: 9, scope: !124)
+!260 = !{i64 8}
+!261 = !DILocation(line: 302, column: 6, scope: !124)
+!262 = !DILocation(line: 299, column: 13, scope: !124)
+!263 = distinct !DISubprogram(name: "write_volatile<vga::ScreenChar>", linkageName: "_ZN4core3ptr14write_volatile17he7f5a5e45c64841eE", scope: !81, file: !264, line: 1609, type: !265, scopeLine: 1609, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !268)
+!264 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "2a4cb7b22a4db908cc4f5cfdc074e9b2")
+!265 = !DISubroutineType(types: !266)
+!266 = !{null, !267, !107}
+!267 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut vga::ScreenChar", baseType: !107, size: 64, align: 64, dwarfAddressSpace: 0)
+!268 = !{!269, !270}
+!269 = !DILocalVariable(name: "dst", arg: 1, scope: !263, file: !264, line: 1609, type: !267)
+!270 = !DILocalVariable(name: "src", arg: 2, scope: !263, file: !264, line: 1609, type: !107)
+!271 = !DILocation(line: 1609, column: 33, scope: !263)
+!272 = !DILocation(line: 1609, column: 46, scope: !263)
+!273 = !DILocation(line: 1612, column: 9, scope: !263)
+!274 = !DILocation(line: 1616, column: 9, scope: !263)
+!275 = !DILocation(line: 1618, column: 2, scope: !263)
+!276 = !DILocalVariable(name: "dst", arg: 1, scope: !277, file: !101, line: 2517, type: !267)
+!277 = distinct !DISubprogram(name: "runtime<vga::ScreenChar>", linkageName: "_ZN4core3ptr14write_volatile7runtime17hcabccec63ffe8b1fE", scope: !278, file: !101, line: 2517, type: !279, scopeLine: 2517, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !281)
+!278 = !DINamespace(name: "write_volatile", scope: !81)
+!279 = !DISubroutineType(types: !280)
+!280 = !{null, !267}
+!281 = !{!276}
+!282 = !DILocation(line: 2517, column: 39, scope: !277, inlinedAt: !283)
+!283 = distinct !DILocation(line: 1612, column: 9, scope: !263)
+!284 = !DILocation(line: 1614, column: 33, scope: !285, inlinedAt: !283)
+!285 = !DILexicalBlockFile(scope: !277, file: !264, discriminator: 0)
+!286 = !DILocation(line: 2518, column: 20, scope: !277, inlinedAt: !283)
+!287 = !DILocation(line: 2520, column: 21, scope: !277, inlinedAt: !283)
+!288 = distinct !DISubprogram(name: "is_aligned<vga::ScreenChar>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$10is_aligned17h13966cd1cf791582E", scope: !290, file: !289, line: 1456, type: !103, scopeLine: 1456, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !292)
+!289 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs", directory: "", checksumkind: CSK_MD5, checksum: "9d2fad04a90e20289542de49bd178aec")
+!290 = !DINamespace(name: "{impl#0}", scope: !291)
+!291 = !DINamespace(name: "const_ptr", scope: !81)
+!292 = !{!293}
+!293 = !DILocalVariable(name: "self", arg: 1, scope: !288, file: !289, line: 1456, type: !106)
+!294 = !DILocation(line: 1456, column: 29, scope: !288)
+!295 = !DILocation(line: 1460, column: 9, scope: !288)
+!296 = !DILocation(line: 1461, column: 6, scope: !288)
+!297 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to12runtime_impl17hbd0a02dab1bfb0f6E", scope: !298, file: !289, line: 1578, type: !299, scopeLine: 1578, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !302)
+!298 = !DINamespace(name: "is_aligned_to", scope: !290)
+!299 = !DISubroutineType(types: !300)
+!300 = !{!105, !301, !138}
+!301 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*const ()", baseType: !208, size: 64, align: 64, dwarfAddressSpace: 0)
+!302 = !{!303, !304}
+!303 = !DILocalVariable(name: "ptr", arg: 1, scope: !297, file: !289, line: 1578, type: !301)
+!304 = !DILocalVariable(name: "align", arg: 2, scope: !297, file: !289, line: 1578, type: !138)
+!305 = !DILocation(line: 1578, column: 25, scope: !297)
+!306 = !DILocation(line: 1578, column: 41, scope: !297)
+!307 = !DILocalVariable(name: "self", arg: 1, scope: !308, file: !289, line: 203, type: !301)
+!308 = distinct !DISubprogram(name: "addr<()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17h16e7092f2049328cE", scope: !290, file: !289, line: 203, type: !309, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !312, retainedNodes: !311)
+!309 = !DISubroutineType(types: !310)
+!310 = !{!138, !301}
+!311 = !{!307}
+!312 = !{!210}
+!313 = !DILocation(line: 203, column: 17, scope: !308, inlinedAt: !314)
+!314 = distinct !DILocation(line: 1579, column: 13, scope: !297)
+!315 = !DILocalVariable(name: "self", arg: 1, scope: !316, file: !289, line: 58, type: !301)
+!316 = distinct !DISubprogram(name: "cast<(), ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h315dc1521b573175E", scope: !290, file: !289, line: 58, type: !317, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !320, retainedNodes: !319)
+!317 = !DISubroutineType(types: !318)
+!318 = !{!301, !301}
+!319 = !{!315}
+!320 = !{!210, !321}
+!321 = !DITemplateTypeParameter(name: "U", type: !208)
+!322 = !DILocation(line: 58, column: 26, scope: !316, inlinedAt: !323)
+!323 = distinct !DILocation(line: 207, column: 33, scope: !308, inlinedAt: !314)
+!324 = !DILocation(line: 207, column: 18, scope: !308, inlinedAt: !314)
+!325 = !DILocation(line: 1579, column: 26, scope: !297)
+!326 = !DILocation(line: 1579, column: 13, scope: !297)
+!327 = !DILocation(line: 1580, column: 10, scope: !297)
+!328 = distinct !DISubprogram(name: "is_aligned_to<vga::ScreenChar>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13is_aligned_to17haff1d3e01ed5e6a3E", scope: !290, file: !289, line: 1572, type: !329, scopeLine: 1572, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !331)
+!329 = !DISubroutineType(types: !330)
+!330 = !{!105, !106, !138}
+!331 = !{!332, !333}
+!332 = !DILocalVariable(name: "self", arg: 1, scope: !328, file: !289, line: 1572, type: !106)
+!333 = !DILocalVariable(name: "align", arg: 2, scope: !328, file: !289, line: 1572, type: !138)
+!334 = !DILocation(line: 1572, column: 32, scope: !328)
+!335 = !DILocation(line: 1572, column: 38, scope: !328)
+!336 = !DILocalVariable(name: "self", arg: 1, scope: !337, file: !338, line: 2169, type: !138)
+!337 = distinct !DISubprogram(name: "is_power_of_two", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$15is_power_of_two17h8dc5a08c7a16ff10E", scope: !339, file: !338, line: 2169, type: !341, scopeLine: 2169, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !343)
+!338 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "9f9a8c2611080e433b531f707b01187e")
+!339 = !DINamespace(name: "{impl#11}", scope: !340)
+!340 = !DINamespace(name: "num", scope: !18)
+!341 = !DISubroutineType(types: !342)
+!342 = !{!105, !138}
+!343 = !{!336}
+!344 = !DILocation(line: 2169, column: 38, scope: !337, inlinedAt: !345)
+!345 = distinct !DILocation(line: 1573, column: 13, scope: !328)
+!346 = !DILocalVariable(name: "self", arg: 1, scope: !347, file: !338, line: 106, type: !138)
+!347 = distinct !DISubprogram(name: "count_ones", linkageName: "_ZN4core3num23_$LT$impl$u20$usize$GT$10count_ones17h1161cadf2487f324E", scope: !339, file: !338, line: 106, type: !348, scopeLine: 106, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !350)
+!348 = !DISubroutineType(types: !349)
+!349 = !{!160, !138}
+!350 = !{!346}
+!351 = !DILocation(line: 106, column: 33, scope: !347, inlinedAt: !352)
+!352 = distinct !DILocation(line: 2170, column: 13, scope: !337, inlinedAt: !345)
+!353 = !DILocation(line: 107, column: 13, scope: !347, inlinedAt: !352)
+!354 = !DILocation(line: 2170, column: 13, scope: !337, inlinedAt: !345)
+!355 = !DILocation(line: 1573, column: 12, scope: !328)
+!356 = !DILocalVariable(name: "self", arg: 1, scope: !357, file: !289, line: 58, type: !106)
+!357 = distinct !DISubprogram(name: "cast<vga::ScreenChar, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17h44d161937550a734E", scope: !290, file: !289, line: 58, type: !358, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !361, retainedNodes: !360)
+!358 = !DISubroutineType(types: !359)
+!359 = !{!301, !106}
+!360 = !{!356}
+!361 = !{!117, !321}
+!362 = !DILocation(line: 58, column: 26, scope: !357, inlinedAt: !363)
+!363 = distinct !DILocation(line: 1592, column: 37, scope: !328)
+!364 = !DILocation(line: 1592, column: 36, scope: !328)
+!365 = !DILocation(line: 1592, column: 18, scope: !328)
+!366 = !DILocation(line: 1593, column: 6, scope: !328)
+!367 = !DILocation(line: 1574, column: 13, scope: !328)
+!368 = distinct !DISubprogram(name: "runtime_impl", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null12runtime_impl17hdef50e69128c6331E", scope: !369, file: !289, line: 36, type: !370, scopeLine: 36, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !372)
+!369 = !DINamespace(name: "is_null", scope: !290)
+!370 = !DISubroutineType(types: !371)
+!371 = !{!105, !84}
+!372 = !{!373}
+!373 = !DILocalVariable(name: "ptr", arg: 1, scope: !368, file: !289, line: 36, type: !84)
+!374 = !DILocation(line: 36, column: 25, scope: !368)
+!375 = !DILocalVariable(name: "self", arg: 1, scope: !376, file: !289, line: 203, type: !84)
+!376 = distinct !DISubprogram(name: "addr<u8>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4addr17h812c0855af105dd1E", scope: !290, file: !289, line: 203, type: !377, scopeLine: 203, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !63, retainedNodes: !379)
+!377 = !DISubroutineType(types: !378)
+!378 = !{!138, !84}
+!379 = !{!375}
+!380 = !DILocation(line: 203, column: 17, scope: !376, inlinedAt: !381)
+!381 = distinct !DILocation(line: 37, column: 13, scope: !368)
+!382 = !DILocalVariable(name: "self", arg: 1, scope: !383, file: !289, line: 58, type: !84)
+!383 = distinct !DISubprogram(name: "cast<u8, ()>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4cast17ha4889f92af7b323cE", scope: !290, file: !289, line: 58, type: !384, scopeLine: 58, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !387, retainedNodes: !386)
+!384 = !DISubroutineType(types: !385)
+!385 = !{!301, !84}
+!386 = !{!382}
+!387 = !{!64, !321}
+!388 = !DILocation(line: 58, column: 26, scope: !383, inlinedAt: !389)
+!389 = distinct !DILocation(line: 207, column: 33, scope: !376, inlinedAt: !381)
+!390 = !DILocation(line: 207, column: 18, scope: !376, inlinedAt: !381)
+!391 = !DILocation(line: 37, column: 13, scope: !368)
+!392 = !DILocation(line: 38, column: 10, scope: !368)
+!393 = distinct !DISubprogram(name: "is_null<vga::ScreenChar>", linkageName: "_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17had509e6ad7e00427E", scope: !290, file: !289, line: 34, type: !103, scopeLine: 34, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !116, retainedNodes: !394)
+!394 = !{!395}
+!395 = !DILocalVariable(name: "self", arg: 1, scope: !393, file: !289, line: 34, type: !106)
+!396 = !DILocation(line: 34, column: 26, scope: !393)
+!397 = !DILocation(line: 51, column: 36, scope: !393)
+!398 = !DILocation(line: 51, column: 18, scope: !393)
+!399 = !DILocation(line: 52, column: 6, scope: !393)
+!400 = distinct !DISubprogram(name: "bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$5bytes17h67586fe767d6d375E", scope: !402, file: !401, line: 857, type: !404, scopeLine: 857, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !410)
+!401 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "e1700197e09087f8f73b2fff4830824b")
+!402 = !DINamespace(name: "{impl#0}", scope: !403)
+!403 = !DINamespace(name: "str", scope: !18)
+!404 = !DISubroutineType(types: !405)
+!405 = !{!406, !133}
+!406 = !DICompositeType(tag: DW_TAG_structure_type, name: "Bytes", scope: !407, file: !15, size: 128, align: 64, elements: !408, templateParams: !62, identifier: "447078ad6b5e6a79765ac122e0ae4ef2")
+!407 = !DINamespace(name: "iter", scope: !403)
+!408 = !{!409}
+!409 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !406, file: !15, baseType: !71, size: 128, align: 64)
+!410 = !{!411}
+!411 = !DILocalVariable(name: "self", arg: 1, scope: !400, file: !401, line: 857, type: !133)
+!412 = !DILocation(line: 857, column: 18, scope: !400)
+!413 = !DILocalVariable(name: "self", arg: 1, scope: !414, file: !401, line: 325, type: !133)
+!414 = distinct !DISubprogram(name: "as_bytes", linkageName: "_ZN4core3str21_$LT$impl$u20$str$GT$8as_bytes17hb428d8155021deb3E", scope: !402, file: !401, line: 325, type: !415, scopeLine: 325, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !421)
+!415 = !DISubroutineType(types: !416)
+!416 = !{!417, !133}
+!417 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[u8]", file: !15, size: 128, align: 64, elements: !418, templateParams: !62, identifier: "4f7d759e2003ffb713a77bd933fd0146")
+!418 = !{!419, !420}
+!419 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !417, file: !15, baseType: !136, size: 64, align: 64)
+!420 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !417, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
+!421 = !{!413}
+!422 = !DILocation(line: 325, column: 27, scope: !414, inlinedAt: !423)
+!423 = distinct !DILocation(line: 858, column: 15, scope: !400)
+!424 = !DILocation(line: 328, column: 6, scope: !414, inlinedAt: !423)
+!425 = !DILocation(line: 858, column: 15, scope: !400)
+!426 = !DILocation(line: 858, column: 9, scope: !400)
+!427 = !DILocation(line: 859, column: 6, scope: !400)
+!428 = distinct !DISubprogram(name: "copied<core::slice::iter::Iter<u8>, u8>", linkageName: "_ZN4core4iter6traits8iterator8Iterator6copied17hd8a4d78f3ef903f7E", scope: !430, file: !429, line: 3310, type: !433, scopeLine: 3310, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !437, retainedNodes: !435)
+!429 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs", directory: "", checksumkind: CSK_MD5, checksum: "95e88b6c652e0490e905763009955c97")
+!430 = !DINamespace(name: "Iterator", scope: !431)
+!431 = !DINamespace(name: "iterator", scope: !432)
+!432 = !DINamespace(name: "traits", scope: !52)
+!433 = !DISubroutineType(types: !434)
+!434 = !{!71, !74}
+!435 = !{!436}
+!436 = !DILocalVariable(name: "self", arg: 1, scope: !428, file: !429, line: 3310, type: !74)
+!437 = !{!438, !64}
+!438 = !DITemplateTypeParameter(name: "Self", type: !74)
+!439 = !DILocation(line: 3310, column: 26, scope: !428)
+!440 = !DILocation(line: 3315, column: 9, scope: !428)
+!441 = !DILocation(line: 3316, column: 6, scope: !428)
+!442 = distinct !DISubprogram(name: "new<core::slice::iter::Iter<u8>>", linkageName: "_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h44e4d993c81d3903E", scope: !71, file: !48, line: 26, type: !433, scopeLine: 26, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !92, declaration: !443, retainedNodes: !444)
+!443 = !DISubprogram(name: "new<core::slice::iter::Iter<u8>>", linkageName: "_ZN4core4iter8adapters6copied15Copied$LT$I$GT$3new17h44e4d993c81d3903E", scope: !71, file: !48, line: 26, type: !433, scopeLine: 26, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !92)
+!444 = !{!445}
+!445 = !DILocalVariable(name: "it", arg: 1, scope: !442, file: !48, line: 26, type: !74)
+!446 = !DILocation(line: 26, column: 32, scope: !442)
+!447 = !DILocation(line: 27, column: 9, scope: !442)
+!448 = !DILocation(line: 28, column: 6, scope: !442)
+!449 = distinct !DISubprogram(name: "copied<u8>", linkageName: "_ZN4core6option19Option$LT$$RF$T$GT$6copied17hc093c1a81ce84f44E", scope: !451, file: !450, line: 1808, type: !462, scopeLine: 1808, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !63, declaration: !464, retainedNodes: !465)
+!450 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs", directory: "", checksumkind: CSK_MD5, checksum: "d98c126e37d22a85a618c79c56fc88fa")
+!451 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&u8>", scope: !56, file: !15, size: 64, align: 64, elements: !452, templateParams: !62, identifier: "c6337318f7c9783b8cf3a87d1341f0b")
+!452 = !{!453}
+!453 = !DICompositeType(tag: DW_TAG_variant_part, scope: !451, file: !15, size: 64, align: 64, elements: !454, templateParams: !62, identifier: "6878ce56eb93789472f17132ecedee76", discriminator: !461)
+!454 = !{!455, !457}
+!455 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !453, file: !15, baseType: !456, size: 64, align: 64, extraData: i64 0)
+!456 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !451, file: !15, size: 64, align: 64, elements: !62, templateParams: !89, identifier: "229ca0af734813cadaf4e4e8c29d49ee")
+!457 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !453, file: !15, baseType: !458, size: 64, align: 64)
+!458 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !451, file: !15, size: 64, align: 64, elements: !459, templateParams: !89, identifier: "4d06020f572e1104b6b92678ecaef990")
+!459 = !{!460}
+!460 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !458, file: !15, baseType: !91, size: 64, align: 64)
+!461 = !DIDerivedType(tag: DW_TAG_member, scope: !451, file: !15, baseType: !7, size: 64, align: 64, flags: DIFlagArtificial)
+!462 = !DISubroutineType(types: !463)
+!463 = !{!55, !451}
+!464 = !DISubprogram(name: "copied<u8>", linkageName: "_ZN4core6option19Option$LT$$RF$T$GT$6copied17hc093c1a81ce84f44E", scope: !451, file: !450, line: 1808, type: !462, scopeLine: 1808, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !63)
+!465 = !{!466, !467}
+!466 = !DILocalVariable(name: "self", arg: 1, scope: !449, file: !450, line: 1808, type: !451)
+!467 = !DILocalVariable(name: "v", scope: !468, file: !450, line: 1815, type: !4, align: 1)
+!468 = distinct !DILexicalBlock(scope: !449, file: !450, line: 1815, column: 13)
+!469 = !DILocation(line: 1808, column: 25, scope: !449)
+!470 = !DILocation(line: 1814, column: 15, scope: !449)
+!471 = !DILocation(line: 1814, column: 9, scope: !449)
+!472 = !DILocation(line: 1816, column: 21, scope: !449)
+!473 = !DILocation(line: 1815, column: 19, scope: !449)
+!474 = !{i64 1}
+!475 = !DILocation(line: 1815, column: 19, scope: !468)
+!476 = !DILocation(line: 1815, column: 25, scope: !468)
+!477 = !DILocation(line: 1815, column: 31, scope: !449)
+!478 = !DILocation(line: 1818, column: 6, scope: !449)
+!479 = distinct !DISubprogram(name: "into_iter<core::str::iter::Bytes>", linkageName: "_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17he581b2d280c100beE", scope: !481, file: !480, line: 281, type: !483, scopeLine: 281, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !487, retainedNodes: !485)
+!480 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs", directory: "", checksumkind: CSK_MD5, checksum: "9a5f35eb44040bca17e398efcedefd6e")
+!481 = !DINamespace(name: "{impl#0}", scope: !482)
+!482 = !DINamespace(name: "collect", scope: !432)
+!483 = !DISubroutineType(types: !484)
+!484 = !{!406, !406}
+!485 = !{!486}
+!486 = !DILocalVariable(name: "self", arg: 1, scope: !479, file: !480, line: 281, type: !406)
+!487 = !{!488}
+!488 = !DITemplateTypeParameter(name: "I", type: !406)
+!489 = !DILocation(line: 281, column: 18, scope: !479)
+!490 = !DILocation(line: 283, column: 6, scope: !479)
+!491 = distinct !DISubprogram(name: "next", linkageName: "_ZN81_$LT$core..str..iter..Bytes$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hb04e63f86a2e6cd2E", scope: !493, file: !492, line: 236, type: !494, scopeLine: 236, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !497)
+!492 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/iter.rs", directory: "", checksumkind: CSK_MD5, checksum: "09c36955e811d84967bcb5dbc290ce49")
+!493 = !DINamespace(name: "{impl#9}", scope: !407)
+!494 = !DISubroutineType(types: !495)
+!495 = !{!55, !496}
+!496 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::str::iter::Bytes", baseType: !406, size: 64, align: 64, dwarfAddressSpace: 0)
+!497 = !{!498}
+!498 = !DILocalVariable(name: "self", arg: 1, scope: !491, file: !492, line: 236, type: !496)
+!499 = !DILocation(line: 236, column: 13, scope: !491)
+!500 = !DILocation(line: 237, column: 9, scope: !491)
+!501 = !DILocation(line: 238, column: 6, scope: !491)
+!502 = distinct !DISubprogram(name: "new", linkageName: "_ZN3vga9ColorCode3new17hc9e82018ce75c643E", scope: !111, file: !3, line: 37, type: !503, scopeLine: 37, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !505, retainedNodes: !506)
+!503 = !DISubroutineType(types: !504)
+!504 = !{!111, !24, !24}
+!505 = !DISubprogram(name: "new", linkageName: "_ZN3vga9ColorCode3new17hc9e82018ce75c643E", scope: !111, file: !3, line: 37, type: !503, scopeLine: 37, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!506 = !{!507, !508}
+!507 = !DILocalVariable(name: "fg", arg: 1, scope: !502, file: !3, line: 37, type: !24)
+!508 = !DILocalVariable(name: "bg", arg: 2, scope: !502, file: !3, line: 37, type: !24)
+!509 = !DILocation(line: 37, column: 12, scope: !502)
+!510 = !DILocation(line: 37, column: 23, scope: !502)
+!511 = !DILocation(line: 38, column: 19, scope: !502)
+!512 = !{i8 0, i8 16}
+!513 = !DILocation(line: 38, column: 37, scope: !502)
+!514 = !DILocation(line: 38, column: 9, scope: !502)
+!515 = !DILocation(line: 39, column: 6, scope: !502)
+!516 = distinct !DISubprogram(name: "new", linkageName: "_ZN3vga10ScreenChar3new17h40fc70d9ea0ca51cE", scope: !107, file: !3, line: 50, type: !517, scopeLine: 50, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !519, retainedNodes: !520)
+!517 = !DISubroutineType(types: !518)
+!518 = !{!107, !4}
+!519 = !DISubprogram(name: "new", linkageName: "_ZN3vga10ScreenChar3new17h40fc70d9ea0ca51cE", scope: !107, file: !3, line: 50, type: !517, scopeLine: 50, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!520 = !{!521}
+!521 = !DILocalVariable(name: "c", arg: 1, scope: !516, file: !3, line: 50, type: !4)
+!522 = !DILocation(line: 50, column: 12, scope: !516)
+!523 = !DILocation(line: 53, column: 40, scope: !516)
+!524 = !DILocation(line: 53, column: 55, scope: !516)
+!525 = !DILocation(line: 53, column: 25, scope: !516)
+!526 = !DILocation(line: 51, column: 9, scope: !516)
+!527 = !DILocation(line: 55, column: 6, scope: !516)
+!528 = distinct !DISubprogram(name: "inverse", linkageName: "_ZN3vga10ScreenChar7inverse17h5c5a7393a9688d2eE", scope: !107, file: !3, line: 57, type: !517, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !529, retainedNodes: !530)
+!529 = !DISubprogram(name: "inverse", linkageName: "_ZN3vga10ScreenChar7inverse17h5c5a7393a9688d2eE", scope: !107, file: !3, line: 57, type: !517, scopeLine: 57, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!530 = !{!531}
+!531 = !DILocalVariable(name: "c", arg: 1, scope: !528, file: !3, line: 57, type: !4)
+!532 = !DILocation(line: 57, column: 16, scope: !528)
+!533 = !DILocation(line: 60, column: 40, scope: !528)
+!534 = !DILocation(line: 60, column: 55, scope: !528)
+!535 = !DILocation(line: 60, column: 25, scope: !528)
+!536 = !DILocation(line: 58, column: 9, scope: !528)
+!537 = !DILocation(line: 62, column: 6, scope: !528)
+!538 = distinct !DISubprogram(name: "x", linkageName: "_ZN3vga6Cursor1x17h649b461a0cd6527dE", scope: !539, file: !3, line: 92, type: !546, scopeLine: 92, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !549, retainedNodes: !550)
+!539 = !DICompositeType(tag: DW_TAG_structure_type, name: "Cursor", scope: !2, file: !15, size: 128, align: 64, elements: !540, templateParams: !62, identifier: "644a8aaed1b9de837bad1e368b93bf93")
+!540 = !{!541}
+!541 = !DIDerivedType(tag: DW_TAG_member, name: "pos", scope: !539, file: !15, baseType: !542, size: 128, align: 64)
+!542 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dot", scope: !2, file: !15, size: 128, align: 64, elements: !543, templateParams: !62, identifier: "eeeb82ca7dcafd9d90a3c07a045a3863")
+!543 = !{!544, !545}
+!544 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !542, file: !15, baseType: !138, size: 64, align: 64)
+!545 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !542, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
+!546 = !DISubroutineType(types: !547)
+!547 = !{!138, !548}
+!548 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&vga::Cursor", baseType: !539, size: 64, align: 64, dwarfAddressSpace: 0)
+!549 = !DISubprogram(name: "x", linkageName: "_ZN3vga6Cursor1x17h649b461a0cd6527dE", scope: !539, file: !3, line: 92, type: !546, scopeLine: 92, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!550 = !{!551}
+!551 = !DILocalVariable(name: "self", arg: 1, scope: !538, file: !3, line: 92, type: !548)
+!552 = !DILocation(line: 92, column: 10, scope: !538)
+!553 = !DILocation(line: 93, column: 9, scope: !538)
+!554 = !DILocation(line: 94, column: 6, scope: !538)
+!555 = distinct !DISubprogram(name: "y", linkageName: "_ZN3vga6Cursor1y17h11e23b88c5ffd179E", scope: !539, file: !3, line: 97, type: !546, scopeLine: 97, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !556, retainedNodes: !557)
+!556 = !DISubprogram(name: "y", linkageName: "_ZN3vga6Cursor1y17h11e23b88c5ffd179E", scope: !539, file: !3, line: 97, type: !546, scopeLine: 97, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!557 = !{!558}
+!558 = !DILocalVariable(name: "self", arg: 1, scope: !555, file: !3, line: 97, type: !548)
+!559 = !DILocation(line: 97, column: 10, scope: !555)
+!560 = !DILocation(line: 98, column: 9, scope: !555)
+!561 = !DILocation(line: 99, column: 6, scope: !555)
+!562 = distinct !DISubprogram(name: "incr_x", linkageName: "_ZN3vga6Cursor6incr_x17hca3384546a527754E", scope: !539, file: !3, line: 102, type: !563, scopeLine: 102, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !566, retainedNodes: !567)
+!563 = !DISubroutineType(types: !564)
+!564 = !{null, !565}
+!565 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Cursor", baseType: !539, size: 64, align: 64, dwarfAddressSpace: 0)
+!566 = !DISubprogram(name: "incr_x", linkageName: "_ZN3vga6Cursor6incr_x17hca3384546a527754E", scope: !539, file: !3, line: 102, type: !563, scopeLine: 102, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!567 = !{!568}
+!568 = !DILocalVariable(name: "self", arg: 1, scope: !562, file: !3, line: 102, type: !565)
+!569 = !DILocation(line: 102, column: 15, scope: !562)
+!570 = !DILocation(line: 103, column: 9, scope: !562)
+!571 = !DILocation(line: 104, column: 6, scope: !562)
+!572 = distinct !DISubprogram(name: "width", linkageName: "_ZN3vga6Screen5width17he049df2ef71340a1E", scope: !573, file: !3, line: 145, type: !591, scopeLine: 145, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !594, retainedNodes: !595)
+!573 = !DICompositeType(tag: DW_TAG_structure_type, name: "Screen", scope: !2, file: !15, size: 1728, align: 64, elements: !574, templateParams: !62, identifier: "efeec8511d48ab73b6094368323c0b2b")
+!574 = !{!575, !576, !577, !578, !589, !590}
+!575 = !DIDerivedType(tag: DW_TAG_member, name: "water_level", scope: !573, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
+!576 = !DIDerivedType(tag: DW_TAG_member, name: "cursor", scope: !573, file: !15, baseType: !539, size: 128, align: 64, offset: 128)
+!577 = !DIDerivedType(tag: DW_TAG_member, name: "origin", scope: !573, file: !15, baseType: !542, size: 128, align: 64, offset: 256)
+!578 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !573, file: !15, baseType: !579, size: 64, align: 64)
+!579 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Buffer", baseType: !580, size: 64, align: 64, dwarfAddressSpace: 0)
+!580 = !DICompositeType(tag: DW_TAG_structure_type, name: "Buffer", scope: !2, file: !15, size: 32000, align: 8, elements: !581, templateParams: !62, identifier: "1b1055d0d14801caa87489f384e2476a")
+!581 = !{!582}
+!582 = !DIDerivedType(tag: DW_TAG_member, name: "chars", scope: !580, file: !15, baseType: !583, size: 32000, align: 8)
+!583 = !DICompositeType(tag: DW_TAG_array_type, baseType: !584, size: 32000, align: 8, elements: !587)
+!584 = !DICompositeType(tag: DW_TAG_array_type, baseType: !107, size: 1280, align: 8, elements: !585)
 !585 = !{!586}
-!586 = !DILocalVariable(name: "self", arg: 1, scope: !563, file: !3, line: 145, type: !584)
-!587 = !DILocation(line: 145, column: 14, scope: !563)
-!588 = !DILocation(line: 146, column: 9, scope: !563)
-!589 = !DILocation(line: 147, column: 6, scope: !563)
-!590 = distinct !DISubprogram(name: "height", linkageName: "_ZN3vga6Screen6height17hdb77060a78e2aac1E", scope: !564, file: !3, line: 150, type: !582, scopeLine: 150, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !591)
-!591 = !{!592}
-!592 = !DILocalVariable(name: "self", arg: 1, scope: !590, file: !3, line: 150, type: !584)
-!593 = !DILocation(line: 150, column: 15, scope: !590)
-!594 = !DILocation(line: 151, column: 9, scope: !590)
-!595 = !DILocation(line: 152, column: 6, scope: !590)
-!596 = distinct !DISubprogram(name: "top_down_flow_screen", linkageName: "_ZN3vga6Screen20top_down_flow_screen17h2a5fcfe596c705c6E", scope: !564, file: !3, line: 154, type: !597, scopeLine: 154, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !599)
-!597 = !DISubroutineType(types: !598)
-!598 = !{!564, !570, !575}
-!599 = !{!600, !601, !602}
-!600 = !DILocalVariable(name: "buf", arg: 1, scope: !596, file: !3, line: 154, type: !570)
-!601 = !DILocalVariable(name: "blank_row", arg: 2, scope: !596, file: !3, line: 154, type: !575)
-!602 = !DILocalVariable(name: "origin_dot", scope: !603, file: !3, line: 155, type: !536, align: 8)
-!603 = distinct !DILexicalBlock(scope: !596, file: !3, line: 155, column: 9)
-!604 = !DILocation(line: 154, column: 29, scope: !596)
-!605 = !DILocation(line: 154, column: 55, scope: !596)
-!606 = !DILocation(line: 155, column: 13, scope: !603)
-!607 = !DILocation(line: 155, column: 26, scope: !596)
-!608 = !DILocation(line: 157, column: 18, scope: !603)
-!609 = !DILocation(line: 158, column: 21, scope: !603)
-!610 = !DILocation(line: 156, column: 9, scope: !603)
-!611 = !DILocation(line: 164, column: 6, scope: !596)
-!612 = distinct !DISubprogram(name: "bottom_up_flow_screen", linkageName: "_ZN3vga6Screen21bottom_up_flow_screen17h59581173611f8207E", scope: !564, file: !3, line: 166, type: !597, scopeLine: 166, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !613)
-!613 = !{!614, !615, !616, !618}
-!614 = !DILocalVariable(name: "buf", arg: 1, scope: !612, file: !3, line: 166, type: !570)
-!615 = !DILocalVariable(name: "blank_row", arg: 2, scope: !612, file: !3, line: 166, type: !575)
-!616 = !DILocalVariable(name: "perceived_y", scope: !617, file: !3, line: 167, type: !138, align: 8)
-!617 = distinct !DILexicalBlock(scope: !612, file: !3, line: 167, column: 9)
-!618 = !DILocalVariable(name: "origin_dot", scope: !619, file: !3, line: 168, type: !536, align: 8)
-!619 = distinct !DILexicalBlock(scope: !617, file: !3, line: 168, column: 9)
-!620 = !DILocation(line: 166, column: 30, scope: !612)
-!621 = !DILocation(line: 166, column: 56, scope: !612)
-!622 = !DILocation(line: 168, column: 13, scope: !619)
-!623 = !DILocation(line: 167, column: 27, scope: !612)
-!624 = !DILocation(line: 167, column: 13, scope: !617)
-!625 = !DILocation(line: 168, column: 26, scope: !617)
-!626 = !DILocation(line: 173, column: 21, scope: !619)
-!627 = !DILocation(line: 174, column: 18, scope: !619)
-!628 = !DILocation(line: 172, column: 9, scope: !619)
-!629 = !DILocation(line: 180, column: 6, scope: !612)
-!630 = distinct !DISubprogram(name: "new", linkageName: "_ZN3vga6Screen3new17h947821f073993938E", scope: !564, file: !3, line: 182, type: !631, scopeLine: 182, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !633)
-!631 = !DISubroutineType(types: !632)
-!632 = !{!564, !42, !4}
-!633 = !{!634, !635, !636, !638, !640}
-!634 = !DILocalVariable(name: "tfd", arg: 1, scope: !630, file: !3, line: 182, type: !42)
-!635 = !DILocalVariable(name: "blank_row_char", arg: 2, scope: !630, file: !3, line: 182, type: !4)
-!636 = !DILocalVariable(name: "buf", scope: !637, file: !3, line: 183, type: !570, align: 8)
-!637 = distinct !DILexicalBlock(scope: !630, file: !3, line: 183, column: 9)
-!638 = !DILocalVariable(name: "blank_row", scope: !639, file: !3, line: 184, type: !575, align: 1)
-!639 = distinct !DILexicalBlock(scope: !637, file: !3, line: 184, column: 9)
-!640 = !DILocalVariable(name: "screen", scope: !641, file: !3, line: 185, type: !564, align: 8)
-!641 = distinct !DILexicalBlock(scope: !639, file: !3, line: 185, column: 9)
-!642 = !DILocation(line: 185, column: 13, scope: !641)
-!643 = !DILocation(line: 182, column: 16, scope: !630)
-!644 = !DILocation(line: 182, column: 40, scope: !630)
-!645 = !DILocation(line: 184, column: 13, scope: !639)
-!646 = !DILocation(line: 183, column: 35, scope: !630)
-!647 = !DILocation(line: 183, column: 34, scope: !630)
-!648 = !DILocation(line: 183, column: 28, scope: !630)
-!649 = !DILocation(line: 183, column: 13, scope: !637)
-!650 = !DILocation(line: 184, column: 26, scope: !637)
-!651 = !DILocation(line: 184, column: 25, scope: !637)
-!652 = !DILocation(line: 185, column: 32, scope: !639)
-!653 = !DILocation(line: 185, column: 26, scope: !639)
-!654 = !DILocation(line: 187, column: 43, scope: !639)
-!655 = !DILocation(line: 186, column: 44, scope: !639)
-!656 = !DILocation(line: 189, column: 9, scope: !641)
-!657 = !DILocation(line: 191, column: 6, scope: !630)
-!658 = distinct !DISubprogram(name: "clear", linkageName: "_ZN3vga6Screen5clear17h47fc815e41e1783bE", scope: !564, file: !3, line: 193, type: !659, scopeLine: 193, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !662)
-!659 = !DISubroutineType(types: !660)
-!660 = !{null, !661}
-!661 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Screen", baseType: !564, size: 64, align: 64, dwarfAddressSpace: 0)
-!662 = !{!663, !664, !674}
-!663 = !DILocalVariable(name: "self", arg: 1, scope: !658, file: !3, line: 193, type: !661)
-!664 = !DILocalVariable(name: "iter", scope: !665, file: !3, line: 196, type: !666, align: 8)
-!665 = distinct !DILexicalBlock(scope: !658, file: !3, line: 196, column: 9)
-!666 = !DICompositeType(tag: DW_TAG_structure_type, name: "Range<usize>", scope: !667, file: !15, size: 128, align: 64, elements: !669, templateParams: !672, identifier: "b280d2e9ec4e159a265eba43d83ca756")
-!667 = !DINamespace(name: "range", scope: !668)
-!668 = !DINamespace(name: "ops", scope: !18)
-!669 = !{!670, !671}
-!670 = !DIDerivedType(tag: DW_TAG_member, name: "start", scope: !666, file: !15, baseType: !138, size: 64, align: 64)
-!671 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !666, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
-!672 = !{!673}
-!673 = !DITemplateTypeParameter(name: "Idx", type: !138)
-!674 = !DILocalVariable(name: "row", scope: !675, file: !3, line: 196, type: !138, align: 8)
-!675 = distinct !DILexicalBlock(scope: !665, file: !3, line: 196, column: 37)
-!676 = !DILocation(line: 193, column: 14, scope: !658)
-!677 = !DILocation(line: 196, column: 20, scope: !665)
-!678 = !DILocation(line: 196, column: 23, scope: !658)
-!679 = !DILocation(line: 196, column: 20, scope: !658)
-!680 = !DILocation(line: 196, column: 9, scope: !665)
-!681 = !{i64 0, i64 2}
-!682 = !DILocation(line: 199, column: 6, scope: !658)
-!683 = !DILocation(line: 196, column: 13, scope: !665)
-!684 = !DILocation(line: 196, column: 13, scope: !675)
-!685 = !DILocation(line: 197, column: 35, scope: !675)
-!686 = !DILocation(line: 197, column: 13, scope: !675)
-!687 = distinct !DISubprogram(name: "print_sc", linkageName: "_ZN3vga6Screen8print_sc17hd9433e6ab215cdadE", scope: !564, file: !3, line: 201, type: !688, scopeLine: 201, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !690)
-!688 = !DISubroutineType(types: !689)
-!689 = !{null, !661, !107}
-!690 = !{!691, !692, !693}
-!691 = !DILocalVariable(name: "self", arg: 1, scope: !687, file: !3, line: 201, type: !661)
-!692 = !DILocalVariable(name: "sc", arg: 2, scope: !687, file: !3, line: 201, type: !107)
-!693 = !DILocalVariable(name: "dst", scope: !694, file: !3, line: 202, type: !695, align: 8)
-!694 = distinct !DILexicalBlock(scope: !687, file: !3, line: 202, column: 9)
-!695 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::ScreenChar", baseType: !107, size: 64, align: 64, dwarfAddressSpace: 0)
-!696 = !DILocation(line: 201, column: 17, scope: !687)
-!697 = !DILocation(line: 201, column: 28, scope: !687)
-!698 = !DILocation(line: 202, column: 39, scope: !687)
-!699 = !DILocation(line: 202, column: 24, scope: !687)
-!700 = !DILocation(line: 202, column: 56, scope: !687)
-!701 = !DILocation(line: 202, column: 19, scope: !687)
-!702 = !DILocation(line: 202, column: 13, scope: !694)
-!703 = !DILocation(line: 209, column: 18, scope: !694)
-!704 = !DILocation(line: 210, column: 9, scope: !694)
-!705 = !DILocation(line: 211, column: 6, scope: !687)
-!706 = distinct !DISubprogram(name: "should_wrap", linkageName: "_ZN3vga6Screen11should_wrap17h8c27f0b29b4a517cE", scope: !564, file: !3, line: 214, type: !707, scopeLine: 214, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !709)
-!707 = !DISubroutineType(types: !708)
-!708 = !{!105, !584}
-!709 = !{!710}
-!710 = !DILocalVariable(name: "self", arg: 1, scope: !706, file: !3, line: 214, type: !584)
-!711 = !DILocation(line: 214, column: 20, scope: !706)
-!712 = !DILocation(line: 215, column: 9, scope: !706)
-!713 = !DILocation(line: 215, column: 28, scope: !706)
-!714 = !DILocation(line: 216, column: 6, scope: !706)
-!715 = distinct !DISubprogram(name: "print", linkageName: "_ZN3vga6Screen5print17h9162eecc616a4ed7E", scope: !564, file: !3, line: 218, type: !716, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !718)
-!716 = !DISubroutineType(types: !717)
-!717 = !{null, !661, !4}
-!718 = !{!719, !720}
-!719 = !DILocalVariable(name: "self", arg: 1, scope: !715, file: !3, line: 218, type: !661)
-!720 = !DILocalVariable(name: "c", arg: 2, scope: !715, file: !3, line: 218, type: !4)
-!721 = !DILocation(line: 218, column: 14, scope: !715)
-!722 = !DILocation(line: 218, column: 25, scope: !715)
-!723 = !DILocation(line: 221, column: 12, scope: !715)
-!724 = !DILocation(line: 224, column: 23, scope: !715)
-!725 = !DILocation(line: 224, column: 9, scope: !715)
-!726 = !DILocation(line: 225, column: 6, scope: !715)
-!727 = !DILocation(line: 222, column: 13, scope: !715)
-!728 = distinct !DISubprogram(name: "recall_cursor_to_origin", linkageName: "_ZN3vga6Screen23recall_cursor_to_origin17h347b9e54016c85c7E", scope: !564, file: !3, line: 228, type: !659, scopeLine: 228, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !729)
-!729 = !{!730}
-!730 = !DILocalVariable(name: "self", arg: 1, scope: !728, file: !3, line: 228, type: !661)
-!731 = !DILocation(line: 228, column: 32, scope: !728)
-!732 = !DILocation(line: 229, column: 27, scope: !728)
-!733 = !DILocation(line: 229, column: 9, scope: !728)
-!734 = !DILocation(line: 230, column: 6, scope: !728)
-!735 = distinct !DISubprogram(name: "print_new_line", linkageName: "_ZN3vga6Screen14print_new_line17h5228c226f79e4d41E", scope: !564, file: !3, line: 232, type: !659, scopeLine: 232, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !736)
-!736 = !{!737, !738, !740}
-!737 = !DILocalVariable(name: "self", arg: 1, scope: !735, file: !3, line: 232, type: !661)
-!738 = !DILocalVariable(name: "iter", scope: !739, file: !3, line: 235, type: !666, align: 8)
-!739 = distinct !DILexicalBlock(scope: !735, file: !3, line: 235, column: 17)
-!740 = !DILocalVariable(name: "row", scope: !741, file: !3, line: 235, type: !138, align: 8)
-!741 = distinct !DILexicalBlock(scope: !739, file: !3, line: 235, column: 60)
-!742 = !DILocation(line: 232, column: 23, scope: !735)
-!743 = !DILocation(line: 235, column: 28, scope: !739)
-!744 = !DILocation(line: 233, column: 15, scope: !735)
-!745 = !DILocation(line: 233, column: 9, scope: !735)
-!746 = !DILocation(line: 256, column: 6, scope: !735)
-!747 = !DILocation(line: 235, column: 28, scope: !735)
-!748 = !DILocation(line: 235, column: 46, scope: !735)
-!749 = !DILocation(line: 235, column: 17, scope: !739)
-!750 = !DILocation(line: 245, column: 20, scope: !735)
-!751 = !DILocation(line: 235, column: 21, scope: !739)
-!752 = !DILocation(line: 235, column: 21, scope: !741)
-!753 = !DILocation(line: 236, column: 24, scope: !741)
-!754 = !DILocation(line: 240, column: 47, scope: !741)
-!755 = !DILocation(line: 240, column: 36, scope: !741)
-!756 = !DILocation(line: 240, column: 21, scope: !741)
-!757 = !DILocation(line: 241, column: 43, scope: !741)
-!758 = !DILocation(line: 241, column: 21, scope: !741)
-!759 = !DILocation(line: 246, column: 17, scope: !735)
-!760 = !DILocation(line: 245, column: 43, scope: !735)
-!761 = !DILocation(line: 245, column: 17, scope: !735)
-!762 = distinct !DISubprogram(name: "print_text", linkageName: "_ZN3vga6Screen10print_text17hde68d2bccc37f670E", scope: !564, file: !3, line: 258, type: !763, scopeLine: 258, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !765)
-!763 = !DISubroutineType(types: !764)
-!764 = !{null, !661, !133}
-!765 = !{!766, !767, !768, !770}
-!766 = !DILocalVariable(name: "self", arg: 1, scope: !762, file: !3, line: 258, type: !661)
-!767 = !DILocalVariable(name: "text", arg: 2, scope: !762, file: !3, line: 258, type: !133)
-!768 = !DILocalVariable(name: "iter", scope: !769, file: !3, line: 262, type: !405, align: 8)
-!769 = distinct !DILexicalBlock(scope: !762, file: !3, line: 262, column: 9)
-!770 = !DILocalVariable(name: "byte", scope: !771, file: !3, line: 262, type: !4, align: 1)
-!771 = distinct !DILexicalBlock(scope: !769, file: !3, line: 262, column: 34)
-!772 = !DILocation(line: 258, column: 23, scope: !762)
-!773 = !DILocation(line: 258, column: 34, scope: !762)
-!774 = !DILocation(line: 262, column: 21, scope: !769)
-!775 = !DILocation(line: 262, column: 21, scope: !762)
-!776 = !DILocation(line: 262, column: 9, scope: !769)
-!777 = !DILocation(line: 269, column: 6, scope: !762)
-!778 = !DILocation(line: 262, column: 13, scope: !769)
-!779 = !DILocation(line: 262, column: 13, scope: !771)
-!780 = !DILocation(line: 264, column: 17, scope: !771)
-!781 = !DILocation(line: 263, column: 13, scope: !771)
-!782 = !DILocation(line: 264, column: 32, scope: !771)
-!783 = !DILocation(line: 265, column: 26, scope: !771)
-!784 = !DILocation(line: 266, column: 33, scope: !771)
-!785 = !DILocation(line: 266, column: 22, scope: !771)
-!786 = distinct !DISubprogram(name: "write_str", linkageName: "_ZN48_$LT$vga..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17h4afa8fca70201c0bE", scope: !787, file: !3, line: 273, type: !788, scopeLine: 273, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !790)
-!787 = !DINamespace(name: "{impl#4}", scope: !2)
-!788 = !DISubroutineType(types: !789)
-!789 = !{!199, !661, !133}
-!790 = !{!791, !792}
-!791 = !DILocalVariable(name: "self", arg: 1, scope: !786, file: !3, line: 273, type: !661)
-!792 = !DILocalVariable(name: "text", arg: 2, scope: !786, file: !3, line: 273, type: !133)
-!793 = !DILocation(line: 273, column: 18, scope: !786)
-!794 = !DILocation(line: 273, column: 29, scope: !786)
-!795 = !DILocation(line: 274, column: 12, scope: !786)
-!796 = !DILocation(line: 274, column: 9, scope: !786)
-!797 = !DILocation(line: 275, column: 6, scope: !786)
+!586 = !DISubrange(count: 80, lowerBound: 0)
+!587 = !{!588}
+!588 = !DISubrange(count: 25, lowerBound: 0)
+!589 = !DIDerivedType(tag: DW_TAG_member, name: "tfd", scope: !573, file: !15, baseType: !42, size: 8, align: 8, offset: 1664)
+!590 = !DIDerivedType(tag: DW_TAG_member, name: "blank_row", scope: !573, file: !15, baseType: !584, size: 1280, align: 8, offset: 384)
+!591 = !DISubroutineType(types: !592)
+!592 = !{!138, !593}
+!593 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&vga::Screen", baseType: !573, size: 64, align: 64, dwarfAddressSpace: 0)
+!594 = !DISubprogram(name: "width", linkageName: "_ZN3vga6Screen5width17he049df2ef71340a1E", scope: !573, file: !3, line: 145, type: !591, scopeLine: 145, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!595 = !{!596}
+!596 = !DILocalVariable(name: "self", arg: 1, scope: !572, file: !3, line: 145, type: !593)
+!597 = !DILocation(line: 145, column: 14, scope: !572)
+!598 = !DILocation(line: 146, column: 9, scope: !572)
+!599 = !DILocation(line: 147, column: 6, scope: !572)
+!600 = distinct !DISubprogram(name: "height", linkageName: "_ZN3vga6Screen6height17h8bbdcbb31ac65557E", scope: !573, file: !3, line: 150, type: !591, scopeLine: 150, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !601, retainedNodes: !602)
+!601 = !DISubprogram(name: "height", linkageName: "_ZN3vga6Screen6height17h8bbdcbb31ac65557E", scope: !573, file: !3, line: 150, type: !591, scopeLine: 150, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!602 = !{!603}
+!603 = !DILocalVariable(name: "self", arg: 1, scope: !600, file: !3, line: 150, type: !593)
+!604 = !DILocation(line: 150, column: 15, scope: !600)
+!605 = !DILocation(line: 151, column: 9, scope: !600)
+!606 = !DILocation(line: 152, column: 6, scope: !600)
+!607 = distinct !DISubprogram(name: "top_down_flow_screen", linkageName: "_ZN3vga6Screen20top_down_flow_screen17h38a1d589728fbec4E", scope: !573, file: !3, line: 154, type: !608, scopeLine: 154, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !610, retainedNodes: !611)
+!608 = !DISubroutineType(types: !609)
+!609 = !{!573, !579, !584}
+!610 = !DISubprogram(name: "top_down_flow_screen", linkageName: "_ZN3vga6Screen20top_down_flow_screen17h38a1d589728fbec4E", scope: !573, file: !3, line: 154, type: !608, scopeLine: 154, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!611 = !{!612, !613, !614}
+!612 = !DILocalVariable(name: "buf", arg: 1, scope: !607, file: !3, line: 154, type: !579)
+!613 = !DILocalVariable(name: "blank_row", arg: 2, scope: !607, file: !3, line: 154, type: !584)
+!614 = !DILocalVariable(name: "origin_dot", scope: !615, file: !3, line: 155, type: !542, align: 8)
+!615 = distinct !DILexicalBlock(scope: !607, file: !3, line: 155, column: 9)
+!616 = !DILocation(line: 154, column: 29, scope: !607)
+!617 = !DILocation(line: 154, column: 55, scope: !607)
+!618 = !DILocation(line: 155, column: 13, scope: !615)
+!619 = !DILocation(line: 155, column: 26, scope: !607)
+!620 = !DILocation(line: 157, column: 18, scope: !615)
+!621 = !DILocation(line: 158, column: 21, scope: !615)
+!622 = !DILocation(line: 156, column: 9, scope: !615)
+!623 = !DILocation(line: 164, column: 6, scope: !607)
+!624 = distinct !DISubprogram(name: "bottom_up_flow_screen", linkageName: "_ZN3vga6Screen21bottom_up_flow_screen17h4ac89a2c8dd644baE", scope: !573, file: !3, line: 166, type: !608, scopeLine: 166, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !625, retainedNodes: !626)
+!625 = !DISubprogram(name: "bottom_up_flow_screen", linkageName: "_ZN3vga6Screen21bottom_up_flow_screen17h4ac89a2c8dd644baE", scope: !573, file: !3, line: 166, type: !608, scopeLine: 166, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!626 = !{!627, !628, !629, !631}
+!627 = !DILocalVariable(name: "buf", arg: 1, scope: !624, file: !3, line: 166, type: !579)
+!628 = !DILocalVariable(name: "blank_row", arg: 2, scope: !624, file: !3, line: 166, type: !584)
+!629 = !DILocalVariable(name: "perceived_y", scope: !630, file: !3, line: 167, type: !138, align: 8)
+!630 = distinct !DILexicalBlock(scope: !624, file: !3, line: 167, column: 9)
+!631 = !DILocalVariable(name: "origin_dot", scope: !632, file: !3, line: 168, type: !542, align: 8)
+!632 = distinct !DILexicalBlock(scope: !630, file: !3, line: 168, column: 9)
+!633 = !DILocation(line: 166, column: 30, scope: !624)
+!634 = !DILocation(line: 166, column: 56, scope: !624)
+!635 = !DILocation(line: 168, column: 13, scope: !632)
+!636 = !DILocation(line: 167, column: 27, scope: !624)
+!637 = !DILocation(line: 167, column: 13, scope: !630)
+!638 = !DILocation(line: 168, column: 26, scope: !630)
+!639 = !DILocation(line: 173, column: 21, scope: !632)
+!640 = !DILocation(line: 174, column: 18, scope: !632)
+!641 = !DILocation(line: 172, column: 9, scope: !632)
+!642 = !DILocation(line: 180, column: 6, scope: !624)
+!643 = distinct !DISubprogram(name: "new", linkageName: "_ZN3vga6Screen3new17h17d8aa562c38b9b4E", scope: !573, file: !3, line: 182, type: !644, scopeLine: 182, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !646, retainedNodes: !647)
+!644 = !DISubroutineType(types: !645)
+!645 = !{!573, !42, !4}
+!646 = !DISubprogram(name: "new", linkageName: "_ZN3vga6Screen3new17h17d8aa562c38b9b4E", scope: !573, file: !3, line: 182, type: !644, scopeLine: 182, flags: DIFlagPrototyped, spFlags: 0, templateParams: !62)
+!647 = !{!648, !649, !650, !652, !654}
+!648 = !DILocalVariable(name: "tfd", arg: 1, scope: !643, file: !3, line: 182, type: !42)
+!649 = !DILocalVariable(name: "blank_row_char", arg: 2, scope: !643, file: !3, line: 182, type: !4)
+!650 = !DILocalVariable(name: "buf", scope: !651, file: !3, line: 183, type: !579, align: 8)
+!651 = distinct !DILexicalBlock(scope: !643, file: !3, line: 183, column: 9)
+!652 = !DILocalVariable(name: "blank_row", scope: !653, file: !3, line: 184, type: !584, align: 1)
+!653 = distinct !DILexicalBlock(scope: !651, file: !3, line: 184, column: 9)
+!654 = !DILocalVariable(name: "screen", scope: !655, file: !3, line: 185, type: !573, align: 8)
+!655 = distinct !DILexicalBlock(scope: !653, file: !3, line: 185, column: 9)
+!656 = !DILocation(line: 182, column: 16, scope: !643)
+!657 = !DILocation(line: 182, column: 40, scope: !643)
+!658 = !DILocation(line: 184, column: 13, scope: !653)
+!659 = !DILocation(line: 185, column: 13, scope: !655)
+!660 = !DILocation(line: 183, column: 35, scope: !643)
+!661 = !DILocation(line: 183, column: 34, scope: !643)
+!662 = !DILocation(line: 183, column: 28, scope: !643)
+!663 = !DILocation(line: 183, column: 13, scope: !651)
+!664 = !DILocation(line: 184, column: 26, scope: !651)
+!665 = !DILocation(line: 184, column: 25, scope: !651)
+!666 = !DILocation(line: 185, column: 32, scope: !653)
+!667 = !DILocation(line: 185, column: 26, scope: !653)
+!668 = !DILocation(line: 187, column: 43, scope: !653)
+!669 = !DILocation(line: 186, column: 44, scope: !653)
+!670 = !DILocation(line: 189, column: 9, scope: !655)
+!671 = !DILocation(line: 190, column: 9, scope: !655)
+!672 = !DILocation(line: 191, column: 6, scope: !643)
+!673 = distinct !DISubprogram(name: "clear", linkageName: "_ZN3vga6Screen5clear17hb4df162deb2046a4E", scope: !573, file: !3, line: 193, type: !674, scopeLine: 193, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !677, retainedNodes: !678)
+!674 = !DISubroutineType(types: !675)
+!675 = !{null, !676}
+!676 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Screen", baseType: !573, size: 64, align: 64, dwarfAddressSpace: 0)
+!677 = !DISubprogram(name: "clear", linkageName: "_ZN3vga6Screen5clear17hb4df162deb2046a4E", scope: !573, file: !3, line: 193, type: !674, scopeLine: 193, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!678 = !{!679, !680, !690}
+!679 = !DILocalVariable(name: "self", arg: 1, scope: !673, file: !3, line: 193, type: !676)
+!680 = !DILocalVariable(name: "iter", scope: !681, file: !3, line: 196, type: !682, align: 8)
+!681 = distinct !DILexicalBlock(scope: !673, file: !3, line: 196, column: 9)
+!682 = !DICompositeType(tag: DW_TAG_structure_type, name: "Range<usize>", scope: !683, file: !15, size: 128, align: 64, elements: !685, templateParams: !688, identifier: "1f8bc2272e64a96da1c0d704b5981322")
+!683 = !DINamespace(name: "range", scope: !684)
+!684 = !DINamespace(name: "ops", scope: !18)
+!685 = !{!686, !687}
+!686 = !DIDerivedType(tag: DW_TAG_member, name: "start", scope: !682, file: !15, baseType: !138, size: 64, align: 64)
+!687 = !DIDerivedType(tag: DW_TAG_member, name: "end", scope: !682, file: !15, baseType: !138, size: 64, align: 64, offset: 64)
+!688 = !{!689}
+!689 = !DITemplateTypeParameter(name: "Idx", type: !138)
+!690 = !DILocalVariable(name: "row", scope: !691, file: !3, line: 196, type: !138, align: 8)
+!691 = distinct !DILexicalBlock(scope: !681, file: !3, line: 196, column: 37)
+!692 = !DILocation(line: 193, column: 14, scope: !673)
+!693 = !DILocation(line: 196, column: 20, scope: !681)
+!694 = !DILocation(line: 196, column: 23, scope: !673)
+!695 = !DILocation(line: 196, column: 20, scope: !673)
+!696 = !DILocation(line: 196, column: 9, scope: !681)
+!697 = !{i64 0, i64 2}
+!698 = !DILocation(line: 199, column: 6, scope: !673)
+!699 = !DILocation(line: 196, column: 13, scope: !681)
+!700 = !DILocation(line: 196, column: 13, scope: !691)
+!701 = !DILocation(line: 197, column: 35, scope: !691)
+!702 = !DILocation(line: 197, column: 13, scope: !691)
+!703 = distinct !DISubprogram(name: "print_sc", linkageName: "_ZN3vga6Screen8print_sc17h77cdc54f981eaff8E", scope: !573, file: !3, line: 201, type: !704, scopeLine: 201, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !706, retainedNodes: !707)
+!704 = !DISubroutineType(types: !705)
+!705 = !{null, !676, !107}
+!706 = !DISubprogram(name: "print_sc", linkageName: "_ZN3vga6Screen8print_sc17h77cdc54f981eaff8E", scope: !573, file: !3, line: 201, type: !704, scopeLine: 201, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!707 = !{!708, !709, !710}
+!708 = !DILocalVariable(name: "self", arg: 1, scope: !703, file: !3, line: 201, type: !676)
+!709 = !DILocalVariable(name: "sc", arg: 2, scope: !703, file: !3, line: 201, type: !107)
+!710 = !DILocalVariable(name: "dst", scope: !711, file: !3, line: 202, type: !712, align: 8)
+!711 = distinct !DILexicalBlock(scope: !703, file: !3, line: 202, column: 9)
+!712 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::ScreenChar", baseType: !107, size: 64, align: 64, dwarfAddressSpace: 0)
+!713 = !DILocation(line: 201, column: 17, scope: !703)
+!714 = !DILocation(line: 201, column: 28, scope: !703)
+!715 = !DILocation(line: 202, column: 39, scope: !703)
+!716 = !DILocation(line: 202, column: 24, scope: !703)
+!717 = !DILocation(line: 202, column: 56, scope: !703)
+!718 = !DILocation(line: 202, column: 19, scope: !703)
+!719 = !DILocation(line: 202, column: 13, scope: !711)
+!720 = !DILocation(line: 209, column: 18, scope: !711)
+!721 = !DILocation(line: 210, column: 9, scope: !711)
+!722 = !DILocation(line: 211, column: 6, scope: !703)
+!723 = distinct !DISubprogram(name: "should_wrap", linkageName: "_ZN3vga6Screen11should_wrap17h742299c47d796cd6E", scope: !573, file: !3, line: 214, type: !724, scopeLine: 214, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !726, retainedNodes: !727)
+!724 = !DISubroutineType(types: !725)
+!725 = !{!105, !593}
+!726 = !DISubprogram(name: "should_wrap", linkageName: "_ZN3vga6Screen11should_wrap17h742299c47d796cd6E", scope: !573, file: !3, line: 214, type: !724, scopeLine: 214, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!727 = !{!728}
+!728 = !DILocalVariable(name: "self", arg: 1, scope: !723, file: !3, line: 214, type: !593)
+!729 = !DILocation(line: 214, column: 20, scope: !723)
+!730 = !DILocation(line: 215, column: 9, scope: !723)
+!731 = !DILocation(line: 215, column: 28, scope: !723)
+!732 = !DILocation(line: 216, column: 6, scope: !723)
+!733 = distinct !DISubprogram(name: "print", linkageName: "_ZN3vga6Screen5print17h08a39b3c97bd499bE", scope: !573, file: !3, line: 218, type: !734, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !736, retainedNodes: !737)
+!734 = !DISubroutineType(types: !735)
+!735 = !{null, !676, !4}
+!736 = !DISubprogram(name: "print", linkageName: "_ZN3vga6Screen5print17h08a39b3c97bd499bE", scope: !573, file: !3, line: 218, type: !734, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!737 = !{!738, !739}
+!738 = !DILocalVariable(name: "self", arg: 1, scope: !733, file: !3, line: 218, type: !676)
+!739 = !DILocalVariable(name: "c", arg: 2, scope: !733, file: !3, line: 218, type: !4)
+!740 = !DILocation(line: 218, column: 14, scope: !733)
+!741 = !DILocation(line: 218, column: 25, scope: !733)
+!742 = !DILocation(line: 221, column: 12, scope: !733)
+!743 = !DILocation(line: 224, column: 23, scope: !733)
+!744 = !DILocation(line: 224, column: 9, scope: !733)
+!745 = !DILocation(line: 225, column: 6, scope: !733)
+!746 = !DILocation(line: 222, column: 13, scope: !733)
+!747 = distinct !DISubprogram(name: "recall_cursor_to_origin", linkageName: "_ZN3vga6Screen23recall_cursor_to_origin17h36f7c2dc6720c1ddE", scope: !573, file: !3, line: 228, type: !674, scopeLine: 228, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !748, retainedNodes: !749)
+!748 = !DISubprogram(name: "recall_cursor_to_origin", linkageName: "_ZN3vga6Screen23recall_cursor_to_origin17h36f7c2dc6720c1ddE", scope: !573, file: !3, line: 228, type: !674, scopeLine: 228, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!749 = !{!750}
+!750 = !DILocalVariable(name: "self", arg: 1, scope: !747, file: !3, line: 228, type: !676)
+!751 = !DILocation(line: 228, column: 32, scope: !747)
+!752 = !DILocation(line: 229, column: 27, scope: !747)
+!753 = !DILocation(line: 229, column: 9, scope: !747)
+!754 = !DILocation(line: 230, column: 6, scope: !747)
+!755 = distinct !DISubprogram(name: "print_new_line", linkageName: "_ZN3vga6Screen14print_new_line17h898feaf4523df5e9E", scope: !573, file: !3, line: 232, type: !674, scopeLine: 232, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !756, retainedNodes: !757)
+!756 = !DISubprogram(name: "print_new_line", linkageName: "_ZN3vga6Screen14print_new_line17h898feaf4523df5e9E", scope: !573, file: !3, line: 232, type: !674, scopeLine: 232, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !62)
+!757 = !{!758, !759, !761}
+!758 = !DILocalVariable(name: "self", arg: 1, scope: !755, file: !3, line: 232, type: !676)
+!759 = !DILocalVariable(name: "iter", scope: !760, file: !3, line: 235, type: !682, align: 8)
+!760 = distinct !DILexicalBlock(scope: !755, file: !3, line: 235, column: 17)
+!761 = !DILocalVariable(name: "row", scope: !762, file: !3, line: 235, type: !138, align: 8)
+!762 = distinct !DILexicalBlock(scope: !760, file: !3, line: 235, column: 60)
+!763 = !DILocation(line: 232, column: 23, scope: !755)
+!764 = !DILocation(line: 235, column: 28, scope: !760)
+!765 = !DILocation(line: 233, column: 15, scope: !755)
+!766 = !DILocation(line: 233, column: 9, scope: !755)
+!767 = !DILocation(line: 256, column: 6, scope: !755)
+!768 = !DILocation(line: 235, column: 28, scope: !755)
+!769 = !DILocation(line: 235, column: 46, scope: !755)
+!770 = !DILocation(line: 235, column: 17, scope: !760)
+!771 = !DILocation(line: 245, column: 20, scope: !755)
+!772 = !DILocation(line: 235, column: 21, scope: !760)
+!773 = !DILocation(line: 235, column: 21, scope: !762)
+!774 = !DILocation(line: 236, column: 24, scope: !762)
+!775 = !DILocation(line: 240, column: 47, scope: !762)
+!776 = !DILocation(line: 240, column: 36, scope: !762)
+!777 = !DILocation(line: 240, column: 21, scope: !762)
+!778 = !DILocation(line: 241, column: 43, scope: !762)
+!779 = !DILocation(line: 241, column: 21, scope: !762)
+!780 = !DILocation(line: 246, column: 17, scope: !755)
+!781 = !DILocation(line: 245, column: 43, scope: !755)
+!782 = !DILocation(line: 245, column: 17, scope: !755)
+!783 = distinct !DISubprogram(name: "print_text", linkageName: "_ZN3vga6Screen10print_text17h2a81e660c5a29280E", scope: !573, file: !3, line: 258, type: !784, scopeLine: 258, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !11, templateParams: !62, declaration: !786, retainedNodes: !787)
+!784 = !DISubroutineType(types: !785)
+!785 = !{null, !676, !133}
+!786 = !DISubprogram(name: "print_text", linkageName: "_ZN3vga6Screen10print_text17h2a81e660c5a29280E", scope: !573, file: !3, line: 258, type: !784, scopeLine: 258, flags: DIFlagPrototyped, spFlags: 0, templateParams: !62)
+!787 = !{!788, !789, !790, !792}
+!788 = !DILocalVariable(name: "self", arg: 1, scope: !783, file: !3, line: 258, type: !676)
+!789 = !DILocalVariable(name: "text", arg: 2, scope: !783, file: !3, line: 258, type: !133)
+!790 = !DILocalVariable(name: "iter", scope: !791, file: !3, line: 262, type: !406, align: 8)
+!791 = distinct !DILexicalBlock(scope: !783, file: !3, line: 262, column: 9)
+!792 = !DILocalVariable(name: "byte", scope: !793, file: !3, line: 262, type: !4, align: 1)
+!793 = distinct !DILexicalBlock(scope: !791, file: !3, line: 262, column: 34)
+!794 = !DILocation(line: 258, column: 23, scope: !783)
+!795 = !DILocation(line: 258, column: 34, scope: !783)
+!796 = !DILocation(line: 262, column: 21, scope: !791)
+!797 = !DILocation(line: 262, column: 21, scope: !783)
+!798 = !DILocation(line: 262, column: 9, scope: !791)
+!799 = !DILocation(line: 269, column: 6, scope: !783)
+!800 = !DILocation(line: 262, column: 13, scope: !791)
+!801 = !DILocation(line: 262, column: 13, scope: !793)
+!802 = !DILocation(line: 264, column: 17, scope: !793)
+!803 = !DILocation(line: 263, column: 13, scope: !793)
+!804 = !DILocation(line: 264, column: 32, scope: !793)
+!805 = !DILocation(line: 265, column: 26, scope: !793)
+!806 = !DILocation(line: 266, column: 33, scope: !793)
+!807 = !DILocation(line: 266, column: 22, scope: !793)
+!808 = distinct !DISubprogram(name: "write_str", linkageName: "_ZN48_$LT$vga..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17h2fa52469e35aa944E", scope: !809, file: !3, line: 273, type: !810, scopeLine: 273, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !11, templateParams: !62, retainedNodes: !812)
+!809 = !DINamespace(name: "{impl#4}", scope: !2)
+!810 = !DISubroutineType(types: !811)
+!811 = !{!199, !676, !133}
+!812 = !{!813, !814}
+!813 = !DILocalVariable(name: "self", arg: 1, scope: !808, file: !3, line: 273, type: !676)
+!814 = !DILocalVariable(name: "text", arg: 2, scope: !808, file: !3, line: 273, type: !133)
+!815 = !DILocation(line: 273, column: 18, scope: !808)
+!816 = !DILocation(line: 273, column: 29, scope: !808)
+!817 = !DILocation(line: 274, column: 12, scope: !808)
+!818 = !DILocation(line: 274, column: 9, scope: !808)
+!819 = !DILocation(line: 275, column: 6, scope: !808)

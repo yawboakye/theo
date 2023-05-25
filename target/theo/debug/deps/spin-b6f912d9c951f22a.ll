@@ -1,5 +1,5 @@
-; ModuleID = 'spin.ecf79e9da5b6bcce-cgu.0'
-source_filename = "spin.ecf79e9da5b6bcce-cgu.0"
+; ModuleID = 'spin.5356874f509152d3-cgu.0'
+source_filename = "spin.5356874f509152d3-cgu.0"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
@@ -20,7 +20,7 @@ target triple = "x86_64-obuasi-unknown-none"
 
 ; core::fmt::Arguments::new_const
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core3fmt9Arguments9new_const17h8bd02a0280dcf34eE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #0 !dbg !26 {
+define internal void @_ZN4core3fmt9Arguments9new_const17h0b3c54336b80185aE(ptr sret(%"core::fmt::Arguments<'_>") %0, ptr align 8 %pieces.0, i64 %pieces.1) unnamed_addr #0 !dbg !26 {
 start:
   %pieces.dbg.spill = alloca { ptr, i64 }, align 8
   %_7 = alloca { ptr, i64 }, align 8
@@ -29,64 +29,64 @@ start:
   store ptr %pieces.0, ptr %1, align 8
   %2 = getelementptr inbounds { ptr, i64 }, ptr %pieces.dbg.spill, i32 0, i32 1
   store i64 %pieces.1, ptr %2, align 8
-  call void @llvm.dbg.declare(metadata ptr %pieces.dbg.spill, metadata !159, metadata !DIExpression()), !dbg !160
-  %_2 = icmp ugt i64 %pieces.1, 1, !dbg !161
-  br i1 %_2, label %bb1, label %bb3, !dbg !161
+  call void @llvm.dbg.declare(metadata ptr %pieces.dbg.spill, metadata !160, metadata !DIExpression()), !dbg !161
+  %_2 = icmp ugt i64 %pieces.1, 1, !dbg !162
+  br i1 %_2, label %bb1, label %bb3, !dbg !162
 
 bb3:                                              ; preds = %start
-  store ptr null, ptr %_7, align 8, !dbg !162
-  %3 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 0, !dbg !163
-  store ptr %pieces.0, ptr %3, align 8, !dbg !163
-  %4 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 1, !dbg !163
-  store i64 %pieces.1, ptr %4, align 8, !dbg !163
-  %5 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 0, !dbg !163
-  %6 = load ptr, ptr %5, align 8, !dbg !163, !align !164, !noundef !41
-  %7 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 1, !dbg !163
-  %8 = load i64, ptr %7, align 8, !dbg !163
-  %9 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 2, !dbg !163
-  %10 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 0, !dbg !163
-  store ptr %6, ptr %10, align 8, !dbg !163
-  %11 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 1, !dbg !163
-  store i64 %8, ptr %11, align 8, !dbg !163
-  %12 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 1, !dbg !163
-  %13 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 0, !dbg !163
-  store ptr @alloc_513570631223a12912d85da2bec3b15a, ptr %13, align 8, !dbg !163
-  %14 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 1, !dbg !163
-  store i64 0, ptr %14, align 8, !dbg !163
-  ret void, !dbg !165
+  store ptr null, ptr %_7, align 8, !dbg !163
+  %3 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 0, !dbg !164
+  store ptr %pieces.0, ptr %3, align 8, !dbg !164
+  %4 = getelementptr inbounds { ptr, i64 }, ptr %0, i32 0, i32 1, !dbg !164
+  store i64 %pieces.1, ptr %4, align 8, !dbg !164
+  %5 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 0, !dbg !164
+  %6 = load ptr, ptr %5, align 8, !dbg !164, !align !165, !noundef !41
+  %7 = getelementptr inbounds { ptr, i64 }, ptr %_7, i32 0, i32 1, !dbg !164
+  %8 = load i64, ptr %7, align 8, !dbg !164
+  %9 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 2, !dbg !164
+  %10 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 0, !dbg !164
+  store ptr %6, ptr %10, align 8, !dbg !164
+  %11 = getelementptr inbounds { ptr, i64 }, ptr %9, i32 0, i32 1, !dbg !164
+  store i64 %8, ptr %11, align 8, !dbg !164
+  %12 = getelementptr inbounds %"core::fmt::Arguments<'_>", ptr %0, i32 0, i32 1, !dbg !164
+  %13 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 0, !dbg !164
+  store ptr @alloc_513570631223a12912d85da2bec3b15a, ptr %13, align 8, !dbg !164
+  %14 = getelementptr inbounds { ptr, i64 }, ptr %12, i32 0, i32 1, !dbg !164
+  store i64 0, ptr %14, align 8, !dbg !164
+  ret void, !dbg !166
 
 bb1:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17h8bd02a0280dcf34eE(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #4, !dbg !166
+  call void @_ZN4core3fmt9Arguments9new_const17h0b3c54336b80185aE(ptr sret(%"core::fmt::Arguments<'_>") %_5, ptr align 8 @alloc_560206a49c61adca6f3f0639a12632eb, i64 1) #4, !dbg !167
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hdd6269d09ded55c6E(ptr %_5, ptr align 8 @alloc_5eca5fde541bf3444e5a23d5419b88a4) #5, !dbg !166
-  unreachable, !dbg !166
+  call void @_ZN4core9panicking9panic_fmt17h2c59f66d276f88adE(ptr %_5, ptr align 8 @alloc_5eca5fde541bf3444e5a23d5419b88a4) #5, !dbg !167
+  unreachable, !dbg !167
 }
 
 ; core::sync::atomic::AtomicUsize::store
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core4sync6atomic11AtomicUsize5store17h445526e75e219bd2E(ptr align 8 %self, i64 %val, i8 %order) unnamed_addr #0 !dbg !167 {
+define internal void @_ZN4core4sync6atomic11AtomicUsize5store17ha8e721f3f849e04cE(ptr align 8 %self, i64 %val, i8 %order) unnamed_addr #0 !dbg !168 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %order.dbg.spill = alloca i8, align 1
   %val.dbg.spill = alloca i64, align 8
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !180, metadata !DIExpression()), !dbg !183
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !182, metadata !DIExpression()), !dbg !185
   store i64 %val, ptr %val.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %val.dbg.spill, metadata !181, metadata !DIExpression()), !dbg !184
+  call void @llvm.dbg.declare(metadata ptr %val.dbg.spill, metadata !183, metadata !DIExpression()), !dbg !186
   store i8 %order, ptr %order.dbg.spill, align 1
-  call void @llvm.dbg.declare(metadata ptr %order.dbg.spill, metadata !182, metadata !DIExpression()), !dbg !185
+  call void @llvm.dbg.declare(metadata ptr %order.dbg.spill, metadata !184, metadata !DIExpression()), !dbg !187
   store ptr %self, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !186, metadata !DIExpression()), !dbg !194
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !188, metadata !DIExpression()), !dbg !197
 ; call core::sync::atomic::atomic_store
-  call void @_ZN4core4sync6atomic12atomic_store17h20b0bad03211a0d5E(ptr %self, i64 %val, i8 %order) #4, !dbg !196
-  ret void, !dbg !197
+  call void @_ZN4core4sync6atomic12atomic_store17h46def8192006a28fE(ptr %self, i64 %val, i8 %order) #4, !dbg !199
+  ret void, !dbg !200
 }
 
 ; core::sync::atomic::atomic_store
 ; Function Attrs: inlinehint noredzone nounwind
-define void @_ZN4core4sync6atomic12atomic_store17h20b0bad03211a0d5E(ptr %dst, i64 %val, i8 %0) unnamed_addr #0 !dbg !198 {
+define void @_ZN4core4sync6atomic12atomic_store17h46def8192006a28fE(ptr %dst, i64 %val, i8 %0) unnamed_addr #0 !dbg !201 {
 start:
   %val.dbg.spill = alloca i64, align 8
   %dst.dbg.spill = alloca ptr, align 8
@@ -95,76 +95,76 @@ start:
   %order = alloca i8, align 1
   store i8 %0, ptr %order, align 1
   store ptr %dst, ptr %dst.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill, metadata !202, metadata !DIExpression()), !dbg !205
+  call void @llvm.dbg.declare(metadata ptr %dst.dbg.spill, metadata !205, metadata !DIExpression()), !dbg !208
   store i64 %val, ptr %val.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %val.dbg.spill, metadata !203, metadata !DIExpression()), !dbg !206
-  call void @llvm.dbg.declare(metadata ptr %order, metadata !204, metadata !DIExpression()), !dbg !207
-  %1 = load i8, ptr %order, align 1, !dbg !208, !range !209, !noundef !41
-  %_4 = zext i8 %1 to i64, !dbg !208
+  call void @llvm.dbg.declare(metadata ptr %val.dbg.spill, metadata !206, metadata !DIExpression()), !dbg !209
+  call void @llvm.dbg.declare(metadata ptr %order, metadata !207, metadata !DIExpression()), !dbg !210
+  %1 = load i8, ptr %order, align 1, !dbg !211, !range !212, !noundef !41
+  %_4 = zext i8 %1 to i64, !dbg !211
   switch i64 %_4, label %bb2 [
     i64 0, label %bb3
     i64 1, label %bb4
     i64 2, label %bb6
     i64 3, label %bb1
     i64 4, label %bb5
-  ], !dbg !210
+  ], !dbg !213
 
 bb2:                                              ; preds = %start
-  unreachable, !dbg !208
+  unreachable, !dbg !211
 
 bb3:                                              ; preds = %start
-  store atomic i64 %val, ptr %dst monotonic, align 8, !dbg !211
-  br label %bb9, !dbg !211
+  store atomic i64 %val, ptr %dst monotonic, align 8, !dbg !214
+  br label %bb9, !dbg !214
 
 bb4:                                              ; preds = %start
-  store atomic i64 %val, ptr %dst release, align 8, !dbg !212
-  br label %bb9, !dbg !212
+  store atomic i64 %val, ptr %dst release, align 8, !dbg !215
+  br label %bb9, !dbg !215
 
 bb6:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17h8bd02a0280dcf34eE(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_a5cc7fc528e53ce267236c14ebed42c5, i64 1) #4, !dbg !213
+  call void @_ZN4core3fmt9Arguments9new_const17h0b3c54336b80185aE(ptr sret(%"core::fmt::Arguments<'_>") %_6, ptr align 8 @alloc_a5cc7fc528e53ce267236c14ebed42c5, i64 1) #4, !dbg !216
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hdd6269d09ded55c6E(ptr %_6, ptr align 8 @alloc_68b10cf3cc2c97e68a48c763ebf843fc) #5, !dbg !213
-  unreachable, !dbg !213
+  call void @_ZN4core9panicking9panic_fmt17h2c59f66d276f88adE(ptr %_6, ptr align 8 @alloc_68b10cf3cc2c97e68a48c763ebf843fc) #5, !dbg !216
+  unreachable, !dbg !216
 
 bb1:                                              ; preds = %start
 ; call core::fmt::Arguments::new_const
-  call void @_ZN4core3fmt9Arguments9new_const17h8bd02a0280dcf34eE(ptr sret(%"core::fmt::Arguments<'_>") %_9, ptr align 8 @alloc_e8a173a411485b7e37220624c537a890, i64 1) #4, !dbg !214
+  call void @_ZN4core3fmt9Arguments9new_const17h0b3c54336b80185aE(ptr sret(%"core::fmt::Arguments<'_>") %_9, ptr align 8 @alloc_e8a173a411485b7e37220624c537a890, i64 1) #4, !dbg !217
 ; call core::panicking::panic_fmt
-  call void @_ZN4core9panicking9panic_fmt17hdd6269d09ded55c6E(ptr %_9, ptr align 8 @alloc_fe084041553722e3462c7d86b28656c2) #5, !dbg !214
-  unreachable, !dbg !214
+  call void @_ZN4core9panicking9panic_fmt17h2c59f66d276f88adE(ptr %_9, ptr align 8 @alloc_fe084041553722e3462c7d86b28656c2) #5, !dbg !217
+  unreachable, !dbg !217
 
 bb5:                                              ; preds = %start
-  store atomic i64 %val, ptr %dst seq_cst, align 8, !dbg !215
-  br label %bb9, !dbg !215
+  store atomic i64 %val, ptr %dst seq_cst, align 8, !dbg !218
+  br label %bb9, !dbg !218
 
 bb9:                                              ; preds = %bb3, %bb4, %bb5
-  ret void, !dbg !216
+  ret void, !dbg !219
 }
 
 ; <spin::once::Finish as core::ops::drop::Drop>::drop
 ; Function Attrs: noredzone nounwind
-define void @"_ZN60_$LT$spin..once..Finish$u20$as$u20$core..ops..drop..Drop$GT$4drop17hfb960538ce34b553E"(ptr align 8 %self) unnamed_addr #1 !dbg !217 {
+define void @"_ZN60_$LT$spin..once..Finish$u20$as$u20$core..ops..drop..Drop$GT$4drop17h7319d290b01cc52dE"(ptr align 8 %self) unnamed_addr #1 !dbg !220 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_4 = alloca i8, align 1
   store ptr %self, ptr %self.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !231, metadata !DIExpression()), !dbg !232
-  %0 = getelementptr inbounds { ptr, i8 }, ptr %self, i32 0, i32 1, !dbg !233
-  %1 = load i8, ptr %0, align 8, !dbg !233, !range !234, !noundef !41
-  %_2 = trunc i8 %1 to i1, !dbg !233
-  br i1 %_2, label %bb1, label %bb2, !dbg !233
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !234, metadata !DIExpression()), !dbg !235
+  %0 = getelementptr inbounds { ptr, i8 }, ptr %self, i32 0, i32 1, !dbg !236
+  %1 = load i8, ptr %0, align 8, !dbg !236, !range !237, !noundef !41
+  %_2 = trunc i8 %1 to i1, !dbg !236
+  br i1 %_2, label %bb1, label %bb2, !dbg !236
 
 bb2:                                              ; preds = %bb1, %start
-  ret void, !dbg !235
+  ret void, !dbg !238
 
 bb1:                                              ; preds = %start
-  %_5 = load ptr, ptr %self, align 8, !dbg !236, !nonnull !41, !align !164, !noundef !41
-  store i8 4, ptr %_4, align 1, !dbg !237
-  %2 = load i8, ptr %_4, align 1, !dbg !236, !range !209, !noundef !41
+  %_5 = load ptr, ptr %self, align 8, !dbg !239, !nonnull !41, !align !165, !noundef !41
+  store i8 4, ptr %_4, align 1, !dbg !240
+  %2 = load i8, ptr %_4, align 1, !dbg !239, !range !212, !noundef !41
 ; call core::sync::atomic::AtomicUsize::store
-  call void @_ZN4core4sync6atomic11AtomicUsize5store17h445526e75e219bd2E(ptr align 8 %_5, i64 3, i8 %2) #4, !dbg !236
-  br label %bb2, !dbg !236
+  call void @_ZN4core4sync6atomic11AtomicUsize5store17ha8e721f3f849e04cE(ptr align 8 %_5, i64 3, i8 %2) #4, !dbg !239
+  br label %bb2, !dbg !239
 }
 
 ; Function Attrs: nocallback nofree nosync nounwind speculatable willreturn memory(none)
@@ -172,7 +172,7 @@ declare void @llvm.dbg.declare(metadata, metadata, metadata) #2
 
 ; core::panicking::panic_fmt
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking9panic_fmt17hdd6269d09ded55c6E(ptr, ptr align 8) unnamed_addr #3
+declare void @_ZN4core9panicking9panic_fmt17h2c59f66d276f88adE(ptr, ptr align 8) unnamed_addr #3
 
 attributes #0 = { inlinehint noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
 attributes #1 = { noredzone nounwind "target-cpu"="generic" "target-features"="-mmx,-sse,+soft-float" }
@@ -187,8 +187,8 @@ attributes #5 = { noreturn nounwind }
 !0 = !{i32 8, !"PIC Level", i32 2}
 !1 = !{i32 2, !"Dwarf Version", i32 4}
 !2 = !{i32 2, !"Debug Info Version", i32 3}
-!3 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !4, producer: "clang LLVM (rustc version 1.71.0-nightly (dbba59457 2023-05-01))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !5, splitDebugInlining: false)
-!4 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.5.2/src/lib.rs/@/spin.ecf79e9da5b6bcce-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.5.2")
+!3 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !4, producer: "clang LLVM (rustc version 1.71.0-nightly (5ea3f0ae0 2023-05-23))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !5, splitDebugInlining: false)
+!4 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.5.2/src/lib.rs/@/spin.5356874f509152d3-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.5.2")
 !5 = !{!6, !17}
 !6 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "Alignment", scope: !8, file: !7, baseType: !11, size: 8, align: 8, flags: DIFlagEnumClass, elements: !12)
 !7 = !DIFile(filename: "<unknown>", directory: "")
@@ -210,9 +210,9 @@ attributes #5 = { noreturn nounwind }
 !23 = !DIEnumerator(name: "Acquire", value: 2, isUnsigned: true)
 !24 = !DIEnumerator(name: "AcqRel", value: 3, isUnsigned: true)
 !25 = !DIEnumerator(name: "SeqCst", value: 4, isUnsigned: true)
-!26 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17h8bd02a0280dcf34eE", scope: !28, file: !27, line: 297, type: !156, scopeLine: 297, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !41, retainedNodes: !158)
-!27 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "ef87442911d64d819773d1c3d54b7ba2")
-!28 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !9, file: !7, size: 384, align: 64, elements: !29, templateParams: !41, identifier: "84f4de322c722d4ecf7f26fdd881a12a")
+!26 = distinct !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17h0b3c54336b80185aE", scope: !28, file: !27, line: 297, type: !156, scopeLine: 297, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !41, declaration: !158, retainedNodes: !159)
+!27 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/fmt/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "1a732c99c57cb2d76a548fb6f43c5e00")
+!28 = !DICompositeType(tag: DW_TAG_structure_type, name: "Arguments", scope: !9, file: !7, size: 384, align: 64, elements: !29, templateParams: !41, identifier: "dec2eb544c6d114a1729e13a7474f40")
 !29 = !{!30, !43, !89}
 !30 = !DIDerivedType(tag: DW_TAG_member, name: "pieces", scope: !28, file: !7, baseType: !31, size: 128, align: 64)
 !31 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[&str]", file: !7, size: 128, align: 64, elements: !32, templateParams: !41, identifier: "d76b83877ddcb5cca61caf6bdca727ac")
@@ -228,20 +228,20 @@ attributes #5 = { noreturn nounwind }
 !41 = !{}
 !42 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !31, file: !7, baseType: !40, size: 64, align: 64, offset: 64)
 !43 = !DIDerivedType(tag: DW_TAG_member, name: "fmt", scope: !28, file: !7, baseType: !44, size: 128, align: 64, offset: 256)
-!44 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::Placeholder]>", scope: !45, file: !7, size: 128, align: 64, elements: !46, templateParams: !41, identifier: "45e7676749e8833fc9f6788a752fa233")
+!44 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&[core::fmt::rt::Placeholder]>", scope: !45, file: !7, size: 128, align: 64, elements: !46, templateParams: !41, identifier: "e23d17d3304655e6750a0ab2d9edac39")
 !45 = !DINamespace(name: "option", scope: !10)
 !46 = !{!47}
-!47 = !DICompositeType(tag: DW_TAG_variant_part, scope: !44, file: !7, size: 128, align: 64, elements: !48, templateParams: !41, identifier: "78fc5675d20b0b054937c9b243721b04", discriminator: !88)
+!47 = !DICompositeType(tag: DW_TAG_variant_part, scope: !44, file: !7, size: 128, align: 64, elements: !48, templateParams: !41, identifier: "bfd27e88b87b0ba5cd311f4e2a12036c", discriminator: !88)
 !48 = !{!49, !84}
 !49 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !47, file: !7, baseType: !50, size: 128, align: 64, extraData: i64 0)
-!50 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !44, file: !7, size: 128, align: 64, elements: !41, templateParams: !51, identifier: "7d6e0642c5fd326d5dedec8db5f1b626")
+!50 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !44, file: !7, size: 128, align: 64, elements: !41, templateParams: !51, identifier: "5aee93d5724874e8d5fc1e09008d60ef")
 !51 = !{!52}
 !52 = !DITemplateTypeParameter(name: "T", type: !53)
-!53 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Placeholder]", file: !7, size: 128, align: 64, elements: !54, templateParams: !41, identifier: "2bdd0a1d249b9615818490cbe02637d0")
+!53 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Placeholder]", file: !7, size: 128, align: 64, elements: !54, templateParams: !41, identifier: "5c2bff1ce87945dcf46beabe124a8ecc")
 !54 = !{!55, !83}
 !55 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !53, file: !7, baseType: !56, size: 64, align: 64)
 !56 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !57, size: 64, align: 64, dwarfAddressSpace: 0)
-!57 = !DICompositeType(tag: DW_TAG_structure_type, name: "Placeholder", scope: !8, file: !7, size: 448, align: 64, elements: !58, templateParams: !41, identifier: "60d1cd8e27ed5e572e6b6b32ddcefdd4")
+!57 = !DICompositeType(tag: DW_TAG_structure_type, name: "Placeholder", scope: !8, file: !7, size: 448, align: 64, elements: !58, templateParams: !41, identifier: "131f69b9dc640c7b405d0c75880ec09c")
 !58 = !{!59, !60, !62, !63, !65, !82}
 !59 = !DIDerivedType(tag: DW_TAG_member, name: "position", scope: !57, file: !7, baseType: !40, size: 64, align: 64, offset: 256)
 !60 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !57, file: !7, baseType: !61, size: 32, align: 32, offset: 320)
@@ -250,90 +250,90 @@ attributes #5 = { noreturn nounwind }
 !63 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !57, file: !7, baseType: !64, size: 32, align: 32, offset: 352)
 !64 = !DIBasicType(name: "u32", size: 32, encoding: DW_ATE_unsigned)
 !65 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !57, file: !7, baseType: !66, size: 128, align: 64)
-!66 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !8, file: !7, size: 128, align: 64, elements: !67, templateParams: !41, identifier: "8e436bf796d1bd1040afe66a54932e93")
+!66 = !DICompositeType(tag: DW_TAG_structure_type, name: "Count", scope: !8, file: !7, size: 128, align: 64, elements: !67, templateParams: !41, identifier: "de49f2e711729c26a3183f82a67e820b")
 !67 = !{!68}
-!68 = !DICompositeType(tag: DW_TAG_variant_part, scope: !66, file: !7, size: 128, align: 64, elements: !69, templateParams: !41, identifier: "a16b1bf0ef6abe7338d550f54b3197c9", discriminator: !80)
+!68 = !DICompositeType(tag: DW_TAG_variant_part, scope: !66, file: !7, size: 128, align: 64, elements: !69, templateParams: !41, identifier: "f8aee855d501562836c2bde1eded98b", discriminator: !80)
 !69 = !{!70, !74, !78}
 !70 = !DIDerivedType(tag: DW_TAG_member, name: "Is", scope: !68, file: !7, baseType: !71, size: 128, align: 64, extraData: i64 0)
-!71 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !66, file: !7, size: 128, align: 64, elements: !72, templateParams: !41, identifier: "bb2788de63ecf655614eae44833a9683")
+!71 = !DICompositeType(tag: DW_TAG_structure_type, name: "Is", scope: !66, file: !7, size: 128, align: 64, elements: !72, templateParams: !41, identifier: "ddb8199c8dc12775d50d3067915f0ee1")
 !72 = !{!73}
 !73 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !71, file: !7, baseType: !40, size: 64, align: 64, offset: 64)
 !74 = !DIDerivedType(tag: DW_TAG_member, name: "Param", scope: !68, file: !7, baseType: !75, size: 128, align: 64, extraData: i64 1)
-!75 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !66, file: !7, size: 128, align: 64, elements: !76, templateParams: !41, identifier: "45b8dfec94a90db1ad28af7e19954195")
+!75 = !DICompositeType(tag: DW_TAG_structure_type, name: "Param", scope: !66, file: !7, size: 128, align: 64, elements: !76, templateParams: !41, identifier: "a474205d0b1ebc8668aca1dd185e6dd8")
 !76 = !{!77}
 !77 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !75, file: !7, baseType: !40, size: 64, align: 64, offset: 64)
 !78 = !DIDerivedType(tag: DW_TAG_member, name: "Implied", scope: !68, file: !7, baseType: !79, size: 128, align: 64, extraData: i64 2)
-!79 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !66, file: !7, size: 128, align: 64, elements: !41, identifier: "b2dd58a70f39c2d6f76f6e2aef3afc0e")
+!79 = !DICompositeType(tag: DW_TAG_structure_type, name: "Implied", scope: !66, file: !7, size: 128, align: 64, elements: !41, identifier: "78259875ca0457d6d843b6907f3ee2cd")
 !80 = !DIDerivedType(tag: DW_TAG_member, scope: !66, file: !7, baseType: !81, size: 64, align: 64, flags: DIFlagArtificial)
 !81 = !DIBasicType(name: "u64", size: 64, encoding: DW_ATE_unsigned)
 !82 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !57, file: !7, baseType: !66, size: 128, align: 64, offset: 128)
 !83 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !53, file: !7, baseType: !40, size: 64, align: 64, offset: 64)
 !84 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !47, file: !7, baseType: !85, size: 128, align: 64)
-!85 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !44, file: !7, size: 128, align: 64, elements: !86, templateParams: !51, identifier: "17825c15133f27503bca321877d808b")
+!85 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !44, file: !7, size: 128, align: 64, elements: !86, templateParams: !51, identifier: "651380f2d7c231ae75361478798df683")
 !86 = !{!87}
 !87 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !85, file: !7, baseType: !53, size: 128, align: 64)
 !88 = !DIDerivedType(tag: DW_TAG_member, scope: !44, file: !7, baseType: !81, size: 64, align: 64, flags: DIFlagArtificial)
 !89 = !DIDerivedType(tag: DW_TAG_member, name: "args", scope: !28, file: !7, baseType: !90, size: 128, align: 64, offset: 128)
-!90 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Argument]", file: !7, size: 128, align: 64, elements: !91, templateParams: !41, identifier: "b8c00ffcd99aa185b2b067e76efe6873")
+!90 = !DICompositeType(tag: DW_TAG_structure_type, name: "&[core::fmt::rt::Argument]", file: !7, size: 128, align: 64, elements: !91, templateParams: !41, identifier: "7aaa4600b8b1bb5ceecb4befe265d8a8")
 !91 = !{!92, !155}
 !92 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !90, file: !7, baseType: !93, size: 64, align: 64)
 !93 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !94, size: 64, align: 64, dwarfAddressSpace: 0)
-!94 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !8, file: !7, size: 128, align: 64, elements: !95, templateParams: !41, identifier: "92df9959c1cdfbcdd7133c99bcf5419")
+!94 = !DICompositeType(tag: DW_TAG_structure_type, name: "Argument", scope: !8, file: !7, size: 128, align: 64, elements: !95, templateParams: !41, identifier: "1715f8ca39c24c1465154510b099d5db")
 !95 = !{!96, !100}
 !96 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !94, file: !7, baseType: !97, size: 64, align: 64)
 !97 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::fmt::rt::{extern#0}::Opaque", baseType: !98, size: 64, align: 64, dwarfAddressSpace: 0)
-!98 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !99, file: !7, align: 8, elements: !41, identifier: "9b221ef387fa4c24dae3649531e7392e")
+!98 = !DICompositeType(tag: DW_TAG_structure_type, name: "Opaque", scope: !99, file: !7, align: 8, elements: !41, identifier: "b53b9c37284ad14843698905c0a781ef")
 !99 = !DINamespace(name: "{extern#0}", scope: !8)
 !100 = !DIDerivedType(tag: DW_TAG_member, name: "formatter", scope: !94, file: !7, baseType: !101, size: 64, align: 64, offset: 64)
 !101 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "fn(&core::fmt::rt::{extern#0}::Opaque, &mut core::fmt::Formatter) -> core::result::Result<(), core::fmt::Error>", baseType: !102, size: 64, align: 64, dwarfAddressSpace: 0)
 !102 = !DISubroutineType(types: !103)
 !103 = !{!104, !97, !123}
-!104 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !105, file: !7, size: 8, align: 8, elements: !106, templateParams: !41, identifier: "c7c3ce2bbdc31e3d58704c1a88c0824e")
+!104 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<(), core::fmt::Error>", scope: !105, file: !7, size: 8, align: 8, elements: !106, templateParams: !41, identifier: "22c75a34514fa785fe8d5e5737b404a")
 !105 = !DINamespace(name: "result", scope: !10)
 !106 = !{!107}
-!107 = !DICompositeType(tag: DW_TAG_variant_part, scope: !104, file: !7, size: 8, align: 8, elements: !108, templateParams: !41, identifier: "74931662ea2e848975e6c7d35e314c42", discriminator: !122)
+!107 = !DICompositeType(tag: DW_TAG_variant_part, scope: !104, file: !7, size: 8, align: 8, elements: !108, templateParams: !41, identifier: "318b8b14c370a5a4f50890e5a30a4497", discriminator: !122)
 !108 = !{!109, !118}
 !109 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !107, file: !7, baseType: !110, size: 8, align: 8, extraData: i64 0)
-!110 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !104, file: !7, size: 8, align: 8, elements: !111, templateParams: !114, identifier: "d91e207f895b5ed21304fa16506e0f28")
+!110 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !104, file: !7, size: 8, align: 8, elements: !111, templateParams: !114, identifier: "5b323728d71ad8b54f91e8647fb6c225")
 !111 = !{!112}
 !112 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !110, file: !7, baseType: !113, align: 8, offset: 8)
 !113 = !DIBasicType(name: "()", encoding: DW_ATE_unsigned)
 !114 = !{!115, !116}
 !115 = !DITemplateTypeParameter(name: "T", type: !113)
 !116 = !DITemplateTypeParameter(name: "E", type: !117)
-!117 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !9, file: !7, align: 8, elements: !41, identifier: "e283c74b9cbd588272e9778de24cf5a7")
+!117 = !DICompositeType(tag: DW_TAG_structure_type, name: "Error", scope: !9, file: !7, align: 8, elements: !41, identifier: "fc30e04e843f09017d3a1f431d2f6e0c")
 !118 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !107, file: !7, baseType: !119, size: 8, align: 8, extraData: i64 1)
-!119 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !104, file: !7, size: 8, align: 8, elements: !120, templateParams: !114, identifier: "d8a7c61bfdd1bc42e5e7ca612a3d7525")
+!119 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !104, file: !7, size: 8, align: 8, elements: !120, templateParams: !114, identifier: "a4826728ee7be77ec8568eb24e01c72")
 !120 = !{!121}
 !121 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !119, file: !7, baseType: !117, align: 8, offset: 8)
 !122 = !DIDerivedType(tag: DW_TAG_member, scope: !104, file: !7, baseType: !11, size: 8, align: 8, flags: DIFlagArtificial)
 !123 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut core::fmt::Formatter", baseType: !124, size: 64, align: 64, dwarfAddressSpace: 0)
-!124 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !9, file: !7, size: 512, align: 64, elements: !125, templateParams: !41, identifier: "bc7f0caae71140a04b17743f5a695b51")
+!124 = !DICompositeType(tag: DW_TAG_structure_type, name: "Formatter", scope: !9, file: !7, size: 512, align: 64, elements: !125, templateParams: !41, identifier: "a84a5bdbf0499ca1d68196c4b862c039")
 !125 = !{!126, !127, !128, !129, !143, !144}
 !126 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !124, file: !7, baseType: !64, size: 32, align: 32, offset: 416)
 !127 = !DIDerivedType(tag: DW_TAG_member, name: "fill", scope: !124, file: !7, baseType: !61, size: 32, align: 32, offset: 384)
 !128 = !DIDerivedType(tag: DW_TAG_member, name: "align", scope: !124, file: !7, baseType: !6, size: 8, align: 8, offset: 448)
 !129 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !124, file: !7, baseType: !130, size: 128, align: 64)
-!130 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !45, file: !7, size: 128, align: 64, elements: !131, templateParams: !41, identifier: "8ea6b5cb0daf623655668c8afb3a46")
+!130 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<usize>", scope: !45, file: !7, size: 128, align: 64, elements: !131, templateParams: !41, identifier: "9ff7c8d78ada7de0ac9d763d1c46855f")
 !131 = !{!132}
-!132 = !DICompositeType(tag: DW_TAG_variant_part, scope: !130, file: !7, size: 128, align: 64, elements: !133, templateParams: !41, identifier: "7e31bac4b704be2591b521f49ce53126", discriminator: !142)
+!132 = !DICompositeType(tag: DW_TAG_variant_part, scope: !130, file: !7, size: 128, align: 64, elements: !133, templateParams: !41, identifier: "4121c4c375fd14965cbbd4a52ee80751", discriminator: !142)
 !133 = !{!134, !138}
 !134 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !132, file: !7, baseType: !135, size: 128, align: 64, extraData: i64 0)
-!135 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !130, file: !7, size: 128, align: 64, elements: !41, templateParams: !136, identifier: "728f4cb196695ca2ab2ce43263435122")
+!135 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !130, file: !7, size: 128, align: 64, elements: !41, templateParams: !136, identifier: "2820df4bdcb3911085cbffae781ae71")
 !136 = !{!137}
 !137 = !DITemplateTypeParameter(name: "T", type: !40)
 !138 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !132, file: !7, baseType: !139, size: 128, align: 64, extraData: i64 1)
-!139 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !130, file: !7, size: 128, align: 64, elements: !140, templateParams: !136, identifier: "2b2f9f3a1d6e4246fb431560905aff2f")
+!139 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !130, file: !7, size: 128, align: 64, elements: !140, templateParams: !136, identifier: "3de76324e4613a017cfb22686952e8ce")
 !140 = !{!141}
 !141 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !139, file: !7, baseType: !40, size: 64, align: 64, offset: 64)
 !142 = !DIDerivedType(tag: DW_TAG_member, scope: !130, file: !7, baseType: !81, size: 64, align: 64, flags: DIFlagArtificial)
 !143 = !DIDerivedType(tag: DW_TAG_member, name: "precision", scope: !124, file: !7, baseType: !130, size: 128, align: 64, offset: 128)
 !144 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !124, file: !7, baseType: !145, size: 128, align: 64, offset: 256)
-!145 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !7, size: 128, align: 64, elements: !146, templateParams: !41, identifier: "2cf87fbd87715f36bd216baa1303cbf0")
+!145 = !DICompositeType(tag: DW_TAG_structure_type, name: "&mut dyn core::fmt::Write", file: !7, size: 128, align: 64, elements: !146, templateParams: !41, identifier: "841e47680ccca04665b2034bf5815694")
 !146 = !{!147, !150}
 !147 = !DIDerivedType(tag: DW_TAG_member, name: "pointer", scope: !145, file: !7, baseType: !148, size: 64, align: 64)
 !148 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !149, size: 64, align: 64, dwarfAddressSpace: 0)
-!149 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !7, align: 8, elements: !41, identifier: "a80c365aa420df7c35abe384a2fa122f")
+!149 = !DICompositeType(tag: DW_TAG_structure_type, name: "dyn core::fmt::Write", file: !7, align: 8, elements: !41, identifier: "d63695003f7c60186849daf2e0ab45a2")
 !150 = !DIDerivedType(tag: DW_TAG_member, name: "vtable", scope: !145, file: !7, baseType: !151, size: 64, align: 64, offset: 64)
 !151 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&[usize; 3]", baseType: !152, size: 64, align: 64, dwarfAddressSpace: 0)
 !152 = !DICompositeType(tag: DW_TAG_array_type, baseType: !40, size: 192, align: 64, elements: !153)
@@ -342,83 +342,86 @@ attributes #5 = { noreturn nounwind }
 !155 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !90, file: !7, baseType: !40, size: 64, align: 64, offset: 64)
 !156 = !DISubroutineType(types: !157)
 !157 = !{!28, !31}
-!158 = !{!159}
-!159 = !DILocalVariable(name: "pieces", arg: 1, scope: !26, file: !27, line: 297, type: !31)
-!160 = !DILocation(line: 297, column: 28, scope: !26)
-!161 = !DILocation(line: 298, column: 12, scope: !26)
-!162 = !DILocation(line: 301, column: 34, scope: !26)
-!163 = !DILocation(line: 301, column: 9, scope: !26)
-!164 = !{i64 8}
-!165 = !DILocation(line: 302, column: 6, scope: !26)
-!166 = !DILocation(line: 299, column: 13, scope: !26)
-!167 = distinct !DISubprogram(name: "store", linkageName: "_ZN4core4sync6atomic11AtomicUsize5store17h445526e75e219bd2E", scope: !169, file: !168, line: 2283, type: !176, scopeLine: 2283, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !41, retainedNodes: !179)
-!168 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/sync/atomic.rs", directory: "", checksumkind: CSK_MD5, checksum: "f10535d78bf61205f540f8fe0965908b")
-!169 = !DICompositeType(tag: DW_TAG_structure_type, name: "AtomicUsize", scope: !18, file: !7, size: 64, align: 64, elements: !170, templateParams: !41, identifier: "96aa113e1bfe90e7d61ad001f3b45ae5")
-!170 = !{!171}
-!171 = !DIDerivedType(tag: DW_TAG_member, name: "v", scope: !169, file: !7, baseType: !172, size: 64, align: 64)
-!172 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<usize>", scope: !173, file: !7, size: 64, align: 64, elements: !174, templateParams: !136, identifier: "3448ea56aa98dd3220ed64c0302dee9d")
-!173 = !DINamespace(name: "cell", scope: !10)
-!174 = !{!175}
-!175 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !172, file: !7, baseType: !40, size: 64, align: 64)
-!176 = !DISubroutineType(types: !177)
-!177 = !{null, !178, !40, !17}
-!178 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::sync::atomic::AtomicUsize", baseType: !169, size: 64, align: 64, dwarfAddressSpace: 0)
-!179 = !{!180, !181, !182}
-!180 = !DILocalVariable(name: "self", arg: 1, scope: !167, file: !168, line: 2283, type: !178)
-!181 = !DILocalVariable(name: "val", arg: 2, scope: !167, file: !168, line: 2283, type: !40)
-!182 = !DILocalVariable(name: "order", arg: 3, scope: !167, file: !168, line: 2283, type: !17)
-!183 = !DILocation(line: 2283, column: 26, scope: !167)
-!184 = !DILocation(line: 2283, column: 33, scope: !167)
-!185 = !DILocation(line: 2283, column: 49, scope: !167)
-!186 = !DILocalVariable(name: "self", arg: 1, scope: !187, file: !188, line: 2052, type: !192)
-!187 = distinct !DISubprogram(name: "get<usize>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h0cced070ef7b973bE", scope: !172, file: !188, line: 2052, type: !189, scopeLine: 2052, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !136, retainedNodes: !193)
-!188 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/cell.rs", directory: "", checksumkind: CSK_MD5, checksum: "ece7037919146d853ca689245947aa67")
-!189 = !DISubroutineType(types: !190)
-!190 = !{!191, !192}
-!191 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut usize", baseType: !40, size: 64, align: 64, dwarfAddressSpace: 0)
-!192 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<usize>", baseType: !172, size: 64, align: 64, dwarfAddressSpace: 0)
-!193 = !{!186}
-!194 = !DILocation(line: 2052, column: 22, scope: !187, inlinedAt: !195)
-!195 = distinct !DILocation(line: 2285, column: 39, scope: !167)
-!196 = !DILocation(line: 2285, column: 26, scope: !167)
-!197 = !DILocation(line: 2286, column: 14, scope: !167)
-!198 = distinct !DISubprogram(name: "atomic_store<usize>", linkageName: "_ZN4core4sync6atomic12atomic_store17h20b0bad03211a0d5E", scope: !18, file: !168, line: 3134, type: !199, scopeLine: 3134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !136, retainedNodes: !201)
-!199 = !DISubroutineType(types: !200)
-!200 = !{null, !191, !40, !17}
-!201 = !{!202, !203, !204}
-!202 = !DILocalVariable(name: "dst", arg: 1, scope: !198, file: !168, line: 3134, type: !191)
-!203 = !DILocalVariable(name: "val", arg: 2, scope: !198, file: !168, line: 3134, type: !40)
-!204 = !DILocalVariable(name: "order", arg: 3, scope: !198, file: !168, line: 3134, type: !17)
-!205 = !DILocation(line: 3134, column: 33, scope: !198)
-!206 = !DILocation(line: 3134, column: 46, scope: !198)
-!207 = !DILocation(line: 3134, column: 54, scope: !198)
-!208 = !DILocation(line: 3137, column: 15, scope: !198)
-!209 = !{i8 0, i8 5}
-!210 = !DILocation(line: 3137, column: 9, scope: !198)
-!211 = !DILocation(line: 3138, column: 24, scope: !198)
-!212 = !DILocation(line: 3139, column: 24, scope: !198)
-!213 = !DILocation(line: 3141, column: 24, scope: !198)
-!214 = !DILocation(line: 3142, column: 23, scope: !198)
-!215 = !DILocation(line: 3140, column: 23, scope: !198)
-!216 = !DILocation(line: 3145, column: 2, scope: !198)
-!217 = distinct !DISubprogram(name: "drop", linkageName: "_ZN60_$LT$spin..once..Finish$u20$as$u20$core..ops..drop..Drop$GT$4drop17hfb960538ce34b553E", scope: !219, file: !218, line: 164, type: !222, scopeLine: 164, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !41, retainedNodes: !230)
-!218 = !DIFile(filename: "src/once.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.5.2", checksumkind: CSK_MD5, checksum: "69004968d2d982c22c33586bc6b4d134")
-!219 = !DINamespace(name: "{impl#4}", scope: !220)
-!220 = !DINamespace(name: "once", scope: !221)
-!221 = !DINamespace(name: "spin", scope: null)
-!222 = !DISubroutineType(types: !223)
-!223 = !{null, !224}
-!224 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::once::Finish", baseType: !225, size: 64, align: 64, dwarfAddressSpace: 0)
-!225 = !DICompositeType(tag: DW_TAG_structure_type, name: "Finish", scope: !220, file: !7, size: 128, align: 64, elements: !226, templateParams: !41, identifier: "4c9a10af0fd96eb39f0af15985d6820b")
-!226 = !{!227, !228}
-!227 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !225, file: !7, baseType: !178, size: 64, align: 64)
-!228 = !DIDerivedType(tag: DW_TAG_member, name: "panicked", scope: !225, file: !7, baseType: !229, size: 8, align: 8, offset: 64)
-!229 = !DIBasicType(name: "bool", size: 8, encoding: DW_ATE_boolean)
-!230 = !{!231}
-!231 = !DILocalVariable(name: "self", arg: 1, scope: !217, file: !218, line: 164, type: !224)
-!232 = !DILocation(line: 164, column: 13, scope: !217)
-!233 = !DILocation(line: 165, column: 12, scope: !217)
-!234 = !{i8 0, i8 2}
-!235 = !DILocation(line: 168, column: 6, scope: !217)
-!236 = !DILocation(line: 166, column: 13, scope: !217)
-!237 = !DILocation(line: 166, column: 40, scope: !217)
+!158 = !DISubprogram(name: "new_const", linkageName: "_ZN4core3fmt9Arguments9new_const17h0b3c54336b80185aE", scope: !28, file: !27, line: 297, type: !156, scopeLine: 297, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !41)
+!159 = !{!160}
+!160 = !DILocalVariable(name: "pieces", arg: 1, scope: !26, file: !27, line: 297, type: !31)
+!161 = !DILocation(line: 297, column: 28, scope: !26)
+!162 = !DILocation(line: 298, column: 12, scope: !26)
+!163 = !DILocation(line: 301, column: 34, scope: !26)
+!164 = !DILocation(line: 301, column: 9, scope: !26)
+!165 = !{i64 8}
+!166 = !DILocation(line: 302, column: 6, scope: !26)
+!167 = !DILocation(line: 299, column: 13, scope: !26)
+!168 = distinct !DISubprogram(name: "store", linkageName: "_ZN4core4sync6atomic11AtomicUsize5store17ha8e721f3f849e04cE", scope: !170, file: !169, line: 2283, type: !177, scopeLine: 2283, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !41, declaration: !180, retainedNodes: !181)
+!169 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/sync/atomic.rs", directory: "", checksumkind: CSK_MD5, checksum: "f10535d78bf61205f540f8fe0965908b")
+!170 = !DICompositeType(tag: DW_TAG_structure_type, name: "AtomicUsize", scope: !18, file: !7, size: 64, align: 64, elements: !171, templateParams: !41, identifier: "bc29413ac92bd4d5368e07244b51db87")
+!171 = !{!172}
+!172 = !DIDerivedType(tag: DW_TAG_member, name: "v", scope: !170, file: !7, baseType: !173, size: 64, align: 64)
+!173 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<usize>", scope: !174, file: !7, size: 64, align: 64, elements: !175, templateParams: !136, identifier: "e476c5763eb9a9e7aa18b139ff514fa8")
+!174 = !DINamespace(name: "cell", scope: !10)
+!175 = !{!176}
+!176 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !173, file: !7, baseType: !40, size: 64, align: 64)
+!177 = !DISubroutineType(types: !178)
+!178 = !{null, !179, !40, !17}
+!179 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::sync::atomic::AtomicUsize", baseType: !170, size: 64, align: 64, dwarfAddressSpace: 0)
+!180 = !DISubprogram(name: "store", linkageName: "_ZN4core4sync6atomic11AtomicUsize5store17ha8e721f3f849e04cE", scope: !170, file: !169, line: 2283, type: !177, scopeLine: 2283, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !41)
+!181 = !{!182, !183, !184}
+!182 = !DILocalVariable(name: "self", arg: 1, scope: !168, file: !169, line: 2283, type: !179)
+!183 = !DILocalVariable(name: "val", arg: 2, scope: !168, file: !169, line: 2283, type: !40)
+!184 = !DILocalVariable(name: "order", arg: 3, scope: !168, file: !169, line: 2283, type: !17)
+!185 = !DILocation(line: 2283, column: 26, scope: !168)
+!186 = !DILocation(line: 2283, column: 33, scope: !168)
+!187 = !DILocation(line: 2283, column: 49, scope: !168)
+!188 = !DILocalVariable(name: "self", arg: 1, scope: !189, file: !190, line: 2073, type: !194)
+!189 = distinct !DISubprogram(name: "get<usize>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17he3b7386e01cd48ebE", scope: !173, file: !190, line: 2073, type: !191, scopeLine: 2073, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !136, declaration: !195, retainedNodes: !196)
+!190 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/cell.rs", directory: "", checksumkind: CSK_MD5, checksum: "3c11b322ef4895b2a6cf9b3a40166448")
+!191 = !DISubroutineType(types: !192)
+!192 = !{!193, !194}
+!193 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut usize", baseType: !40, size: 64, align: 64, dwarfAddressSpace: 0)
+!194 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<usize>", baseType: !173, size: 64, align: 64, dwarfAddressSpace: 0)
+!195 = !DISubprogram(name: "get<usize>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17he3b7386e01cd48ebE", scope: !173, file: !190, line: 2073, type: !191, scopeLine: 2073, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !136)
+!196 = !{!188}
+!197 = !DILocation(line: 2073, column: 22, scope: !189, inlinedAt: !198)
+!198 = distinct !DILocation(line: 2285, column: 39, scope: !168)
+!199 = !DILocation(line: 2285, column: 26, scope: !168)
+!200 = !DILocation(line: 2286, column: 14, scope: !168)
+!201 = distinct !DISubprogram(name: "atomic_store<usize>", linkageName: "_ZN4core4sync6atomic12atomic_store17h46def8192006a28fE", scope: !18, file: !169, line: 3134, type: !202, scopeLine: 3134, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !3, templateParams: !136, retainedNodes: !204)
+!202 = !DISubroutineType(types: !203)
+!203 = !{null, !193, !40, !17}
+!204 = !{!205, !206, !207}
+!205 = !DILocalVariable(name: "dst", arg: 1, scope: !201, file: !169, line: 3134, type: !193)
+!206 = !DILocalVariable(name: "val", arg: 2, scope: !201, file: !169, line: 3134, type: !40)
+!207 = !DILocalVariable(name: "order", arg: 3, scope: !201, file: !169, line: 3134, type: !17)
+!208 = !DILocation(line: 3134, column: 33, scope: !201)
+!209 = !DILocation(line: 3134, column: 46, scope: !201)
+!210 = !DILocation(line: 3134, column: 54, scope: !201)
+!211 = !DILocation(line: 3137, column: 15, scope: !201)
+!212 = !{i8 0, i8 5}
+!213 = !DILocation(line: 3137, column: 9, scope: !201)
+!214 = !DILocation(line: 3138, column: 24, scope: !201)
+!215 = !DILocation(line: 3139, column: 24, scope: !201)
+!216 = !DILocation(line: 3141, column: 24, scope: !201)
+!217 = !DILocation(line: 3142, column: 23, scope: !201)
+!218 = !DILocation(line: 3140, column: 23, scope: !201)
+!219 = !DILocation(line: 3145, column: 2, scope: !201)
+!220 = distinct !DISubprogram(name: "drop", linkageName: "_ZN60_$LT$spin..once..Finish$u20$as$u20$core..ops..drop..Drop$GT$4drop17h7319d290b01cc52dE", scope: !222, file: !221, line: 164, type: !225, scopeLine: 164, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !3, templateParams: !41, retainedNodes: !233)
+!221 = !DIFile(filename: "src/once.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.5.2", checksumkind: CSK_MD5, checksum: "69004968d2d982c22c33586bc6b4d134")
+!222 = !DINamespace(name: "{impl#4}", scope: !223)
+!223 = !DINamespace(name: "once", scope: !224)
+!224 = !DINamespace(name: "spin", scope: null)
+!225 = !DISubroutineType(types: !226)
+!226 = !{null, !227}
+!227 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::once::Finish", baseType: !228, size: 64, align: 64, dwarfAddressSpace: 0)
+!228 = !DICompositeType(tag: DW_TAG_structure_type, name: "Finish", scope: !223, file: !7, size: 128, align: 64, elements: !229, templateParams: !41, identifier: "722d3d5ab3b6de281ec49dbe60fd7c04")
+!229 = !{!230, !231}
+!230 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !228, file: !7, baseType: !179, size: 64, align: 64)
+!231 = !DIDerivedType(tag: DW_TAG_member, name: "panicked", scope: !228, file: !7, baseType: !232, size: 8, align: 8, offset: 64)
+!232 = !DIBasicType(name: "bool", size: 8, encoding: DW_ATE_boolean)
+!233 = !{!234}
+!234 = !DILocalVariable(name: "self", arg: 1, scope: !220, file: !221, line: 164, type: !227)
+!235 = !DILocation(line: 164, column: 13, scope: !220)
+!236 = !DILocation(line: 165, column: 12, scope: !220)
+!237 = !{i8 0, i8 2}
+!238 = !DILocation(line: 168, column: 6, scope: !220)
+!239 = !DILocation(line: 166, column: 13, scope: !220)
+!240 = !DILocation(line: 166, column: 40, scope: !220)

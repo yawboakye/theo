@@ -41,6 +41,7 @@ name = "keyboard"
 version = "0.1.0"
 dependencies = [
  "pc-keyboard",
+ "x86_64",
 ]
 
 [[package]]
