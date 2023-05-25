@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 pc-keyboard = "0.7.0"
+x86_64 = { version = "0.14.10", features = ["inline_asm", "external_asm"] }
