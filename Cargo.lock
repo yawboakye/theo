@@ -64,6 +64,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "memory"
+version = "0.1.0"
+
+[[package]]
 name = "pc-keyboard"
 version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -112,6 +116,7 @@ dependencies = [
  "cpu_interrupts",
  "keyboard",
  "lazy_static",
+ "memory",
  "spin 0.9.8",
  "uart_16550",
  "vga",

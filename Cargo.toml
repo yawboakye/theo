@@ -10,6 +10,7 @@ bootloader = "0.9.23"
 cpu_interrupts = { version = "0.1.0", path = "cpu_interrupts" }
 keyboard = { version = "0.1.0", path = "keyboard" }
 lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
+memory = { version = "0.1.0", path = "memory" }
 spin = "0.9.4"
 uart_16550 = "0.2.18"
 vga = { path = "vga", version = "0.1.0" }
