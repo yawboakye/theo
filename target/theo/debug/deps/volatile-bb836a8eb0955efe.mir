@@ -1,0 +1,763 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15>::fmt(_1: &ReadWrite, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+    let mut _0: core::result::Result<(), core::fmt::Error>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+    let _3: &str;                        // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+
+    bb0: {
+        _3 = const "ReadWrite";          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a mut Formatter<'_>, &'b str) -> Result<(), core::fmt::Error> {Formatter::<'_>::write_str}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:15: 8:15
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:23: 8:28>::clone(_1: &ReadWrite) -> ReadWrite {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:23: 8:28
+    let mut _0: access::ReadWrite;       // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:23: 8:28
+
+    bb0: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:28: 8:28
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15>::fmt(_1: &ReadOnly, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+    let mut _0: core::result::Result<(), core::fmt::Error>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+    let _3: &str;                        // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+
+    bb0: {
+        _3 = const "ReadOnly";           // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a mut Formatter<'_>, &'b str) -> Result<(), core::fmt::Error> {Formatter::<'_>::write_str}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:15: 14:15
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:23: 14:28>::clone(_1: &ReadOnly) -> ReadOnly {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:23: 14:28
+    let mut _0: access::ReadOnly;        // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:23: 14:28
+
+    bb0: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:28: 14:28
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15>::fmt(_1: &WriteOnly, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+    let mut _0: core::result::Result<(), core::fmt::Error>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+    let _3: &str;                        // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+
+    bb0: {
+        _3 = const "WriteOnly";          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a mut Formatter<'_>, &'b str) -> Result<(), core::fmt::Error> {Formatter::<'_>::write_str}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:15: 20:15
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:23: 20:28>::clone(_1: &WriteOnly) -> WriteOnly {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:23: 20:28
+    let mut _0: access::WriteOnly;       // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:23: 20:28
+
+    bb0: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:28: 20:28
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:45:10: 45:15>::clone(_1: &Volatile<R, A>) -> Volatile<R, A> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:45:10: 45:15
+    let mut _0: Volatile<R, A>;          // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:45:10: 45:15
+    let mut _2: R;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:48:5: 48:17
+    let _3: &R;                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:48:5: 48:17
+    let mut _4: core::marker::PhantomData<A>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:49:5: 49:27
+    let _5: &core::marker::PhantomData<A>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:49:5: 49:27
+
+    bb0: {
+        _3 = &((*_1).0: R);              // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:48:5: 48:17
+        _2 = <R as Clone>::clone(_3) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:48:5: 48:17
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:48:5: 48:17
+                                         // + literal: Const { ty: for<'a> fn(&'a R) -> R {<R as Clone>::clone}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _5 = &((*_1).1: core::marker::PhantomData<A>); // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:49:5: 49:27
+        _4 = <PhantomData<A> as Clone>::clone(_5) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:49:5: 49:27
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:49:5: 49:27
+                                         // + literal: Const { ty: for<'a> fn(&'a PhantomData<A>) -> PhantomData<A> {<PhantomData<A> as Clone>::clone}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _0 = Volatile::<R, A> { reference: move _2, access: const ZeroSized: PhantomData<A> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:45:10: 45:15
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<A>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:45:15: 45:15
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new(_1: R) -> Volatile<R> {
+    debug reference => _1;               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:79:22: 79:31
+    let mut _0: Volatile<R>;             // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:79:39: 79:50
+
+    bb0: {
+        _0 = Volatile::<R> { reference: move _1, access: const PhantomData::<ReadWrite> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:80:9: 83:10
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<ReadWrite>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:84:6: 84:6
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new(_1: R) -> Volatile<R> {
+    debug reference => _1;               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:79:22: 79:31
+    let mut _0: Volatile<R>;             // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:79:39: 79:50
+    let mut _2: R;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:81:13: 81:22
+    let mut _3: core::marker::PhantomData<access::ReadWrite>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:82:21: 82:32
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:81:13: 81:22
+        _2 = move _1;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:81:13: 81:22
+        StorageLive(_3);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:82:21: 82:32
+        _3 = PhantomData::<ReadWrite>;   // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:82:21: 82:32
+        _0 = Volatile::<R> { reference: move _2, access: move _3 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:80:9: 83:10
+        StorageDead(_3);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:83:9: 83:10
+        StorageDead(_2);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:83:9: 83:10
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:84:6: 84:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_read_only(_1: R) -> Volatile<R, ReadOnly> {
+    debug reference => _1;               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:117:32: 117:41
+    let mut _0: Volatile<R, access::ReadOnly>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:117:49: 117:70
+
+    bb0: {
+        _0 = Volatile::<R, ReadOnly> { reference: move _1, access: const PhantomData::<ReadOnly> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:118:9: 121:10
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<ReadOnly>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:122:6: 122:6
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_read_only(_1: R) -> Volatile<R, ReadOnly> {
+    debug reference => _1;               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:117:32: 117:41
+    let mut _0: Volatile<R, access::ReadOnly>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:117:49: 117:70
+    let mut _2: R;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:119:13: 119:22
+    let mut _3: core::marker::PhantomData<access::ReadOnly>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:120:21: 120:32
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:119:13: 119:22
+        _2 = move _1;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:119:13: 119:22
+        StorageLive(_3);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:120:21: 120:32
+        _3 = PhantomData::<ReadOnly>;    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:120:21: 120:32
+        _0 = Volatile::<R, ReadOnly> { reference: move _2, access: move _3 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:118:9: 121:10
+        StorageDead(_3);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:121:9: 121:10
+        StorageDead(_2);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:121:9: 121:10
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:122:6: 122:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_write_only(_1: R) -> Volatile<R, WriteOnly> {
+    debug reference => _1;               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:155:33: 155:42
+    let mut _0: Volatile<R, access::WriteOnly>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:155:50: 155:72
+
+    bb0: {
+        _0 = Volatile::<R, WriteOnly> { reference: move _1, access: const PhantomData::<WriteOnly> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:156:9: 159:10
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<WriteOnly>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:160:6: 160:6
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_write_only(_1: R) -> Volatile<R, WriteOnly> {
+    debug reference => _1;               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:155:33: 155:42
+    let mut _0: Volatile<R, access::WriteOnly>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:155:50: 155:72
+    let mut _2: R;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:157:13: 157:22
+    let mut _3: core::marker::PhantomData<access::WriteOnly>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:158:21: 158:32
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:157:13: 157:22
+        _2 = move _1;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:157:13: 157:22
+        StorageLive(_3);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:158:21: 158:32
+        _3 = PhantomData::<WriteOnly>;   // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:158:21: 158:32
+        _0 = Volatile::<R, WriteOnly> { reference: move _2, access: move _3 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:156:9: 159:10
+        StorageDead(_3);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:159:9: 159:10
+        StorageDead(_2);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:159:9: 159:10
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:160:6: 160:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:164:1: 164:29>::read(_1: &Volatile<R, A>) -> T {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:189:17: 189:22
+    let mut _0: T;                       // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:189:27: 189:28
+    let mut _2: *const T;                // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:37: 194:53
+    let _3: &T;                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:37: 194:53
+    let _4: &T;                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:38: 194:53
+    let mut _5: &R;                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:39: 194:53
+    scope 1 {
+    }
+
+    bb0: {
+        _5 = &((*_1).0: R);              // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:39: 194:53
+        _4 = <R as Deref>::deref(move _5) -> [return: bb1, unwind unreachable]; // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:38: 194:53
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:38: 194:53
+                                         // + literal: Const { ty: for<'a> fn(&'a R) -> &'a <R as Deref>::Target {<R as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _3 = _4;                         // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:37: 194:53
+        _2 = &raw const (*_3);           // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:37: 194:53
+        _0 = read_volatile::<T>(move _2) -> [return: bb2, unwind unreachable]; // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:18: 194:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:194:18: 194:36
+                                         // + literal: Const { ty: unsafe fn(*const T) -> T {read_volatile::<T>}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:195:6: 195:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:164:1: 164:29>::write(_1: &mut Volatile<R, A>, _2: T) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:214:18: 214:27
+    debug value => _2;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:214:29: 214:34
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:215:5: 215:5
+    let _3: ();                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:18: 220:66
+    let mut _4: *mut T;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:38: 220:58
+    let mut _5: &mut T;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:38: 220:58
+    let mut _6: &mut T;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:43: 220:58
+    let mut _7: &mut R;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:44: 220:58
+    scope 1 {
+    }
+
+    bb0: {
+        _7 = &mut ((*_1).0: R);          // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:44: 220:58
+        _6 = <R as DerefMut>::deref_mut(move _7) -> [return: bb1, unwind unreachable]; // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:43: 220:58
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:43: 220:58
+                                         // + literal: Const { ty: for<'a> fn(&'a mut R) -> &'a mut <R as Deref>::Target {<R as DerefMut>::deref_mut}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _5 = _6;                         // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:38: 220:58
+        _4 = &raw mut (*_5);             // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:38: 220:58
+        _3 = write_volatile::<T>(move _4, _2) -> [return: bb2, unwind unreachable]; // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:18: 220:66
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:220:18: 220:37
+                                         // + literal: Const { ty: unsafe fn(*mut T, T) {write_volatile::<T>}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:221:6: 221:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:164:1: 164:29>::update(_1: &mut Volatile<R, A>, _2: F) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:238:22: 238:31
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:238:33: 238:34
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:239:5: 239:5
+    let mut _3: T;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:244:13: 244:22
+    let mut _4: &Volatile<R, A>;         // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:244:25: 244:36
+    let _5: ();                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:245:9: 245:22
+    let mut _6: (&mut T,);               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:245:9: 245:22
+    let mut _7: &mut T;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:245:11: 245:21
+    let _8: ();                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:246:9: 246:26
+    let mut _9: T;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:246:20: 246:25
+    scope 1 {
+        debug value => _3;               // in scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:244:13: 244:22
+    }
+
+    bb0: {
+        _4 = &(*_1);                     // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:244:25: 244:36
+        _3 = Volatile::<R, A>::read(move _4) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:244:25: 244:36
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:244:30: 244:34
+                                         // + literal: Const { ty: for<'a> fn(&'a Volatile<R, A>) -> T {Volatile::<R, A>::read}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _7 = &mut _3;                    // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:245:11: 245:21
+        _6 = (_7,);                      // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:245:9: 245:22
+        _5 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _6) -> [return: bb2, unwind unreachable]; // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:245:9: 245:22
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:245:9: 245:10
+                                         // + literal: Const { ty: extern "rust-call" fn(F, (&mut T,)) -> <F as FnOnce<(&mut T,)>>::Output {<F as FnOnce<(&mut T,)>>::call_once}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _9 = _3;                         // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:246:20: 246:25
+        _8 = Volatile::<R, A>::write(_1, move _9) -> [return: bb3, unwind unreachable]; // scope 1 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:246:9: 246:26
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:246:14: 246:19
+                                         // + literal: Const { ty: for<'a> fn(&'a mut Volatile<R, A>, T) {Volatile::<R, A>::write}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:247:6: 247:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:251:1: 251:26>::extract_inner(_1: Volatile<R, A>) -> R {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:276:26: 276:30
+    let mut _0: R;                       // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:276:35: 276:36
+
+    bb0: {
+        _0 = move (_1.0: R);             // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:277:9: 277:23
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:278:6: 278:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:282:1: 282:29>::map(_1: &Volatile<R, A>, _2: F) -> Volatile<&U, A> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:326:26: 326:34
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:326:36: 326:37
+    let mut _0: Volatile<&U, A>;         // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:326:45: 326:63
+    let mut _3: &U;                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:24: 333:49
+    let _4: &U;                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:24: 333:49
+    let mut _5: (&T,);                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:24: 333:49
+    let mut _6: &T;                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:26: 333:48
+    let _7: &T;                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:26: 333:48
+    let mut _8: &R;                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:26: 333:48
+
+    bb0: {
+        _8 = &((*_1).0: R);              // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:26: 333:48
+        _7 = <R as Deref>::deref(move _8) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:26: 333:48
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:41: 333:46
+                                         // + literal: Const { ty: for<'a> fn(&'a R) -> &'a <R as Deref>::Target {<R as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _6 = _7;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:26: 333:48
+        _5 = (move _6,);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:24: 333:49
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:24: 333:49
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:24: 333:25
+                                         // + literal: Const { ty: extern "rust-call" fn(F, (&T,)) -> <F as FnOnce<(&T,)>>::Output {<F as FnOnce<(&T,)>>::call_once}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _3 = _4;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:333:24: 333:49
+        _0 = Volatile::<&U, A> { reference: move _3, access: const ZeroSized: PhantomData<A> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:332:9: 335:10
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<A>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:336:6: 336:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:282:1: 282:29>::map_mut(_1: &mut Volatile<R, A>, _2: F) -> Volatile<&mut U, A> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:377:30: 377:42
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:377:44: 377:45
+    let mut _0: Volatile<&mut U, A>;     // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:377:53: 377:75
+    let mut _3: &mut U;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:24: 385:46
+    let mut _4: &mut U;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:24: 385:46
+    let mut _5: (&mut T,);               // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:24: 385:46
+    let mut _6: &mut T;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:26: 385:45
+    let mut _7: &mut T;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:26: 385:45
+    let mut _8: &mut R;                  // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:26: 385:45
+
+    bb0: {
+        _8 = &mut ((*_1).0: R);          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:26: 385:45
+        _7 = <R as DerefMut>::deref_mut(_8) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:26: 385:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:26: 385:45
+                                         // + literal: Const { ty: for<'a> fn(&'a mut R) -> &'a mut <R as Deref>::Target {<R as DerefMut>::deref_mut}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _6 = _7;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:26: 385:45
+        _5 = (move _6,);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:24: 385:46
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:24: 385:46
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:24: 385:25
+                                         // + literal: Const { ty: extern "rust-call" fn(F, (&mut T,)) -> <F as FnOnce<(&mut T,)>>::Output {<F as FnOnce<(&mut T,)>>::call_once}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _3 = _4;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:385:24: 385:46
+        _0 = Volatile::<&mut U, A> { reference: move _3, access: const ZeroSized: PhantomData<A> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:384:9: 387:10
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<A>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:388:6: 388:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 392:29>::index(_1: &Volatile<R, A>, _2: I) -> Volatile<&<I as SliceIndex<[T]>>::Output, A> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:428:25: 428:33
+    debug index => _2;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:428:35: 428:40
+    let mut _0: Volatile<&<I as core::slice::SliceIndex<[T]>>::Output, A>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:428:48: 428:74
+    let mut _3: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25]; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:44
+
+    bb0: {
+        _3 = [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25] { index: move _2 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:44
+                                         // closure
+                                         // + def_id: DefId(0:63 ~ volatile[e036]::{impl#4}::index::{closure#0})
+                                         // + substs: [
+                                         //     T,
+                                         //     R,
+                                         //     A,
+                                         //     ReErased,
+                                         //     I,
+                                         //     i32,
+                                         //     extern "rust-call" fn((&[T],)) -> &<I as core::slice::SliceIndex<[T]>>::Output,
+                                         //     (I,),
+                                         // ]
+        _0 = Volatile::<R, A>::map::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25], <I as SliceIndex<[T]>>::Output>(_1, move _3) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:9: 433:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:14: 433:17
+                                         // + literal: Const { ty: fn(&Volatile<R, A>, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25]) -> Volatile<&<I as SliceIndex<[T]>>::Output, A> {Volatile::<R, A>::map::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25], <I as SliceIndex<[T]>>::Output>}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:434:6: 434:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 392:29>::index::{closure#0}(_1: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25], _2: &[T]) -> &<I as SliceIndex<[T]>>::Output {
+    debug slice => _2;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:19: 433:24
+    debug index => (_1.0: I);            // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:428:35: 428:40
+    let mut _0: &<I as core::slice::SliceIndex<[T]>>::Output; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:26: 433:26
+    let _3: &<I as core::slice::SliceIndex<[T]>>::Output; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:26: 433:44
+    let mut _4: I;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:38: 433:43
+
+    bb0: {
+        _4 = move (_1.0: I);             // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:38: 433:43
+        _3 = <[T] as Index<I>>::index(_2, move _4) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:26: 433:44
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:32: 433:37
+                                         // + literal: Const { ty: for<'a> fn(&'a [T], I) -> &'a <[T] as Index<I>>::Output {<[T] as Index<I>>::index}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _3;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:26: 433:44
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:44: 433:44
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 392:29>::index_mut(_1: &mut Volatile<R, A>, _2: I) -> Volatile<&mut <I as SliceIndex<[T]>>::Output, A> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:470:29: 470:41
+    debug index => _2;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:470:43: 470:48
+    let mut _0: Volatile<&mut <I as core::slice::SliceIndex<[T]>>::Output, A>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:470:56: 470:83
+    let mut _3: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29]; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:52
+
+    bb0: {
+        _3 = [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29] { index: move _2 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:52
+                                         // closure
+                                         // + def_id: DefId(0:67 ~ volatile[e036]::{impl#4}::index_mut::{closure#0})
+                                         // + substs: [
+                                         //     T,
+                                         //     R,
+                                         //     A,
+                                         //     ReErased,
+                                         //     I,
+                                         //     i32,
+                                         //     for<'a> extern "rust-call" fn((&'a mut [T],)) -> &'a mut <I as core::slice::SliceIndex<[T]>>::Output,
+                                         //     (I,),
+                                         // ]
+        _0 = Volatile::<R, A>::map_mut::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29], <I as SliceIndex<[T]>>::Output>(_1, move _3) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:9: 476:53
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:14: 476:21
+                                         // + literal: Const { ty: fn(&mut Volatile<R, A>, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29]) -> Volatile<&mut <I as SliceIndex<[T]>>::Output, A> {Volatile::<R, A>::map_mut::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29], <I as SliceIndex<[T]>>::Output>}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:477:6: 477:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 392:29>::index_mut::{closure#0}(_1: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29], _2: &mut [T]) -> &mut <I as SliceIndex<[T]>>::Output {
+    debug slice => _2;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:23: 476:28
+    debug index => (_1.0: I);            // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:470:43: 470:48
+    let mut _0: &mut <I as core::slice::SliceIndex<[T]>>::Output; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:30: 476:30
+    let mut _3: &mut <I as core::slice::SliceIndex<[T]>>::Output; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:30: 476:52
+    let mut _4: I;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:46: 476:51
+
+    bb0: {
+        _4 = move (_1.0: I);             // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:46: 476:51
+        _3 = <[T] as IndexMut<I>>::index_mut(_2, move _4) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:30: 476:52
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:36: 476:45
+                                         // + literal: Const { ty: for<'a> fn(&'a mut [T], I) -> &'a mut <[T] as Index<I>>::Output {<[T] as IndexMut<I>>::index_mut}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _3;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:30: 476:52
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:52: 476:52
+    }
+}
+
+<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 682:45>::{constant#0}: usize = {
+    let mut _0: usize;                   // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:684:27: 684:28
+
+    bb0: {
+        _0 = const N;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:684:27: 684:28
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:684:27: 684:28
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 682:45>::as_slice(_1: &Volatile<R, A>) -> Volatile<&[T], A> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:708:21: 708:26
+    let mut _0: Volatile<&[T], A>;       // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:708:31: 708:48
+
+    bb0: {
+        _0 = Volatile::<R, A>::map::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25], [T]>(_1, const ZeroSized: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25]) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:9: 709:37
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:14: 709:17
+                                         // + literal: Const { ty: fn(&Volatile<R, A>, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25]) -> Volatile<&[T], A> {Volatile::<R, A>::map::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25], [T]>}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25], val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:710:6: 710:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 682:45>::as_slice::{closure#0}(_1: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25], _2: &[T; N]) -> &[T] {
+    debug array => _2;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:19: 709:24
+    let mut _0: &[T];                    // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:26: 709:26
+    let _3: &[T];                        // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:27: 709:36
+
+    bb0: {
+        _3 = <[T; N] as Index<RangeFull>>::index(_2, const RangeFull) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:27: 709:36
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:27: 709:36
+                                         // + literal: Const { ty: for<'a> fn(&'a [T; N], RangeFull) -> &'a <[T; N] as Index<RangeFull>>::Output {<[T; N] as Index<RangeFull>>::index}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: RangeFull, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _3;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:26: 709:36
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:36: 709:36
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 682:45>::as_mut_slice(_1: &mut Volatile<R, A>) -> Volatile<&mut [T], A> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:733:25: 733:34
+    let mut _0: Volatile<&mut [T], A>;   // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:733:39: 733:60
+
+    bb0: {
+        _0 = Volatile::<R, A>::map_mut::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29], [T]>(_1, const ZeroSized: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29]) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:9: 737:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:14: 737:21
+                                         // + literal: Const { ty: fn(&mut Volatile<R, A>, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29]) -> Volatile<&mut [T], A> {Volatile::<R, A>::map_mut::<'_, [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29], [T]>}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29], val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:738:6: 738:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 682:45>::as_mut_slice::{closure#0}(_1: [closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29], _2: &mut [T; N]) -> &mut [T] {
+    debug array => _2;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:23: 737:28
+    let mut _0: &mut [T];                // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:30: 737:30
+    let mut _3: &mut [T];                // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:35: 737:44
+
+    bb0: {
+        _3 = <[T; N] as IndexMut<RangeFull>>::index_mut(_2, const RangeFull) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:35: 737:44
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:35: 737:44
+                                         // + literal: Const { ty: for<'a> fn(&'a mut [T; N], RangeFull) -> &'a mut <[T; N] as Index<RangeFull>>::Output {<[T; N] as IndexMut<RangeFull>>::index_mut}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: RangeFull, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _3;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:30: 737:44
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:44: 737:44
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:742:1: 742:20>::read_only(_1: Volatile<R>) -> Volatile<R, ReadOnly> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:757:22: 757:26
+    let mut _0: Volatile<R, access::ReadOnly>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:757:31: 757:52
+    let mut _2: R;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:759:24: 759:38
+
+    bb0: {
+        _2 = move (_1.0: R);             // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:759:24: 759:38
+        _0 = Volatile::<R, ReadOnly> { reference: move _2, access: const PhantomData::<ReadOnly> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:758:9: 761:10
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<ReadOnly>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:762:6: 762:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:742:1: 742:20>::write_only(_1: Volatile<R>) -> Volatile<R, WriteOnly> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:782:23: 782:27
+    let mut _0: Volatile<R, access::WriteOnly>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:782:32: 782:54
+    let mut _2: R;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:784:24: 784:38
+
+    bb0: {
+        _2 = move (_1.0: R);             // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:784:24: 784:38
+        _0 = Volatile::<R, WriteOnly> { reference: move _2, access: const PhantomData::<WriteOnly> }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:783:9: 786:10
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: PhantomData<WriteOnly>, val: Value(<ZST>) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:787:6: 787:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:790:1: 790:44>::fmt(_1: &Volatile<R, A>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:796:12: 796:17
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:796:19: 796:20
+    let mut _0: core::result::Result<(), core::fmt::Error>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:796:50: 796:61
+    let mut _3: &mut core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:63
+    let mut _4: &mut core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:54
+    let mut _5: &mut core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:54
+    let mut _6: core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:34
+    let _7: &str;                        // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:23: 797:33
+    let mut _8: &dyn core::fmt::Debug;   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:41: 797:53
+    let _9: &T;                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:41: 797:53
+    let _10: T;                          // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:42: 797:53
+
+    bb0: {
+        _7 = const "Volatile";           // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:23: 797:33
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:23: 797:33
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _6 = Formatter::<'_>::debug_tuple(_2, _7) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:34
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:11: 797:22
+                                         // + literal: Const { ty: for<'b, 'a> fn(&'b mut Formatter<'_>, &'a str) -> DebugTuple<'b, '_> {Formatter::<'_>::debug_tuple}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _5 = &mut _6;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:54
+        _10 = Volatile::<R, A>::read(_1) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:42: 797:53
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:47: 797:51
+                                         // + literal: Const { ty: for<'a> fn(&'a Volatile<R, A>) -> T {Volatile::<R, A>::read}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _9 = &_10;                       // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:41: 797:53
+        _8 = _9 as &dyn core::fmt::Debug (Pointer(Unsize)); // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:41: 797:53
+        _4 = DebugTuple::<'_, '_>::field(move _5, move _8) -> [return: bb3, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:35: 797:40
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a mut DebugTuple<'_, '_>, &'b (dyn Debug + 'b)) -> &'a mut DebugTuple<'_, '_> {DebugTuple::<'_, '_>::field}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _3 = _4;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:63
+        _0 = DebugTuple::<'_, '_>::finish(move _3) -> [return: bb4, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:9: 797:63
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:797:55: 797:61
+                                         // + literal: Const { ty: for<'a> fn(&'a mut DebugTuple<'_, '_>) -> Result<(), core::fmt::Error> {DebugTuple::<'_, '_>::finish}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:798:6: 798:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:801:1: 801:46>::fmt(_1: &Volatile<R, WriteOnly>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:805:12: 805:17
+    debug f => _2;                       // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:805:19: 805:20
+    let mut _0: core::result::Result<(), core::fmt::Error>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:805:50: 805:61
+    let mut _3: &mut core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:66
+    let mut _4: &mut core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:57
+    let mut _5: &mut core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:57
+    let mut _6: core::fmt::DebugTuple<'_, '_>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:34
+    let _7: &str;                        // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:23: 806:33
+    let mut _8: &dyn core::fmt::Debug;   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+    let mut _9: &&str;                   // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+
+    bb0: {
+        _7 = const "Volatile";           // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:23: 806:33
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:23: 806:33
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _6 = Formatter::<'_>::debug_tuple(_2, _7) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:34
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:11: 806:22
+                                         // + literal: Const { ty: for<'b, 'a> fn(&'b mut Formatter<'_>, &'a str) -> DebugTuple<'b, '_> {Formatter::<'_>::debug_tuple}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _5 = &mut _6;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:57
+        _9 = const _;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+                                         // + literal: Const { ty: &&str, val: Unevaluated(<Volatile<R, WriteOnly> as Debug>::fmt, [R], Some(promoted[0])) }
+        _8 = _9 as &dyn core::fmt::Debug (Pointer(Unsize)); // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+        _4 = DebugTuple::<'_, '_>::field(move _5, move _8) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:57
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:35: 806:40
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a mut DebugTuple<'_, '_>, &'b (dyn Debug + 'b)) -> &'a mut DebugTuple<'_, '_> {DebugTuple::<'_, '_>::field}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _3 = _4;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:66
+        _0 = DebugTuple::<'_, '_>::finish(move _3) -> [return: bb3, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:9: 806:66
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:58: 806:64
+                                         // + literal: Const { ty: for<'a> fn(&'a mut DebugTuple<'_, '_>) -> Result<(), core::fmt::Error> {DebugTuple::<'_, '_>::finish}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:807:6: 807:6
+    }
+}
+
+promoted[0] in <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:801:1: 801:46>::fmt: &&str = {
+    let mut _0: &&str;                   // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+    let mut _1: &str;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:42: 806:56
+
+    bb0: {
+        _1 = const "[write-only]";       // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:42: 806:56
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:42: 806:56
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:806:41: 806:56
+    }
+}

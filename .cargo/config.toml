@@ -7,7 +7,7 @@ target = "machine_targets/theo.json"
 # rustc flag to emit the generated llvm ir. you can inspect the eventual
 # values of some of the configurations in the target triple json. for
 # example, nounwind and noredzone can be easily spotted.
-rustflags = ["--emit=llvm-ir"]
+rustflags = ["--emit=llvm-ir,mir"]
 
 [target.'cfg(target_os = "none")']
 runner = "bootimage runner"

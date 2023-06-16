@@ -1,0 +1,1874 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+static SAFE_IDT: SAFE_IDT = {
+    let mut _0: interrupts::SAFE_IDT;    // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:29: 161:31
+    let mut _1: ();                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+
+    bb0: {
+        StorageLive(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _1 = ();                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _0 = SAFE_IDT { __private_field: move _1 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:34: 161:58
+        StorageDead(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:57: 161:58
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:18: 161:59
+    }
+}
+
+fn interrupts::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref(_1: &SAFE_IDT) -> &SafeInterruptDescriptorTable {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:22: 135:27
+    let mut _0: &cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:32: 135:35
+    let _2: &cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+
+    bb0: {
+        _2 = <SAFE_IDT as Deref>::deref::__stability() -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:28
+                                         // + literal: Const { ty: fn() -> &'static SafeInterruptDescriptorTable {<SAFE_IDT as Deref>::deref::__stability}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _2;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:145:14: 145:14
+    }
+}
+
+fn interrupts::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__static_ref_initialize() -> SafeInterruptDescriptorTable {
+    let mut _0: cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable; // return place in scope 0 at src/interrupts.rs:16:26: 16:54
+    let mut _1: x86_64::structures::idt::InterruptDescriptorTable; // in scope 0 at src/interrupts.rs:17:13: 17:20
+    let _2: &mut x86_64::structures::idt::EntryOptions; // in scope 0 at src/interrupts.rs:19:13: 21:64
+    let mut _3: &mut x86_64::structures::idt::EntryOptions; // in scope 0 at src/interrupts.rs:19:13: 21:64
+    let mut _4: &mut x86_64::structures::idt::EntryOptions; // in scope 0 at src/interrupts.rs:19:13: 20:54
+    let mut _5: &mut x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame, u64) -> !>; // in scope 0 at src/interrupts.rs:19:13: 20:54
+    let mut _6: extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame, u64) -> !; // in scope 0 at src/interrupts.rs:20:33: 20:53
+    let mut _7: u16;                     // in scope 0 at src/interrupts.rs:21:34: 21:63
+    let _8: &mut x86_64::structures::idt::EntryOptions; // in scope 0 at src/interrupts.rs:22:13: 22:62
+    let mut _9: &mut x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame)>; // in scope 0 at src/interrupts.rs:22:13: 22:62
+    let mut _10: extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame); // in scope 0 at src/interrupts.rs:22:43: 22:61
+    let _11: &mut x86_64::structures::idt::EntryOptions; // in scope 0 at src/interrupts.rs:23:13: 23:79
+    let mut _12: &mut x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame)>; // in scope 0 at src/interrupts.rs:23:13: 23:79
+    let mut _13: &mut x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame)>; // in scope 0 at src/interrupts.rs:23:13: 23:39
+    let mut _14: &mut x86_64::structures::idt::InterruptDescriptorTable; // in scope 0 at src/interrupts.rs:23:13: 23:16
+    let mut _15: usize;                  // in scope 0 at src/interrupts.rs:23:17: 23:38
+    let mut _16: u8;                     // in scope 0 at src/interrupts.rs:23:17: 23:38
+    let mut _17: (u8, bool);             // in scope 0 at src/interrupts.rs:23:17: 23:38
+    let mut _18: extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame); // in scope 0 at src/interrupts.rs:23:55: 23:78
+    let _19: &mut x86_64::structures::idt::EntryOptions; // in scope 0 at src/interrupts.rs:24:13: 24:75
+    let mut _20: &mut x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame)>; // in scope 0 at src/interrupts.rs:24:13: 24:75
+    let mut _21: &mut x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame)>; // in scope 0 at src/interrupts.rs:24:13: 24:42
+    let mut _22: &mut x86_64::structures::idt::InterruptDescriptorTable; // in scope 0 at src/interrupts.rs:24:13: 24:16
+    let mut _23: usize;                  // in scope 0 at src/interrupts.rs:24:17: 24:41
+    let mut _24: u8;                     // in scope 0 at src/interrupts.rs:24:17: 24:41
+    let mut _25: (u8, bool);             // in scope 0 at src/interrupts.rs:24:17: 24:41
+    let mut _26: extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame); // in scope 0 at src/interrupts.rs:24:58: 24:74
+    let mut _27: x86_64::structures::idt::InterruptDescriptorTable; // in scope 0 at src/interrupts.rs:27:44: 27:47
+    scope 1 {
+        debug idt => _1;                 // in scope 1 at src/interrupts.rs:17:13: 17:20
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _1 = InterruptDescriptorTable::new() -> [return: bb1, unwind unreachable]; // scope 0 at src/interrupts.rs:17:23: 17:54
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:17:23: 17:52
+                                         // + literal: Const { ty: fn() -> InterruptDescriptorTable {InterruptDescriptorTable::new}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _5 = &mut (_1.8: x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame, u64) -> !>); // scope 2 at src/interrupts.rs:19:13: 20:54
+        _6 = double_fault_handler as extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame, u64) -> ! (Pointer(ReifyFnPointer)); // scope 2 at src/interrupts.rs:20:33: 20:53
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:20:33: 20:53
+                                         // + literal: Const { ty: extern "x86-interrupt" fn(InterruptStackFrame, u64) -> ! {double_fault_handler}, val: Value(<ZST>) }
+        _4 = Entry::<extern "x86-interrupt" fn(InterruptStackFrame, u64) -> !>::set_handler_fn(move _5, move _6) -> [return: bb2, unwind unreachable]; // scope 2 at src/interrupts.rs:19:13: 20:54
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:20:18: 20:32
+                                         // + literal: Const { ty: for<'a> fn(&'a mut Entry<extern "x86-interrupt" fn(InterruptStackFrame, u64) -> !>, extern "x86-interrupt" fn(InterruptStackFrame, u64) -> !) -> &'a mut EntryOptions {Entry::<extern "x86-interrupt" fn(InterruptStackFrame, u64) -> !>::set_handler_fn}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _3 = _4;                         // scope 2 at src/interrupts.rs:19:13: 21:64
+        _7 = const _ as u16 (IntToInt);  // scope 2 at src/interrupts.rs:21:34: 21:63
+        _2 = EntryOptions::set_stack_index(move _3, move _7) -> [return: bb3, unwind unreachable]; // scope 2 at src/interrupts.rs:19:13: 21:64
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:21:18: 21:33
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut EntryOptions, u16) -> &'a mut EntryOptions {EntryOptions::set_stack_index}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _9 = &mut (_1.3: x86_64::structures::idt::Entry<extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame)>); // scope 2 at src/interrupts.rs:22:13: 22:62
+        _10 = breakpoint_handler as extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame) (Pointer(ReifyFnPointer)); // scope 2 at src/interrupts.rs:22:43: 22:61
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:22:43: 22:61
+                                         // + literal: Const { ty: extern "x86-interrupt" fn(InterruptStackFrame) {breakpoint_handler}, val: Value(<ZST>) }
+        _8 = Entry::<extern "x86-interrupt" fn(InterruptStackFrame)>::set_handler_fn(move _9, move _10) -> [return: bb4, unwind unreachable]; // scope 2 at src/interrupts.rs:22:13: 22:62
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:22:28: 22:42
+                                         // + literal: Const { ty: for<'a> fn(&'a mut Entry<extern "x86-interrupt" fn(InterruptStackFrame)>, extern "x86-interrupt" fn(InterruptStackFrame)) -> &'a mut EntryOptions {Entry::<extern "x86-interrupt" fn(InterruptStackFrame)>::set_handler_fn}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _14 = &mut _1;                   // scope 2 at src/interrupts.rs:23:13: 23:16
+        _17 = CheckedAdd(const _, const 0_u8); // scope 2 at src/interrupts.rs:23:17: 23:38
+        assert(!move (_17.1: bool), "attempt to compute `{} + {}`, which would overflow", const _, const 0_u8) -> [success: bb5, unwind unreachable]; // scope 2 at src/interrupts.rs:23:17: 23:38
+    }
+
+    bb5: {
+        _16 = move (_17.0: u8);          // scope 2 at src/interrupts.rs:23:17: 23:38
+        _15 = move _16 as usize (IntToInt); // scope 2 at src/interrupts.rs:23:17: 23:38
+        _13 = <InterruptDescriptorTable as IndexMut<usize>>::index_mut(move _14, move _15) -> [return: bb6, unwind unreachable]; // scope 2 at src/interrupts.rs:23:13: 23:39
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:23:13: 23:39
+                                         // + literal: Const { ty: for<'a> fn(&'a mut InterruptDescriptorTable, usize) -> &'a mut <InterruptDescriptorTable as Index<usize>>::Output {<InterruptDescriptorTable as IndexMut<usize>>::index_mut}, val: Value(<ZST>) }
+    }
+
+    bb6: {
+        _12 = _13;                       // scope 2 at src/interrupts.rs:23:13: 23:79
+        _18 = timer_interrupt_handler as extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame) (Pointer(ReifyFnPointer)); // scope 2 at src/interrupts.rs:23:55: 23:78
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:23:55: 23:78
+                                         // + literal: Const { ty: extern "x86-interrupt" fn(InterruptStackFrame) {timer_interrupt_handler}, val: Value(<ZST>) }
+        _11 = Entry::<extern "x86-interrupt" fn(InterruptStackFrame)>::set_handler_fn(move _12, move _18) -> [return: bb7, unwind unreachable]; // scope 2 at src/interrupts.rs:23:13: 23:79
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:23:40: 23:54
+                                         // + literal: Const { ty: for<'a> fn(&'a mut Entry<extern "x86-interrupt" fn(InterruptStackFrame)>, extern "x86-interrupt" fn(InterruptStackFrame)) -> &'a mut EntryOptions {Entry::<extern "x86-interrupt" fn(InterruptStackFrame)>::set_handler_fn}, val: Value(<ZST>) }
+    }
+
+    bb7: {
+        _22 = &mut _1;                   // scope 2 at src/interrupts.rs:24:13: 24:16
+        _25 = CheckedAdd(const _, const 1_u8); // scope 2 at src/interrupts.rs:24:17: 24:41
+        assert(!move (_25.1: bool), "attempt to compute `{} + {}`, which would overflow", const _, const 1_u8) -> [success: bb8, unwind unreachable]; // scope 2 at src/interrupts.rs:24:17: 24:41
+    }
+
+    bb8: {
+        _24 = move (_25.0: u8);          // scope 2 at src/interrupts.rs:24:17: 24:41
+        _23 = move _24 as usize (IntToInt); // scope 2 at src/interrupts.rs:24:17: 24:41
+        _21 = <InterruptDescriptorTable as IndexMut<usize>>::index_mut(move _22, move _23) -> [return: bb9, unwind unreachable]; // scope 2 at src/interrupts.rs:24:13: 24:42
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:24:13: 24:42
+                                         // + literal: Const { ty: for<'a> fn(&'a mut InterruptDescriptorTable, usize) -> &'a mut <InterruptDescriptorTable as Index<usize>>::Output {<InterruptDescriptorTable as IndexMut<usize>>::index_mut}, val: Value(<ZST>) }
+    }
+
+    bb9: {
+        _20 = _21;                       // scope 2 at src/interrupts.rs:24:13: 24:75
+        _26 = keyboard_handler as extern "x86-interrupt" fn(x86_64::structures::idt::InterruptStackFrame) (Pointer(ReifyFnPointer)); // scope 2 at src/interrupts.rs:24:58: 24:74
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:24:58: 24:74
+                                         // + literal: Const { ty: extern "x86-interrupt" fn(InterruptStackFrame) {keyboard_handler}, val: Value(<ZST>) }
+        _19 = Entry::<extern "x86-interrupt" fn(InterruptStackFrame)>::set_handler_fn(move _20, move _26) -> [return: bb10, unwind unreachable]; // scope 2 at src/interrupts.rs:24:13: 24:75
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:24:43: 24:57
+                                         // + literal: Const { ty: for<'a> fn(&'a mut Entry<extern "x86-interrupt" fn(InterruptStackFrame)>, extern "x86-interrupt" fn(InterruptStackFrame)) -> &'a mut EntryOptions {Entry::<extern "x86-interrupt" fn(InterruptStackFrame)>::set_handler_fn}, val: Value(<ZST>) }
+    }
+
+    bb10: {
+        _27 = move _1;                   // scope 1 at src/interrupts.rs:27:44: 27:47
+        _0 = SafeInterruptDescriptorTable::from(move _27) -> [return: bb11, unwind unreachable]; // scope 1 at src/interrupts.rs:27:9: 27:48
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:27:9: 27:43
+                                         // + literal: Const { ty: fn(InterruptDescriptorTable) -> SafeInterruptDescriptorTable {SafeInterruptDescriptorTable::from}, val: Value(<ZST>) }
+    }
+
+    bb11: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:137:58: 137:58
+    }
+}
+
+fn interrupts::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability() -> &SafeInterruptDescriptorTable {
+    let mut _0: &cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:140:37: 140:48
+    let _1: &lazy_static::lazy::Lazy<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+
+    bb0: {
+        _1 = const {alloc6: &lazy_static::lazy::Lazy<SafeInterruptDescriptorTable>}; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // + literal: Const { ty: &lazy_static::lazy::Lazy<SafeInterruptDescriptorTable>, val: Value(Scalar(alloc6)) }
+        _0 = lazy_static::lazy::Lazy::<SafeInterruptDescriptorTable>::get::<fn() -> SafeInterruptDescriptorTable {<SAFE_IDT as Deref>::deref::__static_ref_initialize}>(_1, <SAFE_IDT as Deref>::deref::__static_ref_initialize) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:26: 142:29
+                                         // + literal: Const { ty: fn(&'static lazy_static::lazy::Lazy<SafeInterruptDescriptorTable>, fn() -> SafeInterruptDescriptorTable {<SAFE_IDT as Deref>::deref::__static_ref_initialize}) -> &'static SafeInterruptDescriptorTable {lazy_static::lazy::Lazy::<SafeInterruptDescriptorTable>::get::<fn() -> SafeInterruptDescriptorTable {<SAFE_IDT as Deref>::deref::__static_ref_initialize}>}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:30: 142:53
+                                         // + literal: Const { ty: fn() -> SafeInterruptDescriptorTable {<SAFE_IDT as Deref>::deref::__static_ref_initialize}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:143:18: 143:18
+    }
+}
+
+alloc6 (static: <SAFE_IDT as Deref>::deref::__stability::LAZY, size: 4128, align: 16) {
+    0x0000 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0010 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0020 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0030 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0040 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0050 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0060 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0070 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0080 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0090 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x00a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x00b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x00c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x00d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x00e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x00f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0100 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0110 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0120 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0130 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0140 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0150 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0160 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0170 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0180 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0190 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x01a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x01b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x01c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x01d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x01e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x01f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0200 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0210 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0220 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0230 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0240 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0250 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0260 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0270 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0280 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0290 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x02a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x02b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x02c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x02d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x02e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x02f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0300 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0310 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0320 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0330 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0340 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0350 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0360 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0370 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0380 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0390 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x03a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x03b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x03c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x03d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x03e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x03f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0400 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0410 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0420 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0430 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0440 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0450 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0460 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0470 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0480 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0490 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x04a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x04b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x04c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x04d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x04e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x04f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0500 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0510 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0520 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0530 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0540 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0550 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0560 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0570 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0580 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0590 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x05a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x05b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x05c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x05d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x05e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x05f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0600 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0610 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0620 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0630 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0640 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0650 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0660 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0670 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0680 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0690 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x06a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x06b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x06c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x06d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x06e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x06f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0700 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0710 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0720 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0730 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0740 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0750 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0760 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0770 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0780 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0790 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x07a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x07b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x07c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x07d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x07e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x07f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0800 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0810 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0820 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0830 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0840 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0850 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0860 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0870 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0880 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0890 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x08a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x08b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x08c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x08d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x08e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x08f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0900 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0910 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0920 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0930 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0940 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0950 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0960 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0970 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0980 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0990 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x09a0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x09b0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x09c0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x09d0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x09e0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x09f0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a00 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a20 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a30 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a40 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a50 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a60 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a70 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a80 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0a90 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0aa0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ab0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ac0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ad0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ae0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0af0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b00 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b20 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b30 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b40 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b50 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b60 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b70 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b80 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0b90 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ba0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0bb0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0bc0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0bd0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0be0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0bf0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c00 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c20 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c30 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c40 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c50 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c60 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c70 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c80 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0c90 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ca0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0cb0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0cc0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0cd0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ce0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0cf0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d00 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d20 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d30 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d40 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d50 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d60 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d70 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d80 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0d90 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0da0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0db0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0dc0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0dd0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0de0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0df0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e00 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e20 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e30 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e40 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e50 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e60 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e70 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e80 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0e90 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ea0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0eb0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ec0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ed0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ee0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ef0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f00 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f20 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f30 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f40 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f50 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f60 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f70 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f80 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0f90 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0fa0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0fb0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0fc0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0fd0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0fe0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x0ff0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x1000 │ __ __ 02 __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░.░░░░░░░░░░░░░
+    0x1010 │ 00 00 00 00 00 00 00 00 __ __ __ __ __ __ __ __ │ ........░░░░░░░░
+}
+
+static interrupts::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability::LAZY: lazy_static::lazy::Lazy<SafeInterruptDescriptorTable> = {
+    let mut _0: lazy_static::lazy::Lazy<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:23: 29:45
+
+    bb0: {
+        _0 = const _;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: lazy_static::lazy::Lazy<SafeInterruptDescriptorTable>, val: Unevaluated(lazy_static::lazy::Lazy::<T>::INIT, [cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable], None) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:9: 29:73
+    }
+}
+
+fn interrupts::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:147:9: 147:39>::initialize(_1: &SAFE_IDT) -> () {
+    debug lazy => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:27: 148:31
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:40: 148:40
+    let _2: &cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = <SAFE_IDT as Deref>::deref(_1) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // + literal: Const { ty: for<'a> fn(&'a SAFE_IDT) -> &'a <SAFE_IDT as Deref>::Target {<SAFE_IDT as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:150:14: 150:14
+    }
+}
+
+fn breakpoint_handler(_1: InterruptStackFrame) -> () {
+    debug _isf => _1;                    // in scope 0 at src/interrupts.rs:31:46: 31:50
+    let mut _0: ();                      // return place in scope 0 at src/interrupts.rs:31:73: 31:73
+
+    bb0: {
+        return;                          // scope 0 at src/interrupts.rs:31:75: 31:75
+    }
+}
+
+fn timer_interrupt_handler(_1: InterruptStackFrame) -> () {
+    debug _isf => _1;                    // in scope 0 at src/interrupts.rs:32:51: 32:55
+    let mut _0: ();                      // return place in scope 0 at src/interrupts.rs:32:78: 32:78
+    let _2: ();                          // in scope 0 at src/peripherals.rs:17:23: 17:74
+    let mut _3: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _4: &[&str];                 // in scope 0 at src/interrupts.rs:33:19: 33:22
+    let _5: ();                          // in scope 0 at src/interrupts.rs:38:5: 38:36
+    let mut _6: &[&str; 1];              // in scope 0 at src/interrupts.rs:33:19: 33:22
+
+    bb0: {
+        _6 = const _;                    // scope 0 at src/interrupts.rs:33:19: 33:22
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:33:19: 33:22
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(timer_interrupt_handler, [], Some(promoted[0])) }
+        _4 = _6 as &[&str] (Pointer(Unsize)); // scope 0 at src/interrupts.rs:33:19: 33:22
+        _3 = Arguments::<'_>::new_const(move _4) -> [return: bb1, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&[&'static str]) -> Arguments<'_> {Arguments::<'_>::new_const}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _2 = peripherals::_print(move _3) -> [return: bb2, unwind unreachable]; // scope 0 at src/peripherals.rs:17:23: 17:74
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:23: 17:50
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {peripherals::_print}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _5 = notify_end_of_timer_interrupt() -> [return: bb3, unwind unreachable]; // scope 0 at src/interrupts.rs:38:5: 38:36
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:38:5: 38:34
+                                         // + literal: Const { ty: fn() {notify_end_of_timer_interrupt}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        return;                          // scope 0 at src/interrupts.rs:39:2: 39:2
+    }
+}
+
+promoted[0] in timer_interrupt_handler: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/interrupts.rs:33:19: 33:22
+    let mut _1: [&str; 1];               // in scope 0 at src/interrupts.rs:33:19: 33:22
+
+    bb0: {
+        _1 = [const "."];                // scope 0 at src/interrupts.rs:33:19: 33:22
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:33:19: 33:22
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/interrupts.rs:33:19: 33:22
+        return;                          // scope 0 at src/interrupts.rs:33:19: 33:22
+    }
+}
+
+fn keyboard_handler(_1: InterruptStackFrame) -> () {
+    debug _isf => _1;                    // in scope 0 at src/interrupts.rs:41:44: 41:48
+    let mut _0: ();                      // return place in scope 0 at src/interrupts.rs:41:71: 41:71
+    let mut _2: spin::MutexGuard<'_, keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // in scope 0 at src/interrupts.rs:42:9: 42:21
+    let mut _3: &spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // in scope 0 at src/interrupts.rs:42:24: 42:52
+    let _4: &spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // in scope 0 at src/interrupts.rs:42:24: 42:52
+    let _5: &peripherals::KEYBOARD;      // in scope 0 at src/interrupts.rs:42:24: 42:45
+    let _6: ();                          // in scope 0 at src/interrupts.rs:43:5: 46:7
+    let mut _7: &mut keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>; // in scope 0 at src/interrupts.rs:43:5: 46:7
+    let mut _8: &mut keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>; // in scope 0 at src/interrupts.rs:43:5: 46:7
+    let mut _9: &mut spin::MutexGuard<'_, keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // in scope 0 at src/interrupts.rs:43:5: 46:7
+    let _10: ();                         // in scope 0 at src/interrupts.rs:48:5: 48:36
+    scope 1 {
+        debug keyboard => _2;            // in scope 1 at src/interrupts.rs:42:9: 42:21
+    }
+
+    bb0: {
+        _5 = const {alloc7: &KEYBOARD};  // scope 0 at src/interrupts.rs:42:24: 42:45
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:42:24: 42:45
+                                         // + literal: Const { ty: &KEYBOARD, val: Value(Scalar(alloc7)) }
+        _4 = <KEYBOARD as Deref>::deref(_5) -> [return: bb1, unwind unreachable]; // scope 0 at src/interrupts.rs:42:24: 42:52
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:42:24: 42:52
+                                         // + literal: Const { ty: for<'a> fn(&'a KEYBOARD) -> &'a <KEYBOARD as Deref>::Target {<KEYBOARD as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _3 = _4;                         // scope 0 at src/interrupts.rs:42:24: 42:52
+        _2 = Mutex::<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>::lock(move _3) -> [return: bb2, unwind unreachable]; // scope 0 at src/interrupts.rs:42:24: 42:52
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:42:46: 42:50
+                                         // + literal: Const { ty: for<'a> fn(&'a Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>) -> MutexGuard<'a, keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {Mutex::<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>::lock}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _9 = &mut _2;                    // scope 1 at src/interrupts.rs:43:5: 46:7
+        _8 = <MutexGuard<'_, keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> as DerefMut>::deref_mut(move _9) -> [return: bb3, unwind unreachable]; // scope 1 at src/interrupts.rs:43:5: 46:7
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:43:5: 46:7
+                                         // + literal: Const { ty: for<'a> fn(&'a mut MutexGuard<'_, keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>) -> &'a mut <MutexGuard<'_, keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> as Deref>::Target {<MutexGuard<'_, keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> as DerefMut>::deref_mut}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _7 = _8;                         // scope 1 at src/interrupts.rs:43:5: 46:7
+        _6 = keyboard::Keyboard::<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>::process_decoded_key::<[closure@src/interrupts.rs:43:34: 43:59], ()>(move _7, const ZeroSized: [closure@src/interrupts.rs:43:34: 43:59]) -> [return: bb4, unwind unreachable]; // scope 1 at src/interrupts.rs:43:5: 46:7
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:43:14: 43:33
+                                         // + literal: Const { ty: for<'a> fn(&'a mut keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>, [closure@src/interrupts.rs:43:34: 43:59]) {keyboard::Keyboard::<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>::process_decoded_key::<[closure@src/interrupts.rs:43:34: 43:59], ()>}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: [closure@src/interrupts.rs:43:34: 43:59], val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _10 = notify_end_of_timer_interrupt() -> [return: bb5, unwind unreachable]; // scope 1 at src/interrupts.rs:48:5: 48:36
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:48:5: 48:34
+                                         // + literal: Const { ty: fn() {notify_end_of_timer_interrupt}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        drop(_2) -> [return: bb6, unwind unreachable]; // scope 0 at src/interrupts.rs:49:1: 49:2
+    }
+
+    bb6: {
+        return;                          // scope 0 at src/interrupts.rs:49:2: 49:2
+    }
+}
+
+alloc7 (static: KEYBOARD, size: 0, align: 1) {}
+
+fn keyboard_handler::{closure#0}(_1: [closure@src/interrupts.rs:43:34: 43:59], _2: pc_keyboard::DecodedKey) -> () {
+    debug decoded_key => _2;             // in scope 0 at src/interrupts.rs:43:35: 43:46
+    let mut _0: ();                      // return place in scope 0 at src/interrupts.rs:43:60: 43:60
+    let mut _3: isize;                   // in scope 0 at src/interrupts.rs:44:9: 44:41
+    let _4: char;                        // in scope 0 at src/interrupts.rs:44:29: 44:40
+    let mut _5: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _6: &[&str];                 // in scope 0 at src/interrupts.rs:44:59: 44:74
+    let mut _7: &[core::fmt::rt::Argument<'_>]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _8: &[core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _9: [core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _10: core::fmt::rt::Argument<'_>; // in scope 0 at src/interrupts.rs:44:60: 44:73
+    let _11: &char;                      // in scope 0 at src/interrupts.rs:44:60: 44:73
+    let _12: pc_keyboard::KeyCode;       // in scope 0 at src/interrupts.rs:45:28: 45:39
+    let mut _13: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _14: &[&str];                // in scope 0 at src/interrupts.rs:45:58: 45:64
+    let mut _15: &[core::fmt::rt::Argument<'_>]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _16: &[core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _17: [core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _18: core::fmt::rt::Argument<'_>; // in scope 0 at src/interrupts.rs:45:59: 45:63
+    let _19: &pc_keyboard::KeyCode;      // in scope 0 at src/interrupts.rs:45:66: 45:77
+    scope 1 {
+        debug decoded_key => _4;         // in scope 1 at src/interrupts.rs:44:29: 44:40
+        let mut _21: &[&str; 1];         // in scope 1 at src/interrupts.rs:44:59: 44:74
+    }
+    scope 2 {
+        debug decoded_key => _12;        // in scope 2 at src/interrupts.rs:45:28: 45:39
+        let mut _20: &[&str; 1];         // in scope 2 at src/interrupts.rs:45:58: 45:64
+    }
+
+    bb0: {
+        _3 = discriminant(_2);           // scope 0 at src/interrupts.rs:43:66: 43:77
+        switchInt(move _3) -> [0: bb1, 1: bb3, otherwise: bb2]; // scope 0 at src/interrupts.rs:43:60: 43:77
+    }
+
+    bb1: {
+        _12 = ((_2 as RawKey).0: pc_keyboard::KeyCode); // scope 0 at src/interrupts.rs:45:28: 45:39
+        _20 = const _;                   // scope 2 at src/interrupts.rs:45:58: 45:64
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:45:58: 45:64
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(keyboard_handler::{closure#0}, [<closure_kind>, <closure_signature>, <upvars>], Some(promoted[0])) }
+        _14 = _20 as &[&str] (Pointer(Unsize)); // scope 2 at src/interrupts.rs:45:58: 45:64
+        _19 = &_12;                      // scope 2 at src/interrupts.rs:45:66: 45:77
+        _18 = core::fmt::rt::Argument::<'_>::new_debug::<pc_keyboard::KeyCode>(_19) -> [return: bb6, unwind unreachable]; // scope 2 at src/interrupts.rs:45:59: 45:63
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:45:59: 45:63
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: for<'b> fn(&'b pc_keyboard::KeyCode) -> core::fmt::rt::Argument<'b> {core::fmt::rt::Argument::<'_>::new_debug::<pc_keyboard::KeyCode>}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        unreachable;                     // scope 0 at src/interrupts.rs:43:66: 43:77
+    }
+
+    bb3: {
+        _4 = ((_2 as Unicode).0: char);  // scope 0 at src/interrupts.rs:44:29: 44:40
+        _21 = const _;                   // scope 1 at src/interrupts.rs:44:59: 44:74
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:44:59: 44:74
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(keyboard_handler::{closure#0}, [<closure_kind>, <closure_signature>, <upvars>], Some(promoted[1])) }
+        _6 = _21 as &[&str] (Pointer(Unsize)); // scope 1 at src/interrupts.rs:44:59: 44:74
+        _11 = &_4;                       // scope 1 at src/interrupts.rs:44:60: 44:73
+        _10 = core::fmt::rt::Argument::<'_>::new_display::<char>(_11) -> [return: bb4, unwind unreachable]; // scope 1 at src/interrupts.rs:44:60: 44:73
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:44:60: 44:73
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'b> fn(&'b char) -> core::fmt::rt::Argument<'b> {core::fmt::rt::Argument::<'_>::new_display::<char>}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _9 = [move _10];                 // scope 1 at src/peripherals.rs:17:51: 17:73
+        _8 = &_9;                        // scope 1 at src/peripherals.rs:17:51: 17:73
+        _7 = _8 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 1 at src/peripherals.rs:17:51: 17:73
+        _5 = Arguments::<'_>::new_v1(move _6, move _7) -> [return: bb5, unwind unreachable]; // scope 1 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>]) -> Arguments<'_> {Arguments::<'_>::new_v1}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        _0 = peripherals::_print(move _5) -> [return: bb8, unwind unreachable]; // scope 1 at src/peripherals.rs:17:23: 17:74
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:23: 17:50
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {peripherals::_print}, val: Value(<ZST>) }
+    }
+
+    bb6: {
+        _17 = [move _18];                // scope 2 at src/peripherals.rs:17:51: 17:73
+        _16 = &_17;                      // scope 2 at src/peripherals.rs:17:51: 17:73
+        _15 = _16 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 2 at src/peripherals.rs:17:51: 17:73
+        _13 = Arguments::<'_>::new_v1(move _14, move _15) -> [return: bb7, unwind unreachable]; // scope 2 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>]) -> Arguments<'_> {Arguments::<'_>::new_v1}, val: Value(<ZST>) }
+    }
+
+    bb7: {
+        _0 = peripherals::_print(move _13) -> [return: bb8, unwind unreachable]; // scope 2 at src/peripherals.rs:17:23: 17:74
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:23: 17:50
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {peripherals::_print}, val: Value(<ZST>) }
+    }
+
+    bb8: {
+        return;                          // scope 0 at src/interrupts.rs:46:6: 46:6
+    }
+}
+
+promoted[0] in keyboard_handler::{closure#0}: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/interrupts.rs:45:58: 45:64
+    let mut _1: [&str; 1];               // in scope 0 at src/interrupts.rs:45:58: 45:64
+
+    bb0: {
+        _1 = [const ""];                 // scope 0 at src/interrupts.rs:45:58: 45:64
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:45:58: 45:64
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/interrupts.rs:45:58: 45:64
+        return;                          // scope 0 at src/interrupts.rs:45:58: 45:64
+    }
+}
+
+promoted[1] in keyboard_handler::{closure#0}: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/interrupts.rs:44:59: 44:74
+    let mut _1: [&str; 1];               // in scope 0 at src/interrupts.rs:44:59: 44:74
+
+    bb0: {
+        _1 = [const ""];                 // scope 0 at src/interrupts.rs:44:59: 44:74
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:44:59: 44:74
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/interrupts.rs:44:59: 44:74
+        return;                          // scope 0 at src/interrupts.rs:44:59: 44:74
+    }
+}
+
+fn interrupts::initialize() -> () {
+    let mut _0: ();                      // return place in scope 0 at src/interrupts.rs:51:24: 51:26
+    let _1: ();                          // in scope 0 at src/interrupts.rs:52:5: 52:42
+    let mut _2: core::result::Result<bool, &str>; // in scope 0 at src/interrupts.rs:53:11: 53:26
+    let mut _3: &cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable; // in scope 0 at src/interrupts.rs:53:11: 53:26
+    let _4: &cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable; // in scope 0 at src/interrupts.rs:53:11: 53:26
+    let _5: &interrupts::SAFE_IDT;       // in scope 0 at src/interrupts.rs:53:11: 53:19
+    let mut _6: isize;                   // in scope 0 at src/interrupts.rs:54:9: 54:15
+    let _7: &str;                        // in scope 0 at src/interrupts.rs:54:13: 54:14
+    let _8: !;                           // in scope 0 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:9: 61:73
+    let mut _9: core::fmt::Arguments<'_>; // in scope 0 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+    let mut _10: &[&str];                // in scope 0 at src/interrupts.rs:54:26: 54:60
+    let mut _11: &[core::fmt::rt::Argument<'_>]; // in scope 0 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+    let _12: &[core::fmt::rt::Argument<'_>; 1]; // in scope 0 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+    let _13: [core::fmt::rt::Argument<'_>; 1]; // in scope 0 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+    let mut _14: core::fmt::rt::Argument<'_>; // in scope 0 at src/interrupts.rs:54:56: 54:59
+    let _15: &&str;                      // in scope 0 at src/interrupts.rs:54:56: 54:59
+    let _16: ();                         // in scope 0 at src/interrupts.rs:56:13: 56:60
+    let _17: ();                         // in scope 0 at src/interrupts.rs:57:13: 57:37
+    scope 1 {
+        debug s => _7;                   // in scope 1 at src/interrupts.rs:54:13: 54:14
+        let mut _18: &[&str; 1];         // in scope 1 at src/interrupts.rs:54:26: 54:60
+    }
+
+    bb0: {
+        _1 = cpu_interrupts::global_descriptor_table::initialize() -> [return: bb1, unwind unreachable]; // scope 0 at src/interrupts.rs:52:5: 52:42
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:52:5: 52:40
+                                         // + literal: Const { ty: fn() {cpu_interrupts::global_descriptor_table::initialize}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _5 = const {alloc8: &SAFE_IDT};  // scope 0 at src/interrupts.rs:53:11: 53:19
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:53:11: 53:19
+                                         // + literal: Const { ty: &SAFE_IDT, val: Value(Scalar(alloc8)) }
+        _4 = <SAFE_IDT as Deref>::deref(_5) -> [return: bb2, unwind unreachable]; // scope 0 at src/interrupts.rs:53:11: 53:26
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:53:11: 53:26
+                                         // + literal: Const { ty: for<'a> fn(&'a SAFE_IDT) -> &'a <SAFE_IDT as Deref>::Target {<SAFE_IDT as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _3 = _4;                         // scope 0 at src/interrupts.rs:53:11: 53:26
+        _2 = SafeInterruptDescriptorTable::load(move _3) -> [return: bb3, unwind unreachable]; // scope 0 at src/interrupts.rs:53:11: 53:26
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:53:20: 53:24
+                                         // + literal: Const { ty: fn(&'static SafeInterruptDescriptorTable) -> Result<bool, &'static str> {SafeInterruptDescriptorTable::load}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _6 = discriminant(_2);           // scope 0 at src/interrupts.rs:53:11: 53:26
+        switchInt(move _6) -> [0: bb4, 1: bb6, otherwise: bb5]; // scope 0 at src/interrupts.rs:53:5: 53:26
+    }
+
+    bb4: {
+        _16 = cpu_interrupts::programmable_interface_controller::initialize() -> [return: bb9, unwind unreachable]; // scope 0 at src/interrupts.rs:56:13: 56:60
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:56:13: 56:58
+                                         // + literal: Const { ty: fn() {cpu_interrupts::programmable_interface_controller::initialize}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        unreachable;                     // scope 0 at src/interrupts.rs:53:11: 53:26
+    }
+
+    bb6: {
+        _7 = ((_2 as Err).0: &str);      // scope 0 at src/interrupts.rs:54:13: 54:14
+        _18 = const _;                   // scope 1 at src/interrupts.rs:54:26: 54:60
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:54:26: 54:60
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(interrupts::initialize, [], Some(promoted[0])) }
+        _10 = _18 as &[&str] (Pointer(Unsize)); // scope 1 at src/interrupts.rs:54:26: 54:60
+        _15 = &_7;                       // scope 1 at src/interrupts.rs:54:56: 54:59
+        _14 = core::fmt::rt::Argument::<'_>::new_display::<&str>(_15) -> [return: bb7, unwind unreachable]; // scope 1 at src/interrupts.rs:54:56: 54:59
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:54:56: 54:59
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'b> fn(&'b &str) -> core::fmt::rt::Argument<'b> {core::fmt::rt::Argument::<'_>::new_display::<&str>}, val: Value(<ZST>) }
+    }
+
+    bb7: {
+        _13 = [move _14];                // scope 1 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+        _12 = &_13;                      // scope 1 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+        _11 = _12 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 1 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+        _9 = Arguments::<'_>::new_v1(move _10, move _11) -> [return: bb8, unwind unreachable]; // scope 1 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:38: 61:72
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>]) -> Arguments<'_> {Arguments::<'_>::new_v1}, val: Value(<ZST>) }
+    }
+
+    bb8: {
+        _8 = panic_fmt(move _9) -> unwind unreachable; // scope 1 at /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:9: 61:73
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/panic.rs:61:9: 61:37
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) -> ! {panic_fmt}, val: Value(<ZST>) }
+    }
+
+    bb9: {
+        _17 = cpu_interrupts::enable() -> [return: bb10, unwind unreachable]; // scope 0 at src/interrupts.rs:57:13: 57:37
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:57:13: 57:35
+                                         // + literal: Const { ty: fn() {cpu_interrupts::enable}, val: Value(<ZST>) }
+    }
+
+    bb10: {
+        return;                          // scope 0 at src/interrupts.rs:60:2: 60:2
+    }
+}
+
+alloc8 (static: SAFE_IDT, size: 0, align: 1) {}
+
+promoted[0] in interrupts::initialize: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/interrupts.rs:54:26: 54:60
+    let mut _1: [&str; 1];               // in scope 0 at src/interrupts.rs:54:26: 54:60
+
+    bb0: {
+        _1 = [const "IDT initialization failed -> "]; // scope 0 at src/interrupts.rs:54:26: 54:60
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:54:26: 54:60
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/interrupts.rs:54:26: 54:60
+        return;                          // scope 0 at src/interrupts.rs:54:26: 54:60
+    }
+}
+
+fn sine_interruptis(_1: F) -> R {
+    debug f => _1;                       // in scope 0 at src/interrupts.rs:62:31: 62:32
+    let mut _0: R;                       // return place in scope 0 at src/interrupts.rs:62:40: 62:41
+
+    bb0: {
+        _0 = cpu_interrupts::without_interrupts::<F, R>(move _1) -> [return: bb1, unwind unreachable]; // scope 0 at src/interrupts.rs:66:5: 66:42
+                                         // mir::Constant
+                                         // + span: src/interrupts.rs:66:5: 66:39
+                                         // + literal: Const { ty: fn(F) -> R {cpu_interrupts::without_interrupts::<F, R>}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at src/interrupts.rs:67:2: 67:2
+    }
+}
+
+static VGA_DISPLAY_IN_TEXT_MODE: VGA_DISPLAY_IN_TEXT_MODE = {
+    let mut _0: peripherals::VGA_DISPLAY_IN_TEXT_MODE; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:29: 161:31
+    let mut _1: ();                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+
+    bb0: {
+        StorageLive(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _1 = ();                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _0 = VGA_DISPLAY_IN_TEXT_MODE { __private_field: move _1 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:34: 161:58
+        StorageDead(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:57: 161:58
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:58: 173:50
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref(_1: &VGA_DISPLAY_IN_TEXT_MODE) -> &Mutex<Screen> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:22: 135:27
+    let mut _0: &spin::mutex::Mutex<vga::Screen>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:32: 135:35
+    let _2: &spin::mutex::Mutex<vga::Screen>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+
+    bb0: {
+        _2 = <VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__stability() -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:28
+                                         // + literal: Const { ty: fn() -> &'static Mutex<Screen> {<VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__stability}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _2;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:145:14: 145:14
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__static_ref_initialize() -> Mutex<Screen> {
+    let mut _0: spin::mutex::Mutex<vga::Screen>; // return place in scope 0 at src/peripherals.rs:9:46: 9:59
+    let mut _1: vga::Screen;             // in scope 0 at src/peripherals.rs:10:20: 10:66
+    let mut _2: vga::TextFlowDirection;  // in scope 0 at src/peripherals.rs:10:32: 10:59
+
+    bb0: {
+        _2 = BottomUp;                   // scope 0 at src/peripherals.rs:10:32: 10:59
+        _1 = Screen::new(move _2, const 32_u8) -> [return: bb1, unwind unreachable]; // scope 0 at src/peripherals.rs:10:20: 10:66
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:10:20: 10:31
+                                         // + literal: Const { ty: fn(TextFlowDirection, u8) -> Screen {Screen::new}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = Mutex::<Screen>::new(move _1) -> [return: bb2, unwind unreachable]; // scope 0 at src/peripherals.rs:10:9: 10:67
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:10:9: 10:19
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(Screen) -> Mutex<Screen> {Mutex::<Screen>::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:137:58: 137:58
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability() -> &Mutex<Screen> {
+    let mut _0: &spin::mutex::Mutex<vga::Screen>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:140:37: 140:48
+    let _1: &lazy_static::lazy::Lazy<spin::mutex::Mutex<vga::Screen>>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+
+    bb0: {
+        _1 = const {alloc9: &lazy_static::lazy::Lazy<Mutex<Screen>>}; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // + literal: Const { ty: &lazy_static::lazy::Lazy<Mutex<Screen>>, val: Value(Scalar(alloc9)) }
+        _0 = lazy_static::lazy::Lazy::<Mutex<Screen>>::get::<fn() -> Mutex<Screen> {<VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__static_ref_initialize}>(_1, <VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__static_ref_initialize) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:26: 142:29
+                                         // + literal: Const { ty: fn(&'static lazy_static::lazy::Lazy<Mutex<Screen>>, fn() -> Mutex<Screen> {<VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__static_ref_initialize}) -> &'static Mutex<Screen> {lazy_static::lazy::Lazy::<Mutex<Screen>>::get::<fn() -> Mutex<Screen> {<VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__static_ref_initialize}>}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:30: 142:53
+                                         // + literal: Const { ty: fn() -> Mutex<Screen> {<VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__static_ref_initialize}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:143:18: 143:18
+    }
+}
+
+alloc9 (static: <VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__stability::LAZY, size: 240, align: 8) {
+    0x00 │ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 │ ................
+    0x10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x20 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x30 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x40 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x50 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x60 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x70 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x80 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0x90 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0xa0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0xb0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0xc0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0xd0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+    0xe0 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+}
+
+static peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability::LAZY: lazy_static::lazy::Lazy<Mutex<Screen>> = {
+    let mut _0: lazy_static::lazy::Lazy<spin::mutex::Mutex<vga::Screen>>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:23: 29:45
+
+    bb0: {
+        _0 = const _;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: lazy_static::lazy::Lazy<Mutex<Screen>>, val: Unevaluated(lazy_static::lazy::Lazy::<T>::INIT, [spin::mutex::Mutex<vga::Screen>], None) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:9: 29:73
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:147:9: 147:39>::initialize(_1: &VGA_DISPLAY_IN_TEXT_MODE) -> () {
+    debug lazy => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:27: 148:31
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:40: 148:40
+    let _2: &spin::mutex::Mutex<vga::Screen>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = <VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref(_1) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // + literal: Const { ty: for<'a> fn(&'a VGA_DISPLAY_IN_TEXT_MODE) -> &'a <VGA_DISPLAY_IN_TEXT_MODE as Deref>::Target {<VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:150:14: 150:14
+    }
+}
+
+static KEYBOARD: KEYBOARD = {
+    let mut _0: peripherals::KEYBOARD;   // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:29: 161:31
+    let mut _1: ();                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+
+    bb0: {
+        StorageLive(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _1 = ();                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _0 = KEYBOARD { __private_field: move _1 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:34: 161:58
+        StorageDead(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:57: 161:58
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:58: 173:50
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref(_1: &KEYBOARD) -> &Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:22: 135:27
+    let mut _0: &spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:32: 135:35
+    let _2: &spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+
+    bb0: {
+        _2 = <KEYBOARD as Deref>::deref::__stability() -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:28
+                                         // + literal: Const { ty: fn() -> &'static Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {<KEYBOARD as Deref>::deref::__stability}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _2;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:145:14: 145:14
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__static_ref_initialize() -> Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {
+    let mut _0: spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // return place in scope 0 at src/peripherals.rs:11:30: 11:69
+    let mut _1: keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>; // in scope 0 at src/peripherals.rs:12:20: 12:86
+
+    bb0: {
+        _1 = keyboard::Keyboard::<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>::us_scancode_set_one_keyboard() -> [return: bb1, unwind unreachable]; // scope 0 at src/peripherals.rs:12:20: 12:86
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:12:20: 12:84
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn() -> keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1> {keyboard::Keyboard::<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>::us_scancode_set_one_keyboard}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = Mutex::<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>::new(move _1) -> [return: bb2, unwind unreachable]; // scope 0 at src/peripherals.rs:12:9: 12:87
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:12:9: 12:19
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>) -> Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {Mutex::<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:137:58: 137:58
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability() -> &Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {
+    let mut _0: &spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:140:37: 140:48
+    let _1: &lazy_static::lazy::Lazy<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+
+    bb0: {
+        _1 = const {alloc10: &lazy_static::lazy::Lazy<Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>}; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // + literal: Const { ty: &lazy_static::lazy::Lazy<Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>, val: Value(Scalar(alloc10)) }
+        _0 = lazy_static::lazy::Lazy::<Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>::get::<fn() -> Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {<KEYBOARD as Deref>::deref::__static_ref_initialize}>(_1, <KEYBOARD as Deref>::deref::__static_ref_initialize) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:26: 142:29
+                                         // + literal: Const { ty: fn(&'static lazy_static::lazy::Lazy<Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>, fn() -> Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {<KEYBOARD as Deref>::deref::__static_ref_initialize}) -> &'static Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {lazy_static::lazy::Lazy::<Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>::get::<fn() -> Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {<KEYBOARD as Deref>::deref::__static_ref_initialize}>}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:30: 142:53
+                                         // + literal: Const { ty: fn() -> Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>> {<KEYBOARD as Deref>::deref::__static_ref_initialize}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:143:18: 143:18
+    }
+}
+
+alloc10 (static: <KEYBOARD as Deref>::deref::__stability::LAZY, size: 32, align: 8) {
+    0x00 │ 00 00 00 00 00 00 00 00 00 00 __ __ __ __ __ __ │ ..........░░░░░░
+    0x10 │ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ░░░░░░░░░░░░░░░░
+}
+
+static peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability::LAZY: lazy_static::lazy::Lazy<Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>> = {
+    let mut _0: lazy_static::lazy::Lazy<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:23: 29:45
+
+    bb0: {
+        _0 = const _;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: lazy_static::lazy::Lazy<Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>, val: Unevaluated(lazy_static::lazy::Lazy::<T>::INIT, [spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>], None) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:9: 29:73
+    }
+}
+
+fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:147:9: 147:39>::initialize(_1: &KEYBOARD) -> () {
+    debug lazy => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:27: 148:31
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:40: 148:40
+    let _2: &spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = <KEYBOARD as Deref>::deref(_1) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // + literal: Const { ty: for<'a> fn(&'a KEYBOARD) -> &'a <KEYBOARD as Deref>::Target {<KEYBOARD as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:150:14: 150:14
+    }
+}
+
+fn peripherals::_print(_1: Arguments<'_>) -> () {
+    debug args => _1;                    // in scope 0 at src/peripherals.rs:27:15: 27:19
+    let mut _0: ();                      // return place in scope 0 at src/peripherals.rs:27:37: 27:37
+    let _2: ();                          // in scope 0 at src/peripherals.rs:29:5: 29:94
+    let mut _3: [closure@src/peripherals.rs:29:34: 29:36]; // in scope 0 at src/peripherals.rs:29:34: 29:93
+    let mut _4: &core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:29:34: 29:93
+
+    bb0: {
+        _4 = &_1;                        // scope 0 at src/peripherals.rs:29:34: 29:93
+        _3 = [closure@src/peripherals.rs:29:34: 29:36] { args: move _4 }; // scope 0 at src/peripherals.rs:29:34: 29:93
+                                         // closure
+                                         // + def_id: DefId(0:45 ~ theo[c45f]::peripherals::_print::{closure#0})
+                                         // + substs: [
+                                         //     i32,
+                                         //     extern "rust-call" fn(()),
+                                         //     (&core::fmt::Arguments<'_>,),
+                                         // ]
+        _2 = sine_interruptis::<[closure@src/peripherals.rs:29:34: 29:36], ()>(move _3) -> [return: bb1, unwind unreachable]; // scope 0 at src/peripherals.rs:29:5: 29:94
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:29:5: 29:33
+                                         // + literal: Const { ty: fn([closure@src/peripherals.rs:29:34: 29:36]) {sine_interruptis::<[closure@src/peripherals.rs:29:34: 29:36], ()>}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at src/peripherals.rs:30:2: 30:2
+    }
+}
+
+fn peripherals::_print::{closure#0}(_1: [closure@src/peripherals.rs:29:34: 29:36]) -> () {
+    debug args => (*(_1.0: &core::fmt::Arguments<'_>)); // in scope 0 at src/peripherals.rs:27:15: 27:19
+    let mut _0: ();                      // return place in scope 0 at src/peripherals.rs:29:37: 29:37
+    let mut _2: core::result::Result<(), core::fmt::Error>; // in scope 0 at src/peripherals.rs:29:37: 29:84
+    let mut _3: &mut vga::Screen;        // in scope 0 at src/peripherals.rs:29:37: 29:84
+    let mut _4: &mut vga::Screen;        // in scope 0 at src/peripherals.rs:29:37: 29:84
+    let mut _5: &mut spin::MutexGuard<'_, vga::Screen>; // in scope 0 at src/peripherals.rs:29:37: 29:84
+    let mut _6: spin::MutexGuard<'_, vga::Screen>; // in scope 0 at src/peripherals.rs:29:37: 29:68
+    let mut _7: &spin::mutex::Mutex<vga::Screen>; // in scope 0 at src/peripherals.rs:29:37: 29:68
+    let _8: &spin::mutex::Mutex<vga::Screen>; // in scope 0 at src/peripherals.rs:29:37: 29:68
+    let _9: &peripherals::VGA_DISPLAY_IN_TEXT_MODE; // in scope 0 at src/peripherals.rs:29:37: 29:61
+    let mut _10: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:29:79: 29:83
+    let mut _11: &core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:29:34: 29:93
+
+    bb0: {
+        _9 = const {alloc11: &VGA_DISPLAY_IN_TEXT_MODE}; // scope 0 at src/peripherals.rs:29:37: 29:61
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:29:37: 29:61
+                                         // + literal: Const { ty: &VGA_DISPLAY_IN_TEXT_MODE, val: Value(Scalar(alloc11)) }
+        _8 = <VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref(_9) -> [return: bb1, unwind unreachable]; // scope 0 at src/peripherals.rs:29:37: 29:68
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:29:37: 29:68
+                                         // + literal: Const { ty: for<'a> fn(&'a VGA_DISPLAY_IN_TEXT_MODE) -> &'a <VGA_DISPLAY_IN_TEXT_MODE as Deref>::Target {<VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _7 = _8;                         // scope 0 at src/peripherals.rs:29:37: 29:68
+        _6 = Mutex::<Screen>::lock(move _7) -> [return: bb2, unwind unreachable]; // scope 0 at src/peripherals.rs:29:37: 29:68
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:29:62: 29:66
+                                         // + literal: Const { ty: for<'a> fn(&'a Mutex<Screen>) -> MutexGuard<'a, Screen> {Mutex::<Screen>::lock}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _5 = &mut _6;                    // scope 0 at src/peripherals.rs:29:37: 29:84
+        _4 = <MutexGuard<'_, Screen> as DerefMut>::deref_mut(move _5) -> [return: bb3, unwind unreachable]; // scope 0 at src/peripherals.rs:29:37: 29:84
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:29:37: 29:84
+                                         // + literal: Const { ty: for<'a> fn(&'a mut MutexGuard<'_, Screen>) -> &'a mut <MutexGuard<'_, Screen> as Deref>::Target {<MutexGuard<'_, Screen> as DerefMut>::deref_mut}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _3 = _4;                         // scope 0 at src/peripherals.rs:29:37: 29:84
+        _11 = deref_copy (_1.0: &core::fmt::Arguments<'_>); // scope 0 at src/peripherals.rs:29:79: 29:83
+        _10 = (*_11);                    // scope 0 at src/peripherals.rs:29:79: 29:83
+        _2 = <Screen as Write>::write_fmt(move _3, move _10) -> [return: bb4, unwind unreachable]; // scope 0 at src/peripherals.rs:29:37: 29:84
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:29:69: 29:78
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a mut Screen, Arguments<'b>) -> Result<(), core::fmt::Error> {<Screen as Write>::write_fmt}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _0 = Result::<(), core::fmt::Error>::unwrap(move _2) -> [return: bb5, unwind unreachable]; // scope 0 at src/peripherals.rs:29:37: 29:93
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:29:85: 29:91
+                                         // + literal: Const { ty: fn(Result<(), core::fmt::Error>) {Result::<(), core::fmt::Error>::unwrap}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        drop(_6) -> [return: bb6, unwind unreachable]; // scope 0 at src/peripherals.rs:29:92: 29:93
+    }
+
+    bb6: {
+        return;                          // scope 0 at src/peripherals.rs:29:93: 29:93
+    }
+}
+
+alloc11 (static: VGA_DISPLAY_IN_TEXT_MODE, size: 0, align: 1) {}
+
+fn peripherals::initialize() -> () {
+    let mut _0: ();                      // return place in scope 0 at src/peripherals.rs:32:21: 32:21
+
+    bb0: {
+        return;                          // scope 0 at src/peripherals.rs:34:2: 34:2
+    }
+}
+
+const SERIAL_PORT_ADDR: u16 = {
+    let mut _0: u16;                     // return place in scope 0 at src/serial.rs:5:25: 5:28
+
+    bb0: {
+        _0 = const 1016_u16;             // scope 0 at src/serial.rs:5:31: 5:36
+        return;                          // scope 0 at src/serial.rs:5:1: 5:37
+    }
+}
+
+static SERIAL1: SERIAL1 = {
+    let mut _0: serial::SERIAL1;         // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:29: 161:31
+    let mut _1: ();                      // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+
+    bb0: {
+        StorageLive(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _1 = ();                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:55: 161:57
+        _0 = SERIAL1 { __private_field: move _1 }; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:34: 161:58
+        StorageDead(_1);                 // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:57: 161:58
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:161:58: 173:50
+    }
+}
+
+fn serial::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref(_1: &SERIAL1) -> &Mutex<SerialPort> {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:22: 135:27
+    let mut _0: &spin::mutex::Mutex<uart_16550::SerialPort>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:135:32: 135:35
+    let _2: &spin::mutex::Mutex<uart_16550::SerialPort>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+
+    bb0: {
+        _2 = <SERIAL1 as Deref>::deref::__stability() -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:28
+                                         // + literal: Const { ty: fn() -> &'static Mutex<SerialPort> {<SERIAL1 as Deref>::deref::__stability}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _0 = _2;                         // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:144:17: 144:30
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:145:14: 145:14
+    }
+}
+
+fn serial::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__static_ref_initialize() -> Mutex<SerialPort> {
+    let mut _0: spin::mutex::Mutex<uart_16550::SerialPort>; // return place in scope 0 at src/serial.rs:8:29: 8:46
+    let mut _1: uart_16550::SerialPort;  // in scope 0 at src/serial.rs:9:13: 9:38
+    let _2: ();                          // in scope 0 at src/serial.rs:10:9: 10:37
+    let mut _3: &mut uart_16550::SerialPort; // in scope 0 at src/serial.rs:10:9: 10:37
+    let mut _4: uart_16550::SerialPort;  // in scope 0 at src/serial.rs:11:20: 11:41
+    scope 1 {
+        debug serial_via_uart_16550 => _1; // in scope 1 at src/serial.rs:9:13: 9:38
+    }
+    scope 2 {
+    }
+
+    bb0: {
+        _1 = SerialPort::new(const _) -> [return: bb1, unwind unreachable]; // scope 2 at src/serial.rs:9:50: 9:83
+                                         // mir::Constant
+                                         // + span: src/serial.rs:9:50: 9:65
+                                         // + literal: Const { ty: unsafe fn(u16) -> SerialPort {SerialPort::new}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _3 = &mut _1;                    // scope 1 at src/serial.rs:10:9: 10:37
+        _2 = SerialPort::init(move _3) -> [return: bb2, unwind unreachable]; // scope 1 at src/serial.rs:10:9: 10:37
+                                         // mir::Constant
+                                         // + span: src/serial.rs:10:31: 10:35
+                                         // + literal: Const { ty: for<'a> fn(&'a mut SerialPort) {SerialPort::init}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _4 = move _1;                    // scope 1 at src/serial.rs:11:20: 11:41
+        _0 = Mutex::<SerialPort>::new(move _4) -> [return: bb3, unwind unreachable]; // scope 1 at src/serial.rs:11:9: 11:42
+                                         // mir::Constant
+                                         // + span: src/serial.rs:11:9: 11:19
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(SerialPort) -> Mutex<SerialPort> {Mutex::<SerialPort>::new}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:137:58: 137:58
+    }
+}
+
+fn serial::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability() -> &Mutex<SerialPort> {
+    let mut _0: &spin::mutex::Mutex<uart_16550::SerialPort>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:140:37: 140:48
+    let _1: &lazy_static::lazy::Lazy<spin::mutex::Mutex<uart_16550::SerialPort>>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+
+    bb0: {
+        _1 = const {alloc12: &lazy_static::lazy::Lazy<Mutex<SerialPort>>}; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:25
+                                         // + literal: Const { ty: &lazy_static::lazy::Lazy<Mutex<SerialPort>>, val: Value(Scalar(alloc12)) }
+        _0 = lazy_static::lazy::Lazy::<Mutex<SerialPort>>::get::<fn() -> Mutex<SerialPort> {<SERIAL1 as Deref>::deref::__static_ref_initialize}>(_1, <SERIAL1 as Deref>::deref::__static_ref_initialize) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:21: 142:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:26: 142:29
+                                         // + literal: Const { ty: fn(&'static lazy_static::lazy::Lazy<Mutex<SerialPort>>, fn() -> Mutex<SerialPort> {<SERIAL1 as Deref>::deref::__static_ref_initialize}) -> &'static Mutex<SerialPort> {lazy_static::lazy::Lazy::<Mutex<SerialPort>>::get::<fn() -> Mutex<SerialPort> {<SERIAL1 as Deref>::deref::__static_ref_initialize}>}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:142:30: 142:53
+                                         // + literal: Const { ty: fn() -> Mutex<SerialPort> {<SERIAL1 as Deref>::deref::__static_ref_initialize}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:143:18: 143:18
+    }
+}
+
+alloc12 (static: <SERIAL1 as Deref>::deref::__stability::LAZY, size: 24, align: 8) {
+    0x00 │ 00 00 __ __ __ __ __ __ __ __ __ __ __ __ __ __ │ ..░░░░░░░░░░░░░░
+    0x10 │ 00 00 00 00 00 00 00 00                         │ ........
+}
+
+static serial::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability::LAZY: lazy_static::lazy::Lazy<Mutex<SerialPort>> = {
+    let mut _0: lazy_static::lazy::Lazy<spin::mutex::Mutex<uart_16550::SerialPort>>; // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:23: 29:45
+
+    bb0: {
+        _0 = const _;                    // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:48: 29:72
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: lazy_static::lazy::Lazy<Mutex<SerialPort>>, val: Unevaluated(lazy_static::lazy::Lazy::<T>::INIT, [spin::mutex::Mutex<uart_16550::SerialPort>], None) }
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/core_lazy.rs:29:9: 29:73
+    }
+}
+
+fn serial::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:147:9: 147:39>::initialize(_1: &SERIAL1) -> () {
+    debug lazy => _1;                    // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:27: 148:31
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:148:40: 148:40
+    let _2: &spin::mutex::Mutex<uart_16550::SerialPort>; // in scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = <SERIAL1 as Deref>::deref(_1) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:149:26: 149:32
+                                         // + literal: Const { ty: for<'a> fn(&'a SERIAL1) -> &'a <SERIAL1 as Deref>::Target {<SERIAL1 as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:150:14: 150:14
+    }
+}
+
+fn serial::_print(_1: Arguments<'_>) -> () {
+    debug args => _1;                    // in scope 0 at src/serial.rs:16:15: 16:19
+    let mut _0: ();                      // return place in scope 0 at src/serial.rs:16:45: 16:45
+    let _2: ();                          // in scope 0 at src/serial.rs:18:5: 21:45
+    let mut _3: core::result::Result<(), core::fmt::Error>; // in scope 0 at src/serial.rs:18:5: 20:25
+    let mut _4: &mut uart_16550::SerialPort; // in scope 0 at src/serial.rs:18:5: 20:25
+    let mut _5: &mut uart_16550::SerialPort; // in scope 0 at src/serial.rs:18:5: 20:25
+    let mut _6: &mut spin::MutexGuard<'_, uart_16550::SerialPort>; // in scope 0 at src/serial.rs:18:5: 20:25
+    let mut _7: spin::MutexGuard<'_, uart_16550::SerialPort>; // in scope 0 at src/serial.rs:18:5: 19:16
+    let mut _8: &spin::mutex::Mutex<uart_16550::SerialPort>; // in scope 0 at src/serial.rs:18:5: 19:16
+    let _9: &spin::mutex::Mutex<uart_16550::SerialPort>; // in scope 0 at src/serial.rs:18:5: 19:16
+    let _10: &serial::SERIAL1;           // in scope 0 at src/serial.rs:18:5: 18:12
+    let _11: &str;                       // in scope 0 at src/serial.rs:21:17: 21:44
+
+    bb0: {
+        _10 = const {alloc13: &SERIAL1}; // scope 0 at src/serial.rs:18:5: 18:12
+                                         // mir::Constant
+                                         // + span: src/serial.rs:18:5: 18:12
+                                         // + literal: Const { ty: &SERIAL1, val: Value(Scalar(alloc13)) }
+        _9 = <SERIAL1 as Deref>::deref(_10) -> [return: bb1, unwind unreachable]; // scope 0 at src/serial.rs:18:5: 19:16
+                                         // mir::Constant
+                                         // + span: src/serial.rs:18:5: 19:16
+                                         // + literal: Const { ty: for<'a> fn(&'a SERIAL1) -> &'a <SERIAL1 as Deref>::Target {<SERIAL1 as Deref>::deref}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _8 = _9;                         // scope 0 at src/serial.rs:18:5: 19:16
+        _7 = Mutex::<SerialPort>::lock(move _8) -> [return: bb2, unwind unreachable]; // scope 0 at src/serial.rs:18:5: 19:16
+                                         // mir::Constant
+                                         // + span: src/serial.rs:19:10: 19:14
+                                         // + literal: Const { ty: for<'a> fn(&'a Mutex<SerialPort>) -> MutexGuard<'a, SerialPort> {Mutex::<SerialPort>::lock}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _6 = &mut _7;                    // scope 0 at src/serial.rs:18:5: 20:25
+        _5 = <MutexGuard<'_, SerialPort> as DerefMut>::deref_mut(move _6) -> [return: bb3, unwind unreachable]; // scope 0 at src/serial.rs:18:5: 20:25
+                                         // mir::Constant
+                                         // + span: src/serial.rs:18:5: 20:25
+                                         // + literal: Const { ty: for<'a> fn(&'a mut MutexGuard<'_, SerialPort>) -> &'a mut <MutexGuard<'_, SerialPort> as Deref>::Target {<MutexGuard<'_, SerialPort> as DerefMut>::deref_mut}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _4 = _5;                         // scope 0 at src/serial.rs:18:5: 20:25
+        _3 = <SerialPort as Write>::write_fmt(move _4, _1) -> [return: bb4, unwind unreachable]; // scope 0 at src/serial.rs:18:5: 20:25
+                                         // mir::Constant
+                                         // + span: src/serial.rs:20:10: 20:19
+                                         // + literal: Const { ty: for<'a, 'b> fn(&'a mut SerialPort, Arguments<'b>) -> Result<(), core::fmt::Error> {<SerialPort as Write>::write_fmt}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _11 = const "Printing to serial failed"; // scope 0 at src/serial.rs:21:17: 21:44
+                                         // mir::Constant
+                                         // + span: src/serial.rs:21:17: 21:44
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _2 = Result::<(), core::fmt::Error>::expect(move _3, _11) -> [return: bb5, unwind unreachable]; // scope 0 at src/serial.rs:18:5: 21:45
+                                         // mir::Constant
+                                         // + span: src/serial.rs:21:10: 21:16
+                                         // + literal: Const { ty: for<'a> fn(Result<(), core::fmt::Error>, &'a str) {Result::<(), core::fmt::Error>::expect}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        drop(_7) -> [return: bb6, unwind unreachable]; // scope 0 at src/serial.rs:21:45: 21:46
+    }
+
+    bb6: {
+        return;                          // scope 0 at src/serial.rs:22:2: 22:2
+    }
+}
+
+alloc13 (static: SERIAL1, size: 0, align: 1) {}
+
+fn traits::<impl at src/traits.rs:5:1: 5:23>::run(_1: &T) -> () {
+    debug self => _1;                    // in scope 0 at src/traits.rs:9:12: 9:17
+    let mut _0: ();                      // return place in scope 0 at src/traits.rs:9:19: 9:19
+    let _2: ();                          // in scope 0 at src/serial.rs:28:9: 28:55
+    let mut _3: core::fmt::Arguments<'_>; // in scope 0 at src/serial.rs:28:32: 28:54
+    let mut _4: &[&str];                 // in scope 0 at src/traits.rs:10:30: 10:40
+    let mut _5: &[core::fmt::rt::Argument<'_>]; // in scope 0 at src/serial.rs:28:32: 28:54
+    let _6: &[core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/serial.rs:28:32: 28:54
+    let _7: [core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/serial.rs:28:32: 28:54
+    let mut _8: core::fmt::rt::Argument<'_>; // in scope 0 at src/traits.rs:10:31: 10:33
+    let _9: &&str;                       // in scope 0 at src/traits.rs:10:42: 10:69
+    let _10: &str;                       // in scope 0 at src/traits.rs:10:42: 10:69
+    let _11: ();                         // in scope 0 at src/traits.rs:11:9: 11:15
+    let _12: ();                         // in scope 0 at src/serial.rs:28:9: 28:55
+    let mut _13: core::fmt::Arguments<'_>; // in scope 0 at src/serial.rs:28:32: 28:54
+    let mut _14: &[&str];                // in scope 0 at src/serial.rs:36:43: 36:62
+    let mut _15: &[&str; 1];             // in scope 0 at src/serial.rs:36:43: 36:62
+    let mut _16: &[&str; 2];             // in scope 0 at src/traits.rs:10:30: 10:40
+
+    bb0: {
+        _16 = const _;                   // scope 0 at src/traits.rs:10:30: 10:40
+                                         // mir::Constant
+                                         // + span: src/traits.rs:10:30: 10:40
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(<T as Testable>::run, [T], Some(promoted[1])) }
+        _4 = _16 as &[&str] (Pointer(Unsize)); // scope 0 at src/traits.rs:10:30: 10:40
+        _10 = core::any::type_name::<T>() -> [return: bb1, unwind unreachable]; // scope 0 at src/traits.rs:10:42: 10:69
+                                         // mir::Constant
+                                         // + span: src/traits.rs:10:42: 10:67
+                                         // + literal: Const { ty: fn() -> &'static str {core::any::type_name::<T>}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _9 = &_10;                       // scope 0 at src/traits.rs:10:42: 10:69
+        _8 = core::fmt::rt::Argument::<'_>::new_display::<&str>(_9) -> [return: bb2, unwind unreachable]; // scope 0 at src/traits.rs:10:31: 10:33
+                                         // mir::Constant
+                                         // + span: src/traits.rs:10:31: 10:33
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'b> fn(&'b &str) -> core::fmt::rt::Argument<'b> {core::fmt::rt::Argument::<'_>::new_display::<&str>}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _7 = [move _8];                  // scope 0 at src/serial.rs:28:32: 28:54
+        _6 = &_7;                        // scope 0 at src/serial.rs:28:32: 28:54
+        _5 = _6 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 0 at src/serial.rs:28:32: 28:54
+        _3 = Arguments::<'_>::new_v1(move _4, move _5) -> [return: bb3, unwind unreachable]; // scope 0 at src/serial.rs:28:32: 28:54
+                                         // mir::Constant
+                                         // + span: src/serial.rs:28:32: 28:54
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>]) -> Arguments<'_> {Arguments::<'_>::new_v1}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _2 = serial::_print(move _3) -> [return: bb4, unwind unreachable]; // scope 0 at src/serial.rs:28:9: 28:55
+                                         // mir::Constant
+                                         // + span: src/serial.rs:28:9: 28:31
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {serial::_print}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _11 = <T as Fn<()>>::call(_1, const ()) -> [return: bb5, unwind unreachable]; // scope 0 at src/traits.rs:11:9: 11:15
+                                         // mir::Constant
+                                         // + span: src/traits.rs:11:9: 11:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a T, ()) -> <T as FnOnce<()>>::Output {<T as Fn<()>>::call}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        _15 = const _;                   // scope 0 at src/serial.rs:36:43: 36:62
+                                         // mir::Constant
+                                         // + span: src/serial.rs:36:43: 36:62
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(<T as Testable>::run, [T], Some(promoted[0])) }
+        _14 = _15 as &[&str] (Pointer(Unsize)); // scope 0 at src/serial.rs:36:43: 36:62
+        _13 = Arguments::<'_>::new_const(move _14) -> [return: bb6, unwind unreachable]; // scope 0 at src/serial.rs:28:32: 28:54
+                                         // mir::Constant
+                                         // + span: src/serial.rs:28:32: 28:54
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(&[&'static str]) -> Arguments<'_> {Arguments::<'_>::new_const}, val: Value(<ZST>) }
+    }
+
+    bb6: {
+        _12 = serial::_print(move _13) -> [return: bb7, unwind unreachable]; // scope 0 at src/serial.rs:28:9: 28:55
+                                         // mir::Constant
+                                         // + span: src/serial.rs:28:9: 28:31
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {serial::_print}, val: Value(<ZST>) }
+    }
+
+    bb7: {
+        return;                          // scope 0 at src/traits.rs:13:6: 13:6
+    }
+}
+
+promoted[0] in traits::<impl at src/traits.rs:5:1: 5:23>::run: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/serial.rs:36:43: 36:62
+    let mut _1: [&str; 1];               // in scope 0 at src/serial.rs:36:43: 36:62
+
+    bb0: {
+        _1 = [const "[ok]\n"];           // scope 0 at src/serial.rs:36:43: 36:62
+                                         // mir::Constant
+                                         // + span: src/serial.rs:36:43: 36:62
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/serial.rs:36:43: 36:62
+        return;                          // scope 0 at src/serial.rs:36:43: 36:62
+    }
+}
+
+promoted[1] in traits::<impl at src/traits.rs:5:1: 5:23>::run: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at src/traits.rs:10:30: 10:40
+    let mut _1: [&str; 2];               // in scope 0 at src/traits.rs:10:30: 10:40
+
+    bb0: {
+        _1 = [const "", const " ...\t"]; // scope 0 at src/traits.rs:10:30: 10:40
+                                         // mir::Constant
+                                         // + span: src/traits.rs:10:30: 10:40
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+                                         // mir::Constant
+                                         // + span: src/traits.rs:10:30: 10:40
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/traits.rs:10:30: 10:40
+        return;                          // scope 0 at src/traits.rs:10:30: 10:40
+    }
+}
+
+fn _start() -> ! {
+    let mut _0: !;                       // return place in scope 0 at src/main.rs:33:20: 33:21
+    let _1: ();                          // in scope 0 at src/main.rs:34:5: 34:30
+    let _2: ();                          // in scope 0 at src/main.rs:35:5: 35:29
+    let _3: ();                          // in scope 0 at src/peripherals.rs:17:23: 17:74
+    let mut _4: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _5: &[&str];                 // in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _6: &[core::fmt::rt::Argument<'_>]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _7: &[core::fmt::rt::Argument<'_>; 0]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _8: [core::fmt::rt::Argument<'_>; 0]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _9: ();                          // in scope 0 at src/peripherals.rs:17:23: 17:74
+    let mut _10: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _11: &[&str];                // in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _12: &[core::fmt::rt::Argument<'_>]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _13: &[core::fmt::rt::Argument<'_>; 0]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _14: [core::fmt::rt::Argument<'_>; 0]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _15: ();                         // in scope 0 at src/peripherals.rs:17:23: 17:74
+    let mut _16: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _17: &[&str];                // in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _18: &[core::fmt::rt::Argument<'_>]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _19: &[core::fmt::rt::Argument<'_>; 0]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _20: [core::fmt::rt::Argument<'_>; 0]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _21: ();                     // in scope 0 at src/main.rs:33:1: 55:2
+    let mut _22: &[&str; 1];             // in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _23: &[&str; 1];             // in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _24: &[&str; 1];             // in scope 0 at src/peripherals.rs:23:38: 23:44
+
+    bb0: {
+        _1 = peripherals::initialize() -> [return: bb1, unwind unreachable]; // scope 0 at src/main.rs:34:5: 34:30
+                                         // mir::Constant
+                                         // + span: src/main.rs:34:5: 34:28
+                                         // + literal: Const { ty: fn() {peripherals::initialize}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _2 = interrupts::initialize() -> [return: bb2, unwind unreachable]; // scope 0 at src/main.rs:35:5: 35:29
+                                         // mir::Constant
+                                         // + span: src/main.rs:35:5: 35:27
+                                         // + literal: Const { ty: fn() {interrupts::initialize}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _24 = const _;                   // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(_start, [], Some(promoted[2])) }
+        _5 = _24 as &[&str] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:23:38: 23:44
+        _8 = core::fmt::rt::Argument::<'_>::none() -> [return: bb3, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn() -> [core::fmt::rt::Argument<'_>; 0] {core::fmt::rt::Argument::<'_>::none}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _7 = &_8;                        // scope 0 at src/peripherals.rs:17:51: 17:73
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:17:51: 17:73
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb4, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>]) -> Arguments<'_> {Arguments::<'_>::new_v1}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _3 = peripherals::_print(move _4) -> [return: bb5, unwind unreachable]; // scope 0 at src/peripherals.rs:17:23: 17:74
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:23: 17:50
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {peripherals::_print}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        _23 = const _;                   // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(_start, [], Some(promoted[1])) }
+        _11 = _23 as &[&str] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:23:38: 23:44
+        _14 = core::fmt::rt::Argument::<'_>::none() -> [return: bb6, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: fn() -> [core::fmt::rt::Argument<'_>; 0] {core::fmt::rt::Argument::<'_>::none}, val: Value(<ZST>) }
+    }
+
+    bb6: {
+        _13 = &_14;                      // scope 0 at src/peripherals.rs:17:51: 17:73
+        _12 = _13 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:17:51: 17:73
+        _10 = Arguments::<'_>::new_v1(move _11, move _12) -> [return: bb7, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>]) -> Arguments<'_> {Arguments::<'_>::new_v1}, val: Value(<ZST>) }
+    }
+
+    bb7: {
+        _9 = peripherals::_print(move _10) -> [return: bb8, unwind unreachable]; // scope 0 at src/peripherals.rs:17:23: 17:74
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:23: 17:50
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {peripherals::_print}, val: Value(<ZST>) }
+    }
+
+    bb8: {
+        _22 = const _;                   // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &[&str; 1], val: Unevaluated(_start, [], Some(promoted[0])) }
+        _17 = _22 as &[&str] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:23:38: 23:44
+        _20 = core::fmt::rt::Argument::<'_>::none() -> [return: bb9, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(5)
+                                         // + literal: Const { ty: fn() -> [core::fmt::rt::Argument<'_>; 0] {core::fmt::rt::Argument::<'_>::none}, val: Value(<ZST>) }
+    }
+
+    bb9: {
+        _19 = &_20;                      // scope 0 at src/peripherals.rs:17:51: 17:73
+        _18 = _19 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:17:51: 17:73
+        _16 = Arguments::<'_>::new_v1(move _17, move _18) -> [return: bb10, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(4)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>]) -> Arguments<'_> {Arguments::<'_>::new_v1}, val: Value(<ZST>) }
+    }
+
+    bb10: {
+        _15 = peripherals::_print(move _16) -> [return: bb11, unwind unreachable]; // scope 0 at src/peripherals.rs:17:23: 17:74
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:23: 17:50
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {peripherals::_print}, val: Value(<ZST>) }
+    }
+
+    bb11: {
+        _21 = hlt() -> [return: bb11, unwind unreachable]; // scope 0 at src/main.rs:54:12: 54:39
+                                         // mir::Constant
+                                         // + span: src/main.rs:54:12: 54:37
+                                         // + literal: Const { ty: fn() {hlt}, val: Value(<ZST>) }
+    }
+}
+
+promoted[0] in _start: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _1: [&str; 1];               // in scope 0 at src/peripherals.rs:23:38: 23:44
+
+    bb0: {
+        _1 = [const "last row of text, with empty row below\n"]; // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/peripherals.rs:23:38: 23:44
+        return;                          // scope 0 at src/peripherals.rs:23:38: 23:44
+    }
+}
+
+promoted[1] in _start: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _1: [&str; 1];               // in scope 0 at src/peripherals.rs:23:38: 23:44
+
+    bb0: {
+        _1 = [const "this text should appear on last but one row\n"]; // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/peripherals.rs:23:38: 23:44
+        return;                          // scope 0 at src/peripherals.rs:23:38: 23:44
+    }
+}
+
+promoted[2] in _start: &[&str; 1] = {
+    let mut _0: &[&str; 1];              // return place in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _1: [&str; 1];               // in scope 0 at src/peripherals.rs:23:38: 23:44
+
+    bb0: {
+        _1 = [const "ave imperator, morituri te salutant 🖖!\n\n\n\n\n"]; // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/peripherals.rs:23:38: 23:44
+        return;                          // scope 0 at src/peripherals.rs:23:38: 23:44
+    }
+}
+
+fn panic_handler(_1: &PanicInfo<'_>) -> ! {
+    debug panic_info => _1;              // in scope 0 at src/main.rs:62:18: 62:28
+    let mut _0: !;                       // return place in scope 0 at src/main.rs:62:45: 62:46
+    let _2: ();                          // in scope 0 at src/peripherals.rs:17:23: 17:74
+    let mut _3: core::fmt::Arguments<'_>; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _4: &[&str];                 // in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _5: &[core::fmt::rt::Argument<'_>]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _6: &[core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _7: [core::fmt::rt::Argument<'_>; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _8: core::fmt::rt::Argument<'_>; // in scope 0 at src/main.rs:74:15: 74:20
+    let _9: &&core::panic::PanicInfo<'_>; // in scope 0 at src/main.rs:74:23: 74:33
+    let mut _10: &[core::fmt::rt::Placeholder]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _11: &[core::fmt::rt::Placeholder; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let _12: [core::fmt::rt::Placeholder; 1]; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _13: core::fmt::rt::Placeholder; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _14: core::fmt::rt::Alignment; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _15: core::fmt::rt::Count;   // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _16: core::fmt::rt::Count;   // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _17: core::fmt::rt::UnsafeArg; // in scope 0 at src/peripherals.rs:17:51: 17:73
+    let mut _18: &[&str; 2];             // in scope 0 at src/peripherals.rs:23:38: 23:44
+    scope 1 {
+    }
+
+    bb0: {
+        _18 = const _;                   // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &[&str; 2], val: Unevaluated(panic_handler, [], Some(promoted[0])) }
+        _4 = _18 as &[&str] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:23:38: 23:44
+        _9 = &_1;                        // scope 0 at src/main.rs:74:23: 74:33
+        _8 = core::fmt::rt::Argument::<'_>::new_debug::<&PanicInfo<'_>>(_9) -> [return: bb1, unwind unreachable]; // scope 0 at src/main.rs:74:15: 74:20
+                                         // mir::Constant
+                                         // + span: src/main.rs:74:15: 74:20
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: for<'b> fn(&'b &PanicInfo<'_>) -> core::fmt::rt::Argument<'b> {core::fmt::rt::Argument::<'_>::new_debug::<&PanicInfo<'_>>}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _7 = [move _8];                  // scope 0 at src/peripherals.rs:17:51: 17:73
+        _6 = &_7;                        // scope 0 at src/peripherals.rs:17:51: 17:73
+        _5 = _6 as &[core::fmt::rt::Argument<'_>] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:17:51: 17:73
+        _14 = core::fmt::rt::Alignment::Unknown; // scope 0 at src/peripherals.rs:17:51: 17:73
+        _15 = core::fmt::rt::Count::Implied; // scope 0 at src/peripherals.rs:17:51: 17:73
+        _16 = core::fmt::rt::Count::Implied; // scope 0 at src/peripherals.rs:17:51: 17:73
+        _13 = core::fmt::rt::Placeholder::new(const 0_usize, const ' ', move _14, const 4_u32, move _15, move _16) -> [return: bb2, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + literal: Const { ty: fn(usize, char, core::fmt::rt::Alignment, u32, core::fmt::rt::Count, core::fmt::rt::Count) -> core::fmt::rt::Placeholder {core::fmt::rt::Placeholder::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _12 = [move _13];                // scope 0 at src/peripherals.rs:17:51: 17:73
+        _11 = &_12;                      // scope 0 at src/peripherals.rs:17:51: 17:73
+        _10 = _11 as &[core::fmt::rt::Placeholder] (Pointer(Unsize)); // scope 0 at src/peripherals.rs:17:51: 17:73
+        _17 = core::fmt::rt::UnsafeArg::new() -> [return: bb3, unwind unreachable]; // scope 1 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + literal: Const { ty: unsafe fn() -> core::fmt::rt::UnsafeArg {core::fmt::rt::UnsafeArg::new}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _3 = Arguments::<'_>::new_v1_formatted(move _4, move _5, move _10, const core::fmt::rt::UnsafeArg {{ _private: () }}) -> [return: bb4, unwind unreachable]; // scope 0 at src/peripherals.rs:17:51: 17:73
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:51: 17:73
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(&[&'static str], &[core::fmt::rt::Argument<'_>], &[core::fmt::rt::Placeholder], core::fmt::rt::UnsafeArg) -> Arguments<'_> {Arguments::<'_>::new_v1_formatted}, val: Value(<ZST>) }
+                                         // mir::Constant
+                                         // + span: no-location
+                                         // + literal: Const { ty: core::fmt::rt::UnsafeArg, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _2 = peripherals::_print(move _3) -> [return: bb5, unwind unreachable]; // scope 0 at src/peripherals.rs:17:23: 17:74
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:17:23: 17:50
+                                         // + literal: Const { ty: for<'a> fn(Arguments<'a>) {peripherals::_print}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        _0 = abort() -> unwind unreachable; // scope 0 at src/main.rs:75:5: 75:24
+                                         // mir::Constant
+                                         // + span: src/main.rs:75:5: 75:22
+                                         // + literal: Const { ty: extern "rust-intrinsic" fn() -> ! {abort}, val: Value(<ZST>) }
+    }
+}
+
+promoted[0] in panic_handler: &[&str; 2] = {
+    let mut _0: &[&str; 2];              // return place in scope 0 at src/peripherals.rs:23:38: 23:44
+    let mut _1: [&str; 2];               // in scope 0 at src/peripherals.rs:23:38: 23:44
+
+    bb0: {
+        _1 = [const "", const "\n"];     // scope 0 at src/peripherals.rs:23:38: 23:44
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+                                         // mir::Constant
+                                         // + span: src/peripherals.rs:23:38: 23:44
+                                         // + literal: Const { ty: &str, val: Value(Slice(..)) }
+        _0 = &_1;                        // scope 0 at src/peripherals.rs:23:38: 23:44
+        return;                          // scope 0 at src/peripherals.rs:23:38: 23:44
+    }
+}

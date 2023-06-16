@@ -1,0 +1,962 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+const CMD_INIT: u8 = {
+    let mut _0: u8;                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:27:17: 27:19
+
+    bb0: {
+        _0 = const 17_u8;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:27:22: 27:26
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:27:1: 27:27
+    }
+}
+
+const CMD_END_OF_INTERRUPT: u8 = {
+    let mut _0: u8;                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:30:29: 30:31
+
+    bb0: {
+        _0 = const 32_u8;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:30:34: 30:38
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:30:1: 30:39
+    }
+}
+
+const MODE_8086: u8 = {
+    let mut _0: u8;                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:33:18: 33:20
+
+    bb0: {
+        _0 = const 1_u8;                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:33:23: 33:27
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:33:1: 33:28
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:48:1: 48:9>::handles_interrupt(_1: &Pic, _2: u8) -> bool {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:51:26: 51:31
+    debug interrupt_id => _2;            // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:51:33: 51:45
+    let mut _0: bool;                    // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:51:54: 51:58
+    let mut _3: bool;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:36
+    let mut _4: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:20
+    let mut _5: bool;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:40: 52:70
+    let mut _6: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:55: 52:70
+    let mut _7: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:55: 52:66
+    let mut _8: (u8, bool);              // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:55: 52:70
+
+    bb0: {
+        _4 = ((*_1).0: u8);              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:20
+        _3 = Le(move _4, _2);            // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:36
+        switchInt(move _3) -> [0: bb1, otherwise: bb2]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:70
+    }
+
+    bb1: {
+        _0 = const false;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:70
+        goto -> bb3;                     // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:70
+    }
+
+    bb2: {
+        _7 = ((*_1).0: u8);              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:55: 52:66
+        _8 = CheckedAdd(_7, const 8_u8); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:55: 52:70
+        assert(!move (_8.1: bool), "attempt to compute `{} + {}`, which would overflow", move _7, const 8_u8) -> [success: bb4, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:55: 52:70
+    }
+
+    bb3: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:53:6: 53:6
+    }
+
+    bb4: {
+        _6 = move (_8.0: u8);            // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:55: 52:70
+        _5 = Lt(_2, move _6);            // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:40: 52:70
+        _0 = move _5;                    // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:70
+        goto -> bb3;                     // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:52:9: 52:70
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:48:1: 48:9>::end_of_interrupt(_1: &mut Pic) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:57:32: 57:41
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:57:43: 57:43
+    let _2: ();                          // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:58:9: 58:49
+    let mut _3: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:58:9: 58:49
+
+    bb0: {
+        _3 = &mut ((*_1).1: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:58:9: 58:49
+        _2 = PortGeneric::<u8, ReadWriteAccess>::write(move _3, const _) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:58:9: 58:49
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:58:22: 58:27
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:59:6: 59:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:48:1: 48:9>::read_mask(_1: &mut Pic) -> u8 {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:62:25: 62:34
+    let mut _0: u8;                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:62:39: 62:41
+    let mut _2: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:63:9: 63:25
+
+    bb0: {
+        _2 = &mut ((*_1).2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:63:9: 63:25
+        _0 = PortGeneric::<u8, ReadWriteAccess>::read(move _2) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:63:9: 63:25
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:63:19: 63:23
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>) -> u8 {PortGeneric::<u8, ReadWriteAccess>::read}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:64:6: 64:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:48:1: 48:9>::write_mask(_1: &mut Pic, _2: u8) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:67:26: 67:35
+    debug mask => _2;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:67:37: 67:41
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:67:47: 67:47
+    let mut _3: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:68:9: 68:30
+
+    bb0: {
+        _3 = &mut ((*_1).2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:68:9: 68:30
+        _0 = PortGeneric::<u8, ReadWriteAccess>::write(move _3, _2) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:68:9: 68:30
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:68:19: 68:24
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:69:6: 69:6
+    }
+}
+
+ChainedPics::pics::{constant#0}: usize = {
+    let mut _0: usize;                   // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:74:17: 74:18
+
+    bb0: {
+        _0 = const 2_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:74:17: 74:18
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:74:17: 74:18
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::new(_1: u8, _2: u8) -> ChainedPics {
+    debug offset1 => _1;                 // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:80:29: 80:36
+    debug offset2 => _2;                 // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:80:42: 80:49
+    let mut _0: ChainedPics;             // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:80:58: 80:69
+    let mut _3: [Pic; 2];                // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:82:19: 93:14
+    let mut _4: Pic;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:83:17: 87:18
+    let mut _5: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:45
+    let mut _6: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:42
+    let mut _7: Pic;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:88:17: 92:18
+    let mut _8: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:45
+    let mut _9: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:42
+
+    bb0: {
+        _5 = PortGeneric::<u8, ReadWriteAccess>::new(const 32_u16) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:39
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _6 = PortGeneric::<u8, ReadWriteAccess>::new(const 33_u16) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:42
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:36
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _4 = Pic { offset: _1, command: move _5, data: move _6 }; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:83:17: 87:18
+        _8 = PortGeneric::<u8, ReadWriteAccess>::new(const 160_u16) -> [return: bb3, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:39
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        _9 = PortGeneric::<u8, ReadWriteAccess>::new(const 161_u16) -> [return: bb4, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:42
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:36
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _7 = Pic { offset: _2, command: move _8, data: move _9 }; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:88:17: 92:18
+        _3 = [move _4, move _7];         // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:82:19: 93:14
+        _0 = ChainedPics { pics: move _3 }; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:81:9: 94:10
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:95:6: 95:6
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::new(_1: u8, _2: u8) -> ChainedPics {
+    debug offset1 => _1;                 // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:80:29: 80:36
+    debug offset2 => _2;                 // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:80:42: 80:49
+    let mut _0: ChainedPics;             // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:80:58: 80:69
+    let mut _3: [Pic; 2];                // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:82:19: 93:14
+    let mut _4: Pic;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:83:17: 87:18
+    let mut _5: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:84:29: 84:36
+    let mut _6: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:45
+    let mut _7: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:42
+    let mut _8: Pic;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:88:17: 92:18
+    let mut _9: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:89:29: 89:36
+    let mut _10: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:45
+    let mut _11: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:42
+
+    bb0: {
+        StorageLive(_3);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:82:19: 93:14
+        StorageLive(_4);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:83:17: 87:18
+        StorageLive(_5);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:84:29: 84:36
+        _5 = _1;                         // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:84:29: 84:36
+        StorageLive(_6);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:45
+        ConstEvalCounter;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:45
+        _6 = PortGeneric::<u8, ReadWriteAccess>::new(const 32_u16) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:85:30: 85:39
+                                         // + user_ty: UserType(0)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        StorageLive(_7);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:42
+        ConstEvalCounter;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:42
+        _7 = PortGeneric::<u8, ReadWriteAccess>::new(const 33_u16) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:42
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:86:27: 86:36
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _4 = Pic { offset: move _5, command: move _6, data: move _7 }; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:83:17: 87:18
+        StorageDead(_7);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:87:17: 87:18
+        StorageDead(_6);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:87:17: 87:18
+        StorageDead(_5);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:87:17: 87:18
+        StorageLive(_8);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:88:17: 92:18
+        StorageLive(_9);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:89:29: 89:36
+        _9 = _2;                         // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:89:29: 89:36
+        StorageLive(_10);                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:45
+        ConstEvalCounter;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:45
+        _10 = PortGeneric::<u8, ReadWriteAccess>::new(const 160_u16) -> [return: bb3, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:90:30: 90:39
+                                         // + user_ty: UserType(2)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        StorageLive(_11);                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:42
+        ConstEvalCounter;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:42
+        _11 = PortGeneric::<u8, ReadWriteAccess>::new(const 161_u16) -> [return: bb4, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:42
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:91:27: 91:36
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _8 = Pic { offset: move _9, command: move _10, data: move _11 }; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:88:17: 92:18
+        StorageDead(_11);                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:92:17: 92:18
+        StorageDead(_10);                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:92:17: 92:18
+        StorageDead(_9);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:92:17: 92:18
+        _3 = [move _4, move _8];         // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:82:19: 93:14
+        StorageDead(_8);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:93:13: 93:14
+        StorageDead(_4);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:93:13: 93:14
+        _0 = ChainedPics { pics: move _3 }; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:81:9: 94:10
+        StorageDead(_3);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:94:9: 94:10
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:95:6: 95:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::new_contiguous(_1: u8) -> ChainedPics {
+    debug primary_offset => _1;          // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:102:40: 102:54
+    let mut _0: ChainedPics;             // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:102:63: 102:74
+    let mut _2: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+    let mut _3: (u8, bool);              // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+
+    bb0: {
+        _3 = CheckedAdd(_1, const 8_u8); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+        assert(!move (_3.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 8_u8) -> [success: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+    }
+
+    bb1: {
+        _2 = move (_3.0: u8);            // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+        _0 = ChainedPics::new(_1, move _2) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:9: 103:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:9: 103:18
+                                         // + literal: Const { ty: unsafe fn(u8, u8) -> ChainedPics {ChainedPics::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:104:6: 104:6
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::new_contiguous(_1: u8) -> ChainedPics {
+    debug primary_offset => _1;          // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:102:40: 102:54
+    let mut _0: ChainedPics;             // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:102:63: 102:74
+    let mut _2: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:19: 103:33
+    let mut _3: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+    let mut _4: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:49
+    let mut _5: (u8, bool);              // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:19: 103:33
+        _2 = _1;                         // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:19: 103:33
+        StorageLive(_3);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+        StorageLive(_4);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:49
+        _4 = _1;                         // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:49
+        _5 = CheckedAdd(_4, const 8_u8); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+        assert(!move (_5.1: bool), "attempt to compute `{} + {}`, which would overflow", move _4, const 8_u8) -> [success: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+    }
+
+    bb1: {
+        _3 = move (_5.0: u8);            // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:35: 103:53
+        StorageDead(_4);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:52: 103:53
+        ConstEvalCounter;                // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:9: 103:54
+        _0 = ChainedPics::new(move _2, move _3) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:9: 103:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:9: 103:18
+                                         // + literal: Const { ty: unsafe fn(u8, u8) -> ChainedPics {ChainedPics::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        StorageDead(_3);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:53: 103:54
+        StorageDead(_2);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:103:53: 103:54
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:104:6: 104:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::initialize(_1: &mut ChainedPics) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:109:30: 109:39
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:109:41: 109:41
+    let mut _2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:117:13: 117:26
+    let mut _4: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:45
+    let _6: ();                          // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:45
+    let mut _7: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:45
+    let _8: usize;                       // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:19: 127:20
+    let mut _9: usize;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:21
+    let mut _10: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:21
+    let _11: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:128:9: 128:15
+    let mut _12: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:128:9: 128:13
+    let _13: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:45
+    let mut _14: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:45
+    let _15: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:19: 129:20
+    let mut _16: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:21
+    let mut _17: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:21
+    let _18: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:130:9: 130:15
+    let mut _19: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:130:9: 130:13
+    let _20: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:53
+    let mut _21: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:53
+    let _22: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:19: 133:20
+    let mut _23: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:21
+    let mut _24: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:21
+    let mut _25: u8;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:33: 133:52
+    let _26: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:43: 133:44
+    let mut _27: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:33: 133:45
+    let mut _28: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:33: 133:45
+    let _29: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:134:9: 134:15
+    let mut _30: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:134:9: 134:13
+    let _31: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:53
+    let mut _32: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:53
+    let _33: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:19: 135:20
+    let mut _34: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:21
+    let mut _35: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:21
+    let mut _36: u8;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:33: 135:52
+    let _37: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:43: 135:44
+    let mut _38: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:33: 135:45
+    let mut _39: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:33: 135:45
+    let _40: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:136:9: 136:15
+    let mut _41: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:136:9: 136:13
+    let _42: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:35
+    let mut _43: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:35
+    let _44: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:19: 139:20
+    let mut _45: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:21
+    let mut _46: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:21
+    let _47: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:140:9: 140:15
+    let mut _48: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:140:9: 140:13
+    let _49: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:35
+    let mut _50: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:35
+    let _51: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:19: 141:20
+    let mut _52: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:21
+    let mut _53: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:21
+    let _54: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:142:9: 142:15
+    let mut _55: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:142:9: 142:13
+    let _56: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:43
+    let mut _57: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:43
+    let _58: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:19: 145:20
+    let mut _59: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:21
+    let mut _60: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:21
+    let _61: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:146:9: 146:15
+    let mut _62: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:146:9: 146:13
+    let _63: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:43
+    let mut _64: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:43
+    let _65: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:19: 147:20
+    let mut _66: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:21
+    let mut _67: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:21
+    let _68: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:148:9: 148:15
+    let mut _69: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:148:9: 148:13
+    let mut _70: u8;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:26: 151:40
+    let _71: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:38: 151:39
+    let mut _72: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:26: 151:40
+    let mut _73: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:26: 151:40
+    let mut _74: u8;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:42: 151:56
+    let _75: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:54: 151:55
+    let mut _76: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:42: 151:56
+    let mut _77: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:42: 151:56
+    scope 1 {
+        debug wait_port => _2;           // in scope 1 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:117:13: 117:26
+        let mut _3: [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]; // in scope 1 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:13: 118:21
+        scope 2 {
+            debug wait => _3;            // in scope 2 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:13: 118:21
+            let _5: [u8; 2];             // in scope 2 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:123:13: 123:24
+            scope 3 {
+                debug saved_masks => _5; // in scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:123:13: 123:24
+            }
+        }
+    }
+
+    bb0: {
+        _2 = PortGeneric::<u8, ReadWriteAccess>::new(const 128_u16) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:117:39: 117:54
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:117:39: 117:48
+                                         // + user_ty: UserType(1)
+                                         // + literal: Const { ty: fn(u16) -> PortGeneric<u8, ReadWriteAccess> {PortGeneric::<u8, ReadWriteAccess>::new}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _4 = &mut _2;                    // scope 1 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:45
+        _3 = [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] { wait_port: move _4 }; // scope 1 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:45
+                                         // closure
+                                         // + def_id: DefId(0:24 ~ pic8259[d616]::{impl#1}::initialize::{closure#0})
+                                         // + substs: [
+                                         //     i16,
+                                         //     extern "rust-call" fn(()),
+                                         //     (&mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>,),
+                                         // ]
+        _5 = ChainedPics::read_masks(_1) -> [return: bb2, unwind unreachable]; // scope 2 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:123:27: 123:44
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:123:32: 123:42
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut ChainedPics) -> [u8; 2] {ChainedPics::read_masks}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _8 = const 0_usize;              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:19: 127:20
+        _9 = const 2_usize;              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:21
+        _10 = Lt(_8, _9);                // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:21
+        assert(move _10, "index out of bounds: the length is {} but the index is {}", move _9, _8) -> [success: bb3, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:21
+    }
+
+    bb3: {
+        _7 = &mut (((*_1).0: [Pic; 2])[_8].1: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:45
+        _6 = PortGeneric::<u8, ReadWriteAccess>::write(move _7, const _) -> [return: bb4, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:9: 127:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:127:30: 127:35
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _12 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:128:9: 128:13
+        _11 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _12, const ()) -> [return: bb5, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:128:9: 128:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:128:9: 128:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        _15 = const 1_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:19: 129:20
+        _16 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:21
+        _17 = Lt(_15, _16);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:21
+        assert(move _17, "index out of bounds: the length is {} but the index is {}", move _16, _15) -> [success: bb6, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:21
+    }
+
+    bb6: {
+        _14 = &mut (((*_1).0: [Pic; 2])[_15].1: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:45
+        _13 = PortGeneric::<u8, ReadWriteAccess>::write(move _14, const _) -> [return: bb7, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:9: 129:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:129:30: 129:35
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb7: {
+        _19 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:130:9: 130:13
+        _18 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _19, const ()) -> [return: bb8, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:130:9: 130:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:130:9: 130:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb8: {
+        _22 = const 0_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:19: 133:20
+        _23 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:21
+        _24 = Lt(_22, _23);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:21
+        assert(move _24, "index out of bounds: the length is {} but the index is {}", move _23, _22) -> [success: bb9, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:21
+    }
+
+    bb9: {
+        _21 = &mut (((*_1).0: [Pic; 2])[_22].2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:53
+        _26 = const 0_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:43: 133:44
+        _27 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:33: 133:45
+        _28 = Lt(_26, _27);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:33: 133:45
+        assert(move _28, "index out of bounds: the length is {} but the index is {}", move _27, _26) -> [success: bb10, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:33: 133:45
+    }
+
+    bb10: {
+        _25 = (((*_1).0: [Pic; 2])[_26].0: u8); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:33: 133:52
+        _20 = PortGeneric::<u8, ReadWriteAccess>::write(move _21, move _25) -> [return: bb11, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:9: 133:53
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:133:27: 133:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb11: {
+        _30 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:134:9: 134:13
+        _29 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _30, const ()) -> [return: bb12, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:134:9: 134:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:134:9: 134:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb12: {
+        _33 = const 1_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:19: 135:20
+        _34 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:21
+        _35 = Lt(_33, _34);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:21
+        assert(move _35, "index out of bounds: the length is {} but the index is {}", move _34, _33) -> [success: bb13, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:21
+    }
+
+    bb13: {
+        _32 = &mut (((*_1).0: [Pic; 2])[_33].2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:53
+        _37 = const 1_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:43: 135:44
+        _38 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:33: 135:45
+        _39 = Lt(_37, _38);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:33: 135:45
+        assert(move _39, "index out of bounds: the length is {} but the index is {}", move _38, _37) -> [success: bb14, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:33: 135:45
+    }
+
+    bb14: {
+        _36 = (((*_1).0: [Pic; 2])[_37].0: u8); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:33: 135:52
+        _31 = PortGeneric::<u8, ReadWriteAccess>::write(move _32, move _36) -> [return: bb15, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:9: 135:53
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:135:27: 135:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb15: {
+        _41 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:136:9: 136:13
+        _40 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _41, const ()) -> [return: bb16, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:136:9: 136:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:136:9: 136:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb16: {
+        _44 = const 0_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:19: 139:20
+        _45 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:21
+        _46 = Lt(_44, _45);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:21
+        assert(move _46, "index out of bounds: the length is {} but the index is {}", move _45, _44) -> [success: bb17, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:21
+    }
+
+    bb17: {
+        _43 = &mut (((*_1).0: [Pic; 2])[_44].2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:35
+        _42 = PortGeneric::<u8, ReadWriteAccess>::write(move _43, const 4_u8) -> [return: bb18, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:9: 139:35
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:139:27: 139:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb18: {
+        _48 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:140:9: 140:13
+        _47 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _48, const ()) -> [return: bb19, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:140:9: 140:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:140:9: 140:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb19: {
+        _51 = const 1_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:19: 141:20
+        _52 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:21
+        _53 = Lt(_51, _52);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:21
+        assert(move _53, "index out of bounds: the length is {} but the index is {}", move _52, _51) -> [success: bb20, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:21
+    }
+
+    bb20: {
+        _50 = &mut (((*_1).0: [Pic; 2])[_51].2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:35
+        _49 = PortGeneric::<u8, ReadWriteAccess>::write(move _50, const 2_u8) -> [return: bb21, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:9: 141:35
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:141:27: 141:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb21: {
+        _55 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:142:9: 142:13
+        _54 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _55, const ()) -> [return: bb22, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:142:9: 142:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:142:9: 142:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb22: {
+        _58 = const 0_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:19: 145:20
+        _59 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:21
+        _60 = Lt(_58, _59);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:21
+        assert(move _60, "index out of bounds: the length is {} but the index is {}", move _59, _58) -> [success: bb23, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:21
+    }
+
+    bb23: {
+        _57 = &mut (((*_1).0: [Pic; 2])[_58].2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:43
+        _56 = PortGeneric::<u8, ReadWriteAccess>::write(move _57, const _) -> [return: bb24, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:9: 145:43
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:145:27: 145:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb24: {
+        _62 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:146:9: 146:13
+        _61 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _62, const ()) -> [return: bb25, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:146:9: 146:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:146:9: 146:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb25: {
+        _65 = const 1_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:19: 147:20
+        _66 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:21
+        _67 = Lt(_65, _66);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:21
+        assert(move _67, "index out of bounds: the length is {} but the index is {}", move _66, _65) -> [success: bb26, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:21
+    }
+
+    bb26: {
+        _64 = &mut (((*_1).0: [Pic; 2])[_65].2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:43
+        _63 = PortGeneric::<u8, ReadWriteAccess>::write(move _64, const _) -> [return: bb27, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:9: 147:43
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:147:27: 147:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb27: {
+        _69 = &mut _3;                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:148:9: 148:13
+        _68 = <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut(move _69, const ()) -> [return: bb28, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:148:9: 148:15
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:148:9: 148:13
+                                         // + literal: Const { ty: for<'a> extern "rust-call" fn(&'a mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26], ()) -> <[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnOnce<()>>::Output {<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26] as FnMut<()>>::call_mut}, val: Value(<ZST>) }
+    }
+
+    bb28: {
+        _71 = const 0_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:38: 151:39
+        _72 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:26: 151:40
+        _73 = Lt(_71, _72);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:26: 151:40
+        assert(move _73, "index out of bounds: the length is {} but the index is {}", move _72, _71) -> [success: bb29, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:26: 151:40
+    }
+
+    bb29: {
+        _70 = _5[_71];                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:26: 151:40
+        _75 = const 1_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:54: 151:55
+        _76 = const 2_usize;             // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:42: 151:56
+        _77 = Lt(_75, _76);              // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:42: 151:56
+        assert(move _77, "index out of bounds: the length is {} but the index is {}", move _76, _75) -> [success: bb30, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:42: 151:56
+    }
+
+    bb30: {
+        _74 = _5[_75];                   // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:42: 151:56
+        _0 = ChainedPics::write_masks(_1, move _70, move _74) -> [return: bb31, unwind unreachable]; // scope 3 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:9: 151:57
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:151:14: 151:25
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut ChainedPics, u8, u8) {ChainedPics::write_masks}, val: Value(<ZST>) }
+    }
+
+    bb31: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:152:6: 152:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::initialize::{closure#0}(_1: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:26]) -> () {
+    debug wait_port => (*((*_1).0: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>)); // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:117:17: 117:26
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:27: 118:27
+    let mut _2: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:24: 118:45
+
+    bb0: {
+        _2 = deref_copy ((*_1).0: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:27: 118:45
+        _0 = PortGeneric::<u8, ReadWriteAccess>::write(_2, const 0_u8) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:27: 118:45
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:37: 118:42
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut PortGeneric<u8, ReadWriteAccess>, u8) {PortGeneric::<u8, ReadWriteAccess>::write}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:118:45: 118:45
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::read_masks(_1: &mut ChainedPics) -> [u8; 2] {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:155:30: 155:39
+    let mut _0: [u8; 2];                 // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:155:44: 155:51
+    let mut _2: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:34
+    let mut _3: &mut Pic;                // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:34
+    let _4: usize;                       // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:20: 156:21
+    let mut _5: usize;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:22
+    let mut _6: bool;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:22
+    let mut _7: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:60
+    let mut _8: &mut Pic;                // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:60
+    let _9: usize;                       // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:46: 156:47
+    let mut _10: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:48
+    let mut _11: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:48
+
+    bb0: {
+        _4 = const 0_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:20: 156:21
+        _5 = const 2_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:22
+        _6 = Lt(_4, _5);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:22
+        assert(move _6, "index out of bounds: the length is {} but the index is {}", move _5, _4) -> [success: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:22
+    }
+
+    bb1: {
+        _3 = &mut ((*_1).0: [Pic; 2])[_4]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:34
+        _2 = Pic::read_mask(move _3) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:10: 156:34
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:23: 156:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut Pic) -> u8 {Pic::read_mask}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _9 = const 1_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:46: 156:47
+        _10 = const 2_usize;             // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:48
+        _11 = Lt(_9, _10);               // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:48
+        assert(move _11, "index out of bounds: the length is {} but the index is {}", move _10, _9) -> [success: bb3, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:48
+    }
+
+    bb3: {
+        _8 = &mut ((*_1).0: [Pic; 2])[_9]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:60
+        _7 = Pic::read_mask(move _8) -> [return: bb4, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:36: 156:60
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:49: 156:58
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut Pic) -> u8 {Pic::read_mask}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        _0 = [move _2, move _7];         // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:156:9: 156:61
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:157:6: 157:6
+    }
+}
+
+<impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::read_masks::{constant#0}: usize = {
+    let mut _0: usize;                   // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:155:49: 155:50
+
+    bb0: {
+        _0 = const 2_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:155:49: 155:50
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:155:49: 155:50
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::write_masks(_1: &mut ChainedPics, _2: u8, _3: u8) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:160:31: 160:40
+    debug mask1 => _2;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:160:42: 160:47
+    debug mask2 => _3;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:160:53: 160:58
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:160:64: 160:64
+    let _4: ();                          // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:39
+    let mut _5: &mut Pic;                // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:39
+    let _6: usize;                       // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:19: 161:20
+    let mut _7: usize;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:21
+    let mut _8: bool;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:21
+    let _9: ();                          // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:39
+    let mut _10: &mut Pic;               // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:39
+    let _11: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:19: 162:20
+    let mut _12: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:21
+    let mut _13: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:21
+
+    bb0: {
+        _6 = const 0_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:19: 161:20
+        _7 = const 2_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:21
+        _8 = Lt(_6, _7);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:21
+        assert(move _8, "index out of bounds: the length is {} but the index is {}", move _7, _6) -> [success: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:21
+    }
+
+    bb1: {
+        _5 = &mut ((*_1).0: [Pic; 2])[_6]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:39
+        _4 = Pic::write_mask(move _5, _2) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:9: 161:39
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:161:22: 161:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut Pic, u8) {Pic::write_mask}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        _11 = const 1_usize;             // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:19: 162:20
+        _12 = const 2_usize;             // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:21
+        _13 = Lt(_11, _12);              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:21
+        assert(move _13, "index out of bounds: the length is {} but the index is {}", move _12, _11) -> [success: bb3, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:21
+    }
+
+    bb3: {
+        _10 = &mut ((*_1).0: [Pic; 2])[_11]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:39
+        _9 = Pic::write_mask(move _10, _3) -> [return: bb4, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:9: 162:39
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:162:22: 162:32
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut Pic, u8) {Pic::write_mask}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:163:6: 163:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::disable(_1: &mut ChainedPics) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:166:27: 166:36
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:166:38: 166:38
+
+    bb0: {
+        _0 = ChainedPics::write_masks(_1, const _, const _) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:167:9: 167:43
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:167:14: 167:25
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut ChainedPics, u8, u8) {ChainedPics::write_masks}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:168:6: 168:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::handles_interrupt(_1: &ChainedPics, _2: u8) -> bool {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:171:30: 171:35
+    debug interrupt_id => _2;            // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:171:37: 171:49
+    let mut _0: bool;                    // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:171:58: 171:62
+    let mut _3: &mut core::slice::Iter<'_, Pic>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:68
+    let mut _4: core::slice::Iter<'_, Pic>; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:25
+    let mut _5: &[Pic];                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:25
+    let mut _6: &[Pic; 2];               // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:25
+    let mut _7: [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:33]; // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:67
+    let mut _8: &u8;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:67
+
+    bb0: {
+        _6 = &((*_1).0: [Pic; 2]);       // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:25
+        _5 = move _6 as &[Pic] (Pointer(Unsize)); // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:25
+        _4 = slice::<impl [Pic]>::iter(move _5) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:25
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:19: 172:23
+                                         // + literal: Const { ty: for<'a> fn(&'a [Pic]) -> core::slice::Iter<'a, Pic> {slice::<impl [Pic]>::iter}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        _3 = &mut _4;                    // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:68
+        _8 = &_2;                        // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:67
+        _7 = [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:33] { interrupt_id: move _8 }; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:67
+                                         // closure
+                                         // + def_id: DefId(0:30 ~ pic8259[d616]::{impl#1}::handles_interrupt::{closure#0})
+                                         // + substs: [
+                                         //     i16,
+                                         //     extern "rust-call" fn((&Pic,)) -> bool,
+                                         //     (&u8,),
+                                         // ]
+        _0 = <core::slice::Iter<'_, Pic> as Iterator>::any::<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:33]>(move _3, move _7) -> [return: bb2, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:9: 172:68
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:26: 172:29
+                                         // + literal: Const { ty: for<'a> fn(&'a mut core::slice::Iter<'_, Pic>, [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:33]) -> bool {<core::slice::Iter<'_, Pic> as Iterator>::any::<[closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:33]>}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:173:6: 173:6
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::handles_interrupt::{closure#0}(_1: &mut [closure@/Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:33], _2: &Pic) -> bool {
+    debug p => _2;                       // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:31: 172:32
+    debug interrupt_id => (*((*_1).0: &u8)); // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:171:37: 171:49
+    let mut _0: bool;                    // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:34: 172:34
+    let mut _3: u8;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:54: 172:66
+    let mut _4: &u8;                     // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:30: 172:67
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &u8);  // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:54: 172:66
+        _3 = (*_4);                      // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:54: 172:66
+        _0 = Pic::handles_interrupt(_2, move _3) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:34: 172:67
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:36: 172:53
+                                         // + literal: Const { ty: for<'a> fn(&'a Pic, u8) -> bool {Pic::handles_interrupt}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:172:67: 172:67
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:77:1: 77:17>::notify_end_of_interrupt(_1: &mut ChainedPics, _2: u8) -> () {
+    debug self => _1;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:178:43: 178:52
+    debug interrupt_id => _2;            // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:178:54: 178:66
+    let mut _0: ();                      // return place in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:178:72: 178:72
+    let mut _3: bool;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:179:12: 179:48
+    let mut _4: &ChainedPics;            // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:179:12: 179:48
+    let mut _5: bool;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:60
+    let mut _6: &Pic;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:60
+    let _7: usize;                       // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:26: 180:27
+    let mut _8: usize;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:28
+    let mut _9: bool;                    // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:28
+    let _10: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:48
+    let mut _11: &mut Pic;               // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:48
+    let _12: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:27: 181:28
+    let mut _13: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:29
+    let mut _14: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:29
+    let _15: ();                         // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:44
+    let mut _16: &mut Pic;               // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:44
+    let _17: usize;                      // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:23: 183:24
+    let mut _18: usize;                  // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:25
+    let mut _19: bool;                   // in scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:25
+
+    bb0: {
+        _4 = &(*_1);                     // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:179:12: 179:48
+        _3 = ChainedPics::handles_interrupt(move _4, _2) -> [return: bb1, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:179:12: 179:48
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:179:17: 179:34
+                                         // + literal: Const { ty: for<'a> fn(&'a ChainedPics, u8) -> bool {ChainedPics::handles_interrupt}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb9, otherwise: bb2]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:179:12: 179:48
+    }
+
+    bb2: {
+        _7 = const 1_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:26: 180:27
+        _8 = const 2_usize;              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:28
+        _9 = Lt(_7, _8);                 // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:28
+        assert(move _9, "index out of bounds: the length is {} but the index is {}", move _8, _7) -> [success: bb3, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:28
+    }
+
+    bb3: {
+        _6 = &((*_1).0: [Pic; 2])[_7];   // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:60
+        _5 = Pic::handles_interrupt(move _6, _2) -> [return: bb4, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:60
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:29: 180:46
+                                         // + literal: Const { ty: for<'a> fn(&'a Pic, u8) -> bool {Pic::handles_interrupt}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        switchInt(move _5) -> [0: bb7, otherwise: bb5]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:180:16: 180:60
+    }
+
+    bb5: {
+        _12 = const 1_usize;             // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:27: 181:28
+        _13 = const 2_usize;             // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:29
+        _14 = Lt(_12, _13);              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:29
+        assert(move _14, "index out of bounds: the length is {} but the index is {}", move _13, _12) -> [success: bb6, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:29
+    }
+
+    bb6: {
+        _11 = &mut ((*_1).0: [Pic; 2])[_12]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:48
+        _10 = Pic::end_of_interrupt(move _11) -> [return: bb7, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:17: 181:48
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:181:30: 181:46
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut Pic) {Pic::end_of_interrupt}, val: Value(<ZST>) }
+    }
+
+    bb7: {
+        _17 = const 0_usize;             // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:23: 183:24
+        _18 = const 2_usize;             // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:25
+        _19 = Lt(_17, _18);              // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:25
+        assert(move _19, "index out of bounds: the length is {} but the index is {}", move _18, _17) -> [success: bb8, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:25
+    }
+
+    bb8: {
+        _16 = &mut ((*_1).0: [Pic; 2])[_17]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:44
+        _15 = Pic::end_of_interrupt(move _16) -> [return: bb9, unwind unreachable]; // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:13: 183:44
+                                         // mir::Constant
+                                         // + span: /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:183:26: 183:42
+                                         // + literal: Const { ty: for<'a> unsafe fn(&'a mut Pic) {Pic::end_of_interrupt}, val: Value(<ZST>) }
+    }
+
+    bb9: {
+        return;                          // scope 0 at /Users/yaw/.cargo/git/checkouts/pic8259-4bfeaa76e06bf2c9/5e3b49d/src/lib.rs:185:6: 185:6
+    }
+}
