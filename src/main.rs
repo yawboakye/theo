@@ -8,6 +8,7 @@
 #![reexport_test_harness_main = "test_main"]
 
 mod interrupts;
+mod memory;
 mod peripherals;
 mod qemu;
 mod serial;
@@ -37,6 +38,10 @@ pub fn _start() -> ! {
     println!("ave imperator, morituri te salutant 🖖!\n\n\n\n");
     println!("this text should appear on last but one row");
     println!("last row of text, with empty row below");
+
+    memory::inspect_level_four_page_table();
+    // memory::cause_protection_violation_by_write_page_fault();
+    // memory::caused_by_write_page_fault();
 
     #[cfg(test)]
     test_main();

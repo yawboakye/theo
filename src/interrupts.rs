@@ -10,7 +10,7 @@ use cpu_interrupts::{
 };
 use keyboard::DecodedKey;
 use lazy_static::lazy_static;
-use x86_64::structures::idt::{InterruptDescriptorTable, InterruptStackFrame};
+use x86_64::structures::idt::{InterruptDescriptorTable, InterruptStackFrame, PageFaultErrorCode};
 
 lazy_static! {
     static ref SAFE_IDT: SafeInterruptDescriptorTable = {
@@ -20,12 +20,28 @@ lazy_static! {
                 .set_handler_fn(double_fault_handler)
                 .set_stack_index(DOUBLE_FAULT_IST_INDEX as u16);
             idt.breakpoint.set_handler_fn(breakpoint_handler);
+            idt.page_fault.set_handler_fn(page_fault_handler);
             idt[Index::Timer as usize].set_handler_fn(timer_interrupt_handler);
             idt[Index::Keyboard as usize].set_handler_fn(keyboard_handler);
         }
 
         SafeInterruptDescriptorTable::from(idt)
     };
+}
+
+extern "x86-interrupt" fn page_fault_handler(
+    isf: InterruptStackFrame,
+    error_code: PageFaultErrorCode,
+) {
+    use x86_64::registers::control::Cr2;
+
+    crate::println!("<<<>>> PAGE FAULT OCCURRED <<<>>>");
+    crate::println!("Address: {:#?}", Cr2::read());
+    crate::println!("Error code: {:#?}", error_code);
+    crate::println!("{:#?}", isf);
+
+    #[rustfmt::skip]
+    loop { x86_64::instructions::hlt() }
 }
 
 extern "x86-interrupt" fn breakpoint_handler(_isf: InterruptStackFrame) {}

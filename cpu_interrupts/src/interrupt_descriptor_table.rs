@@ -6,6 +6,7 @@ pub type InterruptHandlerFn = extern "x86-interrupt" fn(InterruptStackFrame);
 pub struct InterruptHandlerMap {
     pub breakpoint_handler: InterruptHandlerFn,
     pub timer_interrupt_handler: InterruptHandlerFn,
+    pub page_fault_handler: InterruptHandlerFn,
 }
 
 // SafeInterruptDescriptorTable is safe against triple fault.
@@ -22,10 +23,13 @@ pub struct SafeInterruptDescriptorTable {
 
 impl SafeInterruptDescriptorTable {
     pub fn new() -> Self {
+        use crate::default_exception_handlers::{double_fault_handler, page_fault_handler};
+
         let mut idt = InterruptDescriptorTable::new();
         unsafe {
+            idt.page_fault.set_handler_fn(page_fault_handler);
             idt.double_fault
-                .set_handler_fn(crate::default_exception_handlers::double_fault_handler)
+                .set_handler_fn(double_fault_handler)
                 .set_stack_index(constants::DOUBLE_FAULT_IST_INDEX as u16);
         }
 
