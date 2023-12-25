@@ -1,0 +1,562 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:10: 8:15>::fmt(_1: &ReadWrite, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &str;
+
+    bb0: {
+        _3 = const "ReadWrite";
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:8:23: 8:28>::clone(_1: &ReadWrite) -> ReadWrite {
+    debug self => _1;
+    let mut _0: access::ReadWrite;
+
+    bb0: {
+        return;
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:10: 14:15>::fmt(_1: &ReadOnly, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &str;
+
+    bb0: {
+        _3 = const "ReadOnly";
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:14:23: 14:28>::clone(_1: &ReadOnly) -> ReadOnly {
+    debug self => _1;
+    let mut _0: access::ReadOnly;
+
+    bb0: {
+        return;
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:10: 20:15>::fmt(_1: &WriteOnly, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &str;
+
+    bb0: {
+        _3 = const "WriteOnly";
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn access::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/access.rs:20:23: 20:28>::clone(_1: &WriteOnly) -> WriteOnly {
+    debug self => _1;
+    let mut _0: access::WriteOnly;
+
+    bb0: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:45:10: 45:15>::clone(_1: &Volatile<R, A>) -> Volatile<R, A> {
+    debug self => _1;
+    let mut _0: Volatile<R, A>;
+    let mut _2: R;
+    let _3: &R;
+    let mut _4: core::marker::PhantomData<A>;
+    let _5: &core::marker::PhantomData<A>;
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as Clone>::clone(_3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &((*_1).1: core::marker::PhantomData<A>);
+        _4 = <PhantomData<A> as Clone>::clone(_5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = Volatile::<R, A> { reference: move _2, access: const ZeroSized: PhantomData<A> };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new(_1: R) -> Volatile<R> {
+    debug reference => _1;
+    let mut _0: Volatile<R>;
+
+    bb0: {
+        _0 = Volatile::<R> { reference: move _1, access: const PhantomData::<ReadWrite> };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new(_1: R) -> Volatile<R> {
+    debug reference => _1;
+    let mut _0: Volatile<R>;
+    let mut _2: R;
+    let mut _3: core::marker::PhantomData<access::ReadWrite>;
+
+    bb0: {
+        StorageLive(_2);
+        _2 = move _1;
+        StorageLive(_3);
+        _3 = PhantomData::<ReadWrite>;
+        _0 = Volatile::<R> { reference: move _2, access: move _3 };
+        StorageDead(_3);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_read_only(_1: R) -> Volatile<R, ReadOnly> {
+    debug reference => _1;
+    let mut _0: Volatile<R, access::ReadOnly>;
+
+    bb0: {
+        _0 = Volatile::<R, ReadOnly> { reference: move _1, access: const PhantomData::<ReadOnly> };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_read_only(_1: R) -> Volatile<R, ReadOnly> {
+    debug reference => _1;
+    let mut _0: Volatile<R, access::ReadOnly>;
+    let mut _2: R;
+    let mut _3: core::marker::PhantomData<access::ReadOnly>;
+
+    bb0: {
+        StorageLive(_2);
+        _2 = move _1;
+        StorageLive(_3);
+        _3 = PhantomData::<ReadOnly>;
+        _0 = Volatile::<R, ReadOnly> { reference: move _2, access: move _3 };
+        StorageDead(_3);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_write_only(_1: R) -> Volatile<R, WriteOnly> {
+    debug reference => _1;
+    let mut _0: Volatile<R, access::WriteOnly>;
+
+    bb0: {
+        _0 = Volatile::<R, WriteOnly> { reference: move _1, access: const PhantomData::<WriteOnly> };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:57:1: 57:20>::new_write_only(_1: R) -> Volatile<R, WriteOnly> {
+    debug reference => _1;
+    let mut _0: Volatile<R, access::WriteOnly>;
+    let mut _2: R;
+    let mut _3: core::marker::PhantomData<access::WriteOnly>;
+
+    bb0: {
+        StorageLive(_2);
+        _2 = move _1;
+        StorageLive(_3);
+        _3 = PhantomData::<WriteOnly>;
+        _0 = Volatile::<R, WriteOnly> { reference: move _2, access: move _3 };
+        StorageDead(_3);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:164:1: 167:13>::read(_1: &Volatile<R, A>) -> T {
+    debug self => _1;
+    let mut _0: T;
+    let mut _2: *const T;
+    let _3: &T;
+    let mut _4: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as Deref>::deref(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = &raw const (*_3);
+        _0 = read_volatile::<T>(move _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:164:1: 167:13>::write(_1: &mut Volatile<R, A>, _2: T) -> () {
+    debug self => _1;
+    debug value => _2;
+    let mut _0: ();
+    let _3: ();
+    let mut _4: *mut T;
+    let mut _5: &mut T;
+    let mut _6: &mut R;
+    scope 1 {
+    }
+
+    bb0: {
+        _6 = &mut ((*_1).0: R);
+        _5 = <R as DerefMut>::deref_mut(move _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = &raw mut (*_5);
+        _3 = write_volatile::<T>(move _4, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:164:1: 167:13>::update(_1: &mut Volatile<R, A>, _2: F) -> () {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: ();
+    let mut _3: T;
+    let mut _4: &Volatile<R, A>;
+    let _5: ();
+    let mut _6: (&mut T,);
+    let mut _7: &mut T;
+    let _8: ();
+    let mut _9: T;
+    scope 1 {
+        debug value => _3;
+    }
+
+    bb0: {
+        _4 = &(*_1);
+        _3 = Volatile::<R, A>::read(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &mut _3;
+        _6 = (_7,);
+        _5 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = _3;
+        _8 = Volatile::<R, A>::write(_1, move _9) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:251:1: 251:26>::extract_inner(_1: Volatile<R, A>) -> R {
+    debug self => _1;
+    let mut _0: R;
+
+    bb0: {
+        _0 = move (_1.0: R);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:282:1: 285:15>::map(_1: &Volatile<R, A>, _2: F) -> Volatile<&U, A> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: Volatile<&U, A>;
+    let _3: &U;
+    let mut _4: (&T,);
+    let _5: &T;
+    let mut _6: &R;
+
+    bb0: {
+        _6 = &((*_1).0: R);
+        _5 = <R as Deref>::deref(move _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_5,);
+        _3 = <F as FnOnce<(&T,)>>::call_once(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = Volatile::<&U, A> { reference: _3, access: const ZeroSized: PhantomData<A> };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:282:1: 285:15>::map_mut(_1: &mut Volatile<R, A>, _2: F) -> Volatile<&mut U, A> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: Volatile<&mut U, A>;
+    let mut _3: &mut U;
+    let mut _4: (&mut T,);
+    let mut _5: &mut T;
+    let mut _6: &mut R;
+
+    bb0: {
+        _6 = &mut ((*_1).0: R);
+        _5 = <R as DerefMut>::deref_mut(_6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_5,);
+        _3 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = Volatile::<&mut U, A> { reference: _3, access: const ZeroSized: PhantomData<A> };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 394:28>::index(_1: &Volatile<R, A>, _2: I) -> Volatile<&<I as SliceIndex<[T]>>::Output, A> {
+    debug self => _1;
+    debug index => _2;
+    let mut _0: Volatile<&<I as core::slice::SliceIndex<[T]>>::Output, A>;
+    let mut _3: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25};
+
+    bb0: {
+        _3 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25} { index: move _2 };
+        _0 = Volatile::<R, A>::map::<'_, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25}, <I as SliceIndex<[T]>>::Output>(_1, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 394:28>::index::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:433:18: 433:25}, _2: &[T]) -> &<I as SliceIndex<[T]>>::Output {
+    debug slice => _2;
+    debug index => (_1.0: I);
+    let mut _0: &<I as core::slice::SliceIndex<[T]>>::Output;
+    let mut _3: I;
+
+    bb0: {
+        _3 = move (_1.0: I);
+        _0 = <[T] as Index<I>>::index(_2, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 394:28>::index_mut(_1: &mut Volatile<R, A>, _2: I) -> Volatile<&mut <I as SliceIndex<[T]>>::Output, A> {
+    debug self => _1;
+    debug index => _2;
+    let mut _0: Volatile<&mut <I as core::slice::SliceIndex<[T]>>::Output, A>;
+    let mut _3: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29};
+
+    bb0: {
+        _3 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29} { index: move _2 };
+        _0 = Volatile::<R, A>::map_mut::<'_, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29}, <I as SliceIndex<[T]>>::Output>(_1, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:392:1: 394:28>::index_mut::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:476:22: 476:29}, _2: &mut [T]) -> &mut <I as SliceIndex<[T]>>::Output {
+    debug slice => _2;
+    debug index => (_1.0: I);
+    let mut _0: &mut <I as core::slice::SliceIndex<[T]>>::Output;
+    let mut _3: I;
+
+    bb0: {
+        _3 = move (_1.0: I);
+        _0 = <[T] as IndexMut<I>>::index_mut(_2, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 684:31>::{constant#0}: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const N;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 684:31>::as_slice(_1: &Volatile<R, A>) -> Volatile<&[T], A> {
+    debug self => _1;
+    let mut _0: Volatile<&[T], A>;
+
+    bb0: {
+        _0 = Volatile::<R, A>::map::<'_, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25}, [T]>(_1, const ZeroSized: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25}) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 684:31>::as_slice::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:709:18: 709:25}, _2: &[T; N]) -> &[T] {
+    debug array => _2;
+    let mut _0: &[T];
+
+    bb0: {
+        _0 = <[T; N] as Index<RangeFull>>::index(_2, const RangeFull) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 684:31>::as_mut_slice(_1: &mut Volatile<R, A>) -> Volatile<&mut [T], A> {
+    debug self => _1;
+    let mut _0: Volatile<&mut [T], A>;
+
+    bb0: {
+        _0 = Volatile::<R, A>::map_mut::<'_, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29}, [T]>(_1, const ZeroSized: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29}) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:682:1: 684:31>::as_mut_slice::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:737:22: 737:29}, _2: &mut [T; N]) -> &mut [T] {
+    debug array => _2;
+    let mut _0: &mut [T];
+
+    bb0: {
+        _0 = <[T; N] as IndexMut<RangeFull>>::index_mut(_2, const RangeFull) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:742:1: 742:20>::read_only(_1: Volatile<R>) -> Volatile<R, ReadOnly> {
+    debug self => _1;
+    let mut _0: Volatile<R, access::ReadOnly>;
+    let mut _2: R;
+
+    bb0: {
+        _2 = move (_1.0: R);
+        _0 = Volatile::<R, ReadOnly> { reference: move _2, access: const PhantomData::<ReadOnly> };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:742:1: 742:20>::write_only(_1: Volatile<R>) -> Volatile<R, WriteOnly> {
+    debug self => _1;
+    let mut _0: Volatile<R, access::WriteOnly>;
+    let mut _2: R;
+
+    bb0: {
+        _2 = move (_1.0: R);
+        _0 = Volatile::<R, WriteOnly> { reference: move _2, access: const PhantomData::<WriteOnly> };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:790:1: 794:17>::fmt(_1: &Volatile<R, A>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut core::fmt::DebugTuple<'_, '_>;
+    let mut _4: &mut core::fmt::DebugTuple<'_, '_>;
+    let mut _5: core::fmt::DebugTuple<'_, '_>;
+    let _6: &str;
+    let mut _7: &dyn core::fmt::Debug;
+    let _8: &T;
+    let _9: T;
+
+    bb0: {
+        _6 = const "Volatile";
+        _5 = Formatter::<'_>::debug_tuple(_2, _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = &mut _5;
+        _9 = Volatile::<R, A>::read(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &_9;
+        _7 = _8 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _3 = DebugTuple::<'_, '_>::field(move _4, move _7) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = DebugTuple::<'_, '_>::finish(_3) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:801:1: 803:14>::fmt(_1: &Volatile<R, WriteOnly>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut core::fmt::DebugTuple<'_, '_>;
+    let mut _4: &mut core::fmt::DebugTuple<'_, '_>;
+    let mut _5: core::fmt::DebugTuple<'_, '_>;
+    let _6: &str;
+    let mut _7: &dyn core::fmt::Debug;
+    let mut _8: &&str;
+
+    bb0: {
+        _6 = const "Volatile";
+        _5 = Formatter::<'_>::debug_tuple(_2, _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = &mut _5;
+        _8 = const _;
+        _7 = _8 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _3 = DebugTuple::<'_, '_>::field(move _4, move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = DebugTuple::<'_, '_>::finish(_3) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        return;
+    }
+}
+
+promoted[0] in <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/volatile-0.4.6/src/lib.rs:801:1: 803:14>::fmt: &&str = {
+    let mut _0: &&str;
+    let mut _1: &str;
+
+    bb0: {
+        _1 = const "[write-only]";
+        _0 = &_1;
+        return;
+    }
+}

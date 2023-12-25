@@ -1,0 +1,5758 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn RawMutex::is_locked(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let _2: bool;
+    let _3: ();
+    scope 1 {
+        debug acquired_lock => _2;
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _2 = <Self as RawMutex>::try_lock(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(_2) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _3 = <Self as RawMutex>::unlock(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Not(_2);
+        return;
+    }
+}
+
+fn RawMutexFair::bump(_1: &Self) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+
+    bb0: {
+        _2 = <Self as RawMutexFair>::unlock_fair(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Self as RawMutex>::lock(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:150:1: 150:33>::new(_1: T) -> Mutex<R, T> {
+    debug val => _1;
+    let mut _0: mutex::Mutex<R, T>;
+    let mut _2: R;
+    let mut _3: core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _2 = const _;
+        _3 = UnsafeCell::<T>::new(move _1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Mutex::<R, T> { raw: move _2, data: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:150:1: 150:33>::new(_1: T) -> Mutex<R, T> {
+    debug val => _1;
+    let mut _0: mutex::Mutex<R, T>;
+    let mut _2: R;
+    let mut _3: core::cell::UnsafeCell<T>;
+    let mut _4: T;
+
+    bb0: {
+        StorageLive(_2);
+        _2 = const _;
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = move _1;
+        ConstEvalCounter;
+        _3 = UnsafeCell::<T>::new(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_4);
+        _0 = Mutex::<R, T> { raw: move _2, data: move _3 };
+        StorageDead(_3);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:150:1: 150:33>::into_inner(_1: Mutex<R, T>) -> T {
+    debug self => _1;
+    let mut _0: T;
+    let mut _2: core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _2 = move (_1.1: core::cell::UnsafeCell<T>);
+        _0 = UnsafeCell::<T>::into_inner(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        drop((_1.0: R)) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:178:1: 178:23>::const_new(_1: R, _2: T) -> Mutex<R, T> {
+    debug raw_mutex => _1;
+    debug val => _2;
+    let mut _0: mutex::Mutex<R, T>;
+    let mut _3: core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _3 = UnsafeCell::<T>::new(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Mutex::<R, T> { raw: move _1, data: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:178:1: 178:23>::const_new(_1: R, _2: T) -> Mutex<R, T> {
+    debug raw_mutex => _1;
+    debug val => _2;
+    let mut _0: mutex::Mutex<R, T>;
+    let mut _3: R;
+    let mut _4: core::cell::UnsafeCell<T>;
+    let mut _5: T;
+
+    bb0: {
+        StorageLive(_3);
+        _3 = move _1;
+        StorageLive(_4);
+        StorageLive(_5);
+        _5 = move _2;
+        ConstEvalCounter;
+        _4 = UnsafeCell::<T>::new(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_5);
+        _0 = Mutex::<R, T> { raw: move _3, data: move _4 };
+        StorageDead(_4);
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::guard(_1: &Mutex<R, T>) -> MutexGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: mutex::MutexGuard<'_, R, T>;
+
+    bb0: {
+        _0 = MutexGuard::<'_, R, T> { mutex: _1, marker: const ZeroSized: PhantomData<(&mut T, <R as RawMutex>::GuardMarker)> };
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::lock(_1: &Mutex<R, T>) -> MutexGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: mutex::MutexGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawMutex>::lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Mutex::<R, T>::guard(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::try_lock(_1: &Mutex<R, T>) -> Option<MutexGuard<'_, R, T>> {
+    debug self => _1;
+    let mut _0: core::option::Option<mutex::MutexGuard<'_, R, T>>;
+    let mut _2: bool;
+    let mut _3: &R;
+    let mut _4: mutex::MutexGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawMutex>::try_lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _4 = Mutex::<R, T>::guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<MutexGuard<'_, R, T>>::Some(move _4);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<MutexGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::get_mut(_1: &mut Mutex<R, T>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &mut (*_2);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::is_locked(_1: &Mutex<R, T>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &R;
+
+    bb0: {
+        _2 = &((*_1).0: R);
+        _0 = <R as RawMutex>::is_locked(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::force_unlock(_1: &Mutex<R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawMutex>::unlock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::raw(_1: &Mutex<R, T>) -> &R {
+    debug self => _1;
+    let mut _0: &R;
+
+    bb0: {
+        _0 = &((*_1).0: R);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:191:1: 191:41>::data_ptr(_1: &Mutex<R, T>) -> *mut T {
+    debug self => _1;
+    let mut _0: *mut T;
+    let mut _2: &core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _2 = &((*_1).1: core::cell::UnsafeCell<T>);
+        _0 = UnsafeCell::<T>::get(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:337:1: 337:45>::force_unlock_fair(_1: &Mutex<R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawMutexFair>::unlock_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:355:1: 355:46>::try_lock_for(_1: &Mutex<R, T>, _2: <R as RawMutexTimed>::Duration) -> Option<MutexGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<mutex::MutexGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: mutex::MutexGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawMutexTimed>::try_lock_for(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = Mutex::<R, T>::guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<MutexGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<MutexGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:355:1: 355:46>::try_lock_until(_1: &Mutex<R, T>, _2: <R as RawMutexTimed>::Instant) -> Option<MutexGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<mutex::MutexGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: mutex::MutexGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawMutexTimed>::try_lock_until(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = Mutex::<R, T>::guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<MutexGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<MutexGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:420:1: 420:63>::default() -> Mutex<R, T> {
+    let mut _0: mutex::Mutex<R, T>;
+    let mut _1: T;
+
+    bb0: {
+        _1 = <T as Default>::default() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Mutex::<R, T>::new(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:427:1: 427:45>::from(_1: T) -> Mutex<R, T> {
+    debug t => _1;
+    let mut _0: mutex::Mutex<R, T>;
+
+    bb0: {
+        _0 = Mutex::<R, T>::new(move _1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:434:1: 434:69>::fmt(_1: &Mutex<R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: core::option::Option<mutex::MutexGuard<'_, R, T>>;
+    let mut _4: isize;
+    let _5: mutex::MutexGuard<'_, R, T>;
+    let mut _6: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _7: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _8: core::fmt::DebugStruct<'_, '_>;
+    let _9: &str;
+    let _10: &str;
+    let mut _11: &dyn core::fmt::Debug;
+    let _12: &&T;
+    let _13: &T;
+    let _14: &T;
+    let mut _15: &mutex::MutexGuard<'_, R, T>;
+    let mut _16: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _17: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _18: core::fmt::DebugStruct<'_, '_>;
+    let _19: &str;
+    let _20: &str;
+    let mut _21: &dyn core::fmt::Debug;
+    let mut _22: &<mutex::Mutex<R, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+    scope 1 {
+        debug guard => _5;
+    }
+
+    bb0: {
+        _3 = Mutex::<R, T>::try_lock(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = discriminant(_3);
+        switchInt(move _4) -> [0: bb2, 1: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _19 = const "Mutex";
+        _18 = Formatter::<'_>::debug_struct(_2, _19) -> [return: bb9, unwind unreachable];
+    }
+
+    bb3: {
+        unreachable;
+    }
+
+    bb4: {
+        _5 = move ((_3 as Some).0: mutex::MutexGuard<'_, R, T>);
+        _9 = const "Mutex";
+        _8 = Formatter::<'_>::debug_struct(_2, _9) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _7 = &mut _8;
+        _10 = const "data";
+        _15 = &_5;
+        _14 = <MutexGuard<'_, R, T> as Deref>::deref(move _15) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = _14;
+        _12 = &_13;
+        _11 = _12 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _6 = DebugStruct::<'_, '_>::field(move _7, _10, move _11) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _0 = DebugStruct::<'_, '_>::finish(_6) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        drop(_5) -> [return: bb11, unwind unreachable];
+    }
+
+    bb9: {
+        _17 = &mut _18;
+        _20 = const "data";
+        _22 = const _;
+        _21 = _22 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _16 = DebugStruct::<'_, '_>::field(move _17, _20, move _21) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _0 = DebugStruct::<'_, '_>::finish(_16) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        return;
+    }
+}
+
+promoted[0] in mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:434:1: 434:69>::fmt: &<Mutex<R, T> as Debug>::fmt::LockedPlaceholder = {
+    let mut _0: &<mutex::Mutex<R, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+    let mut _1: <mutex::Mutex<R, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+
+    bb0: {
+        _1 = <Mutex<R, T> as Debug>::fmt::LockedPlaceholder;
+        _0 = &_1;
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:434:1: 434:69>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:440:17: 440:54>::fmt(_1: &<Mutex<R, T> as Debug>::fmt::LockedPlaceholder, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &str;
+
+    bb0: {
+        _3 = const "<locked>";
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:496:1: 496:64>::mutex(_1: &MutexGuard<'_, R, T>) -> &Mutex<R, T> {
+    debug s => _1;
+    let mut _0: &mutex::Mutex<R, T>;
+
+    bb0: {
+        _0 = ((*_1).0: &mutex::Mutex<R, T>);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:496:1: 496:64>::map(_1: MutexGuard<'_, R, T>, _2: F) -> MappedMutexGuard<'_, R, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: mutex::MappedMutexGuard<'_, R, U>;
+    let _3: &R;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let mut _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let _9: ();
+    let mut _10: *mut U;
+    let mut _11: &mutex::Mutex<R, T>;
+    let mut _12: &mutex::Mutex<R, T>;
+    scope 1 {
+        debug raw => _3;
+        let _4: &mut U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _11 = deref_copy (_1.0: &mutex::Mutex<R, T>);
+        _3 = &((*_11).0: R);
+        _12 = deref_copy (_1.0: &mutex::Mutex<R, T>);
+        _8 = &((*_12).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &mut (*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = core::mem::forget::<MutexGuard<'_, R, T>>(move _1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _10 = &raw mut (*_4);
+        _0 = MappedMutexGuard::<'_, R, U> { raw: _3, data: move _10, marker: const ZeroSized: PhantomData<&mut U> };
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:496:1: 496:64>::try_map(_1: MutexGuard<'_, R, T>, _2: F) -> Result<MappedMutexGuard<'_, R, U>, MutexGuard<'_, R, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<mutex::MappedMutexGuard<'_, R, U>, mutex::MutexGuard<'_, R, T>>;
+    let _3: &R;
+    let mut _4: core::option::Option<&mut U>;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let mut _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let mut _9: isize;
+    let _11: ();
+    let mut _12: mutex::MappedMutexGuard<'_, R, U>;
+    let mut _13: *mut U;
+    let mut _14: &mutex::Mutex<R, T>;
+    let mut _15: &mutex::Mutex<R, T>;
+    scope 1 {
+        debug raw => _3;
+        let _10: &mut U;
+        scope 2 {
+            debug data => _10;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _10;
+        }
+    }
+
+    bb0: {
+        _14 = deref_copy (_1.0: &mutex::Mutex<R, T>);
+        _3 = &((*_14).0: R);
+        _15 = deref_copy (_1.0: &mutex::Mutex<R, T>);
+        _8 = &((*_15).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &mut (*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = discriminant(_4);
+        switchInt(move _9) -> [0: bb3, 1: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _0 = Result::<MappedMutexGuard<'_, R, U>, MutexGuard<'_, R, T>>::Err(move _1);
+        goto -> bb7;
+    }
+
+    bb4: {
+        unreachable;
+    }
+
+    bb5: {
+        _10 = move ((_4 as Some).0: &mut U);
+        _11 = core::mem::forget::<MutexGuard<'_, R, T>>(move _1) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = &raw mut (*_10);
+        _12 = MappedMutexGuard::<'_, R, U> { raw: _3, data: move _13, marker: const ZeroSized: PhantomData<&mut U> };
+        _0 = Result::<MappedMutexGuard<'_, R, U>, MutexGuard<'_, R, T>>::Ok(move _12);
+        goto -> bb7;
+    }
+
+    bb7: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:496:1: 496:64>::unlocked(_1: &mut MutexGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut mutex::MutexGuard<'_, R, T>;
+    let mut _8: &mutex::Mutex<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &mutex::Mutex<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawMutex>::unlock(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:496:1: 496:64>::unlocked::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut mutex::MutexGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut mutex::MutexGuard<'_, R, T>;
+    let mut _5: &mut mutex::MutexGuard<'_, R, T>;
+    let mut _6: &mutex::Mutex<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut mutex::MutexGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &mutex::Mutex<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawMutex>::lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:496:1: 496:64>::leak(_1: MutexGuard<'_, R, T>) -> &mut T {
+    debug s => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let _4: ();
+    let mut _5: &mutex::Mutex<R, T>;
+    scope 1 {
+        debug r => _0;
+    }
+    scope 2 {
+    }
+
+    bb0: {
+        _5 = deref_copy (_1.0: &mutex::Mutex<R, T>);
+        _3 = &((*_5).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &mut (*_2);
+        _4 = core::mem::forget::<MutexGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:581:1: 581:68>::unlock_fair(_1: MutexGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let _4: ();
+    let mut _5: &mutex::Mutex<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _5 = deref_copy (_1.0: &mutex::Mutex<R, T>);
+        _3 = &((*_5).0: R);
+        _2 = <R as RawMutexFair>::unlock_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = core::mem::forget::<MutexGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:581:1: 581:68>::unlocked_fair(_1: &mut MutexGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut mutex::MutexGuard<'_, R, T>;
+    let mut _8: &mutex::Mutex<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &mutex::Mutex<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawMutexFair>::unlock_fair(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:581:1: 581:68>::unlocked_fair::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut mutex::MutexGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut mutex::MutexGuard<'_, R, T>;
+    let mut _5: &mut mutex::MutexGuard<'_, R, T>;
+    let mut _6: &mutex::Mutex<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut mutex::MutexGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &mutex::Mutex<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawMutex>::lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:581:1: 581:68>::bump(_1: &mut MutexGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &mutex::Mutex<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &mutex::Mutex<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawMutexFair>::bump(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:636:1: 636:74>::deref(_1: &MutexGuard<'_, R, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let mut _4: &mutex::Mutex<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &mutex::Mutex<R, T>);
+        _3 = &((*_4).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:644:1: 644:77>::deref_mut(_1: &mut MutexGuard<'_, R, T>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let mut _4: &mutex::Mutex<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &mutex::Mutex<R, T>);
+        _3 = &((*_4).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &mut (*_2);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:651:1: 651:73>::drop(_1: &mut MutexGuard<'_, R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &mutex::Mutex<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &mutex::Mutex<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawMutex>::unlock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:661:1: 661:92>::fmt(_1: &MutexGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MutexGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:667:1: 667:96>::fmt(_1: &MutexGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MutexGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:832:1: 832:70>::map(_1: MappedMutexGuard<'_, R, T>, _2: F) -> MappedMutexGuard<'_, R, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: mutex::MappedMutexGuard<'_, R, U>;
+    let _3: &R;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let _7: ();
+    let mut _8: *mut U;
+    let mut _9: *mut T;
+    scope 1 {
+        debug raw => _3;
+        let _4: &mut U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &R);
+        _9 = deref_copy (_1.1: *mut T);
+        _6 = &mut (*_9);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = core::mem::forget::<MappedMutexGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &raw mut (*_4);
+        _0 = MappedMutexGuard::<'_, R, U> { raw: _3, data: move _8, marker: const ZeroSized: PhantomData<&mut U> };
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:832:1: 832:70>::try_map(_1: MappedMutexGuard<'_, R, T>, _2: F) -> Result<MappedMutexGuard<'_, R, U>, MappedMutexGuard<'_, R, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<mutex::MappedMutexGuard<'_, R, U>, mutex::MappedMutexGuard<'_, R, T>>;
+    let _3: &R;
+    let mut _4: core::option::Option<&mut U>;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let mut _7: isize;
+    let _9: ();
+    let mut _10: mutex::MappedMutexGuard<'_, R, U>;
+    let mut _11: *mut U;
+    let mut _12: *mut T;
+    scope 1 {
+        debug raw => _3;
+        let _8: &mut U;
+        scope 2 {
+            debug data => _8;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _8;
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &R);
+        _12 = deref_copy (_1.1: *mut T);
+        _6 = &mut (*_12);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = discriminant(_4);
+        switchInt(move _7) -> [0: bb2, 1: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _0 = Result::<MappedMutexGuard<'_, R, U>, MappedMutexGuard<'_, R, T>>::Err(move _1);
+        goto -> bb6;
+    }
+
+    bb3: {
+        unreachable;
+    }
+
+    bb4: {
+        _8 = move ((_4 as Some).0: &mut U);
+        _9 = core::mem::forget::<MappedMutexGuard<'_, R, T>>(move _1) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _11 = &raw mut (*_8);
+        _10 = MappedMutexGuard::<'_, R, U> { raw: _3, data: move _11, marker: const ZeroSized: PhantomData<&mut U> };
+        _0 = Result::<MappedMutexGuard<'_, R, U>, MappedMutexGuard<'_, R, T>>::Ok(move _10);
+        goto -> bb6;
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:884:1: 884:74>::unlock_fair(_1: MappedMutexGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+    let mut _4: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy (_1.0: &R);
+        _2 = <R as RawMutexFair>::unlock_fair(_4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = core::mem::forget::<MappedMutexGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:907:1: 907:80>::deref(_1: &MappedMutexGuard<'_, R, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let mut _2: *mut T;
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = deref_copy ((*_1).1: *mut T);
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:915:1: 915:83>::deref_mut(_1: &mut MappedMutexGuard<'_, R, T>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = deref_copy ((*_1).1: *mut T);
+        _0 = &mut (*_2);
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:922:1: 922:79>::drop(_1: &mut MappedMutexGuard<'_, R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = deref_copy ((*_1).0: &R);
+        _2 = <R as RawMutex>::unlock(_3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:932:1: 932:98>::fmt(_1: &MappedMutexGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedMutexGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/mutex.rs:938:1: 939:35>::fmt(_1: &MappedMutexGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedMutexGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+const remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::INIT: RawReentrantMutex<R, G> = {
+    let mut _0: remutex::RawReentrantMutex<R, G>;
+    let mut _1: core::sync::atomic::AtomicUsize;
+    let mut _2: core::cell::Cell<usize>;
+    let mut _3: R;
+    let mut _4: G;
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = AtomicUsize::new(const 0_usize) -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        StorageLive(_2);
+        ConstEvalCounter;
+        _2 = Cell::<usize>::new(const 0_usize) -> [return: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        StorageLive(_3);
+        _3 = const _;
+        StorageLive(_4);
+        _4 = const _;
+        _0 = RawReentrantMutex::<R, G> { owner: move _1, lock_count: move _2, mutex: move _3, get_thread_id: move _4 };
+        StorageDead(_4);
+        StorageDead(_3);
+        StorageDead(_2);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::lock_internal(_1: &RawReentrantMutex<R, G>, _2: F) -> bool {
+    debug self => _1;
+    debug try_lock => _2;
+    let mut _0: bool;
+    let _3: usize;
+    let mut _4: core::num::NonZeroUsize;
+    let mut _5: &G;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: &core::sync::atomic::AtomicUsize;
+    let mut _9: core::sync::atomic::Ordering;
+    let _10: ();
+    let mut _11: &core::cell::Cell<usize>;
+    let mut _12: usize;
+    let mut _13: core::option::Option<usize>;
+    let mut _14: usize;
+    let mut _15: &core::cell::Cell<usize>;
+    let _16: &str;
+    let mut _17: bool;
+    let mut _18: F;
+    let _19: ();
+    let mut _20: &core::sync::atomic::AtomicUsize;
+    let mut _21: core::sync::atomic::Ordering;
+    let mut _22: bool;
+    let mut _23: (&usize, &usize);
+    let mut _24: &usize;
+    let _25: usize;
+    let mut _26: &core::cell::Cell<usize>;
+    let mut _29: bool;
+    let mut _30: usize;
+    let mut _31: usize;
+    let _33: !;
+    let mut _34: core::option::Option<core::fmt::Arguments<'_>>;
+    let _35: ();
+    let mut _36: &core::cell::Cell<usize>;
+    let mut _38: bool;
+    scope 1 {
+        debug id => _3;
+        let _27: &usize;
+        let _28: &usize;
+        let mut _37: &usize;
+        scope 2 {
+            debug left_val => _27;
+            debug right_val => _28;
+            let _32: core::panicking::AssertKind;
+            scope 3 {
+                debug kind => _32;
+            }
+        }
+    }
+
+    bb0: {
+        _38 = const false;
+        _38 = const true;
+        _5 = &((*_1).3: G);
+        _4 = <G as GetThreadId>::nonzero_thread_id(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = NonZeroUsize::get(move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _9 = Relaxed;
+        _7 = AtomicUsize::load(move _8, move _9) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _6 = Eq(move _7, _3);
+        switchInt(move _6) -> [0: bb8, otherwise: bb4];
+    }
+
+    bb4: {
+        _11 = &((*_1).1: core::cell::Cell<usize>);
+        _15 = &((*_1).1: core::cell::Cell<usize>);
+        _14 = Cell::<usize>::get(move _15) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _13 = num::<impl usize>::checked_add(move _14, const 1_usize) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _16 = const "ReentrantMutex lock count overflow";
+        _12 = Option::<usize>::expect(move _13, _16) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _10 = Cell::<usize>::set(move _11, move _12) -> [return: bb17, unwind unreachable];
+    }
+
+    bb8: {
+        _38 = const false;
+        _18 = move _2;
+        _17 = <F as FnOnce<()>>::call_once(move _18, const ()) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        switchInt(move _17) -> [0: bb11, otherwise: bb10];
+    }
+
+    bb10: {
+        _20 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _21 = Relaxed;
+        _19 = AtomicUsize::store(move _20, _3, move _21) -> [return: bb12, unwind unreachable];
+    }
+
+    bb11: {
+        _0 = const false;
+        goto -> bb18;
+    }
+
+    bb12: {
+        _22 = const true;
+        switchInt(move _22) -> [0: bb16, otherwise: bb13];
+    }
+
+    bb13: {
+        _26 = &((*_1).1: core::cell::Cell<usize>);
+        _25 = Cell::<usize>::get(move _26) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        _24 = &_25;
+        _37 = const _;
+        _23 = (move _24, _37);
+        _27 = (_23.0: &usize);
+        _28 = (_23.1: &usize);
+        _30 = (*_27);
+        _31 = (*_28);
+        _29 = Eq(move _30, move _31);
+        switchInt(move _29) -> [0: bb15, otherwise: bb16];
+    }
+
+    bb15: {
+        _32 = core::panicking::AssertKind::Eq;
+        _34 = Option::<Arguments<'_>>::None;
+        _33 = assert_failed::<usize, usize>(move _32, _27, _28, move _34) -> unwind unreachable;
+    }
+
+    bb16: {
+        _36 = &((*_1).1: core::cell::Cell<usize>);
+        _35 = Cell::<usize>::set(move _36, const 1_usize) -> [return: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _0 = const true;
+        switchInt(_38) -> [0: bb18, otherwise: bb19];
+    }
+
+    bb18: {
+        return;
+    }
+
+    bb19: {
+        drop(_2) -> [return: bb18, unwind unreachable];
+    }
+}
+
+promoted[0] in remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::lock_internal: &usize = {
+    let mut _0: &usize;
+    let mut _1: usize;
+
+    bb0: {
+        _1 = const 0_usize;
+        _0 = &_1;
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::lock(_1: &RawReentrantMutex<R, G>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: bool;
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:111:28: 111:30};
+    let mut _5: &&remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _3 = _1;
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:111:28: 111:30} { self: move _5 };
+        _2 = RawReentrantMutex::<R, G>::lock_internal::<{closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:111:28: 111:30}>(move _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::lock::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:111:28: 111:30}) -> bool {
+    debug self => (*(_1.0: &&remutex::RawReentrantMutex<R, G>));
+    let mut _0: bool;
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &&remutex::RawReentrantMutex<R, G>;
+    let mut _5: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&remutex::RawReentrantMutex<R, G>);
+        _5 = deref_copy (*_4);
+        _3 = &((*_5).2: R);
+        _2 = <R as RawMutex>::lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = const true;
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::try_lock(_1: &RawReentrantMutex<R, G>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &remutex::RawReentrantMutex<R, G>;
+    let mut _3: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:121:28: 121:30};
+    let mut _4: &&remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _2 = _1;
+        _4 = &_1;
+        _3 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:121:28: 121:30} { self: move _4 };
+        _0 = RawReentrantMutex::<R, G>::lock_internal::<{closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:121:28: 121:30}>(move _2, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::try_lock::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:121:28: 121:30}) -> bool {
+    debug self => (*(_1.0: &&remutex::RawReentrantMutex<R, G>));
+    let mut _0: bool;
+    let mut _2: &R;
+    let mut _3: &&remutex::RawReentrantMutex<R, G>;
+    let mut _4: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _3 = deref_copy (_1.0: &&remutex::RawReentrantMutex<R, G>);
+        _4 = deref_copy (*_3);
+        _2 = &((*_4).2: R);
+        _0 = <R as RawMutex>::try_lock(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::unlock(_1: &RawReentrantMutex<R, G>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: usize;
+    let mut _3: usize;
+    let mut _4: &core::cell::Cell<usize>;
+    let mut _5: (usize, bool);
+    let _6: ();
+    let mut _7: &core::cell::Cell<usize>;
+    let _8: ();
+    let mut _9: &core::sync::atomic::AtomicUsize;
+    let mut _10: core::sync::atomic::Ordering;
+    let _11: ();
+    let mut _12: &R;
+    scope 1 {
+        debug lock_count => _2;
+    }
+
+    bb0: {
+        _4 = &((*_1).1: core::cell::Cell<usize>);
+        _3 = Cell::<usize>::get(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = CheckedSub(_3, const 1_usize);
+        assert(!move (_5.1: bool), "attempt to compute `{} - {}`, which would overflow", move _3, const 1_usize) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _2 = move (_5.0: usize);
+        _7 = &((*_1).1: core::cell::Cell<usize>);
+        _6 = Cell::<usize>::set(move _7, _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb6];
+    }
+
+    bb4: {
+        _9 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _10 = Relaxed;
+        _8 = AtomicUsize::store(move _9, const 0_usize, move _10) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _12 = &((*_1).2: R);
+        _11 = <R as RawMutex>::unlock(move _12) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::is_locked(_1: &RawReentrantMutex<R, G>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &R;
+
+    bb0: {
+        _2 = &((*_1).2: R);
+        _0 = <R as RawMutex>::is_locked(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:77:1: 77:58>::is_owned_by_current_thread(_1: &RawReentrantMutex<R, G>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let _2: usize;
+    let mut _3: core::num::NonZeroUsize;
+    let mut _4: &G;
+    let mut _5: usize;
+    let mut _6: &core::sync::atomic::AtomicUsize;
+    let mut _7: core::sync::atomic::Ordering;
+    scope 1 {
+        debug id => _2;
+    }
+
+    bb0: {
+        _4 = &((*_1).3: G);
+        _3 = <G as GetThreadId>::nonzero_thread_id(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = NonZeroUsize::get(move _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _6 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _7 = Relaxed;
+        _5 = AtomicUsize::load(move _6, move _7) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Eq(move _5, _2);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:154:1: 154:62>::unlock_fair(_1: &RawReentrantMutex<R, G>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: usize;
+    let mut _3: usize;
+    let mut _4: &core::cell::Cell<usize>;
+    let mut _5: (usize, bool);
+    let _6: ();
+    let mut _7: &core::cell::Cell<usize>;
+    let _8: ();
+    let mut _9: &core::sync::atomic::AtomicUsize;
+    let mut _10: core::sync::atomic::Ordering;
+    let _11: ();
+    let mut _12: &R;
+    scope 1 {
+        debug lock_count => _2;
+    }
+
+    bb0: {
+        _4 = &((*_1).1: core::cell::Cell<usize>);
+        _3 = Cell::<usize>::get(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = CheckedSub(_3, const 1_usize);
+        assert(!move (_5.1: bool), "attempt to compute `{} - {}`, which would overflow", move _3, const 1_usize) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _2 = move (_5.0: usize);
+        _7 = &((*_1).1: core::cell::Cell<usize>);
+        _6 = Cell::<usize>::set(move _7, _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb6];
+    }
+
+    bb4: {
+        _9 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _10 = Relaxed;
+        _8 = AtomicUsize::store(move _9, const 0_usize, move _10) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _12 = &((*_1).2: R);
+        _11 = <R as RawMutexFair>::unlock_fair(move _12) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:154:1: 154:62>::bump(_1: &RawReentrantMutex<R, G>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let mut _2: usize;
+    let mut _3: &core::cell::Cell<usize>;
+    let _4: usize;
+    let mut _5: &core::sync::atomic::AtomicUsize;
+    let mut _6: core::sync::atomic::Ordering;
+    let _7: ();
+    let mut _8: &core::sync::atomic::AtomicUsize;
+    let mut _9: core::sync::atomic::Ordering;
+    let _10: ();
+    let mut _11: &R;
+    let _12: ();
+    let mut _13: &core::sync::atomic::AtomicUsize;
+    let mut _14: core::sync::atomic::Ordering;
+    scope 1 {
+        debug id => _4;
+    }
+
+    bb0: {
+        _3 = &((*_1).1: core::cell::Cell<usize>);
+        _2 = Cell::<usize>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [1: bb2, otherwise: bb6];
+    }
+
+    bb2: {
+        _5 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _6 = Relaxed;
+        _4 = AtomicUsize::load(move _5, move _6) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _8 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _9 = Relaxed;
+        _7 = AtomicUsize::store(move _8, const 0_usize, move _9) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _11 = &((*_1).2: R);
+        _10 = <R as RawMutexFair>::bump(move _11) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _13 = &((*_1).0: core::sync::atomic::AtomicUsize);
+        _14 = Relaxed;
+        _12 = AtomicUsize::store(move _13, _4, move _14) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:192:1: 192:63>::try_lock_until(_1: &RawReentrantMutex<R, G>, _2: <R as RawMutexTimed>::Instant) -> bool {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: bool;
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:196:28: 196:30};
+    let mut _5: &&remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _3 = _1;
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:196:28: 196:30} { self: move _5, timeout: move _2 };
+        _0 = RawReentrantMutex::<R, G>::lock_internal::<{closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:196:28: 196:30}>(move _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:192:1: 192:63>::try_lock_until::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:196:28: 196:30}) -> bool {
+    debug self => (*(_1.0: &&remutex::RawReentrantMutex<R, G>));
+    debug timeout => (_1.1: <R as mutex::RawMutexTimed>::Instant);
+    let mut _0: bool;
+    let mut _2: &R;
+    let mut _3: <R as mutex::RawMutexTimed>::Instant;
+    let mut _4: &&remutex::RawReentrantMutex<R, G>;
+    let mut _5: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&remutex::RawReentrantMutex<R, G>);
+        _5 = deref_copy (*_4);
+        _2 = &((*_5).2: R);
+        _3 = move (_1.1: <R as mutex::RawMutexTimed>::Instant);
+        _0 = <R as RawMutexTimed>::try_lock_until(move _2, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:192:1: 192:63>::try_lock_for(_1: &RawReentrantMutex<R, G>, _2: <R as RawMutexTimed>::Duration) -> bool {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: bool;
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:202:28: 202:30};
+    let mut _5: &&remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _3 = _1;
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:202:28: 202:30} { self: move _5, timeout: move _2 };
+        _0 = RawReentrantMutex::<R, G>::lock_internal::<{closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:202:28: 202:30}>(move _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:192:1: 192:63>::try_lock_for::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:202:28: 202:30}) -> bool {
+    debug self => (*(_1.0: &&remutex::RawReentrantMutex<R, G>));
+    debug timeout => (_1.1: <R as mutex::RawMutexTimed>::Duration);
+    let mut _0: bool;
+    let mut _2: &R;
+    let mut _3: <R as mutex::RawMutexTimed>::Duration;
+    let mut _4: &&remutex::RawReentrantMutex<R, G>;
+    let mut _5: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&remutex::RawReentrantMutex<R, G>);
+        _5 = deref_copy (*_4);
+        _2 = &((*_5).2: R);
+        _3 = move (_1.1: <R as mutex::RawMutexTimed>::Duration);
+        _0 = <R as RawMutexTimed>::try_lock_for(move _2, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:231:1: 231:61>::new(_1: T) -> ReentrantMutex<R, G, T> {
+    debug val => _1;
+    let mut _0: remutex::ReentrantMutex<R, G, T>;
+    let mut _2: core::cell::UnsafeCell<T>;
+    let mut _3: remutex::RawReentrantMutex<R, G>;
+    let mut _4: core::sync::atomic::AtomicUsize;
+    let mut _5: core::cell::Cell<usize>;
+    let mut _6: R;
+    let mut _7: G;
+
+    bb0: {
+        _2 = UnsafeCell::<T>::new(move _1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = AtomicUsize::new(const 0_usize) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = Cell::<usize>::new(const 0_usize) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _6 = const _;
+        _7 = const _;
+        _3 = RawReentrantMutex::<R, G> { owner: move _4, lock_count: move _5, mutex: move _6, get_thread_id: move _7 };
+        _0 = ReentrantMutex::<R, G, T> { raw: move _3, data: move _2 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:231:1: 231:61>::new(_1: T) -> ReentrantMutex<R, G, T> {
+    debug val => _1;
+    let mut _0: remutex::ReentrantMutex<R, G, T>;
+    let mut _2: core::cell::UnsafeCell<T>;
+    let mut _3: T;
+    let mut _4: remutex::RawReentrantMutex<R, G>;
+    let mut _5: core::sync::atomic::AtomicUsize;
+    let mut _6: core::cell::Cell<usize>;
+    let mut _7: R;
+    let mut _8: G;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = move _1;
+        ConstEvalCounter;
+        _2 = UnsafeCell::<T>::new(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_3);
+        StorageLive(_4);
+        StorageLive(_5);
+        ConstEvalCounter;
+        _5 = AtomicUsize::new(const 0_usize) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        StorageLive(_6);
+        ConstEvalCounter;
+        _6 = Cell::<usize>::new(const 0_usize) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        StorageLive(_7);
+        _7 = const _;
+        StorageLive(_8);
+        _8 = const _;
+        _4 = RawReentrantMutex::<R, G> { owner: move _5, lock_count: move _6, mutex: move _7, get_thread_id: move _8 };
+        StorageDead(_8);
+        StorageDead(_7);
+        StorageDead(_6);
+        StorageDead(_5);
+        _0 = ReentrantMutex::<R, G, T> { raw: move _4, data: move _2 };
+        StorageDead(_4);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:231:1: 231:61>::into_inner(_1: ReentrantMutex<R, G, T>) -> T {
+    debug self => _1;
+    let mut _0: T;
+    let mut _2: core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _2 = move (_1.1: core::cell::UnsafeCell<T>);
+        _0 = UnsafeCell::<T>::into_inner(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        drop((_1.0: remutex::RawReentrantMutex<R, G>)) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:269:1: 269:38>::const_new(_1: R, _2: G, _3: T) -> ReentrantMutex<R, G, T> {
+    debug raw_mutex => _1;
+    debug get_thread_id => _2;
+    debug val => _3;
+    let mut _0: remutex::ReentrantMutex<R, G, T>;
+    let mut _4: core::cell::UnsafeCell<T>;
+    let mut _5: remutex::RawReentrantMutex<R, G>;
+    let mut _6: core::sync::atomic::AtomicUsize;
+    let mut _7: core::cell::Cell<usize>;
+
+    bb0: {
+        _4 = UnsafeCell::<T>::new(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = AtomicUsize::new(const 0_usize) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _7 = Cell::<usize>::new(const 0_usize) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _5 = RawReentrantMutex::<R, G> { owner: move _6, lock_count: move _7, mutex: move _1, get_thread_id: move _2 };
+        _0 = ReentrantMutex::<R, G, T> { raw: move _5, data: move _4 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:269:1: 269:38>::const_new(_1: R, _2: G, _3: T) -> ReentrantMutex<R, G, T> {
+    debug raw_mutex => _1;
+    debug get_thread_id => _2;
+    debug val => _3;
+    let mut _0: remutex::ReentrantMutex<R, G, T>;
+    let mut _4: core::cell::UnsafeCell<T>;
+    let mut _5: T;
+    let mut _6: remutex::RawReentrantMutex<R, G>;
+    let mut _7: core::sync::atomic::AtomicUsize;
+    let mut _8: core::cell::Cell<usize>;
+    let mut _9: R;
+    let mut _10: G;
+
+    bb0: {
+        StorageLive(_4);
+        StorageLive(_5);
+        _5 = move _3;
+        ConstEvalCounter;
+        _4 = UnsafeCell::<T>::new(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_5);
+        StorageLive(_6);
+        StorageLive(_7);
+        ConstEvalCounter;
+        _7 = AtomicUsize::new(const 0_usize) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        StorageLive(_8);
+        ConstEvalCounter;
+        _8 = Cell::<usize>::new(const 0_usize) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        StorageLive(_9);
+        _9 = move _1;
+        StorageLive(_10);
+        _10 = move _2;
+        _6 = RawReentrantMutex::<R, G> { owner: move _7, lock_count: move _8, mutex: move _9, get_thread_id: move _10 };
+        StorageDead(_10);
+        StorageDead(_9);
+        StorageDead(_8);
+        StorageDead(_7);
+        _0 = ReentrantMutex::<R, G, T> { raw: move _6, data: move _4 };
+        StorageDead(_6);
+        StorageDead(_4);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::guard(_1: &ReentrantMutex<R, G, T>) -> ReentrantMutexGuard<'_, R, G, T> {
+    debug self => _1;
+    let mut _0: remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let _2: &&remutex::ReentrantMutex<R, G, T>;
+    let mut _3: &remutex::ReentrantMutex<R, G, T>;
+
+    bb0: {
+        _2 = &_1;
+        _3 = deref_copy (*_2);
+        _0 = ReentrantMutexGuard::<'_, R, G, T> { remutex: _3, marker: const ZeroSized: PhantomData<(&T, GuardNoSend)> };
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::lock(_1: &ReentrantMutex<R, G, T>) -> ReentrantMutexGuard<'_, R, G, T> {
+    debug self => _1;
+    let mut _0: remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let _2: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = ReentrantMutex::<R, G, T>::guard(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::try_lock(_1: &ReentrantMutex<R, G, T>) -> Option<ReentrantMutexGuard<'_, R, G, T>> {
+    debug self => _1;
+    let mut _0: core::option::Option<remutex::ReentrantMutexGuard<'_, R, G, T>>;
+    let mut _2: bool;
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: remutex::ReentrantMutexGuard<'_, R, G, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::try_lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _4 = ReentrantMutex::<R, G, T>::guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<ReentrantMutexGuard<'_, R, G, T>>::Some(move _4);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<ReentrantMutexGuard<'_, R, G, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::get_mut(_1: &mut ReentrantMutex<R, G, T>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &mut (*_2);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::is_locked(_1: &ReentrantMutex<R, G, T>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _2 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _0 = RawReentrantMutex::<R, G>::is_locked(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::is_owned_by_current_thread(_1: &ReentrantMutex<R, G, T>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _2 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _0 = RawReentrantMutex::<R, G>::is_owned_by_current_thread(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::force_unlock(_1: &ReentrantMutex<R, G, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _3 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::unlock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::raw(_1: &ReentrantMutex<R, G, T>) -> &R {
+    debug self => _1;
+    let mut _0: &R;
+
+    bb0: {
+        _0 = &(((*_1).0: remutex::RawReentrantMutex<R, G>).2: R);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:289:1: 289:69>::data_ptr(_1: &ReentrantMutex<R, G, T>) -> *mut T {
+    debug self => _1;
+    let mut _0: *mut T;
+    let mut _2: &core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _2 = &((*_1).1: core::cell::UnsafeCell<T>);
+        _0 = UnsafeCell::<T>::get(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:443:1: 443:73>::force_unlock_fair(_1: &ReentrantMutex<R, G, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+
+    bb0: {
+        _3 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::unlock_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:461:1: 461:74>::try_lock_for(_1: &ReentrantMutex<R, G, T>, _2: <R as RawMutexTimed>::Duration) -> Option<ReentrantMutexGuard<'_, R, G, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<remutex::ReentrantMutexGuard<'_, R, G, T>>;
+    let mut _3: bool;
+    let mut _4: &remutex::RawReentrantMutex<R, G>;
+    let mut _5: remutex::ReentrantMutexGuard<'_, R, G, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _3 = RawReentrantMutex::<R, G>::try_lock_for(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = ReentrantMutex::<R, G, T>::guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<ReentrantMutexGuard<'_, R, G, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<ReentrantMutexGuard<'_, R, G, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:461:1: 461:74>::try_lock_until(_1: &ReentrantMutex<R, G, T>, _2: <R as RawMutexTimed>::Instant) -> Option<ReentrantMutexGuard<'_, R, G, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<remutex::ReentrantMutexGuard<'_, R, G, T>>;
+    let mut _3: bool;
+    let mut _4: &remutex::RawReentrantMutex<R, G>;
+    let mut _5: remutex::ReentrantMutexGuard<'_, R, G, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: remutex::RawReentrantMutex<R, G>);
+        _3 = RawReentrantMutex::<R, G>::try_lock_until(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = ReentrantMutex::<R, G, T>::guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<ReentrantMutexGuard<'_, R, G, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<ReentrantMutexGuard<'_, R, G, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:529:1: 529:91>::default() -> ReentrantMutex<R, G, T> {
+    let mut _0: remutex::ReentrantMutex<R, G, T>;
+    let mut _1: T;
+
+    bb0: {
+        _1 = <T as Default>::default() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = ReentrantMutex::<R, G, T>::new(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:536:1: 536:73>::from(_1: T) -> ReentrantMutex<R, G, T> {
+    debug t => _1;
+    let mut _0: remutex::ReentrantMutex<R, G, T>;
+
+    bb0: {
+        _0 = ReentrantMutex::<R, G, T>::new(move _1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:543:1: 543:97>::fmt(_1: &ReentrantMutex<R, G, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: core::option::Option<remutex::ReentrantMutexGuard<'_, R, G, T>>;
+    let mut _4: isize;
+    let _5: remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _6: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _7: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _8: core::fmt::DebugStruct<'_, '_>;
+    let _9: &str;
+    let _10: &str;
+    let mut _11: &dyn core::fmt::Debug;
+    let _12: &&T;
+    let _13: &T;
+    let _14: &T;
+    let mut _15: &remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _16: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _17: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _18: core::fmt::DebugStruct<'_, '_>;
+    let _19: &str;
+    let _20: &str;
+    let mut _21: &dyn core::fmt::Debug;
+    let mut _22: &<remutex::ReentrantMutex<R, G, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+    scope 1 {
+        debug guard => _5;
+    }
+
+    bb0: {
+        _3 = ReentrantMutex::<R, G, T>::try_lock(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = discriminant(_3);
+        switchInt(move _4) -> [0: bb2, 1: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _19 = const "ReentrantMutex";
+        _18 = Formatter::<'_>::debug_struct(_2, _19) -> [return: bb9, unwind unreachable];
+    }
+
+    bb3: {
+        unreachable;
+    }
+
+    bb4: {
+        _5 = move ((_3 as Some).0: remutex::ReentrantMutexGuard<'_, R, G, T>);
+        _9 = const "ReentrantMutex";
+        _8 = Formatter::<'_>::debug_struct(_2, _9) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _7 = &mut _8;
+        _10 = const "data";
+        _15 = &_5;
+        _14 = <ReentrantMutexGuard<'_, R, G, T> as Deref>::deref(move _15) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = _14;
+        _12 = &_13;
+        _11 = _12 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _6 = DebugStruct::<'_, '_>::field(move _7, _10, move _11) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _0 = DebugStruct::<'_, '_>::finish(_6) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        drop(_5) -> [return: bb11, unwind unreachable];
+    }
+
+    bb9: {
+        _17 = &mut _18;
+        _20 = const "data";
+        _22 = const _;
+        _21 = _22 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _16 = DebugStruct::<'_, '_>::field(move _17, _20, move _21) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _0 = DebugStruct::<'_, '_>::finish(_16) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        return;
+    }
+}
+
+promoted[0] in remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:543:1: 543:97>::fmt: &<ReentrantMutex<R, G, T> as Debug>::fmt::LockedPlaceholder = {
+    let mut _0: &<remutex::ReentrantMutex<R, G, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+    let mut _1: <remutex::ReentrantMutex<R, G, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+
+    bb0: {
+        _1 = <ReentrantMutex<R, G, T> as Debug>::fmt::LockedPlaceholder;
+        _0 = &_1;
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:543:1: 543:97>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:552:17: 552:54>::fmt(_1: &<ReentrantMutex<R, G, T> as Debug>::fmt::LockedPlaceholder, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &str;
+
+    bb0: {
+        _3 = const "<locked>";
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:613:1: 613:97>::remutex(_1: &ReentrantMutexGuard<'_, R, G, T>) -> &ReentrantMutex<R, G, T> {
+    debug s => _1;
+    let mut _0: &remutex::ReentrantMutex<R, G, T>;
+
+    bb0: {
+        _0 = ((*_1).0: &remutex::ReentrantMutex<R, G, T>);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:613:1: 613:97>::map(_1: ReentrantMutexGuard<'_, R, G, T>, _2: F) -> MappedReentrantMutexGuard<'_, R, G, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: remutex::MappedReentrantMutexGuard<'_, R, G, U>;
+    let _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _5: (&T,);
+    let _6: &T;
+    let _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let _9: ();
+    let mut _10: *const U;
+    let mut _11: &remutex::ReentrantMutex<R, G, T>;
+    let mut _12: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+        debug raw => _3;
+        let _4: &U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _11 = deref_copy (_1.0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_11).0: remutex::RawReentrantMutex<R, G>);
+        _12 = deref_copy (_1.0: &remutex::ReentrantMutex<R, G, T>);
+        _8 = &((*_12).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &(*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = core::mem::forget::<ReentrantMutexGuard<'_, R, G, T>>(move _1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _10 = &raw const (*_4);
+        _0 = MappedReentrantMutexGuard::<'_, R, G, U> { raw: _3, data: move _10, marker: const ZeroSized: PhantomData<&U> };
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:613:1: 613:97>::try_map(_1: ReentrantMutexGuard<'_, R, G, T>, _2: F) -> Result<MappedReentrantMutexGuard<'_, R, G, U>, ReentrantMutexGuard<'_, R, G, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<remutex::MappedReentrantMutexGuard<'_, R, G, U>, remutex::ReentrantMutexGuard<'_, R, G, T>>;
+    let _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: core::option::Option<&U>;
+    let mut _5: (&T,);
+    let _6: &T;
+    let _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let mut _9: isize;
+    let _11: ();
+    let mut _12: remutex::MappedReentrantMutexGuard<'_, R, G, U>;
+    let mut _13: *const U;
+    let mut _14: &remutex::ReentrantMutex<R, G, T>;
+    let mut _15: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+        debug raw => _3;
+        let _10: &U;
+        scope 2 {
+            debug data => _10;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _10;
+        }
+    }
+
+    bb0: {
+        _14 = deref_copy (_1.0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_14).0: remutex::RawReentrantMutex<R, G>);
+        _15 = deref_copy (_1.0: &remutex::ReentrantMutex<R, G, T>);
+        _8 = &((*_15).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &(*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = discriminant(_4);
+        switchInt(move _9) -> [0: bb3, 1: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _0 = Result::<MappedReentrantMutexGuard<'_, R, G, U>, ReentrantMutexGuard<'_, R, G, T>>::Err(move _1);
+        goto -> bb7;
+    }
+
+    bb4: {
+        unreachable;
+    }
+
+    bb5: {
+        _10 = ((_4 as Some).0: &U);
+        _11 = core::mem::forget::<ReentrantMutexGuard<'_, R, G, T>>(move _1) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = &raw const (*_10);
+        _12 = MappedReentrantMutexGuard::<'_, R, G, U> { raw: _3, data: move _13, marker: const ZeroSized: PhantomData<&U> };
+        _0 = Result::<MappedReentrantMutexGuard<'_, R, G, U>, ReentrantMutexGuard<'_, R, G, T>>::Ok(move _12);
+        goto -> bb7;
+    }
+
+    bb7: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:613:1: 613:97>::unlocked(_1: &mut ReentrantMutexGuard<'_, R, G, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &remutex::RawReentrantMutex<R, G>;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _8: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &remutex::ReentrantMutex<R, G, T>);
+        _4 = &((*_8).0: remutex::RawReentrantMutex<R, G>);
+        _3 = RawReentrantMutex::<R, G>::unlock(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:613:1: 613:97>::unlocked::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>));
+    let mut _0: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _5: &mut remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _6: &remutex::ReentrantMutex<R, G, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_6).0: remutex::RawReentrantMutex<R, G>);
+        _0 = RawReentrantMutex::<R, G>::lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:690:1: 691:37>::unlock_fair(_1: ReentrantMutexGuard<'_, R, G, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let _4: ();
+    let mut _5: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _5 = deref_copy (_1.0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_5).0: remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::unlock_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = core::mem::forget::<ReentrantMutexGuard<'_, R, G, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:690:1: 691:37>::unlocked_fair(_1: &mut ReentrantMutexGuard<'_, R, G, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &remutex::RawReentrantMutex<R, G>;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _8: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &remutex::ReentrantMutex<R, G, T>);
+        _4 = &((*_8).0: remutex::RawReentrantMutex<R, G>);
+        _3 = RawReentrantMutex::<R, G>::unlock_fair(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:690:1: 691:37>::unlocked_fair::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>));
+    let mut _0: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _5: &mut remutex::ReentrantMutexGuard<'_, R, G, T>;
+    let mut _6: &remutex::ReentrantMutex<R, G, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut remutex::ReentrantMutexGuard<'_, R, G, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_6).0: remutex::RawReentrantMutex<R, G>);
+        _0 = RawReentrantMutex::<R, G>::lock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:690:1: 691:37>::bump(_1: &mut ReentrantMutexGuard<'_, R, G, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_4).0: remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::bump(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:747:1: 748:41>::deref(_1: &ReentrantMutexGuard<'_, R, G, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let mut _4: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_4).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:757:1: 758:41>::drop(_1: &mut ReentrantMutexGuard<'_, R, G, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: &remutex::ReentrantMutex<R, G, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &remutex::ReentrantMutex<R, G, T>);
+        _3 = &((*_4).0: remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::unlock(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:769:1: 770:41>::fmt(_1: &ReentrantMutexGuard<'_, R, G, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <ReentrantMutexGuard<'_, R, G, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:777:1: 778:41>::fmt(_1: &ReentrantMutexGuard<'_, R, G, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <ReentrantMutexGuard<'_, R, G, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:912:1: 913:43>::map(_1: MappedReentrantMutexGuard<'_, R, G, T>, _2: F) -> MappedReentrantMutexGuard<'_, R, G, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: remutex::MappedReentrantMutexGuard<'_, R, G, U>;
+    let _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _5: (&T,);
+    let _6: &T;
+    let _7: ();
+    let mut _8: *const U;
+    let mut _9: *const T;
+    scope 1 {
+        debug raw => _3;
+        let _4: &U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &remutex::RawReentrantMutex<R, G>);
+        _9 = deref_copy (_1.1: *const T);
+        _6 = &(*_9);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = core::mem::forget::<MappedReentrantMutexGuard<'_, R, G, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &raw const (*_4);
+        _0 = MappedReentrantMutexGuard::<'_, R, G, U> { raw: _3, data: move _8, marker: const ZeroSized: PhantomData<&U> };
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:912:1: 913:43>::try_map(_1: MappedReentrantMutexGuard<'_, R, G, T>, _2: F) -> Result<MappedReentrantMutexGuard<'_, R, G, U>, MappedReentrantMutexGuard<'_, R, G, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<remutex::MappedReentrantMutexGuard<'_, R, G, U>, remutex::MappedReentrantMutexGuard<'_, R, G, T>>;
+    let _3: &remutex::RawReentrantMutex<R, G>;
+    let mut _4: core::option::Option<&U>;
+    let mut _5: (&T,);
+    let _6: &T;
+    let mut _7: isize;
+    let _9: ();
+    let mut _10: remutex::MappedReentrantMutexGuard<'_, R, G, U>;
+    let mut _11: *const U;
+    let mut _12: *const T;
+    scope 1 {
+        debug raw => _3;
+        let _8: &U;
+        scope 2 {
+            debug data => _8;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _8;
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &remutex::RawReentrantMutex<R, G>);
+        _12 = deref_copy (_1.1: *const T);
+        _6 = &(*_12);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = discriminant(_4);
+        switchInt(move _7) -> [0: bb2, 1: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _0 = Result::<MappedReentrantMutexGuard<'_, R, G, U>, MappedReentrantMutexGuard<'_, R, G, T>>::Err(move _1);
+        goto -> bb6;
+    }
+
+    bb3: {
+        unreachable;
+    }
+
+    bb4: {
+        _8 = ((_4 as Some).0: &U);
+        _9 = core::mem::forget::<MappedReentrantMutexGuard<'_, R, G, T>>(move _1) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _11 = &raw const (*_8);
+        _10 = MappedReentrantMutexGuard::<'_, R, G, U> { raw: _3, data: move _11, marker: const ZeroSized: PhantomData<&U> };
+        _0 = Result::<MappedReentrantMutexGuard<'_, R, G, U>, MappedReentrantMutexGuard<'_, R, G, T>>::Ok(move _10);
+        goto -> bb6;
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:969:1: 970:43>::unlock_fair(_1: MappedReentrantMutexGuard<'_, R, G, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+    let mut _4: &remutex::RawReentrantMutex<R, G>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy (_1.0: &remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::unlock_fair(_4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = core::mem::forget::<MappedReentrantMutexGuard<'_, R, G, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:994:1: 995:47>::deref(_1: &MappedReentrantMutexGuard<'_, R, G, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let mut _2: *const T;
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = deref_copy ((*_1).1: *const T);
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:1004:1: 1005:47>::drop(_1: &mut MappedReentrantMutexGuard<'_, R, G, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &remutex::RawReentrantMutex<R, G>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = deref_copy ((*_1).0: &remutex::RawReentrantMutex<R, G>);
+        _2 = RawReentrantMutex::<R, G>::unlock(_3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:1016:1: 1017:47>::fmt(_1: &MappedReentrantMutexGuard<'_, R, G, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedReentrantMutexGuard<'_, R, G, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/remutex.rs:1024:1: 1025:47>::fmt(_1: &MappedReentrantMutexGuard<'_, R, G, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedReentrantMutexGuard<'_, R, G, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn RawRwLock::is_locked(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let _2: bool;
+    let _3: ();
+    scope 1 {
+        debug acquired_lock => _2;
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _2 = <Self as RawRwLock>::try_lock_exclusive(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(_2) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _3 = <Self as RawRwLock>::unlock_exclusive(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Not(_2);
+        return;
+    }
+}
+
+fn RawRwLock::is_locked_exclusive(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let _2: bool;
+    let _3: ();
+    scope 1 {
+        debug acquired_lock => _2;
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _2 = <Self as RawRwLock>::try_lock_shared(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(_2) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _3 = <Self as RawRwLock>::unlock_shared(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Not(_2);
+        return;
+    }
+}
+
+fn RawRwLockFair::bump_shared(_1: &Self) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+
+    bb0: {
+        _2 = <Self as RawRwLockFair>::unlock_shared_fair(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Self as RawRwLock>::lock_shared(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn RawRwLockFair::bump_exclusive(_1: &Self) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+
+    bb0: {
+        _2 = <Self as RawRwLockFair>::unlock_exclusive_fair(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Self as RawRwLock>::lock_exclusive(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn RawRwLockUpgradeFair::bump_upgradable(_1: &Self) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+
+    bb0: {
+        _2 = <Self as RawRwLockUpgradeFair>::unlock_upgradable_fair(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Self as RawRwLockUpgrade>::lock_upgradable(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:367:1: 367:35>::new(_1: T) -> RwLock<R, T> {
+    debug val => _1;
+    let mut _0: rwlock::RwLock<R, T>;
+    let mut _2: core::cell::UnsafeCell<T>;
+    let mut _3: R;
+
+    bb0: {
+        _2 = UnsafeCell::<T>::new(move _1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = const _;
+        _0 = RwLock::<R, T> { raw: move _3, data: move _2 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:367:1: 367:35>::new(_1: T) -> RwLock<R, T> {
+    debug val => _1;
+    let mut _0: rwlock::RwLock<R, T>;
+    let mut _2: core::cell::UnsafeCell<T>;
+    let mut _3: T;
+    let mut _4: R;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = move _1;
+        ConstEvalCounter;
+        _2 = UnsafeCell::<T>::new(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_3);
+        StorageLive(_4);
+        _4 = const _;
+        _0 = RwLock::<R, T> { raw: move _4, data: move _2 };
+        StorageDead(_4);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:367:1: 367:35>::into_inner(_1: RwLock<R, T>) -> T {
+    debug self => _1;
+    let mut _0: T;
+    let mut _2: core::cell::UnsafeCell<T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = move (_1.1: core::cell::UnsafeCell<T>);
+        _0 = UnsafeCell::<T>::into_inner(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        drop((_1.0: R)) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:396:1: 396:24>::const_new(_1: R, _2: T) -> RwLock<R, T> {
+    debug raw_rwlock => _1;
+    debug val => _2;
+    let mut _0: rwlock::RwLock<R, T>;
+    let mut _3: core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _3 = UnsafeCell::<T>::new(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = RwLock::<R, T> { raw: move _1, data: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:396:1: 396:24>::const_new(_1: R, _2: T) -> RwLock<R, T> {
+    debug raw_rwlock => _1;
+    debug val => _2;
+    let mut _0: rwlock::RwLock<R, T>;
+    let mut _3: core::cell::UnsafeCell<T>;
+    let mut _4: T;
+    let mut _5: R;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = move _2;
+        ConstEvalCounter;
+        _3 = UnsafeCell::<T>::new(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_4);
+        StorageLive(_5);
+        _5 = move _1;
+        _0 = RwLock::<R, T> { raw: move _5, data: move _3 };
+        StorageDead(_5);
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::read_guard(_1: &RwLock<R, T>) -> RwLockReadGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: rwlock::RwLockReadGuard<'_, R, T>;
+
+    bb0: {
+        _0 = RwLockReadGuard::<'_, R, T> { rwlock: _1, marker: const ZeroSized: PhantomData<(&T, <R as RawRwLock>::GuardMarker)> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::write_guard(_1: &RwLock<R, T>) -> RwLockWriteGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: rwlock::RwLockWriteGuard<'_, R, T>;
+
+    bb0: {
+        _0 = RwLockWriteGuard::<'_, R, T> { rwlock: _1, marker: const ZeroSized: PhantomData<(&mut T, <R as RawRwLock>::GuardMarker)> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::read(_1: &RwLock<R, T>) -> RwLockReadGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: rwlock::RwLockReadGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLock>::lock_shared(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = RwLock::<R, T>::read_guard(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::try_read(_1: &RwLock<R, T>) -> Option<RwLockReadGuard<'_, R, T>> {
+    debug self => _1;
+    let mut _0: core::option::Option<rwlock::RwLockReadGuard<'_, R, T>>;
+    let mut _2: bool;
+    let mut _3: &R;
+    let mut _4: rwlock::RwLockReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLock>::try_lock_shared(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _4 = RwLock::<R, T>::read_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::Some(move _4);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::write(_1: &RwLock<R, T>) -> RwLockWriteGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: rwlock::RwLockWriteGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLock>::lock_exclusive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = RwLock::<R, T>::write_guard(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::try_write(_1: &RwLock<R, T>) -> Option<RwLockWriteGuard<'_, R, T>> {
+    debug self => _1;
+    let mut _0: core::option::Option<rwlock::RwLockWriteGuard<'_, R, T>>;
+    let mut _2: bool;
+    let mut _3: &R;
+    let mut _4: rwlock::RwLockWriteGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLock>::try_lock_exclusive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _4 = RwLock::<R, T>::write_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockWriteGuard<'_, R, T>>::Some(move _4);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockWriteGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::get_mut(_1: &mut RwLock<R, T>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &mut (*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::is_locked(_1: &RwLock<R, T>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &R;
+
+    bb0: {
+        _2 = &((*_1).0: R);
+        _0 = <R as RawRwLock>::is_locked(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::is_locked_exclusive(_1: &RwLock<R, T>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &R;
+
+    bb0: {
+        _2 = &((*_1).0: R);
+        _0 = <R as RawRwLock>::is_locked_exclusive(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::force_unlock_read(_1: &RwLock<R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLock>::unlock_shared(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::force_unlock_write(_1: &RwLock<R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLock>::unlock_exclusive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::raw(_1: &RwLock<R, T>) -> &R {
+    debug self => _1;
+    let mut _0: &R;
+
+    bb0: {
+        _0 = &((*_1).0: R);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:411:1: 411:43>::data_ptr(_1: &RwLock<R, T>) -> *mut T {
+    debug self => _1;
+    let mut _0: *mut T;
+    let mut _2: &core::cell::UnsafeCell<T>;
+
+    bb0: {
+        _2 = &((*_1).1: core::cell::UnsafeCell<T>);
+        _0 = UnsafeCell::<T>::get(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:665:1: 665:47>::force_unlock_read_fair(_1: &RwLock<R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLockFair>::unlock_shared_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:665:1: 665:47>::force_unlock_write_fair(_1: &RwLock<R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLockFair>::unlock_exclusive_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:699:1: 699:48>::try_read_for(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Duration) -> Option<RwLockReadGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockTimed>::try_lock_shared_for(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::read_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:699:1: 699:48>::try_read_until(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Instant) -> Option<RwLockReadGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockTimed>::try_lock_shared_until(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::read_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:699:1: 699:48>::try_write_for(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Duration) -> Option<RwLockWriteGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockWriteGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockWriteGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockTimed>::try_lock_exclusive_for(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::write_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockWriteGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockWriteGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:699:1: 699:48>::try_write_until(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Instant) -> Option<RwLockWriteGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockWriteGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockWriteGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockTimed>::try_lock_exclusive_until(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::write_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockWriteGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockWriteGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:837:1: 837:52>::read_recursive(_1: &RwLock<R, T>) -> RwLockReadGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: rwlock::RwLockReadGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLockRecursive>::lock_shared_recursive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = RwLock::<R, T>::read_guard(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:837:1: 837:52>::try_read_recursive(_1: &RwLock<R, T>) -> Option<RwLockReadGuard<'_, R, T>> {
+    debug self => _1;
+    let mut _0: core::option::Option<rwlock::RwLockReadGuard<'_, R, T>>;
+    let mut _2: bool;
+    let mut _3: &R;
+    let mut _4: rwlock::RwLockReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLockRecursive>::try_lock_shared_recursive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _4 = RwLock::<R, T>::read_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::Some(move _4);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:908:1: 908:57>::try_read_recursive_for(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Duration) -> Option<RwLockReadGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockRecursiveTimed>::try_lock_shared_recursive_for(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::read_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:908:1: 908:57>::try_read_recursive_until(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Instant) -> Option<RwLockReadGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockRecursiveTimed>::try_lock_shared_recursive_until(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::read_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:988:1: 988:50>::upgradable_guard(_1: &RwLock<R, T>) -> RwLockUpgradableReadGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+
+    bb0: {
+        _0 = RwLockUpgradableReadGuard::<'_, R, T> { rwlock: _1, marker: const ZeroSized: PhantomData<(&T, <R as RawRwLock>::GuardMarker)> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:988:1: 988:50>::upgradable_read(_1: &RwLock<R, T>) -> RwLockUpgradableReadGuard<'_, R, T> {
+    debug self => _1;
+    let mut _0: rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLockUpgrade>::lock_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = RwLock::<R, T>::upgradable_guard(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:988:1: 988:50>::try_upgradable_read(_1: &RwLock<R, T>) -> Option<RwLockUpgradableReadGuard<'_, R, T>> {
+    debug self => _1;
+    let mut _0: core::option::Option<rwlock::RwLockUpgradableReadGuard<'_, R, T>>;
+    let mut _2: bool;
+    let mut _3: &R;
+    let mut _4: rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &((*_1).0: R);
+        _2 = <R as RawRwLockUpgrade>::try_lock_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _4 = RwLock::<R, T>::upgradable_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockUpgradableReadGuard<'_, R, T>>::Some(move _4);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockUpgradableReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1073:1: 1073:55>::try_upgradable_read_for(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Duration) -> Option<RwLockUpgradableReadGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockUpgradableReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockUpgradeTimed>::try_lock_upgradable_for(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::upgradable_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockUpgradableReadGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockUpgradableReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1073:1: 1073:55>::try_upgradable_read_until(_1: &RwLock<R, T>, _2: <R as RawRwLockTimed>::Instant) -> Option<RwLockUpgradableReadGuard<'_, R, T>> {
+    debug self => _1;
+    debug timeout => _2;
+    let mut _0: core::option::Option<rwlock::RwLockUpgradableReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let mut _5: rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).0: R);
+        _3 = <R as RawRwLockUpgradeTimed>::try_lock_upgradable_until(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = RwLock::<R, T>::upgradable_guard(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Option::<RwLockUpgradableReadGuard<'_, R, T>>::Some(move _5);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<RwLockUpgradableReadGuard<'_, R, T>>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1149:1: 1149:65>::default() -> RwLock<R, T> {
+    let mut _0: rwlock::RwLock<R, T>;
+    let mut _1: T;
+
+    bb0: {
+        _1 = <T as Default>::default() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = RwLock::<R, T>::new(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1156:1: 1156:47>::from(_1: T) -> RwLock<R, T> {
+    debug t => _1;
+    let mut _0: rwlock::RwLock<R, T>;
+
+    bb0: {
+        _0 = RwLock::<R, T>::new(move _1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1163:1: 1163:71>::fmt(_1: &RwLock<R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: core::option::Option<rwlock::RwLockReadGuard<'_, R, T>>;
+    let mut _4: isize;
+    let _5: rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _6: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _7: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _8: core::fmt::DebugStruct<'_, '_>;
+    let _9: &str;
+    let _10: &str;
+    let mut _11: &dyn core::fmt::Debug;
+    let _12: &&T;
+    let _13: &T;
+    let _14: &T;
+    let mut _15: &rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _16: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _17: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _18: core::fmt::DebugStruct<'_, '_>;
+    let _19: &str;
+    let _20: &str;
+    let mut _21: &dyn core::fmt::Debug;
+    let mut _22: &<rwlock::RwLock<R, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+    scope 1 {
+        debug guard => _5;
+    }
+
+    bb0: {
+        _3 = RwLock::<R, T>::try_read(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = discriminant(_3);
+        switchInt(move _4) -> [0: bb2, 1: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _19 = const "RwLock";
+        _18 = Formatter::<'_>::debug_struct(_2, _19) -> [return: bb9, unwind unreachable];
+    }
+
+    bb3: {
+        unreachable;
+    }
+
+    bb4: {
+        _5 = move ((_3 as Some).0: rwlock::RwLockReadGuard<'_, R, T>);
+        _9 = const "RwLock";
+        _8 = Formatter::<'_>::debug_struct(_2, _9) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _7 = &mut _8;
+        _10 = const "data";
+        _15 = &_5;
+        _14 = <RwLockReadGuard<'_, R, T> as Deref>::deref(move _15) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = _14;
+        _12 = &_13;
+        _11 = _12 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _6 = DebugStruct::<'_, '_>::field(move _7, _10, move _11) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _0 = DebugStruct::<'_, '_>::finish(_6) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        drop(_5) -> [return: bb11, unwind unreachable];
+    }
+
+    bb9: {
+        _17 = &mut _18;
+        _20 = const "data";
+        _22 = const _;
+        _21 = _22 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _16 = DebugStruct::<'_, '_>::field(move _17, _20, move _21) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _0 = DebugStruct::<'_, '_>::finish(_16) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        return;
+    }
+}
+
+promoted[0] in rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1163:1: 1163:71>::fmt: &<RwLock<R, T> as Debug>::fmt::LockedPlaceholder = {
+    let mut _0: &<rwlock::RwLock<R, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+    let mut _1: <rwlock::RwLock<R, T> as core::fmt::Debug>::fmt::LockedPlaceholder;
+
+    bb0: {
+        _1 = <RwLock<R, T> as Debug>::fmt::LockedPlaceholder;
+        _0 = &_1;
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1163:1: 1163:71>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1169:17: 1169:54>::fmt(_1: &<RwLock<R, T> as Debug>::fmt::LockedPlaceholder, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &str;
+
+    bb0: {
+        _3 = const "<locked>";
+        _0 = Formatter::<'_>::write_str(_2, _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1191:1: 1191:70>::rwlock(_1: &RwLockReadGuard<'_, R, T>) -> &RwLock<R, T> {
+    debug s => _1;
+    let mut _0: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _0 = ((*_1).0: &rwlock::RwLock<R, T>);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1191:1: 1191:70>::map(_1: RwLockReadGuard<'_, R, T>, _2: F) -> MappedRwLockReadGuard<'_, R, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: rwlock::MappedRwLockReadGuard<'_, R, U>;
+    let _3: &R;
+    let mut _5: (&T,);
+    let _6: &T;
+    let _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let _9: ();
+    let mut _10: *const U;
+    let mut _11: &rwlock::RwLock<R, T>;
+    let mut _12: &rwlock::RwLock<R, T>;
+    scope 1 {
+        debug raw => _3;
+        let _4: &U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _11 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_11).0: R);
+        _12 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _8 = &((*_12).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &(*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = core::mem::forget::<RwLockReadGuard<'_, R, T>>(move _1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _10 = &raw const (*_4);
+        _0 = MappedRwLockReadGuard::<'_, R, U> { raw: _3, data: move _10, marker: const ZeroSized: PhantomData<&U> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1191:1: 1191:70>::try_map(_1: RwLockReadGuard<'_, R, T>, _2: F) -> Result<MappedRwLockReadGuard<'_, R, U>, RwLockReadGuard<'_, R, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<rwlock::MappedRwLockReadGuard<'_, R, U>, rwlock::RwLockReadGuard<'_, R, T>>;
+    let _3: &R;
+    let mut _4: core::option::Option<&U>;
+    let mut _5: (&T,);
+    let _6: &T;
+    let _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let mut _9: isize;
+    let _11: ();
+    let mut _12: rwlock::MappedRwLockReadGuard<'_, R, U>;
+    let mut _13: *const U;
+    let mut _14: &rwlock::RwLock<R, T>;
+    let mut _15: &rwlock::RwLock<R, T>;
+    scope 1 {
+        debug raw => _3;
+        let _10: &U;
+        scope 2 {
+            debug data => _10;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _10;
+        }
+    }
+
+    bb0: {
+        _14 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_14).0: R);
+        _15 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _8 = &((*_15).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &(*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = discriminant(_4);
+        switchInt(move _9) -> [0: bb3, 1: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _0 = Result::<MappedRwLockReadGuard<'_, R, U>, RwLockReadGuard<'_, R, T>>::Err(move _1);
+        goto -> bb7;
+    }
+
+    bb4: {
+        unreachable;
+    }
+
+    bb5: {
+        _10 = ((_4 as Some).0: &U);
+        _11 = core::mem::forget::<RwLockReadGuard<'_, R, T>>(move _1) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = &raw const (*_10);
+        _12 = MappedRwLockReadGuard::<'_, R, U> { raw: _3, data: move _13, marker: const ZeroSized: PhantomData<&U> };
+        _0 = Result::<MappedRwLockReadGuard<'_, R, U>, RwLockReadGuard<'_, R, T>>::Ok(move _12);
+        goto -> bb7;
+    }
+
+    bb7: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1191:1: 1191:70>::unlocked(_1: &mut RwLockReadGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLock>::unlock_shared(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1191:1: 1191:70>::unlocked::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut rwlock::RwLockReadGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _5: &mut rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _6: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut rwlock::RwLockReadGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawRwLock>::lock_shared(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1267:1: 1267:74>::unlock_fair(_1: RwLockReadGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let _4: ();
+    let mut _5: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _5 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_5).0: R);
+        _2 = <R as RawRwLockFair>::unlock_shared_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = core::mem::forget::<RwLockReadGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1267:1: 1267:74>::unlocked_fair(_1: &mut RwLockReadGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLockFair>::unlock_shared_fair(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1267:1: 1267:74>::unlocked_fair::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut rwlock::RwLockReadGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _5: &mut rwlock::RwLockReadGuard<'_, R, T>;
+    let mut _6: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut rwlock::RwLockReadGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawRwLock>::lock_shared(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1267:1: 1267:74>::bump(_1: &mut RwLockReadGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawRwLockFair>::bump_shared(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1322:1: 1322:80>::deref(_1: &RwLockReadGuard<'_, R, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1330:1: 1330:79>::drop(_1: &mut RwLockReadGuard<'_, R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawRwLock>::unlock_shared(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1340:1: 1340:98>::fmt(_1: &RwLockReadGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <RwLockReadGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1346:1: 1347:34>::fmt(_1: &RwLockReadGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <RwLockReadGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1479:1: 1479:71>::rwlock(_1: &RwLockWriteGuard<'_, R, T>) -> &RwLock<R, T> {
+    debug s => _1;
+    let mut _0: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _0 = ((*_1).0: &rwlock::RwLock<R, T>);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1479:1: 1479:71>::map(_1: RwLockWriteGuard<'_, R, T>, _2: F) -> MappedRwLockWriteGuard<'_, R, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: rwlock::MappedRwLockWriteGuard<'_, R, U>;
+    let _3: &R;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let mut _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let _9: ();
+    let mut _10: *mut U;
+    let mut _11: &rwlock::RwLock<R, T>;
+    let mut _12: &rwlock::RwLock<R, T>;
+    scope 1 {
+        debug raw => _3;
+        let _4: &mut U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _11 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_11).0: R);
+        _12 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _8 = &((*_12).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &mut (*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = core::mem::forget::<RwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _10 = &raw mut (*_4);
+        _0 = MappedRwLockWriteGuard::<'_, R, U> { raw: _3, data: move _10, marker: const ZeroSized: PhantomData<&mut U> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1479:1: 1479:71>::try_map(_1: RwLockWriteGuard<'_, R, T>, _2: F) -> Result<MappedRwLockWriteGuard<'_, R, U>, RwLockWriteGuard<'_, R, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<rwlock::MappedRwLockWriteGuard<'_, R, U>, rwlock::RwLockWriteGuard<'_, R, T>>;
+    let _3: &R;
+    let mut _4: core::option::Option<&mut U>;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let mut _7: *mut T;
+    let mut _8: &core::cell::UnsafeCell<T>;
+    let mut _9: isize;
+    let _11: ();
+    let mut _12: rwlock::MappedRwLockWriteGuard<'_, R, U>;
+    let mut _13: *mut U;
+    let mut _14: &rwlock::RwLock<R, T>;
+    let mut _15: &rwlock::RwLock<R, T>;
+    scope 1 {
+        debug raw => _3;
+        let _10: &mut U;
+        scope 2 {
+            debug data => _10;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _10;
+        }
+    }
+
+    bb0: {
+        _14 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_14).0: R);
+        _15 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _8 = &((*_15).1: core::cell::UnsafeCell<T>);
+        _7 = UnsafeCell::<T>::get(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &mut (*_7);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = discriminant(_4);
+        switchInt(move _9) -> [0: bb3, 1: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _0 = Result::<MappedRwLockWriteGuard<'_, R, U>, RwLockWriteGuard<'_, R, T>>::Err(move _1);
+        goto -> bb7;
+    }
+
+    bb4: {
+        unreachable;
+    }
+
+    bb5: {
+        _10 = move ((_4 as Some).0: &mut U);
+        _11 = core::mem::forget::<RwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = &raw mut (*_10);
+        _12 = MappedRwLockWriteGuard::<'_, R, U> { raw: _3, data: move _13, marker: const ZeroSized: PhantomData<&mut U> };
+        _0 = Result::<MappedRwLockWriteGuard<'_, R, U>, RwLockWriteGuard<'_, R, T>>::Ok(move _12);
+        goto -> bb7;
+    }
+
+    bb7: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1479:1: 1479:71>::unlocked(_1: &mut RwLockWriteGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLock>::unlock_exclusive(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1479:1: 1479:71>::unlocked::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut rwlock::RwLockWriteGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _5: &mut rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _6: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut rwlock::RwLockWriteGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawRwLock>::lock_exclusive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1553:1: 1553:80>::downgrade(_1: RwLockWriteGuard<'_, R, T>) -> RwLockReadGuard<'_, R, T> {
+    debug s => _1;
+    let mut _0: rwlock::RwLockReadGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    let _4: &rwlock::RwLock<R, T>;
+    let _5: ();
+    let mut _6: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug rwlock => _4;
+    }
+
+    bb0: {
+        _6 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _2 = <R as RawRwLockDowngrade>::downgrade(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_1.0: &rwlock::RwLock<R, T>);
+        _5 = core::mem::forget::<RwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = RwLockReadGuard::<'_, R, T> { rwlock: _4, marker: const ZeroSized: PhantomData<(&T, <R as RawRwLock>::GuardMarker)> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1574:1: 1574:87>::downgrade_to_upgradable(_1: RwLockWriteGuard<'_, R, T>) -> RwLockUpgradableReadGuard<'_, R, T> {
+    debug s => _1;
+    let mut _0: rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    let _4: &rwlock::RwLock<R, T>;
+    let _5: ();
+    let mut _6: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug rwlock => _4;
+    }
+
+    bb0: {
+        _6 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _2 = <R as RawRwLockUpgradeDowngrade>::downgrade_to_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_1.0: &rwlock::RwLock<R, T>);
+        _5 = core::mem::forget::<RwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = RwLockUpgradableReadGuard::<'_, R, T> { rwlock: _4, marker: const ZeroSized: PhantomData<(&T, <R as RawRwLock>::GuardMarker)> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1595:1: 1595:75>::unlock_fair(_1: RwLockWriteGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let _4: ();
+    let mut _5: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _5 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_5).0: R);
+        _2 = <R as RawRwLockFair>::unlock_exclusive_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = core::mem::forget::<RwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1595:1: 1595:75>::unlocked_fair(_1: &mut RwLockWriteGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLockFair>::unlock_exclusive_fair(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1595:1: 1595:75>::unlocked_fair::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut rwlock::RwLockWriteGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _5: &mut rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _6: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut rwlock::RwLockWriteGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawRwLock>::lock_exclusive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1595:1: 1595:75>::bump(_1: &mut RwLockWriteGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawRwLockFair>::bump_exclusive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1650:1: 1650:81>::deref(_1: &RwLockWriteGuard<'_, R, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1658:1: 1658:84>::deref_mut(_1: &mut RwLockWriteGuard<'_, R, T>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &mut (*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1665:1: 1665:80>::drop(_1: &mut RwLockWriteGuard<'_, R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawRwLock>::unlock_exclusive(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1675:1: 1675:99>::fmt(_1: &RwLockWriteGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <RwLockWriteGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1681:1: 1682:35>::fmt(_1: &RwLockWriteGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <RwLockWriteGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1872:1: 1872:87>::rwlock(_1: &RwLockUpgradableReadGuard<'_, R, T>) -> &RwLock<R, T> {
+    debug s => _1;
+    let mut _0: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _0 = ((*_1).0: &rwlock::RwLock<R, T>);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1872:1: 1872:87>::unlocked(_1: &mut RwLockUpgradableReadGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLockUpgrade>::unlock_upgradable(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1872:1: 1872:87>::unlocked::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let mut _5: &mut rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let mut _6: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawRwLockUpgrade>::lock_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1872:1: 1872:87>::upgrade(_1: RwLockUpgradableReadGuard<'_, R, T>) -> RwLockWriteGuard<'_, R, T> {
+    debug s => _1;
+    let mut _0: rwlock::RwLockWriteGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    let _4: &rwlock::RwLock<R, T>;
+    let _5: ();
+    let mut _6: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug rwlock => _4;
+    }
+
+    bb0: {
+        _6 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _2 = <R as RawRwLockUpgrade>::upgrade(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_1.0: &rwlock::RwLock<R, T>);
+        _5 = core::mem::forget::<RwLockUpgradableReadGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = RwLockWriteGuard::<'_, R, T> { rwlock: _4, marker: const ZeroSized: PhantomData<(&mut T, <R as RawRwLock>::GuardMarker)> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1872:1: 1872:87>::try_upgrade(_1: RwLockUpgradableReadGuard<'_, R, T>) -> Result<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>> {
+    debug s => _1;
+    let mut _0: core::result::Result<rwlock::RwLockWriteGuard<'_, R, T>, rwlock::RwLockUpgradableReadGuard<'_, R, T>>;
+    let mut _2: bool;
+    let mut _3: &R;
+    let _4: &rwlock::RwLock<R, T>;
+    let _5: ();
+    let mut _6: rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _7: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug rwlock => _4;
+    }
+
+    bb0: {
+        _7 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_7).0: R);
+        _2 = <R as RawRwLockUpgrade>::try_upgrade(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _4 = (_1.0: &rwlock::RwLock<R, T>);
+        _5 = core::mem::forget::<RwLockUpgradableReadGuard<'_, R, T>>(move _1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _6 = RwLockWriteGuard::<'_, R, T> { rwlock: _4, marker: const ZeroSized: PhantomData<(&mut T, <R as RawRwLock>::GuardMarker)> };
+        _0 = Result::<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>>::Ok(move _6);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Result::<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>>::Err(move _1);
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1928:1: 1928:91>::unlock_fair(_1: RwLockUpgradableReadGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let _4: ();
+    let mut _5: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _5 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_5).0: R);
+        _2 = <R as RawRwLockUpgradeFair>::unlock_upgradable_fair(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = core::mem::forget::<RwLockUpgradableReadGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1928:1: 1928:91>::unlocked_fair(_1: &mut RwLockUpgradableReadGuard<'_, R, T>, _2: F) -> U {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: U;
+    let _3: ();
+    let mut _4: &R;
+    let _5: scopeguard::ScopeGuard<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>;
+    let mut _6: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44};
+    let mut _7: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug _guard => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLockUpgradeFair>::unlock_upgradable_fair(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_1;
+        _6 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44} { s: move _7 };
+        _5 = guard::<(), {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}>(const (), move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <F as FnOnce<()>>::call_once(move _2, const ()) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1928:1: 1928:91>::unlocked_fair::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:253:40: 253:44}, _2: ()) -> () {
+    debug s => (*(_1.0: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>));
+    let mut _0: ();
+    let mut _3: &R;
+    let mut _4: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let mut _5: &mut rwlock::RwLockUpgradableReadGuard<'_, R, T>;
+    let mut _6: &rwlock::RwLock<R, T>;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&mut rwlock::RwLockUpgradableReadGuard<'_, R, T>);
+        _5 = deref_copy (*_4);
+        _6 = deref_copy ((*_5).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _0 = <R as RawRwLockUpgrade>::lock_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1928:1: 1928:91>::bump(_1: &mut RwLockUpgradableReadGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawRwLockUpgradeFair>::bump_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:1983:1: 1983:96>::downgrade(_1: RwLockUpgradableReadGuard<'_, R, T>) -> RwLockReadGuard<'_, R, T> {
+    debug s => _1;
+    let mut _0: rwlock::RwLockReadGuard<'_, R, T>;
+    let _2: ();
+    let mut _3: &R;
+    let _4: &rwlock::RwLock<R, T>;
+    let _5: ();
+    let mut _6: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug rwlock => _4;
+    }
+
+    bb0: {
+        _6 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _3 = &((*_6).0: R);
+        _2 = <R as RawRwLockUpgradeDowngrade>::downgrade_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_1.0: &rwlock::RwLock<R, T>);
+        _5 = core::mem::forget::<RwLockUpgradableReadGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = RwLockReadGuard::<'_, R, T> { rwlock: _4, marker: const ZeroSized: PhantomData<(&T, <R as RawRwLock>::GuardMarker)> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2005:1: 2005:92>::try_upgrade_for(_1: RwLockUpgradableReadGuard<'_, R, T>, _2: <R as RawRwLockTimed>::Duration) -> Result<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>> {
+    debug s => _1;
+    debug timeout => _2;
+    let mut _0: core::result::Result<rwlock::RwLockWriteGuard<'_, R, T>, rwlock::RwLockUpgradableReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let _5: &rwlock::RwLock<R, T>;
+    let _6: ();
+    let mut _7: rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug rwlock => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLockUpgradeTimed>::try_upgrade_for(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = (_1.0: &rwlock::RwLock<R, T>);
+        _6 = core::mem::forget::<RwLockUpgradableReadGuard<'_, R, T>>(move _1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _7 = RwLockWriteGuard::<'_, R, T> { rwlock: _5, marker: const ZeroSized: PhantomData<(&mut T, <R as RawRwLock>::GuardMarker)> };
+        _0 = Result::<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>>::Ok(move _7);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Result::<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>>::Err(move _1);
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2005:1: 2005:92>::try_upgrade_until(_1: RwLockUpgradableReadGuard<'_, R, T>, _2: <R as RawRwLockTimed>::Instant) -> Result<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>> {
+    debug s => _1;
+    debug timeout => _2;
+    let mut _0: core::result::Result<rwlock::RwLockWriteGuard<'_, R, T>, rwlock::RwLockUpgradableReadGuard<'_, R, T>>;
+    let mut _3: bool;
+    let mut _4: &R;
+    let _5: &rwlock::RwLock<R, T>;
+    let _6: ();
+    let mut _7: rwlock::RwLockWriteGuard<'_, R, T>;
+    let mut _8: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+    scope 2 {
+        debug rwlock => _5;
+    }
+
+    bb0: {
+        _8 = deref_copy (_1.0: &rwlock::RwLock<R, T>);
+        _4 = &((*_8).0: R);
+        _3 = <R as RawRwLockUpgradeTimed>::try_upgrade_until(move _4, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb4, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = (_1.0: &rwlock::RwLock<R, T>);
+        _6 = core::mem::forget::<RwLockUpgradableReadGuard<'_, R, T>>(move _1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _7 = RwLockWriteGuard::<'_, R, T> { rwlock: _5, marker: const ZeroSized: PhantomData<(&mut T, <R as RawRwLock>::GuardMarker)> };
+        _0 = Result::<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>>::Ok(move _7);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Result::<RwLockWriteGuard<'_, R, T>, RwLockUpgradableReadGuard<'_, R, T>>::Err(move _1);
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2052:1: 2052:97>::deref(_1: &RwLockUpgradableReadGuard<'_, R, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let _2: *mut T;
+    let mut _3: &core::cell::UnsafeCell<T>;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).1: core::cell::UnsafeCell<T>);
+        _2 = UnsafeCell::<T>::get(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2060:1: 2060:96>::drop(_1: &mut RwLockUpgradableReadGuard<'_, R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    let mut _4: &rwlock::RwLock<R, T>;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy ((*_1).0: &rwlock::RwLock<R, T>);
+        _3 = &((*_4).0: R);
+        _2 = <R as RawRwLockUpgrade>::unlock_upgradable(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2070:1: 2071:44>::fmt(_1: &RwLockUpgradableReadGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <RwLockUpgradableReadGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2078:1: 2079:44>::fmt(_1: &RwLockUpgradableReadGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <RwLockUpgradableReadGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2346:1: 2346:76>::map(_1: MappedRwLockReadGuard<'_, R, T>, _2: F) -> MappedRwLockReadGuard<'_, R, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: rwlock::MappedRwLockReadGuard<'_, R, U>;
+    let _3: &R;
+    let mut _5: (&T,);
+    let _6: &T;
+    let _7: ();
+    let mut _8: *const U;
+    let mut _9: *const T;
+    scope 1 {
+        debug raw => _3;
+        let _4: &U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &R);
+        _9 = deref_copy (_1.1: *const T);
+        _6 = &(*_9);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = core::mem::forget::<MappedRwLockReadGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &raw const (*_4);
+        _0 = MappedRwLockReadGuard::<'_, R, U> { raw: _3, data: move _8, marker: const ZeroSized: PhantomData<&U> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2346:1: 2346:76>::try_map(_1: MappedRwLockReadGuard<'_, R, T>, _2: F) -> Result<MappedRwLockReadGuard<'_, R, U>, MappedRwLockReadGuard<'_, R, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<rwlock::MappedRwLockReadGuard<'_, R, U>, rwlock::MappedRwLockReadGuard<'_, R, T>>;
+    let _3: &R;
+    let mut _4: core::option::Option<&U>;
+    let mut _5: (&T,);
+    let _6: &T;
+    let mut _7: isize;
+    let _9: ();
+    let mut _10: rwlock::MappedRwLockReadGuard<'_, R, U>;
+    let mut _11: *const U;
+    let mut _12: *const T;
+    scope 1 {
+        debug raw => _3;
+        let _8: &U;
+        scope 2 {
+            debug data => _8;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _8;
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &R);
+        _12 = deref_copy (_1.1: *const T);
+        _6 = &(*_12);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = discriminant(_4);
+        switchInt(move _7) -> [0: bb2, 1: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _0 = Result::<MappedRwLockReadGuard<'_, R, U>, MappedRwLockReadGuard<'_, R, T>>::Err(move _1);
+        goto -> bb6;
+    }
+
+    bb3: {
+        unreachable;
+    }
+
+    bb4: {
+        _8 = ((_4 as Some).0: &U);
+        _9 = core::mem::forget::<MappedRwLockReadGuard<'_, R, T>>(move _1) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _11 = &raw const (*_8);
+        _10 = MappedRwLockReadGuard::<'_, R, U> { raw: _3, data: move _11, marker: const ZeroSized: PhantomData<&U> };
+        _0 = Result::<MappedRwLockReadGuard<'_, R, U>, MappedRwLockReadGuard<'_, R, T>>::Ok(move _10);
+        goto -> bb6;
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2398:1: 2398:80>::unlock_fair(_1: MappedRwLockReadGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+    let mut _4: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy (_1.0: &R);
+        _2 = <R as RawRwLockFair>::unlock_shared_fair(_4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = core::mem::forget::<MappedRwLockReadGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2421:1: 2421:86>::deref(_1: &MappedRwLockReadGuard<'_, R, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let mut _2: *const T;
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = deref_copy ((*_1).1: *const T);
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2429:1: 2429:85>::drop(_1: &mut MappedRwLockReadGuard<'_, R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = deref_copy ((*_1).0: &R);
+        _2 = <R as RawRwLock>::unlock_shared(_3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2439:1: 2440:40>::fmt(_1: &MappedRwLockReadGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedRwLockReadGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2447:1: 2448:40>::fmt(_1: &MappedRwLockReadGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedRwLockReadGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2484:1: 2484:77>::map(_1: MappedRwLockWriteGuard<'_, R, T>, _2: F) -> MappedRwLockWriteGuard<'_, R, U> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: rwlock::MappedRwLockWriteGuard<'_, R, U>;
+    let _3: &R;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let _7: ();
+    let mut _8: *mut U;
+    let mut _9: *mut T;
+    scope 1 {
+        debug raw => _3;
+        let _4: &mut U;
+        scope 2 {
+            debug data => _4;
+        }
+        scope 3 {
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &R);
+        _9 = deref_copy (_1.1: *mut T);
+        _6 = &mut (*_9);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = core::mem::forget::<MappedRwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &raw mut (*_4);
+        _0 = MappedRwLockWriteGuard::<'_, R, U> { raw: _3, data: move _8, marker: const ZeroSized: PhantomData<&mut U> };
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2484:1: 2484:77>::try_map(_1: MappedRwLockWriteGuard<'_, R, T>, _2: F) -> Result<MappedRwLockWriteGuard<'_, R, U>, MappedRwLockWriteGuard<'_, R, T>> {
+    debug s => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<rwlock::MappedRwLockWriteGuard<'_, R, U>, rwlock::MappedRwLockWriteGuard<'_, R, T>>;
+    let _3: &R;
+    let mut _4: core::option::Option<&mut U>;
+    let mut _5: (&mut T,);
+    let mut _6: &mut T;
+    let mut _7: isize;
+    let _9: ();
+    let mut _10: rwlock::MappedRwLockWriteGuard<'_, R, U>;
+    let mut _11: *mut U;
+    let mut _12: *mut T;
+    scope 1 {
+        debug raw => _3;
+        let _8: &mut U;
+        scope 2 {
+            debug data => _8;
+        }
+        scope 3 {
+        }
+        scope 4 {
+            debug data => _8;
+        }
+    }
+
+    bb0: {
+        _3 = (_1.0: &R);
+        _12 = deref_copy (_1.1: *mut T);
+        _6 = &mut (*_12);
+        _5 = (_6,);
+        _4 = <F as FnOnce<(&mut T,)>>::call_once(move _2, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = discriminant(_4);
+        switchInt(move _7) -> [0: bb2, 1: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _0 = Result::<MappedRwLockWriteGuard<'_, R, U>, MappedRwLockWriteGuard<'_, R, T>>::Err(move _1);
+        goto -> bb6;
+    }
+
+    bb3: {
+        unreachable;
+    }
+
+    bb4: {
+        _8 = move ((_4 as Some).0: &mut U);
+        _9 = core::mem::forget::<MappedRwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _11 = &raw mut (*_8);
+        _10 = MappedRwLockWriteGuard::<'_, R, U> { raw: _3, data: move _11, marker: const ZeroSized: PhantomData<&mut U> };
+        _0 = Result::<MappedRwLockWriteGuard<'_, R, U>, MappedRwLockWriteGuard<'_, R, T>>::Ok(move _10);
+        goto -> bb6;
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2536:1: 2536:81>::unlock_fair(_1: MappedRwLockWriteGuard<'_, R, T>) -> () {
+    debug s => _1;
+    let mut _0: ();
+    let _2: ();
+    let _3: ();
+    let mut _4: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = deref_copy (_1.0: &R);
+        _2 = <R as RawRwLockFair>::unlock_exclusive_fair(_4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = core::mem::forget::<MappedRwLockWriteGuard<'_, R, T>>(move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2559:1: 2559:87>::deref(_1: &MappedRwLockWriteGuard<'_, R, T>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let mut _2: *mut T;
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = deref_copy ((*_1).1: *mut T);
+        _0 = &(*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2567:1: 2567:90>::deref_mut(_1: &mut MappedRwLockWriteGuard<'_, R, T>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: *mut T;
+    scope 1 {
+    }
+
+    bb0: {
+        _2 = deref_copy ((*_1).1: *mut T);
+        _0 = &mut (*_2);
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2574:1: 2574:86>::drop(_1: &mut MappedRwLockWriteGuard<'_, R, T>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &R;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = deref_copy ((*_1).0: &R);
+        _2 = <R as RawRwLock>::unlock_exclusive(_3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2584:1: 2585:41>::fmt(_1: &MappedRwLockWriteGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedRwLockWriteGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Debug>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn rwlock::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.9/src/rwlock.rs:2592:1: 2593:41>::fmt(_1: &MappedRwLockWriteGuard<'_, R, T>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &T;
+
+    bb0: {
+        _3 = <MappedRwLockWriteGuard<'_, R, T> as Deref>::deref(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <T as Display>::fmt(_3, _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn GuardSend(_1: ()) -> GuardSend {
+    let mut _0: GuardSend;
+
+    bb0: {
+        _0 = GuardSend(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn GuardSend(_1: ()) -> GuardSend {
+    let mut _0: GuardSend;
+
+    bb0: {
+        _0 = GuardSend(move _1);
+        return;
+    }
+}
+
+fn GuardNoSend(_1: *mut ()) -> GuardNoSend {
+    let mut _0: GuardNoSend;
+
+    bb0: {
+        _0 = GuardNoSend(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn GuardNoSend(_1: *mut ()) -> GuardNoSend {
+    let mut _0: GuardNoSend;
+
+    bb0: {
+        _0 = GuardNoSend(move _1);
+        return;
+    }
+}
