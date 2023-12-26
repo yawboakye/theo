@@ -21,7 +21,7 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_7b8d3271083f2bbf295edc299dc540f1 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_842c6cf716507d75296fae883605a9ce, [16 x i8] c"Z\00\00\00\00\00\00\008\01\00\00\17\00\00\00" }>, align 8
 @alloc_aa07815cbcb2365f7aca41cc8941a0c4 = private unnamed_addr constant <{ [19 x i8] }> <{ [19 x i8] c"not yet implemented" }>, align 1
 @alloc_a41ad82d86472becc804fd8f0bf28397 = private unnamed_addr constant <{ [23 x i8] }> <{ [23 x i8] c"paged_memory/src/lib.rs" }>, align 1
-@alloc_53d658f9c86c1e22b6beae7097b90797 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a41ad82d86472becc804fd8f0bf28397, [16 x i8] c"\17\00\00\00\00\00\00\00\17\00\00\00\0E\00\00\00" }>, align 8
+@alloc_359149161c34a88fd8a16962858d158a = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a41ad82d86472becc804fd8f0bf28397, [16 x i8] c"\17\00\00\00\00\00\00\00\1A\00\00\00\0E\00\00\00" }>, align 8
 
 ; <T as core::convert::Into<U>>::into
 ; Function Attrs: inlinehint noredzone nounwind
@@ -516,25 +516,30 @@ start:
   ret ptr %_8, !dbg !399
 }
 
-; paged_memory::debug
+; paged_memory::read_page_table
 ; Function Attrs: noredzone nounwind
-define void @_ZN12paged_memory5debug17hd34e3d56830bb73eE(i8 %0) unnamed_addr #1 !dbg !400 {
+define align 4096 ptr @_ZN12paged_memory15read_page_table17h825f2c6ee5152d02E(i8 %0, i64 %phys_mem_offset_addr) unnamed_addr #1 !dbg !400 {
 start:
+  %phys_mem_offset_addr.dbg.spill = alloca i64, align 8
   %level = alloca i8, align 1
   store i8 %0, ptr %level, align 1
-  call void @llvm.dbg.declare(metadata ptr %level, metadata !404, metadata !DIExpression()), !dbg !405
-  %1 = load i8, ptr %level, align 1, !dbg !406, !range !407, !noundef !37
-  %_2 = zext i8 %1 to i64, !dbg !406
-  %2 = icmp eq i64 %_2, 3, !dbg !408
-  br i1 %2, label %bb2, label %bb1, !dbg !408
+  call void @llvm.dbg.declare(metadata ptr %level, metadata !404, metadata !DIExpression()), !dbg !406
+  store i64 %phys_mem_offset_addr, ptr %phys_mem_offset_addr.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %phys_mem_offset_addr.dbg.spill, metadata !405, metadata !DIExpression()), !dbg !407
+  %1 = load i8, ptr %level, align 1, !dbg !408, !range !409, !noundef !37
+  %_3 = zext i8 %1 to i64, !dbg !408
+  %2 = icmp eq i64 %_3, 3, !dbg !410
+  br i1 %2, label %bb2, label %bb1, !dbg !410
 
 bb2:                                              ; preds = %start
-  ret void, !dbg !409
+; call paged_memory::topmost_level
+  %_0 = call align 4096 ptr @_ZN12paged_memory13topmost_level17h2aae51887bb9f209E(i64 %phys_mem_offset_addr) #6, !dbg !411
+  ret ptr %_0, !dbg !412
 
 bb1:                                              ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @alloc_aa07815cbcb2365f7aca41cc8941a0c4, i64 19, ptr align 8 @alloc_53d658f9c86c1e22b6beae7097b90797) #7, !dbg !410
-  unreachable, !dbg !410
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @alloc_aa07815cbcb2365f7aca41cc8941a0c4, i64 19, ptr align 8 @alloc_359149161c34a88fd8a16962858d158a) #7, !dbg !413
+  unreachable, !dbg !413
 }
 
 ; Function Attrs: nocallback nofree nosync nounwind speculatable willreturn memory(none)
@@ -937,7 +942,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !339 = !DILocation(line: 301, column: 17, scope: !334)
 !340 = !DILocation(line: 308, column: 17, scope: !338)
 !341 = !DILocation(line: 304, column: 17, scope: !334)
-!342 = !{i32 224637}
+!342 = !{i32 224761}
 !343 = !DILocation(line: 307, column: 38, scope: !334)
 !344 = !DILocation(line: 307, column: 24, scope: !334)
 !345 = !DILocation(line: 307, column: 17, scope: !336)
@@ -959,7 +964,7 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !361 = !DILocation(line: 312, column: 9, scope: !351)
 !362 = !DILocation(line: 313, column: 6, scope: !351)
 !363 = distinct !DISubprogram(name: "topmost_level", linkageName: "_ZN12paged_memory13topmost_level17h2aae51887bb9f209E", scope: !9, file: !364, line: 12, type: !365, scopeLine: 12, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !37, retainedNodes: !378)
-!364 = !DIFile(filename: "paged_memory/src/lib.rs", directory: "/Users/yaw/self/theo", checksumkind: CSK_MD5, checksum: "b87005e8e2a3899648fecb2527e20a8a")
+!364 = !DIFile(filename: "paged_memory/src/lib.rs", directory: "/Users/yaw/self/theo", checksumkind: CSK_MD5, checksum: "f56f0125ce8625ae4a833e42f987f6eb")
 !365 = !DISubroutineType(types: !366)
 !366 = !{!367, !118}
 !367 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut x86_64::structures::paging::page_table::PageTable", baseType: !368, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -995,14 +1000,17 @@ attributes #8 = { memory(inaccessiblemem: readwrite) }
 !397 = !DILocation(line: 15, column: 9, scope: !386)
 !398 = !DILocation(line: 17, column: 11, scope: !386)
 !399 = !DILocation(line: 18, column: 2, scope: !363)
-!400 = distinct !DISubprogram(name: "debug", linkageName: "_ZN12paged_memory5debug17hd34e3d56830bb73eE", scope: !9, file: !364, line: 20, type: !401, scopeLine: 20, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !37, retainedNodes: !403)
+!400 = distinct !DISubprogram(name: "read_page_table", linkageName: "_ZN12paged_memory15read_page_table17h825f2c6ee5152d02E", scope: !9, file: !364, line: 20, type: !401, scopeLine: 20, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !37, retainedNodes: !403)
 !401 = !DISubroutineType(types: !402)
-!402 = !{null, !7}
-!403 = !{!404}
-!404 = !DILocalVariable(name: "level", arg: 1, scope: !400, file: !364, line: 20, type: !7)
-!405 = !DILocation(line: 20, column: 14, scope: !400)
-!406 = !DILocation(line: 21, column: 11, scope: !400)
-!407 = !{i8 0, i8 4}
-!408 = !DILocation(line: 21, column: 5, scope: !400)
-!409 = !DILocation(line: 25, column: 2, scope: !400)
-!410 = !DILocation(line: 23, column: 14, scope: !400)
+!402 = !{!367, !7, !118}
+!403 = !{!404, !405}
+!404 = !DILocalVariable(name: "level", arg: 1, scope: !400, file: !364, line: 21, type: !7)
+!405 = !DILocalVariable(name: "phys_mem_offset_addr", arg: 2, scope: !400, file: !364, line: 22, type: !118)
+!406 = !DILocation(line: 21, column: 5, scope: !400)
+!407 = !DILocation(line: 22, column: 5, scope: !400)
+!408 = !DILocation(line: 24, column: 11, scope: !400)
+!409 = !{i8 0, i8 4}
+!410 = !DILocation(line: 24, column: 5, scope: !400)
+!411 = !DILocation(line: 25, column: 42, scope: !400)
+!412 = !DILocation(line: 28, column: 2, scope: !400)
+!413 = !DILocation(line: 26, column: 14, scope: !400)

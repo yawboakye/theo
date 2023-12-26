@@ -49,22 +49,29 @@ fn topmost_level(_1: VirtAddr) -> &mut PageTable {
     }
 }
 
-fn debug(_1: PageTableLevel) -> () {
+fn read_page_table(_1: PageTableLevel, _2: VirtAddr) -> &mut PageTable {
     debug level => _1;
-    let mut _0: ();
-    let mut _2: isize;
-    let mut _3: !;
+    debug phys_mem_offset_addr => _2;
+    let mut _0: &mut x86_64::structures::paging::PageTable;
+    let mut _3: isize;
+    let mut _4: !;
+    scope 1 {
+    }
 
     bb0: {
-        _2 = discriminant(_1);
-        switchInt(move _2) -> [3: bb2, otherwise: bb1];
+        _3 = discriminant(_1);
+        switchInt(move _3) -> [3: bb2, otherwise: bb1];
     }
 
     bb1: {
-        _3 = panic(const "not yet implemented") -> unwind unreachable;
+        _4 = panic(const "not yet implemented") -> unwind unreachable;
     }
 
     bb2: {
+        _0 = topmost_level(_2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
         return;
     }
 }
