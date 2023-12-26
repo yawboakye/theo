@@ -1,23 +1,26 @@
 #![allow(dead_code)]
 
-use bootloader_api::BootInfo;
-use paged_memory::{debug as debug_table, PageTableLevel};
-use x86_64::registers::control::Cr3;
+use bootloader_api::{info::Optional, BootInfo};
+use paged_memory::{read_page_table, PageTableLevel as PMPageTableLevel};
+use x86_64::{registers::control::Cr3, VirtAddr};
+
+// aliases for the purpose of export.
+pub type PageTableLevel = PMPageTableLevel;
 
 const INVALID_MEMORY_ADDRESS_POINTER: *mut u8 = 0xbea7ab1e as *mut u8;
 const INSTRUCTION_POINTER_ADDRESS: *mut u8 = 0x20a5c3 as *mut u8;
 
-pub fn initialize(boot_info: &'static mut BootInfo) -> Mem {
-    Mem {
-        phys_mem_offset: boot_info.physical_memory_offset.into_option().unwrap(),
-    }
-}
-
 pub struct Mem {
-    phys_mem_offset: u64,
+    phys_mem_offset: Optional<u64>,
 }
 
 impl Mem {
+    pub fn from_boot_info(boot_info: &'static mut BootInfo) -> Self {
+        Mem {
+            phys_mem_offset: boot_info.physical_memory_offset,
+        }
+    }
+
     pub fn caused_by_write_page_fault(&self) {
         #[rustfmt::skip]
     // an attempt to write to an invalid memory address so that the
@@ -47,14 +50,18 @@ impl Mem {
         );
     }
 
-    fn enumerate_table(&self, level: PageTableLevel) {
+    pub fn enumerate_table(&self, level: PageTableLevel) {
         match level {
-            PageTableLevel::FOUR => debug_table(PageTableLevel::FOUR),
+            PageTableLevel::FOUR => {
+                let offset_virt_addr = VirtAddr::new(self.phys_mem_offset.into_option().unwrap());
+                let level_four = read_page_table(PageTableLevel::FOUR, offset_virt_addr);
+                for (i, entry) in level_four.iter().enumerate() {
+                    if entry.is_unused() {
+                        crate::println!("<<{i}>>: <<{:#?}>>", entry);
+                    }
+                }
+            }
             _ => panic!("not sure how to enumerate this yet"),
         }
-    }
-
-    pub fn enumerate_level_four_table(&self) {
-        self.enumerate_table(PageTableLevel::FOUR)
     }
 }

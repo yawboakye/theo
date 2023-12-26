@@ -19,10 +19,11 @@ use bootloader_api::{
     entry_point, BootInfo,
 };
 use core::{intrinsics, panic::PanicInfo};
+use memory::Mem;
 
 pub static BOOTLOADER_CONFIG: BootloaderConfig = {
     let mut config = BootloaderConfig::new_default();
-    config.mappings.physical_memory = Some(Mapping::Dynamic);
+    config.mappings.physical_memory = Some(Mapping::new_default());
     config
 };
 
@@ -45,15 +46,15 @@ entry_point!(kernel_main, config = &BOOTLOADER_CONFIG);
 pub fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
     peripherals::initialize();
     interrupts::initialize();
-    let mem = memory::initialize(boot_info);
+    let mem = Mem::from_boot_info(boot_info);
 
     println!("ave imperator, morituri te salutant 🖖!\n\n\n\n");
     println!("this text should appear on last but one row");
     println!("last row of text, with empty row below");
 
-    mem.enumerate_level_four_table();
     // memory::cause_protection_violation_by_write_page_fault();
     // memory::caused_by_write_page_fault();
+    mem.enumerate_table(memory::PageTableLevel::FOUR);
 
     // kernel stack overflow...
     // #[rustfmt::skip]

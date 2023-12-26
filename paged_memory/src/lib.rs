@@ -17,9 +17,12 @@ pub unsafe fn topmost_level(phys_mem_offset: VirtAddr) -> &'static mut PageTable
     &mut *(virt_addr.as_mut_ptr())
 }
 
-pub fn debug(level: PageTableLevel) {
+pub fn read_page_table(
+    level: PageTableLevel,
+    phys_mem_offset_addr: VirtAddr,
+) -> &'static mut PageTable {
     match level {
-        PageTableLevel::FOUR => {}
+        PageTableLevel::FOUR => unsafe { topmost_level(phys_mem_offset_addr) },
         _ => todo!(),
     }
 }
