@@ -14,7 +14,19 @@ mod qemu;
 mod serial;
 mod traits;
 
+use bootloader_api::{
+    config::{BootloaderConfig, Mapping},
+    entry_point, BootInfo,
+};
 use core::{intrinsics, panic::PanicInfo};
+
+pub static BOOTLOADER_CONFIG: BootloaderConfig = {
+    let mut config = BootloaderConfig::new_default();
+    config.mappings.physical_memory = Some(Mapping::Dynamic);
+    config
+};
+
+entry_point!(kernel_main, config = &BOOTLOADER_CONFIG);
 
 // When we're no longer deferring to the Rust runtime to organize
 // program initialization for us, there's a few things we need to
@@ -30,21 +42,18 @@ use core::{intrinsics, panic::PanicInfo};
 //     but didn't find another divergent function we could use
 //     in `core::intrinsics` so I'll keep Phil's implementation
 //     and loop infinitely.
-#[no_mangle]
-pub fn _start() -> ! {
+pub fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
     peripherals::initialize();
     interrupts::initialize();
+    let mem = memory::initialize(boot_info);
 
     println!("ave imperator, morituri te salutant 🖖!\n\n\n\n");
     println!("this text should appear on last but one row");
     println!("last row of text, with empty row below");
 
-    memory::inspect_level_four_page_table();
+    mem.enumerate_level_four_table();
     // memory::cause_protection_violation_by_write_page_fault();
     // memory::caused_by_write_page_fault();
-
-    #[cfg(test)]
-    test_main();
 
     // kernel stack overflow...
     // #[rustfmt::skip]

@@ -21,10 +21,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
+name = "bitflags"
+version = "2.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "327762f6e5a765692301e5bb513e0d9fef63be86bbc14528052b1cd3e6f03e07"
+
+[[package]]
 name = "bootloader"
 version = "0.9.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b6e02311b16c9819e7c72866d379cdd3026c3b7b25c1edf161f548f8e887e7ff"
+
+[[package]]
+name = "bootloader_api"
+version = "0.11.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "88f843888771a490c3ad246e58bf25e62da70d2c653d74a3eca92acbab599e02"
 
 [[package]]
 name = "cpu_interrupts"
@@ -64,8 +76,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "memory"
+name = "paged_memory"
 version = "0.1.0"
+dependencies = [
+ "x86_64",
+]
 
 [[package]]
 name = "pc-keyboard"
@@ -113,10 +128,11 @@ name = "theo"
 version = "0.1.0"
 dependencies = [
  "bootloader",
+ "bootloader_api",
  "cpu_interrupts",
  "keyboard",
  "lazy_static",
- "memory",
+ "paged_memory",
  "spin 0.9.8",
  "uart_16550",
  "vga",
@@ -129,7 +145,7 @@ version = "0.2.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b074eb9300ad949edd74c529c0e8d451625af71bb948e6b65fe69f72dc1363d9"
 dependencies = [
- "bitflags",
+ "bitflags 1.3.2",
  "rustversion",
  "x86_64",
 ]
@@ -146,12 +162,12 @@ checksum = "442887c63f2c839b346c192d047a7c87e73d0689c9157b00b53dcc27dd5ea793"
 
 [[package]]
 name = "x86_64"
-version = "0.14.10"
+version = "0.14.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "100555a863c0092238c2e0e814c1096c1e5cf066a309c696a87e907b5f8c5d69"
+checksum = "3b835097a84e4457323331ec5d6eb23d096066cbfb215d54096dcb4b2e85f500"
 dependencies = [
  "bit_field",
- "bitflags",
+ "bitflags 2.4.1",
  "rustversion",
  "volatile",
 ]
