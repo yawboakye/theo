@@ -938,7 +938,7 @@ fn <impl at vga/src/lib.rs:143:1: 143:12>::print_text(_1: &mut Screen, _2: &str)
     bb5: {
         _10 = ((_7 as Some).0: u8);
         _11 = Le(const 32_u8, _10);
-        switchInt(move _11) -> [0: bb9, otherwise: bb8];
+        switchInt(move _11) -> [0: bb9, otherwise: bb11];
     }
 
     bb6: {
@@ -950,8 +950,7 @@ fn <impl at vga/src/lib.rs:143:1: 143:12>::print_text(_1: &mut Screen, _2: &str)
     }
 
     bb8: {
-        _12 = Le(_10, const 126_u8);
-        switchInt(move _12) -> [0: bb9, otherwise: bb11];
+        _6 = Screen::print(_1, _10) -> [return: bb3, unwind unreachable];
     }
 
     bb9: {
@@ -965,7 +964,8 @@ fn <impl at vga/src/lib.rs:143:1: 143:12>::print_text(_1: &mut Screen, _2: &str)
     }
 
     bb11: {
-        _6 = Screen::print(_1, _10) -> [return: bb3, unwind unreachable];
+        _12 = Le(_10, const 126_u8);
+        switchInt(move _12) -> [0: bb9, otherwise: bb8];
     }
 
     bb12: {

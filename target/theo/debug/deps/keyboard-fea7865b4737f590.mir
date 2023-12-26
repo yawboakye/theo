@@ -1,0 +1,133 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn <impl at keyboard/src/lib.rs:25:1: 25:47>::new(_1: L, _2: S) -> Keyboard<L, S> {
+    debug layout => _1;
+    debug scancode_set => _2;
+    let mut _0: Keyboard<L, S>;
+    let _3: pc_keyboard::Keyboard<L, S>;
+    let mut _4: pc_keyboard::HandleControl;
+    let mut _5: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    scope 1 {
+        debug keyboard => _3;
+    }
+
+    bb0: {
+        _4 = Ignore;
+        _3 = pc_keyboard::Keyboard::<L, S>::new(move _2, move _1, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = PortGeneric::<u8, ReadWriteAccess>::new(const 96_u16) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = Keyboard::<L, S> { keyboard: move _3, port: move _5 };
+        return;
+    }
+}
+
+fn <impl at keyboard/src/lib.rs:25:1: 25:47>::us_scancode_set_one_keyboard() -> Keyboard<pc_keyboard::layouts::Us104Key, pc_keyboard::ScancodeSet1> {
+    let mut _0: Keyboard<pc_keyboard::layouts::Us104Key, pc_keyboard::ScancodeSet1>;
+    let mut _1: pc_keyboard::ScancodeSet1;
+
+    bb0: {
+        _1 = pc_keyboard::ScancodeSet1::new() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Keyboard::<pc_keyboard::layouts::Us104Key, pc_keyboard::ScancodeSet1>::new(const pc_keyboard::layouts::Us104Key, move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn <impl at keyboard/src/lib.rs:25:1: 25:47>::process_decoded_key(_1: &mut Keyboard<L, S>, _2: F) -> () {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: ();
+    let _3: u8;
+    let mut _4: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    let mut _5: core::result::Result<core::option::Option<pc_keyboard::KeyEvent>, pc_keyboard::Error>;
+    let mut _6: &mut pc_keyboard::Keyboard<L, S>;
+    let mut _7: isize;
+    let mut _8: isize;
+    let mut _10: core::option::Option<pc_keyboard::DecodedKey>;
+    let mut _11: &mut pc_keyboard::Keyboard<L, S>;
+    let mut _12: isize;
+    let _14: R;
+    let mut _15: F;
+    let mut _16: (pc_keyboard::DecodedKey,);
+    let mut _17: bool;
+    scope 1 {
+        debug scancode => _3;
+        scope 3 {
+            debug key_event => _9;
+            let _9: pc_keyboard::KeyEvent;
+            scope 4 {
+                debug decoded_key => _13;
+                let _13: pc_keyboard::DecodedKey;
+            }
+        }
+    }
+    scope 2 {
+    }
+
+    bb0: {
+        _17 = const false;
+        _17 = const true;
+        _4 = &mut ((*_1).1: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _3 = PortGeneric::<u8, ReadWriteAccess>::read(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &mut ((*_1).0: pc_keyboard::Keyboard<L, S>);
+        _5 = pc_keyboard::Keyboard::<L, S>::add_byte(move _6, _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = discriminant(_5);
+        switchInt(move _8) -> [0: bb3, otherwise: bb8];
+    }
+
+    bb3: {
+        _7 = discriminant(((_5 as Ok).0: core::option::Option<pc_keyboard::KeyEvent>));
+        switchInt(move _7) -> [1: bb4, otherwise: bb8];
+    }
+
+    bb4: {
+        _9 = move ((((_5 as Ok).0: core::option::Option<pc_keyboard::KeyEvent>) as Some).0: pc_keyboard::KeyEvent);
+        _11 = &mut ((*_1).0: pc_keyboard::Keyboard<L, S>);
+        _10 = pc_keyboard::Keyboard::<L, S>::process_keyevent(move _11, move _9) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _12 = discriminant(_10);
+        switchInt(move _12) -> [1: bb6, otherwise: bb8];
+    }
+
+    bb6: {
+        _13 = ((_10 as Some).0: pc_keyboard::DecodedKey);
+        _17 = const false;
+        _15 = move _2;
+        _16 = (_13,);
+        _14 = <F as FnOnce<(pc_keyboard::DecodedKey,)>>::call_once(move _15, move _16) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        drop(_14) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        switchInt(_17) -> [0: bb9, otherwise: bb10];
+    }
+
+    bb9: {
+        return;
+    }
+
+    bb10: {
+        drop(_2) -> [return: bb9, unwind unreachable];
+    }
+}

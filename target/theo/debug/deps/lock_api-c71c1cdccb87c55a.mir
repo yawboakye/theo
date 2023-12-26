@@ -1297,7 +1297,7 @@ fn remutex::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15
     }
 
     bb5: {
-        _13 = num::<impl usize>::checked_add(move _14, const 1_usize) -> [return: bb6, unwind unreachable];
+        _13 = core::num::<impl usize>::checked_add(move _14, const 1_usize) -> [return: bb6, unwind unreachable];
     }
 
     bb6: {

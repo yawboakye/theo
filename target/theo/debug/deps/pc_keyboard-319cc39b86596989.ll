@@ -1,12 +1,12 @@
-; ModuleID = 'pc_keyboard.216f08140e2cdac2-cgu.0'
-source_filename = "pc_keyboard.216f08140e2cdac2-cgu.0"
+; ModuleID = 'pc_keyboard.bb5f52b4bf119662-cgu.0'
+source_filename = "pc_keyboard.bb5f52b4bf119662-cgu.0"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
-%"core::result::Result<core::option::Option<u8>, Error>" = type { i8, [1 x i8] }
-%"core::result::Result<core::option::Option<u8>, Error>::Err" = type { [1 x i8], i8 }
 %"core::result::Result<core::option::Option<KeyEvent>, Error>" = type { i8, [1 x i8] }
 %"core::result::Result<core::option::Option<KeyEvent>, Error>::Err" = type { [1 x i8], i8 }
+%"core::result::Result<core::option::Option<u8>, Error>" = type { i8, [1 x i8] }
+%"core::result::Result<core::option::Option<u8>, Error>::Err" = type { [1 x i8], i8 }
 %DecodedKey = type { i8, [7 x i8] }
 %"DecodedKey::RawKey" = type { [1 x i8], i8 }
 %"DecodedKey::Unicode" = type { [1 x i32], i32 }
@@ -15,84 +15,84 @@ target triple = "x86_64-obuasi-unknown-none"
 
 @alloc_914b2c69d7eca30497b9feaf15ac92f1 = private unnamed_addr constant <{ [1 x i8] }> zeroinitializer, align 1
 @alloc_4ca2ba91686521ffa01190d37c11fe21 = private unnamed_addr constant <{ [103 x i8] }> <{ [103 x i8] c"/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0/src/scancodes/set1.rs" }>, align 1
-@alloc_01825ae644de361aa9234f2c60b14002 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\08\01\00\00\1D\00\00\00" }>, align 8
-@alloc_7e6031617f89b56a16c7af9ac9ba321b = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\01\01\00\000\00\00\00" }>, align 8
-@str.0 = internal constant [33 x i8] c"attempt to subtract with overflow"
-@alloc_5ce726493f0ffee85c9d8946d362e05d = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\01\01\00\00\1D\00\00\00" }>, align 8
-@alloc_802ad7f4f25f7c091ca2beae0900be54 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\1B\01\00\00\1D\00\00\00" }>, align 8
-@alloc_ea6620644f28afe21b7e811d05b1acc9 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\14\01\00\009\00\00\00" }>, align 8
-@alloc_3db12d6341fc09629e8bebdb70c013a0 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\14\01\00\00\1D\00\00\00" }>, align 8
-@alloc_8806a8e9476c330c3a4ad8169ab9ebed = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00.\01\00\00\1D\00\00\00" }>, align 8
-@alloc_664ec08aebe3823c0a0885e1a2772937 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00'\01\00\00:\00\00\00" }>, align 8
-@alloc_f399fb6bbd9eeb41238b930176a98782 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00'\01\00\00\1D\00\00\00" }>, align 8
+@alloc_cec61a0241a59cddaf10fe19195bf52a = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\08\01\00\00\1D\00\00\00" }>, align 8
+@alloc_1c8275b3e6857f89477ac0a8531d2e79 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\01\01\00\000\00\00\00" }>, align 8
+@str.0 = internal unnamed_addr constant [33 x i8] c"attempt to subtract with overflow"
+@alloc_636157491ab58f20b1d506c8dc0218ac = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\01\01\00\00\1D\00\00\00" }>, align 8
+@alloc_28809bcbf9d331822102c11d15bc9248 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\1B\01\00\00\1D\00\00\00" }>, align 8
+@alloc_78b58adf04a3ec1c200ac00a4c13748d = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\14\01\00\009\00\00\00" }>, align 8
+@alloc_d3c9481fc38a17a2e6467c77894d25a6 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00\14\01\00\00\1D\00\00\00" }>, align 8
+@alloc_6daae0bcf4fbb69cc4fd35c38bc54256 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00.\01\00\00\1D\00\00\00" }>, align 8
+@alloc_b6db82061d34656e91537e6c61376cf3 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00'\01\00\00:\00\00\00" }>, align 8
+@alloc_d035c7e955e9e131b9be3611c340f6dc = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\00'\01\00\00\1D\00\00\00" }>, align 8
 @alloc_7395b7fd5052a2200dfc13209d237c6b = private unnamed_addr constant <{ [15 x i8] }> <{ [15 x i8] c"not implemented" }>, align 1
-@alloc_0d18c3d99ec2c5f0963d00ec7ad390b7 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\006\01\00\00\11\00\00\00" }>, align 8
+@alloc_6706f7dc7479c60c979ef9d09c0f8e51 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_4ca2ba91686521ffa01190d37c11fe21, [16 x i8] c"g\00\00\00\00\00\00\006\01\00\00\11\00\00\00" }>, align 8
 @alloc_cd51bc84b49b21a3fdb2800731f25c21 = private unnamed_addr constant <{ [1 x i8] }> <{ [1 x i8] c"y" }>, align 1
 @alloc_37f62a15fae368a2423b3a16c75adcc9 = private unnamed_addr constant <{ [1 x i8] }> <{ [1 x i8] c"x" }>, align 1
 @alloc_40f6341fc26705d6089e6dc95aeb956f = private unnamed_addr constant <{ [103 x i8] }> <{ [103 x i8] c"/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0/src/scancodes/set2.rs" }>, align 1
-@alloc_b55860ee7458b355389a69d477f8a71d = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\D8\00\00\00\1D\00\00\00" }>, align 8
-@alloc_28da642840c99da6f7e454024289680e = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\D3\00\00\00#\00\00\00" }>, align 8
-@alloc_4037860aeb8410aa9c0f565ea3529c94 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\EA\00\00\00#\00\00\00" }>, align 8
-@alloc_411d7639d61067ee0f6b0148c922244c = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\E0\00\00\00'\00\00\00" }>, align 8
-@alloc_717edfb34a03f7ca690d71ecc4c87737 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\F1\00\00\00\15\00\00\00" }>, align 8
-@alloc_018d40e57efbfc13c5ee49eb85e49502 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\FD\00\00\00\19\00\00\00" }>, align 8
-@alloc_e45f6d748d4228df2df081caa99450ae = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\05\01\00\00\15\00\00\00" }>, align 8
+@alloc_ac9a2448fa0ef24a24c60eb3a3c47fda = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\D8\00\00\00\1D\00\00\00" }>, align 8
+@alloc_9418b4b12fac1dfe7eaad00701707bad = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\D3\00\00\00#\00\00\00" }>, align 8
+@alloc_f5f8fbf2865b3ea081b8981ee654c061 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\EA\00\00\00#\00\00\00" }>, align 8
+@alloc_eb48c694776f31f9668c206a9f95c238 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\E0\00\00\00'\00\00\00" }>, align 8
+@alloc_79f548ae7b2d41133ddfb48663f14332 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\F1\00\00\00\15\00\00\00" }>, align 8
+@alloc_106bcfd51a3959025231bfbe6d57411e = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\FD\00\00\00\19\00\00\00" }>, align 8
+@alloc_a57595b22e0aa3088521f70b1e2ad4d2 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_40f6341fc26705d6089e6dc95aeb956f, [16 x i8] c"g\00\00\00\00\00\00\00\05\01\00\00\15\00\00\00" }>, align 8
 @alloc_a5b1238d8d3042885673672410423c66 = private unnamed_addr constant <{ [92 x i8] }> <{ [92 x i8] c"/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0/src/lib.rs" }>, align 1
-@alloc_7a120abf42648b30ff76fc84b7040e6a = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00K\02\00\00\1A\00\00\00" }>, align 8
-@str.1 = internal constant [35 x i8] c"attempt to shift left with overflow"
-@alloc_93db7e965b9db0fa8714420e9145e9c1 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00L\02\00\00\09\00\00\00" }>, align 8
-@str.2 = internal constant [28 x i8] c"attempt to add with overflow"
-@alloc_1b86ea675cbc4430b1a68a313acdb7ea = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00Q\02\00\00\18\00\00\00" }>, align 8
-@alloc_a738d37f3229710100a5bfdb59be1463 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00z\02\00\00\0A\00\00\00" }>, align 8
-@str.3 = internal constant [36 x i8] c"attempt to shift right with overflow"
+@alloc_c97f67d6ac06fbe5bd76a7c9678adb61 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00K\02\00\00\1A\00\00\00" }>, align 8
+@str.1 = internal unnamed_addr constant [35 x i8] c"attempt to shift left with overflow"
+@alloc_72d7d6ecdc81339b29d9e01837da0cb1 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00L\02\00\00\09\00\00\00" }>, align 8
+@str.2 = internal unnamed_addr constant [28 x i8] c"attempt to add with overflow"
+@alloc_d8a5eb7cfa6da5baca052ac25e7e0540 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00Q\02\00\00\18\00\00\00" }>, align 8
+@alloc_71ec85c4fd2ec83aa68cadcbff9ed669 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_a5b1238d8d3042885673672410423c66, [16 x i8] c"\\\00\00\00\00\00\00\00z\02\00\00\0A\00\00\00" }>, align 8
+@str.3 = internal unnamed_addr constant [36 x i8] c"attempt to shift right with overflow"
 
 ; <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
 ; Function Attrs: inlinehint noredzone nounwind
-define i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h80e808691d5ba0caE"(i8 %0, ptr align 8 %1) unnamed_addr #0 !dbg !160 {
-start:
-  %t.dbg.spill.i = alloca i8, align 1
-  %e.dbg.spill = alloca i8, align 1
-  %_0 = alloca %"core::result::Result<core::option::Option<u8>, Error>", align 1
-  %residual = alloca i8, align 1
-  store i8 %0, ptr %residual, align 1
-  call void @llvm.dbg.declare(metadata ptr %residual, metadata !232, metadata !DIExpression()), !dbg !237
-  %e = load i8, ptr %residual, align 1, !dbg !238, !range !239, !noundef !182
-  store i8 %e, ptr %e.dbg.spill, align 1, !dbg !238
-  call void @llvm.dbg.declare(metadata ptr %e.dbg.spill, metadata !233, metadata !DIExpression()), !dbg !240
-  store i8 %e, ptr %t.dbg.spill.i, align 1
-  call void @llvm.dbg.declare(metadata ptr %t.dbg.spill.i, metadata !241, metadata !DIExpression()), !dbg !250
-  %2 = getelementptr inbounds %"core::result::Result<core::option::Option<u8>, Error>::Err", ptr %_0, i32 0, i32 1, !dbg !252
-  store i8 %e, ptr %2, align 1, !dbg !252
-  store i8 2, ptr %_0, align 1, !dbg !252
-  %3 = load i16, ptr %_0, align 1, !dbg !253
-  ret i16 %3, !dbg !253
-}
-
-; <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-; Function Attrs: inlinehint noredzone nounwind
-define i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %0, ptr align 8 %1) unnamed_addr #0 !dbg !254 {
+define i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %0, ptr align 8 %1) unnamed_addr #0 !dbg !160 {
 start:
   %t.dbg.spill.i = alloca i8, align 1
   %e.dbg.spill = alloca i8, align 1
   %_0 = alloca %"core::result::Result<core::option::Option<KeyEvent>, Error>", align 1
   %residual = alloca i8, align 1
   store i8 %0, ptr %residual, align 1
+  call void @llvm.dbg.declare(metadata ptr %residual, metadata !236, metadata !DIExpression()), !dbg !241
+  %e = load i8, ptr %residual, align 1, !dbg !242, !range !243, !noundef !182
+  store i8 %e, ptr %e.dbg.spill, align 1, !dbg !242
+  call void @llvm.dbg.declare(metadata ptr %e.dbg.spill, metadata !237, metadata !DIExpression()), !dbg !244
+  store i8 %e, ptr %t.dbg.spill.i, align 1
+  call void @llvm.dbg.declare(metadata ptr %t.dbg.spill.i, metadata !245, metadata !DIExpression()), !dbg !254
+  %2 = getelementptr inbounds %"core::result::Result<core::option::Option<KeyEvent>, Error>::Err", ptr %_0, i32 0, i32 1, !dbg !256
+  store i8 %e, ptr %2, align 1, !dbg !256
+  store i8 4, ptr %_0, align 1, !dbg !256
+  %3 = load i16, ptr %_0, align 1, !dbg !257
+  ret i16 %3, !dbg !257
+}
+
+; <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
+; Function Attrs: inlinehint noredzone nounwind
+define i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hf506680001b14e6eE"(i8 %0, ptr align 8 %1) unnamed_addr #0 !dbg !258 {
+start:
+  %t.dbg.spill.i = alloca i8, align 1
+  %e.dbg.spill = alloca i8, align 1
+  %_0 = alloca %"core::result::Result<core::option::Option<u8>, Error>", align 1
+  %residual = alloca i8, align 1
+  store i8 %0, ptr %residual, align 1
   call void @llvm.dbg.declare(metadata ptr %residual, metadata !290, metadata !DIExpression()), !dbg !294
-  %e = load i8, ptr %residual, align 1, !dbg !295, !range !239, !noundef !182
+  %e = load i8, ptr %residual, align 1, !dbg !295, !range !243, !noundef !182
   store i8 %e, ptr %e.dbg.spill, align 1, !dbg !295
   call void @llvm.dbg.declare(metadata ptr %e.dbg.spill, metadata !291, metadata !DIExpression()), !dbg !296
   store i8 %e, ptr %t.dbg.spill.i, align 1
-  call void @llvm.dbg.declare(metadata ptr %t.dbg.spill.i, metadata !241, metadata !DIExpression()), !dbg !297
-  %2 = getelementptr inbounds %"core::result::Result<core::option::Option<KeyEvent>, Error>::Err", ptr %_0, i32 0, i32 1, !dbg !299
+  call void @llvm.dbg.declare(metadata ptr %t.dbg.spill.i, metadata !245, metadata !DIExpression()), !dbg !297
+  %2 = getelementptr inbounds %"core::result::Result<core::option::Option<u8>, Error>::Err", ptr %_0, i32 0, i32 1, !dbg !299
   store i8 %e, ptr %2, align 1, !dbg !299
-  store i8 4, ptr %_0, align 1, !dbg !299
+  store i8 2, ptr %_0, align 1, !dbg !299
   %3 = load i16, ptr %_0, align 1, !dbg !300
   ret i16 %3, !dbg !300
 }
 
 ; core::char::convert::<impl core::convert::From<u8> for char>::from
 ; Function Attrs: inlinehint noredzone nounwind
-define internal i32 @"_ZN4core4char7convert64_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$char$GT$4from17h7089fce54708d5f8E"(i8 %i) unnamed_addr #0 !dbg !301 {
+define internal i32 @"_ZN4core4char7convert64_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$char$GT$4from17h4b6a0d40e218f510E"(i8 %i) unnamed_addr #0 !dbg !301 {
 start:
   %i.dbg.spill = alloca i8, align 1
   store i8 %i, ptr %i.dbg.spill, align 1
@@ -103,19 +103,19 @@ start:
 
 ; <T as core::convert::Into<U>>::into
 ; Function Attrs: inlinehint noredzone nounwind
-define i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 %self) unnamed_addr #0 !dbg !314 {
+define i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 %self) unnamed_addr #0 !dbg !314 {
 start:
   %self.dbg.spill = alloca i8, align 1
   store i8 %self, ptr %self.dbg.spill, align 1
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !317, metadata !DIExpression()), !dbg !320
 ; call core::char::convert::<impl core::convert::From<u8> for char>::from
-  %_0 = call i32 @"_ZN4core4char7convert64_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$char$GT$4from17h7089fce54708d5f8E"(i8 %self) #6, !dbg !321, !range !322
+  %_0 = call i32 @"_ZN4core4char7convert64_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$char$GT$4from17h4b6a0d40e218f510E"(i8 %self) #6, !dbg !321, !range !322
   ret i32 %_0, !dbg !323
 }
 
 ; <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
 ; Function Attrs: inlinehint noredzone nounwind
-define { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17ha8e5c37459c2739aE"(i1 zeroext %0, i8 %1) unnamed_addr #0 !dbg !324 {
+define { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %0, i8 %1) unnamed_addr #0 !dbg !324 {
 start:
   %e.dbg.spill = alloca i8, align 1
   %v.dbg.spill = alloca i8, align 1
@@ -127,53 +127,53 @@ start:
   store i8 %3, ptr %2, align 1
   %4 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1
   store i8 %1, ptr %4, align 1
-  call void @llvm.dbg.declare(metadata ptr %self, metadata !361, metadata !DIExpression()), !dbg !366
-  %5 = load i8, ptr %self, align 1, !dbg !367, !range !368, !noundef !182
-  %6 = trunc i8 %5 to i1, !dbg !367
-  %_2 = zext i1 %6 to i64, !dbg !367
-  %7 = icmp eq i64 %_2, 0, !dbg !369
-  br i1 %7, label %bb3, label %bb1, !dbg !369
+  call void @llvm.dbg.declare(metadata ptr %self, metadata !362, metadata !DIExpression()), !dbg !367
+  %5 = load i8, ptr %self, align 1, !dbg !368, !range !369, !noundef !182
+  %6 = trunc i8 %5 to i1, !dbg !368
+  %_2 = zext i1 %6 to i64, !dbg !368
+  %7 = icmp eq i64 %_2, 0, !dbg !370
+  br i1 %7, label %bb3, label %bb1, !dbg !370
 
 bb3:                                              ; preds = %start
-  %8 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1, !dbg !370
-  %v = load i8, ptr %8, align 1, !dbg !370, !noundef !182
-  store i8 %v, ptr %v.dbg.spill, align 1, !dbg !370
-  call void @llvm.dbg.declare(metadata ptr %v.dbg.spill, metadata !362, metadata !DIExpression()), !dbg !371
-  %9 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !372
-  store i8 %v, ptr %9, align 1, !dbg !372
-  store i8 0, ptr %_0, align 1, !dbg !372
-  br label %bb4, !dbg !373
+  %8 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1, !dbg !371
+  %v = load i8, ptr %8, align 1, !dbg !371, !range !372, !noundef !182
+  store i8 %v, ptr %v.dbg.spill, align 1, !dbg !371
+  call void @llvm.dbg.declare(metadata ptr %v.dbg.spill, metadata !363, metadata !DIExpression()), !dbg !373
+  %9 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !374
+  store i8 %v, ptr %9, align 1, !dbg !374
+  store i8 0, ptr %_0, align 1, !dbg !374
+  br label %bb4, !dbg !375
 
 bb1:                                              ; preds = %start
-  %10 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1, !dbg !374
-  %e = load i8, ptr %10, align 1, !dbg !374, !range !239, !noundef !182
-  store i8 %e, ptr %e.dbg.spill, align 1, !dbg !374
-  call void @llvm.dbg.declare(metadata ptr %e.dbg.spill, metadata !364, metadata !DIExpression()), !dbg !375
-  store i8 %e, ptr %_5, align 1, !dbg !376
-  %11 = load i8, ptr %_5, align 1, !dbg !377, !range !239, !noundef !182
-  %12 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !377
-  store i8 %11, ptr %12, align 1, !dbg !377
-  store i8 1, ptr %_0, align 1, !dbg !377
-  br label %bb4, !dbg !378
+  %10 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1, !dbg !376
+  %e = load i8, ptr %10, align 1, !dbg !376, !range !243, !noundef !182
+  store i8 %e, ptr %e.dbg.spill, align 1, !dbg !376
+  call void @llvm.dbg.declare(metadata ptr %e.dbg.spill, metadata !365, metadata !DIExpression()), !dbg !377
+  store i8 %e, ptr %_5, align 1, !dbg !378
+  %11 = load i8, ptr %_5, align 1, !dbg !379, !range !243, !noundef !182
+  %12 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !379
+  store i8 %11, ptr %12, align 1, !dbg !379
+  store i8 1, ptr %_0, align 1, !dbg !379
+  br label %bb4, !dbg !380
 
 bb4:                                              ; preds = %bb1, %bb3
-  %13 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !379
-  %14 = load i8, ptr %13, align 1, !dbg !379, !range !368, !noundef !182
-  %15 = trunc i8 %14 to i1, !dbg !379
-  %16 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !379
-  %17 = load i8, ptr %16, align 1, !dbg !379, !noundef !182
-  %18 = zext i1 %15 to i8, !dbg !379
-  %19 = insertvalue { i8, i8 } poison, i8 %18, 0, !dbg !379
-  %20 = insertvalue { i8, i8 } %19, i8 %17, 1, !dbg !379
-  ret { i8, i8 } %20, !dbg !379
+  %13 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !381
+  %14 = load i8, ptr %13, align 1, !dbg !381, !range !369, !noundef !182
+  %15 = trunc i8 %14 to i1, !dbg !381
+  %16 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !381
+  %17 = load i8, ptr %16, align 1, !dbg !381, !noundef !182
+  %18 = zext i1 %15 to i8, !dbg !381
+  %19 = insertvalue { i8, i8 } poison, i8 %18, 0, !dbg !381
+  %20 = insertvalue { i8, i8 } %19, i8 %17, 1, !dbg !381
+  ret { i8, i8 } %20, !dbg !381
 
 bb2:                                              ; No predecessors!
-  unreachable, !dbg !367
+  unreachable, !dbg !368
 }
 
 ; <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
 ; Function Attrs: inlinehint noredzone nounwind
-define { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %0, i8 %1) unnamed_addr #0 !dbg !380 {
+define { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hb1856db19b1fb700E"(i1 zeroext %0, i8 %1) unnamed_addr #0 !dbg !382 {
 start:
   %e.dbg.spill = alloca i8, align 1
   %v.dbg.spill = alloca i8, align 1
@@ -185,18 +185,18 @@ start:
   store i8 %3, ptr %2, align 1
   %4 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1
   store i8 %1, ptr %4, align 1
-  call void @llvm.dbg.declare(metadata ptr %self, metadata !414, metadata !DIExpression()), !dbg !419
-  %5 = load i8, ptr %self, align 1, !dbg !420, !range !368, !noundef !182
-  %6 = trunc i8 %5 to i1, !dbg !420
-  %_2 = zext i1 %6 to i64, !dbg !420
-  %7 = icmp eq i64 %_2, 0, !dbg !421
-  br i1 %7, label %bb3, label %bb1, !dbg !421
+  call void @llvm.dbg.declare(metadata ptr %self, metadata !415, metadata !DIExpression()), !dbg !420
+  %5 = load i8, ptr %self, align 1, !dbg !421, !range !369, !noundef !182
+  %6 = trunc i8 %5 to i1, !dbg !421
+  %_2 = zext i1 %6 to i64, !dbg !421
+  %7 = icmp eq i64 %_2, 0, !dbg !422
+  br i1 %7, label %bb3, label %bb1, !dbg !422
 
 bb3:                                              ; preds = %start
-  %8 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1, !dbg !422
-  %v = load i8, ptr %8, align 1, !dbg !422, !range !423, !noundef !182
-  store i8 %v, ptr %v.dbg.spill, align 1, !dbg !422
-  call void @llvm.dbg.declare(metadata ptr %v.dbg.spill, metadata !415, metadata !DIExpression()), !dbg !424
+  %8 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1, !dbg !423
+  %v = load i8, ptr %8, align 1, !dbg !423, !noundef !182
+  store i8 %v, ptr %v.dbg.spill, align 1, !dbg !423
+  call void @llvm.dbg.declare(metadata ptr %v.dbg.spill, metadata !416, metadata !DIExpression()), !dbg !424
   %9 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !425
   store i8 %v, ptr %9, align 1, !dbg !425
   store i8 0, ptr %_0, align 1, !dbg !425
@@ -204,11 +204,11 @@ bb3:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
   %10 = getelementptr inbounds { i8, i8 }, ptr %self, i32 0, i32 1, !dbg !427
-  %e = load i8, ptr %10, align 1, !dbg !427, !range !239, !noundef !182
+  %e = load i8, ptr %10, align 1, !dbg !427, !range !243, !noundef !182
   store i8 %e, ptr %e.dbg.spill, align 1, !dbg !427
-  call void @llvm.dbg.declare(metadata ptr %e.dbg.spill, metadata !417, metadata !DIExpression()), !dbg !428
+  call void @llvm.dbg.declare(metadata ptr %e.dbg.spill, metadata !418, metadata !DIExpression()), !dbg !428
   store i8 %e, ptr %_5, align 1, !dbg !429
-  %11 = load i8, ptr %_5, align 1, !dbg !430, !range !239, !noundef !182
+  %11 = load i8, ptr %_5, align 1, !dbg !430, !range !243, !noundef !182
   %12 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !430
   store i8 %11, ptr %12, align 1, !dbg !430
   store i8 1, ptr %_0, align 1, !dbg !430
@@ -216,7 +216,7 @@ bb1:                                              ; preds = %start
 
 bb4:                                              ; preds = %bb1, %bb3
   %13 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !432
-  %14 = load i8, ptr %13, align 1, !dbg !432, !range !368, !noundef !182
+  %14 = load i8, ptr %13, align 1, !dbg !432, !range !369, !noundef !182
   %15 = trunc i8 %14 to i1, !dbg !432
   %16 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !432
   %17 = load i8, ptr %16, align 1, !dbg !432, !noundef !182
@@ -226,12 +226,12 @@ bb4:                                              ; preds = %bb1, %bb3
   ret { i8, i8 } %20, !dbg !432
 
 bb2:                                              ; No predecessors!
-  unreachable, !dbg !420
+  unreachable, !dbg !421
 }
 
 ; <pc_keyboard::layouts::dvorak_programmer104::DVP104Key as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h5002a8defc3f9bb9E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !433 {
+define i64 @"_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h25842ce9fb8040d8E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !433 {
 start:
   %map_to_unicode.dbg.spill = alloca i8, align 1
   %modifiers.dbg.spill = alloca ptr, align 8
@@ -259,11 +259,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %modifiers.dbg.spill, metadata !470, metadata !DIExpression()), !dbg !479
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl, metadata !471, metadata !DIExpression()), !dbg !480
 ; call <pc_keyboard::HandleControl as core::cmp::PartialEq>::eq
-  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !481
+  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !481
   %3 = zext i1 %map_to_unicode to i8, !dbg !481
   store i8 %3, ptr %map_to_unicode.dbg.spill, align 1, !dbg !481
   call void @llvm.dbg.declare(metadata ptr %map_to_unicode.dbg.spill, metadata !472, metadata !DIExpression()), !dbg !482
-  %_7 = load i8, ptr %keycode, align 1, !dbg !483, !range !423, !noundef !182
+  %_7 = load i8, ptr %keycode, align 1, !dbg !483, !range !372, !noundef !182
   switch i8 %_7, label %bb2 [
     i8 0, label %bb7
     i8 17, label %bb3
@@ -337,7 +337,7 @@ start:
   ], !dbg !484
 
 bb2:                                              ; preds = %start
-  %4 = load i8, ptr %keycode, align 1, !dbg !485, !range !423, !noundef !182
+  %4 = load i8, ptr %keycode, align 1, !dbg !485, !range !372, !noundef !182
   %5 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !485
   store i8 %4, ptr %5, align 1, !dbg !485
   store i8 0, ptr %_0, align 4, !dbg !485
@@ -345,7 +345,7 @@ bb2:                                              ; preds = %start
 
 bb7:                                              ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_9 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 27) #6, !dbg !487, !range !322
+  %_9 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 27) #6, !dbg !487, !range !322
   %6 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !488
   store i32 %_9, ptr %6, align 4, !dbg !488
   store i8 1, ptr %_0, align 4, !dbg !488
@@ -353,72 +353,72 @@ bb7:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !490
+  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !490
   br i1 %_8, label %bb5, label %bb6, !dbg !490
 
 bb9:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !491
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !491
   br i1 %_10, label %bb11, label %bb12, !dbg !491
 
 bb13:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !492
+  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !492
   br i1 %_11, label %bb15, label %bb16, !dbg !492
 
 bb17:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !493
+  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !493
   br i1 %_12, label %bb19, label %bb20, !dbg !493
 
 bb21:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !494
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !494
   br i1 %_13, label %bb23, label %bb24, !dbg !494
 
 bb25:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !495
+  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !495
   br i1 %_14, label %bb27, label %bb28, !dbg !495
 
 bb29:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !496
+  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !496
   br i1 %_15, label %bb31, label %bb32, !dbg !496
 
 bb33:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !497
+  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !497
   br i1 %_16, label %bb35, label %bb36, !dbg !497
 
 bb37:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !498
+  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !498
   br i1 %_17, label %bb39, label %bb40, !dbg !498
 
 bb41:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !499
+  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !499
   br i1 %_18, label %bb43, label %bb44, !dbg !499
 
 bb45:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !500
+  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !500
   br i1 %_19, label %bb47, label %bb48, !dbg !500
 
 bb49:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !501
+  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !501
   br i1 %_20, label %bb51, label %bb52, !dbg !501
 
 bb53:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !502
+  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !502
   br i1 %_21, label %bb55, label %bb56, !dbg !502
 
 bb57:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 8) #6, !dbg !503, !range !322
+  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 8) #6, !dbg !503, !range !322
   %7 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !504
   store i32 %_22, ptr %7, align 4, !dbg !504
   store i8 1, ptr %_0, align 4, !dbg !504
@@ -444,7 +444,7 @@ bb308:                                            ; preds = %start
 
 bb59:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 9) #6, !dbg !509, !range !322
+  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 9) #6, !dbg !509, !range !322
   %11 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !510
   store i32 %_23, ptr %11, align 4, !dbg !510
   store i8 1, ptr %_0, align 4, !dbg !510
@@ -452,17 +452,17 @@ bb59:                                             ; preds = %start
 
 bb61:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !512
+  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !512
   br i1 %_24, label %bb63, label %bb64, !dbg !512
 
 bb65:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !513
+  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !513
   br i1 %_25, label %bb67, label %bb68, !dbg !513
 
 bb69:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !514
+  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !514
   br i1 %_26, label %bb71, label %bb72, !dbg !514
 
 bb73:                                             ; preds = %start
@@ -488,22 +488,22 @@ bb121:                                            ; preds = %start
 
 bb129:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !522
+  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !522
   br i1 %_41, label %bb131, label %bb132, !dbg !522
 
 bb133:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !523
+  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !523
   br i1 %_42, label %bb135, label %bb136, !dbg !523
 
 bb137:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !524
+  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !524
   br i1 %_43, label %bb139, label %bb140, !dbg !524
 
 bb304:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_85 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !525, !range !322
+  %_85 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !525, !range !322
   %12 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !526
   store i32 %_85, ptr %12, align 4, !dbg !526
   store i8 1, ptr %_0, align 4, !dbg !526
@@ -511,19 +511,19 @@ bb304:                                            ; preds = %start
 
 bb309:                                            ; preds = %start
   %13 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !528
-  %14 = load i8, ptr %13, align 1, !dbg !528, !range !368, !noundef !182
+  %14 = load i8, ptr %13, align 1, !dbg !528, !range !369, !noundef !182
   %_86 = trunc i8 %14 to i1, !dbg !528
   br i1 %_86, label %bb310, label %bb311, !dbg !528
 
 bb312:                                            ; preds = %start
   %15 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !529
-  %16 = load i8, ptr %15, align 1, !dbg !529, !range !368, !noundef !182
+  %16 = load i8, ptr %15, align 1, !dbg !529, !range !369, !noundef !182
   %_88 = trunc i8 %16 to i1, !dbg !529
   br i1 %_88, label %bb313, label %bb314, !dbg !529
 
 bb315:                                            ; preds = %start
   %17 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !530
-  %18 = load i8, ptr %17, align 1, !dbg !530, !range !368, !noundef !182
+  %18 = load i8, ptr %17, align 1, !dbg !530, !range !369, !noundef !182
   %_90 = trunc i8 %18 to i1, !dbg !530
   br i1 %_90, label %bb316, label %bb317, !dbg !530
 
@@ -565,12 +565,12 @@ bb213:                                            ; preds = %start
 
 bb221:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !542
+  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !542
   br i1 %_64, label %bb223, label %bb224, !dbg !542
 
 bb225:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_65 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !543, !range !322
+  %_65 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !543, !range !322
   %20 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !544
   store i32 %_65, ptr %20, align 4, !dbg !544
   store i8 1, ptr %_0, align 4, !dbg !544
@@ -578,7 +578,7 @@ bb225:                                            ; preds = %start
 
 bb319:                                            ; preds = %start
   %21 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !546
-  %22 = load i8, ptr %21, align 1, !dbg !546, !range !368, !noundef !182
+  %22 = load i8, ptr %21, align 1, !dbg !546, !range !369, !noundef !182
   %_92 = trunc i8 %22 to i1, !dbg !546
   br i1 %_92, label %bb320, label %bb321, !dbg !546
 
@@ -590,13 +590,13 @@ bb322:                                            ; preds = %start
 
 bb323:                                            ; preds = %start
   %24 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !548
-  %25 = load i8, ptr %24, align 1, !dbg !548, !range !368, !noundef !182
+  %25 = load i8, ptr %24, align 1, !dbg !548, !range !369, !noundef !182
   %_94 = trunc i8 %25 to i1, !dbg !548
   br i1 %_94, label %bb324, label %bb325, !dbg !548
 
 bb227:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !549
+  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !549
   br i1 %_66, label %bb229, label %bb230, !dbg !549
 
 bb231:                                            ; preds = %start
@@ -628,25 +628,25 @@ bb295:                                            ; preds = %start
 
 bb326:                                            ; preds = %start
   %26 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !559
-  %27 = load i8, ptr %26, align 1, !dbg !559, !range !368, !noundef !182
+  %27 = load i8, ptr %26, align 1, !dbg !559, !range !369, !noundef !182
   %_96 = trunc i8 %27 to i1, !dbg !559
   br i1 %_96, label %bb327, label %bb328, !dbg !559
 
 bb329:                                            ; preds = %start
   %28 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !560
-  %29 = load i8, ptr %28, align 1, !dbg !560, !range !368, !noundef !182
+  %29 = load i8, ptr %28, align 1, !dbg !560, !range !369, !noundef !182
   %_98 = trunc i8 %29 to i1, !dbg !560
   br i1 %_98, label %bb330, label %bb331, !dbg !560
 
 bb332:                                            ; preds = %start
   %30 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !561
-  %31 = load i8, ptr %30, align 1, !dbg !561, !range !368, !noundef !182
+  %31 = load i8, ptr %30, align 1, !dbg !561, !range !369, !noundef !182
   %_100 = trunc i8 %31 to i1, !dbg !561
   br i1 %_100, label %bb333, label %bb334, !dbg !561
 
 bb342:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_106 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !562, !range !322
+  %_106 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !562, !range !322
   %32 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !563
   store i32 %_106, ptr %32, align 4, !dbg !563
   store i8 1, ptr %_0, align 4, !dbg !563
@@ -660,13 +660,13 @@ bb303:                                            ; preds = %start
 
 bb335:                                            ; preds = %start
   %34 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !566
-  %35 = load i8, ptr %34, align 1, !dbg !566, !range !368, !noundef !182
+  %35 = load i8, ptr %34, align 1, !dbg !566, !range !369, !noundef !182
   %_102 = trunc i8 %35 to i1, !dbg !566
   br i1 %_102, label %bb336, label %bb337, !dbg !566
 
 bb338:                                            ; preds = %start
   %36 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !567
-  %37 = load i8, ptr %36, align 1, !dbg !567, !range !368, !noundef !182
+  %37 = load i8, ptr %36, align 1, !dbg !567, !range !369, !noundef !182
   %_104 = trunc i8 %37 to i1, !dbg !567
   br i1 %_104, label %bb339, label %bb340, !dbg !567
 
@@ -868,12 +868,12 @@ bb71:                                             ; preds = %bb69
 
 bb77:                                             ; preds = %bb74, %bb73
 ; call pc_keyboard::Modifiers::is_caps
-  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !617
+  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !617
   br i1 %_28, label %bb79, label %bb80, !dbg !617
 
 bb74:                                             ; preds = %bb73
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !618
+  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !618
   br i1 %_27, label %bb76, label %bb77, !dbg !618
 
 bb76:                                             ; preds = %bb74
@@ -896,12 +896,12 @@ bb79:                                             ; preds = %bb77
 
 bb85:                                             ; preds = %bb82, %bb81
 ; call pc_keyboard::Modifiers::is_caps
-  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !624
+  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !624
   br i1 %_30, label %bb87, label %bb88, !dbg !624
 
 bb82:                                             ; preds = %bb81
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !625
+  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !625
   br i1 %_29, label %bb84, label %bb85, !dbg !625
 
 bb84:                                             ; preds = %bb82
@@ -924,12 +924,12 @@ bb87:                                             ; preds = %bb85
 
 bb93:                                             ; preds = %bb90, %bb89
 ; call pc_keyboard::Modifiers::is_caps
-  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !631
+  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !631
   br i1 %_32, label %bb95, label %bb96, !dbg !631
 
 bb90:                                             ; preds = %bb89
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !632
+  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !632
   br i1 %_31, label %bb92, label %bb93, !dbg !632
 
 bb92:                                             ; preds = %bb90
@@ -952,12 +952,12 @@ bb95:                                             ; preds = %bb93
 
 bb101:                                            ; preds = %bb98, %bb97
 ; call pc_keyboard::Modifiers::is_caps
-  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !638
+  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !638
   br i1 %_34, label %bb103, label %bb104, !dbg !638
 
 bb98:                                             ; preds = %bb97
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !639
+  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !639
   br i1 %_33, label %bb100, label %bb101, !dbg !639
 
 bb100:                                            ; preds = %bb98
@@ -980,12 +980,12 @@ bb103:                                            ; preds = %bb101
 
 bb109:                                            ; preds = %bb106, %bb105
 ; call pc_keyboard::Modifiers::is_caps
-  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !645
+  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !645
   br i1 %_36, label %bb111, label %bb112, !dbg !645
 
 bb106:                                            ; preds = %bb105
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !646
+  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !646
   br i1 %_35, label %bb108, label %bb109, !dbg !646
 
 bb108:                                            ; preds = %bb106
@@ -1008,12 +1008,12 @@ bb111:                                            ; preds = %bb109
 
 bb117:                                            ; preds = %bb114, %bb113
 ; call pc_keyboard::Modifiers::is_caps
-  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !652
+  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !652
   br i1 %_38, label %bb119, label %bb120, !dbg !652
 
 bb114:                                            ; preds = %bb113
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !653
+  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !653
   br i1 %_37, label %bb116, label %bb117, !dbg !653
 
 bb116:                                            ; preds = %bb114
@@ -1036,12 +1036,12 @@ bb119:                                            ; preds = %bb117
 
 bb125:                                            ; preds = %bb122, %bb121
 ; call pc_keyboard::Modifiers::is_caps
-  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !659
+  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !659
   br i1 %_40, label %bb127, label %bb128, !dbg !659
 
 bb122:                                            ; preds = %bb121
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !660
+  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !660
   br i1 %_39, label %bb124, label %bb125, !dbg !660
 
 bb124:                                            ; preds = %bb122
@@ -1100,7 +1100,7 @@ bb139:                                            ; preds = %bb137
 
 bb311:                                            ; preds = %bb309
   store i8 32, ptr %_87, align 1, !dbg !675
-  %98 = load i8, ptr %_87, align 1, !dbg !676, !range !423, !noundef !182
+  %98 = load i8, ptr %_87, align 1, !dbg !676, !range !372, !noundef !182
   %99 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !676
   store i8 %98, ptr %99, align 1, !dbg !676
   store i8 0, ptr %_0, align 4, !dbg !676
@@ -1114,7 +1114,7 @@ bb310:                                            ; preds = %bb309
 
 bb314:                                            ; preds = %bb312
   store i8 88, ptr %_89, align 1, !dbg !679
-  %101 = load i8, ptr %_89, align 1, !dbg !680, !range !423, !noundef !182
+  %101 = load i8, ptr %_89, align 1, !dbg !680, !range !372, !noundef !182
   %102 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !680
   store i8 %101, ptr %102, align 1, !dbg !680
   store i8 0, ptr %_0, align 4, !dbg !680
@@ -1128,7 +1128,7 @@ bb313:                                            ; preds = %bb312
 
 bb317:                                            ; preds = %bb315
   store i8 33, ptr %_91, align 1, !dbg !683
-  %104 = load i8, ptr %_91, align 1, !dbg !684, !range !423, !noundef !182
+  %104 = load i8, ptr %_91, align 1, !dbg !684, !range !372, !noundef !182
   %105 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !684
   store i8 %104, ptr %105, align 1, !dbg !684
   store i8 0, ptr %_0, align 4, !dbg !684
@@ -1142,12 +1142,12 @@ bb316:                                            ; preds = %bb315
 
 bb145:                                            ; preds = %bb142, %bb141
 ; call pc_keyboard::Modifiers::is_caps
-  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !687
+  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !687
   br i1 %_45, label %bb147, label %bb148, !dbg !687
 
 bb142:                                            ; preds = %bb141
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !688
+  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !688
   br i1 %_44, label %bb144, label %bb145, !dbg !688
 
 bb144:                                            ; preds = %bb142
@@ -1170,12 +1170,12 @@ bb147:                                            ; preds = %bb145
 
 bb153:                                            ; preds = %bb150, %bb149
 ; call pc_keyboard::Modifiers::is_caps
-  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !694
+  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !694
   br i1 %_47, label %bb155, label %bb156, !dbg !694
 
 bb150:                                            ; preds = %bb149
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !695
+  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !695
   br i1 %_46, label %bb152, label %bb153, !dbg !695
 
 bb152:                                            ; preds = %bb150
@@ -1198,12 +1198,12 @@ bb155:                                            ; preds = %bb153
 
 bb161:                                            ; preds = %bb158, %bb157
 ; call pc_keyboard::Modifiers::is_caps
-  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !701
+  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !701
   br i1 %_49, label %bb163, label %bb164, !dbg !701
 
 bb158:                                            ; preds = %bb157
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !702
+  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !702
   br i1 %_48, label %bb160, label %bb161, !dbg !702
 
 bb160:                                            ; preds = %bb158
@@ -1226,12 +1226,12 @@ bb163:                                            ; preds = %bb161
 
 bb169:                                            ; preds = %bb166, %bb165
 ; call pc_keyboard::Modifiers::is_caps
-  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !708
+  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !708
   br i1 %_51, label %bb171, label %bb172, !dbg !708
 
 bb166:                                            ; preds = %bb165
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !709
+  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !709
   br i1 %_50, label %bb168, label %bb169, !dbg !709
 
 bb168:                                            ; preds = %bb166
@@ -1254,12 +1254,12 @@ bb171:                                            ; preds = %bb169
 
 bb177:                                            ; preds = %bb174, %bb173
 ; call pc_keyboard::Modifiers::is_caps
-  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !715
+  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !715
   br i1 %_53, label %bb179, label %bb180, !dbg !715
 
 bb174:                                            ; preds = %bb173
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !716
+  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !716
   br i1 %_52, label %bb176, label %bb177, !dbg !716
 
 bb176:                                            ; preds = %bb174
@@ -1282,12 +1282,12 @@ bb179:                                            ; preds = %bb177
 
 bb185:                                            ; preds = %bb182, %bb181
 ; call pc_keyboard::Modifiers::is_caps
-  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !722
+  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !722
   br i1 %_55, label %bb187, label %bb188, !dbg !722
 
 bb182:                                            ; preds = %bb181
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !723
+  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !723
   br i1 %_54, label %bb184, label %bb185, !dbg !723
 
 bb184:                                            ; preds = %bb182
@@ -1310,12 +1310,12 @@ bb187:                                            ; preds = %bb185
 
 bb193:                                            ; preds = %bb190, %bb189
 ; call pc_keyboard::Modifiers::is_caps
-  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !729
+  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !729
   br i1 %_57, label %bb195, label %bb196, !dbg !729
 
 bb190:                                            ; preds = %bb189
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !730
+  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !730
   br i1 %_56, label %bb192, label %bb193, !dbg !730
 
 bb192:                                            ; preds = %bb190
@@ -1338,12 +1338,12 @@ bb195:                                            ; preds = %bb193
 
 bb201:                                            ; preds = %bb198, %bb197
 ; call pc_keyboard::Modifiers::is_caps
-  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !736
+  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !736
   br i1 %_59, label %bb203, label %bb204, !dbg !736
 
 bb198:                                            ; preds = %bb197
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !737
+  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !737
   br i1 %_58, label %bb200, label %bb201, !dbg !737
 
 bb200:                                            ; preds = %bb198
@@ -1366,12 +1366,12 @@ bb203:                                            ; preds = %bb201
 
 bb209:                                            ; preds = %bb206, %bb205
 ; call pc_keyboard::Modifiers::is_caps
-  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !743
+  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !743
   br i1 %_61, label %bb211, label %bb212, !dbg !743
 
 bb206:                                            ; preds = %bb205
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !744
+  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !744
   br i1 %_60, label %bb208, label %bb209, !dbg !744
 
 bb208:                                            ; preds = %bb206
@@ -1394,12 +1394,12 @@ bb211:                                            ; preds = %bb209
 
 bb217:                                            ; preds = %bb214, %bb213
 ; call pc_keyboard::Modifiers::is_caps
-  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !750
+  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !750
   br i1 %_63, label %bb219, label %bb220, !dbg !750
 
 bb214:                                            ; preds = %bb213
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !751
+  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !751
   br i1 %_62, label %bb216, label %bb217, !dbg !751
 
 bb216:                                            ; preds = %bb214
@@ -1434,7 +1434,7 @@ bb223:                                            ; preds = %bb221
 
 bb321:                                            ; preds = %bb319
   store i8 101, ptr %_93, align 1, !dbg !760
-  %139 = load i8, ptr %_93, align 1, !dbg !761, !range !423, !noundef !182
+  %139 = load i8, ptr %_93, align 1, !dbg !761, !range !372, !noundef !182
   %140 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !761
   store i8 %139, ptr %140, align 1, !dbg !761
   store i8 0, ptr %_0, align 4, !dbg !761
@@ -1448,7 +1448,7 @@ bb320:                                            ; preds = %bb319
 
 bb325:                                            ; preds = %bb323
   store i8 103, ptr %_95, align 1, !dbg !764
-  %142 = load i8, ptr %_95, align 1, !dbg !765, !range !423, !noundef !182
+  %142 = load i8, ptr %_95, align 1, !dbg !765, !range !372, !noundef !182
   %143 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !765
   store i8 %142, ptr %143, align 1, !dbg !765
   store i8 0, ptr %_0, align 4, !dbg !765
@@ -1474,12 +1474,12 @@ bb229:                                            ; preds = %bb227
 
 bb235:                                            ; preds = %bb232, %bb231
 ; call pc_keyboard::Modifiers::is_caps
-  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !771
+  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !771
   br i1 %_68, label %bb237, label %bb238, !dbg !771
 
 bb232:                                            ; preds = %bb231
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_67 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !772
+  %_67 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !772
   br i1 %_67, label %bb234, label %bb235, !dbg !772
 
 bb234:                                            ; preds = %bb232
@@ -1502,12 +1502,12 @@ bb237:                                            ; preds = %bb235
 
 bb243:                                            ; preds = %bb240, %bb239
 ; call pc_keyboard::Modifiers::is_caps
-  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !778
+  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !778
   br i1 %_70, label %bb245, label %bb246, !dbg !778
 
 bb240:                                            ; preds = %bb239
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !779
+  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !779
   br i1 %_69, label %bb242, label %bb243, !dbg !779
 
 bb242:                                            ; preds = %bb240
@@ -1530,12 +1530,12 @@ bb245:                                            ; preds = %bb243
 
 bb251:                                            ; preds = %bb248, %bb247
 ; call pc_keyboard::Modifiers::is_caps
-  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !785
+  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !785
   br i1 %_72, label %bb253, label %bb254, !dbg !785
 
 bb248:                                            ; preds = %bb247
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !786
+  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !786
   br i1 %_71, label %bb250, label %bb251, !dbg !786
 
 bb250:                                            ; preds = %bb248
@@ -1558,12 +1558,12 @@ bb253:                                            ; preds = %bb251
 
 bb259:                                            ; preds = %bb256, %bb255
 ; call pc_keyboard::Modifiers::is_caps
-  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !792
+  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !792
   br i1 %_74, label %bb261, label %bb262, !dbg !792
 
 bb256:                                            ; preds = %bb255
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !793
+  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !793
   br i1 %_73, label %bb258, label %bb259, !dbg !793
 
 bb258:                                            ; preds = %bb256
@@ -1586,12 +1586,12 @@ bb261:                                            ; preds = %bb259
 
 bb267:                                            ; preds = %bb264, %bb263
 ; call pc_keyboard::Modifiers::is_caps
-  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !799
+  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !799
   br i1 %_76, label %bb269, label %bb270, !dbg !799
 
 bb264:                                            ; preds = %bb263
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !800
+  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !800
   br i1 %_75, label %bb266, label %bb267, !dbg !800
 
 bb266:                                            ; preds = %bb264
@@ -1614,12 +1614,12 @@ bb269:                                            ; preds = %bb267
 
 bb275:                                            ; preds = %bb272, %bb271
 ; call pc_keyboard::Modifiers::is_caps
-  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !806
+  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !806
   br i1 %_78, label %bb277, label %bb278, !dbg !806
 
 bb272:                                            ; preds = %bb271
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !807
+  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !807
   br i1 %_77, label %bb274, label %bb275, !dbg !807
 
 bb274:                                            ; preds = %bb272
@@ -1642,12 +1642,12 @@ bb277:                                            ; preds = %bb275
 
 bb283:                                            ; preds = %bb280, %bb279
 ; call pc_keyboard::Modifiers::is_caps
-  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !813
+  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !813
   br i1 %_80, label %bb285, label %bb286, !dbg !813
 
 bb280:                                            ; preds = %bb279
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !814
+  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !814
   br i1 %_79, label %bb282, label %bb283, !dbg !814
 
 bb282:                                            ; preds = %bb280
@@ -1670,12 +1670,12 @@ bb285:                                            ; preds = %bb283
 
 bb291:                                            ; preds = %bb288, %bb287
 ; call pc_keyboard::Modifiers::is_caps
-  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !820
+  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !820
   br i1 %_82, label %bb293, label %bb294, !dbg !820
 
 bb288:                                            ; preds = %bb287
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_81 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !821
+  %_81 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !821
   br i1 %_81, label %bb290, label %bb291, !dbg !821
 
 bb290:                                            ; preds = %bb288
@@ -1698,12 +1698,12 @@ bb293:                                            ; preds = %bb291
 
 bb299:                                            ; preds = %bb296, %bb295
 ; call pc_keyboard::Modifiers::is_caps
-  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !827
+  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !827
   br i1 %_84, label %bb301, label %bb302, !dbg !827
 
 bb296:                                            ; preds = %bb295
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !828
+  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !828
   br i1 %_83, label %bb298, label %bb299, !dbg !828
 
 bb298:                                            ; preds = %bb296
@@ -1726,7 +1726,7 @@ bb301:                                            ; preds = %bb299
 
 bb328:                                            ; preds = %bb326
   store i8 54, ptr %_97, align 1, !dbg !834
-  %174 = load i8, ptr %_97, align 1, !dbg !835, !range !423, !noundef !182
+  %174 = load i8, ptr %_97, align 1, !dbg !835, !range !372, !noundef !182
   %175 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !835
   store i8 %174, ptr %175, align 1, !dbg !835
   store i8 0, ptr %_0, align 4, !dbg !835
@@ -1740,7 +1740,7 @@ bb327:                                            ; preds = %bb326
 
 bb331:                                            ; preds = %bb329
   store i8 102, ptr %_99, align 1, !dbg !838
-  %177 = load i8, ptr %_99, align 1, !dbg !839, !range !423, !noundef !182
+  %177 = load i8, ptr %_99, align 1, !dbg !839, !range !372, !noundef !182
   %178 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !839
   store i8 %177, ptr %178, align 1, !dbg !839
   store i8 0, ptr %_0, align 4, !dbg !839
@@ -1754,7 +1754,7 @@ bb330:                                            ; preds = %bb329
 
 bb334:                                            ; preds = %bb332
   store i8 55, ptr %_101, align 1, !dbg !842
-  %180 = load i8, ptr %_101, align 1, !dbg !843, !range !423, !noundef !182
+  %180 = load i8, ptr %_101, align 1, !dbg !843, !range !372, !noundef !182
   %181 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !843
   store i8 %180, ptr %181, align 1, !dbg !843
   store i8 0, ptr %_0, align 4, !dbg !843
@@ -1768,7 +1768,7 @@ bb333:                                            ; preds = %bb332
 
 bb337:                                            ; preds = %bb335
   store i8 31, ptr %_103, align 1, !dbg !846
-  %183 = load i8, ptr %_103, align 1, !dbg !847, !range !423, !noundef !182
+  %183 = load i8, ptr %_103, align 1, !dbg !847, !range !372, !noundef !182
   %184 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !847
   store i8 %183, ptr %184, align 1, !dbg !847
   store i8 0, ptr %_0, align 4, !dbg !847
@@ -1782,7 +1782,7 @@ bb336:                                            ; preds = %bb335
 
 bb340:                                            ; preds = %bb338
 ; call <T as core::convert::Into<U>>::into
-  %_105 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !850, !range !322
+  %_105 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !850, !range !322
   %186 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !851
   store i32 %_105, ptr %186, align 4, !dbg !851
   store i8 1, ptr %_0, align 4, !dbg !851
@@ -1797,7 +1797,7 @@ bb339:                                            ; preds = %bb338
 
 ; <pc_keyboard::layouts::dvorak104::Dvorak104Key as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8e0b07937e926c4cE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !854 {
+define i64 @"_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h19673f6f1b406f56E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !854 {
 start:
   %2 = alloca i64, align 8
   %map_to_unicode.dbg.spill = alloca i8, align 1
@@ -1820,11 +1820,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %modifiers.dbg.spill, metadata !865, metadata !DIExpression()), !dbg !879
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl, metadata !866, metadata !DIExpression()), !dbg !880
 ; call <pc_keyboard::HandleControl as core::cmp::PartialEq>::eq
-  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !881
+  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !881
   %4 = zext i1 %map_to_unicode to i8, !dbg !881
   store i8 %4, ptr %map_to_unicode.dbg.spill, align 1, !dbg !881
   call void @llvm.dbg.declare(metadata ptr %map_to_unicode.dbg.spill, metadata !867, metadata !DIExpression()), !dbg !882
-  %_7 = load i8, ptr %keycode, align 1, !dbg !883, !range !423, !noundef !182
+  %_7 = load i8, ptr %keycode, align 1, !dbg !883, !range !372, !noundef !182
   switch i8 %_7, label %bb2 [
     i8 28, label %bb3
     i8 29, label %bb7
@@ -1862,38 +1862,38 @@ start:
   ], !dbg !884
 
 bb2:                                              ; preds = %start
-  %5 = load i8, ptr %handle_ctrl, align 1, !dbg !885, !range !368, !noundef !182
+  %5 = load i8, ptr %handle_ctrl, align 1, !dbg !885, !range !369, !noundef !182
   %_67 = trunc i8 %5 to i1, !dbg !885
-  %6 = load i8, ptr %keycode, align 1, !dbg !886, !range !423, !noundef !182
+  %6 = load i8, ptr %keycode, align 1, !dbg !886, !range !372, !noundef !182
 ; call <pc_keyboard::layouts::us104::Us104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %7 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE"(ptr align 1 %_65, i8 %6, ptr align 1 %modifiers, i1 zeroext %_67) #6, !dbg !886
+  %7 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E"(ptr align 1 %_65, i8 %6, ptr align 1 %modifiers, i1 zeroext %_67) #6, !dbg !886
   store i64 %7, ptr %2, align 8, !dbg !886
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %2, i64 8, i1 false), !dbg !886
   br label %bb231, !dbg !886
 
 bb3:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !887
+  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !887
   br i1 %_8, label %bb5, label %bb6, !dbg !887
 
 bb7:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !888
+  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !888
   br i1 %_9, label %bb9, label %bb10, !dbg !888
 
 bb11:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !889
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !889
   br i1 %_10, label %bb13, label %bb14, !dbg !889
 
 bb15:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !890
+  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !890
   br i1 %_11, label %bb17, label %bb18, !dbg !890
 
 bb19:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !891
+  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !891
   br i1 %_12, label %bb21, label %bb22, !dbg !891
 
 bb23:                                             ; preds = %start
@@ -1919,12 +1919,12 @@ bb71:                                             ; preds = %start
 
 bb79:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !899
+  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !899
   br i1 %_27, label %bb81, label %bb82, !dbg !899
 
 bb83:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !900
+  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !900
   br i1 %_28, label %bb85, label %bb86, !dbg !900
 
 bb87:                                             ; preds = %start
@@ -1956,12 +1956,12 @@ bb151:                                            ; preds = %start
 
 bb159:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !910
+  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !910
   br i1 %_47, label %bb161, label %bb162, !dbg !910
 
 bb163:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !911
+  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !911
   br i1 %_48, label %bb165, label %bb166, !dbg !911
 
 bb167:                                            ; preds = %start
@@ -2054,12 +2054,12 @@ bb21:                                             ; preds = %bb19
 
 bb27:                                             ; preds = %bb24, %bb23
 ; call pc_keyboard::Modifiers::is_caps
-  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !936
+  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !936
   br i1 %_14, label %bb29, label %bb30, !dbg !936
 
 bb24:                                             ; preds = %bb23
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !937
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !937
   br i1 %_13, label %bb26, label %bb27, !dbg !937
 
 bb26:                                             ; preds = %bb24
@@ -2082,12 +2082,12 @@ bb29:                                             ; preds = %bb27
 
 bb35:                                             ; preds = %bb32, %bb31
 ; call pc_keyboard::Modifiers::is_caps
-  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !943
+  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !943
   br i1 %_16, label %bb37, label %bb38, !dbg !943
 
 bb32:                                             ; preds = %bb31
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !944
+  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !944
   br i1 %_15, label %bb34, label %bb35, !dbg !944
 
 bb34:                                             ; preds = %bb32
@@ -2110,12 +2110,12 @@ bb37:                                             ; preds = %bb35
 
 bb43:                                             ; preds = %bb40, %bb39
 ; call pc_keyboard::Modifiers::is_caps
-  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !950
+  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !950
   br i1 %_18, label %bb45, label %bb46, !dbg !950
 
 bb40:                                             ; preds = %bb39
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !951
+  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !951
   br i1 %_17, label %bb42, label %bb43, !dbg !951
 
 bb42:                                             ; preds = %bb40
@@ -2138,12 +2138,12 @@ bb45:                                             ; preds = %bb43
 
 bb51:                                             ; preds = %bb48, %bb47
 ; call pc_keyboard::Modifiers::is_caps
-  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !957
+  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !957
   br i1 %_20, label %bb53, label %bb54, !dbg !957
 
 bb48:                                             ; preds = %bb47
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !958
+  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !958
   br i1 %_19, label %bb50, label %bb51, !dbg !958
 
 bb50:                                             ; preds = %bb48
@@ -2166,12 +2166,12 @@ bb53:                                             ; preds = %bb51
 
 bb59:                                             ; preds = %bb56, %bb55
 ; call pc_keyboard::Modifiers::is_caps
-  %_22 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !964
+  %_22 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !964
   br i1 %_22, label %bb61, label %bb62, !dbg !964
 
 bb56:                                             ; preds = %bb55
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !965
+  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !965
   br i1 %_21, label %bb58, label %bb59, !dbg !965
 
 bb58:                                             ; preds = %bb56
@@ -2194,12 +2194,12 @@ bb61:                                             ; preds = %bb59
 
 bb67:                                             ; preds = %bb64, %bb63
 ; call pc_keyboard::Modifiers::is_caps
-  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !971
+  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !971
   br i1 %_24, label %bb69, label %bb70, !dbg !971
 
 bb64:                                             ; preds = %bb63
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_23 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !972
+  %_23 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !972
   br i1 %_23, label %bb66, label %bb67, !dbg !972
 
 bb66:                                             ; preds = %bb64
@@ -2222,12 +2222,12 @@ bb69:                                             ; preds = %bb67
 
 bb75:                                             ; preds = %bb72, %bb71
 ; call pc_keyboard::Modifiers::is_caps
-  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !978
+  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !978
   br i1 %_26, label %bb77, label %bb78, !dbg !978
 
 bb72:                                             ; preds = %bb71
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !979
+  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !979
   br i1 %_25, label %bb74, label %bb75, !dbg !979
 
 bb74:                                             ; preds = %bb72
@@ -2274,12 +2274,12 @@ bb85:                                             ; preds = %bb83
 
 bb91:                                             ; preds = %bb88, %bb87
 ; call pc_keyboard::Modifiers::is_caps
-  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !991
+  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !991
   br i1 %_30, label %bb93, label %bb94, !dbg !991
 
 bb88:                                             ; preds = %bb87
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !992
+  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !992
   br i1 %_29, label %bb90, label %bb91, !dbg !992
 
 bb90:                                             ; preds = %bb88
@@ -2302,12 +2302,12 @@ bb93:                                             ; preds = %bb91
 
 bb99:                                             ; preds = %bb96, %bb95
 ; call pc_keyboard::Modifiers::is_caps
-  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !998
+  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !998
   br i1 %_32, label %bb101, label %bb102, !dbg !998
 
 bb96:                                             ; preds = %bb95
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !999
+  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !999
   br i1 %_31, label %bb98, label %bb99, !dbg !999
 
 bb98:                                             ; preds = %bb96
@@ -2330,12 +2330,12 @@ bb101:                                            ; preds = %bb99
 
 bb107:                                            ; preds = %bb104, %bb103
 ; call pc_keyboard::Modifiers::is_caps
-  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1005
+  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1005
   br i1 %_34, label %bb109, label %bb110, !dbg !1005
 
 bb104:                                            ; preds = %bb103
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1006
+  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1006
   br i1 %_33, label %bb106, label %bb107, !dbg !1006
 
 bb106:                                            ; preds = %bb104
@@ -2358,12 +2358,12 @@ bb109:                                            ; preds = %bb107
 
 bb115:                                            ; preds = %bb112, %bb111
 ; call pc_keyboard::Modifiers::is_caps
-  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1012
+  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1012
   br i1 %_36, label %bb117, label %bb118, !dbg !1012
 
 bb112:                                            ; preds = %bb111
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1013
+  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1013
   br i1 %_35, label %bb114, label %bb115, !dbg !1013
 
 bb114:                                            ; preds = %bb112
@@ -2386,12 +2386,12 @@ bb117:                                            ; preds = %bb115
 
 bb123:                                            ; preds = %bb120, %bb119
 ; call pc_keyboard::Modifiers::is_caps
-  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1019
+  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1019
   br i1 %_38, label %bb125, label %bb126, !dbg !1019
 
 bb120:                                            ; preds = %bb119
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1020
+  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1020
   br i1 %_37, label %bb122, label %bb123, !dbg !1020
 
 bb122:                                            ; preds = %bb120
@@ -2414,12 +2414,12 @@ bb125:                                            ; preds = %bb123
 
 bb131:                                            ; preds = %bb128, %bb127
 ; call pc_keyboard::Modifiers::is_caps
-  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1026
+  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1026
   br i1 %_40, label %bb133, label %bb134, !dbg !1026
 
 bb128:                                            ; preds = %bb127
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1027
+  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1027
   br i1 %_39, label %bb130, label %bb131, !dbg !1027
 
 bb130:                                            ; preds = %bb128
@@ -2442,12 +2442,12 @@ bb133:                                            ; preds = %bb131
 
 bb139:                                            ; preds = %bb136, %bb135
 ; call pc_keyboard::Modifiers::is_caps
-  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1033
+  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1033
   br i1 %_42, label %bb141, label %bb142, !dbg !1033
 
 bb136:                                            ; preds = %bb135
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1034
+  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1034
   br i1 %_41, label %bb138, label %bb139, !dbg !1034
 
 bb138:                                            ; preds = %bb136
@@ -2470,12 +2470,12 @@ bb141:                                            ; preds = %bb139
 
 bb147:                                            ; preds = %bb144, %bb143
 ; call pc_keyboard::Modifiers::is_caps
-  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1040
+  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1040
   br i1 %_44, label %bb149, label %bb150, !dbg !1040
 
 bb144:                                            ; preds = %bb143
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1041
+  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1041
   br i1 %_43, label %bb146, label %bb147, !dbg !1041
 
 bb146:                                            ; preds = %bb144
@@ -2498,12 +2498,12 @@ bb149:                                            ; preds = %bb147
 
 bb155:                                            ; preds = %bb152, %bb151
 ; call pc_keyboard::Modifiers::is_caps
-  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1047
+  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1047
   br i1 %_46, label %bb157, label %bb158, !dbg !1047
 
 bb152:                                            ; preds = %bb151
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1048
+  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1048
   br i1 %_45, label %bb154, label %bb155, !dbg !1048
 
 bb154:                                            ; preds = %bb152
@@ -2550,12 +2550,12 @@ bb165:                                            ; preds = %bb163
 
 bb171:                                            ; preds = %bb168, %bb167
 ; call pc_keyboard::Modifiers::is_caps
-  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1060
+  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1060
   br i1 %_50, label %bb173, label %bb174, !dbg !1060
 
 bb168:                                            ; preds = %bb167
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1061
+  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1061
   br i1 %_49, label %bb170, label %bb171, !dbg !1061
 
 bb170:                                            ; preds = %bb168
@@ -2578,12 +2578,12 @@ bb173:                                            ; preds = %bb171
 
 bb179:                                            ; preds = %bb176, %bb175
 ; call pc_keyboard::Modifiers::is_caps
-  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1067
+  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1067
   br i1 %_52, label %bb181, label %bb182, !dbg !1067
 
 bb176:                                            ; preds = %bb175
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1068
+  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1068
   br i1 %_51, label %bb178, label %bb179, !dbg !1068
 
 bb178:                                            ; preds = %bb176
@@ -2606,12 +2606,12 @@ bb181:                                            ; preds = %bb179
 
 bb187:                                            ; preds = %bb184, %bb183
 ; call pc_keyboard::Modifiers::is_caps
-  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1074
+  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1074
   br i1 %_54, label %bb189, label %bb190, !dbg !1074
 
 bb184:                                            ; preds = %bb183
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1075
+  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1075
   br i1 %_53, label %bb186, label %bb187, !dbg !1075
 
 bb186:                                            ; preds = %bb184
@@ -2634,12 +2634,12 @@ bb189:                                            ; preds = %bb187
 
 bb195:                                            ; preds = %bb192, %bb191
 ; call pc_keyboard::Modifiers::is_caps
-  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1081
+  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1081
   br i1 %_56, label %bb197, label %bb198, !dbg !1081
 
 bb192:                                            ; preds = %bb191
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1082
+  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1082
   br i1 %_55, label %bb194, label %bb195, !dbg !1082
 
 bb194:                                            ; preds = %bb192
@@ -2662,12 +2662,12 @@ bb197:                                            ; preds = %bb195
 
 bb203:                                            ; preds = %bb200, %bb199
 ; call pc_keyboard::Modifiers::is_caps
-  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1088
+  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1088
   br i1 %_58, label %bb205, label %bb206, !dbg !1088
 
 bb200:                                            ; preds = %bb199
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1089
+  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1089
   br i1 %_57, label %bb202, label %bb203, !dbg !1089
 
 bb202:                                            ; preds = %bb200
@@ -2690,12 +2690,12 @@ bb205:                                            ; preds = %bb203
 
 bb211:                                            ; preds = %bb208, %bb207
 ; call pc_keyboard::Modifiers::is_caps
-  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1095
+  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1095
   br i1 %_60, label %bb213, label %bb214, !dbg !1095
 
 bb208:                                            ; preds = %bb207
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1096
+  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1096
   br i1 %_59, label %bb210, label %bb211, !dbg !1096
 
 bb210:                                            ; preds = %bb208
@@ -2718,12 +2718,12 @@ bb213:                                            ; preds = %bb211
 
 bb219:                                            ; preds = %bb216, %bb215
 ; call pc_keyboard::Modifiers::is_caps
-  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1102
+  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1102
   br i1 %_62, label %bb221, label %bb222, !dbg !1102
 
 bb216:                                            ; preds = %bb215
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1103
+  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1103
   br i1 %_61, label %bb218, label %bb219, !dbg !1103
 
 bb218:                                            ; preds = %bb216
@@ -2746,12 +2746,12 @@ bb221:                                            ; preds = %bb219
 
 bb227:                                            ; preds = %bb224, %bb223
 ; call pc_keyboard::Modifiers::is_caps
-  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1109
+  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1109
   br i1 %_64, label %bb229, label %bb230, !dbg !1109
 
 bb224:                                            ; preds = %bb223
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1110
+  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1110
   br i1 %_63, label %bb226, label %bb227, !dbg !1110
 
 bb226:                                            ; preds = %bb224
@@ -2775,7 +2775,7 @@ bb229:                                            ; preds = %bb227
 
 ; <pc_keyboard::layouts::us104::Us104Key as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !1116 {
+define i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !1116 {
 start:
   %map_to_unicode.dbg.spill = alloca i8, align 1
   %modifiers.dbg.spill = alloca ptr, align 8
@@ -2803,11 +2803,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %modifiers.dbg.spill, metadata !1125, metadata !DIExpression()), !dbg !1134
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl, metadata !1126, metadata !DIExpression()), !dbg !1135
 ; call <pc_keyboard::HandleControl as core::cmp::PartialEq>::eq
-  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !1136
+  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !1136
   %3 = zext i1 %map_to_unicode to i8, !dbg !1136
   store i8 %3, ptr %map_to_unicode.dbg.spill, align 1, !dbg !1136
   call void @llvm.dbg.declare(metadata ptr %map_to_unicode.dbg.spill, metadata !1127, metadata !DIExpression()), !dbg !1137
-  %_7 = load i8, ptr %keycode, align 1, !dbg !1138, !range !423, !noundef !182
+  %_7 = load i8, ptr %keycode, align 1, !dbg !1138, !range !372, !noundef !182
   switch i8 %_7, label %bb2 [
     i8 0, label %bb7
     i8 17, label %bb3
@@ -2881,7 +2881,7 @@ start:
   ], !dbg !1139
 
 bb2:                                              ; preds = %start
-  %4 = load i8, ptr %keycode, align 1, !dbg !1140, !range !423, !noundef !182
+  %4 = load i8, ptr %keycode, align 1, !dbg !1140, !range !372, !noundef !182
   %5 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1140
   store i8 %4, ptr %5, align 1, !dbg !1140
   store i8 0, ptr %_0, align 4, !dbg !1140
@@ -2889,7 +2889,7 @@ bb2:                                              ; preds = %start
 
 bb7:                                              ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_9 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 27) #6, !dbg !1142, !range !322
+  %_9 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 27) #6, !dbg !1142, !range !322
   %6 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1143
   store i32 %_9, ptr %6, align 4, !dbg !1143
   store i8 1, ptr %_0, align 4, !dbg !1143
@@ -2897,72 +2897,72 @@ bb7:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1145
+  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1145
   br i1 %_8, label %bb5, label %bb6, !dbg !1145
 
 bb9:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1146
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1146
   br i1 %_10, label %bb11, label %bb12, !dbg !1146
 
 bb13:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1147
+  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1147
   br i1 %_11, label %bb15, label %bb16, !dbg !1147
 
 bb17:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1148
+  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1148
   br i1 %_12, label %bb19, label %bb20, !dbg !1148
 
 bb21:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1149
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1149
   br i1 %_13, label %bb23, label %bb24, !dbg !1149
 
 bb25:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1150
+  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1150
   br i1 %_14, label %bb27, label %bb28, !dbg !1150
 
 bb29:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1151
+  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1151
   br i1 %_15, label %bb31, label %bb32, !dbg !1151
 
 bb33:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1152
+  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1152
   br i1 %_16, label %bb35, label %bb36, !dbg !1152
 
 bb37:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1153
+  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1153
   br i1 %_17, label %bb39, label %bb40, !dbg !1153
 
 bb41:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1154
+  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1154
   br i1 %_18, label %bb43, label %bb44, !dbg !1154
 
 bb45:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1155
+  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1155
   br i1 %_19, label %bb47, label %bb48, !dbg !1155
 
 bb49:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1156
+  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1156
   br i1 %_20, label %bb51, label %bb52, !dbg !1156
 
 bb53:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1157
+  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1157
   br i1 %_21, label %bb55, label %bb56, !dbg !1157
 
 bb57:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 8) #6, !dbg !1158, !range !322
+  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 8) #6, !dbg !1158, !range !322
   %7 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1159
   store i32 %_22, ptr %7, align 4, !dbg !1159
   store i8 1, ptr %_0, align 4, !dbg !1159
@@ -2988,7 +2988,7 @@ bb308:                                            ; preds = %start
 
 bb59:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 9) #6, !dbg !1164, !range !322
+  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 9) #6, !dbg !1164, !range !322
   %11 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1165
   store i32 %_23, ptr %11, align 4, !dbg !1165
   store i8 1, ptr %_0, align 4, !dbg !1165
@@ -3026,22 +3026,22 @@ bb133:                                            ; preds = %start
 
 bb141:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1177
+  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1177
   br i1 %_44, label %bb143, label %bb144, !dbg !1177
 
 bb145:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1178
+  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1178
   br i1 %_45, label %bb147, label %bb148, !dbg !1178
 
 bb149:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1179
+  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1179
   br i1 %_46, label %bb151, label %bb152, !dbg !1179
 
 bb304:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_85 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !1180, !range !322
+  %_85 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !1180, !range !322
   %12 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1181
   store i32 %_85, ptr %12, align 4, !dbg !1181
   store i8 1, ptr %_0, align 4, !dbg !1181
@@ -3049,19 +3049,19 @@ bb304:                                            ; preds = %start
 
 bb309:                                            ; preds = %start
   %13 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1183
-  %14 = load i8, ptr %13, align 1, !dbg !1183, !range !368, !noundef !182
+  %14 = load i8, ptr %13, align 1, !dbg !1183, !range !369, !noundef !182
   %_86 = trunc i8 %14 to i1, !dbg !1183
   br i1 %_86, label %bb310, label %bb311, !dbg !1183
 
 bb312:                                            ; preds = %start
   %15 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1184
-  %16 = load i8, ptr %15, align 1, !dbg !1184, !range !368, !noundef !182
+  %16 = load i8, ptr %15, align 1, !dbg !1184, !range !369, !noundef !182
   %_88 = trunc i8 %16 to i1, !dbg !1184
   br i1 %_88, label %bb313, label %bb314, !dbg !1184
 
 bb315:                                            ; preds = %start
   %17 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1185
-  %18 = load i8, ptr %17, align 1, !dbg !1185, !range !368, !noundef !182
+  %18 = load i8, ptr %17, align 1, !dbg !1185, !range !369, !noundef !182
   %_90 = trunc i8 %18 to i1, !dbg !1185
   br i1 %_90, label %bb316, label %bb317, !dbg !1185
 
@@ -3100,17 +3100,17 @@ bb217:                                            ; preds = %start
 
 bb225:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_65 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1196
+  %_65 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1196
   br i1 %_65, label %bb227, label %bb228, !dbg !1196
 
 bb229:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1197
+  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1197
   br i1 %_66, label %bb231, label %bb232, !dbg !1197
 
 bb233:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_67 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !1198, !range !322
+  %_67 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !1198, !range !322
   %20 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1199
   store i32 %_67, ptr %20, align 4, !dbg !1199
   store i8 1, ptr %_0, align 4, !dbg !1199
@@ -3118,7 +3118,7 @@ bb233:                                            ; preds = %start
 
 bb319:                                            ; preds = %start
   %21 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1201
-  %22 = load i8, ptr %21, align 1, !dbg !1201, !range !368, !noundef !182
+  %22 = load i8, ptr %21, align 1, !dbg !1201, !range !369, !noundef !182
   %_92 = trunc i8 %22 to i1, !dbg !1201
   br i1 %_92, label %bb320, label %bb321, !dbg !1201
 
@@ -3130,7 +3130,7 @@ bb322:                                            ; preds = %start
 
 bb323:                                            ; preds = %start
   %24 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1203
-  %25 = load i8, ptr %24, align 1, !dbg !1203, !range !368, !noundef !182
+  %25 = load i8, ptr %24, align 1, !dbg !1203, !range !369, !noundef !182
   %_94 = trunc i8 %25 to i1, !dbg !1203
   br i1 %_94, label %bb324, label %bb325, !dbg !1203
 
@@ -3157,40 +3157,40 @@ bb283:                                            ; preds = %start
 
 bb291:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1211
+  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1211
   br i1 %_82, label %bb293, label %bb294, !dbg !1211
 
 bb295:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1212
+  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1212
   br i1 %_83, label %bb297, label %bb298, !dbg !1212
 
 bb299:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1213
+  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1213
   br i1 %_84, label %bb301, label %bb302, !dbg !1213
 
 bb326:                                            ; preds = %start
   %26 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1214
-  %27 = load i8, ptr %26, align 1, !dbg !1214, !range !368, !noundef !182
+  %27 = load i8, ptr %26, align 1, !dbg !1214, !range !369, !noundef !182
   %_96 = trunc i8 %27 to i1, !dbg !1214
   br i1 %_96, label %bb327, label %bb328, !dbg !1214
 
 bb329:                                            ; preds = %start
   %28 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1215
-  %29 = load i8, ptr %28, align 1, !dbg !1215, !range !368, !noundef !182
+  %29 = load i8, ptr %28, align 1, !dbg !1215, !range !369, !noundef !182
   %_98 = trunc i8 %29 to i1, !dbg !1215
   br i1 %_98, label %bb330, label %bb331, !dbg !1215
 
 bb332:                                            ; preds = %start
   %30 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1216
-  %31 = load i8, ptr %30, align 1, !dbg !1216, !range !368, !noundef !182
+  %31 = load i8, ptr %30, align 1, !dbg !1216, !range !369, !noundef !182
   %_100 = trunc i8 %31 to i1, !dbg !1216
   br i1 %_100, label %bb333, label %bb334, !dbg !1216
 
 bb342:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_106 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !1217, !range !322
+  %_106 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !1217, !range !322
   %32 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1218
   store i32 %_106, ptr %32, align 4, !dbg !1218
   store i8 1, ptr %_0, align 4, !dbg !1218
@@ -3204,13 +3204,13 @@ bb303:                                            ; preds = %start
 
 bb335:                                            ; preds = %start
   %34 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1221
-  %35 = load i8, ptr %34, align 1, !dbg !1221, !range !368, !noundef !182
+  %35 = load i8, ptr %34, align 1, !dbg !1221, !range !369, !noundef !182
   %_102 = trunc i8 %35 to i1, !dbg !1221
   br i1 %_102, label %bb336, label %bb337, !dbg !1221
 
 bb338:                                            ; preds = %start
   %36 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1222
-  %37 = load i8, ptr %36, align 1, !dbg !1222, !range !368, !noundef !182
+  %37 = load i8, ptr %36, align 1, !dbg !1222, !range !369, !noundef !182
   %_104 = trunc i8 %37 to i1, !dbg !1222
   br i1 %_104, label %bb339, label %bb340, !dbg !1222
 
@@ -3376,12 +3376,12 @@ bb55:                                             ; preds = %bb53
 
 bb65:                                             ; preds = %bb62, %bb61
 ; call pc_keyboard::Modifiers::is_caps
-  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1263
+  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1263
   br i1 %_25, label %bb67, label %bb68, !dbg !1263
 
 bb62:                                             ; preds = %bb61
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1264
+  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1264
   br i1 %_24, label %bb64, label %bb65, !dbg !1264
 
 bb64:                                             ; preds = %bb62
@@ -3404,12 +3404,12 @@ bb67:                                             ; preds = %bb65
 
 bb73:                                             ; preds = %bb70, %bb69
 ; call pc_keyboard::Modifiers::is_caps
-  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1270
+  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1270
   br i1 %_27, label %bb75, label %bb76, !dbg !1270
 
 bb70:                                             ; preds = %bb69
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1271
+  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1271
   br i1 %_26, label %bb72, label %bb73, !dbg !1271
 
 bb72:                                             ; preds = %bb70
@@ -3432,12 +3432,12 @@ bb75:                                             ; preds = %bb73
 
 bb81:                                             ; preds = %bb78, %bb77
 ; call pc_keyboard::Modifiers::is_caps
-  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1277
+  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1277
   br i1 %_29, label %bb83, label %bb84, !dbg !1277
 
 bb78:                                             ; preds = %bb77
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1278
+  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1278
   br i1 %_28, label %bb80, label %bb81, !dbg !1278
 
 bb80:                                             ; preds = %bb78
@@ -3460,12 +3460,12 @@ bb83:                                             ; preds = %bb81
 
 bb89:                                             ; preds = %bb86, %bb85
 ; call pc_keyboard::Modifiers::is_caps
-  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1284
+  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1284
   br i1 %_31, label %bb91, label %bb92, !dbg !1284
 
 bb86:                                             ; preds = %bb85
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1285
+  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1285
   br i1 %_30, label %bb88, label %bb89, !dbg !1285
 
 bb88:                                             ; preds = %bb86
@@ -3488,12 +3488,12 @@ bb91:                                             ; preds = %bb89
 
 bb97:                                             ; preds = %bb94, %bb93
 ; call pc_keyboard::Modifiers::is_caps
-  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1291
+  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1291
   br i1 %_33, label %bb99, label %bb100, !dbg !1291
 
 bb94:                                             ; preds = %bb93
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1292
+  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1292
   br i1 %_32, label %bb96, label %bb97, !dbg !1292
 
 bb96:                                             ; preds = %bb94
@@ -3516,12 +3516,12 @@ bb99:                                             ; preds = %bb97
 
 bb105:                                            ; preds = %bb102, %bb101
 ; call pc_keyboard::Modifiers::is_caps
-  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1298
+  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1298
   br i1 %_35, label %bb107, label %bb108, !dbg !1298
 
 bb102:                                            ; preds = %bb101
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1299
+  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1299
   br i1 %_34, label %bb104, label %bb105, !dbg !1299
 
 bb104:                                            ; preds = %bb102
@@ -3544,12 +3544,12 @@ bb107:                                            ; preds = %bb105
 
 bb113:                                            ; preds = %bb110, %bb109
 ; call pc_keyboard::Modifiers::is_caps
-  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1305
+  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1305
   br i1 %_37, label %bb115, label %bb116, !dbg !1305
 
 bb110:                                            ; preds = %bb109
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1306
+  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1306
   br i1 %_36, label %bb112, label %bb113, !dbg !1306
 
 bb112:                                            ; preds = %bb110
@@ -3572,12 +3572,12 @@ bb115:                                            ; preds = %bb113
 
 bb121:                                            ; preds = %bb118, %bb117
 ; call pc_keyboard::Modifiers::is_caps
-  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1312
+  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1312
   br i1 %_39, label %bb123, label %bb124, !dbg !1312
 
 bb118:                                            ; preds = %bb117
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1313
+  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1313
   br i1 %_38, label %bb120, label %bb121, !dbg !1313
 
 bb120:                                            ; preds = %bb118
@@ -3600,12 +3600,12 @@ bb123:                                            ; preds = %bb121
 
 bb129:                                            ; preds = %bb126, %bb125
 ; call pc_keyboard::Modifiers::is_caps
-  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1319
+  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1319
   br i1 %_41, label %bb131, label %bb132, !dbg !1319
 
 bb126:                                            ; preds = %bb125
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1320
+  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1320
   br i1 %_40, label %bb128, label %bb129, !dbg !1320
 
 bb128:                                            ; preds = %bb126
@@ -3628,12 +3628,12 @@ bb131:                                            ; preds = %bb129
 
 bb137:                                            ; preds = %bb134, %bb133
 ; call pc_keyboard::Modifiers::is_caps
-  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1326
+  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1326
   br i1 %_43, label %bb139, label %bb140, !dbg !1326
 
 bb134:                                            ; preds = %bb133
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1327
+  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1327
   br i1 %_42, label %bb136, label %bb137, !dbg !1327
 
 bb136:                                            ; preds = %bb134
@@ -3692,7 +3692,7 @@ bb151:                                            ; preds = %bb149
 
 bb311:                                            ; preds = %bb309
   store i8 32, ptr %_87, align 1, !dbg !1342
-  %101 = load i8, ptr %_87, align 1, !dbg !1343, !range !423, !noundef !182
+  %101 = load i8, ptr %_87, align 1, !dbg !1343, !range !372, !noundef !182
   %102 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1343
   store i8 %101, ptr %102, align 1, !dbg !1343
   store i8 0, ptr %_0, align 4, !dbg !1343
@@ -3706,7 +3706,7 @@ bb310:                                            ; preds = %bb309
 
 bb314:                                            ; preds = %bb312
   store i8 88, ptr %_89, align 1, !dbg !1346
-  %104 = load i8, ptr %_89, align 1, !dbg !1347, !range !423, !noundef !182
+  %104 = load i8, ptr %_89, align 1, !dbg !1347, !range !372, !noundef !182
   %105 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1347
   store i8 %104, ptr %105, align 1, !dbg !1347
   store i8 0, ptr %_0, align 4, !dbg !1347
@@ -3720,7 +3720,7 @@ bb313:                                            ; preds = %bb312
 
 bb317:                                            ; preds = %bb315
   store i8 33, ptr %_91, align 1, !dbg !1350
-  %107 = load i8, ptr %_91, align 1, !dbg !1351, !range !423, !noundef !182
+  %107 = load i8, ptr %_91, align 1, !dbg !1351, !range !372, !noundef !182
   %108 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1351
   store i8 %107, ptr %108, align 1, !dbg !1351
   store i8 0, ptr %_0, align 4, !dbg !1351
@@ -3734,12 +3734,12 @@ bb316:                                            ; preds = %bb315
 
 bb157:                                            ; preds = %bb154, %bb153
 ; call pc_keyboard::Modifiers::is_caps
-  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1354
+  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1354
   br i1 %_48, label %bb159, label %bb160, !dbg !1354
 
 bb154:                                            ; preds = %bb153
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1355
+  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1355
   br i1 %_47, label %bb156, label %bb157, !dbg !1355
 
 bb156:                                            ; preds = %bb154
@@ -3762,12 +3762,12 @@ bb159:                                            ; preds = %bb157
 
 bb165:                                            ; preds = %bb162, %bb161
 ; call pc_keyboard::Modifiers::is_caps
-  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1361
+  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1361
   br i1 %_50, label %bb167, label %bb168, !dbg !1361
 
 bb162:                                            ; preds = %bb161
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1362
+  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1362
   br i1 %_49, label %bb164, label %bb165, !dbg !1362
 
 bb164:                                            ; preds = %bb162
@@ -3790,12 +3790,12 @@ bb167:                                            ; preds = %bb165
 
 bb173:                                            ; preds = %bb170, %bb169
 ; call pc_keyboard::Modifiers::is_caps
-  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1368
+  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1368
   br i1 %_52, label %bb175, label %bb176, !dbg !1368
 
 bb170:                                            ; preds = %bb169
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1369
+  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1369
   br i1 %_51, label %bb172, label %bb173, !dbg !1369
 
 bb172:                                            ; preds = %bb170
@@ -3818,12 +3818,12 @@ bb175:                                            ; preds = %bb173
 
 bb181:                                            ; preds = %bb178, %bb177
 ; call pc_keyboard::Modifiers::is_caps
-  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1375
+  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1375
   br i1 %_54, label %bb183, label %bb184, !dbg !1375
 
 bb178:                                            ; preds = %bb177
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1376
+  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1376
   br i1 %_53, label %bb180, label %bb181, !dbg !1376
 
 bb180:                                            ; preds = %bb178
@@ -3846,12 +3846,12 @@ bb183:                                            ; preds = %bb181
 
 bb189:                                            ; preds = %bb186, %bb185
 ; call pc_keyboard::Modifiers::is_caps
-  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1382
+  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1382
   br i1 %_56, label %bb191, label %bb192, !dbg !1382
 
 bb186:                                            ; preds = %bb185
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1383
+  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1383
   br i1 %_55, label %bb188, label %bb189, !dbg !1383
 
 bb188:                                            ; preds = %bb186
@@ -3874,12 +3874,12 @@ bb191:                                            ; preds = %bb189
 
 bb197:                                            ; preds = %bb194, %bb193
 ; call pc_keyboard::Modifiers::is_caps
-  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1389
+  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1389
   br i1 %_58, label %bb199, label %bb200, !dbg !1389
 
 bb194:                                            ; preds = %bb193
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1390
+  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1390
   br i1 %_57, label %bb196, label %bb197, !dbg !1390
 
 bb196:                                            ; preds = %bb194
@@ -3902,12 +3902,12 @@ bb199:                                            ; preds = %bb197
 
 bb205:                                            ; preds = %bb202, %bb201
 ; call pc_keyboard::Modifiers::is_caps
-  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1396
+  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1396
   br i1 %_60, label %bb207, label %bb208, !dbg !1396
 
 bb202:                                            ; preds = %bb201
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1397
+  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1397
   br i1 %_59, label %bb204, label %bb205, !dbg !1397
 
 bb204:                                            ; preds = %bb202
@@ -3930,12 +3930,12 @@ bb207:                                            ; preds = %bb205
 
 bb213:                                            ; preds = %bb210, %bb209
 ; call pc_keyboard::Modifiers::is_caps
-  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1403
+  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1403
   br i1 %_62, label %bb215, label %bb216, !dbg !1403
 
 bb210:                                            ; preds = %bb209
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1404
+  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1404
   br i1 %_61, label %bb212, label %bb213, !dbg !1404
 
 bb212:                                            ; preds = %bb210
@@ -3958,12 +3958,12 @@ bb215:                                            ; preds = %bb213
 
 bb221:                                            ; preds = %bb218, %bb217
 ; call pc_keyboard::Modifiers::is_caps
-  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1410
+  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1410
   br i1 %_64, label %bb223, label %bb224, !dbg !1410
 
 bb218:                                            ; preds = %bb217
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1411
+  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1411
   br i1 %_63, label %bb220, label %bb221, !dbg !1411
 
 bb220:                                            ; preds = %bb218
@@ -4010,7 +4010,7 @@ bb231:                                            ; preds = %bb229
 
 bb321:                                            ; preds = %bb319
   store i8 101, ptr %_93, align 1, !dbg !1423
-  %141 = load i8, ptr %_93, align 1, !dbg !1424, !range !423, !noundef !182
+  %141 = load i8, ptr %_93, align 1, !dbg !1424, !range !372, !noundef !182
   %142 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1424
   store i8 %141, ptr %142, align 1, !dbg !1424
   store i8 0, ptr %_0, align 4, !dbg !1424
@@ -4024,7 +4024,7 @@ bb320:                                            ; preds = %bb319
 
 bb325:                                            ; preds = %bb323
   store i8 103, ptr %_95, align 1, !dbg !1427
-  %144 = load i8, ptr %_95, align 1, !dbg !1428, !range !423, !noundef !182
+  %144 = load i8, ptr %_95, align 1, !dbg !1428, !range !372, !noundef !182
   %145 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1428
   store i8 %144, ptr %145, align 1, !dbg !1428
   store i8 0, ptr %_0, align 4, !dbg !1428
@@ -4038,12 +4038,12 @@ bb324:                                            ; preds = %bb323
 
 bb239:                                            ; preds = %bb236, %bb235
 ; call pc_keyboard::Modifiers::is_caps
-  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1431
+  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1431
   br i1 %_69, label %bb241, label %bb242, !dbg !1431
 
 bb236:                                            ; preds = %bb235
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1432
+  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1432
   br i1 %_68, label %bb238, label %bb239, !dbg !1432
 
 bb238:                                            ; preds = %bb236
@@ -4066,12 +4066,12 @@ bb241:                                            ; preds = %bb239
 
 bb247:                                            ; preds = %bb244, %bb243
 ; call pc_keyboard::Modifiers::is_caps
-  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1438
+  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1438
   br i1 %_71, label %bb249, label %bb250, !dbg !1438
 
 bb244:                                            ; preds = %bb243
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1439
+  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1439
   br i1 %_70, label %bb246, label %bb247, !dbg !1439
 
 bb246:                                            ; preds = %bb244
@@ -4094,12 +4094,12 @@ bb249:                                            ; preds = %bb247
 
 bb255:                                            ; preds = %bb252, %bb251
 ; call pc_keyboard::Modifiers::is_caps
-  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1445
+  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1445
   br i1 %_73, label %bb257, label %bb258, !dbg !1445
 
 bb252:                                            ; preds = %bb251
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1446
+  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1446
   br i1 %_72, label %bb254, label %bb255, !dbg !1446
 
 bb254:                                            ; preds = %bb252
@@ -4122,12 +4122,12 @@ bb257:                                            ; preds = %bb255
 
 bb263:                                            ; preds = %bb260, %bb259
 ; call pc_keyboard::Modifiers::is_caps
-  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1452
+  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1452
   br i1 %_75, label %bb265, label %bb266, !dbg !1452
 
 bb260:                                            ; preds = %bb259
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1453
+  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1453
   br i1 %_74, label %bb262, label %bb263, !dbg !1453
 
 bb262:                                            ; preds = %bb260
@@ -4150,12 +4150,12 @@ bb265:                                            ; preds = %bb263
 
 bb271:                                            ; preds = %bb268, %bb267
 ; call pc_keyboard::Modifiers::is_caps
-  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1459
+  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1459
   br i1 %_77, label %bb273, label %bb274, !dbg !1459
 
 bb268:                                            ; preds = %bb267
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1460
+  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1460
   br i1 %_76, label %bb270, label %bb271, !dbg !1460
 
 bb270:                                            ; preds = %bb268
@@ -4178,12 +4178,12 @@ bb273:                                            ; preds = %bb271
 
 bb279:                                            ; preds = %bb276, %bb275
 ; call pc_keyboard::Modifiers::is_caps
-  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1466
+  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1466
   br i1 %_79, label %bb281, label %bb282, !dbg !1466
 
 bb276:                                            ; preds = %bb275
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1467
+  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1467
   br i1 %_78, label %bb278, label %bb279, !dbg !1467
 
 bb278:                                            ; preds = %bb276
@@ -4206,12 +4206,12 @@ bb281:                                            ; preds = %bb279
 
 bb287:                                            ; preds = %bb284, %bb283
 ; call pc_keyboard::Modifiers::is_caps
-  %_81 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1473
+  %_81 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1473
   br i1 %_81, label %bb289, label %bb290, !dbg !1473
 
 bb284:                                            ; preds = %bb283
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1474
+  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1474
   br i1 %_80, label %bb286, label %bb287, !dbg !1474
 
 bb286:                                            ; preds = %bb284
@@ -4270,7 +4270,7 @@ bb301:                                            ; preds = %bb299
 
 bb328:                                            ; preds = %bb326
   store i8 54, ptr %_97, align 1, !dbg !1489
-  %174 = load i8, ptr %_97, align 1, !dbg !1490, !range !423, !noundef !182
+  %174 = load i8, ptr %_97, align 1, !dbg !1490, !range !372, !noundef !182
   %175 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1490
   store i8 %174, ptr %175, align 1, !dbg !1490
   store i8 0, ptr %_0, align 4, !dbg !1490
@@ -4284,7 +4284,7 @@ bb327:                                            ; preds = %bb326
 
 bb331:                                            ; preds = %bb329
   store i8 102, ptr %_99, align 1, !dbg !1493
-  %177 = load i8, ptr %_99, align 1, !dbg !1494, !range !423, !noundef !182
+  %177 = load i8, ptr %_99, align 1, !dbg !1494, !range !372, !noundef !182
   %178 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1494
   store i8 %177, ptr %178, align 1, !dbg !1494
   store i8 0, ptr %_0, align 4, !dbg !1494
@@ -4298,7 +4298,7 @@ bb330:                                            ; preds = %bb329
 
 bb334:                                            ; preds = %bb332
   store i8 55, ptr %_101, align 1, !dbg !1497
-  %180 = load i8, ptr %_101, align 1, !dbg !1498, !range !423, !noundef !182
+  %180 = load i8, ptr %_101, align 1, !dbg !1498, !range !372, !noundef !182
   %181 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1498
   store i8 %180, ptr %181, align 1, !dbg !1498
   store i8 0, ptr %_0, align 4, !dbg !1498
@@ -4312,7 +4312,7 @@ bb333:                                            ; preds = %bb332
 
 bb337:                                            ; preds = %bb335
   store i8 31, ptr %_103, align 1, !dbg !1501
-  %183 = load i8, ptr %_103, align 1, !dbg !1502, !range !423, !noundef !182
+  %183 = load i8, ptr %_103, align 1, !dbg !1502, !range !372, !noundef !182
   %184 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1502
   store i8 %183, ptr %184, align 1, !dbg !1502
   store i8 0, ptr %_0, align 4, !dbg !1502
@@ -4326,7 +4326,7 @@ bb336:                                            ; preds = %bb335
 
 bb340:                                            ; preds = %bb338
 ; call <T as core::convert::Into<U>>::into
-  %_105 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !1505, !range !322
+  %_105 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !1505, !range !322
   %186 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1506
   store i32 %_105, ptr %186, align 4, !dbg !1506
   store i8 1, ptr %_0, align 4, !dbg !1506
@@ -4341,7 +4341,7 @@ bb339:                                            ; preds = %bb338
 
 ; <pc_keyboard::layouts::uk105::Uk105Key as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17habff44f6a3b6c71dE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !1509 {
+define i64 @"_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8d9900a3d58cf13bE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !1509 {
 start:
   %1 = alloca i64, align 8
   %handle_ctrl.dbg.spill = alloca i8, align 1
@@ -4362,7 +4362,7 @@ start:
   %2 = zext i1 %handle_ctrl to i8, !dbg !1526
   store i8 %2, ptr %handle_ctrl.dbg.spill, align 1, !dbg !1526
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl.dbg.spill, metadata !1521, metadata !DIExpression()), !dbg !1531
-  %_5 = load i8, ptr %keycode, align 1, !dbg !1532, !range !423, !noundef !182
+  %_5 = load i8, ptr %keycode, align 1, !dbg !1532, !range !372, !noundef !182
   switch i8 %_5, label %bb1 [
     i8 17, label %bb2
     i8 19, label %bb8
@@ -4374,53 +4374,53 @@ start:
   ], !dbg !1533
 
 bb1:                                              ; preds = %start
-  %3 = load i8, ptr %keycode, align 1, !dbg !1534, !range !423, !noundef !182
+  %3 = load i8, ptr %keycode, align 1, !dbg !1534, !range !372, !noundef !182
 ; call <pc_keyboard::layouts::us104::Us104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %4 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE"(ptr align 1 %_15, i8 %3, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !1534
+  %4 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E"(ptr align 1 %_15, i8 %3, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !1534
   store i64 %4, ptr %1, align 8, !dbg !1534
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %1, i64 8, i1 false), !dbg !1534
   br label %bb34, !dbg !1534
 
 bb2:                                              ; preds = %start
   %5 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1535
-  %6 = load i8, ptr %5, align 1, !dbg !1535, !range !368, !noundef !182
+  %6 = load i8, ptr %5, align 1, !dbg !1535, !range !369, !noundef !182
   %_6 = trunc i8 %6 to i1, !dbg !1535
   br i1 %_6, label %bb3, label %bb4, !dbg !1535
 
 bb8:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1536
+  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1536
   br i1 %_8, label %bb10, label %bb11, !dbg !1536
 
 bb16:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1537
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1537
   br i1 %_10, label %bb18, label %bb19, !dbg !1537
 
 bb20:                                             ; preds = %start
   %7 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1538
-  %8 = load i8, ptr %7, align 1, !dbg !1538, !range !368, !noundef !182
+  %8 = load i8, ptr %7, align 1, !dbg !1538, !range !369, !noundef !182
   %_11 = trunc i8 %8 to i1, !dbg !1538
   br i1 %_11, label %bb21, label %bb22, !dbg !1538
 
 bb30:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1539
+  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1539
   br i1 %_14, label %bb32, label %bb33, !dbg !1539
 
 bb26:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1540
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1540
   br i1 %_13, label %bb28, label %bb29, !dbg !1540
 
 bb12:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1541
+  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1541
   br i1 %_9, label %bb14, label %bb15, !dbg !1541
 
 bb4:                                              ; preds = %bb2
 ; call pc_keyboard::Modifiers::is_shifted
-  %_7 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1542
+  %_7 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1542
   br i1 %_7, label %bb6, label %bb7, !dbg !1542
 
 bb3:                                              ; preds = %bb2
@@ -4471,7 +4471,7 @@ bb18:                                             ; preds = %bb16
 
 bb22:                                             ; preds = %bb20
 ; call pc_keyboard::Modifiers::is_shifted
-  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1555
+  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1555
   br i1 %_12, label %bb24, label %bb25, !dbg !1555
 
 bb21:                                             ; preds = %bb20
@@ -4531,7 +4531,7 @@ bb14:                                             ; preds = %bb12
 
 ; <pc_keyboard::layouts::jis109::Jis109Key as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h12fbb4c1dbdf6437E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !1570 {
+define i64 @"_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h731b88a7ee49de02E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !1570 {
 start:
   %1 = alloca i64, align 8
   %handle_ctrl.dbg.spill = alloca i8, align 1
@@ -4553,7 +4553,7 @@ start:
   %2 = zext i1 %handle_ctrl to i8, !dbg !1587
   store i8 %2, ptr %handle_ctrl.dbg.spill, align 1, !dbg !1587
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl.dbg.spill, metadata !1582, metadata !DIExpression()), !dbg !1592
-  %_5 = load i8, ptr %keycode, align 1, !dbg !1593, !range !423, !noundef !182
+  %_5 = load i8, ptr %keycode, align 1, !dbg !1593, !range !372, !noundef !182
   switch i8 %_5, label %bb1 [
     i8 0, label %bb3
     i8 17, label %bb2
@@ -4582,16 +4582,16 @@ start:
   ], !dbg !1594
 
 bb1:                                              ; preds = %start
-  %3 = load i8, ptr %keycode, align 1, !dbg !1595, !range !423, !noundef !182
+  %3 = load i8, ptr %keycode, align 1, !dbg !1595, !range !372, !noundef !182
 ; call <pc_keyboard::layouts::us104::Us104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %4 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE"(ptr align 1 %_27, i8 %3, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !1595
+  %4 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E"(ptr align 1 %_27, i8 %3, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !1595
   store i64 %4, ptr %1, align 8, !dbg !1595
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %1, i64 8, i1 false), !dbg !1595
   br label %bb84, !dbg !1595
 
 bb3:                                              ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_7 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 27) #6, !dbg !1596, !range !322
+  %_7 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 27) #6, !dbg !1596, !range !322
   %5 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1597
   store i32 %_7, ptr %5, align 4, !dbg !1597
   store i8 1, ptr %_0, align 4, !dbg !1597
@@ -4599,7 +4599,7 @@ bb3:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
   store i8 17, ptr %_6, align 1, !dbg !1599
-  %6 = load i8, ptr %_6, align 1, !dbg !1600, !range !423, !noundef !182
+  %6 = load i8, ptr %_6, align 1, !dbg !1600, !range !372, !noundef !182
   %7 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1600
   store i8 %6, ptr %7, align 1, !dbg !1600
   store i8 0, ptr %_0, align 4, !dbg !1600
@@ -4607,105 +4607,105 @@ bb2:                                              ; preds = %start
 
 bb5:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1602
+  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1602
   br i1 %_8, label %bb7, label %bb8, !dbg !1602
 
 bb9:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1603
+  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1603
   br i1 %_9, label %bb11, label %bb12, !dbg !1603
 
 bb13:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1604
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1604
   br i1 %_10, label %bb15, label %bb16, !dbg !1604
 
 bb17:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1605
+  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1605
   br i1 %_11, label %bb19, label %bb20, !dbg !1605
 
 bb21:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1606
+  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1606
   br i1 %_12, label %bb23, label %bb24, !dbg !1606
 
 bb25:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1607
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1607
   br i1 %_13, label %bb27, label %bb28, !dbg !1607
 
 bb29:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1608
+  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1608
   br i1 %_14, label %bb31, label %bb32, !dbg !1608
 
 bb33:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1609
+  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1609
   br i1 %_15, label %bb35, label %bb36, !dbg !1609
 
 bb37:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1610
+  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1610
   br i1 %_16, label %bb39, label %bb40, !dbg !1610
 
 bb41:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1611
+  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1611
   br i1 %_17, label %bb43, label %bb44, !dbg !1611
 
 bb45:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1612
+  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1612
   br i1 %_18, label %bb47, label %bb48, !dbg !1612
 
 bb49:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1613
+  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1613
   br i1 %_19, label %bb51, label %bb52, !dbg !1613
 
 bb53:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1614
+  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1614
   br i1 %_20, label %bb55, label %bb56, !dbg !1614
 
 bb57:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1615
+  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1615
   br i1 %_21, label %bb59, label %bb60, !dbg !1615
 
 bb61:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_22 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1616
+  %_22 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1616
   br i1 %_22, label %bb63, label %bb64, !dbg !1616
 
 bb65:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_23 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1617
+  %_23 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1617
   br i1 %_23, label %bb67, label %bb68, !dbg !1617
 
 bb69:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1618
+  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1618
   br i1 %_24, label %bb71, label %bb72, !dbg !1618
 
 bb73:                                             ; preds = %start
-  %8 = load i8, ptr %keycode, align 1, !dbg !1619, !range !423, !noundef !182
+  %8 = load i8, ptr %keycode, align 1, !dbg !1619, !range !372, !noundef !182
   %9 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1619
   store i8 %8, ptr %9, align 1, !dbg !1619
   store i8 0, ptr %_0, align 4, !dbg !1619
   br label %bb84, !dbg !1620
 
 bb74:                                             ; preds = %start
-  %10 = load i8, ptr %keycode, align 1, !dbg !1621, !range !423, !noundef !182
+  %10 = load i8, ptr %keycode, align 1, !dbg !1621, !range !372, !noundef !182
   %11 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1621
   store i8 %10, ptr %11, align 1, !dbg !1621
   store i8 0, ptr %_0, align 4, !dbg !1621
   br label %bb84, !dbg !1622
 
 bb75:                                             ; preds = %start
-  %12 = load i8, ptr %keycode, align 1, !dbg !1623, !range !423, !noundef !182
+  %12 = load i8, ptr %keycode, align 1, !dbg !1623, !range !372, !noundef !182
   %13 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1623
   store i8 %12, ptr %13, align 1, !dbg !1623
   store i8 0, ptr %_0, align 4, !dbg !1623
@@ -4713,12 +4713,12 @@ bb75:                                             ; preds = %start
 
 bb76:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1625
+  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1625
   br i1 %_25, label %bb78, label %bb79, !dbg !1625
 
 bb80:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1626
+  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1626
   br i1 %_26, label %bb82, label %bb83, !dbg !1626
 
 bb84:                                             ; preds = %bb1, %bb82, %bb83, %bb78, %bb79, %bb75, %bb74, %bb73, %bb71, %bb72, %bb67, %bb68, %bb63, %bb64, %bb59, %bb60, %bb55, %bb56, %bb51, %bb52, %bb47, %bb48, %bb43, %bb44, %bb39, %bb40, %bb35, %bb36, %bb31, %bb32, %bb27, %bb28, %bb23, %bb24, %bb19, %bb20, %bb15, %bb16, %bb11, %bb12, %bb7, %bb8, %bb2, %bb3
@@ -4956,7 +4956,7 @@ bb82:                                             ; preds = %bb80
 
 ; <pc_keyboard::layouts::azerty::Azerty as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hacf23695a6cff0bbE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !1685 {
+define i64 @"_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h76a8685bd3a14d9fE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !1685 {
 start:
   %map_to_unicode.dbg.spill = alloca i8, align 1
   %modifiers.dbg.spill = alloca ptr, align 8
@@ -4984,11 +4984,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %modifiers.dbg.spill, metadata !1696, metadata !DIExpression()), !dbg !1705
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl, metadata !1697, metadata !DIExpression()), !dbg !1706
 ; call <pc_keyboard::HandleControl as core::cmp::PartialEq>::eq
-  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !1707
+  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !1707
   %3 = zext i1 %map_to_unicode to i8, !dbg !1707
   store i8 %3, ptr %map_to_unicode.dbg.spill, align 1, !dbg !1707
   call void @llvm.dbg.declare(metadata ptr %map_to_unicode.dbg.spill, metadata !1698, metadata !DIExpression()), !dbg !1708
-  %_7 = load i8, ptr %keycode, align 1, !dbg !1709, !range !423, !noundef !182
+  %_7 = load i8, ptr %keycode, align 1, !dbg !1709, !range !372, !noundef !182
   switch i8 %_7, label %bb2 [
     i8 0, label %bb3
     i8 17, label %bb5
@@ -5064,7 +5064,7 @@ start:
   ], !dbg !1710
 
 bb2:                                              ; preds = %start
-  %4 = load i8, ptr %keycode, align 1, !dbg !1711, !range !423, !noundef !182
+  %4 = load i8, ptr %keycode, align 1, !dbg !1711, !range !372, !noundef !182
   %5 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1711
   store i8 %4, ptr %5, align 1, !dbg !1711
   store i8 0, ptr %_0, align 4, !dbg !1711
@@ -5072,7 +5072,7 @@ bb2:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_8 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 27) #6, !dbg !1713, !range !322
+  %_8 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 27) #6, !dbg !1713, !range !322
   %6 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1714
   store i32 %_8, ptr %6, align 4, !dbg !1714
   store i8 1, ptr %_0, align 4, !dbg !1714
@@ -5086,67 +5086,67 @@ bb5:                                              ; preds = %start
 
 bb10:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1717
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1717
   br i1 %_10, label %bb12, label %bb13, !dbg !1717
 
 bb14:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1718
+  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1718
   br i1 %_11, label %bb16, label %bb17, !dbg !1718
 
 bb20:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1719
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1719
   br i1 %_13, label %bb22, label %bb23, !dbg !1719
 
 bb26:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1720
+  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1720
   br i1 %_15, label %bb28, label %bb29, !dbg !1720
 
 bb32:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1721
+  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1721
   br i1 %_17, label %bb34, label %bb35, !dbg !1721
 
 bb38:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1722
+  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1722
   br i1 %_19, label %bb40, label %bb41, !dbg !1722
 
 bb44:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1723
+  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1723
   br i1 %_21, label %bb46, label %bb47, !dbg !1723
 
 bb50:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_23 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1724
+  %_23 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1724
   br i1 %_23, label %bb52, label %bb53, !dbg !1724
 
 bb56:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1725
+  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1725
   br i1 %_25, label %bb58, label %bb59, !dbg !1725
 
 bb62:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1726
+  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1726
   br i1 %_27, label %bb64, label %bb65, !dbg !1726
 
 bb68:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1727
+  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1727
   br i1 %_29, label %bb70, label %bb71, !dbg !1727
 
 bb74:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1728
+  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1728
   br i1 %_31, label %bb76, label %bb77, !dbg !1728
 
 bb80:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_33 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 8) #6, !dbg !1729, !range !322
+  %_33 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 8) #6, !dbg !1729, !range !322
   %8 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1730
   store i32 %_33, ptr %8, align 4, !dbg !1730
   store i8 1, ptr %_0, align 4, !dbg !1730
@@ -5172,7 +5172,7 @@ bb335:                                            ; preds = %start
 
 bb82:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_34 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 9) #6, !dbg !1735, !range !322
+  %_34 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 9) #6, !dbg !1735, !range !322
   %12 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1736
   store i32 %_34, ptr %12, align 4, !dbg !1736
   store i8 1, ptr %_0, align 4, !dbg !1736
@@ -5210,27 +5210,27 @@ bb156:                                            ; preds = %start
 
 bb164:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1748
+  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1748
   br i1 %_55, label %bb166, label %bb167, !dbg !1748
 
 bb170:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1749
+  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1749
   br i1 %_57, label %bb172, label %bb173, !dbg !1749
 
 bb6:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1750
+  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1750
   br i1 %_9, label %bb8, label %bb9, !dbg !1750
 
 bb176:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1751
+  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1751
   br i1 %_59, label %bb178, label %bb179, !dbg !1751
 
 bb331:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_98 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !1752, !range !322
+  %_98 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !1752, !range !322
   %13 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1753
   store i32 %_98, ptr %13, align 4, !dbg !1753
   store i8 1, ptr %_0, align 4, !dbg !1753
@@ -5238,19 +5238,19 @@ bb331:                                            ; preds = %start
 
 bb336:                                            ; preds = %start
   %14 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1755
-  %15 = load i8, ptr %14, align 1, !dbg !1755, !range !368, !noundef !182
+  %15 = load i8, ptr %14, align 1, !dbg !1755, !range !369, !noundef !182
   %_99 = trunc i8 %15 to i1, !dbg !1755
   br i1 %_99, label %bb337, label %bb338, !dbg !1755
 
 bb339:                                            ; preds = %start
   %16 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1756
-  %17 = load i8, ptr %16, align 1, !dbg !1756, !range !368, !noundef !182
+  %17 = load i8, ptr %16, align 1, !dbg !1756, !range !369, !noundef !182
   %_101 = trunc i8 %17 to i1, !dbg !1756
   br i1 %_101, label %bb340, label %bb341, !dbg !1756
 
 bb342:                                            ; preds = %start
   %18 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1757
-  %19 = load i8, ptr %18, align 1, !dbg !1757, !range !368, !noundef !182
+  %19 = load i8, ptr %18, align 1, !dbg !1757, !range !369, !noundef !182
   %_103 = trunc i8 %19 to i1, !dbg !1757
   br i1 %_103, label %bb343, label %bb344, !dbg !1757
 
@@ -5292,12 +5292,12 @@ bb252:                                            ; preds = %start
 
 bb260:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1769
+  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1769
   br i1 %_80, label %bb262, label %bb263, !dbg !1769
 
 bb264:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_81 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !1770, !range !322
+  %_81 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !1770, !range !322
   %21 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1771
   store i32 %_81, ptr %21, align 4, !dbg !1771
   store i8 1, ptr %_0, align 4, !dbg !1771
@@ -5305,7 +5305,7 @@ bb264:                                            ; preds = %start
 
 bb346:                                            ; preds = %start
   %22 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1773
-  %23 = load i8, ptr %22, align 1, !dbg !1773, !range !368, !noundef !182
+  %23 = load i8, ptr %22, align 1, !dbg !1773, !range !369, !noundef !182
   %_105 = trunc i8 %23 to i1, !dbg !1773
   br i1 %_105, label %bb347, label %bb348, !dbg !1773
 
@@ -5317,7 +5317,7 @@ bb349:                                            ; preds = %start
 
 bb350:                                            ; preds = %start
   %25 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1775
-  %26 = load i8, ptr %25, align 1, !dbg !1775, !range !368, !noundef !182
+  %26 = load i8, ptr %25, align 1, !dbg !1775, !range !369, !noundef !182
   %_107 = trunc i8 %26 to i1, !dbg !1775
   br i1 %_107, label %bb351, label %bb352, !dbg !1775
 
@@ -5347,45 +5347,45 @@ bb306:                                            ; preds = %start
 
 bb314:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_caps
-  %_94 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1783
+  %_94 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1783
   br i1 %_94, label %bb316, label %bb317, !dbg !1783
 
 bb318:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_95 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1784
+  %_95 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1784
   br i1 %_95, label %bb320, label %bb321, !dbg !1784
 
 bb322:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_96 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1785
+  %_96 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1785
   br i1 %_96, label %bb324, label %bb325, !dbg !1785
 
 bb326:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_97 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !1786
+  %_97 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !1786
   br i1 %_97, label %bb328, label %bb329, !dbg !1786
 
 bb353:                                            ; preds = %start
   %28 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1787
-  %29 = load i8, ptr %28, align 1, !dbg !1787, !range !368, !noundef !182
+  %29 = load i8, ptr %28, align 1, !dbg !1787, !range !369, !noundef !182
   %_109 = trunc i8 %29 to i1, !dbg !1787
   br i1 %_109, label %bb354, label %bb355, !dbg !1787
 
 bb356:                                            ; preds = %start
   %30 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1788
-  %31 = load i8, ptr %30, align 1, !dbg !1788, !range !368, !noundef !182
+  %31 = load i8, ptr %30, align 1, !dbg !1788, !range !369, !noundef !182
   %_111 = trunc i8 %31 to i1, !dbg !1788
   br i1 %_111, label %bb357, label %bb358, !dbg !1788
 
 bb359:                                            ; preds = %start
   %32 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1789
-  %33 = load i8, ptr %32, align 1, !dbg !1789, !range !368, !noundef !182
+  %33 = load i8, ptr %32, align 1, !dbg !1789, !range !369, !noundef !182
   %_113 = trunc i8 %33 to i1, !dbg !1789
   br i1 %_113, label %bb360, label %bb361, !dbg !1789
 
 bb369:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_119 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !1790, !range !322
+  %_119 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !1790, !range !322
   %34 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !1791
   store i32 %_119, ptr %34, align 4, !dbg !1791
   store i8 1, ptr %_0, align 4, !dbg !1791
@@ -5399,13 +5399,13 @@ bb330:                                            ; preds = %start
 
 bb362:                                            ; preds = %start
   %36 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1794
-  %37 = load i8, ptr %36, align 1, !dbg !1794, !range !368, !noundef !182
+  %37 = load i8, ptr %36, align 1, !dbg !1794, !range !369, !noundef !182
   %_115 = trunc i8 %37 to i1, !dbg !1794
   br i1 %_115, label %bb363, label %bb364, !dbg !1794
 
 bb365:                                            ; preds = %start
   %38 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !1795
-  %39 = load i8, ptr %38, align 1, !dbg !1795, !range !368, !noundef !182
+  %39 = load i8, ptr %38, align 1, !dbg !1795, !range !369, !noundef !182
   %_117 = trunc i8 %39 to i1, !dbg !1795
   br i1 %_117, label %bb366, label %bb367, !dbg !1795
 
@@ -5427,7 +5427,7 @@ bb12:                                             ; preds = %bb10
 
 bb17:                                             ; preds = %bb14
   %43 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1800
-  %44 = load i8, ptr %43, align 1, !dbg !1800, !range !368, !noundef !182
+  %44 = load i8, ptr %43, align 1, !dbg !1800, !range !369, !noundef !182
   %_12 = trunc i8 %44 to i1, !dbg !1800
   br i1 %_12, label %bb18, label %bb19, !dbg !1800
 
@@ -5451,7 +5451,7 @@ bb18:                                             ; preds = %bb17
 
 bb23:                                             ; preds = %bb20
   %48 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1806
-  %49 = load i8, ptr %48, align 1, !dbg !1806, !range !368, !noundef !182
+  %49 = load i8, ptr %48, align 1, !dbg !1806, !range !369, !noundef !182
   %_14 = trunc i8 %49 to i1, !dbg !1806
   br i1 %_14, label %bb24, label %bb25, !dbg !1806
 
@@ -5475,7 +5475,7 @@ bb24:                                             ; preds = %bb23
 
 bb29:                                             ; preds = %bb26
   %53 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1812
-  %54 = load i8, ptr %53, align 1, !dbg !1812, !range !368, !noundef !182
+  %54 = load i8, ptr %53, align 1, !dbg !1812, !range !369, !noundef !182
   %_16 = trunc i8 %54 to i1, !dbg !1812
   br i1 %_16, label %bb30, label %bb31, !dbg !1812
 
@@ -5499,7 +5499,7 @@ bb30:                                             ; preds = %bb29
 
 bb35:                                             ; preds = %bb32
   %58 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1818
-  %59 = load i8, ptr %58, align 1, !dbg !1818, !range !368, !noundef !182
+  %59 = load i8, ptr %58, align 1, !dbg !1818, !range !369, !noundef !182
   %_18 = trunc i8 %59 to i1, !dbg !1818
   br i1 %_18, label %bb36, label %bb37, !dbg !1818
 
@@ -5523,7 +5523,7 @@ bb36:                                             ; preds = %bb35
 
 bb41:                                             ; preds = %bb38
   %63 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1824
-  %64 = load i8, ptr %63, align 1, !dbg !1824, !range !368, !noundef !182
+  %64 = load i8, ptr %63, align 1, !dbg !1824, !range !369, !noundef !182
   %_20 = trunc i8 %64 to i1, !dbg !1824
   br i1 %_20, label %bb42, label %bb43, !dbg !1824
 
@@ -5547,7 +5547,7 @@ bb42:                                             ; preds = %bb41
 
 bb47:                                             ; preds = %bb44
   %68 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1830
-  %69 = load i8, ptr %68, align 1, !dbg !1830, !range !368, !noundef !182
+  %69 = load i8, ptr %68, align 1, !dbg !1830, !range !369, !noundef !182
   %_22 = trunc i8 %69 to i1, !dbg !1830
   br i1 %_22, label %bb48, label %bb49, !dbg !1830
 
@@ -5571,7 +5571,7 @@ bb48:                                             ; preds = %bb47
 
 bb53:                                             ; preds = %bb50
   %73 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1836
-  %74 = load i8, ptr %73, align 1, !dbg !1836, !range !368, !noundef !182
+  %74 = load i8, ptr %73, align 1, !dbg !1836, !range !369, !noundef !182
   %_24 = trunc i8 %74 to i1, !dbg !1836
   br i1 %_24, label %bb54, label %bb55, !dbg !1836
 
@@ -5595,7 +5595,7 @@ bb54:                                             ; preds = %bb53
 
 bb59:                                             ; preds = %bb56
   %78 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1842
-  %79 = load i8, ptr %78, align 1, !dbg !1842, !range !368, !noundef !182
+  %79 = load i8, ptr %78, align 1, !dbg !1842, !range !369, !noundef !182
   %_26 = trunc i8 %79 to i1, !dbg !1842
   br i1 %_26, label %bb60, label %bb61, !dbg !1842
 
@@ -5619,7 +5619,7 @@ bb60:                                             ; preds = %bb59
 
 bb65:                                             ; preds = %bb62
   %83 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1848
-  %84 = load i8, ptr %83, align 1, !dbg !1848, !range !368, !noundef !182
+  %84 = load i8, ptr %83, align 1, !dbg !1848, !range !369, !noundef !182
   %_28 = trunc i8 %84 to i1, !dbg !1848
   br i1 %_28, label %bb66, label %bb67, !dbg !1848
 
@@ -5643,7 +5643,7 @@ bb66:                                             ; preds = %bb65
 
 bb71:                                             ; preds = %bb68
   %88 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1854
-  %89 = load i8, ptr %88, align 1, !dbg !1854, !range !368, !noundef !182
+  %89 = load i8, ptr %88, align 1, !dbg !1854, !range !369, !noundef !182
   %_30 = trunc i8 %89 to i1, !dbg !1854
   br i1 %_30, label %bb72, label %bb73, !dbg !1854
 
@@ -5667,7 +5667,7 @@ bb72:                                             ; preds = %bb71
 
 bb77:                                             ; preds = %bb74
   %93 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1860
-  %94 = load i8, ptr %93, align 1, !dbg !1860, !range !368, !noundef !182
+  %94 = load i8, ptr %93, align 1, !dbg !1860, !range !369, !noundef !182
   %_32 = trunc i8 %94 to i1, !dbg !1860
   br i1 %_32, label %bb78, label %bb79, !dbg !1860
 
@@ -5691,12 +5691,12 @@ bb78:                                             ; preds = %bb77
 
 bb88:                                             ; preds = %bb85, %bb84
 ; call pc_keyboard::Modifiers::is_caps
-  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1866
+  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1866
   br i1 %_36, label %bb90, label %bb91, !dbg !1866
 
 bb85:                                             ; preds = %bb84
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1867
+  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1867
   br i1 %_35, label %bb87, label %bb88, !dbg !1867
 
 bb87:                                             ; preds = %bb85
@@ -5719,12 +5719,12 @@ bb90:                                             ; preds = %bb88
 
 bb96:                                             ; preds = %bb93, %bb92
 ; call pc_keyboard::Modifiers::is_caps
-  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1873
+  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1873
   br i1 %_38, label %bb98, label %bb99, !dbg !1873
 
 bb93:                                             ; preds = %bb92
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1874
+  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1874
   br i1 %_37, label %bb95, label %bb96, !dbg !1874
 
 bb95:                                             ; preds = %bb93
@@ -5747,12 +5747,12 @@ bb98:                                             ; preds = %bb96
 
 bb104:                                            ; preds = %bb101, %bb100
 ; call pc_keyboard::Modifiers::is_caps
-  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1880
+  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1880
   br i1 %_40, label %bb106, label %bb107, !dbg !1880
 
 bb101:                                            ; preds = %bb100
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1881
+  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1881
   br i1 %_39, label %bb103, label %bb104, !dbg !1881
 
 bb103:                                            ; preds = %bb101
@@ -5775,12 +5775,12 @@ bb106:                                            ; preds = %bb104
 
 bb112:                                            ; preds = %bb109, %bb108
 ; call pc_keyboard::Modifiers::is_caps
-  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1887
+  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1887
   br i1 %_42, label %bb114, label %bb115, !dbg !1887
 
 bb109:                                            ; preds = %bb108
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1888
+  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1888
   br i1 %_41, label %bb111, label %bb112, !dbg !1888
 
 bb111:                                            ; preds = %bb109
@@ -5803,12 +5803,12 @@ bb114:                                            ; preds = %bb112
 
 bb120:                                            ; preds = %bb117, %bb116
 ; call pc_keyboard::Modifiers::is_caps
-  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1894
+  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1894
   br i1 %_44, label %bb122, label %bb123, !dbg !1894
 
 bb117:                                            ; preds = %bb116
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1895
+  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1895
   br i1 %_43, label %bb119, label %bb120, !dbg !1895
 
 bb119:                                            ; preds = %bb117
@@ -5831,12 +5831,12 @@ bb122:                                            ; preds = %bb120
 
 bb128:                                            ; preds = %bb125, %bb124
 ; call pc_keyboard::Modifiers::is_caps
-  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1901
+  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1901
   br i1 %_46, label %bb130, label %bb131, !dbg !1901
 
 bb125:                                            ; preds = %bb124
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1902
+  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1902
   br i1 %_45, label %bb127, label %bb128, !dbg !1902
 
 bb127:                                            ; preds = %bb125
@@ -5859,12 +5859,12 @@ bb130:                                            ; preds = %bb128
 
 bb136:                                            ; preds = %bb133, %bb132
 ; call pc_keyboard::Modifiers::is_caps
-  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1908
+  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1908
   br i1 %_48, label %bb138, label %bb139, !dbg !1908
 
 bb133:                                            ; preds = %bb132
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1909
+  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1909
   br i1 %_47, label %bb135, label %bb136, !dbg !1909
 
 bb135:                                            ; preds = %bb133
@@ -5887,12 +5887,12 @@ bb138:                                            ; preds = %bb136
 
 bb144:                                            ; preds = %bb141, %bb140
 ; call pc_keyboard::Modifiers::is_caps
-  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1915
+  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1915
   br i1 %_50, label %bb146, label %bb147, !dbg !1915
 
 bb141:                                            ; preds = %bb140
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1916
+  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1916
   br i1 %_49, label %bb143, label %bb144, !dbg !1916
 
 bb143:                                            ; preds = %bb141
@@ -5915,12 +5915,12 @@ bb146:                                            ; preds = %bb144
 
 bb152:                                            ; preds = %bb149, %bb148
 ; call pc_keyboard::Modifiers::is_caps
-  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1922
+  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1922
   br i1 %_52, label %bb154, label %bb155, !dbg !1922
 
 bb149:                                            ; preds = %bb148
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1923
+  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1923
   br i1 %_51, label %bb151, label %bb152, !dbg !1923
 
 bb151:                                            ; preds = %bb149
@@ -5943,12 +5943,12 @@ bb154:                                            ; preds = %bb152
 
 bb160:                                            ; preds = %bb157, %bb156
 ; call pc_keyboard::Modifiers::is_caps
-  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1929
+  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1929
   br i1 %_54, label %bb162, label %bb163, !dbg !1929
 
 bb157:                                            ; preds = %bb156
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1930
+  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1930
   br i1 %_53, label %bb159, label %bb160, !dbg !1930
 
 bb159:                                            ; preds = %bb157
@@ -5971,7 +5971,7 @@ bb162:                                            ; preds = %bb160
 
 bb167:                                            ; preds = %bb164
   %128 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1936
-  %129 = load i8, ptr %128, align 1, !dbg !1936, !range !368, !noundef !182
+  %129 = load i8, ptr %128, align 1, !dbg !1936, !range !369, !noundef !182
   %_56 = trunc i8 %129 to i1, !dbg !1936
   br i1 %_56, label %bb168, label %bb169, !dbg !1936
 
@@ -5995,7 +5995,7 @@ bb168:                                            ; preds = %bb167
 
 bb173:                                            ; preds = %bb170
   %133 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !1942
-  %134 = load i8, ptr %133, align 1, !dbg !1942, !range !368, !noundef !182
+  %134 = load i8, ptr %133, align 1, !dbg !1942, !range !369, !noundef !182
   %_58 = trunc i8 %134 to i1, !dbg !1942
   br i1 %_58, label %bb174, label %bb175, !dbg !1942
 
@@ -6043,7 +6043,7 @@ bb178:                                            ; preds = %bb176
 
 bb338:                                            ; preds = %bb336
   store i8 32, ptr %_100, align 1, !dbg !1954
-  %142 = load i8, ptr %_100, align 1, !dbg !1955, !range !423, !noundef !182
+  %142 = load i8, ptr %_100, align 1, !dbg !1955, !range !372, !noundef !182
   %143 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1955
   store i8 %142, ptr %143, align 1, !dbg !1955
   store i8 0, ptr %_0, align 4, !dbg !1955
@@ -6057,7 +6057,7 @@ bb337:                                            ; preds = %bb336
 
 bb341:                                            ; preds = %bb339
   store i8 88, ptr %_102, align 1, !dbg !1958
-  %145 = load i8, ptr %_102, align 1, !dbg !1959, !range !423, !noundef !182
+  %145 = load i8, ptr %_102, align 1, !dbg !1959, !range !372, !noundef !182
   %146 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1959
   store i8 %145, ptr %146, align 1, !dbg !1959
   store i8 0, ptr %_0, align 4, !dbg !1959
@@ -6071,7 +6071,7 @@ bb340:                                            ; preds = %bb339
 
 bb344:                                            ; preds = %bb342
   store i8 33, ptr %_104, align 1, !dbg !1962
-  %148 = load i8, ptr %_104, align 1, !dbg !1963, !range !423, !noundef !182
+  %148 = load i8, ptr %_104, align 1, !dbg !1963, !range !372, !noundef !182
   %149 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !1963
   store i8 %148, ptr %149, align 1, !dbg !1963
   store i8 0, ptr %_0, align 4, !dbg !1963
@@ -6085,12 +6085,12 @@ bb343:                                            ; preds = %bb342
 
 bb184:                                            ; preds = %bb181, %bb180
 ; call pc_keyboard::Modifiers::is_caps
-  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1966
+  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1966
   br i1 %_61, label %bb186, label %bb187, !dbg !1966
 
 bb181:                                            ; preds = %bb180
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1967
+  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1967
   br i1 %_60, label %bb183, label %bb184, !dbg !1967
 
 bb183:                                            ; preds = %bb181
@@ -6113,12 +6113,12 @@ bb186:                                            ; preds = %bb184
 
 bb192:                                            ; preds = %bb189, %bb188
 ; call pc_keyboard::Modifiers::is_caps
-  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1973
+  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1973
   br i1 %_63, label %bb194, label %bb195, !dbg !1973
 
 bb189:                                            ; preds = %bb188
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1974
+  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1974
   br i1 %_62, label %bb191, label %bb192, !dbg !1974
 
 bb191:                                            ; preds = %bb189
@@ -6141,12 +6141,12 @@ bb194:                                            ; preds = %bb192
 
 bb200:                                            ; preds = %bb197, %bb196
 ; call pc_keyboard::Modifiers::is_caps
-  %_65 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1980
+  %_65 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1980
   br i1 %_65, label %bb202, label %bb203, !dbg !1980
 
 bb197:                                            ; preds = %bb196
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1981
+  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1981
   br i1 %_64, label %bb199, label %bb200, !dbg !1981
 
 bb199:                                            ; preds = %bb197
@@ -6169,12 +6169,12 @@ bb202:                                            ; preds = %bb200
 
 bb208:                                            ; preds = %bb205, %bb204
 ; call pc_keyboard::Modifiers::is_caps
-  %_67 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1987
+  %_67 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1987
   br i1 %_67, label %bb210, label %bb211, !dbg !1987
 
 bb205:                                            ; preds = %bb204
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1988
+  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1988
   br i1 %_66, label %bb207, label %bb208, !dbg !1988
 
 bb207:                                            ; preds = %bb205
@@ -6197,12 +6197,12 @@ bb210:                                            ; preds = %bb208
 
 bb216:                                            ; preds = %bb213, %bb212
 ; call pc_keyboard::Modifiers::is_caps
-  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !1994
+  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !1994
   br i1 %_69, label %bb218, label %bb219, !dbg !1994
 
 bb213:                                            ; preds = %bb212
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !1995
+  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !1995
   br i1 %_68, label %bb215, label %bb216, !dbg !1995
 
 bb215:                                            ; preds = %bb213
@@ -6225,12 +6225,12 @@ bb218:                                            ; preds = %bb216
 
 bb224:                                            ; preds = %bb221, %bb220
 ; call pc_keyboard::Modifiers::is_caps
-  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2001
+  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2001
   br i1 %_71, label %bb226, label %bb227, !dbg !2001
 
 bb221:                                            ; preds = %bb220
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2002
+  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2002
   br i1 %_70, label %bb223, label %bb224, !dbg !2002
 
 bb223:                                            ; preds = %bb221
@@ -6253,12 +6253,12 @@ bb226:                                            ; preds = %bb224
 
 bb232:                                            ; preds = %bb229, %bb228
 ; call pc_keyboard::Modifiers::is_caps
-  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2008
+  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2008
   br i1 %_73, label %bb234, label %bb235, !dbg !2008
 
 bb229:                                            ; preds = %bb228
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2009
+  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2009
   br i1 %_72, label %bb231, label %bb232, !dbg !2009
 
 bb231:                                            ; preds = %bb229
@@ -6281,12 +6281,12 @@ bb234:                                            ; preds = %bb232
 
 bb240:                                            ; preds = %bb237, %bb236
 ; call pc_keyboard::Modifiers::is_caps
-  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2015
+  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2015
   br i1 %_75, label %bb242, label %bb243, !dbg !2015
 
 bb237:                                            ; preds = %bb236
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2016
+  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2016
   br i1 %_74, label %bb239, label %bb240, !dbg !2016
 
 bb239:                                            ; preds = %bb237
@@ -6309,12 +6309,12 @@ bb242:                                            ; preds = %bb240
 
 bb248:                                            ; preds = %bb245, %bb244
 ; call pc_keyboard::Modifiers::is_caps
-  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2022
+  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2022
   br i1 %_77, label %bb250, label %bb251, !dbg !2022
 
 bb245:                                            ; preds = %bb244
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2023
+  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2023
   br i1 %_76, label %bb247, label %bb248, !dbg !2023
 
 bb247:                                            ; preds = %bb245
@@ -6337,12 +6337,12 @@ bb250:                                            ; preds = %bb248
 
 bb256:                                            ; preds = %bb253, %bb252
 ; call pc_keyboard::Modifiers::is_caps
-  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2029
+  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2029
   br i1 %_79, label %bb258, label %bb259, !dbg !2029
 
 bb253:                                            ; preds = %bb252
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2030
+  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2030
   br i1 %_78, label %bb255, label %bb256, !dbg !2030
 
 bb255:                                            ; preds = %bb253
@@ -6377,7 +6377,7 @@ bb262:                                            ; preds = %bb260
 
 bb348:                                            ; preds = %bb346
   store i8 101, ptr %_106, align 1, !dbg !2039
-  %183 = load i8, ptr %_106, align 1, !dbg !2040, !range !423, !noundef !182
+  %183 = load i8, ptr %_106, align 1, !dbg !2040, !range !372, !noundef !182
   %184 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2040
   store i8 %183, ptr %184, align 1, !dbg !2040
   store i8 0, ptr %_0, align 4, !dbg !2040
@@ -6391,7 +6391,7 @@ bb347:                                            ; preds = %bb346
 
 bb352:                                            ; preds = %bb350
   store i8 103, ptr %_108, align 1, !dbg !2043
-  %186 = load i8, ptr %_108, align 1, !dbg !2044, !range !423, !noundef !182
+  %186 = load i8, ptr %_108, align 1, !dbg !2044, !range !372, !noundef !182
   %187 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2044
   store i8 %186, ptr %187, align 1, !dbg !2044
   store i8 0, ptr %_0, align 4, !dbg !2044
@@ -6405,12 +6405,12 @@ bb351:                                            ; preds = %bb350
 
 bb270:                                            ; preds = %bb267, %bb266
 ; call pc_keyboard::Modifiers::is_caps
-  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2047
+  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2047
   br i1 %_83, label %bb272, label %bb273, !dbg !2047
 
 bb267:                                            ; preds = %bb266
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2048
+  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2048
   br i1 %_82, label %bb269, label %bb270, !dbg !2048
 
 bb269:                                            ; preds = %bb267
@@ -6433,12 +6433,12 @@ bb272:                                            ; preds = %bb270
 
 bb278:                                            ; preds = %bb275, %bb274
 ; call pc_keyboard::Modifiers::is_caps
-  %_85 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2054
+  %_85 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2054
   br i1 %_85, label %bb280, label %bb281, !dbg !2054
 
 bb275:                                            ; preds = %bb274
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2055
+  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2055
   br i1 %_84, label %bb277, label %bb278, !dbg !2055
 
 bb277:                                            ; preds = %bb275
@@ -6461,12 +6461,12 @@ bb280:                                            ; preds = %bb278
 
 bb286:                                            ; preds = %bb283, %bb282
 ; call pc_keyboard::Modifiers::is_caps
-  %_87 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2061
+  %_87 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2061
   br i1 %_87, label %bb288, label %bb289, !dbg !2061
 
 bb283:                                            ; preds = %bb282
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_86 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2062
+  %_86 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2062
   br i1 %_86, label %bb285, label %bb286, !dbg !2062
 
 bb285:                                            ; preds = %bb283
@@ -6489,12 +6489,12 @@ bb288:                                            ; preds = %bb286
 
 bb294:                                            ; preds = %bb291, %bb290
 ; call pc_keyboard::Modifiers::is_caps
-  %_89 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2068
+  %_89 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2068
   br i1 %_89, label %bb296, label %bb297, !dbg !2068
 
 bb291:                                            ; preds = %bb290
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_88 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2069
+  %_88 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2069
   br i1 %_88, label %bb293, label %bb294, !dbg !2069
 
 bb293:                                            ; preds = %bb291
@@ -6517,12 +6517,12 @@ bb296:                                            ; preds = %bb294
 
 bb302:                                            ; preds = %bb299, %bb298
 ; call pc_keyboard::Modifiers::is_caps
-  %_91 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2075
+  %_91 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2075
   br i1 %_91, label %bb304, label %bb305, !dbg !2075
 
 bb299:                                            ; preds = %bb298
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_90 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2076
+  %_90 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2076
   br i1 %_90, label %bb301, label %bb302, !dbg !2076
 
 bb301:                                            ; preds = %bb299
@@ -6545,12 +6545,12 @@ bb304:                                            ; preds = %bb302
 
 bb310:                                            ; preds = %bb307, %bb306
 ; call pc_keyboard::Modifiers::is_caps
-  %_93 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2082
+  %_93 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2082
   br i1 %_93, label %bb312, label %bb313, !dbg !2082
 
 bb307:                                            ; preds = %bb306
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_92 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2083
+  %_92 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2083
   br i1 %_92, label %bb309, label %bb310, !dbg !2083
 
 bb309:                                            ; preds = %bb307
@@ -6621,7 +6621,7 @@ bb328:                                            ; preds = %bb326
 
 bb355:                                            ; preds = %bb353
   store i8 54, ptr %_110, align 1, !dbg !2101
-  %215 = load i8, ptr %_110, align 1, !dbg !2102, !range !423, !noundef !182
+  %215 = load i8, ptr %_110, align 1, !dbg !2102, !range !372, !noundef !182
   %216 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2102
   store i8 %215, ptr %216, align 1, !dbg !2102
   store i8 0, ptr %_0, align 4, !dbg !2102
@@ -6635,7 +6635,7 @@ bb354:                                            ; preds = %bb353
 
 bb358:                                            ; preds = %bb356
   store i8 102, ptr %_112, align 1, !dbg !2105
-  %218 = load i8, ptr %_112, align 1, !dbg !2106, !range !423, !noundef !182
+  %218 = load i8, ptr %_112, align 1, !dbg !2106, !range !372, !noundef !182
   %219 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2106
   store i8 %218, ptr %219, align 1, !dbg !2106
   store i8 0, ptr %_0, align 4, !dbg !2106
@@ -6649,7 +6649,7 @@ bb357:                                            ; preds = %bb356
 
 bb361:                                            ; preds = %bb359
   store i8 55, ptr %_114, align 1, !dbg !2109
-  %221 = load i8, ptr %_114, align 1, !dbg !2110, !range !423, !noundef !182
+  %221 = load i8, ptr %_114, align 1, !dbg !2110, !range !372, !noundef !182
   %222 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2110
   store i8 %221, ptr %222, align 1, !dbg !2110
   store i8 0, ptr %_0, align 4, !dbg !2110
@@ -6663,7 +6663,7 @@ bb360:                                            ; preds = %bb359
 
 bb364:                                            ; preds = %bb362
   store i8 31, ptr %_116, align 1, !dbg !2113
-  %224 = load i8, ptr %_116, align 1, !dbg !2114, !range !423, !noundef !182
+  %224 = load i8, ptr %_116, align 1, !dbg !2114, !range !372, !noundef !182
   %225 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2114
   store i8 %224, ptr %225, align 1, !dbg !2114
   store i8 0, ptr %_0, align 4, !dbg !2114
@@ -6677,7 +6677,7 @@ bb363:                                            ; preds = %bb362
 
 bb367:                                            ; preds = %bb365
 ; call <T as core::convert::Into<U>>::into
-  %_118 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !2117, !range !322
+  %_118 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !2117, !range !322
   %227 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2118
   store i32 %_118, ptr %227, align 4, !dbg !2118
   store i8 1, ptr %_0, align 4, !dbg !2118
@@ -6692,7 +6692,7 @@ bb366:                                            ; preds = %bb365
 
 ; <pc_keyboard::layouts::colemak::Colemak as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17heff68b73dd06292eE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !2121 {
+define i64 @"_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h65d494e461fef24dE"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !2121 {
 start:
   %map_to_unicode.dbg.spill = alloca i8, align 1
   %modifiers.dbg.spill = alloca ptr, align 8
@@ -6720,11 +6720,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %modifiers.dbg.spill, metadata !2132, metadata !DIExpression()), !dbg !2141
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl, metadata !2133, metadata !DIExpression()), !dbg !2142
 ; call <pc_keyboard::HandleControl as core::cmp::PartialEq>::eq
-  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !2143
+  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !2143
   %3 = zext i1 %map_to_unicode to i8, !dbg !2143
   store i8 %3, ptr %map_to_unicode.dbg.spill, align 1, !dbg !2143
   call void @llvm.dbg.declare(metadata ptr %map_to_unicode.dbg.spill, metadata !2134, metadata !DIExpression()), !dbg !2144
-  %_7 = load i8, ptr %keycode, align 1, !dbg !2145, !range !423, !noundef !182
+  %_7 = load i8, ptr %keycode, align 1, !dbg !2145, !range !372, !noundef !182
   switch i8 %_7, label %bb2 [
     i8 0, label %bb7
     i8 17, label %bb3
@@ -6798,7 +6798,7 @@ start:
   ], !dbg !2146
 
 bb2:                                              ; preds = %start
-  %4 = load i8, ptr %keycode, align 1, !dbg !2147, !range !423, !noundef !182
+  %4 = load i8, ptr %keycode, align 1, !dbg !2147, !range !372, !noundef !182
   %5 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2147
   store i8 %4, ptr %5, align 1, !dbg !2147
   store i8 0, ptr %_0, align 4, !dbg !2147
@@ -6806,7 +6806,7 @@ bb2:                                              ; preds = %start
 
 bb7:                                              ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_9 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 27) #6, !dbg !2149, !range !322
+  %_9 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 27) #6, !dbg !2149, !range !322
   %6 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2150
   store i32 %_9, ptr %6, align 4, !dbg !2150
   store i8 1, ptr %_0, align 4, !dbg !2150
@@ -6814,72 +6814,72 @@ bb7:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2152
+  %_8 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2152
   br i1 %_8, label %bb5, label %bb6, !dbg !2152
 
 bb9:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2153
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2153
   br i1 %_10, label %bb11, label %bb12, !dbg !2153
 
 bb13:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2154
+  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2154
   br i1 %_11, label %bb15, label %bb16, !dbg !2154
 
 bb17:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2155
+  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2155
   br i1 %_12, label %bb19, label %bb20, !dbg !2155
 
 bb21:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2156
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2156
   br i1 %_13, label %bb23, label %bb24, !dbg !2156
 
 bb25:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2157
+  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2157
   br i1 %_14, label %bb27, label %bb28, !dbg !2157
 
 bb29:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2158
+  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2158
   br i1 %_15, label %bb31, label %bb32, !dbg !2158
 
 bb33:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2159
+  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2159
   br i1 %_16, label %bb35, label %bb36, !dbg !2159
 
 bb37:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2160
+  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2160
   br i1 %_17, label %bb39, label %bb40, !dbg !2160
 
 bb41:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2161
+  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2161
   br i1 %_18, label %bb43, label %bb44, !dbg !2161
 
 bb45:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2162
+  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2162
   br i1 %_19, label %bb47, label %bb48, !dbg !2162
 
 bb49:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2163
+  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2163
   br i1 %_20, label %bb51, label %bb52, !dbg !2163
 
 bb53:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2164
+  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2164
   br i1 %_21, label %bb55, label %bb56, !dbg !2164
 
 bb57:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 8) #6, !dbg !2165, !range !322
+  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 8) #6, !dbg !2165, !range !322
   %7 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2166
   store i32 %_22, ptr %7, align 4, !dbg !2166
   store i8 1, ptr %_0, align 4, !dbg !2166
@@ -6905,7 +6905,7 @@ bb308:                                            ; preds = %start
 
 bb59:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 9) #6, !dbg !2171, !range !322
+  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 9) #6, !dbg !2171, !range !322
   %11 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2172
   store i32 %_23, ptr %11, align 4, !dbg !2172
   store i8 1, ptr %_0, align 4, !dbg !2172
@@ -6940,27 +6940,27 @@ bb125:                                            ; preds = %start
 
 bb133:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_caps
-  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2183
+  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2183
   br i1 %_42, label %bb135, label %bb136, !dbg !2183
 
 bb137:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2184
+  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2184
   br i1 %_43, label %bb139, label %bb140, !dbg !2184
 
 bb141:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2185
+  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2185
   br i1 %_44, label %bb143, label %bb144, !dbg !2185
 
 bb145:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2186
+  %_45 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2186
   br i1 %_45, label %bb147, label %bb148, !dbg !2186
 
 bb304:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_85 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !2187, !range !322
+  %_85 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !2187, !range !322
   %12 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2188
   store i32 %_85, ptr %12, align 4, !dbg !2188
   store i8 1, ptr %_0, align 4, !dbg !2188
@@ -6968,19 +6968,19 @@ bb304:                                            ; preds = %start
 
 bb309:                                            ; preds = %start
   %13 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2190
-  %14 = load i8, ptr %13, align 1, !dbg !2190, !range !368, !noundef !182
+  %14 = load i8, ptr %13, align 1, !dbg !2190, !range !369, !noundef !182
   %_86 = trunc i8 %14 to i1, !dbg !2190
   br i1 %_86, label %bb310, label %bb311, !dbg !2190
 
 bb312:                                            ; preds = %start
   %15 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2191
-  %16 = load i8, ptr %15, align 1, !dbg !2191, !range !368, !noundef !182
+  %16 = load i8, ptr %15, align 1, !dbg !2191, !range !369, !noundef !182
   %_88 = trunc i8 %16 to i1, !dbg !2191
   br i1 %_88, label %bb313, label %bb314, !dbg !2191
 
 bb315:                                            ; preds = %start
   %17 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2192
-  %18 = load i8, ptr %17, align 1, !dbg !2192, !range !368, !noundef !182
+  %18 = load i8, ptr %17, align 1, !dbg !2192, !range !369, !noundef !182
   %_90 = trunc i8 %18 to i1, !dbg !2192
   br i1 %_90, label %bb316, label %bb317, !dbg !2192
 
@@ -7022,12 +7022,12 @@ bb221:                                            ; preds = %start
 
 bb229:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2204
+  %_66 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2204
   br i1 %_66, label %bb231, label %bb232, !dbg !2204
 
 bb233:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_67 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !2205, !range !322
+  %_67 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !2205, !range !322
   %20 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2206
   store i32 %_67, ptr %20, align 4, !dbg !2206
   store i8 1, ptr %_0, align 4, !dbg !2206
@@ -7035,7 +7035,7 @@ bb233:                                            ; preds = %start
 
 bb319:                                            ; preds = %start
   %21 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2208
-  %22 = load i8, ptr %21, align 1, !dbg !2208, !range !368, !noundef !182
+  %22 = load i8, ptr %21, align 1, !dbg !2208, !range !369, !noundef !182
   %_92 = trunc i8 %22 to i1, !dbg !2208
   br i1 %_92, label %bb320, label %bb321, !dbg !2208
 
@@ -7047,7 +7047,7 @@ bb322:                                            ; preds = %start
 
 bb323:                                            ; preds = %start
   %24 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2210
-  %25 = load i8, ptr %24, align 1, !dbg !2210, !range !368, !noundef !182
+  %25 = load i8, ptr %24, align 1, !dbg !2210, !range !369, !noundef !182
   %_94 = trunc i8 %25 to i1, !dbg !2210
   br i1 %_94, label %bb324, label %bb325, !dbg !2210
 
@@ -7074,40 +7074,40 @@ bb283:                                            ; preds = %start
 
 bb291:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2218
+  %_82 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2218
   br i1 %_82, label %bb293, label %bb294, !dbg !2218
 
 bb295:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2219
+  %_83 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2219
   br i1 %_83, label %bb297, label %bb298, !dbg !2219
 
 bb299:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2220
+  %_84 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2220
   br i1 %_84, label %bb301, label %bb302, !dbg !2220
 
 bb326:                                            ; preds = %start
   %26 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2221
-  %27 = load i8, ptr %26, align 1, !dbg !2221, !range !368, !noundef !182
+  %27 = load i8, ptr %26, align 1, !dbg !2221, !range !369, !noundef !182
   %_96 = trunc i8 %27 to i1, !dbg !2221
   br i1 %_96, label %bb327, label %bb328, !dbg !2221
 
 bb329:                                            ; preds = %start
   %28 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2222
-  %29 = load i8, ptr %28, align 1, !dbg !2222, !range !368, !noundef !182
+  %29 = load i8, ptr %28, align 1, !dbg !2222, !range !369, !noundef !182
   %_98 = trunc i8 %29 to i1, !dbg !2222
   br i1 %_98, label %bb330, label %bb331, !dbg !2222
 
 bb332:                                            ; preds = %start
   %30 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2223
-  %31 = load i8, ptr %30, align 1, !dbg !2223, !range !368, !noundef !182
+  %31 = load i8, ptr %30, align 1, !dbg !2223, !range !369, !noundef !182
   %_100 = trunc i8 %31 to i1, !dbg !2223
   br i1 %_100, label %bb333, label %bb334, !dbg !2223
 
 bb342:                                            ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_106 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !2224, !range !322
+  %_106 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !2224, !range !322
   %32 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2225
   store i32 %_106, ptr %32, align 4, !dbg !2225
   store i8 1, ptr %_0, align 4, !dbg !2225
@@ -7121,13 +7121,13 @@ bb303:                                            ; preds = %start
 
 bb335:                                            ; preds = %start
   %34 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2228
-  %35 = load i8, ptr %34, align 1, !dbg !2228, !range !368, !noundef !182
+  %35 = load i8, ptr %34, align 1, !dbg !2228, !range !369, !noundef !182
   %_102 = trunc i8 %35 to i1, !dbg !2228
   br i1 %_102, label %bb336, label %bb337, !dbg !2228
 
 bb338:                                            ; preds = %start
   %36 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 4, !dbg !2229
-  %37 = load i8, ptr %36, align 1, !dbg !2229, !range !368, !noundef !182
+  %37 = load i8, ptr %36, align 1, !dbg !2229, !range !369, !noundef !182
   %_104 = trunc i8 %37 to i1, !dbg !2229
   br i1 %_104, label %bb339, label %bb340, !dbg !2229
 
@@ -7293,12 +7293,12 @@ bb55:                                             ; preds = %bb53
 
 bb65:                                             ; preds = %bb62, %bb61
 ; call pc_keyboard::Modifiers::is_caps
-  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2270
+  %_25 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2270
   br i1 %_25, label %bb67, label %bb68, !dbg !2270
 
 bb62:                                             ; preds = %bb61
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2271
+  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2271
   br i1 %_24, label %bb64, label %bb65, !dbg !2271
 
 bb64:                                             ; preds = %bb62
@@ -7321,12 +7321,12 @@ bb67:                                             ; preds = %bb65
 
 bb73:                                             ; preds = %bb70, %bb69
 ; call pc_keyboard::Modifiers::is_caps
-  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2277
+  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2277
   br i1 %_27, label %bb75, label %bb76, !dbg !2277
 
 bb70:                                             ; preds = %bb69
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2278
+  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2278
   br i1 %_26, label %bb72, label %bb73, !dbg !2278
 
 bb72:                                             ; preds = %bb70
@@ -7349,12 +7349,12 @@ bb75:                                             ; preds = %bb73
 
 bb81:                                             ; preds = %bb78, %bb77
 ; call pc_keyboard::Modifiers::is_caps
-  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2284
+  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2284
   br i1 %_29, label %bb83, label %bb84, !dbg !2284
 
 bb78:                                             ; preds = %bb77
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2285
+  %_28 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2285
   br i1 %_28, label %bb80, label %bb81, !dbg !2285
 
 bb80:                                             ; preds = %bb78
@@ -7377,12 +7377,12 @@ bb83:                                             ; preds = %bb81
 
 bb89:                                             ; preds = %bb86, %bb85
 ; call pc_keyboard::Modifiers::is_caps
-  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2291
+  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2291
   br i1 %_31, label %bb91, label %bb92, !dbg !2291
 
 bb86:                                             ; preds = %bb85
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2292
+  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2292
   br i1 %_30, label %bb88, label %bb89, !dbg !2292
 
 bb88:                                             ; preds = %bb86
@@ -7405,12 +7405,12 @@ bb91:                                             ; preds = %bb89
 
 bb97:                                             ; preds = %bb94, %bb93
 ; call pc_keyboard::Modifiers::is_caps
-  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2298
+  %_33 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2298
   br i1 %_33, label %bb99, label %bb100, !dbg !2298
 
 bb94:                                             ; preds = %bb93
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2299
+  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2299
   br i1 %_32, label %bb96, label %bb97, !dbg !2299
 
 bb96:                                             ; preds = %bb94
@@ -7433,12 +7433,12 @@ bb99:                                             ; preds = %bb97
 
 bb105:                                            ; preds = %bb102, %bb101
 ; call pc_keyboard::Modifiers::is_caps
-  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2305
+  %_35 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2305
   br i1 %_35, label %bb107, label %bb108, !dbg !2305
 
 bb102:                                            ; preds = %bb101
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2306
+  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2306
   br i1 %_34, label %bb104, label %bb105, !dbg !2306
 
 bb104:                                            ; preds = %bb102
@@ -7461,12 +7461,12 @@ bb107:                                            ; preds = %bb105
 
 bb113:                                            ; preds = %bb110, %bb109
 ; call pc_keyboard::Modifiers::is_caps
-  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2312
+  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2312
   br i1 %_37, label %bb115, label %bb116, !dbg !2312
 
 bb110:                                            ; preds = %bb109
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2313
+  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2313
   br i1 %_36, label %bb112, label %bb113, !dbg !2313
 
 bb112:                                            ; preds = %bb110
@@ -7489,12 +7489,12 @@ bb115:                                            ; preds = %bb113
 
 bb121:                                            ; preds = %bb118, %bb117
 ; call pc_keyboard::Modifiers::is_caps
-  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2319
+  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2319
   br i1 %_39, label %bb123, label %bb124, !dbg !2319
 
 bb118:                                            ; preds = %bb117
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2320
+  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2320
   br i1 %_38, label %bb120, label %bb121, !dbg !2320
 
 bb120:                                            ; preds = %bb118
@@ -7517,12 +7517,12 @@ bb123:                                            ; preds = %bb121
 
 bb129:                                            ; preds = %bb126, %bb125
 ; call pc_keyboard::Modifiers::is_caps
-  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2326
+  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2326
   br i1 %_41, label %bb131, label %bb132, !dbg !2326
 
 bb126:                                            ; preds = %bb125
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2327
+  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2327
   br i1 %_40, label %bb128, label %bb129, !dbg !2327
 
 bb128:                                            ; preds = %bb126
@@ -7593,7 +7593,7 @@ bb147:                                            ; preds = %bb145
 
 bb311:                                            ; preds = %bb309
   store i8 32, ptr %_87, align 1, !dbg !2345
-  %100 = load i8, ptr %_87, align 1, !dbg !2346, !range !423, !noundef !182
+  %100 = load i8, ptr %_87, align 1, !dbg !2346, !range !372, !noundef !182
   %101 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2346
   store i8 %100, ptr %101, align 1, !dbg !2346
   store i8 0, ptr %_0, align 4, !dbg !2346
@@ -7607,7 +7607,7 @@ bb310:                                            ; preds = %bb309
 
 bb314:                                            ; preds = %bb312
   store i8 88, ptr %_89, align 1, !dbg !2349
-  %103 = load i8, ptr %_89, align 1, !dbg !2350, !range !423, !noundef !182
+  %103 = load i8, ptr %_89, align 1, !dbg !2350, !range !372, !noundef !182
   %104 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2350
   store i8 %103, ptr %104, align 1, !dbg !2350
   store i8 0, ptr %_0, align 4, !dbg !2350
@@ -7621,7 +7621,7 @@ bb313:                                            ; preds = %bb312
 
 bb317:                                            ; preds = %bb315
   store i8 33, ptr %_91, align 1, !dbg !2353
-  %106 = load i8, ptr %_91, align 1, !dbg !2354, !range !423, !noundef !182
+  %106 = load i8, ptr %_91, align 1, !dbg !2354, !range !372, !noundef !182
   %107 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2354
   store i8 %106, ptr %107, align 1, !dbg !2354
   store i8 0, ptr %_0, align 4, !dbg !2354
@@ -7635,12 +7635,12 @@ bb316:                                            ; preds = %bb315
 
 bb153:                                            ; preds = %bb150, %bb149
 ; call pc_keyboard::Modifiers::is_caps
-  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2357
+  %_47 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2357
   br i1 %_47, label %bb155, label %bb156, !dbg !2357
 
 bb150:                                            ; preds = %bb149
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2358
+  %_46 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2358
   br i1 %_46, label %bb152, label %bb153, !dbg !2358
 
 bb152:                                            ; preds = %bb150
@@ -7663,12 +7663,12 @@ bb155:                                            ; preds = %bb153
 
 bb161:                                            ; preds = %bb158, %bb157
 ; call pc_keyboard::Modifiers::is_caps
-  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2364
+  %_49 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2364
   br i1 %_49, label %bb163, label %bb164, !dbg !2364
 
 bb158:                                            ; preds = %bb157
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2365
+  %_48 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2365
   br i1 %_48, label %bb160, label %bb161, !dbg !2365
 
 bb160:                                            ; preds = %bb158
@@ -7691,12 +7691,12 @@ bb163:                                            ; preds = %bb161
 
 bb169:                                            ; preds = %bb166, %bb165
 ; call pc_keyboard::Modifiers::is_caps
-  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2371
+  %_51 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2371
   br i1 %_51, label %bb171, label %bb172, !dbg !2371
 
 bb166:                                            ; preds = %bb165
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2372
+  %_50 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2372
   br i1 %_50, label %bb168, label %bb169, !dbg !2372
 
 bb168:                                            ; preds = %bb166
@@ -7719,12 +7719,12 @@ bb171:                                            ; preds = %bb169
 
 bb177:                                            ; preds = %bb174, %bb173
 ; call pc_keyboard::Modifiers::is_caps
-  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2378
+  %_53 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2378
   br i1 %_53, label %bb179, label %bb180, !dbg !2378
 
 bb174:                                            ; preds = %bb173
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2379
+  %_52 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2379
   br i1 %_52, label %bb176, label %bb177, !dbg !2379
 
 bb176:                                            ; preds = %bb174
@@ -7747,12 +7747,12 @@ bb179:                                            ; preds = %bb177
 
 bb185:                                            ; preds = %bb182, %bb181
 ; call pc_keyboard::Modifiers::is_caps
-  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2385
+  %_55 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2385
   br i1 %_55, label %bb187, label %bb188, !dbg !2385
 
 bb182:                                            ; preds = %bb181
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2386
+  %_54 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2386
   br i1 %_54, label %bb184, label %bb185, !dbg !2386
 
 bb184:                                            ; preds = %bb182
@@ -7775,12 +7775,12 @@ bb187:                                            ; preds = %bb185
 
 bb193:                                            ; preds = %bb190, %bb189
 ; call pc_keyboard::Modifiers::is_caps
-  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2392
+  %_57 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2392
   br i1 %_57, label %bb195, label %bb196, !dbg !2392
 
 bb190:                                            ; preds = %bb189
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2393
+  %_56 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2393
   br i1 %_56, label %bb192, label %bb193, !dbg !2393
 
 bb192:                                            ; preds = %bb190
@@ -7803,12 +7803,12 @@ bb195:                                            ; preds = %bb193
 
 bb201:                                            ; preds = %bb198, %bb197
 ; call pc_keyboard::Modifiers::is_caps
-  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2399
+  %_59 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2399
   br i1 %_59, label %bb203, label %bb204, !dbg !2399
 
 bb198:                                            ; preds = %bb197
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2400
+  %_58 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2400
   br i1 %_58, label %bb200, label %bb201, !dbg !2400
 
 bb200:                                            ; preds = %bb198
@@ -7831,12 +7831,12 @@ bb203:                                            ; preds = %bb201
 
 bb209:                                            ; preds = %bb206, %bb205
 ; call pc_keyboard::Modifiers::is_caps
-  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2406
+  %_61 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2406
   br i1 %_61, label %bb211, label %bb212, !dbg !2406
 
 bb206:                                            ; preds = %bb205
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2407
+  %_60 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2407
   br i1 %_60, label %bb208, label %bb209, !dbg !2407
 
 bb208:                                            ; preds = %bb206
@@ -7859,12 +7859,12 @@ bb211:                                            ; preds = %bb209
 
 bb217:                                            ; preds = %bb214, %bb213
 ; call pc_keyboard::Modifiers::is_caps
-  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2413
+  %_63 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2413
   br i1 %_63, label %bb219, label %bb220, !dbg !2413
 
 bb214:                                            ; preds = %bb213
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2414
+  %_62 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2414
   br i1 %_62, label %bb216, label %bb217, !dbg !2414
 
 bb216:                                            ; preds = %bb214
@@ -7887,12 +7887,12 @@ bb219:                                            ; preds = %bb217
 
 bb225:                                            ; preds = %bb222, %bb221
 ; call pc_keyboard::Modifiers::is_shifted
-  %_65 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2420
+  %_65 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2420
   br i1 %_65, label %bb227, label %bb228, !dbg !2420
 
 bb222:                                            ; preds = %bb221
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2421
+  %_64 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2421
   br i1 %_64, label %bb224, label %bb225, !dbg !2421
 
 bb224:                                            ; preds = %bb222
@@ -7927,7 +7927,7 @@ bb231:                                            ; preds = %bb229
 
 bb321:                                            ; preds = %bb319
   store i8 101, ptr %_93, align 1, !dbg !2430
-  %141 = load i8, ptr %_93, align 1, !dbg !2431, !range !423, !noundef !182
+  %141 = load i8, ptr %_93, align 1, !dbg !2431, !range !372, !noundef !182
   %142 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2431
   store i8 %141, ptr %142, align 1, !dbg !2431
   store i8 0, ptr %_0, align 4, !dbg !2431
@@ -7941,7 +7941,7 @@ bb320:                                            ; preds = %bb319
 
 bb325:                                            ; preds = %bb323
   store i8 103, ptr %_95, align 1, !dbg !2434
-  %144 = load i8, ptr %_95, align 1, !dbg !2435, !range !423, !noundef !182
+  %144 = load i8, ptr %_95, align 1, !dbg !2435, !range !372, !noundef !182
   %145 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2435
   store i8 %144, ptr %145, align 1, !dbg !2435
   store i8 0, ptr %_0, align 4, !dbg !2435
@@ -7955,12 +7955,12 @@ bb324:                                            ; preds = %bb323
 
 bb239:                                            ; preds = %bb236, %bb235
 ; call pc_keyboard::Modifiers::is_caps
-  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2438
+  %_69 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2438
   br i1 %_69, label %bb241, label %bb242, !dbg !2438
 
 bb236:                                            ; preds = %bb235
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2439
+  %_68 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2439
   br i1 %_68, label %bb238, label %bb239, !dbg !2439
 
 bb238:                                            ; preds = %bb236
@@ -7983,12 +7983,12 @@ bb241:                                            ; preds = %bb239
 
 bb247:                                            ; preds = %bb244, %bb243
 ; call pc_keyboard::Modifiers::is_caps
-  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2445
+  %_71 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2445
   br i1 %_71, label %bb249, label %bb250, !dbg !2445
 
 bb244:                                            ; preds = %bb243
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2446
+  %_70 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2446
   br i1 %_70, label %bb246, label %bb247, !dbg !2446
 
 bb246:                                            ; preds = %bb244
@@ -8011,12 +8011,12 @@ bb249:                                            ; preds = %bb247
 
 bb255:                                            ; preds = %bb252, %bb251
 ; call pc_keyboard::Modifiers::is_caps
-  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2452
+  %_73 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2452
   br i1 %_73, label %bb257, label %bb258, !dbg !2452
 
 bb252:                                            ; preds = %bb251
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2453
+  %_72 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2453
   br i1 %_72, label %bb254, label %bb255, !dbg !2453
 
 bb254:                                            ; preds = %bb252
@@ -8039,12 +8039,12 @@ bb257:                                            ; preds = %bb255
 
 bb263:                                            ; preds = %bb260, %bb259
 ; call pc_keyboard::Modifiers::is_caps
-  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2459
+  %_75 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2459
   br i1 %_75, label %bb265, label %bb266, !dbg !2459
 
 bb260:                                            ; preds = %bb259
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2460
+  %_74 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2460
   br i1 %_74, label %bb262, label %bb263, !dbg !2460
 
 bb262:                                            ; preds = %bb260
@@ -8067,12 +8067,12 @@ bb265:                                            ; preds = %bb263
 
 bb271:                                            ; preds = %bb268, %bb267
 ; call pc_keyboard::Modifiers::is_caps
-  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2466
+  %_77 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2466
   br i1 %_77, label %bb273, label %bb274, !dbg !2466
 
 bb268:                                            ; preds = %bb267
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2467
+  %_76 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2467
   br i1 %_76, label %bb270, label %bb271, !dbg !2467
 
 bb270:                                            ; preds = %bb268
@@ -8095,12 +8095,12 @@ bb273:                                            ; preds = %bb271
 
 bb279:                                            ; preds = %bb276, %bb275
 ; call pc_keyboard::Modifiers::is_caps
-  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2473
+  %_79 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2473
   br i1 %_79, label %bb281, label %bb282, !dbg !2473
 
 bb276:                                            ; preds = %bb275
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2474
+  %_78 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2474
   br i1 %_78, label %bb278, label %bb279, !dbg !2474
 
 bb278:                                            ; preds = %bb276
@@ -8123,12 +8123,12 @@ bb281:                                            ; preds = %bb279
 
 bb287:                                            ; preds = %bb284, %bb283
 ; call pc_keyboard::Modifiers::is_caps
-  %_81 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2480
+  %_81 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2480
   br i1 %_81, label %bb289, label %bb290, !dbg !2480
 
 bb284:                                            ; preds = %bb283
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2481
+  %_80 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2481
   br i1 %_80, label %bb286, label %bb287, !dbg !2481
 
 bb286:                                            ; preds = %bb284
@@ -8187,7 +8187,7 @@ bb301:                                            ; preds = %bb299
 
 bb328:                                            ; preds = %bb326
   store i8 54, ptr %_97, align 1, !dbg !2496
-  %174 = load i8, ptr %_97, align 1, !dbg !2497, !range !423, !noundef !182
+  %174 = load i8, ptr %_97, align 1, !dbg !2497, !range !372, !noundef !182
   %175 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2497
   store i8 %174, ptr %175, align 1, !dbg !2497
   store i8 0, ptr %_0, align 4, !dbg !2497
@@ -8201,7 +8201,7 @@ bb327:                                            ; preds = %bb326
 
 bb331:                                            ; preds = %bb329
   store i8 102, ptr %_99, align 1, !dbg !2500
-  %177 = load i8, ptr %_99, align 1, !dbg !2501, !range !423, !noundef !182
+  %177 = load i8, ptr %_99, align 1, !dbg !2501, !range !372, !noundef !182
   %178 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2501
   store i8 %177, ptr %178, align 1, !dbg !2501
   store i8 0, ptr %_0, align 4, !dbg !2501
@@ -8215,7 +8215,7 @@ bb330:                                            ; preds = %bb329
 
 bb334:                                            ; preds = %bb332
   store i8 55, ptr %_101, align 1, !dbg !2504
-  %180 = load i8, ptr %_101, align 1, !dbg !2505, !range !423, !noundef !182
+  %180 = load i8, ptr %_101, align 1, !dbg !2505, !range !372, !noundef !182
   %181 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2505
   store i8 %180, ptr %181, align 1, !dbg !2505
   store i8 0, ptr %_0, align 4, !dbg !2505
@@ -8229,7 +8229,7 @@ bb333:                                            ; preds = %bb332
 
 bb337:                                            ; preds = %bb335
   store i8 31, ptr %_103, align 1, !dbg !2508
-  %183 = load i8, ptr %_103, align 1, !dbg !2509, !range !423, !noundef !182
+  %183 = load i8, ptr %_103, align 1, !dbg !2509, !range !372, !noundef !182
   %184 = getelementptr inbounds %"DecodedKey::RawKey", ptr %_0, i32 0, i32 1, !dbg !2509
   store i8 %183, ptr %184, align 1, !dbg !2509
   store i8 0, ptr %_0, align 4, !dbg !2509
@@ -8243,7 +8243,7 @@ bb336:                                            ; preds = %bb335
 
 bb340:                                            ; preds = %bb338
 ; call <T as core::convert::Into<U>>::into
-  %_105 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 127) #6, !dbg !2512, !range !322
+  %_105 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 127) #6, !dbg !2512, !range !322
   %186 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2513
   store i32 %_105, ptr %186, align 4, !dbg !2513
   store i8 1, ptr %_0, align 4, !dbg !2513
@@ -8258,7 +8258,7 @@ bb339:                                            ; preds = %bb338
 
 ; <pc_keyboard::layouts::de105::De105Key as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hc765e0409a94d5c4E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !2516 {
+define i64 @"_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17he00613d4f21a5a46E"(ptr align 1 %self, i8 %0, ptr align 1 %modifiers, i1 zeroext %1) unnamed_addr #1 !dbg !2516 {
 start:
   %2 = alloca i64, align 8
   %map_to_unicode.dbg.spill = alloca i8, align 1
@@ -8281,11 +8281,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %modifiers.dbg.spill, metadata !2527, metadata !DIExpression()), !dbg !2539
   call void @llvm.dbg.declare(metadata ptr %handle_ctrl, metadata !2528, metadata !DIExpression()), !dbg !2540
 ; call <pc_keyboard::HandleControl as core::cmp::PartialEq>::eq
-  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !2541
+  %map_to_unicode = call zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE"(ptr align 1 %handle_ctrl, ptr align 1 @alloc_914b2c69d7eca30497b9feaf15ac92f1) #6, !dbg !2541
   %4 = zext i1 %map_to_unicode to i8, !dbg !2541
   store i8 %4, ptr %map_to_unicode.dbg.spill, align 1, !dbg !2541
   call void @llvm.dbg.declare(metadata ptr %map_to_unicode.dbg.spill, metadata !2529, metadata !DIExpression()), !dbg !2542
-  %_7 = load i8, ptr %keycode, align 1, !dbg !2543, !range !423, !noundef !182
+  %_7 = load i8, ptr %keycode, align 1, !dbg !2543, !range !372, !noundef !182
   switch i8 %_7, label %bb2 [
     i8 0, label %bb3
     i8 17, label %bb5
@@ -8320,18 +8320,18 @@ start:
   ], !dbg !2544
 
 bb2:                                              ; preds = %start
-  %5 = load i8, ptr %handle_ctrl, align 1, !dbg !2545, !range !368, !noundef !182
+  %5 = load i8, ptr %handle_ctrl, align 1, !dbg !2545, !range !369, !noundef !182
   %_48 = trunc i8 %5 to i1, !dbg !2545
-  %6 = load i8, ptr %keycode, align 1, !dbg !2546, !range !423, !noundef !182
+  %6 = load i8, ptr %keycode, align 1, !dbg !2546, !range !372, !noundef !182
 ; call <pc_keyboard::layouts::us104::Us104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %7 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE"(ptr align 1 %_46, i8 %6, ptr align 1 %modifiers, i1 zeroext %_48) #6, !dbg !2546
+  %7 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E"(ptr align 1 %_46, i8 %6, ptr align 1 %modifiers, i1 zeroext %_48) #6, !dbg !2546
   store i64 %7, ptr %2, align 8, !dbg !2546
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %2, i64 8, i1 false), !dbg !2546
   br label %bb139, !dbg !2546
 
 bb3:                                              ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_8 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 27) #6, !dbg !2547, !range !322
+  %_8 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 27) #6, !dbg !2547, !range !322
   %8 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2548
   store i32 %_8, ptr %8, align 4, !dbg !2548
   store i8 1, ptr %_0, align 4, !dbg !2548
@@ -8339,72 +8339,72 @@ bb3:                                              ; preds = %start
 
 bb5:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2550
+  %_9 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2550
   br i1 %_9, label %bb7, label %bb8, !dbg !2550
 
 bb9:                                              ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2551
+  %_10 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2551
   br i1 %_10, label %bb11, label %bb12, !dbg !2551
 
 bb13:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2552
+  %_11 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2552
   br i1 %_11, label %bb15, label %bb16, !dbg !2552
 
 bb17:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2553
+  %_12 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2553
   br i1 %_12, label %bb19, label %bb20, !dbg !2553
 
 bb21:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2554
+  %_13 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2554
   br i1 %_13, label %bb23, label %bb24, !dbg !2554
 
 bb25:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2555
+  %_14 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2555
   br i1 %_14, label %bb27, label %bb28, !dbg !2555
 
 bb29:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2556
+  %_15 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2556
   br i1 %_15, label %bb31, label %bb32, !dbg !2556
 
 bb33:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2557
+  %_16 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2557
   br i1 %_16, label %bb35, label %bb36, !dbg !2557
 
 bb37:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2558
+  %_17 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2558
   br i1 %_17, label %bb39, label %bb40, !dbg !2558
 
 bb41:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2559
+  %_18 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2559
   br i1 %_18, label %bb43, label %bb44, !dbg !2559
 
 bb45:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2560
+  %_19 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2560
   br i1 %_19, label %bb47, label %bb48, !dbg !2560
 
 bb49:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2561
+  %_20 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2561
   br i1 %_20, label %bb51, label %bb52, !dbg !2561
 
 bb53:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2562
+  %_21 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2562
   br i1 %_21, label %bb55, label %bb56, !dbg !2562
 
 bb57:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 8) #6, !dbg !2563, !range !322
+  %_22 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 8) #6, !dbg !2563, !range !322
   %9 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2564
   store i32 %_22, ptr %9, align 4, !dbg !2564
   store i8 1, ptr %_0, align 4, !dbg !2564
@@ -8412,7 +8412,7 @@ bb57:                                             ; preds = %start
 
 bb59:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 9) #6, !dbg !2566, !range !322
+  %_23 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 9) #6, !dbg !2566, !range !322
   %10 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2567
   store i32 %_23, ptr %10, align 4, !dbg !2567
   store i8 1, ptr %_0, align 4, !dbg !2567
@@ -8429,38 +8429,38 @@ bb81:                                             ; preds = %start
 
 bb89:                                             ; preds = %start
 ; call pc_keyboard::Modifiers::is_caps
-  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2572
+  %_32 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2572
   br i1 %_32, label %bb91, label %bb92, !dbg !2572
 
 bb93:                                             ; preds = %start
   %11 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !2573
-  %12 = load i8, ptr %11, align 1, !dbg !2573, !range !368, !noundef !182
+  %12 = load i8, ptr %11, align 1, !dbg !2573, !range !369, !noundef !182
   %_33 = trunc i8 %12 to i1, !dbg !2573
   br i1 %_33, label %bb94, label %bb95, !dbg !2573
 
 bb133:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2574
+  %_44 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2574
   br i1 %_44, label %bb135, label %bb136, !dbg !2574
 
 bb101:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2575
+  %_36 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2575
   br i1 %_36, label %bb103, label %bb104, !dbg !2575
 
 bb105:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2576
+  %_37 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2576
   br i1 %_37, label %bb107, label %bb108, !dbg !2576
 
 bb109:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2577
+  %_38 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2577
   br i1 %_38, label %bb111, label %bb112, !dbg !2577
 
 bb99:                                             ; preds = %start
 ; call <T as core::convert::Into<U>>::into
-  %_35 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E"(i8 10) #6, !dbg !2578, !range !322
+  %_35 = call i32 @"_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E"(i8 10) #6, !dbg !2578, !range !322
   %13 = getelementptr inbounds %"DecodedKey::Unicode", ptr %_0, i32 0, i32 1, !dbg !2579
   store i32 %_35, ptr %13, align 4, !dbg !2579
   store i8 1, ptr %_0, align 4, !dbg !2579
@@ -8471,17 +8471,17 @@ bb113:                                            ; preds = %start
 
 bb121:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2582
+  %_41 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2582
   br i1 %_41, label %bb123, label %bb124, !dbg !2582
 
 bb125:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2583
+  %_42 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2583
   br i1 %_42, label %bb127, label %bb128, !dbg !2583
 
 bb129:                                            ; preds = %start
 ; call pc_keyboard::Modifiers::is_shifted
-  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %modifiers) #6, !dbg !2584
+  %_43 = call zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %modifiers) #6, !dbg !2584
   br i1 %_43, label %bb131, label %bb132, !dbg !2584
 
 bb139:                                            ; preds = %bb2, %bb131, %bb132, %bb127, %bb128, %bb123, %bb124, %bb116, %bb119, %bb120, %bb99, %bb111, %bb112, %bb107, %bb108, %bb103, %bb104, %bb135, %bb137, %bb138, %bb94, %bb97, %bb98, %bb91, %bb92, %bb84, %bb87, %bb88, %bb74, %bb76, %bb79, %bb80, %bb64, %bb66, %bb69, %bb70, %bb59, %bb57, %bb55, %bb56, %bb51, %bb52, %bb47, %bb48, %bb43, %bb44, %bb39, %bb40, %bb35, %bb36, %bb31, %bb32, %bb27, %bb28, %bb23, %bb24, %bb19, %bb20, %bb15, %bb16, %bb11, %bb12, %bb7, %bb8, %bb3
@@ -8646,13 +8646,13 @@ bb55:                                             ; preds = %bb53
 
 bb65:                                             ; preds = %bb62, %bb61
   %41 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !2625
-  %42 = load i8, ptr %41, align 1, !dbg !2625, !range !368, !noundef !182
+  %42 = load i8, ptr %41, align 1, !dbg !2625, !range !369, !noundef !182
   %_25 = trunc i8 %42 to i1, !dbg !2625
   br i1 %_25, label %bb66, label %bb67, !dbg !2625
 
 bb62:                                             ; preds = %bb61
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2626
+  %_24 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2626
   br i1 %_24, label %bb64, label %bb65, !dbg !2626
 
 bb64:                                             ; preds = %bb62
@@ -8663,7 +8663,7 @@ bb64:                                             ; preds = %bb62
 
 bb67:                                             ; preds = %bb65
 ; call pc_keyboard::Modifiers::is_caps
-  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2629
+  %_26 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2629
   br i1 %_26, label %bb69, label %bb70, !dbg !2629
 
 bb66:                                             ; preds = %bb65
@@ -8686,13 +8686,13 @@ bb69:                                             ; preds = %bb67
 
 bb75:                                             ; preds = %bb72, %bb71
   %47 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !2635
-  %48 = load i8, ptr %47, align 1, !dbg !2635, !range !368, !noundef !182
+  %48 = load i8, ptr %47, align 1, !dbg !2635, !range !369, !noundef !182
   %_28 = trunc i8 %48 to i1, !dbg !2635
   br i1 %_28, label %bb76, label %bb77, !dbg !2635
 
 bb72:                                             ; preds = %bb71
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2636
+  %_27 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2636
   br i1 %_27, label %bb74, label %bb75, !dbg !2636
 
 bb74:                                             ; preds = %bb72
@@ -8703,7 +8703,7 @@ bb74:                                             ; preds = %bb72
 
 bb77:                                             ; preds = %bb75
 ; call pc_keyboard::Modifiers::is_caps
-  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2639
+  %_29 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2639
   br i1 %_29, label %bb79, label %bb80, !dbg !2639
 
 bb76:                                             ; preds = %bb75
@@ -8726,12 +8726,12 @@ bb79:                                             ; preds = %bb77
 
 bb85:                                             ; preds = %bb82, %bb81
 ; call pc_keyboard::Modifiers::is_caps
-  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2645
+  %_31 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2645
   br i1 %_31, label %bb87, label %bb88, !dbg !2645
 
 bb82:                                             ; preds = %bb81
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2646
+  %_30 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2646
   br i1 %_30, label %bb84, label %bb85, !dbg !2646
 
 bb84:                                             ; preds = %bb82
@@ -8766,7 +8766,7 @@ bb91:                                             ; preds = %bb89
 
 bb95:                                             ; preds = %bb93
 ; call pc_keyboard::Modifiers::is_caps
-  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2655
+  %_34 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2655
   br i1 %_34, label %bb97, label %bb98, !dbg !2655
 
 bb94:                                             ; preds = %bb93
@@ -8789,7 +8789,7 @@ bb97:                                             ; preds = %bb95
 
 bb136:                                            ; preds = %bb133
   %61 = getelementptr inbounds %Modifiers, ptr %modifiers, i32 0, i32 6, !dbg !2661
-  %62 = load i8, ptr %61, align 1, !dbg !2661, !range !368, !noundef !182
+  %62 = load i8, ptr %61, align 1, !dbg !2661, !range !369, !noundef !182
   %_45 = trunc i8 %62 to i1, !dbg !2661
   br i1 %_45, label %bb137, label %bb138, !dbg !2661
 
@@ -8849,12 +8849,12 @@ bb111:                                            ; preds = %bb109
 
 bb117:                                            ; preds = %bb114, %bb113
 ; call pc_keyboard::Modifiers::is_caps
-  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %modifiers) #6, !dbg !2676
+  %_40 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %modifiers) #6, !dbg !2676
   br i1 %_40, label %bb119, label %bb120, !dbg !2676
 
 bb114:                                            ; preds = %bb113
 ; call pc_keyboard::Modifiers::is_ctrl
-  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %modifiers) #6, !dbg !2677
+  %_39 = call zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %modifiers) #6, !dbg !2677
   br i1 %_39, label %bb116, label %bb117, !dbg !2677
 
 bb116:                                            ; preds = %bb114
@@ -8914,7 +8914,7 @@ bb131:                                            ; preds = %bb129
 
 ; <pc_keyboard::layouts::AnyLayout as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN79_$LT$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hcb21541647b5d3e2E"(ptr align 1 %self, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !2692 {
+define i64 @"_ZN79_$LT$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hd09e84017d564e4dE"(ptr align 1 %self, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !2692 {
 start:
   %0 = alloca i64, align 8
   %inner.dbg.spill14 = alloca ptr, align 8
@@ -8967,7 +8967,7 @@ bb3:                                              ; preds = %start
   store ptr %inner, ptr %inner.dbg.spill, align 8, !dbg !2763
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill, metadata !2740, metadata !DIExpression()), !dbg !2764
 ; call <pc_keyboard::layouts::dvorak_programmer104::DVP104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %10 = call i64 @"_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h5002a8defc3f9bb9E"(ptr align 1 %inner, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2765
+  %10 = call i64 @"_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h25842ce9fb8040d8E"(ptr align 1 %inner, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2765
   store i64 %10, ptr %7, align 8, !dbg !2765
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %7, i64 8, i1 false), !dbg !2765
   br label %bb10, !dbg !2765
@@ -8977,7 +8977,7 @@ bb4:                                              ; preds = %start
   store ptr %inner1, ptr %inner.dbg.spill2, align 8, !dbg !2766
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill2, metadata !2742, metadata !DIExpression()), !dbg !2767
 ; call <pc_keyboard::layouts::dvorak104::Dvorak104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %11 = call i64 @"_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8e0b07937e926c4cE"(ptr align 1 %inner1, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2768
+  %11 = call i64 @"_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h19673f6f1b406f56E"(ptr align 1 %inner1, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2768
   store i64 %11, ptr %6, align 8, !dbg !2768
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %6, i64 8, i1 false), !dbg !2768
   br label %bb10, !dbg !2768
@@ -8987,7 +8987,7 @@ bb5:                                              ; preds = %start
   store ptr %inner3, ptr %inner.dbg.spill4, align 8, !dbg !2769
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill4, metadata !2744, metadata !DIExpression()), !dbg !2770
 ; call <pc_keyboard::layouts::us104::Us104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %12 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE"(ptr align 1 %inner3, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2771
+  %12 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E"(ptr align 1 %inner3, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2771
   store i64 %12, ptr %5, align 8, !dbg !2771
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %5, i64 8, i1 false), !dbg !2771
   br label %bb10, !dbg !2771
@@ -8997,7 +8997,7 @@ bb6:                                              ; preds = %start
   store ptr %inner5, ptr %inner.dbg.spill6, align 8, !dbg !2772
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill6, metadata !2746, metadata !DIExpression()), !dbg !2773
 ; call <pc_keyboard::layouts::uk105::Uk105Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %13 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17habff44f6a3b6c71dE"(ptr align 1 %inner5, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2774
+  %13 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8d9900a3d58cf13bE"(ptr align 1 %inner5, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2774
   store i64 %13, ptr %4, align 8, !dbg !2774
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %4, i64 8, i1 false), !dbg !2774
   br label %bb10, !dbg !2774
@@ -9007,7 +9007,7 @@ bb7:                                              ; preds = %start
   store ptr %inner7, ptr %inner.dbg.spill8, align 8, !dbg !2775
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill8, metadata !2748, metadata !DIExpression()), !dbg !2776
 ; call <pc_keyboard::layouts::jis109::Jis109Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %14 = call i64 @"_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h12fbb4c1dbdf6437E"(ptr align 1 %inner7, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2777
+  %14 = call i64 @"_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h731b88a7ee49de02E"(ptr align 1 %inner7, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2777
   store i64 %14, ptr %3, align 8, !dbg !2777
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %3, i64 8, i1 false), !dbg !2777
   br label %bb10, !dbg !2777
@@ -9017,7 +9017,7 @@ bb8:                                              ; preds = %start
   store ptr %inner9, ptr %inner.dbg.spill10, align 8, !dbg !2778
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill10, metadata !2750, metadata !DIExpression()), !dbg !2779
 ; call <pc_keyboard::layouts::azerty::Azerty as pc_keyboard::KeyboardLayout>::map_keycode
-  %15 = call i64 @"_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hacf23695a6cff0bbE"(ptr align 1 %inner9, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2780
+  %15 = call i64 @"_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h76a8685bd3a14d9fE"(ptr align 1 %inner9, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2780
   store i64 %15, ptr %2, align 8, !dbg !2780
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %2, i64 8, i1 false), !dbg !2780
   br label %bb10, !dbg !2780
@@ -9027,7 +9027,7 @@ bb9:                                              ; preds = %start
   store ptr %inner11, ptr %inner.dbg.spill12, align 8, !dbg !2781
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill12, metadata !2752, metadata !DIExpression()), !dbg !2782
 ; call <pc_keyboard::layouts::colemak::Colemak as pc_keyboard::KeyboardLayout>::map_keycode
-  %16 = call i64 @"_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17heff68b73dd06292eE"(ptr align 1 %inner11, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2783
+  %16 = call i64 @"_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h65d494e461fef24dE"(ptr align 1 %inner11, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2783
   store i64 %16, ptr %1, align 8, !dbg !2783
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %1, i64 8, i1 false), !dbg !2783
   br label %bb10, !dbg !2783
@@ -9037,7 +9037,7 @@ bb1:                                              ; preds = %start
   store ptr %inner13, ptr %inner.dbg.spill14, align 8, !dbg !2784
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill14, metadata !2754, metadata !DIExpression()), !dbg !2785
 ; call <pc_keyboard::layouts::de105::De105Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %17 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hc765e0409a94d5c4E"(ptr align 1 %inner13, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2786
+  %17 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17he00613d4f21a5a46E"(ptr align 1 %inner13, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2786
   store i64 %17, ptr %0, align 8, !dbg !2786
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %0, i64 8, i1 false), !dbg !2786
   br label %bb10, !dbg !2786
@@ -9049,7 +9049,7 @@ bb10:                                             ; preds = %bb1, %bb9, %bb8, %b
 
 ; <&pc_keyboard::layouts::AnyLayout as pc_keyboard::KeyboardLayout>::map_keycode
 ; Function Attrs: noredzone nounwind
-define i64 @"_ZN83_$LT$$RF$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h53ed92cda871f516E"(ptr align 8 %self, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !2788 {
+define i64 @"_ZN83_$LT$$RF$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h70855f39fb21091cE"(ptr align 8 %self, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) unnamed_addr #1 !dbg !2788 {
 start:
   %0 = alloca i64, align 8
   %inner.dbg.spill14 = alloca ptr, align 8
@@ -9104,7 +9104,7 @@ bb3:                                              ; preds = %start
   store ptr %inner, ptr %inner.dbg.spill, align 8, !dbg !2821
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill, metadata !2798, metadata !DIExpression()), !dbg !2822
 ; call <pc_keyboard::layouts::dvorak_programmer104::DVP104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %10 = call i64 @"_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h5002a8defc3f9bb9E"(ptr align 1 %inner, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2823
+  %10 = call i64 @"_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h25842ce9fb8040d8E"(ptr align 1 %inner, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2823
   store i64 %10, ptr %7, align 8, !dbg !2823
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %7, i64 8, i1 false), !dbg !2823
   br label %bb10, !dbg !2823
@@ -9115,7 +9115,7 @@ bb4:                                              ; preds = %start
   store ptr %inner1, ptr %inner.dbg.spill2, align 8, !dbg !2824
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill2, metadata !2800, metadata !DIExpression()), !dbg !2825
 ; call <pc_keyboard::layouts::dvorak104::Dvorak104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %11 = call i64 @"_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8e0b07937e926c4cE"(ptr align 1 %inner1, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2826
+  %11 = call i64 @"_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h19673f6f1b406f56E"(ptr align 1 %inner1, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2826
   store i64 %11, ptr %6, align 8, !dbg !2826
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %6, i64 8, i1 false), !dbg !2826
   br label %bb10, !dbg !2826
@@ -9126,7 +9126,7 @@ bb5:                                              ; preds = %start
   store ptr %inner3, ptr %inner.dbg.spill4, align 8, !dbg !2827
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill4, metadata !2802, metadata !DIExpression()), !dbg !2828
 ; call <pc_keyboard::layouts::us104::Us104Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %12 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE"(ptr align 1 %inner3, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2829
+  %12 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E"(ptr align 1 %inner3, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2829
   store i64 %12, ptr %5, align 8, !dbg !2829
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %5, i64 8, i1 false), !dbg !2829
   br label %bb10, !dbg !2829
@@ -9137,7 +9137,7 @@ bb6:                                              ; preds = %start
   store ptr %inner5, ptr %inner.dbg.spill6, align 8, !dbg !2830
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill6, metadata !2804, metadata !DIExpression()), !dbg !2831
 ; call <pc_keyboard::layouts::uk105::Uk105Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %13 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17habff44f6a3b6c71dE"(ptr align 1 %inner5, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2832
+  %13 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8d9900a3d58cf13bE"(ptr align 1 %inner5, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2832
   store i64 %13, ptr %4, align 8, !dbg !2832
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %4, i64 8, i1 false), !dbg !2832
   br label %bb10, !dbg !2832
@@ -9148,7 +9148,7 @@ bb7:                                              ; preds = %start
   store ptr %inner7, ptr %inner.dbg.spill8, align 8, !dbg !2833
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill8, metadata !2806, metadata !DIExpression()), !dbg !2834
 ; call <pc_keyboard::layouts::jis109::Jis109Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %14 = call i64 @"_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h12fbb4c1dbdf6437E"(ptr align 1 %inner7, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2835
+  %14 = call i64 @"_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h731b88a7ee49de02E"(ptr align 1 %inner7, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2835
   store i64 %14, ptr %3, align 8, !dbg !2835
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %3, i64 8, i1 false), !dbg !2835
   br label %bb10, !dbg !2835
@@ -9159,7 +9159,7 @@ bb8:                                              ; preds = %start
   store ptr %inner9, ptr %inner.dbg.spill10, align 8, !dbg !2836
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill10, metadata !2808, metadata !DIExpression()), !dbg !2837
 ; call <pc_keyboard::layouts::azerty::Azerty as pc_keyboard::KeyboardLayout>::map_keycode
-  %15 = call i64 @"_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hacf23695a6cff0bbE"(ptr align 1 %inner9, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2838
+  %15 = call i64 @"_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h76a8685bd3a14d9fE"(ptr align 1 %inner9, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2838
   store i64 %15, ptr %2, align 8, !dbg !2838
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %2, i64 8, i1 false), !dbg !2838
   br label %bb10, !dbg !2838
@@ -9170,7 +9170,7 @@ bb9:                                              ; preds = %start
   store ptr %inner11, ptr %inner.dbg.spill12, align 8, !dbg !2839
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill12, metadata !2810, metadata !DIExpression()), !dbg !2840
 ; call <pc_keyboard::layouts::colemak::Colemak as pc_keyboard::KeyboardLayout>::map_keycode
-  %16 = call i64 @"_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17heff68b73dd06292eE"(ptr align 1 %inner11, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2841
+  %16 = call i64 @"_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h65d494e461fef24dE"(ptr align 1 %inner11, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2841
   store i64 %16, ptr %1, align 8, !dbg !2841
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %1, i64 8, i1 false), !dbg !2841
   br label %bb10, !dbg !2841
@@ -9181,7 +9181,7 @@ bb1:                                              ; preds = %start
   store ptr %inner13, ptr %inner.dbg.spill14, align 8, !dbg !2842
   call void @llvm.dbg.declare(metadata ptr %inner.dbg.spill14, metadata !2812, metadata !DIExpression()), !dbg !2843
 ; call <pc_keyboard::layouts::de105::De105Key as pc_keyboard::KeyboardLayout>::map_keycode
-  %17 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hc765e0409a94d5c4E"(ptr align 1 %inner13, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2844
+  %17 = call i64 @"_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17he00613d4f21a5a46E"(ptr align 1 %inner13, i8 %keycode, ptr align 1 %modifiers, i1 zeroext %handle_ctrl) #6, !dbg !2844
   store i64 %17, ptr %0, align 8, !dbg !2844
   call void @llvm.memcpy.p0.p0.i64(ptr align 4 %_0, ptr align 8 %0, i64 8, i1 false), !dbg !2844
   br label %bb10, !dbg !2844
@@ -9193,7 +9193,7 @@ bb10:                                             ; preds = %bb1, %bb9, %bb8, %b
 
 ; pc_keyboard::scancodes::set1::ScancodeSet1::new
 ; Function Attrs: noredzone nounwind
-define i8 @_ZN11pc_keyboard9scancodes4set112ScancodeSet13new17h86aed014760da6b8E() unnamed_addr #1 !dbg !2846 {
+define i8 @_ZN11pc_keyboard9scancodes4set112ScancodeSet13new17hc88d6615d5e64151E() unnamed_addr #1 !dbg !2846 {
 start:
   %_1 = alloca i8, align 1
   %_0 = alloca i8, align 1
@@ -9206,7 +9206,7 @@ start:
 
 ; pc_keyboard::scancodes::set1::ScancodeSet1::map_scancode
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17hd5b470ead5cee59eE(i8 %code) unnamed_addr #1 !dbg !2860 {
+define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17h7c044a3120311ba3E(i8 %code) unnamed_addr #1 !dbg !2860 {
 start:
   %code.dbg.spill = alloca i8, align 1
   %_89 = alloca i8, align 1
@@ -9392,7 +9392,7 @@ start:
 
 bb1:                                              ; preds = %start
   store i8 3, ptr %_89, align 1, !dbg !2868
-  %0 = load i8, ptr %_89, align 1, !dbg !2869, !range !239, !noundef !182
+  %0 = load i8, ptr %_89, align 1, !dbg !2869, !range !243, !noundef !182
   %1 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2869
   store i8 %0, ptr %1, align 1, !dbg !2869
   store i8 1, ptr %_0, align 1, !dbg !2869
@@ -9400,7 +9400,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
   store i8 0, ptr %_2, align 1, !dbg !2871
-  %2 = load i8, ptr %_2, align 1, !dbg !2872, !range !423, !noundef !182
+  %2 = load i8, ptr %_2, align 1, !dbg !2872, !range !372, !noundef !182
   %3 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2872
   store i8 %2, ptr %3, align 1, !dbg !2872
   store i8 0, ptr %_0, align 1, !dbg !2872
@@ -9408,7 +9408,7 @@ bb2:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
   store i8 18, ptr %_3, align 1, !dbg !2874
-  %4 = load i8, ptr %_3, align 1, !dbg !2875, !range !423, !noundef !182
+  %4 = load i8, ptr %_3, align 1, !dbg !2875, !range !372, !noundef !182
   %5 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2875
   store i8 %4, ptr %5, align 1, !dbg !2875
   store i8 0, ptr %_0, align 1, !dbg !2875
@@ -9416,7 +9416,7 @@ bb3:                                              ; preds = %start
 
 bb4:                                              ; preds = %start
   store i8 19, ptr %_4, align 1, !dbg !2877
-  %6 = load i8, ptr %_4, align 1, !dbg !2878, !range !423, !noundef !182
+  %6 = load i8, ptr %_4, align 1, !dbg !2878, !range !372, !noundef !182
   %7 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2878
   store i8 %6, ptr %7, align 1, !dbg !2878
   store i8 0, ptr %_0, align 1, !dbg !2878
@@ -9424,7 +9424,7 @@ bb4:                                              ; preds = %start
 
 bb5:                                              ; preds = %start
   store i8 20, ptr %_5, align 1, !dbg !2880
-  %8 = load i8, ptr %_5, align 1, !dbg !2881, !range !423, !noundef !182
+  %8 = load i8, ptr %_5, align 1, !dbg !2881, !range !372, !noundef !182
   %9 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2881
   store i8 %8, ptr %9, align 1, !dbg !2881
   store i8 0, ptr %_0, align 1, !dbg !2881
@@ -9432,7 +9432,7 @@ bb5:                                              ; preds = %start
 
 bb6:                                              ; preds = %start
   store i8 21, ptr %_6, align 1, !dbg !2883
-  %10 = load i8, ptr %_6, align 1, !dbg !2884, !range !423, !noundef !182
+  %10 = load i8, ptr %_6, align 1, !dbg !2884, !range !372, !noundef !182
   %11 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2884
   store i8 %10, ptr %11, align 1, !dbg !2884
   store i8 0, ptr %_0, align 1, !dbg !2884
@@ -9440,7 +9440,7 @@ bb6:                                              ; preds = %start
 
 bb7:                                              ; preds = %start
   store i8 22, ptr %_7, align 1, !dbg !2886
-  %12 = load i8, ptr %_7, align 1, !dbg !2887, !range !423, !noundef !182
+  %12 = load i8, ptr %_7, align 1, !dbg !2887, !range !372, !noundef !182
   %13 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2887
   store i8 %12, ptr %13, align 1, !dbg !2887
   store i8 0, ptr %_0, align 1, !dbg !2887
@@ -9448,7 +9448,7 @@ bb7:                                              ; preds = %start
 
 bb8:                                              ; preds = %start
   store i8 23, ptr %_8, align 1, !dbg !2889
-  %14 = load i8, ptr %_8, align 1, !dbg !2890, !range !423, !noundef !182
+  %14 = load i8, ptr %_8, align 1, !dbg !2890, !range !372, !noundef !182
   %15 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2890
   store i8 %14, ptr %15, align 1, !dbg !2890
   store i8 0, ptr %_0, align 1, !dbg !2890
@@ -9456,7 +9456,7 @@ bb8:                                              ; preds = %start
 
 bb9:                                              ; preds = %start
   store i8 24, ptr %_9, align 1, !dbg !2892
-  %16 = load i8, ptr %_9, align 1, !dbg !2893, !range !423, !noundef !182
+  %16 = load i8, ptr %_9, align 1, !dbg !2893, !range !372, !noundef !182
   %17 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2893
   store i8 %16, ptr %17, align 1, !dbg !2893
   store i8 0, ptr %_0, align 1, !dbg !2893
@@ -9464,7 +9464,7 @@ bb9:                                              ; preds = %start
 
 bb10:                                             ; preds = %start
   store i8 25, ptr %_10, align 1, !dbg !2895
-  %18 = load i8, ptr %_10, align 1, !dbg !2896, !range !423, !noundef !182
+  %18 = load i8, ptr %_10, align 1, !dbg !2896, !range !372, !noundef !182
   %19 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2896
   store i8 %18, ptr %19, align 1, !dbg !2896
   store i8 0, ptr %_0, align 1, !dbg !2896
@@ -9472,7 +9472,7 @@ bb10:                                             ; preds = %start
 
 bb11:                                             ; preds = %start
   store i8 26, ptr %_11, align 1, !dbg !2898
-  %20 = load i8, ptr %_11, align 1, !dbg !2899, !range !423, !noundef !182
+  %20 = load i8, ptr %_11, align 1, !dbg !2899, !range !372, !noundef !182
   %21 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2899
   store i8 %20, ptr %21, align 1, !dbg !2899
   store i8 0, ptr %_0, align 1, !dbg !2899
@@ -9480,7 +9480,7 @@ bb11:                                             ; preds = %start
 
 bb12:                                             ; preds = %start
   store i8 27, ptr %_12, align 1, !dbg !2901
-  %22 = load i8, ptr %_12, align 1, !dbg !2902, !range !423, !noundef !182
+  %22 = load i8, ptr %_12, align 1, !dbg !2902, !range !372, !noundef !182
   %23 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2902
   store i8 %22, ptr %23, align 1, !dbg !2902
   store i8 0, ptr %_0, align 1, !dbg !2902
@@ -9488,7 +9488,7 @@ bb12:                                             ; preds = %start
 
 bb13:                                             ; preds = %start
   store i8 28, ptr %_13, align 1, !dbg !2904
-  %24 = load i8, ptr %_13, align 1, !dbg !2905, !range !423, !noundef !182
+  %24 = load i8, ptr %_13, align 1, !dbg !2905, !range !372, !noundef !182
   %25 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2905
   store i8 %24, ptr %25, align 1, !dbg !2905
   store i8 0, ptr %_0, align 1, !dbg !2905
@@ -9496,7 +9496,7 @@ bb13:                                             ; preds = %start
 
 bb14:                                             ; preds = %start
   store i8 29, ptr %_14, align 1, !dbg !2907
-  %26 = load i8, ptr %_14, align 1, !dbg !2908, !range !423, !noundef !182
+  %26 = load i8, ptr %_14, align 1, !dbg !2908, !range !372, !noundef !182
   %27 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2908
   store i8 %26, ptr %27, align 1, !dbg !2908
   store i8 0, ptr %_0, align 1, !dbg !2908
@@ -9504,7 +9504,7 @@ bb14:                                             ; preds = %start
 
 bb15:                                             ; preds = %start
   store i8 30, ptr %_15, align 1, !dbg !2910
-  %28 = load i8, ptr %_15, align 1, !dbg !2911, !range !423, !noundef !182
+  %28 = load i8, ptr %_15, align 1, !dbg !2911, !range !372, !noundef !182
   %29 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2911
   store i8 %28, ptr %29, align 1, !dbg !2911
   store i8 0, ptr %_0, align 1, !dbg !2911
@@ -9512,7 +9512,7 @@ bb15:                                             ; preds = %start
 
 bb16:                                             ; preds = %start
   store i8 38, ptr %_16, align 1, !dbg !2913
-  %30 = load i8, ptr %_16, align 1, !dbg !2914, !range !423, !noundef !182
+  %30 = load i8, ptr %_16, align 1, !dbg !2914, !range !372, !noundef !182
   %31 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2914
   store i8 %30, ptr %31, align 1, !dbg !2914
   store i8 0, ptr %_0, align 1, !dbg !2914
@@ -9520,7 +9520,7 @@ bb16:                                             ; preds = %start
 
 bb17:                                             ; preds = %start
   store i8 39, ptr %_17, align 1, !dbg !2916
-  %32 = load i8, ptr %_17, align 1, !dbg !2917, !range !423, !noundef !182
+  %32 = load i8, ptr %_17, align 1, !dbg !2917, !range !372, !noundef !182
   %33 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2917
   store i8 %32, ptr %33, align 1, !dbg !2917
   store i8 0, ptr %_0, align 1, !dbg !2917
@@ -9528,7 +9528,7 @@ bb17:                                             ; preds = %start
 
 bb18:                                             ; preds = %start
   store i8 40, ptr %_18, align 1, !dbg !2919
-  %34 = load i8, ptr %_18, align 1, !dbg !2920, !range !423, !noundef !182
+  %34 = load i8, ptr %_18, align 1, !dbg !2920, !range !372, !noundef !182
   %35 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2920
   store i8 %34, ptr %35, align 1, !dbg !2920
   store i8 0, ptr %_0, align 1, !dbg !2920
@@ -9536,7 +9536,7 @@ bb18:                                             ; preds = %start
 
 bb19:                                             ; preds = %start
   store i8 41, ptr %_19, align 1, !dbg !2922
-  %36 = load i8, ptr %_19, align 1, !dbg !2923, !range !423, !noundef !182
+  %36 = load i8, ptr %_19, align 1, !dbg !2923, !range !372, !noundef !182
   %37 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2923
   store i8 %36, ptr %37, align 1, !dbg !2923
   store i8 0, ptr %_0, align 1, !dbg !2923
@@ -9544,7 +9544,7 @@ bb19:                                             ; preds = %start
 
 bb20:                                             ; preds = %start
   store i8 42, ptr %_20, align 1, !dbg !2925
-  %38 = load i8, ptr %_20, align 1, !dbg !2926, !range !423, !noundef !182
+  %38 = load i8, ptr %_20, align 1, !dbg !2926, !range !372, !noundef !182
   %39 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2926
   store i8 %38, ptr %39, align 1, !dbg !2926
   store i8 0, ptr %_0, align 1, !dbg !2926
@@ -9552,7 +9552,7 @@ bb20:                                             ; preds = %start
 
 bb21:                                             ; preds = %start
   store i8 43, ptr %_21, align 1, !dbg !2928
-  %40 = load i8, ptr %_21, align 1, !dbg !2929, !range !423, !noundef !182
+  %40 = load i8, ptr %_21, align 1, !dbg !2929, !range !372, !noundef !182
   %41 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2929
   store i8 %40, ptr %41, align 1, !dbg !2929
   store i8 0, ptr %_0, align 1, !dbg !2929
@@ -9560,7 +9560,7 @@ bb21:                                             ; preds = %start
 
 bb22:                                             ; preds = %start
   store i8 44, ptr %_22, align 1, !dbg !2931
-  %42 = load i8, ptr %_22, align 1, !dbg !2932, !range !423, !noundef !182
+  %42 = load i8, ptr %_22, align 1, !dbg !2932, !range !372, !noundef !182
   %43 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2932
   store i8 %42, ptr %43, align 1, !dbg !2932
   store i8 0, ptr %_0, align 1, !dbg !2932
@@ -9568,7 +9568,7 @@ bb22:                                             ; preds = %start
 
 bb23:                                             ; preds = %start
   store i8 45, ptr %_23, align 1, !dbg !2934
-  %44 = load i8, ptr %_23, align 1, !dbg !2935, !range !423, !noundef !182
+  %44 = load i8, ptr %_23, align 1, !dbg !2935, !range !372, !noundef !182
   %45 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2935
   store i8 %44, ptr %45, align 1, !dbg !2935
   store i8 0, ptr %_0, align 1, !dbg !2935
@@ -9576,7 +9576,7 @@ bb23:                                             ; preds = %start
 
 bb24:                                             ; preds = %start
   store i8 46, ptr %_24, align 1, !dbg !2937
-  %46 = load i8, ptr %_24, align 1, !dbg !2938, !range !423, !noundef !182
+  %46 = load i8, ptr %_24, align 1, !dbg !2938, !range !372, !noundef !182
   %47 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2938
   store i8 %46, ptr %47, align 1, !dbg !2938
   store i8 0, ptr %_0, align 1, !dbg !2938
@@ -9584,7 +9584,7 @@ bb24:                                             ; preds = %start
 
 bb25:                                             ; preds = %start
   store i8 47, ptr %_25, align 1, !dbg !2940
-  %48 = load i8, ptr %_25, align 1, !dbg !2941, !range !423, !noundef !182
+  %48 = load i8, ptr %_25, align 1, !dbg !2941, !range !372, !noundef !182
   %49 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2941
   store i8 %48, ptr %49, align 1, !dbg !2941
   store i8 0, ptr %_0, align 1, !dbg !2941
@@ -9592,7 +9592,7 @@ bb25:                                             ; preds = %start
 
 bb26:                                             ; preds = %start
   store i8 48, ptr %_26, align 1, !dbg !2943
-  %50 = load i8, ptr %_26, align 1, !dbg !2944, !range !423, !noundef !182
+  %50 = load i8, ptr %_26, align 1, !dbg !2944, !range !372, !noundef !182
   %51 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2944
   store i8 %50, ptr %51, align 1, !dbg !2944
   store i8 0, ptr %_0, align 1, !dbg !2944
@@ -9600,7 +9600,7 @@ bb26:                                             ; preds = %start
 
 bb27:                                             ; preds = %start
   store i8 49, ptr %_27, align 1, !dbg !2946
-  %52 = load i8, ptr %_27, align 1, !dbg !2947, !range !423, !noundef !182
+  %52 = load i8, ptr %_27, align 1, !dbg !2947, !range !372, !noundef !182
   %53 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2947
   store i8 %52, ptr %53, align 1, !dbg !2947
   store i8 0, ptr %_0, align 1, !dbg !2947
@@ -9608,7 +9608,7 @@ bb27:                                             ; preds = %start
 
 bb28:                                             ; preds = %start
   store i8 50, ptr %_28, align 1, !dbg !2949
-  %54 = load i8, ptr %_28, align 1, !dbg !2950, !range !423, !noundef !182
+  %54 = load i8, ptr %_28, align 1, !dbg !2950, !range !372, !noundef !182
   %55 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2950
   store i8 %54, ptr %55, align 1, !dbg !2950
   store i8 0, ptr %_0, align 1, !dbg !2950
@@ -9616,7 +9616,7 @@ bb28:                                             ; preds = %start
 
 bb29:                                             ; preds = %start
   store i8 72, ptr %_29, align 1, !dbg !2952
-  %56 = load i8, ptr %_29, align 1, !dbg !2953, !range !423, !noundef !182
+  %56 = load i8, ptr %_29, align 1, !dbg !2953, !range !372, !noundef !182
   %57 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2953
   store i8 %56, ptr %57, align 1, !dbg !2953
   store i8 0, ptr %_0, align 1, !dbg !2953
@@ -9624,7 +9624,7 @@ bb29:                                             ; preds = %start
 
 bb30:                                             ; preds = %start
   store i8 93, ptr %_30, align 1, !dbg !2955
-  %58 = load i8, ptr %_30, align 1, !dbg !2956, !range !423, !noundef !182
+  %58 = load i8, ptr %_30, align 1, !dbg !2956, !range !372, !noundef !182
   %59 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2956
   store i8 %58, ptr %59, align 1, !dbg !2956
   store i8 0, ptr %_0, align 1, !dbg !2956
@@ -9632,7 +9632,7 @@ bb30:                                             ; preds = %start
 
 bb31:                                             ; preds = %start
   store i8 61, ptr %_31, align 1, !dbg !2958
-  %60 = load i8, ptr %_31, align 1, !dbg !2959, !range !423, !noundef !182
+  %60 = load i8, ptr %_31, align 1, !dbg !2959, !range !372, !noundef !182
   %61 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2959
   store i8 %60, ptr %61, align 1, !dbg !2959
   store i8 0, ptr %_0, align 1, !dbg !2959
@@ -9640,7 +9640,7 @@ bb31:                                             ; preds = %start
 
 bb32:                                             ; preds = %start
   store i8 62, ptr %_32, align 1, !dbg !2961
-  %62 = load i8, ptr %_32, align 1, !dbg !2962, !range !423, !noundef !182
+  %62 = load i8, ptr %_32, align 1, !dbg !2962, !range !372, !noundef !182
   %63 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2962
   store i8 %62, ptr %63, align 1, !dbg !2962
   store i8 0, ptr %_0, align 1, !dbg !2962
@@ -9648,7 +9648,7 @@ bb32:                                             ; preds = %start
 
 bb33:                                             ; preds = %start
   store i8 63, ptr %_33, align 1, !dbg !2964
-  %64 = load i8, ptr %_33, align 1, !dbg !2965, !range !423, !noundef !182
+  %64 = load i8, ptr %_33, align 1, !dbg !2965, !range !372, !noundef !182
   %65 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2965
   store i8 %64, ptr %65, align 1, !dbg !2965
   store i8 0, ptr %_0, align 1, !dbg !2965
@@ -9656,7 +9656,7 @@ bb33:                                             ; preds = %start
 
 bb34:                                             ; preds = %start
   store i8 64, ptr %_34, align 1, !dbg !2967
-  %66 = load i8, ptr %_34, align 1, !dbg !2968, !range !423, !noundef !182
+  %66 = load i8, ptr %_34, align 1, !dbg !2968, !range !372, !noundef !182
   %67 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2968
   store i8 %66, ptr %67, align 1, !dbg !2968
   store i8 0, ptr %_0, align 1, !dbg !2968
@@ -9664,7 +9664,7 @@ bb34:                                             ; preds = %start
 
 bb35:                                             ; preds = %start
   store i8 65, ptr %_35, align 1, !dbg !2970
-  %68 = load i8, ptr %_35, align 1, !dbg !2971, !range !423, !noundef !182
+  %68 = load i8, ptr %_35, align 1, !dbg !2971, !range !372, !noundef !182
   %69 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2971
   store i8 %68, ptr %69, align 1, !dbg !2971
   store i8 0, ptr %_0, align 1, !dbg !2971
@@ -9672,7 +9672,7 @@ bb35:                                             ; preds = %start
 
 bb36:                                             ; preds = %start
   store i8 66, ptr %_36, align 1, !dbg !2973
-  %70 = load i8, ptr %_36, align 1, !dbg !2974, !range !423, !noundef !182
+  %70 = load i8, ptr %_36, align 1, !dbg !2974, !range !372, !noundef !182
   %71 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2974
   store i8 %70, ptr %71, align 1, !dbg !2974
   store i8 0, ptr %_0, align 1, !dbg !2974
@@ -9680,7 +9680,7 @@ bb36:                                             ; preds = %start
 
 bb37:                                             ; preds = %start
   store i8 67, ptr %_37, align 1, !dbg !2976
-  %72 = load i8, ptr %_37, align 1, !dbg !2977, !range !423, !noundef !182
+  %72 = load i8, ptr %_37, align 1, !dbg !2977, !range !372, !noundef !182
   %73 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2977
   store i8 %72, ptr %73, align 1, !dbg !2977
   store i8 0, ptr %_0, align 1, !dbg !2977
@@ -9688,7 +9688,7 @@ bb37:                                             ; preds = %start
 
 bb38:                                             ; preds = %start
   store i8 68, ptr %_38, align 1, !dbg !2979
-  %74 = load i8, ptr %_38, align 1, !dbg !2980, !range !423, !noundef !182
+  %74 = load i8, ptr %_38, align 1, !dbg !2980, !range !372, !noundef !182
   %75 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2980
   store i8 %74, ptr %75, align 1, !dbg !2980
   store i8 0, ptr %_0, align 1, !dbg !2980
@@ -9696,7 +9696,7 @@ bb38:                                             ; preds = %start
 
 bb39:                                             ; preds = %start
   store i8 69, ptr %_39, align 1, !dbg !2982
-  %76 = load i8, ptr %_39, align 1, !dbg !2983, !range !423, !noundef !182
+  %76 = load i8, ptr %_39, align 1, !dbg !2983, !range !372, !noundef !182
   %77 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2983
   store i8 %76, ptr %77, align 1, !dbg !2983
   store i8 0, ptr %_0, align 1, !dbg !2983
@@ -9704,7 +9704,7 @@ bb39:                                             ; preds = %start
 
 bb40:                                             ; preds = %start
   store i8 70, ptr %_40, align 1, !dbg !2985
-  %78 = load i8, ptr %_40, align 1, !dbg !2986, !range !423, !noundef !182
+  %78 = load i8, ptr %_40, align 1, !dbg !2986, !range !372, !noundef !182
   %79 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2986
   store i8 %78, ptr %79, align 1, !dbg !2986
   store i8 0, ptr %_0, align 1, !dbg !2986
@@ -9712,7 +9712,7 @@ bb40:                                             ; preds = %start
 
 bb41:                                             ; preds = %start
   store i8 71, ptr %_41, align 1, !dbg !2988
-  %80 = load i8, ptr %_41, align 1, !dbg !2989, !range !423, !noundef !182
+  %80 = load i8, ptr %_41, align 1, !dbg !2989, !range !372, !noundef !182
   %81 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2989
   store i8 %80, ptr %81, align 1, !dbg !2989
   store i8 0, ptr %_0, align 1, !dbg !2989
@@ -9720,7 +9720,7 @@ bb41:                                             ; preds = %start
 
 bb42:                                             ; preds = %start
   store i8 17, ptr %_42, align 1, !dbg !2991
-  %82 = load i8, ptr %_42, align 1, !dbg !2992, !range !423, !noundef !182
+  %82 = load i8, ptr %_42, align 1, !dbg !2992, !range !372, !noundef !182
   %83 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2992
   store i8 %82, ptr %83, align 1, !dbg !2992
   store i8 0, ptr %_0, align 1, !dbg !2992
@@ -9728,7 +9728,7 @@ bb42:                                             ; preds = %start
 
 bb43:                                             ; preds = %start
   store i8 76, ptr %_43, align 1, !dbg !2994
-  %84 = load i8, ptr %_43, align 1, !dbg !2995, !range !423, !noundef !182
+  %84 = load i8, ptr %_43, align 1, !dbg !2995, !range !372, !noundef !182
   %85 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2995
   store i8 %84, ptr %85, align 1, !dbg !2995
   store i8 0, ptr %_0, align 1, !dbg !2995
@@ -9736,7 +9736,7 @@ bb43:                                             ; preds = %start
 
 bb44:                                             ; preds = %start
   store i8 52, ptr %_44, align 1, !dbg !2997
-  %86 = load i8, ptr %_44, align 1, !dbg !2998, !range !423, !noundef !182
+  %86 = load i8, ptr %_44, align 1, !dbg !2998, !range !372, !noundef !182
   %87 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !2998
   store i8 %86, ptr %87, align 1, !dbg !2998
   store i8 0, ptr %_0, align 1, !dbg !2998
@@ -9744,7 +9744,7 @@ bb44:                                             ; preds = %start
 
 bb45:                                             ; preds = %start
   store i8 77, ptr %_45, align 1, !dbg !3000
-  %88 = load i8, ptr %_45, align 1, !dbg !3001, !range !423, !noundef !182
+  %88 = load i8, ptr %_45, align 1, !dbg !3001, !range !372, !noundef !182
   %89 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3001
   store i8 %88, ptr %89, align 1, !dbg !3001
   store i8 0, ptr %_0, align 1, !dbg !3001
@@ -9752,7 +9752,7 @@ bb45:                                             ; preds = %start
 
 bb46:                                             ; preds = %start
   store i8 78, ptr %_46, align 1, !dbg !3003
-  %90 = load i8, ptr %_46, align 1, !dbg !3004, !range !423, !noundef !182
+  %90 = load i8, ptr %_46, align 1, !dbg !3004, !range !372, !noundef !182
   %91 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3004
   store i8 %90, ptr %91, align 1, !dbg !3004
   store i8 0, ptr %_0, align 1, !dbg !3004
@@ -9760,7 +9760,7 @@ bb46:                                             ; preds = %start
 
 bb47:                                             ; preds = %start
   store i8 79, ptr %_47, align 1, !dbg !3006
-  %92 = load i8, ptr %_47, align 1, !dbg !3007, !range !423, !noundef !182
+  %92 = load i8, ptr %_47, align 1, !dbg !3007, !range !372, !noundef !182
   %93 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3007
   store i8 %92, ptr %93, align 1, !dbg !3007
   store i8 0, ptr %_0, align 1, !dbg !3007
@@ -9768,7 +9768,7 @@ bb47:                                             ; preds = %start
 
 bb48:                                             ; preds = %start
   store i8 80, ptr %_48, align 1, !dbg !3009
-  %94 = load i8, ptr %_48, align 1, !dbg !3010, !range !423, !noundef !182
+  %94 = load i8, ptr %_48, align 1, !dbg !3010, !range !372, !noundef !182
   %95 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3010
   store i8 %94, ptr %95, align 1, !dbg !3010
   store i8 0, ptr %_0, align 1, !dbg !3010
@@ -9776,7 +9776,7 @@ bb48:                                             ; preds = %start
 
 bb49:                                             ; preds = %start
   store i8 81, ptr %_49, align 1, !dbg !3012
-  %96 = load i8, ptr %_49, align 1, !dbg !3013, !range !423, !noundef !182
+  %96 = load i8, ptr %_49, align 1, !dbg !3013, !range !372, !noundef !182
   %97 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3013
   store i8 %96, ptr %97, align 1, !dbg !3013
   store i8 0, ptr %_0, align 1, !dbg !3013
@@ -9784,7 +9784,7 @@ bb49:                                             ; preds = %start
 
 bb50:                                             ; preds = %start
   store i8 82, ptr %_50, align 1, !dbg !3015
-  %98 = load i8, ptr %_50, align 1, !dbg !3016, !range !423, !noundef !182
+  %98 = load i8, ptr %_50, align 1, !dbg !3016, !range !372, !noundef !182
   %99 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3016
   store i8 %98, ptr %99, align 1, !dbg !3016
   store i8 0, ptr %_0, align 1, !dbg !3016
@@ -9792,7 +9792,7 @@ bb50:                                             ; preds = %start
 
 bb51:                                             ; preds = %start
   store i8 83, ptr %_51, align 1, !dbg !3018
-  %100 = load i8, ptr %_51, align 1, !dbg !3019, !range !423, !noundef !182
+  %100 = load i8, ptr %_51, align 1, !dbg !3019, !range !372, !noundef !182
   %101 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3019
   store i8 %100, ptr %101, align 1, !dbg !3019
   store i8 0, ptr %_0, align 1, !dbg !3019
@@ -9800,7 +9800,7 @@ bb51:                                             ; preds = %start
 
 bb52:                                             ; preds = %start
   store i8 84, ptr %_52, align 1, !dbg !3021
-  %102 = load i8, ptr %_52, align 1, !dbg !3022, !range !423, !noundef !182
+  %102 = load i8, ptr %_52, align 1, !dbg !3022, !range !372, !noundef !182
   %103 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3022
   store i8 %102, ptr %103, align 1, !dbg !3022
   store i8 0, ptr %_0, align 1, !dbg !3022
@@ -9808,7 +9808,7 @@ bb52:                                             ; preds = %start
 
 bb53:                                             ; preds = %start
   store i8 85, ptr %_53, align 1, !dbg !3024
-  %104 = load i8, ptr %_53, align 1, !dbg !3025, !range !423, !noundef !182
+  %104 = load i8, ptr %_53, align 1, !dbg !3025, !range !372, !noundef !182
   %105 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3025
   store i8 %104, ptr %105, align 1, !dbg !3025
   store i8 0, ptr %_0, align 1, !dbg !3025
@@ -9816,7 +9816,7 @@ bb53:                                             ; preds = %start
 
 bb54:                                             ; preds = %start
   store i8 86, ptr %_54, align 1, !dbg !3027
-  %106 = load i8, ptr %_54, align 1, !dbg !3028, !range !423, !noundef !182
+  %106 = load i8, ptr %_54, align 1, !dbg !3028, !range !372, !noundef !182
   %107 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3028
   store i8 %106, ptr %107, align 1, !dbg !3028
   store i8 0, ptr %_0, align 1, !dbg !3028
@@ -9824,7 +9824,7 @@ bb54:                                             ; preds = %start
 
 bb55:                                             ; preds = %start
   store i8 87, ptr %_55, align 1, !dbg !3030
-  %108 = load i8, ptr %_55, align 1, !dbg !3031, !range !423, !noundef !182
+  %108 = load i8, ptr %_55, align 1, !dbg !3031, !range !372, !noundef !182
   %109 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3031
   store i8 %108, ptr %109, align 1, !dbg !3031
   store i8 0, ptr %_0, align 1, !dbg !3031
@@ -9832,7 +9832,7 @@ bb55:                                             ; preds = %start
 
 bb56:                                             ; preds = %start
   store i8 36, ptr %_56, align 1, !dbg !3033
-  %110 = load i8, ptr %_56, align 1, !dbg !3034, !range !423, !noundef !182
+  %110 = load i8, ptr %_56, align 1, !dbg !3034, !range !372, !noundef !182
   %111 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3034
   store i8 %110, ptr %111, align 1, !dbg !3034
   store i8 0, ptr %_0, align 1, !dbg !3034
@@ -9840,7 +9840,7 @@ bb56:                                             ; preds = %start
 
 bb57:                                             ; preds = %start
   store i8 95, ptr %_57, align 1, !dbg !3036
-  %112 = load i8, ptr %_57, align 1, !dbg !3037, !range !423, !noundef !182
+  %112 = load i8, ptr %_57, align 1, !dbg !3037, !range !372, !noundef !182
   %113 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3037
   store i8 %112, ptr %113, align 1, !dbg !3037
   store i8 0, ptr %_0, align 1, !dbg !3037
@@ -9848,7 +9848,7 @@ bb57:                                             ; preds = %start
 
 bb58:                                             ; preds = %start
   store i8 96, ptr %_58, align 1, !dbg !3039
-  %114 = load i8, ptr %_58, align 1, !dbg !3040, !range !423, !noundef !182
+  %114 = load i8, ptr %_58, align 1, !dbg !3040, !range !372, !noundef !182
   %115 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3040
   store i8 %114, ptr %115, align 1, !dbg !3040
   store i8 0, ptr %_0, align 1, !dbg !3040
@@ -9856,7 +9856,7 @@ bb58:                                             ; preds = %start
 
 bb59:                                             ; preds = %start
   store i8 60, ptr %_59, align 1, !dbg !3042
-  %116 = load i8, ptr %_59, align 1, !dbg !3043, !range !423, !noundef !182
+  %116 = load i8, ptr %_59, align 1, !dbg !3043, !range !372, !noundef !182
   %117 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3043
   store i8 %116, ptr %117, align 1, !dbg !3043
   store i8 0, ptr %_0, align 1, !dbg !3043
@@ -9864,7 +9864,7 @@ bb59:                                             ; preds = %start
 
 bb60:                                             ; preds = %start
   store i8 1, ptr %_60, align 1, !dbg !3045
-  %118 = load i8, ptr %_60, align 1, !dbg !3046, !range !423, !noundef !182
+  %118 = load i8, ptr %_60, align 1, !dbg !3046, !range !372, !noundef !182
   %119 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3046
   store i8 %118, ptr %119, align 1, !dbg !3046
   store i8 0, ptr %_0, align 1, !dbg !3046
@@ -9872,7 +9872,7 @@ bb60:                                             ; preds = %start
 
 bb61:                                             ; preds = %start
   store i8 2, ptr %_61, align 1, !dbg !3048
-  %120 = load i8, ptr %_61, align 1, !dbg !3049, !range !423, !noundef !182
+  %120 = load i8, ptr %_61, align 1, !dbg !3049, !range !372, !noundef !182
   %121 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3049
   store i8 %120, ptr %121, align 1, !dbg !3049
   store i8 0, ptr %_0, align 1, !dbg !3049
@@ -9880,7 +9880,7 @@ bb61:                                             ; preds = %start
 
 bb62:                                             ; preds = %start
   store i8 3, ptr %_62, align 1, !dbg !3051
-  %122 = load i8, ptr %_62, align 1, !dbg !3052, !range !423, !noundef !182
+  %122 = load i8, ptr %_62, align 1, !dbg !3052, !range !372, !noundef !182
   %123 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3052
   store i8 %122, ptr %123, align 1, !dbg !3052
   store i8 0, ptr %_0, align 1, !dbg !3052
@@ -9888,7 +9888,7 @@ bb62:                                             ; preds = %start
 
 bb63:                                             ; preds = %start
   store i8 4, ptr %_63, align 1, !dbg !3054
-  %124 = load i8, ptr %_63, align 1, !dbg !3055, !range !423, !noundef !182
+  %124 = load i8, ptr %_63, align 1, !dbg !3055, !range !372, !noundef !182
   %125 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3055
   store i8 %124, ptr %125, align 1, !dbg !3055
   store i8 0, ptr %_0, align 1, !dbg !3055
@@ -9896,7 +9896,7 @@ bb63:                                             ; preds = %start
 
 bb64:                                             ; preds = %start
   store i8 5, ptr %_64, align 1, !dbg !3057
-  %126 = load i8, ptr %_64, align 1, !dbg !3058, !range !423, !noundef !182
+  %126 = load i8, ptr %_64, align 1, !dbg !3058, !range !372, !noundef !182
   %127 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3058
   store i8 %126, ptr %127, align 1, !dbg !3058
   store i8 0, ptr %_0, align 1, !dbg !3058
@@ -9904,7 +9904,7 @@ bb64:                                             ; preds = %start
 
 bb65:                                             ; preds = %start
   store i8 6, ptr %_65, align 1, !dbg !3060
-  %128 = load i8, ptr %_65, align 1, !dbg !3061, !range !423, !noundef !182
+  %128 = load i8, ptr %_65, align 1, !dbg !3061, !range !372, !noundef !182
   %129 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3061
   store i8 %128, ptr %129, align 1, !dbg !3061
   store i8 0, ptr %_0, align 1, !dbg !3061
@@ -9912,7 +9912,7 @@ bb65:                                             ; preds = %start
 
 bb66:                                             ; preds = %start
   store i8 7, ptr %_66, align 1, !dbg !3063
-  %130 = load i8, ptr %_66, align 1, !dbg !3064, !range !423, !noundef !182
+  %130 = load i8, ptr %_66, align 1, !dbg !3064, !range !372, !noundef !182
   %131 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3064
   store i8 %130, ptr %131, align 1, !dbg !3064
   store i8 0, ptr %_0, align 1, !dbg !3064
@@ -9920,7 +9920,7 @@ bb66:                                             ; preds = %start
 
 bb67:                                             ; preds = %start
   store i8 8, ptr %_67, align 1, !dbg !3066
-  %132 = load i8, ptr %_67, align 1, !dbg !3067, !range !423, !noundef !182
+  %132 = load i8, ptr %_67, align 1, !dbg !3067, !range !372, !noundef !182
   %133 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3067
   store i8 %132, ptr %133, align 1, !dbg !3067
   store i8 0, ptr %_0, align 1, !dbg !3067
@@ -9928,7 +9928,7 @@ bb67:                                             ; preds = %start
 
 bb68:                                             ; preds = %start
   store i8 9, ptr %_68, align 1, !dbg !3069
-  %134 = load i8, ptr %_68, align 1, !dbg !3070, !range !423, !noundef !182
+  %134 = load i8, ptr %_68, align 1, !dbg !3070, !range !372, !noundef !182
   %135 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3070
   store i8 %134, ptr %135, align 1, !dbg !3070
   store i8 0, ptr %_0, align 1, !dbg !3070
@@ -9936,7 +9936,7 @@ bb68:                                             ; preds = %start
 
 bb69:                                             ; preds = %start
   store i8 10, ptr %_69, align 1, !dbg !3072
-  %136 = load i8, ptr %_69, align 1, !dbg !3073, !range !423, !noundef !182
+  %136 = load i8, ptr %_69, align 1, !dbg !3073, !range !372, !noundef !182
   %137 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3073
   store i8 %136, ptr %137, align 1, !dbg !3073
   store i8 0, ptr %_0, align 1, !dbg !3073
@@ -9944,7 +9944,7 @@ bb69:                                             ; preds = %start
 
 bb70:                                             ; preds = %start
   store i8 34, ptr %_70, align 1, !dbg !3075
-  %138 = load i8, ptr %_70, align 1, !dbg !3076, !range !423, !noundef !182
+  %138 = load i8, ptr %_70, align 1, !dbg !3076, !range !372, !noundef !182
   %139 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3076
   store i8 %138, ptr %139, align 1, !dbg !3076
   store i8 0, ptr %_0, align 1, !dbg !3076
@@ -9952,7 +9952,7 @@ bb70:                                             ; preds = %start
 
 bb71:                                             ; preds = %start
   store i8 15, ptr %_71, align 1, !dbg !3078
-  %140 = load i8, ptr %_71, align 1, !dbg !3079, !range !423, !noundef !182
+  %140 = load i8, ptr %_71, align 1, !dbg !3079, !range !372, !noundef !182
   %141 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3079
   store i8 %140, ptr %141, align 1, !dbg !3079
   store i8 0, ptr %_0, align 1, !dbg !3079
@@ -9960,7 +9960,7 @@ bb71:                                             ; preds = %start
 
 bb72:                                             ; preds = %start
   store i8 56, ptr %_72, align 1, !dbg !3081
-  %142 = load i8, ptr %_72, align 1, !dbg !3082, !range !423, !noundef !182
+  %142 = load i8, ptr %_72, align 1, !dbg !3082, !range !372, !noundef !182
   %143 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3082
   store i8 %142, ptr %143, align 1, !dbg !3082
   store i8 0, ptr %_0, align 1, !dbg !3082
@@ -9968,7 +9968,7 @@ bb72:                                             ; preds = %start
 
 bb73:                                             ; preds = %start
   store i8 57, ptr %_73, align 1, !dbg !3084
-  %144 = load i8, ptr %_73, align 1, !dbg !3085, !range !423, !noundef !182
+  %144 = load i8, ptr %_73, align 1, !dbg !3085, !range !372, !noundef !182
   %145 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3085
   store i8 %144, ptr %145, align 1, !dbg !3085
   store i8 0, ptr %_0, align 1, !dbg !3085
@@ -9976,7 +9976,7 @@ bb73:                                             ; preds = %start
 
 bb74:                                             ; preds = %start
   store i8 58, ptr %_74, align 1, !dbg !3087
-  %146 = load i8, ptr %_74, align 1, !dbg !3088, !range !423, !noundef !182
+  %146 = load i8, ptr %_74, align 1, !dbg !3088, !range !372, !noundef !182
   %147 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3088
   store i8 %146, ptr %147, align 1, !dbg !3088
   store i8 0, ptr %_0, align 1, !dbg !3088
@@ -9984,7 +9984,7 @@ bb74:                                             ; preds = %start
 
 bb75:                                             ; preds = %start
   store i8 37, ptr %_75, align 1, !dbg !3090
-  %148 = load i8, ptr %_75, align 1, !dbg !3091, !range !423, !noundef !182
+  %148 = load i8, ptr %_75, align 1, !dbg !3091, !range !372, !noundef !182
   %149 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3091
   store i8 %148, ptr %149, align 1, !dbg !3091
   store i8 0, ptr %_0, align 1, !dbg !3091
@@ -9992,7 +9992,7 @@ bb75:                                             ; preds = %start
 
 bb76:                                             ; preds = %start
   store i8 73, ptr %_76, align 1, !dbg !3093
-  %150 = load i8, ptr %_76, align 1, !dbg !3094, !range !423, !noundef !182
+  %150 = load i8, ptr %_76, align 1, !dbg !3094, !range !372, !noundef !182
   %151 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3094
   store i8 %150, ptr %151, align 1, !dbg !3094
   store i8 0, ptr %_0, align 1, !dbg !3094
@@ -10000,7 +10000,7 @@ bb76:                                             ; preds = %start
 
 bb77:                                             ; preds = %start
   store i8 74, ptr %_77, align 1, !dbg !3096
-  %152 = load i8, ptr %_77, align 1, !dbg !3097, !range !423, !noundef !182
+  %152 = load i8, ptr %_77, align 1, !dbg !3097, !range !372, !noundef !182
   %153 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3097
   store i8 %152, ptr %153, align 1, !dbg !3097
   store i8 0, ptr %_0, align 1, !dbg !3097
@@ -10008,7 +10008,7 @@ bb77:                                             ; preds = %start
 
 bb78:                                             ; preds = %start
   store i8 75, ptr %_78, align 1, !dbg !3099
-  %154 = load i8, ptr %_78, align 1, !dbg !3100, !range !423, !noundef !182
+  %154 = load i8, ptr %_78, align 1, !dbg !3100, !range !372, !noundef !182
   %155 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3100
   store i8 %154, ptr %155, align 1, !dbg !3100
   store i8 0, ptr %_0, align 1, !dbg !3100
@@ -10016,7 +10016,7 @@ bb78:                                             ; preds = %start
 
 bb79:                                             ; preds = %start
   store i8 59, ptr %_79, align 1, !dbg !3102
-  %156 = load i8, ptr %_79, align 1, !dbg !3103, !range !423, !noundef !182
+  %156 = load i8, ptr %_79, align 1, !dbg !3103, !range !372, !noundef !182
   %157 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3103
   store i8 %156, ptr %157, align 1, !dbg !3103
   store i8 0, ptr %_0, align 1, !dbg !3103
@@ -10024,7 +10024,7 @@ bb79:                                             ; preds = %start
 
 bb80:                                             ; preds = %start
   store i8 89, ptr %_80, align 1, !dbg !3105
-  %158 = load i8, ptr %_80, align 1, !dbg !3106, !range !423, !noundef !182
+  %158 = load i8, ptr %_80, align 1, !dbg !3106, !range !372, !noundef !182
   %159 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3106
   store i8 %158, ptr %159, align 1, !dbg !3106
   store i8 0, ptr %_0, align 1, !dbg !3106
@@ -10032,7 +10032,7 @@ bb80:                                             ; preds = %start
 
 bb81:                                             ; preds = %start
   store i8 90, ptr %_81, align 1, !dbg !3108
-  %160 = load i8, ptr %_81, align 1, !dbg !3109, !range !423, !noundef !182
+  %160 = load i8, ptr %_81, align 1, !dbg !3109, !range !372, !noundef !182
   %161 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3109
   store i8 %160, ptr %161, align 1, !dbg !3109
   store i8 0, ptr %_0, align 1, !dbg !3109
@@ -10040,7 +10040,7 @@ bb81:                                             ; preds = %start
 
 bb82:                                             ; preds = %start
   store i8 91, ptr %_82, align 1, !dbg !3111
-  %162 = load i8, ptr %_82, align 1, !dbg !3112, !range !423, !noundef !182
+  %162 = load i8, ptr %_82, align 1, !dbg !3112, !range !372, !noundef !182
   %163 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3112
   store i8 %162, ptr %163, align 1, !dbg !3112
   store i8 0, ptr %_0, align 1, !dbg !3112
@@ -10048,7 +10048,7 @@ bb82:                                             ; preds = %start
 
 bb83:                                             ; preds = %start
   store i8 104, ptr %_83, align 1, !dbg !3114
-  %164 = load i8, ptr %_83, align 1, !dbg !3115, !range !423, !noundef !182
+  %164 = load i8, ptr %_83, align 1, !dbg !3115, !range !372, !noundef !182
   %165 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3115
   store i8 %164, ptr %165, align 1, !dbg !3115
   store i8 0, ptr %_0, align 1, !dbg !3115
@@ -10056,7 +10056,7 @@ bb83:                                             ; preds = %start
 
 bb84:                                             ; preds = %start
   store i8 105, ptr %_84, align 1, !dbg !3117
-  %166 = load i8, ptr %_84, align 1, !dbg !3118, !range !423, !noundef !182
+  %166 = load i8, ptr %_84, align 1, !dbg !3118, !range !372, !noundef !182
   %167 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3118
   store i8 %166, ptr %167, align 1, !dbg !3118
   store i8 0, ptr %_0, align 1, !dbg !3118
@@ -10064,7 +10064,7 @@ bb84:                                             ; preds = %start
 
 bb85:                                             ; preds = %start
   store i8 14, ptr %_85, align 1, !dbg !3120
-  %168 = load i8, ptr %_85, align 1, !dbg !3121, !range !423, !noundef !182
+  %168 = load i8, ptr %_85, align 1, !dbg !3121, !range !372, !noundef !182
   %169 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3121
   store i8 %168, ptr %169, align 1, !dbg !3121
   store i8 0, ptr %_0, align 1, !dbg !3121
@@ -10072,7 +10072,7 @@ bb85:                                             ; preds = %start
 
 bb86:                                             ; preds = %start
   store i8 51, ptr %_86, align 1, !dbg !3123
-  %170 = load i8, ptr %_86, align 1, !dbg !3124, !range !423, !noundef !182
+  %170 = load i8, ptr %_86, align 1, !dbg !3124, !range !372, !noundef !182
   %171 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3124
   store i8 %170, ptr %171, align 1, !dbg !3124
   store i8 0, ptr %_0, align 1, !dbg !3124
@@ -10080,7 +10080,7 @@ bb86:                                             ; preds = %start
 
 bb87:                                             ; preds = %start
   store i8 11, ptr %_87, align 1, !dbg !3126
-  %172 = load i8, ptr %_87, align 1, !dbg !3127, !range !423, !noundef !182
+  %172 = load i8, ptr %_87, align 1, !dbg !3127, !range !372, !noundef !182
   %173 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3127
   store i8 %172, ptr %173, align 1, !dbg !3127
   store i8 0, ptr %_0, align 1, !dbg !3127
@@ -10088,7 +10088,7 @@ bb87:                                             ; preds = %start
 
 bb88:                                             ; preds = %start
   store i8 12, ptr %_88, align 1, !dbg !3129
-  %174 = load i8, ptr %_88, align 1, !dbg !3130, !range !423, !noundef !182
+  %174 = load i8, ptr %_88, align 1, !dbg !3130, !range !372, !noundef !182
   %175 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3130
   store i8 %174, ptr %175, align 1, !dbg !3130
   store i8 0, ptr %_0, align 1, !dbg !3130
@@ -10096,7 +10096,7 @@ bb88:                                             ; preds = %start
 
 bb89:                                             ; preds = %bb1, %bb88, %bb87, %bb86, %bb85, %bb84, %bb83, %bb82, %bb81, %bb80, %bb79, %bb78, %bb77, %bb76, %bb75, %bb74, %bb73, %bb72, %bb71, %bb70, %bb69, %bb68, %bb67, %bb66, %bb65, %bb64, %bb63, %bb62, %bb61, %bb60, %bb59, %bb58, %bb57, %bb56, %bb55, %bb54, %bb53, %bb52, %bb51, %bb50, %bb49, %bb48, %bb47, %bb46, %bb45, %bb44, %bb43, %bb42, %bb41, %bb40, %bb39, %bb38, %bb37, %bb36, %bb35, %bb34, %bb33, %bb32, %bb31, %bb30, %bb29, %bb28, %bb27, %bb26, %bb25, %bb24, %bb23, %bb22, %bb21, %bb20, %bb19, %bb18, %bb17, %bb16, %bb15, %bb14, %bb13, %bb12, %bb11, %bb10, %bb9, %bb8, %bb7, %bb6, %bb5, %bb4, %bb3, %bb2
   %176 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !3132
-  %177 = load i8, ptr %176, align 1, !dbg !3132, !range !368, !noundef !182
+  %177 = load i8, ptr %176, align 1, !dbg !3132, !range !369, !noundef !182
   %178 = trunc i8 %177 to i1, !dbg !3132
   %179 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3132
   %180 = load i8, ptr %179, align 1, !dbg !3132, !noundef !182
@@ -10108,7 +10108,7 @@ bb89:                                             ; preds = %bb1, %bb88, %bb87, 
 
 ; pc_keyboard::scancodes::set1::ScancodeSet1::map_extended_scancode
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17hc39613ab5f834448E(i8 %code) unnamed_addr #1 !dbg !3133 {
+define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17h16e47c6fd29beac7E(i8 %code) unnamed_addr #1 !dbg !3133 {
 start:
   %code.dbg.spill = alloca i8, align 1
   %_35 = alloca i8, align 1
@@ -10186,7 +10186,7 @@ start:
 
 bb1:                                              ; preds = %start
   store i8 3, ptr %_35, align 1, !dbg !3139
-  %0 = load i8, ptr %_35, align 1, !dbg !3140, !range !239, !noundef !182
+  %0 = load i8, ptr %_35, align 1, !dbg !3140, !range !243, !noundef !182
   %1 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3140
   store i8 %0, ptr %1, align 1, !dbg !3140
   store i8 1, ptr %_0, align 1, !dbg !3140
@@ -10194,7 +10194,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
   store i8 111, ptr %_2, align 1, !dbg !3142
-  %2 = load i8, ptr %_2, align 1, !dbg !3143, !range !423, !noundef !182
+  %2 = load i8, ptr %_2, align 1, !dbg !3143, !range !372, !noundef !182
   %3 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3143
   store i8 %2, ptr %3, align 1, !dbg !3143
   store i8 0, ptr %_0, align 1, !dbg !3143
@@ -10202,7 +10202,7 @@ bb2:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
   store i8 112, ptr %_3, align 1, !dbg !3145
-  %4 = load i8, ptr %_3, align 1, !dbg !3146, !range !423, !noundef !182
+  %4 = load i8, ptr %_3, align 1, !dbg !3146, !range !372, !noundef !182
   %5 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3146
   store i8 %4, ptr %5, align 1, !dbg !3146
   store i8 0, ptr %_0, align 1, !dbg !3146
@@ -10210,7 +10210,7 @@ bb3:                                              ; preds = %start
 
 bb4:                                              ; preds = %start
   store i8 92, ptr %_4, align 1, !dbg !3148
-  %6 = load i8, ptr %_4, align 1, !dbg !3149, !range !423, !noundef !182
+  %6 = load i8, ptr %_4, align 1, !dbg !3149, !range !372, !noundef !182
   %7 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3149
   store i8 %6, ptr %7, align 1, !dbg !3149
   store i8 0, ptr %_0, align 1, !dbg !3149
@@ -10218,7 +10218,7 @@ bb4:                                              ; preds = %start
 
 bb5:                                              ; preds = %start
   store i8 100, ptr %_5, align 1, !dbg !3151
-  %8 = load i8, ptr %_5, align 1, !dbg !3152, !range !423, !noundef !182
+  %8 = load i8, ptr %_5, align 1, !dbg !3152, !range !372, !noundef !182
   %9 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3152
   store i8 %8, ptr %9, align 1, !dbg !3152
   store i8 0, ptr %_0, align 1, !dbg !3152
@@ -10226,7 +10226,7 @@ bb5:                                              ; preds = %start
 
 bb6:                                              ; preds = %start
   store i8 113, ptr %_6, align 1, !dbg !3154
-  %10 = load i8, ptr %_6, align 1, !dbg !3155, !range !423, !noundef !182
+  %10 = load i8, ptr %_6, align 1, !dbg !3155, !range !372, !noundef !182
   %11 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3155
   store i8 %10, ptr %11, align 1, !dbg !3155
   store i8 0, ptr %_0, align 1, !dbg !3155
@@ -10234,7 +10234,7 @@ bb6:                                              ; preds = %start
 
 bb7:                                              ; preds = %start
   store i8 114, ptr %_7, align 1, !dbg !3157
-  %12 = load i8, ptr %_7, align 1, !dbg !3158, !range !423, !noundef !182
+  %12 = load i8, ptr %_7, align 1, !dbg !3158, !range !372, !noundef !182
   %13 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3158
   store i8 %12, ptr %13, align 1, !dbg !3158
   store i8 0, ptr %_0, align 1, !dbg !3158
@@ -10242,7 +10242,7 @@ bb7:                                              ; preds = %start
 
 bb8:                                              ; preds = %start
   store i8 115, ptr %_8, align 1, !dbg !3160
-  %14 = load i8, ptr %_8, align 1, !dbg !3161, !range !423, !noundef !182
+  %14 = load i8, ptr %_8, align 1, !dbg !3161, !range !372, !noundef !182
   %15 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3161
   store i8 %14, ptr %15, align 1, !dbg !3161
   store i8 0, ptr %_0, align 1, !dbg !3161
@@ -10250,7 +10250,7 @@ bb8:                                              ; preds = %start
 
 bb9:                                              ; preds = %start
   store i8 116, ptr %_9, align 1, !dbg !3163
-  %16 = load i8, ptr %_9, align 1, !dbg !3164, !range !423, !noundef !182
+  %16 = load i8, ptr %_9, align 1, !dbg !3164, !range !372, !noundef !182
   %17 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3164
   store i8 %16, ptr %17, align 1, !dbg !3164
   store i8 0, ptr %_0, align 1, !dbg !3164
@@ -10258,7 +10258,7 @@ bb9:                                              ; preds = %start
 
 bb10:                                             ; preds = %start
   store i8 123, ptr %_10, align 1, !dbg !3166
-  %18 = load i8, ptr %_10, align 1, !dbg !3167, !range !423, !noundef !182
+  %18 = load i8, ptr %_10, align 1, !dbg !3167, !range !372, !noundef !182
   %19 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3167
   store i8 %18, ptr %19, align 1, !dbg !3167
   store i8 0, ptr %_0, align 1, !dbg !3167
@@ -10266,7 +10266,7 @@ bb10:                                             ; preds = %start
 
 bb11:                                             ; preds = %start
   store i8 117, ptr %_11, align 1, !dbg !3169
-  %20 = load i8, ptr %_11, align 1, !dbg !3170, !range !423, !noundef !182
+  %20 = load i8, ptr %_11, align 1, !dbg !3170, !range !372, !noundef !182
   %21 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3170
   store i8 %20, ptr %21, align 1, !dbg !3170
   store i8 0, ptr %_0, align 1, !dbg !3170
@@ -10274,7 +10274,7 @@ bb11:                                             ; preds = %start
 
 bb12:                                             ; preds = %start
   store i8 118, ptr %_12, align 1, !dbg !3172
-  %22 = load i8, ptr %_12, align 1, !dbg !3173, !range !423, !noundef !182
+  %22 = load i8, ptr %_12, align 1, !dbg !3173, !range !372, !noundef !182
   %23 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3173
   store i8 %22, ptr %23, align 1, !dbg !3173
   store i8 0, ptr %_0, align 1, !dbg !3173
@@ -10282,7 +10282,7 @@ bb12:                                             ; preds = %start
 
 bb13:                                             ; preds = %start
   store i8 119, ptr %_13, align 1, !dbg !3175
-  %24 = load i8, ptr %_13, align 1, !dbg !3176, !range !423, !noundef !182
+  %24 = load i8, ptr %_13, align 1, !dbg !3176, !range !372, !noundef !182
   %25 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3176
   store i8 %24, ptr %25, align 1, !dbg !3176
   store i8 0, ptr %_0, align 1, !dbg !3176
@@ -10290,7 +10290,7 @@ bb13:                                             ; preds = %start
 
 bb14:                                             ; preds = %start
   store i8 35, ptr %_14, align 1, !dbg !3178
-  %26 = load i8, ptr %_14, align 1, !dbg !3179, !range !423, !noundef !182
+  %26 = load i8, ptr %_14, align 1, !dbg !3179, !range !372, !noundef !182
   %27 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3179
   store i8 %26, ptr %27, align 1, !dbg !3179
   store i8 0, ptr %_0, align 1, !dbg !3179
@@ -10298,7 +10298,7 @@ bb14:                                             ; preds = %start
 
 bb15:                                             ; preds = %start
   store i8 13, ptr %_15, align 1, !dbg !3181
-  %28 = load i8, ptr %_15, align 1, !dbg !3182, !range !423, !noundef !182
+  %28 = load i8, ptr %_15, align 1, !dbg !3182, !range !372, !noundef !182
   %29 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3182
   store i8 %28, ptr %29, align 1, !dbg !3182
   store i8 0, ptr %_0, align 1, !dbg !3182
@@ -10306,7 +10306,7 @@ bb15:                                             ; preds = %start
 
 bb16:                                             ; preds = %start
   store i8 97, ptr %_16, align 1, !dbg !3184
-  %30 = load i8, ptr %_16, align 1, !dbg !3185, !range !423, !noundef !182
+  %30 = load i8, ptr %_16, align 1, !dbg !3185, !range !372, !noundef !182
   %31 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3185
   store i8 %30, ptr %31, align 1, !dbg !3185
   store i8 0, ptr %_0, align 1, !dbg !3185
@@ -10314,7 +10314,7 @@ bb16:                                             ; preds = %start
 
 bb17:                                             ; preds = %start
   store i8 32, ptr %_17, align 1, !dbg !3187
-  %32 = load i8, ptr %_17, align 1, !dbg !3188, !range !423, !noundef !182
+  %32 = load i8, ptr %_17, align 1, !dbg !3188, !range !372, !noundef !182
   %33 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3188
   store i8 %32, ptr %33, align 1, !dbg !3188
   store i8 0, ptr %_0, align 1, !dbg !3188
@@ -10322,7 +10322,7 @@ bb17:                                             ; preds = %start
 
 bb18:                                             ; preds = %start
   store i8 88, ptr %_18, align 1, !dbg !3190
-  %34 = load i8, ptr %_18, align 1, !dbg !3191, !range !423, !noundef !182
+  %34 = load i8, ptr %_18, align 1, !dbg !3191, !range !372, !noundef !182
   %35 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3191
   store i8 %34, ptr %35, align 1, !dbg !3191
   store i8 0, ptr %_0, align 1, !dbg !3191
@@ -10330,7 +10330,7 @@ bb18:                                             ; preds = %start
 
 bb19:                                             ; preds = %start
   store i8 33, ptr %_19, align 1, !dbg !3193
-  %36 = load i8, ptr %_19, align 1, !dbg !3194, !range !423, !noundef !182
+  %36 = load i8, ptr %_19, align 1, !dbg !3194, !range !372, !noundef !182
   %37 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3194
   store i8 %36, ptr %37, align 1, !dbg !3194
   store i8 0, ptr %_0, align 1, !dbg !3194
@@ -10338,7 +10338,7 @@ bb19:                                             ; preds = %start
 
 bb20:                                             ; preds = %start
   store i8 101, ptr %_20, align 1, !dbg !3196
-  %38 = load i8, ptr %_20, align 1, !dbg !3197, !range !423, !noundef !182
+  %38 = load i8, ptr %_20, align 1, !dbg !3197, !range !372, !noundef !182
   %39 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3197
   store i8 %38, ptr %39, align 1, !dbg !3197
   store i8 0, ptr %_0, align 1, !dbg !3197
@@ -10346,7 +10346,7 @@ bb20:                                             ; preds = %start
 
 bb21:                                             ; preds = %start
   store i8 103, ptr %_21, align 1, !dbg !3199
-  %40 = load i8, ptr %_21, align 1, !dbg !3200, !range !423, !noundef !182
+  %40 = load i8, ptr %_21, align 1, !dbg !3200, !range !372, !noundef !182
   %41 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3200
   store i8 %40, ptr %41, align 1, !dbg !3200
   store i8 0, ptr %_0, align 1, !dbg !3200
@@ -10354,7 +10354,7 @@ bb21:                                             ; preds = %start
 
 bb22:                                             ; preds = %start
   store i8 54, ptr %_22, align 1, !dbg !3202
-  %42 = load i8, ptr %_22, align 1, !dbg !3203, !range !423, !noundef !182
+  %42 = load i8, ptr %_22, align 1, !dbg !3203, !range !372, !noundef !182
   %43 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3203
   store i8 %42, ptr %43, align 1, !dbg !3203
   store i8 0, ptr %_0, align 1, !dbg !3203
@@ -10362,7 +10362,7 @@ bb22:                                             ; preds = %start
 
 bb23:                                             ; preds = %start
   store i8 102, ptr %_23, align 1, !dbg !3205
-  %44 = load i8, ptr %_23, align 1, !dbg !3206, !range !423, !noundef !182
+  %44 = load i8, ptr %_23, align 1, !dbg !3206, !range !372, !noundef !182
   %45 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3206
   store i8 %44, ptr %45, align 1, !dbg !3206
   store i8 0, ptr %_0, align 1, !dbg !3206
@@ -10370,7 +10370,7 @@ bb23:                                             ; preds = %start
 
 bb24:                                             ; preds = %start
   store i8 55, ptr %_24, align 1, !dbg !3208
-  %46 = load i8, ptr %_24, align 1, !dbg !3209, !range !423, !noundef !182
+  %46 = load i8, ptr %_24, align 1, !dbg !3209, !range !372, !noundef !182
   %47 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3209
   store i8 %46, ptr %47, align 1, !dbg !3209
   store i8 0, ptr %_0, align 1, !dbg !3209
@@ -10378,7 +10378,7 @@ bb24:                                             ; preds = %start
 
 bb25:                                             ; preds = %start
   store i8 31, ptr %_25, align 1, !dbg !3211
-  %48 = load i8, ptr %_25, align 1, !dbg !3212, !range !423, !noundef !182
+  %48 = load i8, ptr %_25, align 1, !dbg !3212, !range !372, !noundef !182
   %49 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3212
   store i8 %48, ptr %49, align 1, !dbg !3212
   store i8 0, ptr %_0, align 1, !dbg !3212
@@ -10386,7 +10386,7 @@ bb25:                                             ; preds = %start
 
 bb26:                                             ; preds = %start
   store i8 53, ptr %_26, align 1, !dbg !3214
-  %50 = load i8, ptr %_26, align 1, !dbg !3215, !range !423, !noundef !182
+  %50 = load i8, ptr %_26, align 1, !dbg !3215, !range !372, !noundef !182
   %51 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3215
   store i8 %50, ptr %51, align 1, !dbg !3215
   store i8 0, ptr %_0, align 1, !dbg !3215
@@ -10394,7 +10394,7 @@ bb26:                                             ; preds = %start
 
 bb27:                                             ; preds = %start
   store i8 94, ptr %_27, align 1, !dbg !3217
-  %52 = load i8, ptr %_27, align 1, !dbg !3218, !range !423, !noundef !182
+  %52 = load i8, ptr %_27, align 1, !dbg !3218, !range !372, !noundef !182
   %53 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3218
   store i8 %52, ptr %53, align 1, !dbg !3218
   store i8 0, ptr %_0, align 1, !dbg !3218
@@ -10402,7 +10402,7 @@ bb27:                                             ; preds = %start
 
 bb28:                                             ; preds = %start
   store i8 98, ptr %_28, align 1, !dbg !3220
-  %54 = load i8, ptr %_28, align 1, !dbg !3221, !range !423, !noundef !182
+  %54 = load i8, ptr %_28, align 1, !dbg !3221, !range !372, !noundef !182
   %55 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3221
   store i8 %54, ptr %55, align 1, !dbg !3221
   store i8 0, ptr %_0, align 1, !dbg !3221
@@ -10410,7 +10410,7 @@ bb28:                                             ; preds = %start
 
 bb29:                                             ; preds = %start
   store i8 99, ptr %_29, align 1, !dbg !3223
-  %56 = load i8, ptr %_29, align 1, !dbg !3224, !range !423, !noundef !182
+  %56 = load i8, ptr %_29, align 1, !dbg !3224, !range !372, !noundef !182
   %57 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3224
   store i8 %56, ptr %57, align 1, !dbg !3224
   store i8 0, ptr %_0, align 1, !dbg !3224
@@ -10418,7 +10418,7 @@ bb29:                                             ; preds = %start
 
 bb30:                                             ; preds = %start
   store i8 108, ptr %_30, align 1, !dbg !3226
-  %58 = load i8, ptr %_30, align 1, !dbg !3227, !range !423, !noundef !182
+  %58 = load i8, ptr %_30, align 1, !dbg !3227, !range !372, !noundef !182
   %59 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3227
   store i8 %58, ptr %59, align 1, !dbg !3227
   store i8 0, ptr %_0, align 1, !dbg !3227
@@ -10426,7 +10426,7 @@ bb30:                                             ; preds = %start
 
 bb31:                                             ; preds = %start
   store i8 109, ptr %_31, align 1, !dbg !3229
-  %60 = load i8, ptr %_31, align 1, !dbg !3230, !range !423, !noundef !182
+  %60 = load i8, ptr %_31, align 1, !dbg !3230, !range !372, !noundef !182
   %61 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3230
   store i8 %60, ptr %61, align 1, !dbg !3230
   store i8 0, ptr %_0, align 1, !dbg !3230
@@ -10434,7 +10434,7 @@ bb31:                                             ; preds = %start
 
 bb32:                                             ; preds = %start
   store i8 107, ptr %_32, align 1, !dbg !3232
-  %62 = load i8, ptr %_32, align 1, !dbg !3233, !range !423, !noundef !182
+  %62 = load i8, ptr %_32, align 1, !dbg !3233, !range !372, !noundef !182
   %63 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3233
   store i8 %62, ptr %63, align 1, !dbg !3233
   store i8 0, ptr %_0, align 1, !dbg !3233
@@ -10442,7 +10442,7 @@ bb32:                                             ; preds = %start
 
 bb33:                                             ; preds = %start
   store i8 106, ptr %_33, align 1, !dbg !3235
-  %64 = load i8, ptr %_33, align 1, !dbg !3236, !range !423, !noundef !182
+  %64 = load i8, ptr %_33, align 1, !dbg !3236, !range !372, !noundef !182
   %65 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3236
   store i8 %64, ptr %65, align 1, !dbg !3236
   store i8 0, ptr %_0, align 1, !dbg !3236
@@ -10450,7 +10450,7 @@ bb33:                                             ; preds = %start
 
 bb34:                                             ; preds = %start
   store i8 110, ptr %_34, align 1, !dbg !3238
-  %66 = load i8, ptr %_34, align 1, !dbg !3239, !range !423, !noundef !182
+  %66 = load i8, ptr %_34, align 1, !dbg !3239, !range !372, !noundef !182
   %67 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3239
   store i8 %66, ptr %67, align 1, !dbg !3239
   store i8 0, ptr %_0, align 1, !dbg !3239
@@ -10458,7 +10458,7 @@ bb34:                                             ; preds = %start
 
 bb35:                                             ; preds = %bb1, %bb34, %bb33, %bb32, %bb31, %bb30, %bb29, %bb28, %bb27, %bb26, %bb25, %bb24, %bb23, %bb22, %bb21, %bb20, %bb19, %bb18, %bb17, %bb16, %bb15, %bb14, %bb13, %bb12, %bb11, %bb10, %bb9, %bb8, %bb7, %bb6, %bb5, %bb4, %bb3, %bb2
   %68 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !3241
-  %69 = load i8, ptr %68, align 1, !dbg !3241, !range !368, !noundef !182
+  %69 = load i8, ptr %68, align 1, !dbg !3241, !range !369, !noundef !182
   %70 = trunc i8 %69 to i1, !dbg !3241
   %71 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3241
   %72 = load i8, ptr %71, align 1, !dbg !3241, !noundef !182
@@ -10470,7 +10470,7 @@ bb35:                                             ; preds = %bb1, %bb34, %bb33, 
 
 ; pc_keyboard::scancodes::set1::ScancodeSet1::map_extended2_scancode
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h44a843bc09843b98E(i8 %code) unnamed_addr #1 !dbg !3242 {
+define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h04681c93a265713dE(i8 %code) unnamed_addr #1 !dbg !3242 {
 start:
   %code.dbg.spill = alloca i8, align 1
   %_3 = alloca i8, align 1
@@ -10483,7 +10483,7 @@ start:
 
 bb2:                                              ; preds = %start
   store i8 122, ptr %_2, align 1, !dbg !3248
-  %1 = load i8, ptr %_2, align 1, !dbg !3249, !range !423, !noundef !182
+  %1 = load i8, ptr %_2, align 1, !dbg !3249, !range !372, !noundef !182
   %2 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3249
   store i8 %1, ptr %2, align 1, !dbg !3249
   store i8 0, ptr %_0, align 1, !dbg !3249
@@ -10491,7 +10491,7 @@ bb2:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
   store i8 3, ptr %_3, align 1, !dbg !3251
-  %3 = load i8, ptr %_3, align 1, !dbg !3252, !range !239, !noundef !182
+  %3 = load i8, ptr %_3, align 1, !dbg !3252, !range !243, !noundef !182
   %4 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3252
   store i8 %3, ptr %4, align 1, !dbg !3252
   store i8 1, ptr %_0, align 1, !dbg !3252
@@ -10499,7 +10499,7 @@ bb1:                                              ; preds = %start
 
 bb3:                                              ; preds = %bb1, %bb2
   %5 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !3254
-  %6 = load i8, ptr %5, align 1, !dbg !3254, !range !368, !noundef !182
+  %6 = load i8, ptr %5, align 1, !dbg !3254, !range !369, !noundef !182
   %7 = trunc i8 %6 to i1, !dbg !3254
   %8 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3254
   %9 = load i8, ptr %8, align 1, !dbg !3254, !noundef !182
@@ -10511,7 +10511,7 @@ bb3:                                              ; preds = %bb1, %bb2
 
 ; <pc_keyboard::scancodes::set1::ScancodeSet1 as pc_keyboard::ScancodeSet>::advance_state
 ; Function Attrs: noredzone nounwind
-define i16 @"_ZN87_$LT$pc_keyboard..scancodes..set1..ScancodeSet1$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17hf5d93a519bace9c9E"(ptr align 1 %self, i8 %code) unnamed_addr #1 !dbg !3255 {
+define i16 @"_ZN87_$LT$pc_keyboard..scancodes..set1..ScancodeSet1$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17hea1f7af1116a6120E"(ptr align 1 %self, i8 %code) unnamed_addr #1 !dbg !3255 {
 start:
   %0 = alloca i16, align 2
   %residual.dbg.spill22 = alloca i8, align 1
@@ -10572,13 +10572,13 @@ start:
 
 bb1:                                              ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1 @alloc_7395b7fd5052a2200dfc13209d237c6b, i64 15, ptr align 8 @alloc_0d18c3d99ec2c5f0963d00ec7ad390b7) #7, !dbg !3291
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @alloc_7395b7fd5052a2200dfc13209d237c6b, i64 15, ptr align 8 @alloc_6706f7dc7479c60c979ef9d09c0f8e51) #7, !dbg !3291
   unreachable, !dbg !3291
 
 bb2:                                              ; preds = %start
   switch i8 %code, label %bb3 [
-    i8 -32, label %bb6
-    i8 -31, label %bb7
+    i8 -32, label %bb7
+    i8 -31, label %bb8
   ], !dbg !3292
 
 bb21:                                             ; preds = %start
@@ -10586,20 +10586,20 @@ bb21:                                             ; preds = %start
   %7 = load i8, ptr %_28, align 1, !dbg !3294, !range !2858, !noundef !182
   store i8 %7, ptr %self, align 1, !dbg !3294
   %_29 = icmp ule i8 -128, %code, !dbg !3295
-  br i1 %_29, label %bb22, label %bb23, !dbg !3295
+  br i1 %_29, label %bb24, label %bb23, !dbg !3295
 
 bb36:                                             ; preds = %start
   store i8 0, ptr %_49, align 1, !dbg !3296
   %8 = load i8, ptr %_49, align 1, !dbg !3297, !range !2858, !noundef !182
   store i8 %8, ptr %self, align 1, !dbg !3297
   %_50 = icmp ule i8 -128, %code, !dbg !3298
-  br i1 %_50, label %bb37, label %bb38, !dbg !3298
+  br i1 %_50, label %bb39, label %bb38, !dbg !3298
 
 bb3:                                              ; preds = %bb2
   %_4 = icmp ule i8 -128, %code, !dbg !3299
-  br i1 %_4, label %bb4, label %bb5, !dbg !3299
+  br i1 %_4, label %bb6, label %bb5, !dbg !3299
 
-bb6:                                              ; preds = %bb2
+bb7:                                              ; preds = %bb2
   store i8 1, ptr %_6, align 1, !dbg !3300
   %9 = load i8, ptr %_6, align 1, !dbg !3301, !range !2858, !noundef !182
   store i8 %9, ptr %self, align 1, !dbg !3301
@@ -10614,7 +10614,7 @@ bb6:                                              ; preds = %bb2
   store i8 %13, ptr %15, align 1, !dbg !3303
   br label %bb51, !dbg !3305
 
-bb7:                                              ; preds = %bb2
+bb8:                                              ; preds = %bb2
   store i8 4, ptr %_8, align 1, !dbg !3306
   %16 = load i8, ptr %_8, align 1, !dbg !3307, !range !2858, !noundef !182
   store i8 %16, ptr %self, align 1, !dbg !3307
@@ -10629,30 +10629,30 @@ bb7:                                              ; preds = %bb2
   store i8 %20, ptr %22, align 1, !dbg !3309
   br label %bb51, !dbg !3310
 
-bb51:                                             ; preds = %bb44, %bb43, %bb49, %bb48, %bb29, %bb28, %bb34, %bb33, %bb14, %bb12, %bb19, %bb18, %bb7, %bb6
+bb51:                                             ; preds = %bb44, %bb43, %bb49, %bb48, %bb29, %bb28, %bb34, %bb33, %bb14, %bb12, %bb19, %bb18, %bb8, %bb7
   %23 = load i16, ptr %_0, align 1, !dbg !3311
   ret i16 %23, !dbg !3311
 
-bb5:                                              ; preds = %bb4, %bb3
+bb5:                                              ; preds = %bb6, %bb3
 ; call pc_keyboard::scancodes::set1::ScancodeSet1::map_scancode
-  %24 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17hd5b470ead5cee59eE(i8 %code) #6, !dbg !3312
+  %24 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17h7c044a3120311ba3E(i8 %code) #6, !dbg !3312
   %25 = extractvalue { i8, i8 } %24, 0, !dbg !3312
   %_23.0 = trunc i8 %25 to i1, !dbg !3312
   %_23.1 = extractvalue { i8, i8 } %24, 1, !dbg !3312
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %26 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_23.0, i8 %_23.1) #6, !dbg !3312
+  %26 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_23.0, i8 %_23.1) #6, !dbg !3312
   store { i8, i8 } %26, ptr %_22, align 1, !dbg !3312
-  %27 = load i8, ptr %_22, align 1, !dbg !3312, !range !368, !noundef !182
+  %27 = load i8, ptr %_22, align 1, !dbg !3312, !range !369, !noundef !182
   %28 = trunc i8 %27 to i1, !dbg !3312
   %_24 = zext i1 %28 to i64, !dbg !3312
   %29 = icmp eq i64 %_24, 0, !dbg !3312
   br i1 %29, label %bb18, label %bb19, !dbg !3312
 
-bb4:                                              ; preds = %bb3
+bb6:                                              ; preds = %bb3
   %_5 = icmp ule i8 %code, -1, !dbg !3299
-  br i1 %_5, label %bb8, label %bb5, !dbg !3299
+  br i1 %_5, label %bb4, label %bb5, !dbg !3299
 
-bb8:                                              ; preds = %bb4
+bb4:                                              ; preds = %bb6
   %_15.0 = sub i8 %code, -128, !dbg !3313
   %_15.1 = icmp ult i8 %code, -128, !dbg !3313
   %30 = call i1 @llvm.expect.i1(i1 %_15.1, i1 false), !dbg !3313
@@ -10660,13 +10660,13 @@ bb8:                                              ; preds = %bb4
 
 bb18:                                             ; preds = %bb5
   %31 = getelementptr inbounds { i8, i8 }, ptr %_22, i32 0, i32 1, !dbg !3312
-  %val = load i8, ptr %31, align 1, !dbg !3312, !range !423, !noundef !182
+  %val = load i8, ptr %31, align 1, !dbg !3312, !range !372, !noundef !182
   store i8 %val, ptr %val.dbg.spill, align 1, !dbg !3312
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill, metadata !3269, metadata !DIExpression()), !dbg !3314
   store i8 1, ptr %_27, align 1, !dbg !3315
   %32 = load i8, ptr %_27, align 1, !dbg !3316, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %33 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val, i8 %32) #6, !dbg !3316
+  %33 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val, i8 %32) #6, !dbg !3316
   %_21.0 = extractvalue { i8, i8 } %33, 0, !dbg !3316
   %_21.1 = extractvalue { i8, i8 } %33, 1, !dbg !3316
   %34 = getelementptr inbounds { i8, i8 }, ptr %_20, i32 0, i32 0, !dbg !3318
@@ -10685,44 +10685,44 @@ bb18:                                             ; preds = %bb5
 
 bb19:                                             ; preds = %bb5
   %42 = getelementptr inbounds { i8, i8 }, ptr %_22, i32 0, i32 1, !dbg !3321
-  %residual = load i8, ptr %42, align 1, !dbg !3321, !range !239, !noundef !182
+  %residual = load i8, ptr %42, align 1, !dbg !3321, !range !243, !noundef !182
   store i8 %residual, ptr %residual.dbg.spill, align 1, !dbg !3321
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill, metadata !3267, metadata !DIExpression()), !dbg !3322
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %43 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual, ptr align 8 @alloc_01825ae644de361aa9234f2c60b14002) #6, !dbg !3323
+  %43 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual, ptr align 8 @alloc_cec61a0241a59cddaf10fe19195bf52a) #6, !dbg !3323
   store i16 %43, ptr %5, align 2, !dbg !3323
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %5, i64 2, i1 false), !dbg !3323
   br label %bb51, !dbg !3323
 
-bb9:                                              ; preds = %bb8
+bb9:                                              ; preds = %bb4
 ; call pc_keyboard::scancodes::set1::ScancodeSet1::map_scancode
-  %44 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17hd5b470ead5cee59eE(i8 %_15.0) #6, !dbg !3324
+  %44 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17h7c044a3120311ba3E(i8 %_15.0) #6, !dbg !3324
   %45 = extractvalue { i8, i8 } %44, 0, !dbg !3324
   %_13.0 = trunc i8 %45 to i1, !dbg !3324
   %_13.1 = extractvalue { i8, i8 } %44, 1, !dbg !3324
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %46 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_13.0, i8 %_13.1) #6, !dbg !3324
+  %46 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_13.0, i8 %_13.1) #6, !dbg !3324
   store { i8, i8 } %46, ptr %_12, align 1, !dbg !3324
-  %47 = load i8, ptr %_12, align 1, !dbg !3324, !range !368, !noundef !182
+  %47 = load i8, ptr %_12, align 1, !dbg !3324, !range !369, !noundef !182
   %48 = trunc i8 %47 to i1, !dbg !3324
   %_16 = zext i1 %48 to i64, !dbg !3324
   %49 = icmp eq i64 %_16, 0, !dbg !3324
   br i1 %49, label %bb12, label %bb14, !dbg !3324
 
-panic:                                            ; preds = %bb8
+panic:                                            ; preds = %bb4
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_7e6031617f89b56a16c7af9ac9ba321b) #7, !dbg !3313
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_1c8275b3e6857f89477ac0a8531d2e79) #7, !dbg !3313
   unreachable, !dbg !3313
 
 bb12:                                             ; preds = %bb9
   %50 = getelementptr inbounds { i8, i8 }, ptr %_12, i32 0, i32 1, !dbg !3324
-  %val1 = load i8, ptr %50, align 1, !dbg !3324, !range !423, !noundef !182
+  %val1 = load i8, ptr %50, align 1, !dbg !3324, !range !372, !noundef !182
   store i8 %val1, ptr %val.dbg.spill2, align 1, !dbg !3324
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill2, metadata !3265, metadata !DIExpression()), !dbg !3325
   store i8 0, ptr %_19, align 1, !dbg !3326
   %51 = load i8, ptr %_19, align 1, !dbg !3327, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %52 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val1, i8 %51) #6, !dbg !3327
+  %52 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val1, i8 %51) #6, !dbg !3327
   %_11.0 = extractvalue { i8, i8 } %52, 0, !dbg !3327
   %_11.1 = extractvalue { i8, i8 } %52, 1, !dbg !3327
   %53 = getelementptr inbounds { i8, i8 }, ptr %_10, i32 0, i32 0, !dbg !3328
@@ -10741,35 +10741,35 @@ bb12:                                             ; preds = %bb9
 
 bb14:                                             ; preds = %bb9
   %61 = getelementptr inbounds { i8, i8 }, ptr %_12, i32 0, i32 1, !dbg !3331
-  %residual3 = load i8, ptr %61, align 1, !dbg !3331, !range !239, !noundef !182
+  %residual3 = load i8, ptr %61, align 1, !dbg !3331, !range !243, !noundef !182
   store i8 %residual3, ptr %residual.dbg.spill4, align 1, !dbg !3331
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill4, metadata !3263, metadata !DIExpression()), !dbg !3332
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %62 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual3, ptr align 8 @alloc_5ce726493f0ffee85c9d8946d362e05d) #6, !dbg !3333
+  %62 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual3, ptr align 8 @alloc_636157491ab58f20b1d506c8dc0218ac) #6, !dbg !3333
   store i16 %62, ptr %4, align 2, !dbg !3333
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %4, i64 2, i1 false), !dbg !3333
   br label %bb51, !dbg !3333
 
-bb23:                                             ; preds = %bb22, %bb21
+bb23:                                             ; preds = %bb24, %bb21
 ; call pc_keyboard::scancodes::set1::ScancodeSet1::map_extended_scancode
-  %63 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17hc39613ab5f834448E(i8 %code) #6, !dbg !3334
+  %63 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17h16e47c6fd29beac7E(i8 %code) #6, !dbg !3334
   %64 = extractvalue { i8, i8 } %63, 0, !dbg !3334
   %_44.0 = trunc i8 %64 to i1, !dbg !3334
   %_44.1 = extractvalue { i8, i8 } %63, 1, !dbg !3334
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %65 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_44.0, i8 %_44.1) #6, !dbg !3334
+  %65 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_44.0, i8 %_44.1) #6, !dbg !3334
   store { i8, i8 } %65, ptr %_43, align 1, !dbg !3334
-  %66 = load i8, ptr %_43, align 1, !dbg !3334, !range !368, !noundef !182
+  %66 = load i8, ptr %_43, align 1, !dbg !3334, !range !369, !noundef !182
   %67 = trunc i8 %66 to i1, !dbg !3334
   %_45 = zext i1 %67 to i64, !dbg !3334
   %68 = icmp eq i64 %_45, 0, !dbg !3334
   br i1 %68, label %bb33, label %bb34, !dbg !3334
 
-bb22:                                             ; preds = %bb21
+bb24:                                             ; preds = %bb21
   %_30 = icmp ule i8 %code, -1, !dbg !3295
-  br i1 %_30, label %bb24, label %bb23, !dbg !3295
+  br i1 %_30, label %bb22, label %bb23, !dbg !3295
 
-bb24:                                             ; preds = %bb22
+bb22:                                             ; preds = %bb24
   %_36.0 = sub i8 %code, -128, !dbg !3335
   %_36.1 = icmp ult i8 %code, -128, !dbg !3335
   %69 = call i1 @llvm.expect.i1(i1 %_36.1, i1 false), !dbg !3335
@@ -10777,13 +10777,13 @@ bb24:                                             ; preds = %bb22
 
 bb33:                                             ; preds = %bb23
   %70 = getelementptr inbounds { i8, i8 }, ptr %_43, i32 0, i32 1, !dbg !3334
-  %val5 = load i8, ptr %70, align 1, !dbg !3334, !range !423, !noundef !182
+  %val5 = load i8, ptr %70, align 1, !dbg !3334, !range !372, !noundef !182
   store i8 %val5, ptr %val.dbg.spill6, align 1, !dbg !3334
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill6, metadata !3277, metadata !DIExpression()), !dbg !3336
   store i8 1, ptr %_48, align 1, !dbg !3337
   %71 = load i8, ptr %_48, align 1, !dbg !3338, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %72 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val5, i8 %71) #6, !dbg !3338
+  %72 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val5, i8 %71) #6, !dbg !3338
   %_42.0 = extractvalue { i8, i8 } %72, 0, !dbg !3338
   %_42.1 = extractvalue { i8, i8 } %72, 1, !dbg !3338
   %73 = getelementptr inbounds { i8, i8 }, ptr %_41, i32 0, i32 0, !dbg !3339
@@ -10802,44 +10802,44 @@ bb33:                                             ; preds = %bb23
 
 bb34:                                             ; preds = %bb23
   %81 = getelementptr inbounds { i8, i8 }, ptr %_43, i32 0, i32 1, !dbg !3342
-  %residual7 = load i8, ptr %81, align 1, !dbg !3342, !range !239, !noundef !182
+  %residual7 = load i8, ptr %81, align 1, !dbg !3342, !range !243, !noundef !182
   store i8 %residual7, ptr %residual.dbg.spill8, align 1, !dbg !3342
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill8, metadata !3275, metadata !DIExpression()), !dbg !3343
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %82 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual7, ptr align 8 @alloc_802ad7f4f25f7c091ca2beae0900be54) #6, !dbg !3344
+  %82 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual7, ptr align 8 @alloc_28809bcbf9d331822102c11d15bc9248) #6, !dbg !3344
   store i16 %82, ptr %3, align 2, !dbg !3344
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %3, i64 2, i1 false), !dbg !3344
   br label %bb51, !dbg !3344
 
-bb25:                                             ; preds = %bb24
+bb25:                                             ; preds = %bb22
 ; call pc_keyboard::scancodes::set1::ScancodeSet1::map_extended_scancode
-  %83 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17hc39613ab5f834448E(i8 %_36.0) #6, !dbg !3345
+  %83 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17h16e47c6fd29beac7E(i8 %_36.0) #6, !dbg !3345
   %84 = extractvalue { i8, i8 } %83, 0, !dbg !3345
   %_34.0 = trunc i8 %84 to i1, !dbg !3345
   %_34.1 = extractvalue { i8, i8 } %83, 1, !dbg !3345
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %85 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_34.0, i8 %_34.1) #6, !dbg !3345
+  %85 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_34.0, i8 %_34.1) #6, !dbg !3345
   store { i8, i8 } %85, ptr %_33, align 1, !dbg !3345
-  %86 = load i8, ptr %_33, align 1, !dbg !3345, !range !368, !noundef !182
+  %86 = load i8, ptr %_33, align 1, !dbg !3345, !range !369, !noundef !182
   %87 = trunc i8 %86 to i1, !dbg !3345
   %_37 = zext i1 %87 to i64, !dbg !3345
   %88 = icmp eq i64 %_37, 0, !dbg !3345
   br i1 %88, label %bb28, label %bb29, !dbg !3345
 
-panic9:                                           ; preds = %bb24
+panic9:                                           ; preds = %bb22
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_ea6620644f28afe21b7e811d05b1acc9) #7, !dbg !3335
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_78b58adf04a3ec1c200ac00a4c13748d) #7, !dbg !3335
   unreachable, !dbg !3335
 
 bb28:                                             ; preds = %bb25
   %89 = getelementptr inbounds { i8, i8 }, ptr %_33, i32 0, i32 1, !dbg !3345
-  %val10 = load i8, ptr %89, align 1, !dbg !3345, !range !423, !noundef !182
+  %val10 = load i8, ptr %89, align 1, !dbg !3345, !range !372, !noundef !182
   store i8 %val10, ptr %val.dbg.spill11, align 1, !dbg !3345
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill11, metadata !3273, metadata !DIExpression()), !dbg !3346
   store i8 0, ptr %_40, align 1, !dbg !3347
   %90 = load i8, ptr %_40, align 1, !dbg !3348, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %91 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val10, i8 %90) #6, !dbg !3348
+  %91 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val10, i8 %90) #6, !dbg !3348
   %_32.0 = extractvalue { i8, i8 } %91, 0, !dbg !3348
   %_32.1 = extractvalue { i8, i8 } %91, 1, !dbg !3348
   %92 = getelementptr inbounds { i8, i8 }, ptr %_31, i32 0, i32 0, !dbg !3349
@@ -10858,35 +10858,35 @@ bb28:                                             ; preds = %bb25
 
 bb29:                                             ; preds = %bb25
   %100 = getelementptr inbounds { i8, i8 }, ptr %_33, i32 0, i32 1, !dbg !3352
-  %residual12 = load i8, ptr %100, align 1, !dbg !3352, !range !239, !noundef !182
+  %residual12 = load i8, ptr %100, align 1, !dbg !3352, !range !243, !noundef !182
   store i8 %residual12, ptr %residual.dbg.spill13, align 1, !dbg !3352
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill13, metadata !3271, metadata !DIExpression()), !dbg !3353
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %101 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual12, ptr align 8 @alloc_3db12d6341fc09629e8bebdb70c013a0) #6, !dbg !3354
+  %101 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual12, ptr align 8 @alloc_d3c9481fc38a17a2e6467c77894d25a6) #6, !dbg !3354
   store i16 %101, ptr %2, align 2, !dbg !3354
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %2, i64 2, i1 false), !dbg !3354
   br label %bb51, !dbg !3354
 
-bb38:                                             ; preds = %bb37, %bb36
+bb38:                                             ; preds = %bb39, %bb36
 ; call pc_keyboard::scancodes::set1::ScancodeSet1::map_extended2_scancode
-  %102 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h44a843bc09843b98E(i8 %code) #6, !dbg !3355
+  %102 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h04681c93a265713dE(i8 %code) #6, !dbg !3355
   %103 = extractvalue { i8, i8 } %102, 0, !dbg !3355
   %_65.0 = trunc i8 %103 to i1, !dbg !3355
   %_65.1 = extractvalue { i8, i8 } %102, 1, !dbg !3355
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %104 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_65.0, i8 %_65.1) #6, !dbg !3355
+  %104 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_65.0, i8 %_65.1) #6, !dbg !3355
   store { i8, i8 } %104, ptr %_64, align 1, !dbg !3355
-  %105 = load i8, ptr %_64, align 1, !dbg !3355, !range !368, !noundef !182
+  %105 = load i8, ptr %_64, align 1, !dbg !3355, !range !369, !noundef !182
   %106 = trunc i8 %105 to i1, !dbg !3355
   %_66 = zext i1 %106 to i64, !dbg !3355
   %107 = icmp eq i64 %_66, 0, !dbg !3355
   br i1 %107, label %bb48, label %bb49, !dbg !3355
 
-bb37:                                             ; preds = %bb36
+bb39:                                             ; preds = %bb36
   %_51 = icmp ule i8 %code, -1, !dbg !3298
-  br i1 %_51, label %bb39, label %bb38, !dbg !3298
+  br i1 %_51, label %bb37, label %bb38, !dbg !3298
 
-bb39:                                             ; preds = %bb37
+bb37:                                             ; preds = %bb39
   %_57.0 = sub i8 %code, -128, !dbg !3356
   %_57.1 = icmp ult i8 %code, -128, !dbg !3356
   %108 = call i1 @llvm.expect.i1(i1 %_57.1, i1 false), !dbg !3356
@@ -10894,13 +10894,13 @@ bb39:                                             ; preds = %bb37
 
 bb48:                                             ; preds = %bb38
   %109 = getelementptr inbounds { i8, i8 }, ptr %_64, i32 0, i32 1, !dbg !3355
-  %val14 = load i8, ptr %109, align 1, !dbg !3355, !range !423, !noundef !182
+  %val14 = load i8, ptr %109, align 1, !dbg !3355, !range !372, !noundef !182
   store i8 %val14, ptr %val.dbg.spill15, align 1, !dbg !3355
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill15, metadata !3285, metadata !DIExpression()), !dbg !3357
   store i8 1, ptr %_69, align 1, !dbg !3358
   %110 = load i8, ptr %_69, align 1, !dbg !3359, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %111 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val14, i8 %110) #6, !dbg !3359
+  %111 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val14, i8 %110) #6, !dbg !3359
   %_63.0 = extractvalue { i8, i8 } %111, 0, !dbg !3359
   %_63.1 = extractvalue { i8, i8 } %111, 1, !dbg !3359
   %112 = getelementptr inbounds { i8, i8 }, ptr %_62, i32 0, i32 0, !dbg !3360
@@ -10919,44 +10919,44 @@ bb48:                                             ; preds = %bb38
 
 bb49:                                             ; preds = %bb38
   %120 = getelementptr inbounds { i8, i8 }, ptr %_64, i32 0, i32 1, !dbg !3363
-  %residual16 = load i8, ptr %120, align 1, !dbg !3363, !range !239, !noundef !182
+  %residual16 = load i8, ptr %120, align 1, !dbg !3363, !range !243, !noundef !182
   store i8 %residual16, ptr %residual.dbg.spill17, align 1, !dbg !3363
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill17, metadata !3283, metadata !DIExpression()), !dbg !3364
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %121 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual16, ptr align 8 @alloc_8806a8e9476c330c3a4ad8169ab9ebed) #6, !dbg !3365
+  %121 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual16, ptr align 8 @alloc_6daae0bcf4fbb69cc4fd35c38bc54256) #6, !dbg !3365
   store i16 %121, ptr %1, align 2, !dbg !3365
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %1, i64 2, i1 false), !dbg !3365
   br label %bb51, !dbg !3365
 
-bb40:                                             ; preds = %bb39
+bb40:                                             ; preds = %bb37
 ; call pc_keyboard::scancodes::set1::ScancodeSet1::map_extended2_scancode
-  %122 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h44a843bc09843b98E(i8 %_57.0) #6, !dbg !3366
+  %122 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h04681c93a265713dE(i8 %_57.0) #6, !dbg !3366
   %123 = extractvalue { i8, i8 } %122, 0, !dbg !3366
   %_55.0 = trunc i8 %123 to i1, !dbg !3366
   %_55.1 = extractvalue { i8, i8 } %122, 1, !dbg !3366
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %124 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_55.0, i8 %_55.1) #6, !dbg !3366
+  %124 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_55.0, i8 %_55.1) #6, !dbg !3366
   store { i8, i8 } %124, ptr %_54, align 1, !dbg !3366
-  %125 = load i8, ptr %_54, align 1, !dbg !3366, !range !368, !noundef !182
+  %125 = load i8, ptr %_54, align 1, !dbg !3366, !range !369, !noundef !182
   %126 = trunc i8 %125 to i1, !dbg !3366
   %_58 = zext i1 %126 to i64, !dbg !3366
   %127 = icmp eq i64 %_58, 0, !dbg !3366
   br i1 %127, label %bb43, label %bb44, !dbg !3366
 
-panic18:                                          ; preds = %bb39
+panic18:                                          ; preds = %bb37
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_664ec08aebe3823c0a0885e1a2772937) #7, !dbg !3356
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @str.0, i64 33, ptr align 8 @alloc_b6db82061d34656e91537e6c61376cf3) #7, !dbg !3356
   unreachable, !dbg !3356
 
 bb43:                                             ; preds = %bb40
   %128 = getelementptr inbounds { i8, i8 }, ptr %_54, i32 0, i32 1, !dbg !3366
-  %val19 = load i8, ptr %128, align 1, !dbg !3366, !range !423, !noundef !182
+  %val19 = load i8, ptr %128, align 1, !dbg !3366, !range !372, !noundef !182
   store i8 %val19, ptr %val.dbg.spill20, align 1, !dbg !3366
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill20, metadata !3281, metadata !DIExpression()), !dbg !3367
   store i8 0, ptr %_61, align 1, !dbg !3368
   %129 = load i8, ptr %_61, align 1, !dbg !3369, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %130 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val19, i8 %129) #6, !dbg !3369
+  %130 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val19, i8 %129) #6, !dbg !3369
   %_53.0 = extractvalue { i8, i8 } %130, 0, !dbg !3369
   %_53.1 = extractvalue { i8, i8 } %130, 1, !dbg !3369
   %131 = getelementptr inbounds { i8, i8 }, ptr %_52, i32 0, i32 0, !dbg !3370
@@ -10975,11 +10975,11 @@ bb43:                                             ; preds = %bb40
 
 bb44:                                             ; preds = %bb40
   %139 = getelementptr inbounds { i8, i8 }, ptr %_54, i32 0, i32 1, !dbg !3373
-  %residual21 = load i8, ptr %139, align 1, !dbg !3373, !range !239, !noundef !182
+  %residual21 = load i8, ptr %139, align 1, !dbg !3373, !range !243, !noundef !182
   store i8 %residual21, ptr %residual.dbg.spill22, align 1, !dbg !3373
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill22, metadata !3279, metadata !DIExpression()), !dbg !3374
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %140 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual21, ptr align 8 @alloc_f399fb6bbd9eeb41238b930176a98782) #6, !dbg !3375
+  %140 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual21, ptr align 8 @alloc_d035c7e955e9e131b9be3611c340f6dc) #6, !dbg !3375
   store i16 %140, ptr %0, align 2, !dbg !3375
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %0, i64 2, i1 false), !dbg !3375
   br label %bb51, !dbg !3375
@@ -10990,7 +10990,7 @@ bb13:                                             ; No predecessors!
 
 ; pc_keyboard::scancodes::set2::ScancodeSet2::new
 ; Function Attrs: noredzone nounwind
-define i8 @_ZN11pc_keyboard9scancodes4set212ScancodeSet23new17h19ecbbd730b73c57E() unnamed_addr #1 !dbg !3376 {
+define i8 @_ZN11pc_keyboard9scancodes4set212ScancodeSet23new17h436e53282ce2cf05E() unnamed_addr #1 !dbg !3376 {
 start:
   %_1 = alloca i8, align 1
   %_0 = alloca i8, align 1
@@ -11003,7 +11003,7 @@ start:
 
 ; pc_keyboard::scancodes::set2::ScancodeSet2::map_scancode
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h9518aa3f02866bd0E(i8 %code) unnamed_addr #1 !dbg !3388 {
+define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h0c8e70e55d780967E(i8 %code) unnamed_addr #1 !dbg !3388 {
 start:
   %code.dbg.spill = alloca i8, align 1
   %_96 = alloca i8, align 1
@@ -11203,7 +11203,7 @@ start:
 
 bb1:                                              ; preds = %start
   store i8 3, ptr %_96, align 1, !dbg !3394
-  %0 = load i8, ptr %_96, align 1, !dbg !3395, !range !239, !noundef !182
+  %0 = load i8, ptr %_96, align 1, !dbg !3395, !range !243, !noundef !182
   %1 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3395
   store i8 %0, ptr %1, align 1, !dbg !3395
   store i8 1, ptr %_0, align 1, !dbg !3395
@@ -11211,7 +11211,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
   store i8 121, ptr %_2, align 1, !dbg !3397
-  %2 = load i8, ptr %_2, align 1, !dbg !3398, !range !423, !noundef !182
+  %2 = load i8, ptr %_2, align 1, !dbg !3398, !range !372, !noundef !182
   %3 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3398
   store i8 %2, ptr %3, align 1, !dbg !3398
   store i8 0, ptr %_0, align 1, !dbg !3398
@@ -11219,7 +11219,7 @@ bb2:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
   store i8 9, ptr %_3, align 1, !dbg !3400
-  %4 = load i8, ptr %_3, align 1, !dbg !3401, !range !423, !noundef !182
+  %4 = load i8, ptr %_3, align 1, !dbg !3401, !range !372, !noundef !182
   %5 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3401
   store i8 %4, ptr %5, align 1, !dbg !3401
   store i8 0, ptr %_0, align 1, !dbg !3401
@@ -11227,7 +11227,7 @@ bb3:                                              ; preds = %start
 
 bb4:                                              ; preds = %start
   store i8 5, ptr %_4, align 1, !dbg !3403
-  %6 = load i8, ptr %_4, align 1, !dbg !3404, !range !423, !noundef !182
+  %6 = load i8, ptr %_4, align 1, !dbg !3404, !range !372, !noundef !182
   %7 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3404
   store i8 %6, ptr %7, align 1, !dbg !3404
   store i8 0, ptr %_0, align 1, !dbg !3404
@@ -11235,7 +11235,7 @@ bb4:                                              ; preds = %start
 
 bb5:                                              ; preds = %start
   store i8 3, ptr %_5, align 1, !dbg !3406
-  %8 = load i8, ptr %_5, align 1, !dbg !3407, !range !423, !noundef !182
+  %8 = load i8, ptr %_5, align 1, !dbg !3407, !range !372, !noundef !182
   %9 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3407
   store i8 %8, ptr %9, align 1, !dbg !3407
   store i8 0, ptr %_0, align 1, !dbg !3407
@@ -11243,7 +11243,7 @@ bb5:                                              ; preds = %start
 
 bb6:                                              ; preds = %start
   store i8 1, ptr %_6, align 1, !dbg !3409
-  %10 = load i8, ptr %_6, align 1, !dbg !3410, !range !423, !noundef !182
+  %10 = load i8, ptr %_6, align 1, !dbg !3410, !range !372, !noundef !182
   %11 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3410
   store i8 %10, ptr %11, align 1, !dbg !3410
   store i8 0, ptr %_0, align 1, !dbg !3410
@@ -11251,7 +11251,7 @@ bb6:                                              ; preds = %start
 
 bb7:                                              ; preds = %start
   store i8 2, ptr %_7, align 1, !dbg !3412
-  %12 = load i8, ptr %_7, align 1, !dbg !3413, !range !423, !noundef !182
+  %12 = load i8, ptr %_7, align 1, !dbg !3413, !range !372, !noundef !182
   %13 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3413
   store i8 %12, ptr %13, align 1, !dbg !3413
   store i8 0, ptr %_0, align 1, !dbg !3413
@@ -11259,7 +11259,7 @@ bb7:                                              ; preds = %start
 
 bb8:                                              ; preds = %start
   store i8 12, ptr %_8, align 1, !dbg !3415
-  %14 = load i8, ptr %_8, align 1, !dbg !3416, !range !423, !noundef !182
+  %14 = load i8, ptr %_8, align 1, !dbg !3416, !range !372, !noundef !182
   %15 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3416
   store i8 %14, ptr %15, align 1, !dbg !3416
   store i8 0, ptr %_0, align 1, !dbg !3416
@@ -11267,7 +11267,7 @@ bb8:                                              ; preds = %start
 
 bb9:                                              ; preds = %start
   store i8 10, ptr %_9, align 1, !dbg !3418
-  %16 = load i8, ptr %_9, align 1, !dbg !3419, !range !423, !noundef !182
+  %16 = load i8, ptr %_9, align 1, !dbg !3419, !range !372, !noundef !182
   %17 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3419
   store i8 %16, ptr %17, align 1, !dbg !3419
   store i8 0, ptr %_0, align 1, !dbg !3419
@@ -11275,7 +11275,7 @@ bb9:                                              ; preds = %start
 
 bb10:                                             ; preds = %start
   store i8 8, ptr %_10, align 1, !dbg !3421
-  %18 = load i8, ptr %_10, align 1, !dbg !3422, !range !423, !noundef !182
+  %18 = load i8, ptr %_10, align 1, !dbg !3422, !range !372, !noundef !182
   %19 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3422
   store i8 %18, ptr %19, align 1, !dbg !3422
   store i8 0, ptr %_0, align 1, !dbg !3422
@@ -11283,7 +11283,7 @@ bb10:                                             ; preds = %start
 
 bb11:                                             ; preds = %start
   store i8 6, ptr %_11, align 1, !dbg !3424
-  %20 = load i8, ptr %_11, align 1, !dbg !3425, !range !423, !noundef !182
+  %20 = load i8, ptr %_11, align 1, !dbg !3425, !range !372, !noundef !182
   %21 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3425
   store i8 %20, ptr %21, align 1, !dbg !3425
   store i8 0, ptr %_0, align 1, !dbg !3425
@@ -11291,7 +11291,7 @@ bb11:                                             ; preds = %start
 
 bb12:                                             ; preds = %start
   store i8 4, ptr %_12, align 1, !dbg !3427
-  %22 = load i8, ptr %_12, align 1, !dbg !3428, !range !423, !noundef !182
+  %22 = load i8, ptr %_12, align 1, !dbg !3428, !range !372, !noundef !182
   %23 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3428
   store i8 %22, ptr %23, align 1, !dbg !3428
   store i8 0, ptr %_0, align 1, !dbg !3428
@@ -11299,7 +11299,7 @@ bb12:                                             ; preds = %start
 
 bb13:                                             ; preds = %start
   store i8 38, ptr %_13, align 1, !dbg !3430
-  %24 = load i8, ptr %_13, align 1, !dbg !3431, !range !423, !noundef !182
+  %24 = load i8, ptr %_13, align 1, !dbg !3431, !range !372, !noundef !182
   %25 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3431
   store i8 %24, ptr %25, align 1, !dbg !3431
   store i8 0, ptr %_0, align 1, !dbg !3431
@@ -11307,7 +11307,7 @@ bb13:                                             ; preds = %start
 
 bb14:                                             ; preds = %start
   store i8 17, ptr %_14, align 1, !dbg !3433
-  %26 = load i8, ptr %_14, align 1, !dbg !3434, !range !423, !noundef !182
+  %26 = load i8, ptr %_14, align 1, !dbg !3434, !range !372, !noundef !182
   %27 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3434
   store i8 %26, ptr %27, align 1, !dbg !3434
   store i8 0, ptr %_0, align 1, !dbg !3434
@@ -11315,7 +11315,7 @@ bb14:                                             ; preds = %start
 
 bb15:                                             ; preds = %start
   store i8 95, ptr %_15, align 1, !dbg !3436
-  %28 = load i8, ptr %_15, align 1, !dbg !3437, !range !423, !noundef !182
+  %28 = load i8, ptr %_15, align 1, !dbg !3437, !range !372, !noundef !182
   %29 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3437
   store i8 %28, ptr %29, align 1, !dbg !3437
   store i8 0, ptr %_0, align 1, !dbg !3437
@@ -11323,7 +11323,7 @@ bb15:                                             ; preds = %start
 
 bb16:                                             ; preds = %start
   store i8 76, ptr %_16, align 1, !dbg !3439
-  %30 = load i8, ptr %_16, align 1, !dbg !3440, !range !423, !noundef !182
+  %30 = load i8, ptr %_16, align 1, !dbg !3440, !range !372, !noundef !182
   %31 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3440
   store i8 %30, ptr %31, align 1, !dbg !3440
   store i8 0, ptr %_0, align 1, !dbg !3440
@@ -11331,7 +11331,7 @@ bb16:                                             ; preds = %start
 
 bb17:                                             ; preds = %start
   store i8 108, ptr %_17, align 1, !dbg !3442
-  %32 = load i8, ptr %_17, align 1, !dbg !3443, !range !423, !noundef !182
+  %32 = load i8, ptr %_17, align 1, !dbg !3443, !range !372, !noundef !182
   %33 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3443
   store i8 %32, ptr %33, align 1, !dbg !3443
   store i8 0, ptr %_0, align 1, !dbg !3443
@@ -11339,7 +11339,7 @@ bb17:                                             ; preds = %start
 
 bb18:                                             ; preds = %start
   store i8 93, ptr %_18, align 1, !dbg !3445
-  %34 = load i8, ptr %_18, align 1, !dbg !3446, !range !423, !noundef !182
+  %34 = load i8, ptr %_18, align 1, !dbg !3446, !range !372, !noundef !182
   %35 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3446
   store i8 %34, ptr %35, align 1, !dbg !3446
   store i8 0, ptr %_0, align 1, !dbg !3446
@@ -11347,7 +11347,7 @@ bb18:                                             ; preds = %start
 
 bb19:                                             ; preds = %start
   store i8 39, ptr %_19, align 1, !dbg !3448
-  %36 = load i8, ptr %_19, align 1, !dbg !3449, !range !423, !noundef !182
+  %36 = load i8, ptr %_19, align 1, !dbg !3449, !range !372, !noundef !182
   %37 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3449
   store i8 %36, ptr %37, align 1, !dbg !3449
   store i8 0, ptr %_0, align 1, !dbg !3449
@@ -11355,7 +11355,7 @@ bb19:                                             ; preds = %start
 
 bb20:                                             ; preds = %start
   store i8 18, ptr %_20, align 1, !dbg !3451
-  %38 = load i8, ptr %_20, align 1, !dbg !3452, !range !423, !noundef !182
+  %38 = load i8, ptr %_20, align 1, !dbg !3452, !range !372, !noundef !182
   %39 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3452
   store i8 %38, ptr %39, align 1, !dbg !3452
   store i8 0, ptr %_0, align 1, !dbg !3452
@@ -11363,7 +11363,7 @@ bb20:                                             ; preds = %start
 
 bb21:                                             ; preds = %start
   store i8 77, ptr %_21, align 1, !dbg !3454
-  %40 = load i8, ptr %_21, align 1, !dbg !3455, !range !423, !noundef !182
+  %40 = load i8, ptr %_21, align 1, !dbg !3455, !range !372, !noundef !182
   %41 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3455
   store i8 %40, ptr %41, align 1, !dbg !3455
   store i8 0, ptr %_0, align 1, !dbg !3455
@@ -11371,7 +11371,7 @@ bb21:                                             ; preds = %start
 
 bb22:                                             ; preds = %start
   store i8 62, ptr %_22, align 1, !dbg !3457
-  %42 = load i8, ptr %_22, align 1, !dbg !3458, !range !423, !noundef !182
+  %42 = load i8, ptr %_22, align 1, !dbg !3458, !range !372, !noundef !182
   %43 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3458
   store i8 %42, ptr %43, align 1, !dbg !3458
   store i8 0, ptr %_0, align 1, !dbg !3458
@@ -11379,7 +11379,7 @@ bb22:                                             ; preds = %start
 
 bb23:                                             ; preds = %start
   store i8 61, ptr %_23, align 1, !dbg !3460
-  %44 = load i8, ptr %_23, align 1, !dbg !3461, !range !423, !noundef !182
+  %44 = load i8, ptr %_23, align 1, !dbg !3461, !range !372, !noundef !182
   %45 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3461
   store i8 %44, ptr %45, align 1, !dbg !3461
   store i8 0, ptr %_0, align 1, !dbg !3461
@@ -11387,7 +11387,7 @@ bb23:                                             ; preds = %start
 
 bb24:                                             ; preds = %start
   store i8 40, ptr %_24, align 1, !dbg !3463
-  %46 = load i8, ptr %_24, align 1, !dbg !3464, !range !423, !noundef !182
+  %46 = load i8, ptr %_24, align 1, !dbg !3464, !range !372, !noundef !182
   %47 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3464
   store i8 %46, ptr %47, align 1, !dbg !3464
   store i8 0, ptr %_0, align 1, !dbg !3464
@@ -11395,7 +11395,7 @@ bb24:                                             ; preds = %start
 
 bb25:                                             ; preds = %start
   store i8 19, ptr %_25, align 1, !dbg !3466
-  %48 = load i8, ptr %_25, align 1, !dbg !3467, !range !423, !noundef !182
+  %48 = load i8, ptr %_25, align 1, !dbg !3467, !range !372, !noundef !182
   %49 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3467
   store i8 %48, ptr %49, align 1, !dbg !3467
   store i8 0, ptr %_0, align 1, !dbg !3467
@@ -11403,7 +11403,7 @@ bb25:                                             ; preds = %start
 
 bb26:                                             ; preds = %start
   store i8 79, ptr %_26, align 1, !dbg !3469
-  %50 = load i8, ptr %_26, align 1, !dbg !3470, !range !423, !noundef !182
+  %50 = load i8, ptr %_26, align 1, !dbg !3470, !range !372, !noundef !182
   %51 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3470
   store i8 %50, ptr %51, align 1, !dbg !3470
   store i8 0, ptr %_0, align 1, !dbg !3470
@@ -11411,7 +11411,7 @@ bb26:                                             ; preds = %start
 
 bb27:                                             ; preds = %start
   store i8 78, ptr %_27, align 1, !dbg !3472
-  %52 = load i8, ptr %_27, align 1, !dbg !3473, !range !423, !noundef !182
+  %52 = load i8, ptr %_27, align 1, !dbg !3473, !range !372, !noundef !182
   %53 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3473
   store i8 %52, ptr %53, align 1, !dbg !3473
   store i8 0, ptr %_0, align 1, !dbg !3473
@@ -11419,7 +11419,7 @@ bb27:                                             ; preds = %start
 
 bb28:                                             ; preds = %start
   store i8 63, ptr %_28, align 1, !dbg !3475
-  %54 = load i8, ptr %_28, align 1, !dbg !3476, !range !423, !noundef !182
+  %54 = load i8, ptr %_28, align 1, !dbg !3476, !range !372, !noundef !182
   %55 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3476
   store i8 %54, ptr %55, align 1, !dbg !3476
   store i8 0, ptr %_0, align 1, !dbg !3476
@@ -11427,7 +11427,7 @@ bb28:                                             ; preds = %start
 
 bb29:                                             ; preds = %start
   store i8 41, ptr %_29, align 1, !dbg !3478
-  %56 = load i8, ptr %_29, align 1, !dbg !3479, !range !423, !noundef !182
+  %56 = load i8, ptr %_29, align 1, !dbg !3479, !range !372, !noundef !182
   %57 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3479
   store i8 %56, ptr %57, align 1, !dbg !3479
   store i8 0, ptr %_0, align 1, !dbg !3479
@@ -11435,7 +11435,7 @@ bb29:                                             ; preds = %start
 
 bb30:                                             ; preds = %start
   store i8 21, ptr %_30, align 1, !dbg !3481
-  %58 = load i8, ptr %_30, align 1, !dbg !3482, !range !423, !noundef !182
+  %58 = load i8, ptr %_30, align 1, !dbg !3482, !range !372, !noundef !182
   %59 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3482
   store i8 %58, ptr %59, align 1, !dbg !3482
   store i8 0, ptr %_0, align 1, !dbg !3482
@@ -11443,7 +11443,7 @@ bb30:                                             ; preds = %start
 
 bb31:                                             ; preds = %start
   store i8 20, ptr %_31, align 1, !dbg !3484
-  %60 = load i8, ptr %_31, align 1, !dbg !3485, !range !423, !noundef !182
+  %60 = load i8, ptr %_31, align 1, !dbg !3485, !range !372, !noundef !182
   %61 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3485
   store i8 %60, ptr %61, align 1, !dbg !3485
   store i8 0, ptr %_0, align 1, !dbg !3485
@@ -11451,7 +11451,7 @@ bb31:                                             ; preds = %start
 
 bb32:                                             ; preds = %start
   store i8 96, ptr %_32, align 1, !dbg !3487
-  %62 = load i8, ptr %_32, align 1, !dbg !3488, !range !423, !noundef !182
+  %62 = load i8, ptr %_32, align 1, !dbg !3488, !range !372, !noundef !182
   %63 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3488
   store i8 %62, ptr %63, align 1, !dbg !3488
   store i8 0, ptr %_0, align 1, !dbg !3488
@@ -11459,7 +11459,7 @@ bb32:                                             ; preds = %start
 
 bb33:                                             ; preds = %start
   store i8 80, ptr %_33, align 1, !dbg !3490
-  %64 = load i8, ptr %_33, align 1, !dbg !3491, !range !423, !noundef !182
+  %64 = load i8, ptr %_33, align 1, !dbg !3491, !range !372, !noundef !182
   %65 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3491
   store i8 %64, ptr %65, align 1, !dbg !3491
   store i8 0, ptr %_0, align 1, !dbg !3491
@@ -11467,7 +11467,7 @@ bb33:                                             ; preds = %start
 
 bb34:                                             ; preds = %start
   store i8 64, ptr %_34, align 1, !dbg !3493
-  %66 = load i8, ptr %_34, align 1, !dbg !3494, !range !423, !noundef !182
+  %66 = load i8, ptr %_34, align 1, !dbg !3494, !range !372, !noundef !182
   %67 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3494
   store i8 %66, ptr %67, align 1, !dbg !3494
   store i8 0, ptr %_0, align 1, !dbg !3494
@@ -11475,7 +11475,7 @@ bb34:                                             ; preds = %start
 
 bb35:                                             ; preds = %start
   store i8 43, ptr %_35, align 1, !dbg !3496
-  %68 = load i8, ptr %_35, align 1, !dbg !3497, !range !423, !noundef !182
+  %68 = load i8, ptr %_35, align 1, !dbg !3497, !range !372, !noundef !182
   %69 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3497
   store i8 %68, ptr %69, align 1, !dbg !3497
   store i8 0, ptr %_0, align 1, !dbg !3497
@@ -11483,7 +11483,7 @@ bb35:                                             ; preds = %start
 
 bb36:                                             ; preds = %start
   store i8 42, ptr %_36, align 1, !dbg !3499
-  %70 = load i8, ptr %_36, align 1, !dbg !3500, !range !423, !noundef !182
+  %70 = load i8, ptr %_36, align 1, !dbg !3500, !range !372, !noundef !182
   %71 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3500
   store i8 %70, ptr %71, align 1, !dbg !3500
   store i8 0, ptr %_0, align 1, !dbg !3500
@@ -11491,7 +11491,7 @@ bb36:                                             ; preds = %start
 
 bb37:                                             ; preds = %start
   store i8 22, ptr %_37, align 1, !dbg !3502
-  %72 = load i8, ptr %_37, align 1, !dbg !3503, !range !423, !noundef !182
+  %72 = load i8, ptr %_37, align 1, !dbg !3503, !range !372, !noundef !182
   %73 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3503
   store i8 %72, ptr %73, align 1, !dbg !3503
   store i8 0, ptr %_0, align 1, !dbg !3503
@@ -11499,7 +11499,7 @@ bb37:                                             ; preds = %start
 
 bb38:                                             ; preds = %start
   store i8 82, ptr %_38, align 1, !dbg !3505
-  %74 = load i8, ptr %_38, align 1, !dbg !3506, !range !423, !noundef !182
+  %74 = load i8, ptr %_38, align 1, !dbg !3506, !range !372, !noundef !182
   %75 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3506
   store i8 %74, ptr %75, align 1, !dbg !3506
   store i8 0, ptr %_0, align 1, !dbg !3506
@@ -11507,7 +11507,7 @@ bb38:                                             ; preds = %start
 
 bb39:                                             ; preds = %start
   store i8 81, ptr %_39, align 1, !dbg !3508
-  %76 = load i8, ptr %_39, align 1, !dbg !3509, !range !423, !noundef !182
+  %76 = load i8, ptr %_39, align 1, !dbg !3509, !range !372, !noundef !182
   %77 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3509
   store i8 %76, ptr %77, align 1, !dbg !3509
   store i8 0, ptr %_0, align 1, !dbg !3509
@@ -11515,7 +11515,7 @@ bb39:                                             ; preds = %start
 
 bb40:                                             ; preds = %start
   store i8 66, ptr %_40, align 1, !dbg !3511
-  %78 = load i8, ptr %_40, align 1, !dbg !3512, !range !423, !noundef !182
+  %78 = load i8, ptr %_40, align 1, !dbg !3512, !range !372, !noundef !182
   %79 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3512
   store i8 %78, ptr %79, align 1, !dbg !3512
   store i8 0, ptr %_0, align 1, !dbg !3512
@@ -11523,7 +11523,7 @@ bb40:                                             ; preds = %start
 
 bb41:                                             ; preds = %start
   store i8 65, ptr %_41, align 1, !dbg !3514
-  %80 = load i8, ptr %_41, align 1, !dbg !3515, !range !423, !noundef !182
+  %80 = load i8, ptr %_41, align 1, !dbg !3515, !range !372, !noundef !182
   %81 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3515
   store i8 %80, ptr %81, align 1, !dbg !3515
   store i8 0, ptr %_0, align 1, !dbg !3515
@@ -11531,7 +11531,7 @@ bb41:                                             ; preds = %start
 
 bb42:                                             ; preds = %start
   store i8 44, ptr %_42, align 1, !dbg !3517
-  %82 = load i8, ptr %_42, align 1, !dbg !3518, !range !423, !noundef !182
+  %82 = load i8, ptr %_42, align 1, !dbg !3518, !range !372, !noundef !182
   %83 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3518
   store i8 %82, ptr %83, align 1, !dbg !3518
   store i8 0, ptr %_0, align 1, !dbg !3518
@@ -11539,7 +11539,7 @@ bb42:                                             ; preds = %start
 
 bb43:                                             ; preds = %start
   store i8 23, ptr %_43, align 1, !dbg !3520
-  %84 = load i8, ptr %_43, align 1, !dbg !3521, !range !423, !noundef !182
+  %84 = load i8, ptr %_43, align 1, !dbg !3521, !range !372, !noundef !182
   %85 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3521
   store i8 %84, ptr %85, align 1, !dbg !3521
   store i8 0, ptr %_0, align 1, !dbg !3521
@@ -11547,7 +11547,7 @@ bb43:                                             ; preds = %start
 
 bb44:                                             ; preds = %start
   store i8 83, ptr %_44, align 1, !dbg !3523
-  %86 = load i8, ptr %_44, align 1, !dbg !3524, !range !423, !noundef !182
+  %86 = load i8, ptr %_44, align 1, !dbg !3524, !range !372, !noundef !182
   %87 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3524
   store i8 %86, ptr %87, align 1, !dbg !3524
   store i8 0, ptr %_0, align 1, !dbg !3524
@@ -11555,7 +11555,7 @@ bb44:                                             ; preds = %start
 
 bb45:                                             ; preds = %start
   store i8 67, ptr %_45, align 1, !dbg !3526
-  %88 = load i8, ptr %_45, align 1, !dbg !3527, !range !423, !noundef !182
+  %88 = load i8, ptr %_45, align 1, !dbg !3527, !range !372, !noundef !182
   %89 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3527
   store i8 %88, ptr %89, align 1, !dbg !3527
   store i8 0, ptr %_0, align 1, !dbg !3527
@@ -11563,7 +11563,7 @@ bb45:                                             ; preds = %start
 
 bb46:                                             ; preds = %start
   store i8 45, ptr %_46, align 1, !dbg !3529
-  %90 = load i8, ptr %_46, align 1, !dbg !3530, !range !423, !noundef !182
+  %90 = load i8, ptr %_46, align 1, !dbg !3530, !range !372, !noundef !182
   %91 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3530
   store i8 %90, ptr %91, align 1, !dbg !3530
   store i8 0, ptr %_0, align 1, !dbg !3530
@@ -11571,7 +11571,7 @@ bb46:                                             ; preds = %start
 
 bb47:                                             ; preds = %start
   store i8 24, ptr %_47, align 1, !dbg !3532
-  %92 = load i8, ptr %_47, align 1, !dbg !3533, !range !423, !noundef !182
+  %92 = load i8, ptr %_47, align 1, !dbg !3533, !range !372, !noundef !182
   %93 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3533
   store i8 %92, ptr %93, align 1, !dbg !3533
   store i8 0, ptr %_0, align 1, !dbg !3533
@@ -11579,7 +11579,7 @@ bb47:                                             ; preds = %start
 
 bb48:                                             ; preds = %start
   store i8 25, ptr %_48, align 1, !dbg !3535
-  %94 = load i8, ptr %_48, align 1, !dbg !3536, !range !423, !noundef !182
+  %94 = load i8, ptr %_48, align 1, !dbg !3536, !range !372, !noundef !182
   %95 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3536
   store i8 %94, ptr %95, align 1, !dbg !3536
   store i8 0, ptr %_0, align 1, !dbg !3536
@@ -11587,7 +11587,7 @@ bb48:                                             ; preds = %start
 
 bb49:                                             ; preds = %start
   store i8 84, ptr %_49, align 1, !dbg !3538
-  %96 = load i8, ptr %_49, align 1, !dbg !3539, !range !423, !noundef !182
+  %96 = load i8, ptr %_49, align 1, !dbg !3539, !range !372, !noundef !182
   %97 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3539
   store i8 %96, ptr %97, align 1, !dbg !3539
   store i8 0, ptr %_0, align 1, !dbg !3539
@@ -11595,7 +11595,7 @@ bb49:                                             ; preds = %start
 
 bb50:                                             ; preds = %start
   store i8 68, ptr %_50, align 1, !dbg !3541
-  %98 = load i8, ptr %_50, align 1, !dbg !3542, !range !423, !noundef !182
+  %98 = load i8, ptr %_50, align 1, !dbg !3542, !range !372, !noundef !182
   %99 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3542
   store i8 %98, ptr %99, align 1, !dbg !3542
   store i8 0, ptr %_0, align 1, !dbg !3542
@@ -11603,7 +11603,7 @@ bb50:                                             ; preds = %start
 
 bb51:                                             ; preds = %start
   store i8 46, ptr %_51, align 1, !dbg !3544
-  %100 = load i8, ptr %_51, align 1, !dbg !3545, !range !423, !noundef !182
+  %100 = load i8, ptr %_51, align 1, !dbg !3545, !range !372, !noundef !182
   %101 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3545
   store i8 %100, ptr %101, align 1, !dbg !3545
   store i8 0, ptr %_0, align 1, !dbg !3545
@@ -11611,7 +11611,7 @@ bb51:                                             ; preds = %start
 
 bb52:                                             ; preds = %start
   store i8 47, ptr %_52, align 1, !dbg !3547
-  %102 = load i8, ptr %_52, align 1, !dbg !3548, !range !423, !noundef !182
+  %102 = load i8, ptr %_52, align 1, !dbg !3548, !range !372, !noundef !182
   %103 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3548
   store i8 %102, ptr %103, align 1, !dbg !3548
   store i8 0, ptr %_0, align 1, !dbg !3548
@@ -11619,7 +11619,7 @@ bb52:                                             ; preds = %start
 
 bb53:                                             ; preds = %start
   store i8 27, ptr %_53, align 1, !dbg !3550
-  %104 = load i8, ptr %_53, align 1, !dbg !3551, !range !423, !noundef !182
+  %104 = load i8, ptr %_53, align 1, !dbg !3551, !range !372, !noundef !182
   %105 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3551
   store i8 %104, ptr %105, align 1, !dbg !3551
   store i8 0, ptr %_0, align 1, !dbg !3551
@@ -11627,7 +11627,7 @@ bb53:                                             ; preds = %start
 
 bb54:                                             ; preds = %start
   store i8 26, ptr %_54, align 1, !dbg !3553
-  %106 = load i8, ptr %_54, align 1, !dbg !3554, !range !423, !noundef !182
+  %106 = load i8, ptr %_54, align 1, !dbg !3554, !range !372, !noundef !182
   %107 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3554
   store i8 %106, ptr %107, align 1, !dbg !3554
   store i8 0, ptr %_0, align 1, !dbg !3554
@@ -11635,7 +11635,7 @@ bb54:                                             ; preds = %start
 
 bb55:                                             ; preds = %start
   store i8 85, ptr %_55, align 1, !dbg !3556
-  %108 = load i8, ptr %_55, align 1, !dbg !3557, !range !423, !noundef !182
+  %108 = load i8, ptr %_55, align 1, !dbg !3557, !range !372, !noundef !182
   %109 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3557
   store i8 %108, ptr %109, align 1, !dbg !3557
   store i8 0, ptr %_0, align 1, !dbg !3557
@@ -11643,7 +11643,7 @@ bb55:                                             ; preds = %start
 
 bb56:                                             ; preds = %start
   store i8 86, ptr %_56, align 1, !dbg !3559
-  %110 = load i8, ptr %_56, align 1, !dbg !3560, !range !423, !noundef !182
+  %110 = load i8, ptr %_56, align 1, !dbg !3560, !range !372, !noundef !182
   %111 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3560
   store i8 %110, ptr %111, align 1, !dbg !3560
   store i8 0, ptr %_0, align 1, !dbg !3560
@@ -11651,7 +11651,7 @@ bb56:                                             ; preds = %start
 
 bb57:                                             ; preds = %start
   store i8 69, ptr %_57, align 1, !dbg !3562
-  %112 = load i8, ptr %_57, align 1, !dbg !3563, !range !423, !noundef !182
+  %112 = load i8, ptr %_57, align 1, !dbg !3563, !range !372, !noundef !182
   %113 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3563
   store i8 %112, ptr %113, align 1, !dbg !3563
   store i8 0, ptr %_0, align 1, !dbg !3563
@@ -11659,7 +11659,7 @@ bb57:                                             ; preds = %start
 
 bb58:                                             ; preds = %start
   store i8 70, ptr %_58, align 1, !dbg !3565
-  %114 = load i8, ptr %_58, align 1, !dbg !3566, !range !423, !noundef !182
+  %114 = load i8, ptr %_58, align 1, !dbg !3566, !range !372, !noundef !182
   %115 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3566
   store i8 %114, ptr %115, align 1, !dbg !3566
   store i8 0, ptr %_0, align 1, !dbg !3566
@@ -11667,7 +11667,7 @@ bb58:                                             ; preds = %start
 
 bb59:                                             ; preds = %start
   store i8 48, ptr %_59, align 1, !dbg !3568
-  %116 = load i8, ptr %_59, align 1, !dbg !3569, !range !423, !noundef !182
+  %116 = load i8, ptr %_59, align 1, !dbg !3569, !range !372, !noundef !182
   %117 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3569
   store i8 %116, ptr %117, align 1, !dbg !3569
   store i8 0, ptr %_0, align 1, !dbg !3569
@@ -11675,7 +11675,7 @@ bb59:                                             ; preds = %start
 
 bb60:                                             ; preds = %start
   store i8 28, ptr %_60, align 1, !dbg !3571
-  %118 = load i8, ptr %_60, align 1, !dbg !3572, !range !423, !noundef !182
+  %118 = load i8, ptr %_60, align 1, !dbg !3572, !range !372, !noundef !182
   %119 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3572
   store i8 %118, ptr %119, align 1, !dbg !3572
   store i8 0, ptr %_0, align 1, !dbg !3572
@@ -11683,7 +11683,7 @@ bb60:                                             ; preds = %start
 
 bb61:                                             ; preds = %start
   store i8 109, ptr %_61, align 1, !dbg !3574
-  %120 = load i8, ptr %_61, align 1, !dbg !3575, !range !423, !noundef !182
+  %120 = load i8, ptr %_61, align 1, !dbg !3575, !range !372, !noundef !182
   %121 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3575
   store i8 %120, ptr %121, align 1, !dbg !3575
   store i8 0, ptr %_0, align 1, !dbg !3575
@@ -11691,7 +11691,7 @@ bb61:                                             ; preds = %start
 
 bb62:                                             ; preds = %start
   store i8 71, ptr %_62, align 1, !dbg !3577
-  %122 = load i8, ptr %_62, align 1, !dbg !3578, !range !423, !noundef !182
+  %122 = load i8, ptr %_62, align 1, !dbg !3578, !range !372, !noundef !182
   %123 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3578
   store i8 %122, ptr %123, align 1, !dbg !3578
   store i8 0, ptr %_0, align 1, !dbg !3578
@@ -11699,7 +11699,7 @@ bb62:                                             ; preds = %start
 
 bb63:                                             ; preds = %start
   store i8 49, ptr %_63, align 1, !dbg !3580
-  %124 = load i8, ptr %_63, align 1, !dbg !3581, !range !423, !noundef !182
+  %124 = load i8, ptr %_63, align 1, !dbg !3581, !range !372, !noundef !182
   %125 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3581
   store i8 %124, ptr %125, align 1, !dbg !3581
   store i8 0, ptr %_0, align 1, !dbg !3581
@@ -11707,7 +11707,7 @@ bb63:                                             ; preds = %start
 
 bb64:                                             ; preds = %start
   store i8 29, ptr %_64, align 1, !dbg !3583
-  %126 = load i8, ptr %_64, align 1, !dbg !3584, !range !423, !noundef !182
+  %126 = load i8, ptr %_64, align 1, !dbg !3584, !range !372, !noundef !182
   %127 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3584
   store i8 %126, ptr %127, align 1, !dbg !3584
   store i8 0, ptr %_0, align 1, !dbg !3584
@@ -11715,7 +11715,7 @@ bb64:                                             ; preds = %start
 
 bb65:                                             ; preds = %start
   store i8 60, ptr %_65, align 1, !dbg !3586
-  %128 = load i8, ptr %_65, align 1, !dbg !3587, !range !423, !noundef !182
+  %128 = load i8, ptr %_65, align 1, !dbg !3587, !range !372, !noundef !182
   %129 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3587
   store i8 %128, ptr %129, align 1, !dbg !3587
   store i8 0, ptr %_0, align 1, !dbg !3587
@@ -11723,7 +11723,7 @@ bb65:                                             ; preds = %start
 
 bb66:                                             ; preds = %start
   store i8 87, ptr %_66, align 1, !dbg !3589
-  %130 = load i8, ptr %_66, align 1, !dbg !3590, !range !423, !noundef !182
+  %130 = load i8, ptr %_66, align 1, !dbg !3590, !range !372, !noundef !182
   %131 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3590
   store i8 %130, ptr %131, align 1, !dbg !3590
   store i8 0, ptr %_0, align 1, !dbg !3590
@@ -11731,7 +11731,7 @@ bb66:                                             ; preds = %start
 
 bb67:                                             ; preds = %start
   store i8 72, ptr %_67, align 1, !dbg !3592
-  %132 = load i8, ptr %_67, align 1, !dbg !3593, !range !423, !noundef !182
+  %132 = load i8, ptr %_67, align 1, !dbg !3593, !range !372, !noundef !182
   %133 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3593
   store i8 %132, ptr %133, align 1, !dbg !3593
   store i8 0, ptr %_0, align 1, !dbg !3593
@@ -11739,7 +11739,7 @@ bb67:                                             ; preds = %start
 
 bb68:                                             ; preds = %start
   store i8 50, ptr %_68, align 1, !dbg !3595
-  %134 = load i8, ptr %_68, align 1, !dbg !3596, !range !423, !noundef !182
+  %134 = load i8, ptr %_68, align 1, !dbg !3596, !range !372, !noundef !182
   %135 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3596
   store i8 %134, ptr %135, align 1, !dbg !3596
   store i8 0, ptr %_0, align 1, !dbg !3596
@@ -11747,7 +11747,7 @@ bb68:                                             ; preds = %start
 
 bb69:                                             ; preds = %start
   store i8 52, ptr %_69, align 1, !dbg !3598
-  %136 = load i8, ptr %_69, align 1, !dbg !3599, !range !423, !noundef !182
+  %136 = load i8, ptr %_69, align 1, !dbg !3599, !range !372, !noundef !182
   %137 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3599
   store i8 %136, ptr %137, align 1, !dbg !3599
   store i8 0, ptr %_0, align 1, !dbg !3599
@@ -11755,7 +11755,7 @@ bb69:                                             ; preds = %start
 
 bb70:                                             ; preds = %start
   store i8 51, ptr %_70, align 1, !dbg !3601
-  %138 = load i8, ptr %_70, align 1, !dbg !3602, !range !423, !noundef !182
+  %138 = load i8, ptr %_70, align 1, !dbg !3602, !range !372, !noundef !182
   %139 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3602
   store i8 %138, ptr %139, align 1, !dbg !3602
   store i8 0, ptr %_0, align 1, !dbg !3602
@@ -11763,7 +11763,7 @@ bb70:                                             ; preds = %start
 
 bb71:                                             ; preds = %start
   store i8 107, ptr %_71, align 1, !dbg !3604
-  %140 = load i8, ptr %_71, align 1, !dbg !3605, !range !423, !noundef !182
+  %140 = load i8, ptr %_71, align 1, !dbg !3605, !range !372, !noundef !182
   %141 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3605
   store i8 %140, ptr %141, align 1, !dbg !3605
   store i8 0, ptr %_0, align 1, !dbg !3605
@@ -11771,7 +11771,7 @@ bb71:                                             ; preds = %start
 
 bb72:                                             ; preds = %start
   store i8 30, ptr %_72, align 1, !dbg !3607
-  %142 = load i8, ptr %_72, align 1, !dbg !3608, !range !423, !noundef !182
+  %142 = load i8, ptr %_72, align 1, !dbg !3608, !range !372, !noundef !182
   %143 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3608
   store i8 %142, ptr %143, align 1, !dbg !3608
   store i8 0, ptr %_0, align 1, !dbg !3608
@@ -11779,7 +11779,7 @@ bb72:                                             ; preds = %start
 
 bb73:                                             ; preds = %start
   store i8 106, ptr %_73, align 1, !dbg !3610
-  %144 = load i8, ptr %_73, align 1, !dbg !3611, !range !423, !noundef !182
+  %144 = load i8, ptr %_73, align 1, !dbg !3611, !range !372, !noundef !182
   %145 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3611
   store i8 %144, ptr %145, align 1, !dbg !3611
   store i8 0, ptr %_0, align 1, !dbg !3611
@@ -11787,7 +11787,7 @@ bb73:                                             ; preds = %start
 
 bb74:                                             ; preds = %start
   store i8 89, ptr %_74, align 1, !dbg !3613
-  %146 = load i8, ptr %_74, align 1, !dbg !3614, !range !423, !noundef !182
+  %146 = load i8, ptr %_74, align 1, !dbg !3614, !range !372, !noundef !182
   %147 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3614
   store i8 %146, ptr %147, align 1, !dbg !3614
   store i8 0, ptr %_0, align 1, !dbg !3614
@@ -11795,7 +11795,7 @@ bb74:                                             ; preds = %start
 
 bb75:                                             ; preds = %start
   store i8 110, ptr %_75, align 1, !dbg !3616
-  %148 = load i8, ptr %_75, align 1, !dbg !3617, !range !423, !noundef !182
+  %148 = load i8, ptr %_75, align 1, !dbg !3617, !range !372, !noundef !182
   %149 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3617
   store i8 %148, ptr %149, align 1, !dbg !3617
   store i8 0, ptr %_0, align 1, !dbg !3617
@@ -11803,7 +11803,7 @@ bb75:                                             ; preds = %start
 
 bb76:                                             ; preds = %start
   store i8 73, ptr %_76, align 1, !dbg !3619
-  %150 = load i8, ptr %_76, align 1, !dbg !3620, !range !423, !noundef !182
+  %150 = load i8, ptr %_76, align 1, !dbg !3620, !range !372, !noundef !182
   %151 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3620
   store i8 %150, ptr %151, align 1, !dbg !3620
   store i8 0, ptr %_0, align 1, !dbg !3620
@@ -11811,7 +11811,7 @@ bb76:                                             ; preds = %start
 
 bb77:                                             ; preds = %start
   store i8 56, ptr %_77, align 1, !dbg !3622
-  %152 = load i8, ptr %_77, align 1, !dbg !3623, !range !423, !noundef !182
+  %152 = load i8, ptr %_77, align 1, !dbg !3623, !range !372, !noundef !182
   %153 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3623
   store i8 %152, ptr %153, align 1, !dbg !3623
   store i8 0, ptr %_0, align 1, !dbg !3623
@@ -11819,7 +11819,7 @@ bb77:                                             ; preds = %start
 
 bb78:                                             ; preds = %start
   store i8 104, ptr %_78, align 1, !dbg !3625
-  %154 = load i8, ptr %_78, align 1, !dbg !3626, !range !423, !noundef !182
+  %154 = load i8, ptr %_78, align 1, !dbg !3626, !range !372, !noundef !182
   %155 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3626
   store i8 %154, ptr %155, align 1, !dbg !3626
   store i8 0, ptr %_0, align 1, !dbg !3626
@@ -11827,7 +11827,7 @@ bb78:                                             ; preds = %start
 
 bb79:                                             ; preds = %start
   store i8 105, ptr %_79, align 1, !dbg !3628
-  %156 = load i8, ptr %_79, align 1, !dbg !3629, !range !423, !noundef !182
+  %156 = load i8, ptr %_79, align 1, !dbg !3629, !range !372, !noundef !182
   %157 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3629
   store i8 %156, ptr %157, align 1, !dbg !3629
   store i8 0, ptr %_0, align 1, !dbg !3629
@@ -11835,7 +11835,7 @@ bb79:                                             ; preds = %start
 
 bb80:                                             ; preds = %start
   store i8 90, ptr %_80, align 1, !dbg !3631
-  %158 = load i8, ptr %_80, align 1, !dbg !3632, !range !423, !noundef !182
+  %158 = load i8, ptr %_80, align 1, !dbg !3632, !range !372, !noundef !182
   %159 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3632
   store i8 %158, ptr %159, align 1, !dbg !3632
   store i8 0, ptr %_0, align 1, !dbg !3632
@@ -11843,7 +11843,7 @@ bb80:                                             ; preds = %start
 
 bb81:                                             ; preds = %start
   store i8 74, ptr %_81, align 1, !dbg !3634
-  %160 = load i8, ptr %_81, align 1, !dbg !3635, !range !423, !noundef !182
+  %160 = load i8, ptr %_81, align 1, !dbg !3635, !range !372, !noundef !182
   %161 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3635
   store i8 %160, ptr %161, align 1, !dbg !3635
   store i8 0, ptr %_0, align 1, !dbg !3635
@@ -11851,7 +11851,7 @@ bb81:                                             ; preds = %start
 
 bb82:                                             ; preds = %start
   store i8 75, ptr %_82, align 1, !dbg !3637
-  %162 = load i8, ptr %_82, align 1, !dbg !3638, !range !423, !noundef !182
+  %162 = load i8, ptr %_82, align 1, !dbg !3638, !range !372, !noundef !182
   %163 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3638
   store i8 %162, ptr %163, align 1, !dbg !3638
   store i8 0, ptr %_0, align 1, !dbg !3638
@@ -11859,7 +11859,7 @@ bb82:                                             ; preds = %start
 
 bb83:                                             ; preds = %start
   store i8 57, ptr %_83, align 1, !dbg !3640
-  %164 = load i8, ptr %_83, align 1, !dbg !3641, !range !423, !noundef !182
+  %164 = load i8, ptr %_83, align 1, !dbg !3641, !range !372, !noundef !182
   %165 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3641
   store i8 %164, ptr %165, align 1, !dbg !3641
   store i8 0, ptr %_0, align 1, !dbg !3641
@@ -11867,7 +11867,7 @@ bb83:                                             ; preds = %start
 
 bb84:                                             ; preds = %start
   store i8 0, ptr %_84, align 1, !dbg !3643
-  %166 = load i8, ptr %_84, align 1, !dbg !3644, !range !423, !noundef !182
+  %166 = load i8, ptr %_84, align 1, !dbg !3644, !range !372, !noundef !182
   %167 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3644
   store i8 %166, ptr %167, align 1, !dbg !3644
   store i8 0, ptr %_0, align 1, !dbg !3644
@@ -11875,7 +11875,7 @@ bb84:                                             ; preds = %start
 
 bb85:                                             ; preds = %start
   store i8 34, ptr %_85, align 1, !dbg !3646
-  %168 = load i8, ptr %_85, align 1, !dbg !3647, !range !423, !noundef !182
+  %168 = load i8, ptr %_85, align 1, !dbg !3647, !range !372, !noundef !182
   %169 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3647
   store i8 %168, ptr %169, align 1, !dbg !3647
   store i8 0, ptr %_0, align 1, !dbg !3647
@@ -11883,7 +11883,7 @@ bb85:                                             ; preds = %start
 
 bb86:                                             ; preds = %start
   store i8 11, ptr %_86, align 1, !dbg !3649
-  %170 = load i8, ptr %_86, align 1, !dbg !3650, !range !423, !noundef !182
+  %170 = load i8, ptr %_86, align 1, !dbg !3650, !range !372, !noundef !182
   %171 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3650
   store i8 %170, ptr %171, align 1, !dbg !3650
   store i8 0, ptr %_0, align 1, !dbg !3650
@@ -11891,7 +11891,7 @@ bb86:                                             ; preds = %start
 
 bb87:                                             ; preds = %start
   store i8 59, ptr %_87, align 1, !dbg !3652
-  %172 = load i8, ptr %_87, align 1, !dbg !3653, !range !423, !noundef !182
+  %172 = load i8, ptr %_87, align 1, !dbg !3653, !range !372, !noundef !182
   %173 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3653
   store i8 %172, ptr %173, align 1, !dbg !3653
   store i8 0, ptr %_0, align 1, !dbg !3653
@@ -11899,7 +11899,7 @@ bb87:                                             ; preds = %start
 
 bb88:                                             ; preds = %start
   store i8 91, ptr %_88, align 1, !dbg !3655
-  %174 = load i8, ptr %_88, align 1, !dbg !3656, !range !423, !noundef !182
+  %174 = load i8, ptr %_88, align 1, !dbg !3656, !range !372, !noundef !182
   %175 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3656
   store i8 %174, ptr %175, align 1, !dbg !3656
   store i8 0, ptr %_0, align 1, !dbg !3656
@@ -11907,7 +11907,7 @@ bb88:                                             ; preds = %start
 
 bb89:                                             ; preds = %start
   store i8 37, ptr %_89, align 1, !dbg !3658
-  %176 = load i8, ptr %_89, align 1, !dbg !3659, !range !423, !noundef !182
+  %176 = load i8, ptr %_89, align 1, !dbg !3659, !range !372, !noundef !182
   %177 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3659
   store i8 %176, ptr %177, align 1, !dbg !3659
   store i8 0, ptr %_0, align 1, !dbg !3659
@@ -11915,7 +11915,7 @@ bb89:                                             ; preds = %start
 
 bb90:                                             ; preds = %start
   store i8 36, ptr %_90, align 1, !dbg !3661
-  %178 = load i8, ptr %_90, align 1, !dbg !3662, !range !423, !noundef !182
+  %178 = load i8, ptr %_90, align 1, !dbg !3662, !range !372, !noundef !182
   %179 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3662
   store i8 %178, ptr %179, align 1, !dbg !3662
   store i8 0, ptr %_0, align 1, !dbg !3662
@@ -11923,7 +11923,7 @@ bb90:                                             ; preds = %start
 
 bb91:                                             ; preds = %start
   store i8 58, ptr %_91, align 1, !dbg !3664
-  %180 = load i8, ptr %_91, align 1, !dbg !3665, !range !423, !noundef !182
+  %180 = load i8, ptr %_91, align 1, !dbg !3665, !range !372, !noundef !182
   %181 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3665
   store i8 %180, ptr %181, align 1, !dbg !3665
   store i8 0, ptr %_0, align 1, !dbg !3665
@@ -11931,7 +11931,7 @@ bb91:                                             ; preds = %start
 
 bb92:                                             ; preds = %start
   store i8 15, ptr %_92, align 1, !dbg !3667
-  %182 = load i8, ptr %_92, align 1, !dbg !3668, !range !423, !noundef !182
+  %182 = load i8, ptr %_92, align 1, !dbg !3668, !range !372, !noundef !182
   %183 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3668
   store i8 %182, ptr %183, align 1, !dbg !3668
   store i8 0, ptr %_0, align 1, !dbg !3668
@@ -11939,7 +11939,7 @@ bb92:                                             ; preds = %start
 
 bb93:                                             ; preds = %start
   store i8 14, ptr %_93, align 1, !dbg !3670
-  %184 = load i8, ptr %_93, align 1, !dbg !3671, !range !423, !noundef !182
+  %184 = load i8, ptr %_93, align 1, !dbg !3671, !range !372, !noundef !182
   %185 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3671
   store i8 %184, ptr %185, align 1, !dbg !3671
   store i8 0, ptr %_0, align 1, !dbg !3671
@@ -11947,7 +11947,7 @@ bb93:                                             ; preds = %start
 
 bb94:                                             ; preds = %start
   store i8 7, ptr %_94, align 1, !dbg !3673
-  %186 = load i8, ptr %_94, align 1, !dbg !3674, !range !423, !noundef !182
+  %186 = load i8, ptr %_94, align 1, !dbg !3674, !range !372, !noundef !182
   %187 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3674
   store i8 %186, ptr %187, align 1, !dbg !3674
   store i8 0, ptr %_0, align 1, !dbg !3674
@@ -11955,7 +11955,7 @@ bb94:                                             ; preds = %start
 
 bb95:                                             ; preds = %start
   store i8 120, ptr %_95, align 1, !dbg !3676
-  %188 = load i8, ptr %_95, align 1, !dbg !3677, !range !423, !noundef !182
+  %188 = load i8, ptr %_95, align 1, !dbg !3677, !range !372, !noundef !182
   %189 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3677
   store i8 %188, ptr %189, align 1, !dbg !3677
   store i8 0, ptr %_0, align 1, !dbg !3677
@@ -11963,7 +11963,7 @@ bb95:                                             ; preds = %start
 
 bb96:                                             ; preds = %bb1, %bb95, %bb94, %bb93, %bb92, %bb91, %bb90, %bb89, %bb88, %bb87, %bb86, %bb85, %bb84, %bb83, %bb82, %bb81, %bb80, %bb79, %bb78, %bb77, %bb76, %bb75, %bb74, %bb73, %bb72, %bb71, %bb70, %bb69, %bb68, %bb67, %bb66, %bb65, %bb64, %bb63, %bb62, %bb61, %bb60, %bb59, %bb58, %bb57, %bb56, %bb55, %bb54, %bb53, %bb52, %bb51, %bb50, %bb49, %bb48, %bb47, %bb46, %bb45, %bb44, %bb43, %bb42, %bb41, %bb40, %bb39, %bb38, %bb37, %bb36, %bb35, %bb34, %bb33, %bb32, %bb31, %bb30, %bb29, %bb28, %bb27, %bb26, %bb25, %bb24, %bb23, %bb22, %bb21, %bb20, %bb19, %bb18, %bb17, %bb16, %bb15, %bb14, %bb13, %bb12, %bb11, %bb10, %bb9, %bb8, %bb7, %bb6, %bb5, %bb4, %bb3, %bb2
   %190 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !3679
-  %191 = load i8, ptr %190, align 1, !dbg !3679, !range !368, !noundef !182
+  %191 = load i8, ptr %190, align 1, !dbg !3679, !range !369, !noundef !182
   %192 = trunc i8 %191 to i1, !dbg !3679
   %193 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3679
   %194 = load i8, ptr %193, align 1, !dbg !3679, !noundef !182
@@ -11975,7 +11975,7 @@ bb96:                                             ; preds = %bb1, %bb95, %bb94, 
 
 ; pc_keyboard::scancodes::set2::ScancodeSet2::map_extended_scancode
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17ha48addb341d772dbE(i8 %code) unnamed_addr #1 !dbg !3680 {
+define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17h5464f300e11a1646E(i8 %code) unnamed_addr #1 !dbg !3680 {
 start:
   %code.dbg.spill = alloca i8, align 1
   %_30 = alloca i8, align 1
@@ -12043,7 +12043,7 @@ start:
 
 bb1:                                              ; preds = %start
   store i8 3, ptr %_30, align 1, !dbg !3686
-  %0 = load i8, ptr %_30, align 1, !dbg !3687, !range !239, !noundef !182
+  %0 = load i8, ptr %_30, align 1, !dbg !3687, !range !243, !noundef !182
   %1 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3687
   store i8 %0, ptr %1, align 1, !dbg !3687
   store i8 1, ptr %_0, align 1, !dbg !3687
@@ -12051,7 +12051,7 @@ bb1:                                              ; preds = %start
 
 bb2:                                              ; preds = %start
   store i8 97, ptr %_2, align 1, !dbg !3689
-  %2 = load i8, ptr %_2, align 1, !dbg !3690, !range !423, !noundef !182
+  %2 = load i8, ptr %_2, align 1, !dbg !3690, !range !372, !noundef !182
   %3 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3690
   store i8 %2, ptr %3, align 1, !dbg !3690
   store i8 0, ptr %_0, align 1, !dbg !3690
@@ -12059,7 +12059,7 @@ bb2:                                              ; preds = %start
 
 bb3:                                              ; preds = %start
   store i8 123, ptr %_3, align 1, !dbg !3692
-  %4 = load i8, ptr %_3, align 1, !dbg !3693, !range !423, !noundef !182
+  %4 = load i8, ptr %_3, align 1, !dbg !3693, !range !372, !noundef !182
   %5 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3693
   store i8 %4, ptr %5, align 1, !dbg !3693
   store i8 0, ptr %_0, align 1, !dbg !3693
@@ -12067,7 +12067,7 @@ bb3:                                              ; preds = %start
 
 bb4:                                              ; preds = %start
   store i8 100, ptr %_4, align 1, !dbg !3695
-  %6 = load i8, ptr %_4, align 1, !dbg !3696, !range !423, !noundef !182
+  %6 = load i8, ptr %_4, align 1, !dbg !3696, !range !372, !noundef !182
   %7 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3696
   store i8 %6, ptr %7, align 1, !dbg !3696
   store i8 0, ptr %_0, align 1, !dbg !3696
@@ -12075,7 +12075,7 @@ bb4:                                              ; preds = %start
 
 bb5:                                              ; preds = %start
   store i8 111, ptr %_5, align 1, !dbg !3698
-  %8 = load i8, ptr %_5, align 1, !dbg !3699, !range !423, !noundef !182
+  %8 = load i8, ptr %_5, align 1, !dbg !3699, !range !372, !noundef !182
   %9 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3699
   store i8 %8, ptr %9, align 1, !dbg !3699
   store i8 0, ptr %_0, align 1, !dbg !3699
@@ -12083,7 +12083,7 @@ bb5:                                              ; preds = %start
 
 bb6:                                              ; preds = %start
   store i8 94, ptr %_6, align 1, !dbg !3701
-  %10 = load i8, ptr %_6, align 1, !dbg !3702, !range !423, !noundef !182
+  %10 = load i8, ptr %_6, align 1, !dbg !3702, !range !372, !noundef !182
   %11 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3702
   store i8 %10, ptr %11, align 1, !dbg !3702
   store i8 0, ptr %_0, align 1, !dbg !3702
@@ -12091,7 +12091,7 @@ bb6:                                              ; preds = %start
 
 bb7:                                              ; preds = %start
   store i8 117, ptr %_7, align 1, !dbg !3704
-  %12 = load i8, ptr %_7, align 1, !dbg !3705, !range !423, !noundef !182
+  %12 = load i8, ptr %_7, align 1, !dbg !3705, !range !372, !noundef !182
   %13 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3705
   store i8 %12, ptr %13, align 1, !dbg !3705
   store i8 0, ptr %_0, align 1, !dbg !3705
@@ -12099,7 +12099,7 @@ bb7:                                              ; preds = %start
 
 bb8:                                              ; preds = %start
   store i8 113, ptr %_8, align 1, !dbg !3707
-  %14 = load i8, ptr %_8, align 1, !dbg !3708, !range !423, !noundef !182
+  %14 = load i8, ptr %_8, align 1, !dbg !3708, !range !372, !noundef !182
   %15 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3708
   store i8 %14, ptr %15, align 1, !dbg !3708
   store i8 0, ptr %_0, align 1, !dbg !3708
@@ -12107,7 +12107,7 @@ bb8:                                              ; preds = %start
 
 bb9:                                              ; preds = %start
   store i8 98, ptr %_9, align 1, !dbg !3710
-  %16 = load i8, ptr %_9, align 1, !dbg !3711, !range !423, !noundef !182
+  %16 = load i8, ptr %_9, align 1, !dbg !3711, !range !372, !noundef !182
   %17 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3711
   store i8 %16, ptr %17, align 1, !dbg !3711
   store i8 0, ptr %_0, align 1, !dbg !3711
@@ -12115,7 +12115,7 @@ bb9:                                              ; preds = %start
 
 bb10:                                             ; preds = %start
   store i8 114, ptr %_10, align 1, !dbg !3713
-  %18 = load i8, ptr %_10, align 1, !dbg !3714, !range !423, !noundef !182
+  %18 = load i8, ptr %_10, align 1, !dbg !3714, !range !372, !noundef !182
   %19 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3714
   store i8 %18, ptr %19, align 1, !dbg !3714
   store i8 0, ptr %_0, align 1, !dbg !3714
@@ -12123,7 +12123,7 @@ bb10:                                             ; preds = %start
 
 bb11:                                             ; preds = %start
   store i8 99, ptr %_11, align 1, !dbg !3716
-  %20 = load i8, ptr %_11, align 1, !dbg !3717, !range !423, !noundef !182
+  %20 = load i8, ptr %_11, align 1, !dbg !3717, !range !372, !noundef !182
   %21 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3717
   store i8 %20, ptr %21, align 1, !dbg !3717
   store i8 0, ptr %_0, align 1, !dbg !3717
@@ -12131,7 +12131,7 @@ bb11:                                             ; preds = %start
 
 bb12:                                             ; preds = %start
   store i8 118, ptr %_12, align 1, !dbg !3719
-  %22 = load i8, ptr %_12, align 1, !dbg !3720, !range !423, !noundef !182
+  %22 = load i8, ptr %_12, align 1, !dbg !3720, !range !372, !noundef !182
   %23 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3720
   store i8 %22, ptr %23, align 1, !dbg !3720
   store i8 0, ptr %_0, align 1, !dbg !3720
@@ -12139,7 +12139,7 @@ bb12:                                             ; preds = %start
 
 bb13:                                             ; preds = %start
   store i8 115, ptr %_13, align 1, !dbg !3722
-  %24 = load i8, ptr %_13, align 1, !dbg !3723, !range !423, !noundef !182
+  %24 = load i8, ptr %_13, align 1, !dbg !3723, !range !372, !noundef !182
   %25 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3723
   store i8 %24, ptr %25, align 1, !dbg !3723
   store i8 0, ptr %_0, align 1, !dbg !3723
@@ -12147,7 +12147,7 @@ bb13:                                             ; preds = %start
 
 bb14:                                             ; preds = %start
   store i8 119, ptr %_14, align 1, !dbg !3725
-  %26 = load i8, ptr %_14, align 1, !dbg !3726, !range !423, !noundef !182
+  %26 = load i8, ptr %_14, align 1, !dbg !3726, !range !372, !noundef !182
   %27 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3726
   store i8 %26, ptr %27, align 1, !dbg !3726
   store i8 0, ptr %_0, align 1, !dbg !3726
@@ -12155,7 +12155,7 @@ bb14:                                             ; preds = %start
 
 bb15:                                             ; preds = %start
   store i8 116, ptr %_15, align 1, !dbg !3728
-  %28 = load i8, ptr %_15, align 1, !dbg !3729, !range !423, !noundef !182
+  %28 = load i8, ptr %_15, align 1, !dbg !3729, !range !372, !noundef !182
   %29 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3729
   store i8 %28, ptr %29, align 1, !dbg !3729
   store i8 0, ptr %_0, align 1, !dbg !3729
@@ -12163,7 +12163,7 @@ bb15:                                             ; preds = %start
 
 bb16:                                             ; preds = %start
   store i8 35, ptr %_16, align 1, !dbg !3731
-  %30 = load i8, ptr %_16, align 1, !dbg !3732, !range !423, !noundef !182
+  %30 = load i8, ptr %_16, align 1, !dbg !3732, !range !372, !noundef !182
   %31 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3732
   store i8 %30, ptr %31, align 1, !dbg !3732
   store i8 0, ptr %_0, align 1, !dbg !3732
@@ -12171,7 +12171,7 @@ bb16:                                             ; preds = %start
 
 bb17:                                             ; preds = %start
   store i8 112, ptr %_17, align 1, !dbg !3734
-  %32 = load i8, ptr %_17, align 1, !dbg !3735, !range !423, !noundef !182
+  %32 = load i8, ptr %_17, align 1, !dbg !3735, !range !372, !noundef !182
   %33 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3735
   store i8 %32, ptr %33, align 1, !dbg !3735
   store i8 0, ptr %_0, align 1, !dbg !3735
@@ -12179,7 +12179,7 @@ bb17:                                             ; preds = %start
 
 bb18:                                             ; preds = %start
   store i8 92, ptr %_18, align 1, !dbg !3737
-  %34 = load i8, ptr %_18, align 1, !dbg !3738, !range !423, !noundef !182
+  %34 = load i8, ptr %_18, align 1, !dbg !3738, !range !372, !noundef !182
   %35 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3738
   store i8 %34, ptr %35, align 1, !dbg !3738
   store i8 0, ptr %_0, align 1, !dbg !3738
@@ -12187,7 +12187,7 @@ bb18:                                             ; preds = %start
 
 bb19:                                             ; preds = %start
   store i8 54, ptr %_19, align 1, !dbg !3740
-  %36 = load i8, ptr %_19, align 1, !dbg !3741, !range !423, !noundef !182
+  %36 = load i8, ptr %_19, align 1, !dbg !3741, !range !372, !noundef !182
   %37 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3741
   store i8 %36, ptr %37, align 1, !dbg !3741
   store i8 0, ptr %_0, align 1, !dbg !3741
@@ -12195,7 +12195,7 @@ bb19:                                             ; preds = %start
 
 bb20:                                             ; preds = %start
   store i8 101, ptr %_20, align 1, !dbg !3743
-  %38 = load i8, ptr %_20, align 1, !dbg !3744, !range !423, !noundef !182
+  %38 = load i8, ptr %_20, align 1, !dbg !3744, !range !372, !noundef !182
   %39 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3744
   store i8 %38, ptr %39, align 1, !dbg !3744
   store i8 0, ptr %_0, align 1, !dbg !3744
@@ -12203,7 +12203,7 @@ bb20:                                             ; preds = %start
 
 bb21:                                             ; preds = %start
   store i8 32, ptr %_21, align 1, !dbg !3746
-  %40 = load i8, ptr %_21, align 1, !dbg !3747, !range !423, !noundef !182
+  %40 = load i8, ptr %_21, align 1, !dbg !3747, !range !372, !noundef !182
   %41 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3747
   store i8 %40, ptr %41, align 1, !dbg !3747
   store i8 0, ptr %_0, align 1, !dbg !3747
@@ -12211,7 +12211,7 @@ bb21:                                             ; preds = %start
 
 bb22:                                             ; preds = %start
   store i8 31, ptr %_22, align 1, !dbg !3749
-  %42 = load i8, ptr %_22, align 1, !dbg !3750, !range !423, !noundef !182
+  %42 = load i8, ptr %_22, align 1, !dbg !3750, !range !372, !noundef !182
   %43 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3750
   store i8 %42, ptr %43, align 1, !dbg !3750
   store i8 0, ptr %_0, align 1, !dbg !3750
@@ -12219,7 +12219,7 @@ bb22:                                             ; preds = %start
 
 bb23:                                             ; preds = %start
   store i8 53, ptr %_23, align 1, !dbg !3752
-  %44 = load i8, ptr %_23, align 1, !dbg !3753, !range !423, !noundef !182
+  %44 = load i8, ptr %_23, align 1, !dbg !3753, !range !372, !noundef !182
   %45 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3753
   store i8 %44, ptr %45, align 1, !dbg !3753
   store i8 0, ptr %_0, align 1, !dbg !3753
@@ -12227,7 +12227,7 @@ bb23:                                             ; preds = %start
 
 bb24:                                             ; preds = %start
   store i8 102, ptr %_24, align 1, !dbg !3755
-  %46 = load i8, ptr %_24, align 1, !dbg !3756, !range !423, !noundef !182
+  %46 = load i8, ptr %_24, align 1, !dbg !3756, !range !372, !noundef !182
   %47 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3756
   store i8 %46, ptr %47, align 1, !dbg !3756
   store i8 0, ptr %_0, align 1, !dbg !3756
@@ -12235,7 +12235,7 @@ bb24:                                             ; preds = %start
 
 bb25:                                             ; preds = %start
   store i8 103, ptr %_25, align 1, !dbg !3758
-  %48 = load i8, ptr %_25, align 1, !dbg !3759, !range !423, !noundef !182
+  %48 = load i8, ptr %_25, align 1, !dbg !3759, !range !372, !noundef !182
   %49 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3759
   store i8 %48, ptr %49, align 1, !dbg !3759
   store i8 0, ptr %_0, align 1, !dbg !3759
@@ -12243,7 +12243,7 @@ bb25:                                             ; preds = %start
 
 bb26:                                             ; preds = %start
   store i8 88, ptr %_26, align 1, !dbg !3761
-  %50 = load i8, ptr %_26, align 1, !dbg !3762, !range !423, !noundef !182
+  %50 = load i8, ptr %_26, align 1, !dbg !3762, !range !372, !noundef !182
   %51 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3762
   store i8 %50, ptr %51, align 1, !dbg !3762
   store i8 0, ptr %_0, align 1, !dbg !3762
@@ -12251,7 +12251,7 @@ bb26:                                             ; preds = %start
 
 bb27:                                             ; preds = %start
   store i8 55, ptr %_27, align 1, !dbg !3764
-  %52 = load i8, ptr %_27, align 1, !dbg !3765, !range !423, !noundef !182
+  %52 = load i8, ptr %_27, align 1, !dbg !3765, !range !372, !noundef !182
   %53 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3765
   store i8 %52, ptr %53, align 1, !dbg !3765
   store i8 0, ptr %_0, align 1, !dbg !3765
@@ -12259,7 +12259,7 @@ bb27:                                             ; preds = %start
 
 bb28:                                             ; preds = %start
   store i8 13, ptr %_28, align 1, !dbg !3767
-  %54 = load i8, ptr %_28, align 1, !dbg !3768, !range !423, !noundef !182
+  %54 = load i8, ptr %_28, align 1, !dbg !3768, !range !372, !noundef !182
   %55 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3768
   store i8 %54, ptr %55, align 1, !dbg !3768
   store i8 0, ptr %_0, align 1, !dbg !3768
@@ -12267,7 +12267,7 @@ bb28:                                             ; preds = %start
 
 bb29:                                             ; preds = %start
   store i8 33, ptr %_29, align 1, !dbg !3770
-  %56 = load i8, ptr %_29, align 1, !dbg !3771, !range !423, !noundef !182
+  %56 = load i8, ptr %_29, align 1, !dbg !3771, !range !372, !noundef !182
   %57 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3771
   store i8 %56, ptr %57, align 1, !dbg !3771
   store i8 0, ptr %_0, align 1, !dbg !3771
@@ -12275,7 +12275,7 @@ bb29:                                             ; preds = %start
 
 bb30:                                             ; preds = %bb1, %bb29, %bb28, %bb27, %bb26, %bb25, %bb24, %bb23, %bb22, %bb21, %bb20, %bb19, %bb18, %bb17, %bb16, %bb15, %bb14, %bb13, %bb12, %bb11, %bb10, %bb9, %bb8, %bb7, %bb6, %bb5, %bb4, %bb3, %bb2
   %58 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !3773
-  %59 = load i8, ptr %58, align 1, !dbg !3773, !range !368, !noundef !182
+  %59 = load i8, ptr %58, align 1, !dbg !3773, !range !369, !noundef !182
   %60 = trunc i8 %59 to i1, !dbg !3773
   %61 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3773
   %62 = load i8, ptr %61, align 1, !dbg !3773, !noundef !182
@@ -12287,7 +12287,7 @@ bb30:                                             ; preds = %bb1, %bb29, %bb28, 
 
 ; pc_keyboard::scancodes::set2::ScancodeSet2::map_extended2_scancode
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17h327e3d8d14d8916aE(i8 %code) unnamed_addr #1 !dbg !3774 {
+define internal { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17hbb8121b364984c34E(i8 %code) unnamed_addr #1 !dbg !3774 {
 start:
   %code.dbg.spill = alloca i8, align 1
   %_3 = alloca i8, align 1
@@ -12300,7 +12300,7 @@ start:
 
 bb2:                                              ; preds = %start
   store i8 122, ptr %_2, align 1, !dbg !3780
-  %1 = load i8, ptr %_2, align 1, !dbg !3781, !range !423, !noundef !182
+  %1 = load i8, ptr %_2, align 1, !dbg !3781, !range !372, !noundef !182
   %2 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3781
   store i8 %1, ptr %2, align 1, !dbg !3781
   store i8 0, ptr %_0, align 1, !dbg !3781
@@ -12308,7 +12308,7 @@ bb2:                                              ; preds = %start
 
 bb1:                                              ; preds = %start
   store i8 3, ptr %_3, align 1, !dbg !3783
-  %3 = load i8, ptr %_3, align 1, !dbg !3784, !range !239, !noundef !182
+  %3 = load i8, ptr %_3, align 1, !dbg !3784, !range !243, !noundef !182
   %4 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3784
   store i8 %3, ptr %4, align 1, !dbg !3784
   store i8 1, ptr %_0, align 1, !dbg !3784
@@ -12316,7 +12316,7 @@ bb1:                                              ; preds = %start
 
 bb3:                                              ; preds = %bb1, %bb2
   %5 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !3786
-  %6 = load i8, ptr %5, align 1, !dbg !3786, !range !368, !noundef !182
+  %6 = load i8, ptr %5, align 1, !dbg !3786, !range !369, !noundef !182
   %7 = trunc i8 %6 to i1, !dbg !3786
   %8 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !3786
   %9 = load i8, ptr %8, align 1, !dbg !3786, !noundef !182
@@ -12328,7 +12328,7 @@ bb3:                                              ; preds = %bb1, %bb2
 
 ; <pc_keyboard::scancodes::set2::ScancodeSet2 as pc_keyboard::ScancodeSet>::advance_state
 ; Function Attrs: noredzone nounwind
-define i16 @"_ZN87_$LT$pc_keyboard..scancodes..set2..ScancodeSet2$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17hb33b63f9257eb4e3E"(ptr align 1 %self, i8 %code) unnamed_addr #1 !dbg !3787 {
+define i16 @"_ZN87_$LT$pc_keyboard..scancodes..set2..ScancodeSet2$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17h962d199f829d1b5cE"(ptr align 1 %self, i8 %code) unnamed_addr #1 !dbg !3787 {
 start:
   %0 = alloca i16, align 2
   %residual.dbg.spill23 = alloca i8, align 1
@@ -12426,14 +12426,14 @@ bb23:                                             ; preds = %start
   %9 = load i8, ptr %_32, align 1, !dbg !3835, !range !2858, !noundef !182
   store i8 %9, ptr %self, align 1, !dbg !3835
 ; call pc_keyboard::scancodes::set2::ScancodeSet2::map_scancode
-  %10 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h9518aa3f02866bd0E(i8 %code) #6, !dbg !3836
+  %10 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h0c8e70e55d780967E(i8 %code) #6, !dbg !3836
   %11 = extractvalue { i8, i8 } %10, 0, !dbg !3836
   %_36.0 = trunc i8 %11 to i1, !dbg !3836
   %_36.1 = extractvalue { i8, i8 } %10, 1, !dbg !3836
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %12 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_36.0, i8 %_36.1) #6, !dbg !3836
+  %12 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_36.0, i8 %_36.1) #6, !dbg !3836
   store { i8, i8 } %12, ptr %_35, align 1, !dbg !3836
-  %13 = load i8, ptr %_35, align 1, !dbg !3836, !range !368, !noundef !182
+  %13 = load i8, ptr %_35, align 1, !dbg !3836, !range !369, !noundef !182
   %14 = trunc i8 %13 to i1, !dbg !3836
   %_37 = zext i1 %14 to i64, !dbg !3836
   %15 = icmp eq i64 %_37, 0, !dbg !3836
@@ -12444,14 +12444,14 @@ bb37:                                             ; preds = %start
   %16 = load i8, ptr %_52, align 1, !dbg !3838, !range !2858, !noundef !182
   store i8 %16, ptr %self, align 1, !dbg !3838
 ; call pc_keyboard::scancodes::set2::ScancodeSet2::map_extended_scancode
-  %17 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17ha48addb341d772dbE(i8 %code) #6, !dbg !3839
+  %17 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17h5464f300e11a1646E(i8 %code) #6, !dbg !3839
   %18 = extractvalue { i8, i8 } %17, 0, !dbg !3839
   %_56.0 = trunc i8 %18 to i1, !dbg !3839
   %_56.1 = extractvalue { i8, i8 } %17, 1, !dbg !3839
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %19 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_56.0, i8 %_56.1) #6, !dbg !3839
+  %19 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_56.0, i8 %_56.1) #6, !dbg !3839
   store { i8, i8 } %19, ptr %_55, align 1, !dbg !3839
-  %20 = load i8, ptr %_55, align 1, !dbg !3839, !range !368, !noundef !182
+  %20 = load i8, ptr %_55, align 1, !dbg !3839, !range !369, !noundef !182
   %21 = trunc i8 %20 to i1, !dbg !3839
   %_57 = zext i1 %21 to i64, !dbg !3839
   %22 = icmp eq i64 %_57, 0, !dbg !3839
@@ -12466,14 +12466,14 @@ bb1:                                              ; preds = %start
   %24 = load i8, ptr %_72, align 1, !dbg !3842, !range !2858, !noundef !182
   store i8 %24, ptr %self, align 1, !dbg !3842
 ; call pc_keyboard::scancodes::set2::ScancodeSet2::map_extended2_scancode
-  %25 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17h327e3d8d14d8916aE(i8 %code) #6, !dbg !3843
+  %25 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17hbb8121b364984c34E(i8 %code) #6, !dbg !3843
   %26 = extractvalue { i8, i8 } %25, 0, !dbg !3843
   %_76.0 = trunc i8 %26 to i1, !dbg !3843
   %_76.1 = extractvalue { i8, i8 } %25, 1, !dbg !3843
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %27 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_76.0, i8 %_76.1) #6, !dbg !3843
+  %27 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_76.0, i8 %_76.1) #6, !dbg !3843
   store { i8, i8 } %27, ptr %_75, align 1, !dbg !3843
-  %28 = load i8, ptr %_75, align 1, !dbg !3843, !range !368, !noundef !182
+  %28 = load i8, ptr %_75, align 1, !dbg !3843, !range !369, !noundef !182
   %29 = trunc i8 %28 to i1, !dbg !3843
   %_77 = zext i1 %29 to i64, !dbg !3843
   %30 = icmp eq i64 %_77, 0, !dbg !3843
@@ -12481,14 +12481,14 @@ bb1:                                              ; preds = %start
 
 bb4:                                              ; preds = %bb3
 ; call pc_keyboard::scancodes::set2::ScancodeSet2::map_scancode
-  %31 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h9518aa3f02866bd0E(i8 %code) #6, !dbg !3844
+  %31 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h0c8e70e55d780967E(i8 %code) #6, !dbg !3844
   %32 = extractvalue { i8, i8 } %31, 0, !dbg !3844
   %_12.0 = trunc i8 %32 to i1, !dbg !3844
   %_12.1 = extractvalue { i8, i8 } %31, 1, !dbg !3844
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %33 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_12.0, i8 %_12.1) #6, !dbg !3844
+  %33 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_12.0, i8 %_12.1) #6, !dbg !3844
   store { i8, i8 } %33, ptr %_11, align 1, !dbg !3844
-  %34 = load i8, ptr %_11, align 1, !dbg !3844, !range !368, !noundef !182
+  %34 = load i8, ptr %_11, align 1, !dbg !3844, !range !369, !noundef !182
   %35 = trunc i8 %34 to i1, !dbg !3844
   %_13 = zext i1 %35 to i64, !dbg !3844
   %36 = icmp eq i64 %_13, 0, !dbg !3844
@@ -12545,36 +12545,36 @@ bb56:                                             ; preds = %bb54, %bb53, %bb49,
 
 bb10:                                             ; preds = %bb4
   %59 = getelementptr inbounds { i8, i8 }, ptr %_11, i32 0, i32 1, !dbg !3844
-  %val = load i8, ptr %59, align 1, !dbg !3844, !range !423, !noundef !182
+  %val = load i8, ptr %59, align 1, !dbg !3844, !range !372, !noundef !182
   store i8 %val, ptr %val.dbg.spill, align 1, !dbg !3844
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill, metadata !3799, metadata !DIExpression()), !dbg !3861
   store i8 %val, ptr %keycode, align 1, !dbg !3861
 ; call <pc_keyboard::KeyCode as core::cmp::PartialEq>::eq
-  %_16 = call zeroext i1 @"_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h0a7f71709ee7a029E"(ptr align 1 %keycode, ptr align 1 @alloc_cd51bc84b49b21a3fdb2800731f25c21) #6, !dbg !3862
+  %_16 = call zeroext i1 @"_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h8dbfc8c74289354fE"(ptr align 1 %keycode, ptr align 1 @alloc_cd51bc84b49b21a3fdb2800731f25c21) #6, !dbg !3862
   br i1 %_16, label %bb15, label %bb13, !dbg !3862
 
 bb11:                                             ; preds = %bb4
   %60 = getelementptr inbounds { i8, i8 }, ptr %_11, i32 0, i32 1, !dbg !3863
-  %residual3 = load i8, ptr %60, align 1, !dbg !3863, !range !239, !noundef !182
+  %residual3 = load i8, ptr %60, align 1, !dbg !3863, !range !243, !noundef !182
   store i8 %residual3, ptr %residual.dbg.spill4, align 1, !dbg !3863
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill4, metadata !3797, metadata !DIExpression()), !dbg !3864
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %61 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual3, ptr align 8 @alloc_28da642840c99da6f7e454024289680e) #6, !dbg !3865
+  %61 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual3, ptr align 8 @alloc_9418b4b12fac1dfe7eaad00701707bad) #6, !dbg !3865
   store i16 %61, ptr %5, align 2, !dbg !3865
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %5, i64 2, i1 false), !dbg !3865
   br label %bb56, !dbg !3865
 
 bb13:                                             ; preds = %bb10
 ; call <pc_keyboard::KeyCode as core::cmp::PartialEq>::eq
-  %_18 = call zeroext i1 @"_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h0a7f71709ee7a029E"(ptr align 1 %keycode, ptr align 1 @alloc_37f62a15fae368a2423b3a16c75adcc9) #6, !dbg !3866
+  %_18 = call zeroext i1 @"_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h8dbfc8c74289354fE"(ptr align 1 %keycode, ptr align 1 @alloc_37f62a15fae368a2423b3a16c75adcc9) #6, !dbg !3866
   br i1 %_18, label %bb15, label %bb17, !dbg !3866
 
 bb15:                                             ; preds = %bb13, %bb10
-  %_22 = load i8, ptr %keycode, align 1, !dbg !3867, !range !423, !noundef !182
+  %_22 = load i8, ptr %keycode, align 1, !dbg !3867, !range !372, !noundef !182
   store i8 2, ptr %_23, align 1, !dbg !3868
   %62 = load i8, ptr %_23, align 1, !dbg !3869, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %63 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %_22, i8 %62) #6, !dbg !3869
+  %63 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %_22, i8 %62) #6, !dbg !3869
   %_21.0 = extractvalue { i8, i8 } %63, 0, !dbg !3869
   %_21.1 = extractvalue { i8, i8 } %63, 1, !dbg !3869
   %64 = getelementptr inbounds { i8, i8 }, ptr %_20, i32 0, i32 0, !dbg !3870
@@ -12593,14 +12593,14 @@ bb15:                                             ; preds = %bb13, %bb10
 
 bb17:                                             ; preds = %bb13
 ; call pc_keyboard::scancodes::set2::ScancodeSet2::map_scancode
-  %72 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h9518aa3f02866bd0E(i8 %code) #6, !dbg !3873
+  %72 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h0c8e70e55d780967E(i8 %code) #6, !dbg !3873
   %73 = extractvalue { i8, i8 } %72, 0, !dbg !3873
   %_27.0 = trunc i8 %73 to i1, !dbg !3873
   %_27.1 = extractvalue { i8, i8 } %72, 1, !dbg !3873
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %74 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_27.0, i8 %_27.1) #6, !dbg !3873
+  %74 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_27.0, i8 %_27.1) #6, !dbg !3873
   store { i8, i8 } %74, ptr %_26, align 1, !dbg !3873
-  %75 = load i8, ptr %_26, align 1, !dbg !3873, !range !368, !noundef !182
+  %75 = load i8, ptr %_26, align 1, !dbg !3873, !range !369, !noundef !182
   %76 = trunc i8 %75 to i1, !dbg !3873
   %_28 = zext i1 %76 to i64, !dbg !3873
   %77 = icmp eq i64 %_28, 0, !dbg !3873
@@ -12608,13 +12608,13 @@ bb17:                                             ; preds = %bb13
 
 bb20:                                             ; preds = %bb17
   %78 = getelementptr inbounds { i8, i8 }, ptr %_26, i32 0, i32 1, !dbg !3873
-  %val1 = load i8, ptr %78, align 1, !dbg !3873, !range !423, !noundef !182
+  %val1 = load i8, ptr %78, align 1, !dbg !3873, !range !372, !noundef !182
   store i8 %val1, ptr %val.dbg.spill2, align 1, !dbg !3873
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill2, metadata !3803, metadata !DIExpression()), !dbg !3874
   store i8 1, ptr %_31, align 1, !dbg !3875
   %79 = load i8, ptr %_31, align 1, !dbg !3876, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %80 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val1, i8 %79) #6, !dbg !3876
+  %80 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val1, i8 %79) #6, !dbg !3876
   %_25.0 = extractvalue { i8, i8 } %80, 0, !dbg !3876
   %_25.1 = extractvalue { i8, i8 } %80, 1, !dbg !3876
   %81 = getelementptr inbounds { i8, i8 }, ptr %_24, i32 0, i32 0, !dbg !3877
@@ -12633,11 +12633,11 @@ bb20:                                             ; preds = %bb17
 
 bb21:                                             ; preds = %bb17
   %89 = getelementptr inbounds { i8, i8 }, ptr %_26, i32 0, i32 1, !dbg !3879
-  %residual = load i8, ptr %89, align 1, !dbg !3879, !range !239, !noundef !182
+  %residual = load i8, ptr %89, align 1, !dbg !3879, !range !243, !noundef !182
   store i8 %residual, ptr %residual.dbg.spill, align 1, !dbg !3879
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill, metadata !3801, metadata !DIExpression()), !dbg !3880
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %90 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual, ptr align 8 @alloc_b55860ee7458b355389a69d477f8a71d) #6, !dbg !3881
+  %90 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual, ptr align 8 @alloc_ac9a2448fa0ef24a24c60eb3a3c47fda) #6, !dbg !3881
   store i16 %90, ptr %6, align 2, !dbg !3881
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %6, i64 2, i1 false), !dbg !3881
   br label %bb56, !dbg !3881
@@ -12662,14 +12662,14 @@ bb30:                                             ; preds = %bb29
   %98 = load i8, ptr %_43, align 1, !dbg !3888, !range !2858, !noundef !182
   store i8 %98, ptr %self, align 1, !dbg !3888
 ; call pc_keyboard::scancodes::set2::ScancodeSet2::map_extended_scancode
-  %99 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17ha48addb341d772dbE(i8 %code) #6, !dbg !3889
+  %99 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17h5464f300e11a1646E(i8 %code) #6, !dbg !3889
   %100 = extractvalue { i8, i8 } %99, 0, !dbg !3889
   %_45.0 = trunc i8 %100 to i1, !dbg !3889
   %_45.1 = extractvalue { i8, i8 } %99, 1, !dbg !3889
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %101 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_45.0, i8 %_45.1) #6, !dbg !3889
+  %101 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_45.0, i8 %_45.1) #6, !dbg !3889
   store { i8, i8 } %101, ptr %_44, align 1, !dbg !3889
-  %102 = load i8, ptr %_44, align 1, !dbg !3889, !range !368, !noundef !182
+  %102 = load i8, ptr %_44, align 1, !dbg !3889, !range !369, !noundef !182
   %103 = trunc i8 %102 to i1, !dbg !3889
   %_46 = zext i1 %103 to i64, !dbg !3889
   %104 = icmp eq i64 %_46, 0, !dbg !3889
@@ -12677,14 +12677,14 @@ bb30:                                             ; preds = %bb29
 
 bb34:                                             ; preds = %bb30
   %105 = getelementptr inbounds { i8, i8 }, ptr %_44, i32 0, i32 1, !dbg !3889
-  %keycode5 = load i8, ptr %105, align 1, !dbg !3889, !range !423, !noundef !182
+  %keycode5 = load i8, ptr %105, align 1, !dbg !3889, !range !372, !noundef !182
   store i8 %keycode5, ptr %keycode.dbg.spill, align 1, !dbg !3889
   call void @llvm.dbg.declare(metadata ptr %keycode.dbg.spill, metadata !3809, metadata !DIExpression()), !dbg !3890
   call void @llvm.dbg.declare(metadata ptr %keycode.dbg.spill, metadata !3813, metadata !DIExpression()), !dbg !3891
   store i8 1, ptr %_51, align 1, !dbg !3892
   %106 = load i8, ptr %_51, align 1, !dbg !3893, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %107 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %keycode5, i8 %106) #6, !dbg !3893
+  %107 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %keycode5, i8 %106) #6, !dbg !3893
   %_50.0 = extractvalue { i8, i8 } %107, 0, !dbg !3893
   %_50.1 = extractvalue { i8, i8 } %107, 1, !dbg !3893
   %108 = getelementptr inbounds { i8, i8 }, ptr %_49, i32 0, i32 0, !dbg !3894
@@ -12703,24 +12703,24 @@ bb34:                                             ; preds = %bb30
 
 bb35:                                             ; preds = %bb30
   %116 = getelementptr inbounds { i8, i8 }, ptr %_44, i32 0, i32 1, !dbg !3897
-  %residual6 = load i8, ptr %116, align 1, !dbg !3897, !range !239, !noundef !182
+  %residual6 = load i8, ptr %116, align 1, !dbg !3897, !range !243, !noundef !182
   store i8 %residual6, ptr %residual.dbg.spill7, align 1, !dbg !3897
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill7, metadata !3811, metadata !DIExpression()), !dbg !3898
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %117 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual6, ptr align 8 @alloc_4037860aeb8410aa9c0f565ea3529c94) #6, !dbg !3899
+  %117 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual6, ptr align 8 @alloc_f5f8fbf2865b3ea081b8981ee654c061) #6, !dbg !3899
   store i16 %117, ptr %4, align 2, !dbg !3899
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %4, i64 2, i1 false), !dbg !3899
   br label %bb56, !dbg !3899
 
 bb26:                                             ; preds = %bb23
   %118 = getelementptr inbounds { i8, i8 }, ptr %_35, i32 0, i32 1, !dbg !3836
-  %val8 = load i8, ptr %118, align 1, !dbg !3836, !range !423, !noundef !182
+  %val8 = load i8, ptr %118, align 1, !dbg !3836, !range !372, !noundef !182
   store i8 %val8, ptr %val.dbg.spill9, align 1, !dbg !3836
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill9, metadata !3807, metadata !DIExpression()), !dbg !3900
   store i8 0, ptr %_40, align 1, !dbg !3901
   %119 = load i8, ptr %_40, align 1, !dbg !3902, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %120 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val8, i8 %119) #6, !dbg !3902
+  %120 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val8, i8 %119) #6, !dbg !3902
   %_34.0 = extractvalue { i8, i8 } %120, 0, !dbg !3902
   %_34.1 = extractvalue { i8, i8 } %120, 1, !dbg !3902
   %121 = getelementptr inbounds { i8, i8 }, ptr %_33, i32 0, i32 0, !dbg !3903
@@ -12739,24 +12739,24 @@ bb26:                                             ; preds = %bb23
 
 bb27:                                             ; preds = %bb23
   %129 = getelementptr inbounds { i8, i8 }, ptr %_35, i32 0, i32 1, !dbg !3906
-  %residual10 = load i8, ptr %129, align 1, !dbg !3906, !range !239, !noundef !182
+  %residual10 = load i8, ptr %129, align 1, !dbg !3906, !range !243, !noundef !182
   store i8 %residual10, ptr %residual.dbg.spill11, align 1, !dbg !3906
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill11, metadata !3805, metadata !DIExpression()), !dbg !3907
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %130 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual10, ptr align 8 @alloc_411d7639d61067ee0f6b0148c922244c) #6, !dbg !3908
+  %130 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual10, ptr align 8 @alloc_eb48c694776f31f9668c206a9f95c238) #6, !dbg !3908
   store i16 %130, ptr %3, align 2, !dbg !3908
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %3, i64 2, i1 false), !dbg !3908
   br label %bb56, !dbg !3908
 
 bb40:                                             ; preds = %bb37
   %131 = getelementptr inbounds { i8, i8 }, ptr %_55, i32 0, i32 1, !dbg !3839
-  %val12 = load i8, ptr %131, align 1, !dbg !3839, !range !423, !noundef !182
+  %val12 = load i8, ptr %131, align 1, !dbg !3839, !range !372, !noundef !182
   store i8 %val12, ptr %val.dbg.spill13, align 1, !dbg !3839
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill13, metadata !3817, metadata !DIExpression()), !dbg !3909
   store i8 0, ptr %_60, align 1, !dbg !3910
   %132 = load i8, ptr %_60, align 1, !dbg !3911, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %133 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val12, i8 %132) #6, !dbg !3911
+  %133 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val12, i8 %132) #6, !dbg !3911
   %_54.0 = extractvalue { i8, i8 } %133, 0, !dbg !3911
   %_54.1 = extractvalue { i8, i8 } %133, 1, !dbg !3911
   %134 = getelementptr inbounds { i8, i8 }, ptr %_53, i32 0, i32 0, !dbg !3912
@@ -12775,11 +12775,11 @@ bb40:                                             ; preds = %bb37
 
 bb41:                                             ; preds = %bb37
   %142 = getelementptr inbounds { i8, i8 }, ptr %_55, i32 0, i32 1, !dbg !3915
-  %residual14 = load i8, ptr %142, align 1, !dbg !3915, !range !239, !noundef !182
+  %residual14 = load i8, ptr %142, align 1, !dbg !3915, !range !243, !noundef !182
   store i8 %residual14, ptr %residual.dbg.spill15, align 1, !dbg !3915
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill15, metadata !3815, metadata !DIExpression()), !dbg !3916
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %143 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual14, ptr align 8 @alloc_717edfb34a03f7ca690d71ecc4c87737) #6, !dbg !3917
+  %143 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual14, ptr align 8 @alloc_79f548ae7b2d41133ddfb48663f14332) #6, !dbg !3917
   store i16 %143, ptr %2, align 2, !dbg !3917
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %2, i64 2, i1 false), !dbg !3917
   br label %bb56, !dbg !3917
@@ -12804,14 +12804,14 @@ bb44:                                             ; preds = %bb43
   %151 = load i8, ptr %_63, align 1, !dbg !3924, !range !2858, !noundef !182
   store i8 %151, ptr %self, align 1, !dbg !3924
 ; call pc_keyboard::scancodes::set2::ScancodeSet2::map_extended2_scancode
-  %152 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17h327e3d8d14d8916aE(i8 %code) #6, !dbg !3925
+  %152 = call { i8, i8 } @_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17hbb8121b364984c34E(i8 %code) #6, !dbg !3925
   %153 = extractvalue { i8, i8 } %152, 0, !dbg !3925
   %_67.0 = trunc i8 %153 to i1, !dbg !3925
   %_67.1 = extractvalue { i8, i8 } %152, 1, !dbg !3925
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %154 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E"(i1 zeroext %_67.0, i8 %_67.1) #6, !dbg !3925
+  %154 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE"(i1 zeroext %_67.0, i8 %_67.1) #6, !dbg !3925
   store { i8, i8 } %154, ptr %_66, align 1, !dbg !3925
-  %155 = load i8, ptr %_66, align 1, !dbg !3925, !range !368, !noundef !182
+  %155 = load i8, ptr %_66, align 1, !dbg !3925, !range !369, !noundef !182
   %156 = trunc i8 %155 to i1, !dbg !3925
   %_68 = zext i1 %156 to i64, !dbg !3925
   %157 = icmp eq i64 %_68, 0, !dbg !3925
@@ -12819,13 +12819,13 @@ bb44:                                             ; preds = %bb43
 
 bb48:                                             ; preds = %bb44
   %158 = getelementptr inbounds { i8, i8 }, ptr %_66, i32 0, i32 1, !dbg !3925
-  %val16 = load i8, ptr %158, align 1, !dbg !3925, !range !423, !noundef !182
+  %val16 = load i8, ptr %158, align 1, !dbg !3925, !range !372, !noundef !182
   store i8 %val16, ptr %val.dbg.spill17, align 1, !dbg !3925
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill17, metadata !3821, metadata !DIExpression()), !dbg !3926
   store i8 1, ptr %_71, align 1, !dbg !3927
   %159 = load i8, ptr %_71, align 1, !dbg !3928, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %160 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val16, i8 %159) #6, !dbg !3928
+  %160 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val16, i8 %159) #6, !dbg !3928
   %_65.0 = extractvalue { i8, i8 } %160, 0, !dbg !3928
   %_65.1 = extractvalue { i8, i8 } %160, 1, !dbg !3928
   %161 = getelementptr inbounds { i8, i8 }, ptr %_64, i32 0, i32 0, !dbg !3929
@@ -12844,24 +12844,24 @@ bb48:                                             ; preds = %bb44
 
 bb49:                                             ; preds = %bb44
   %169 = getelementptr inbounds { i8, i8 }, ptr %_66, i32 0, i32 1, !dbg !3932
-  %residual18 = load i8, ptr %169, align 1, !dbg !3932, !range !239, !noundef !182
+  %residual18 = load i8, ptr %169, align 1, !dbg !3932, !range !243, !noundef !182
   store i8 %residual18, ptr %residual.dbg.spill19, align 1, !dbg !3932
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill19, metadata !3819, metadata !DIExpression()), !dbg !3933
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %170 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual18, ptr align 8 @alloc_018d40e57efbfc13c5ee49eb85e49502) #6, !dbg !3934
+  %170 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual18, ptr align 8 @alloc_106bcfd51a3959025231bfbe6d57411e) #6, !dbg !3934
   store i16 %170, ptr %1, align 2, !dbg !3934
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %1, i64 2, i1 false), !dbg !3934
   br label %bb56, !dbg !3934
 
 bb53:                                             ; preds = %bb1
   %171 = getelementptr inbounds { i8, i8 }, ptr %_75, i32 0, i32 1, !dbg !3843
-  %val20 = load i8, ptr %171, align 1, !dbg !3843, !range !423, !noundef !182
+  %val20 = load i8, ptr %171, align 1, !dbg !3843, !range !372, !noundef !182
   store i8 %val20, ptr %val.dbg.spill21, align 1, !dbg !3843
   call void @llvm.dbg.declare(metadata ptr %val.dbg.spill21, metadata !3825, metadata !DIExpression()), !dbg !3935
   store i8 0, ptr %_80, align 1, !dbg !3936
   %172 = load i8, ptr %_80, align 1, !dbg !3937, !range !3317, !noundef !182
 ; call pc_keyboard::KeyEvent::new
-  %173 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %val20, i8 %172) #6, !dbg !3937
+  %173 = call { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %val20, i8 %172) #6, !dbg !3937
   %_74.0 = extractvalue { i8, i8 } %173, 0, !dbg !3937
   %_74.1 = extractvalue { i8, i8 } %173, 1, !dbg !3937
   %174 = getelementptr inbounds { i8, i8 }, ptr %_73, i32 0, i32 0, !dbg !3938
@@ -12880,11 +12880,11 @@ bb53:                                             ; preds = %bb1
 
 bb54:                                             ; preds = %bb1
   %182 = getelementptr inbounds { i8, i8 }, ptr %_75, i32 0, i32 1, !dbg !3941
-  %residual22 = load i8, ptr %182, align 1, !dbg !3941, !range !239, !noundef !182
+  %residual22 = load i8, ptr %182, align 1, !dbg !3941, !range !243, !noundef !182
   store i8 %residual22, ptr %residual.dbg.spill23, align 1, !dbg !3941
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill23, metadata !3823, metadata !DIExpression()), !dbg !3942
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %183 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE"(i8 %residual22, ptr align 8 @alloc_e45f6d748d4228df2df081caa99450ae) #6, !dbg !3943
+  %183 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E"(i8 %residual22, ptr align 8 @alloc_a57595b22e0aa3088521f70b1e2ad4d2) #6, !dbg !3943
   store i16 %183, ptr %0, align 2, !dbg !3943
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %0, i64 2, i1 false), !dbg !3943
   br label %bb56, !dbg !3943
@@ -12892,7 +12892,7 @@ bb54:                                             ; preds = %bb1
 
 ; pc_keyboard::Ps2Decoder::new
 ; Function Attrs: noredzone nounwind
-define { i16, i8 } @_ZN11pc_keyboard10Ps2Decoder3new17hafffd8487cf0c7ccE() unnamed_addr #1 !dbg !3944 {
+define { i16, i8 } @_ZN11pc_keyboard10Ps2Decoder3new17h5e087a3538d0c77bE() unnamed_addr #1 !dbg !3944 {
 start:
   %_0 = alloca { i16, i8 }, align 2
   store i16 0, ptr %_0, align 2, !dbg !3954
@@ -12909,7 +12909,7 @@ start:
 
 ; pc_keyboard::Ps2Decoder::clear
 ; Function Attrs: noredzone nounwind
-define void @_ZN11pc_keyboard10Ps2Decoder5clear17h303aaa2fc6c0740aE(ptr align 2 %self) unnamed_addr #1 !dbg !3956 {
+define void @_ZN11pc_keyboard10Ps2Decoder5clear17hf6fed9a927ae2dc3E(ptr align 2 %self) unnamed_addr #1 !dbg !3956 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -12922,7 +12922,7 @@ start:
 
 ; pc_keyboard::Ps2Decoder::add_bit
 ; Function Attrs: noredzone nounwind
-define i16 @_ZN11pc_keyboard10Ps2Decoder7add_bit17h40a5a11cf9894adcE(ptr align 2 %self, i1 zeroext %bit) unnamed_addr #1 !dbg !3967 {
+define i16 @_ZN11pc_keyboard10Ps2Decoder7add_bit17h96d2478283077230E(ptr align 2 %self, i1 zeroext %bit) unnamed_addr #1 !dbg !3967 {
 start:
   %0 = alloca i16, align 2
   %residual.dbg.spill = alloca i8, align 1
@@ -12963,7 +12963,7 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1 @str.1, i64 35, ptr align 8 @alloc_7a120abf42648b30ff76fc84b7040e6a) #7, !dbg !3984
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @str.1, i64 35, ptr align 8 @alloc_c97f67d6ac06fbe5bd76a7c9678adb61) #7, !dbg !3984
   unreachable, !dbg !3984
 
 bb2:                                              ; preds = %bb1
@@ -12976,13 +12976,13 @@ bb2:                                              ; preds = %bb1
 
 panic1:                                           ; preds = %bb1
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_93db7e965b9db0fa8714420e9145e9c1) #7, !dbg !3987
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @str.2, i64 28, ptr align 8 @alloc_72d7d6ecdc81339b29d9e01837da0cb1) #7, !dbg !3987
   unreachable, !dbg !3987
 
 bb9:                                              ; preds = %bb2
   store i8 0, ptr %_17, align 1, !dbg !3989
   %14 = getelementptr inbounds { i8, i8 }, ptr %_17, i32 0, i32 0, !dbg !3990
-  %15 = load i8, ptr %14, align 1, !dbg !3990, !range !368, !noundef !182
+  %15 = load i8, ptr %14, align 1, !dbg !3990, !range !369, !noundef !182
   %16 = trunc i8 %15 to i1, !dbg !3990
   %17 = getelementptr inbounds { i8, i8 }, ptr %_17, i32 0, i32 1, !dbg !3990
   %18 = load i8, ptr %17, align 1, !dbg !3990
@@ -13001,14 +13001,14 @@ bb3:                                              ; preds = %bb2
   %22 = getelementptr inbounds { i16, i8 }, ptr %self, i32 0, i32 1, !dbg !3995
   store i8 0, ptr %22, align 2, !dbg !3995
 ; call pc_keyboard::Ps2Decoder::check_word
-  %23 = call { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder10check_word17hcc369f4067902015E(i16 %word) #6, !dbg !3996
+  %23 = call { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder10check_word17hc11613f54fbbdda6E(i16 %word) #6, !dbg !3996
   %24 = extractvalue { i8, i8 } %23, 0, !dbg !3996
   %_12.0 = trunc i8 %24 to i1, !dbg !3996
   %_12.1 = extractvalue { i8, i8 } %23, 1, !dbg !3996
 ; call <core::result::Result<T,E> as core::ops::try_trait::Try>::branch
-  %25 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17ha8e5c37459c2739aE"(i1 zeroext %_12.0, i8 %_12.1) #6, !dbg !3996
+  %25 = call { i8, i8 } @"_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hb1856db19b1fb700E"(i1 zeroext %_12.0, i8 %_12.1) #6, !dbg !3996
   store { i8, i8 } %25, ptr %_11, align 1, !dbg !3996
-  %26 = load i8, ptr %_11, align 1, !dbg !3996, !range !368, !noundef !182
+  %26 = load i8, ptr %_11, align 1, !dbg !3996, !range !369, !noundef !182
   %27 = trunc i8 %26 to i1, !dbg !3996
   %_13 = zext i1 %27 to i64, !dbg !3996
   %28 = icmp eq i64 %_13, 0, !dbg !3996
@@ -13028,7 +13028,7 @@ bb6:                                              ; preds = %bb3
   store i8 %byte, ptr %31, align 1, !dbg !4000
   store i8 1, ptr %_16, align 1, !dbg !4000
   %32 = getelementptr inbounds { i8, i8 }, ptr %_16, i32 0, i32 0, !dbg !4001
-  %33 = load i8, ptr %32, align 1, !dbg !4001, !range !368, !noundef !182
+  %33 = load i8, ptr %32, align 1, !dbg !4001, !range !369, !noundef !182
   %34 = trunc i8 %33 to i1, !dbg !4001
   %35 = getelementptr inbounds { i8, i8 }, ptr %_16, i32 0, i32 1, !dbg !4001
   %36 = load i8, ptr %35, align 1, !dbg !4001
@@ -13041,11 +13041,11 @@ bb6:                                              ; preds = %bb3
 
 bb8:                                              ; preds = %bb3
   %40 = getelementptr inbounds { i8, i8 }, ptr %_11, i32 0, i32 1, !dbg !4002
-  %residual = load i8, ptr %40, align 1, !dbg !4002, !range !239, !noundef !182
+  %residual = load i8, ptr %40, align 1, !dbg !4002, !range !243, !noundef !182
   store i8 %residual, ptr %residual.dbg.spill, align 1, !dbg !4002
   call void @llvm.dbg.declare(metadata ptr %residual.dbg.spill, metadata !3978, metadata !DIExpression()), !dbg !4003
 ; call <core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual
-  %41 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h80e808691d5ba0caE"(i8 %residual, ptr align 8 @alloc_1b86ea675cbc4430b1a68a313acdb7ea) #6, !dbg !4004
+  %41 = call i16 @"_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hf506680001b14e6eE"(i8 %residual, ptr align 8 @alloc_d8a5eb7cfa6da5baca052ac25e7e0540) #6, !dbg !4004
   store i16 %41, ptr %0, align 2, !dbg !4004
   call void @llvm.memcpy.p0.p0.i64(ptr align 1 %_0, ptr align 2 %0, i64 2, i1 false), !dbg !4004
   br label %bb10, !dbg !4004
@@ -13056,7 +13056,7 @@ bb7:                                              ; No predecessors!
 
 ; pc_keyboard::Ps2Decoder::add_word
 ; Function Attrs: noredzone nounwind
-define { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder8add_word17hb191d5937989031aE(ptr align 2 %self, i16 %word) unnamed_addr #1 !dbg !4005 {
+define { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder8add_word17h33ea5c8e61debf85E(ptr align 2 %self, i16 %word) unnamed_addr #1 !dbg !4005 {
 start:
   %word.dbg.spill = alloca i16, align 2
   %self.dbg.spill = alloca ptr, align 8
@@ -13065,7 +13065,7 @@ start:
   store i16 %word, ptr %word.dbg.spill, align 2
   call void @llvm.dbg.declare(metadata ptr %word.dbg.spill, metadata !4012, metadata !DIExpression()), !dbg !4014
 ; call pc_keyboard::Ps2Decoder::check_word
-  %0 = call { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder10check_word17hcc369f4067902015E(i16 %word) #6, !dbg !4015
+  %0 = call { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder10check_word17hc11613f54fbbdda6E(i16 %word) #6, !dbg !4015
   %1 = extractvalue { i8, i8 } %0, 0, !dbg !4015
   %_0.0 = trunc i8 %1 to i1, !dbg !4015
   %_0.1 = extractvalue { i8, i8 } %0, 1, !dbg !4015
@@ -13077,7 +13077,7 @@ start:
 
 ; pc_keyboard::Ps2Decoder::check_word
 ; Function Attrs: noredzone nounwind
-define internal { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder10check_word17hcc369f4067902015E(i16 %word) unnamed_addr #1 !dbg !4017 {
+define internal { i8, i8 } @_ZN11pc_keyboard10Ps2Decoder10check_word17hc11613f54fbbdda6E(i16 %word) unnamed_addr #1 !dbg !4017 {
 start:
   %need_parity.dbg.spill = alloca i8, align 1
   %data.dbg.spill = alloca i8, align 1
@@ -13092,17 +13092,17 @@ start:
   store i16 %word, ptr %word.dbg.spill, align 2
   call void @llvm.dbg.declare(metadata ptr %word.dbg.spill, metadata !4022, metadata !DIExpression()), !dbg !4033
 ; call pc_keyboard::Ps2Decoder::get_bit
-  %start_bit = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h6cc562122fe2c887E(i16 %word, i64 0) #6, !dbg !4034
+  %start_bit = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h99c6f18eac07fa19E(i16 %word, i64 0) #6, !dbg !4034
   %0 = zext i1 %start_bit to i8, !dbg !4034
   store i8 %0, ptr %start_bit.dbg.spill, align 1, !dbg !4034
   call void @llvm.dbg.declare(metadata ptr %start_bit.dbg.spill, metadata !4023, metadata !DIExpression()), !dbg !4035
 ; call pc_keyboard::Ps2Decoder::get_bit
-  %parity_bit = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h6cc562122fe2c887E(i16 %word, i64 9) #6, !dbg !4036
+  %parity_bit = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h99c6f18eac07fa19E(i16 %word, i64 9) #6, !dbg !4036
   %1 = zext i1 %parity_bit to i8, !dbg !4036
   store i8 %1, ptr %parity_bit.dbg.spill, align 1, !dbg !4036
   call void @llvm.dbg.declare(metadata ptr %parity_bit.dbg.spill, metadata !4025, metadata !DIExpression()), !dbg !4037
 ; call pc_keyboard::Ps2Decoder::get_bit
-  %stop_bit = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h6cc562122fe2c887E(i16 %word, i64 10) #6, !dbg !4038
+  %stop_bit = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h99c6f18eac07fa19E(i16 %word, i64 10) #6, !dbg !4038
   %2 = zext i1 %stop_bit to i8, !dbg !4038
   store i8 %2, ptr %stop_bit.dbg.spill, align 1, !dbg !4038
   call void @llvm.dbg.declare(metadata ptr %stop_bit.dbg.spill, metadata !4027, metadata !DIExpression()), !dbg !4039
@@ -13118,7 +13118,7 @@ bb6:                                              ; preds = %start
 
 bb5:                                              ; preds = %start
   store i8 0, ptr %_10, align 1, !dbg !4045
-  %3 = load i8, ptr %_10, align 1, !dbg !4046, !range !239, !noundef !182
+  %3 = load i8, ptr %_10, align 1, !dbg !4046, !range !243, !noundef !182
   %4 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !4046
   store i8 %3, ptr %4, align 1, !dbg !4046
   store i8 1, ptr %_0, align 1, !dbg !4046
@@ -13126,7 +13126,7 @@ bb5:                                              ; preds = %start
 
 bb8:                                              ; preds = %bb6
   store i8 1, ptr %_11, align 1, !dbg !4048
-  %5 = load i8, ptr %_11, align 1, !dbg !4049, !range !239, !noundef !182
+  %5 = load i8, ptr %_11, align 1, !dbg !4049, !range !243, !noundef !182
   %6 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !4049
   store i8 %5, ptr %6, align 1, !dbg !4049
   store i8 1, ptr %_0, align 1, !dbg !4049
@@ -13134,7 +13134,7 @@ bb8:                                              ; preds = %bb6
 
 bb7:                                              ; preds = %bb6
 ; call pc_keyboard::Ps2Decoder::has_even_number_bits
-  %need_parity = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17haca82523371854adE(i8 %data) #6, !dbg !4050
+  %need_parity = call zeroext i1 @_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17h3460e7775ee0bed1E(i8 %data) #6, !dbg !4050
   %7 = zext i1 %need_parity to i8, !dbg !4050
   store i8 %7, ptr %need_parity.dbg.spill, align 1, !dbg !4050
   call void @llvm.dbg.declare(metadata ptr %need_parity.dbg.spill, metadata !4031, metadata !DIExpression()), !dbg !4051
@@ -13143,7 +13143,7 @@ bb7:                                              ; preds = %bb6
 
 bb12:                                             ; preds = %bb5, %bb10, %bb11, %bb8
   %8 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !4053
-  %9 = load i8, ptr %8, align 1, !dbg !4053, !range !368, !noundef !182
+  %9 = load i8, ptr %8, align 1, !dbg !4053, !range !369, !noundef !182
   %10 = trunc i8 %9 to i1, !dbg !4053
   %11 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !4053
   %12 = load i8, ptr %11, align 1, !dbg !4053, !noundef !182
@@ -13160,7 +13160,7 @@ bb11:                                             ; preds = %bb7
 
 bb10:                                             ; preds = %bb7
   store i8 2, ptr %_14, align 1, !dbg !4055
-  %17 = load i8, ptr %_14, align 1, !dbg !4056, !range !239, !noundef !182
+  %17 = load i8, ptr %_14, align 1, !dbg !4056, !range !243, !noundef !182
   %18 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !4056
   store i8 %17, ptr %18, align 1, !dbg !4056
   store i8 1, ptr %_0, align 1, !dbg !4056
@@ -13169,7 +13169,7 @@ bb10:                                             ; preds = %bb7
 
 ; pc_keyboard::Ps2Decoder::get_bit
 ; Function Attrs: noredzone nounwind
-define internal zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h6cc562122fe2c887E(i16 %word, i64 %offset) unnamed_addr #1 !dbg !4057 {
+define internal zeroext i1 @_ZN11pc_keyboard10Ps2Decoder7get_bit17h99c6f18eac07fa19E(i16 %word, i64 %offset) unnamed_addr #1 !dbg !4057 {
 start:
   %offset.dbg.spill = alloca i64, align 8
   %word.dbg.spill = alloca i16, align 2
@@ -13191,13 +13191,13 @@ bb1:                                              ; preds = %start
 
 panic:                                            ; preds = %start
 ; call core::panicking::panic
-  call void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1 @str.3, i64 36, ptr align 8 @alloc_a738d37f3229710100a5bfdb59be1463) #7, !dbg !4066
+  call void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1 @str.3, i64 36, ptr align 8 @alloc_71ec85c4fd2ec83aa68cadcbff9ed669) #7, !dbg !4066
   unreachable, !dbg !4066
 }
 
 ; pc_keyboard::Ps2Decoder::has_even_number_bits
 ; Function Attrs: noredzone nounwind
-define internal zeroext i1 @_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17haca82523371854adE(i8 %data) unnamed_addr #1 !dbg !4069 {
+define internal zeroext i1 @_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17h3460e7775ee0bed1E(i8 %data) unnamed_addr #1 !dbg !4069 {
 start:
   %0 = alloca i8, align 1
   %self.dbg.spill.i = alloca i8, align 1
@@ -13217,7 +13217,7 @@ start:
 
 ; pc_keyboard::KeyEvent::new
 ; Function Attrs: noredzone nounwind
-define { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE(i8 %code, i8 %state) unnamed_addr #1 !dbg !4089 {
+define { i8, i8 } @_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE(i8 %code, i8 %state) unnamed_addr #1 !dbg !4089 {
 start:
   %state.dbg.spill = alloca i8, align 1
   %code.dbg.spill = alloca i8, align 1
@@ -13232,7 +13232,7 @@ start:
   %1 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 0, !dbg !4099
   %2 = load i8, ptr %1, align 1, !dbg !4099, !range !3317, !noundef !182
   %3 = getelementptr inbounds { i8, i8 }, ptr %_0, i32 0, i32 1, !dbg !4099
-  %4 = load i8, ptr %3, align 1, !dbg !4099, !range !423, !noundef !182
+  %4 = load i8, ptr %3, align 1, !dbg !4099, !range !372, !noundef !182
   %5 = insertvalue { i8, i8 } poison, i8 %2, 0, !dbg !4099
   %6 = insertvalue { i8, i8 } %5, i8 %4, 1, !dbg !4099
   ret { i8, i8 } %6, !dbg !4099
@@ -13240,15 +13240,15 @@ start:
 
 ; pc_keyboard::Modifiers::is_shifted
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E(ptr align 1 %self) unnamed_addr #1 !dbg !4100 {
+define zeroext i1 @_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E(ptr align 1 %self) unnamed_addr #1 !dbg !4100 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4105, metadata !DIExpression()), !dbg !4106
-  %0 = load i8, ptr %self, align 1, !dbg !4107, !range !368, !noundef !182
+  %0 = load i8, ptr %self, align 1, !dbg !4107, !range !369, !noundef !182
   %_2 = trunc i8 %0 to i1, !dbg !4107
   %1 = getelementptr inbounds %Modifiers, ptr %self, i32 0, i32 1, !dbg !4108
-  %2 = load i8, ptr %1, align 1, !dbg !4108, !range !368, !noundef !182
+  %2 = load i8, ptr %1, align 1, !dbg !4108, !range !369, !noundef !182
   %_3 = trunc i8 %2 to i1, !dbg !4108
   %_0 = or i1 %_2, %_3, !dbg !4107
   ret i1 %_0, !dbg !4109
@@ -13256,16 +13256,16 @@ start:
 
 ; pc_keyboard::Modifiers::is_ctrl
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE(ptr align 1 %self) unnamed_addr #1 !dbg !4110 {
+define zeroext i1 @_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE(ptr align 1 %self) unnamed_addr #1 !dbg !4110 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4113, metadata !DIExpression()), !dbg !4114
   %0 = getelementptr inbounds %Modifiers, ptr %self, i32 0, i32 2, !dbg !4115
-  %1 = load i8, ptr %0, align 1, !dbg !4115, !range !368, !noundef !182
+  %1 = load i8, ptr %0, align 1, !dbg !4115, !range !369, !noundef !182
   %_2 = trunc i8 %1 to i1, !dbg !4115
   %2 = getelementptr inbounds %Modifiers, ptr %self, i32 0, i32 3, !dbg !4116
-  %3 = load i8, ptr %2, align 1, !dbg !4116, !range !368, !noundef !182
+  %3 = load i8, ptr %2, align 1, !dbg !4116, !range !369, !noundef !182
   %_3 = trunc i8 %3 to i1, !dbg !4116
   %_0 = or i1 %_2, %_3, !dbg !4115
   ret i1 %_0, !dbg !4117
@@ -13273,19 +13273,19 @@ start:
 
 ; pc_keyboard::Modifiers::is_caps
 ; Function Attrs: noredzone nounwind
-define zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E(ptr align 1 %self) unnamed_addr #1 !dbg !4118 {
+define zeroext i1 @_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE(ptr align 1 %self) unnamed_addr #1 !dbg !4118 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4121, metadata !DIExpression()), !dbg !4122
-  %0 = load i8, ptr %self, align 1, !dbg !4123, !range !368, !noundef !182
+  %0 = load i8, ptr %self, align 1, !dbg !4123, !range !369, !noundef !182
   %_3 = trunc i8 %0 to i1, !dbg !4123
   %1 = getelementptr inbounds %Modifiers, ptr %self, i32 0, i32 1, !dbg !4124
-  %2 = load i8, ptr %1, align 1, !dbg !4124, !range !368, !noundef !182
+  %2 = load i8, ptr %1, align 1, !dbg !4124, !range !369, !noundef !182
   %_4 = trunc i8 %2 to i1, !dbg !4124
   %_2 = or i1 %_3, %_4, !dbg !4125
   %3 = getelementptr inbounds %Modifiers, ptr %self, i32 0, i32 5, !dbg !4126
-  %4 = load i8, ptr %3, align 1, !dbg !4126, !range !368, !noundef !182
+  %4 = load i8, ptr %3, align 1, !dbg !4126, !range !369, !noundef !182
   %_5 = trunc i8 %4 to i1, !dbg !4126
   %_0 = xor i1 %_2, %_5, !dbg !4125
   ret i1 %_0, !dbg !4127
@@ -13293,7 +13293,7 @@ start:
 
 ; <pc_keyboard::KeyCode as core::cmp::PartialEq>::eq
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h0a7f71709ee7a029E"(ptr align 1 %self, ptr align 1 %other) unnamed_addr #0 !dbg !4128 {
+define internal zeroext i1 @"_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h8dbfc8c74289354fE"(ptr align 1 %self, ptr align 1 %other) unnamed_addr #0 !dbg !4128 {
 start:
   %__arg1_tag.dbg.spill = alloca i8, align 1
   %__self_tag.dbg.spill = alloca i8, align 1
@@ -13303,10 +13303,10 @@ start:
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4134, metadata !DIExpression()), !dbg !4140
   store ptr %other, ptr %other.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %other.dbg.spill, metadata !4135, metadata !DIExpression()), !dbg !4140
-  %__self_tag = load i8, ptr %self, align 1, !dbg !4140, !range !423, !noundef !182
+  %__self_tag = load i8, ptr %self, align 1, !dbg !4140, !range !372, !noundef !182
   store i8 %__self_tag, ptr %__self_tag.dbg.spill, align 1, !dbg !4140
   call void @llvm.dbg.declare(metadata ptr %__self_tag.dbg.spill, metadata !4136, metadata !DIExpression()), !dbg !4141
-  %__arg1_tag = load i8, ptr %other, align 1, !dbg !4141, !range !423, !noundef !182
+  %__arg1_tag = load i8, ptr %other, align 1, !dbg !4141, !range !372, !noundef !182
   store i8 %__arg1_tag, ptr %__arg1_tag.dbg.spill, align 1, !dbg !4141
   call void @llvm.dbg.declare(metadata ptr %__arg1_tag.dbg.spill, metadata !4138, metadata !DIExpression()), !dbg !4142
   %_0 = icmp eq i8 %__self_tag, %__arg1_tag, !dbg !4142
@@ -13315,7 +13315,7 @@ start:
 
 ; <pc_keyboard::HandleControl as core::cmp::PartialEq>::eq
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E"(ptr align 1 %self, ptr align 1 %other) unnamed_addr #0 !dbg !4144 {
+define internal zeroext i1 @"_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE"(ptr align 1 %self, ptr align 1 %other) unnamed_addr #0 !dbg !4144 {
 start:
   %__arg1_tag.dbg.spill = alloca i64, align 8
   %__self_tag.dbg.spill = alloca i64, align 8
@@ -13325,12 +13325,12 @@ start:
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4150, metadata !DIExpression()), !dbg !4157
   store ptr %other, ptr %other.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %other.dbg.spill, metadata !4151, metadata !DIExpression()), !dbg !4157
-  %0 = load i8, ptr %self, align 1, !dbg !4157, !range !368, !noundef !182
+  %0 = load i8, ptr %self, align 1, !dbg !4157, !range !369, !noundef !182
   %1 = trunc i8 %0 to i1, !dbg !4157
   %__self_tag = zext i1 %1 to i64, !dbg !4157
   store i64 %__self_tag, ptr %__self_tag.dbg.spill, align 8, !dbg !4157
   call void @llvm.dbg.declare(metadata ptr %__self_tag.dbg.spill, metadata !4152, metadata !DIExpression()), !dbg !4158
-  %2 = load i8, ptr %other, align 1, !dbg !4158, !range !368, !noundef !182
+  %2 = load i8, ptr %other, align 1, !dbg !4158, !range !369, !noundef !182
   %3 = trunc i8 %2 to i1, !dbg !4158
   %__arg1_tag = zext i1 %3 to i64, !dbg !4158
   store i64 %__arg1_tag, ptr %__arg1_tag.dbg.spill, align 8, !dbg !4158
@@ -13353,7 +13353,7 @@ declare i1 @llvm.expect.i1(i1, i1) #4
 
 ; core::panicking::panic
 ; Function Attrs: cold noinline noredzone noreturn nounwind
-declare void @_ZN4core9panicking5panic17hda2e7db96ada8c25E(ptr align 1, i64, ptr align 8) unnamed_addr #5
+declare void @_ZN4core9panicking5panic17h91639042aeeb9621E(ptr align 1, i64, ptr align 8) unnamed_addr #5
 
 ; Function Attrs: nocallback nofree nosync nounwind speculatable willreturn memory(none)
 declare { i8, i1 } @llvm.uadd.with.overflow.i8(i8, i8) #2
@@ -13374,151 +13374,151 @@ attributes #7 = { noreturn nounwind }
 !0 = !{i32 8, !"PIC Level", i32 2}
 !1 = !{i32 2, !"Dwarf Version", i32 4}
 !2 = !{i32 2, !"Debug Info Version", i32 3}
-!3 = !{!"rustc version 1.76.0-nightly (ba7c7a301 2023-11-13)"}
-!4 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !5, producer: "clang LLVM (rustc version 1.76.0-nightly (ba7c7a301 2023-11-13))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !6, splitDebugInlining: false)
-!5 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0/src/lib.rs/@/pc_keyboard.216f08140e2cdac2-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0")
-!6 = !{!7, !17, !143, !148, !152}
-!7 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "Error", scope: !9, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagEnumClass, elements: !11)
+!3 = !{!"rustc version 1.77.0-nightly (bf8716f1c 2023-12-24)"}
+!4 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !5, producer: "clang LLVM (rustc version 1.77.0-nightly (bf8716f1c 2023-12-24))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !6, splitDebugInlining: false, nameTableKind: None)
+!5 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0/src/lib.rs/@/pc_keyboard.bb5f52b4bf119662-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0")
+!6 = !{!7, !136, !141, !148, !152}
+!7 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "KeyCode", scope: !9, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagEnumClass, elements: !11)
 !8 = !DIFile(filename: "<unknown>", directory: "")
 !9 = !DINamespace(name: "pc_keyboard", scope: null)
 !10 = !DIBasicType(name: "u8", size: 8, encoding: DW_ATE_unsigned)
-!11 = !{!12, !13, !14, !15, !16}
-!12 = !DIEnumerator(name: "BadStartBit", value: 0, isUnsigned: true)
-!13 = !DIEnumerator(name: "BadStopBit", value: 1, isUnsigned: true)
-!14 = !DIEnumerator(name: "ParityError", value: 2, isUnsigned: true)
-!15 = !DIEnumerator(name: "UnknownKeyCode", value: 3, isUnsigned: true)
-!16 = !DIEnumerator(name: "InvalidState", value: 4, isUnsigned: true)
-!17 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "KeyCode", scope: !9, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagEnumClass, elements: !18)
-!18 = !{!19, !20, !21, !22, !23, !24, !25, !26, !27, !28, !29, !30, !31, !32, !33, !34, !35, !36, !37, !38, !39, !40, !41, !42, !43, !44, !45, !46, !47, !48, !49, !50, !51, !52, !53, !54, !55, !56, !57, !58, !59, !60, !61, !62, !63, !64, !65, !66, !67, !68, !69, !70, !71, !72, !73, !74, !75, !76, !77, !78, !79, !80, !81, !82, !83, !84, !85, !86, !87, !88, !89, !90, !91, !92, !93, !94, !95, !96, !97, !98, !99, !100, !101, !102, !103, !104, !105, !106, !107, !108, !109, !110, !111, !112, !113, !114, !115, !116, !117, !118, !119, !120, !121, !122, !123, !124, !125, !126, !127, !128, !129, !130, !131, !132, !133, !134, !135, !136, !137, !138, !139, !140, !141, !142}
-!19 = !DIEnumerator(name: "Escape", value: 0, isUnsigned: true)
-!20 = !DIEnumerator(name: "F1", value: 1, isUnsigned: true)
-!21 = !DIEnumerator(name: "F2", value: 2, isUnsigned: true)
-!22 = !DIEnumerator(name: "F3", value: 3, isUnsigned: true)
-!23 = !DIEnumerator(name: "F4", value: 4, isUnsigned: true)
-!24 = !DIEnumerator(name: "F5", value: 5, isUnsigned: true)
-!25 = !DIEnumerator(name: "F6", value: 6, isUnsigned: true)
-!26 = !DIEnumerator(name: "F7", value: 7, isUnsigned: true)
-!27 = !DIEnumerator(name: "F8", value: 8, isUnsigned: true)
-!28 = !DIEnumerator(name: "F9", value: 9, isUnsigned: true)
-!29 = !DIEnumerator(name: "F10", value: 10, isUnsigned: true)
-!30 = !DIEnumerator(name: "F11", value: 11, isUnsigned: true)
-!31 = !DIEnumerator(name: "F12", value: 12, isUnsigned: true)
-!32 = !DIEnumerator(name: "PrintScreen", value: 13, isUnsigned: true)
-!33 = !DIEnumerator(name: "SysRq", value: 14, isUnsigned: true)
-!34 = !DIEnumerator(name: "ScrollLock", value: 15, isUnsigned: true)
-!35 = !DIEnumerator(name: "PauseBreak", value: 16, isUnsigned: true)
-!36 = !DIEnumerator(name: "Oem8", value: 17, isUnsigned: true)
-!37 = !DIEnumerator(name: "Key1", value: 18, isUnsigned: true)
-!38 = !DIEnumerator(name: "Key2", value: 19, isUnsigned: true)
-!39 = !DIEnumerator(name: "Key3", value: 20, isUnsigned: true)
-!40 = !DIEnumerator(name: "Key4", value: 21, isUnsigned: true)
-!41 = !DIEnumerator(name: "Key5", value: 22, isUnsigned: true)
-!42 = !DIEnumerator(name: "Key6", value: 23, isUnsigned: true)
-!43 = !DIEnumerator(name: "Key7", value: 24, isUnsigned: true)
-!44 = !DIEnumerator(name: "Key8", value: 25, isUnsigned: true)
-!45 = !DIEnumerator(name: "Key9", value: 26, isUnsigned: true)
-!46 = !DIEnumerator(name: "Key0", value: 27, isUnsigned: true)
-!47 = !DIEnumerator(name: "OemMinus", value: 28, isUnsigned: true)
-!48 = !DIEnumerator(name: "OemPlus", value: 29, isUnsigned: true)
-!49 = !DIEnumerator(name: "Backspace", value: 30, isUnsigned: true)
-!50 = !DIEnumerator(name: "Insert", value: 31, isUnsigned: true)
-!51 = !DIEnumerator(name: "Home", value: 32, isUnsigned: true)
-!52 = !DIEnumerator(name: "PageUp", value: 33, isUnsigned: true)
-!53 = !DIEnumerator(name: "NumpadLock", value: 34, isUnsigned: true)
-!54 = !DIEnumerator(name: "NumpadDivide", value: 35, isUnsigned: true)
-!55 = !DIEnumerator(name: "NumpadMultiply", value: 36, isUnsigned: true)
-!56 = !DIEnumerator(name: "NumpadSubtract", value: 37, isUnsigned: true)
-!57 = !DIEnumerator(name: "Tab", value: 38, isUnsigned: true)
-!58 = !DIEnumerator(name: "Q", value: 39, isUnsigned: true)
-!59 = !DIEnumerator(name: "W", value: 40, isUnsigned: true)
-!60 = !DIEnumerator(name: "E", value: 41, isUnsigned: true)
-!61 = !DIEnumerator(name: "R", value: 42, isUnsigned: true)
-!62 = !DIEnumerator(name: "T", value: 43, isUnsigned: true)
-!63 = !DIEnumerator(name: "Y", value: 44, isUnsigned: true)
-!64 = !DIEnumerator(name: "U", value: 45, isUnsigned: true)
-!65 = !DIEnumerator(name: "I", value: 46, isUnsigned: true)
-!66 = !DIEnumerator(name: "O", value: 47, isUnsigned: true)
-!67 = !DIEnumerator(name: "P", value: 48, isUnsigned: true)
-!68 = !DIEnumerator(name: "Oem4", value: 49, isUnsigned: true)
-!69 = !DIEnumerator(name: "Oem6", value: 50, isUnsigned: true)
-!70 = !DIEnumerator(name: "Oem5", value: 51, isUnsigned: true)
-!71 = !DIEnumerator(name: "Oem7", value: 52, isUnsigned: true)
-!72 = !DIEnumerator(name: "Delete", value: 53, isUnsigned: true)
-!73 = !DIEnumerator(name: "End", value: 54, isUnsigned: true)
-!74 = !DIEnumerator(name: "PageDown", value: 55, isUnsigned: true)
-!75 = !DIEnumerator(name: "Numpad7", value: 56, isUnsigned: true)
-!76 = !DIEnumerator(name: "Numpad8", value: 57, isUnsigned: true)
-!77 = !DIEnumerator(name: "Numpad9", value: 58, isUnsigned: true)
-!78 = !DIEnumerator(name: "NumpadAdd", value: 59, isUnsigned: true)
-!79 = !DIEnumerator(name: "CapsLock", value: 60, isUnsigned: true)
-!80 = !DIEnumerator(name: "A", value: 61, isUnsigned: true)
-!81 = !DIEnumerator(name: "S", value: 62, isUnsigned: true)
-!82 = !DIEnumerator(name: "D", value: 63, isUnsigned: true)
-!83 = !DIEnumerator(name: "F", value: 64, isUnsigned: true)
-!84 = !DIEnumerator(name: "G", value: 65, isUnsigned: true)
-!85 = !DIEnumerator(name: "H", value: 66, isUnsigned: true)
-!86 = !DIEnumerator(name: "J", value: 67, isUnsigned: true)
-!87 = !DIEnumerator(name: "K", value: 68, isUnsigned: true)
-!88 = !DIEnumerator(name: "L", value: 69, isUnsigned: true)
-!89 = !DIEnumerator(name: "Oem1", value: 70, isUnsigned: true)
-!90 = !DIEnumerator(name: "Oem3", value: 71, isUnsigned: true)
-!91 = !DIEnumerator(name: "Return", value: 72, isUnsigned: true)
-!92 = !DIEnumerator(name: "Numpad4", value: 73, isUnsigned: true)
-!93 = !DIEnumerator(name: "Numpad5", value: 74, isUnsigned: true)
-!94 = !DIEnumerator(name: "Numpad6", value: 75, isUnsigned: true)
-!95 = !DIEnumerator(name: "LShift", value: 76, isUnsigned: true)
-!96 = !DIEnumerator(name: "Z", value: 77, isUnsigned: true)
-!97 = !DIEnumerator(name: "X", value: 78, isUnsigned: true)
-!98 = !DIEnumerator(name: "C", value: 79, isUnsigned: true)
-!99 = !DIEnumerator(name: "V", value: 80, isUnsigned: true)
-!100 = !DIEnumerator(name: "B", value: 81, isUnsigned: true)
-!101 = !DIEnumerator(name: "N", value: 82, isUnsigned: true)
-!102 = !DIEnumerator(name: "M", value: 83, isUnsigned: true)
-!103 = !DIEnumerator(name: "OemComma", value: 84, isUnsigned: true)
-!104 = !DIEnumerator(name: "OemPeriod", value: 85, isUnsigned: true)
-!105 = !DIEnumerator(name: "Oem2", value: 86, isUnsigned: true)
-!106 = !DIEnumerator(name: "RShift", value: 87, isUnsigned: true)
-!107 = !DIEnumerator(name: "ArrowUp", value: 88, isUnsigned: true)
-!108 = !DIEnumerator(name: "Numpad1", value: 89, isUnsigned: true)
-!109 = !DIEnumerator(name: "Numpad2", value: 90, isUnsigned: true)
-!110 = !DIEnumerator(name: "Numpad3", value: 91, isUnsigned: true)
-!111 = !DIEnumerator(name: "NumpadEnter", value: 92, isUnsigned: true)
-!112 = !DIEnumerator(name: "LControl", value: 93, isUnsigned: true)
-!113 = !DIEnumerator(name: "LWin", value: 94, isUnsigned: true)
-!114 = !DIEnumerator(name: "LAlt", value: 95, isUnsigned: true)
-!115 = !DIEnumerator(name: "Spacebar", value: 96, isUnsigned: true)
-!116 = !DIEnumerator(name: "RAltGr", value: 97, isUnsigned: true)
-!117 = !DIEnumerator(name: "RWin", value: 98, isUnsigned: true)
-!118 = !DIEnumerator(name: "Apps", value: 99, isUnsigned: true)
-!119 = !DIEnumerator(name: "RControl", value: 100, isUnsigned: true)
-!120 = !DIEnumerator(name: "ArrowLeft", value: 101, isUnsigned: true)
-!121 = !DIEnumerator(name: "ArrowDown", value: 102, isUnsigned: true)
-!122 = !DIEnumerator(name: "ArrowRight", value: 103, isUnsigned: true)
-!123 = !DIEnumerator(name: "Numpad0", value: 104, isUnsigned: true)
-!124 = !DIEnumerator(name: "NumpadPeriod", value: 105, isUnsigned: true)
-!125 = !DIEnumerator(name: "Oem9", value: 106, isUnsigned: true)
-!126 = !DIEnumerator(name: "Oem10", value: 107, isUnsigned: true)
-!127 = !DIEnumerator(name: "Oem11", value: 108, isUnsigned: true)
-!128 = !DIEnumerator(name: "Oem12", value: 109, isUnsigned: true)
-!129 = !DIEnumerator(name: "Oem13", value: 110, isUnsigned: true)
-!130 = !DIEnumerator(name: "PrevTrack", value: 111, isUnsigned: true)
-!131 = !DIEnumerator(name: "NextTrack", value: 112, isUnsigned: true)
-!132 = !DIEnumerator(name: "Mute", value: 113, isUnsigned: true)
-!133 = !DIEnumerator(name: "Calculator", value: 114, isUnsigned: true)
-!134 = !DIEnumerator(name: "Play", value: 115, isUnsigned: true)
-!135 = !DIEnumerator(name: "Stop", value: 116, isUnsigned: true)
-!136 = !DIEnumerator(name: "VolumeDown", value: 117, isUnsigned: true)
-!137 = !DIEnumerator(name: "VolumeUp", value: 118, isUnsigned: true)
-!138 = !DIEnumerator(name: "WWWHome", value: 119, isUnsigned: true)
-!139 = !DIEnumerator(name: "PowerOnTestOk", value: 120, isUnsigned: true)
-!140 = !DIEnumerator(name: "TooManyKeys", value: 121, isUnsigned: true)
-!141 = !DIEnumerator(name: "RControl2", value: 122, isUnsigned: true)
-!142 = !DIEnumerator(name: "RAlt2", value: 123, isUnsigned: true)
-!143 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "KeyState", scope: !9, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagEnumClass, elements: !144)
-!144 = !{!145, !146, !147}
-!145 = !DIEnumerator(name: "Up", value: 0, isUnsigned: true)
-!146 = !DIEnumerator(name: "Down", value: 1, isUnsigned: true)
-!147 = !DIEnumerator(name: "SingleShot", value: 2, isUnsigned: true)
+!11 = !{!12, !13, !14, !15, !16, !17, !18, !19, !20, !21, !22, !23, !24, !25, !26, !27, !28, !29, !30, !31, !32, !33, !34, !35, !36, !37, !38, !39, !40, !41, !42, !43, !44, !45, !46, !47, !48, !49, !50, !51, !52, !53, !54, !55, !56, !57, !58, !59, !60, !61, !62, !63, !64, !65, !66, !67, !68, !69, !70, !71, !72, !73, !74, !75, !76, !77, !78, !79, !80, !81, !82, !83, !84, !85, !86, !87, !88, !89, !90, !91, !92, !93, !94, !95, !96, !97, !98, !99, !100, !101, !102, !103, !104, !105, !106, !107, !108, !109, !110, !111, !112, !113, !114, !115, !116, !117, !118, !119, !120, !121, !122, !123, !124, !125, !126, !127, !128, !129, !130, !131, !132, !133, !134, !135}
+!12 = !DIEnumerator(name: "Escape", value: 0, isUnsigned: true)
+!13 = !DIEnumerator(name: "F1", value: 1, isUnsigned: true)
+!14 = !DIEnumerator(name: "F2", value: 2, isUnsigned: true)
+!15 = !DIEnumerator(name: "F3", value: 3, isUnsigned: true)
+!16 = !DIEnumerator(name: "F4", value: 4, isUnsigned: true)
+!17 = !DIEnumerator(name: "F5", value: 5, isUnsigned: true)
+!18 = !DIEnumerator(name: "F6", value: 6, isUnsigned: true)
+!19 = !DIEnumerator(name: "F7", value: 7, isUnsigned: true)
+!20 = !DIEnumerator(name: "F8", value: 8, isUnsigned: true)
+!21 = !DIEnumerator(name: "F9", value: 9, isUnsigned: true)
+!22 = !DIEnumerator(name: "F10", value: 10, isUnsigned: true)
+!23 = !DIEnumerator(name: "F11", value: 11, isUnsigned: true)
+!24 = !DIEnumerator(name: "F12", value: 12, isUnsigned: true)
+!25 = !DIEnumerator(name: "PrintScreen", value: 13, isUnsigned: true)
+!26 = !DIEnumerator(name: "SysRq", value: 14, isUnsigned: true)
+!27 = !DIEnumerator(name: "ScrollLock", value: 15, isUnsigned: true)
+!28 = !DIEnumerator(name: "PauseBreak", value: 16, isUnsigned: true)
+!29 = !DIEnumerator(name: "Oem8", value: 17, isUnsigned: true)
+!30 = !DIEnumerator(name: "Key1", value: 18, isUnsigned: true)
+!31 = !DIEnumerator(name: "Key2", value: 19, isUnsigned: true)
+!32 = !DIEnumerator(name: "Key3", value: 20, isUnsigned: true)
+!33 = !DIEnumerator(name: "Key4", value: 21, isUnsigned: true)
+!34 = !DIEnumerator(name: "Key5", value: 22, isUnsigned: true)
+!35 = !DIEnumerator(name: "Key6", value: 23, isUnsigned: true)
+!36 = !DIEnumerator(name: "Key7", value: 24, isUnsigned: true)
+!37 = !DIEnumerator(name: "Key8", value: 25, isUnsigned: true)
+!38 = !DIEnumerator(name: "Key9", value: 26, isUnsigned: true)
+!39 = !DIEnumerator(name: "Key0", value: 27, isUnsigned: true)
+!40 = !DIEnumerator(name: "OemMinus", value: 28, isUnsigned: true)
+!41 = !DIEnumerator(name: "OemPlus", value: 29, isUnsigned: true)
+!42 = !DIEnumerator(name: "Backspace", value: 30, isUnsigned: true)
+!43 = !DIEnumerator(name: "Insert", value: 31, isUnsigned: true)
+!44 = !DIEnumerator(name: "Home", value: 32, isUnsigned: true)
+!45 = !DIEnumerator(name: "PageUp", value: 33, isUnsigned: true)
+!46 = !DIEnumerator(name: "NumpadLock", value: 34, isUnsigned: true)
+!47 = !DIEnumerator(name: "NumpadDivide", value: 35, isUnsigned: true)
+!48 = !DIEnumerator(name: "NumpadMultiply", value: 36, isUnsigned: true)
+!49 = !DIEnumerator(name: "NumpadSubtract", value: 37, isUnsigned: true)
+!50 = !DIEnumerator(name: "Tab", value: 38, isUnsigned: true)
+!51 = !DIEnumerator(name: "Q", value: 39, isUnsigned: true)
+!52 = !DIEnumerator(name: "W", value: 40, isUnsigned: true)
+!53 = !DIEnumerator(name: "E", value: 41, isUnsigned: true)
+!54 = !DIEnumerator(name: "R", value: 42, isUnsigned: true)
+!55 = !DIEnumerator(name: "T", value: 43, isUnsigned: true)
+!56 = !DIEnumerator(name: "Y", value: 44, isUnsigned: true)
+!57 = !DIEnumerator(name: "U", value: 45, isUnsigned: true)
+!58 = !DIEnumerator(name: "I", value: 46, isUnsigned: true)
+!59 = !DIEnumerator(name: "O", value: 47, isUnsigned: true)
+!60 = !DIEnumerator(name: "P", value: 48, isUnsigned: true)
+!61 = !DIEnumerator(name: "Oem4", value: 49, isUnsigned: true)
+!62 = !DIEnumerator(name: "Oem6", value: 50, isUnsigned: true)
+!63 = !DIEnumerator(name: "Oem5", value: 51, isUnsigned: true)
+!64 = !DIEnumerator(name: "Oem7", value: 52, isUnsigned: true)
+!65 = !DIEnumerator(name: "Delete", value: 53, isUnsigned: true)
+!66 = !DIEnumerator(name: "End", value: 54, isUnsigned: true)
+!67 = !DIEnumerator(name: "PageDown", value: 55, isUnsigned: true)
+!68 = !DIEnumerator(name: "Numpad7", value: 56, isUnsigned: true)
+!69 = !DIEnumerator(name: "Numpad8", value: 57, isUnsigned: true)
+!70 = !DIEnumerator(name: "Numpad9", value: 58, isUnsigned: true)
+!71 = !DIEnumerator(name: "NumpadAdd", value: 59, isUnsigned: true)
+!72 = !DIEnumerator(name: "CapsLock", value: 60, isUnsigned: true)
+!73 = !DIEnumerator(name: "A", value: 61, isUnsigned: true)
+!74 = !DIEnumerator(name: "S", value: 62, isUnsigned: true)
+!75 = !DIEnumerator(name: "D", value: 63, isUnsigned: true)
+!76 = !DIEnumerator(name: "F", value: 64, isUnsigned: true)
+!77 = !DIEnumerator(name: "G", value: 65, isUnsigned: true)
+!78 = !DIEnumerator(name: "H", value: 66, isUnsigned: true)
+!79 = !DIEnumerator(name: "J", value: 67, isUnsigned: true)
+!80 = !DIEnumerator(name: "K", value: 68, isUnsigned: true)
+!81 = !DIEnumerator(name: "L", value: 69, isUnsigned: true)
+!82 = !DIEnumerator(name: "Oem1", value: 70, isUnsigned: true)
+!83 = !DIEnumerator(name: "Oem3", value: 71, isUnsigned: true)
+!84 = !DIEnumerator(name: "Return", value: 72, isUnsigned: true)
+!85 = !DIEnumerator(name: "Numpad4", value: 73, isUnsigned: true)
+!86 = !DIEnumerator(name: "Numpad5", value: 74, isUnsigned: true)
+!87 = !DIEnumerator(name: "Numpad6", value: 75, isUnsigned: true)
+!88 = !DIEnumerator(name: "LShift", value: 76, isUnsigned: true)
+!89 = !DIEnumerator(name: "Z", value: 77, isUnsigned: true)
+!90 = !DIEnumerator(name: "X", value: 78, isUnsigned: true)
+!91 = !DIEnumerator(name: "C", value: 79, isUnsigned: true)
+!92 = !DIEnumerator(name: "V", value: 80, isUnsigned: true)
+!93 = !DIEnumerator(name: "B", value: 81, isUnsigned: true)
+!94 = !DIEnumerator(name: "N", value: 82, isUnsigned: true)
+!95 = !DIEnumerator(name: "M", value: 83, isUnsigned: true)
+!96 = !DIEnumerator(name: "OemComma", value: 84, isUnsigned: true)
+!97 = !DIEnumerator(name: "OemPeriod", value: 85, isUnsigned: true)
+!98 = !DIEnumerator(name: "Oem2", value: 86, isUnsigned: true)
+!99 = !DIEnumerator(name: "RShift", value: 87, isUnsigned: true)
+!100 = !DIEnumerator(name: "ArrowUp", value: 88, isUnsigned: true)
+!101 = !DIEnumerator(name: "Numpad1", value: 89, isUnsigned: true)
+!102 = !DIEnumerator(name: "Numpad2", value: 90, isUnsigned: true)
+!103 = !DIEnumerator(name: "Numpad3", value: 91, isUnsigned: true)
+!104 = !DIEnumerator(name: "NumpadEnter", value: 92, isUnsigned: true)
+!105 = !DIEnumerator(name: "LControl", value: 93, isUnsigned: true)
+!106 = !DIEnumerator(name: "LWin", value: 94, isUnsigned: true)
+!107 = !DIEnumerator(name: "LAlt", value: 95, isUnsigned: true)
+!108 = !DIEnumerator(name: "Spacebar", value: 96, isUnsigned: true)
+!109 = !DIEnumerator(name: "RAltGr", value: 97, isUnsigned: true)
+!110 = !DIEnumerator(name: "RWin", value: 98, isUnsigned: true)
+!111 = !DIEnumerator(name: "Apps", value: 99, isUnsigned: true)
+!112 = !DIEnumerator(name: "RControl", value: 100, isUnsigned: true)
+!113 = !DIEnumerator(name: "ArrowLeft", value: 101, isUnsigned: true)
+!114 = !DIEnumerator(name: "ArrowDown", value: 102, isUnsigned: true)
+!115 = !DIEnumerator(name: "ArrowRight", value: 103, isUnsigned: true)
+!116 = !DIEnumerator(name: "Numpad0", value: 104, isUnsigned: true)
+!117 = !DIEnumerator(name: "NumpadPeriod", value: 105, isUnsigned: true)
+!118 = !DIEnumerator(name: "Oem9", value: 106, isUnsigned: true)
+!119 = !DIEnumerator(name: "Oem10", value: 107, isUnsigned: true)
+!120 = !DIEnumerator(name: "Oem11", value: 108, isUnsigned: true)
+!121 = !DIEnumerator(name: "Oem12", value: 109, isUnsigned: true)
+!122 = !DIEnumerator(name: "Oem13", value: 110, isUnsigned: true)
+!123 = !DIEnumerator(name: "PrevTrack", value: 111, isUnsigned: true)
+!124 = !DIEnumerator(name: "NextTrack", value: 112, isUnsigned: true)
+!125 = !DIEnumerator(name: "Mute", value: 113, isUnsigned: true)
+!126 = !DIEnumerator(name: "Calculator", value: 114, isUnsigned: true)
+!127 = !DIEnumerator(name: "Play", value: 115, isUnsigned: true)
+!128 = !DIEnumerator(name: "Stop", value: 116, isUnsigned: true)
+!129 = !DIEnumerator(name: "VolumeDown", value: 117, isUnsigned: true)
+!130 = !DIEnumerator(name: "VolumeUp", value: 118, isUnsigned: true)
+!131 = !DIEnumerator(name: "WWWHome", value: 119, isUnsigned: true)
+!132 = !DIEnumerator(name: "PowerOnTestOk", value: 120, isUnsigned: true)
+!133 = !DIEnumerator(name: "TooManyKeys", value: 121, isUnsigned: true)
+!134 = !DIEnumerator(name: "RControl2", value: 122, isUnsigned: true)
+!135 = !DIEnumerator(name: "RAlt2", value: 123, isUnsigned: true)
+!136 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "KeyState", scope: !9, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagEnumClass, elements: !137)
+!137 = !{!138, !139, !140}
+!138 = !DIEnumerator(name: "Up", value: 0, isUnsigned: true)
+!139 = !DIEnumerator(name: "Down", value: 1, isUnsigned: true)
+!140 = !DIEnumerator(name: "SingleShot", value: 2, isUnsigned: true)
+!141 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "Error", scope: !9, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagEnumClass, elements: !142)
+!142 = !{!143, !144, !145, !146, !147}
+!143 = !DIEnumerator(name: "BadStartBit", value: 0, isUnsigned: true)
+!144 = !DIEnumerator(name: "BadStopBit", value: 1, isUnsigned: true)
+!145 = !DIEnumerator(name: "ParityError", value: 2, isUnsigned: true)
+!146 = !DIEnumerator(name: "UnknownKeyCode", value: 3, isUnsigned: true)
+!147 = !DIEnumerator(name: "InvalidState", value: 4, isUnsigned: true)
 !148 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "HandleControl", scope: !9, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagEnumClass, elements: !149)
 !149 = !{!150, !151}
 !150 = !DIEnumerator(name: "MapLettersToUnicode", value: 0, isUnsigned: true)
@@ -13531,148 +13531,148 @@ attributes #7 = { noreturn nounwind }
 !157 = !DIEnumerator(name: "ExtendedRelease", value: 3, isUnsigned: true)
 !158 = !DIEnumerator(name: "Extended2", value: 4, isUnsigned: true)
 !159 = !DIEnumerator(name: "Extended2Release", value: 5, isUnsigned: true)
-!160 = distinct !DISubprogram(name: "from_residual<core::option::Option<u8>, pc_keyboard::Error, pc_keyboard::Error>", linkageName: "_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h80e808691d5ba0caE", scope: !162, file: !161, line: 1957, type: !165, scopeLine: 1957, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !235, retainedNodes: !231)
-!161 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/result.rs", directory: "", checksumkind: CSK_MD5, checksum: "cc8b7cecba5f727f67dc5e53b092ac26")
+!160 = distinct !DISubprogram(name: "from_residual<core::option::Option<pc_keyboard::KeyEvent>, pc_keyboard::Error, pc_keyboard::Error>", linkageName: "_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h5fdcb31573649752E", scope: !162, file: !161, line: 1957, type: !165, scopeLine: 1957, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !239, retainedNodes: !235)
+!161 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/result.rs", directory: "", checksumkind: CSK_MD5, checksum: "9e7b75310a6466c2d8a21cc01e7dba18")
 !162 = !DINamespace(name: "{impl#27}", scope: !163)
 !163 = !DINamespace(name: "result", scope: !164)
 !164 = !DINamespace(name: "core", scope: null)
 !165 = !DISubroutineType(types: !166)
-!166 = !{!167, !198, !216}
-!167 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::option::Option<u8>, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, elements: !168, templateParams: !182, identifier: "4cdff60e4bd416effe82645749637038")
+!166 = !{!167, !202, !220}
+!167 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::option::Option<pc_keyboard::KeyEvent>, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !168, templateParams: !182, identifier: "ba3637761f2e81c2d1bdf239095718c4")
 !168 = !{!169}
-!169 = !DICompositeType(tag: DW_TAG_variant_part, scope: !167, file: !8, size: 16, align: 8, elements: !170, templateParams: !182, identifier: "38efd8ad2ffaf921570ca1719325e615", discriminator: !197)
-!170 = !{!171, !193}
+!169 = !DICompositeType(tag: DW_TAG_variant_part, scope: !167, file: !8, size: 16, align: 8, elements: !170, templateParams: !182, identifier: "cc962041a983a40cb949fd1528fb0931", discriminator: !201)
+!170 = !{!171, !197}
 !171 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !169, file: !8, baseType: !172, size: 16, align: 8)
-!172 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !167, file: !8, size: 16, align: 8, elements: !173, templateParams: !190, identifier: "9e8e2ee0580c3faca5d064987838c0cf")
+!172 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !167, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !173, templateParams: !194, identifier: "45a4c94ea9efa16ec440ccd59274a805")
 !173 = !{!174}
-!174 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !172, file: !8, baseType: !175, size: 16, align: 8)
-!175 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<u8>", scope: !176, file: !8, size: 16, align: 8, elements: !177, templateParams: !182, identifier: "5f7b738521bd133193ea3bfea0339403")
+!174 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !172, file: !8, baseType: !175, size: 16, align: 8, flags: DIFlagPublic)
+!175 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<pc_keyboard::KeyEvent>", scope: !176, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !177, templateParams: !182, identifier: "c965a77f28c08904752df5f5abee0e3d")
 !176 = !DINamespace(name: "option", scope: !164)
 !177 = !{!178}
-!178 = !DICompositeType(tag: DW_TAG_variant_part, scope: !175, file: !8, size: 16, align: 8, elements: !179, templateParams: !182, identifier: "735a943cd165613dfbf0b35c64f1769", discriminator: !189)
-!179 = !{!180, !185}
-!180 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !178, file: !8, baseType: !181, size: 16, align: 8, extraData: i128 0)
-!181 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !175, file: !8, size: 16, align: 8, elements: !182, templateParams: !183, identifier: "673af88bc0520990a90ee46b032e3c68")
+!178 = !DICompositeType(tag: DW_TAG_variant_part, scope: !175, file: !8, size: 16, align: 8, elements: !179, templateParams: !182, identifier: "9ee2073ad09bf7ee32b754a2be924330", discriminator: !193)
+!179 = !{!180, !189}
+!180 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !178, file: !8, baseType: !181, size: 16, align: 8, extraData: i128 3)
+!181 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !175, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !182, templateParams: !183, identifier: "c5601d9d29fb909c8a9287063586ad93")
 !182 = !{}
 !183 = !{!184}
-!184 = !DITemplateTypeParameter(name: "T", type: !10)
-!185 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !178, file: !8, baseType: !186, size: 16, align: 8, extraData: i128 1)
-!186 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !175, file: !8, size: 16, align: 8, elements: !187, templateParams: !183, identifier: "5ae8d7361756462eafc88111258491fb")
-!187 = !{!188}
-!188 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !186, file: !8, baseType: !10, size: 8, align: 8, offset: 8)
-!189 = !DIDerivedType(tag: DW_TAG_member, scope: !175, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
-!190 = !{!191, !192}
-!191 = !DITemplateTypeParameter(name: "T", type: !175)
-!192 = !DITemplateTypeParameter(name: "E", type: !7)
-!193 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !169, file: !8, baseType: !194, size: 16, align: 8, extraData: i128 2)
-!194 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !167, file: !8, size: 16, align: 8, elements: !195, templateParams: !190, identifier: "84a3801cf41291d5f373fcc9a89a961c")
-!195 = !{!196}
-!196 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !194, file: !8, baseType: !7, size: 8, align: 8, offset: 8)
-!197 = !DIDerivedType(tag: DW_TAG_member, scope: !167, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
-!198 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::convert::Infallible, pc_keyboard::Error>", scope: !163, file: !8, size: 8, align: 8, elements: !199, templateParams: !182, identifier: "9ff5f4d727a5fbcaf1c6eeba8e43a5a7")
+!184 = !DITemplateTypeParameter(name: "T", type: !185)
+!185 = !DICompositeType(tag: DW_TAG_structure_type, name: "KeyEvent", scope: !9, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !186, templateParams: !182, identifier: "b824ca2a7c6d7cd730e944b312c1a15a")
+!186 = !{!187, !188}
+!187 = !DIDerivedType(tag: DW_TAG_member, name: "code", scope: !185, file: !8, baseType: !7, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!188 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !185, file: !8, baseType: !136, size: 8, align: 8, flags: DIFlagPublic)
+!189 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !178, file: !8, baseType: !190, size: 16, align: 8)
+!190 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !175, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !191, templateParams: !183, identifier: "4341c226d3fb873df6068fdebae88d11")
+!191 = !{!192}
+!192 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !190, file: !8, baseType: !185, size: 16, align: 8, flags: DIFlagPublic)
+!193 = !DIDerivedType(tag: DW_TAG_member, scope: !175, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
+!194 = !{!195, !196}
+!195 = !DITemplateTypeParameter(name: "T", type: !175)
+!196 = !DITemplateTypeParameter(name: "E", type: !141)
+!197 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !169, file: !8, baseType: !198, size: 16, align: 8, extraData: i128 4)
+!198 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !167, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !199, templateParams: !194, identifier: "a2ee9015715e264156c88d8ae9eece8b")
 !199 = !{!200}
-!200 = !DICompositeType(tag: DW_TAG_variant_part, scope: !198, file: !8, size: 8, align: 8, elements: !201, templateParams: !182, identifier: "4058b02ce45fb1f6bbb81931c60a07c1")
-!201 = !{!202, !212}
-!202 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !200, file: !8, baseType: !203, size: 8, align: 8)
-!203 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !198, file: !8, size: 8, align: 8, elements: !204, templateParams: !210, identifier: "c56a8be1c949ed6c24acb07d954ee544")
-!204 = !{!205}
-!205 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !203, file: !8, baseType: !206, align: 8)
-!206 = !DICompositeType(tag: DW_TAG_structure_type, name: "Infallible", scope: !207, file: !8, align: 8, elements: !208, templateParams: !182, identifier: "59666e2bd1c4f4969cb189f7a65d61af")
-!207 = !DINamespace(name: "convert", scope: !164)
+!200 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !198, file: !8, baseType: !141, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!201 = !DIDerivedType(tag: DW_TAG_member, scope: !167, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
+!202 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::convert::Infallible, pc_keyboard::Error>", scope: !163, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !203, templateParams: !182, identifier: "4b4b827e75a978ccf98069151d3a37fb")
+!203 = !{!204}
+!204 = !DICompositeType(tag: DW_TAG_variant_part, scope: !202, file: !8, size: 8, align: 8, elements: !205, templateParams: !182, identifier: "be2536cffdebe72b80f3097d4a997a1f")
+!205 = !{!206, !216}
+!206 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !204, file: !8, baseType: !207, size: 8, align: 8)
+!207 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !202, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !208, templateParams: !214, identifier: "7bb9cd45843749b0af0d88dc50ff3003")
 !208 = !{!209}
-!209 = !DICompositeType(tag: DW_TAG_variant_part, scope: !206, file: !8, align: 8, elements: !182, identifier: "9b324172c710e27d5a71314b035eacca")
-!210 = !{!211, !192}
-!211 = !DITemplateTypeParameter(name: "T", type: !206)
-!212 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !200, file: !8, baseType: !213, size: 8, align: 8)
-!213 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !198, file: !8, size: 8, align: 8, elements: !214, templateParams: !210, identifier: "183c79ceccf533424e95079922397f71")
-!214 = !{!215}
-!215 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !213, file: !8, baseType: !7, size: 8, align: 8)
-!216 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::panic::location::Location", baseType: !217, size: 64, align: 64, dwarfAddressSpace: 0)
-!217 = !DICompositeType(tag: DW_TAG_structure_type, name: "Location", scope: !218, file: !8, size: 192, align: 64, elements: !220, templateParams: !182, identifier: "a68ef39517a8f6a18b92c5cef289207f")
-!218 = !DINamespace(name: "location", scope: !219)
-!219 = !DINamespace(name: "panic", scope: !164)
-!220 = !{!221, !228, !230}
-!221 = !DIDerivedType(tag: DW_TAG_member, name: "file", scope: !217, file: !8, baseType: !222, size: 128, align: 64)
-!222 = !DICompositeType(tag: DW_TAG_structure_type, name: "&str", file: !8, size: 128, align: 64, elements: !223, templateParams: !182, identifier: "857c99401054bcaa39f98e6e0c6d74b")
-!223 = !{!224, !226}
-!224 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !222, file: !8, baseType: !225, size: 64, align: 64)
-!225 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !10, size: 64, align: 64, dwarfAddressSpace: 0)
-!226 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !222, file: !8, baseType: !227, size: 64, align: 64, offset: 64)
-!227 = !DIBasicType(name: "usize", size: 64, encoding: DW_ATE_unsigned)
-!228 = !DIDerivedType(tag: DW_TAG_member, name: "line", scope: !217, file: !8, baseType: !229, size: 32, align: 32, offset: 128)
-!229 = !DIBasicType(name: "u32", size: 32, encoding: DW_ATE_unsigned)
-!230 = !DIDerivedType(tag: DW_TAG_member, name: "col", scope: !217, file: !8, baseType: !229, size: 32, align: 32, offset: 160)
-!231 = !{!232, !233}
-!232 = !DILocalVariable(name: "residual", arg: 1, scope: !160, file: !161, line: 1957, type: !198)
-!233 = !DILocalVariable(name: "e", scope: !234, file: !161, line: 1959, type: !7, align: 1)
-!234 = distinct !DILexicalBlock(scope: !160, file: !161, line: 1959, column: 13)
-!235 = !{!191, !192, !236}
-!236 = !DITemplateTypeParameter(name: "F", type: !7)
-!237 = !DILocation(line: 1957, column: 22, scope: !160)
-!238 = !DILocation(line: 1959, column: 17, scope: !160)
-!239 = !{i8 0, i8 5}
-!240 = !DILocation(line: 1959, column: 17, scope: !234)
-!241 = !DILocalVariable(name: "t", arg: 1, scope: !242, file: !243, line: 766, type: !7)
-!242 = distinct !DISubprogram(name: "from<pc_keyboard::Error>", linkageName: "_ZN50_$LT$T$u20$as$u20$core..convert..From$LT$T$GT$$GT$4from17he6e4e896d9508a8bE", scope: !244, file: !243, line: 766, type: !245, scopeLine: 766, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !248, retainedNodes: !247)
-!243 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/convert/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "42846d055f67fc97bf276e58c4167411")
-!244 = !DINamespace(name: "{impl#4}", scope: !207)
-!245 = !DISubroutineType(types: !246)
-!246 = !{!7, !7}
-!247 = !{!241}
-!248 = !{!249}
-!249 = !DITemplateTypeParameter(name: "T", type: !7)
-!250 = !DILocation(line: 766, column: 13, scope: !242, inlinedAt: !251)
-!251 = distinct !DILocation(line: 1959, column: 27, scope: !234)
-!252 = !DILocation(line: 1959, column: 23, scope: !234)
-!253 = !DILocation(line: 1961, column: 6, scope: !160)
-!254 = distinct !DISubprogram(name: "from_residual<core::option::Option<pc_keyboard::KeyEvent>, pc_keyboard::Error, pc_keyboard::Error>", linkageName: "_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17h8b19e33cec80627aE", scope: !162, file: !161, line: 1957, type: !255, scopeLine: 1957, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !293, retainedNodes: !289)
-!255 = !DISubroutineType(types: !256)
-!256 = !{!257, !198, !216}
-!257 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::option::Option<pc_keyboard::KeyEvent>, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, elements: !258, templateParams: !182, identifier: "631d54261adb68337ca957f0070e9b2")
-!258 = !{!259}
-!259 = !DICompositeType(tag: DW_TAG_variant_part, scope: !257, file: !8, size: 16, align: 8, elements: !260, templateParams: !182, identifier: "7d4f53f5f1a638ee9a24f4898afb6542", discriminator: !288)
-!260 = !{!261, !284}
-!261 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !259, file: !8, baseType: !262, size: 16, align: 8)
-!262 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !257, file: !8, size: 16, align: 8, elements: !263, templateParams: !282, identifier: "989087ac92294ee9d48c36a6362d6744")
-!263 = !{!264}
-!264 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !262, file: !8, baseType: !265, size: 16, align: 8)
-!265 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<pc_keyboard::KeyEvent>", scope: !176, file: !8, size: 16, align: 8, elements: !266, templateParams: !182, identifier: "c7ffaf3a2112076cfdbe1a57c45531ec")
-!266 = !{!267}
-!267 = !DICompositeType(tag: DW_TAG_variant_part, scope: !265, file: !8, size: 16, align: 8, elements: !268, templateParams: !182, identifier: "cb7d94605fef55efe5d1cf80d0432595", discriminator: !281)
-!268 = !{!269, !277}
-!269 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !267, file: !8, baseType: !270, size: 16, align: 8, extraData: i128 3)
-!270 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !265, file: !8, size: 16, align: 8, elements: !182, templateParams: !271, identifier: "86bf58e802f0ef81dd7441494ee4f9f3")
-!271 = !{!272}
-!272 = !DITemplateTypeParameter(name: "T", type: !273)
-!273 = !DICompositeType(tag: DW_TAG_structure_type, name: "KeyEvent", scope: !9, file: !8, size: 16, align: 8, elements: !274, templateParams: !182, identifier: "648cba2950eec5a4bb414b4543166589")
-!274 = !{!275, !276}
-!275 = !DIDerivedType(tag: DW_TAG_member, name: "code", scope: !273, file: !8, baseType: !17, size: 8, align: 8, offset: 8)
-!276 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !273, file: !8, baseType: !143, size: 8, align: 8)
-!277 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !267, file: !8, baseType: !278, size: 16, align: 8)
-!278 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !265, file: !8, size: 16, align: 8, elements: !279, templateParams: !271, identifier: "ba77e0db7b7d77bec63f7c75299bfce4")
+!209 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !207, file: !8, baseType: !210, align: 8, flags: DIFlagPublic)
+!210 = !DICompositeType(tag: DW_TAG_structure_type, name: "Infallible", scope: !211, file: !8, align: 8, flags: DIFlagPublic, elements: !212, templateParams: !182, identifier: "245f21ff7a9b6927717507d68e4319cb")
+!211 = !DINamespace(name: "convert", scope: !164)
+!212 = !{!213}
+!213 = !DICompositeType(tag: DW_TAG_variant_part, scope: !210, file: !8, align: 8, elements: !182, identifier: "687d5cf5e4af6afdd42501ce35a0d623")
+!214 = !{!215, !196}
+!215 = !DITemplateTypeParameter(name: "T", type: !210)
+!216 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !204, file: !8, baseType: !217, size: 8, align: 8)
+!217 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !202, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !218, templateParams: !214, identifier: "c69f259129e5663ad14430a973014106")
+!218 = !{!219}
+!219 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !217, file: !8, baseType: !141, size: 8, align: 8, flags: DIFlagPublic)
+!220 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::panic::location::Location", baseType: !221, size: 64, align: 64, dwarfAddressSpace: 0)
+!221 = !DICompositeType(tag: DW_TAG_structure_type, name: "Location", scope: !222, file: !8, size: 192, align: 64, flags: DIFlagPublic, elements: !224, templateParams: !182, identifier: "a313c32de3a8c9bc539767ad1b1d23fa")
+!222 = !DINamespace(name: "location", scope: !223)
+!223 = !DINamespace(name: "panic", scope: !164)
+!224 = !{!225, !232, !234}
+!225 = !DIDerivedType(tag: DW_TAG_member, name: "file", scope: !221, file: !8, baseType: !226, size: 128, align: 64, flags: DIFlagPrivate)
+!226 = !DICompositeType(tag: DW_TAG_structure_type, name: "&str", file: !8, size: 128, align: 64, elements: !227, templateParams: !182, identifier: "857c99401054bcaa39f98e6e0c6d74b")
+!227 = !{!228, !230}
+!228 = !DIDerivedType(tag: DW_TAG_member, name: "data_ptr", scope: !226, file: !8, baseType: !229, size: 64, align: 64)
+!229 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !10, size: 64, align: 64, dwarfAddressSpace: 0)
+!230 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !226, file: !8, baseType: !231, size: 64, align: 64, offset: 64)
+!231 = !DIBasicType(name: "usize", size: 64, encoding: DW_ATE_unsigned)
+!232 = !DIDerivedType(tag: DW_TAG_member, name: "line", scope: !221, file: !8, baseType: !233, size: 32, align: 32, offset: 128, flags: DIFlagPrivate)
+!233 = !DIBasicType(name: "u32", size: 32, encoding: DW_ATE_unsigned)
+!234 = !DIDerivedType(tag: DW_TAG_member, name: "col", scope: !221, file: !8, baseType: !233, size: 32, align: 32, offset: 160, flags: DIFlagPrivate)
+!235 = !{!236, !237}
+!236 = !DILocalVariable(name: "residual", arg: 1, scope: !160, file: !161, line: 1957, type: !202)
+!237 = !DILocalVariable(name: "e", scope: !238, file: !161, line: 1959, type: !141, align: 1)
+!238 = distinct !DILexicalBlock(scope: !160, file: !161, line: 1959, column: 13)
+!239 = !{!195, !196, !240}
+!240 = !DITemplateTypeParameter(name: "F", type: !141)
+!241 = !DILocation(line: 1957, column: 22, scope: !160)
+!242 = !DILocation(line: 1959, column: 17, scope: !160)
+!243 = !{i8 0, i8 5}
+!244 = !DILocation(line: 1959, column: 17, scope: !238)
+!245 = !DILocalVariable(name: "t", arg: 1, scope: !246, file: !247, line: 766, type: !141)
+!246 = distinct !DISubprogram(name: "from<pc_keyboard::Error>", linkageName: "_ZN50_$LT$T$u20$as$u20$core..convert..From$LT$T$GT$$GT$4from17h2d9da48419e9639fE", scope: !248, file: !247, line: 766, type: !249, scopeLine: 766, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !252, retainedNodes: !251)
+!247 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/convert/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "42846d055f67fc97bf276e58c4167411")
+!248 = !DINamespace(name: "{impl#4}", scope: !211)
+!249 = !DISubroutineType(types: !250)
+!250 = !{!141, !141}
+!251 = !{!245}
+!252 = !{!253}
+!253 = !DITemplateTypeParameter(name: "T", type: !141)
+!254 = !DILocation(line: 766, column: 13, scope: !246, inlinedAt: !255)
+!255 = distinct !DILocation(line: 1959, column: 27, scope: !238)
+!256 = !DILocation(line: 1959, column: 23, scope: !238)
+!257 = !DILocation(line: 1961, column: 6, scope: !160)
+!258 = distinct !DISubprogram(name: "from_residual<core::option::Option<u8>, pc_keyboard::Error, pc_keyboard::Error>", linkageName: "_ZN153_$LT$core..result..Result$LT$T$C$F$GT$$u20$as$u20$core..ops..try_trait..FromResidual$LT$core..result..Result$LT$core..convert..Infallible$C$E$GT$$GT$$GT$13from_residual17hf506680001b14e6eE", scope: !162, file: !161, line: 1957, type: !259, scopeLine: 1957, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !293, retainedNodes: !289)
+!259 = !DISubroutineType(types: !260)
+!260 = !{!261, !202, !220}
+!261 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<core::option::Option<u8>, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !262, templateParams: !182, identifier: "77a8ca7bdc5eead5355e609df740e778")
+!262 = !{!263}
+!263 = !DICompositeType(tag: DW_TAG_variant_part, scope: !261, file: !8, size: 16, align: 8, elements: !264, templateParams: !182, identifier: "2c8ce28d545cd49bc783716c4398d5f5", discriminator: !288)
+!264 = !{!265, !284}
+!265 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !263, file: !8, baseType: !266, size: 16, align: 8)
+!266 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !261, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !267, templateParams: !282, identifier: "658ced356944f1a8e7f38f2b1c90150b")
+!267 = !{!268}
+!268 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !266, file: !8, baseType: !269, size: 16, align: 8, flags: DIFlagPublic)
+!269 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<u8>", scope: !176, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !270, templateParams: !182, identifier: "7fce3aded12c2950543a8548a1f6a0c")
+!270 = !{!271}
+!271 = !DICompositeType(tag: DW_TAG_variant_part, scope: !269, file: !8, size: 16, align: 8, elements: !272, templateParams: !182, identifier: "754a94d58330a96581317b78eafc34db", discriminator: !281)
+!272 = !{!273, !277}
+!273 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !271, file: !8, baseType: !274, size: 16, align: 8, extraData: i128 0)
+!274 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !269, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !182, templateParams: !275, identifier: "eaaec97de89611d72071fb3ba619e63")
+!275 = !{!276}
+!276 = !DITemplateTypeParameter(name: "T", type: !10)
+!277 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !271, file: !8, baseType: !278, size: 16, align: 8, extraData: i128 1)
+!278 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !269, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !279, templateParams: !275, identifier: "86115aeada8f40b8fd9b67860f804500")
 !279 = !{!280}
-!280 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !278, file: !8, baseType: !273, size: 16, align: 8)
-!281 = !DIDerivedType(tag: DW_TAG_member, scope: !265, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
-!282 = !{!283, !192}
-!283 = !DITemplateTypeParameter(name: "T", type: !265)
-!284 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !259, file: !8, baseType: !285, size: 16, align: 8, extraData: i128 4)
-!285 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !257, file: !8, size: 16, align: 8, elements: !286, templateParams: !282, identifier: "aa7f22cc5db296d6fe98ad80a27cd441")
+!280 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !278, file: !8, baseType: !10, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!281 = !DIDerivedType(tag: DW_TAG_member, scope: !269, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
+!282 = !{!283, !196}
+!283 = !DITemplateTypeParameter(name: "T", type: !269)
+!284 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !263, file: !8, baseType: !285, size: 16, align: 8, extraData: i128 2)
+!285 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !261, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !286, templateParams: !282, identifier: "777c56fd9f1822a1508d4adb5069d0a")
 !286 = !{!287}
-!287 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !285, file: !8, baseType: !7, size: 8, align: 8, offset: 8)
-!288 = !DIDerivedType(tag: DW_TAG_member, scope: !257, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
+!287 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !285, file: !8, baseType: !141, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!288 = !DIDerivedType(tag: DW_TAG_member, scope: !261, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
 !289 = !{!290, !291}
-!290 = !DILocalVariable(name: "residual", arg: 1, scope: !254, file: !161, line: 1957, type: !198)
-!291 = !DILocalVariable(name: "e", scope: !292, file: !161, line: 1959, type: !7, align: 1)
-!292 = distinct !DILexicalBlock(scope: !254, file: !161, line: 1959, column: 13)
-!293 = !{!283, !192, !236}
-!294 = !DILocation(line: 1957, column: 22, scope: !254)
-!295 = !DILocation(line: 1959, column: 17, scope: !254)
+!290 = !DILocalVariable(name: "residual", arg: 1, scope: !258, file: !161, line: 1957, type: !202)
+!291 = !DILocalVariable(name: "e", scope: !292, file: !161, line: 1959, type: !141, align: 1)
+!292 = distinct !DILexicalBlock(scope: !258, file: !161, line: 1959, column: 13)
+!293 = !{!283, !196, !240}
+!294 = !DILocation(line: 1957, column: 22, scope: !258)
+!295 = !DILocation(line: 1959, column: 17, scope: !258)
 !296 = !DILocation(line: 1959, column: 17, scope: !292)
-!297 = !DILocation(line: 766, column: 13, scope: !242, inlinedAt: !298)
+!297 = !DILocation(line: 766, column: 13, scope: !246, inlinedAt: !298)
 !298 = distinct !DILocation(line: 1959, column: 27, scope: !292)
 !299 = !DILocation(line: 1959, column: 23, scope: !292)
-!300 = !DILocation(line: 1961, column: 6, scope: !254)
-!301 = distinct !DISubprogram(name: "from", linkageName: "_ZN4core4char7convert64_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$char$GT$4from17h7089fce54708d5f8E", scope: !303, file: !302, line: 170, type: !306, scopeLine: 170, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !309)
+!300 = !DILocation(line: 1961, column: 6, scope: !258)
+!301 = distinct !DISubprogram(name: "from", linkageName: "_ZN4core4char7convert64_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$char$GT$4from17h4b6a0d40e218f510E", scope: !303, file: !302, line: 170, type: !306, scopeLine: 170, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !309)
 !302 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/char/convert.rs", directory: "", checksumkind: CSK_MD5, checksum: "3eb94f8b703ea43845d153bc3313f534")
 !303 = !DINamespace(name: "{impl#5}", scope: !304)
 !304 = !DINamespace(name: "convert", scope: !305)
@@ -13685,167 +13685,167 @@ attributes #7 = { noreturn nounwind }
 !311 = !DILocation(line: 170, column: 13, scope: !301)
 !312 = !DILocation(line: 171, column: 9, scope: !301)
 !313 = !DILocation(line: 172, column: 6, scope: !301)
-!314 = distinct !DISubprogram(name: "into<u8, char>", linkageName: "_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h11d0e07affa4a686E", scope: !315, file: !243, line: 756, type: !306, scopeLine: 756, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !318, retainedNodes: !316)
-!315 = !DINamespace(name: "{impl#3}", scope: !207)
+!314 = distinct !DISubprogram(name: "into<u8, char>", linkageName: "_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h06306656f6348b04E", scope: !315, file: !247, line: 756, type: !306, scopeLine: 756, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !318, retainedNodes: !316)
+!315 = !DINamespace(name: "{impl#3}", scope: !211)
 !316 = !{!317}
-!317 = !DILocalVariable(name: "self", arg: 1, scope: !314, file: !243, line: 756, type: !10)
-!318 = !{!184, !319}
+!317 = !DILocalVariable(name: "self", arg: 1, scope: !314, file: !247, line: 756, type: !10)
+!318 = !{!276, !319}
 !319 = !DITemplateTypeParameter(name: "U", type: !308)
 !320 = !DILocation(line: 756, column: 13, scope: !314)
 !321 = !DILocation(line: 757, column: 9, scope: !314)
 !322 = !{i32 0, i32 1114112}
 !323 = !DILocation(line: 758, column: 6, scope: !314)
-!324 = distinct !DISubprogram(name: "branch<u8, pc_keyboard::Error>", linkageName: "_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17ha8e5c37459c2739aE", scope: !325, file: !161, line: 1945, type: !326, scopeLine: 1945, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !354, retainedNodes: !360)
+!324 = distinct !DISubprogram(name: "branch<pc_keyboard::KeyCode, pc_keyboard::Error>", linkageName: "_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17h7c06c053591dcbdbE", scope: !325, file: !161, line: 1945, type: !326, scopeLine: 1945, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !354, retainedNodes: !361)
 !325 = !DINamespace(name: "{impl#26}", scope: !163)
 !326 = !DISubroutineType(types: !327)
 !327 = !{!328, !346}
-!328 = !DICompositeType(tag: DW_TAG_structure_type, name: "ControlFlow<core::result::Result<core::convert::Infallible, pc_keyboard::Error>, u8>", scope: !329, file: !8, size: 16, align: 8, elements: !331, templateParams: !182, identifier: "ca59a33ea5ed1551c70589c21a1c71d2")
+!328 = !DICompositeType(tag: DW_TAG_structure_type, name: "ControlFlow<core::result::Result<core::convert::Infallible, pc_keyboard::Error>, pc_keyboard::KeyCode>", scope: !329, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !331, templateParams: !182, identifier: "aa3043f5bf9a2523960d286a9f5231ec")
 !329 = !DINamespace(name: "control_flow", scope: !330)
 !330 = !DINamespace(name: "ops", scope: !164)
 !331 = !{!332}
-!332 = !DICompositeType(tag: DW_TAG_variant_part, scope: !328, file: !8, size: 16, align: 8, elements: !333, templateParams: !182, identifier: "471e7d1d9ec28f349ce1d8c63b67edcf", discriminator: !345)
+!332 = !DICompositeType(tag: DW_TAG_variant_part, scope: !328, file: !8, size: 16, align: 8, elements: !333, templateParams: !182, identifier: "2f8218e6a0b0c3378714fb35f4f0b959", discriminator: !345)
 !333 = !{!334, !341}
 !334 = !DIDerivedType(tag: DW_TAG_member, name: "Continue", scope: !332, file: !8, baseType: !335, size: 16, align: 8, extraData: i128 0)
-!335 = !DICompositeType(tag: DW_TAG_structure_type, name: "Continue", scope: !328, file: !8, size: 16, align: 8, elements: !336, templateParams: !338, identifier: "597381caaef9c07cec7e18fc570bb654")
+!335 = !DICompositeType(tag: DW_TAG_structure_type, name: "Continue", scope: !328, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !336, templateParams: !338, identifier: "215d0d584629a9cb5747358a76f7cedd")
 !336 = !{!337}
-!337 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !335, file: !8, baseType: !10, size: 8, align: 8, offset: 8)
+!337 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !335, file: !8, baseType: !7, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
 !338 = !{!339, !340}
-!339 = !DITemplateTypeParameter(name: "B", type: !198)
-!340 = !DITemplateTypeParameter(name: "C", type: !10)
+!339 = !DITemplateTypeParameter(name: "B", type: !202)
+!340 = !DITemplateTypeParameter(name: "C", type: !7)
 !341 = !DIDerivedType(tag: DW_TAG_member, name: "Break", scope: !332, file: !8, baseType: !342, size: 16, align: 8, extraData: i128 1)
-!342 = !DICompositeType(tag: DW_TAG_structure_type, name: "Break", scope: !328, file: !8, size: 16, align: 8, elements: !343, templateParams: !338, identifier: "90a3f98edf511ee5e97dc667eed7a370")
+!342 = !DICompositeType(tag: DW_TAG_structure_type, name: "Break", scope: !328, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !343, templateParams: !338, identifier: "54339959a9befebeaafe96c4adcc0051")
 !343 = !{!344}
-!344 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !342, file: !8, baseType: !198, size: 8, align: 8, offset: 8)
+!344 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !342, file: !8, baseType: !202, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
 !345 = !DIDerivedType(tag: DW_TAG_member, scope: !328, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
-!346 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<u8, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, elements: !347, templateParams: !182, identifier: "f088fd4bf20222f365f96e2eb3f0675b")
+!346 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<pc_keyboard::KeyCode, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !347, templateParams: !182, identifier: "9fd41b9f64afd3cb1ef195fd86c92c53")
 !347 = !{!348}
-!348 = !DICompositeType(tag: DW_TAG_variant_part, scope: !346, file: !8, size: 16, align: 8, elements: !349, templateParams: !182, identifier: "e09b5d2aac310c54f2c325abce90fa6b", discriminator: !359)
-!349 = !{!350, !355}
+!348 = !DICompositeType(tag: DW_TAG_variant_part, scope: !346, file: !8, size: 16, align: 8, elements: !349, templateParams: !182, identifier: "c2e43fd332435cfcbd520c8dae558bcb", discriminator: !360)
+!349 = !{!350, !356}
 !350 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !348, file: !8, baseType: !351, size: 16, align: 8, extraData: i128 0)
-!351 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !346, file: !8, size: 16, align: 8, elements: !352, templateParams: !354, identifier: "655278cde5f98c5176fd71f49b078ec7")
+!351 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !346, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !352, templateParams: !354, identifier: "cab6dce61b303457d06648101b2d5806")
 !352 = !{!353}
-!353 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !351, file: !8, baseType: !10, size: 8, align: 8, offset: 8)
-!354 = !{!184, !192}
-!355 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !348, file: !8, baseType: !356, size: 16, align: 8, extraData: i128 1)
-!356 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !346, file: !8, size: 16, align: 8, elements: !357, templateParams: !354, identifier: "afe76a5a90c9eaf6acc1e911b4a6c631")
-!357 = !{!358}
-!358 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !356, file: !8, baseType: !7, size: 8, align: 8, offset: 8)
-!359 = !DIDerivedType(tag: DW_TAG_member, scope: !346, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
-!360 = !{!361, !362, !364}
-!361 = !DILocalVariable(name: "self", arg: 1, scope: !324, file: !161, line: 1945, type: !346)
-!362 = !DILocalVariable(name: "v", scope: !363, file: !161, line: 1947, type: !10, align: 1)
-!363 = distinct !DILexicalBlock(scope: !324, file: !161, line: 1947, column: 13)
-!364 = !DILocalVariable(name: "e", scope: !365, file: !161, line: 1948, type: !7, align: 1)
-!365 = distinct !DILexicalBlock(scope: !324, file: !161, line: 1948, column: 13)
-!366 = !DILocation(line: 1945, column: 15, scope: !324)
-!367 = !DILocation(line: 1946, column: 15, scope: !324)
-!368 = !{i8 0, i8 2}
-!369 = !DILocation(line: 1946, column: 9, scope: !324)
-!370 = !DILocation(line: 1947, column: 16, scope: !324)
-!371 = !DILocation(line: 1947, column: 16, scope: !363)
-!372 = !DILocation(line: 1947, column: 22, scope: !363)
-!373 = !DILocation(line: 1947, column: 45, scope: !324)
-!374 = !DILocation(line: 1948, column: 17, scope: !324)
-!375 = !DILocation(line: 1948, column: 17, scope: !365)
-!376 = !DILocation(line: 1948, column: 42, scope: !365)
-!377 = !DILocation(line: 1948, column: 23, scope: !365)
-!378 = !DILocation(line: 1948, column: 48, scope: !324)
-!379 = !DILocation(line: 1950, column: 6, scope: !324)
-!380 = distinct !DISubprogram(name: "branch<pc_keyboard::KeyCode, pc_keyboard::Error>", linkageName: "_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hf7fd1bfb3eed7ea8E", scope: !325, file: !161, line: 1945, type: !381, scopeLine: 1945, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !406, retainedNodes: !413)
-!381 = !DISubroutineType(types: !382)
-!382 = !{!383, !398}
-!383 = !DICompositeType(tag: DW_TAG_structure_type, name: "ControlFlow<core::result::Result<core::convert::Infallible, pc_keyboard::Error>, pc_keyboard::KeyCode>", scope: !329, file: !8, size: 16, align: 8, elements: !384, templateParams: !182, identifier: "9785c1c1476e5611c362ccd5eb7c0e3c")
-!384 = !{!385}
-!385 = !DICompositeType(tag: DW_TAG_variant_part, scope: !383, file: !8, size: 16, align: 8, elements: !386, templateParams: !182, identifier: "6209f89c1c0bad6efa45b5e60427e50c", discriminator: !397)
-!386 = !{!387, !393}
-!387 = !DIDerivedType(tag: DW_TAG_member, name: "Continue", scope: !385, file: !8, baseType: !388, size: 16, align: 8, extraData: i128 0)
-!388 = !DICompositeType(tag: DW_TAG_structure_type, name: "Continue", scope: !383, file: !8, size: 16, align: 8, elements: !389, templateParams: !391, identifier: "5c403118b9c8c5b8fee87b33e55ca2c7")
-!389 = !{!390}
-!390 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !388, file: !8, baseType: !17, size: 8, align: 8, offset: 8)
-!391 = !{!339, !392}
-!392 = !DITemplateTypeParameter(name: "C", type: !17)
-!393 = !DIDerivedType(tag: DW_TAG_member, name: "Break", scope: !385, file: !8, baseType: !394, size: 16, align: 8, extraData: i128 1)
-!394 = !DICompositeType(tag: DW_TAG_structure_type, name: "Break", scope: !383, file: !8, size: 16, align: 8, elements: !395, templateParams: !391, identifier: "31e01b56bafa8be88475d630631a2cde")
-!395 = !{!396}
-!396 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !394, file: !8, baseType: !198, size: 8, align: 8, offset: 8)
-!397 = !DIDerivedType(tag: DW_TAG_member, scope: !383, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
-!398 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<pc_keyboard::KeyCode, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, elements: !399, templateParams: !182, identifier: "6d8956a6d64b1d1cdad8f1c091e8b347")
-!399 = !{!400}
-!400 = !DICompositeType(tag: DW_TAG_variant_part, scope: !398, file: !8, size: 16, align: 8, elements: !401, templateParams: !182, identifier: "48dbdd61e5d1f134a1d2c4f0a96198f2", discriminator: !412)
-!401 = !{!402, !408}
-!402 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !400, file: !8, baseType: !403, size: 16, align: 8, extraData: i128 0)
-!403 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !398, file: !8, size: 16, align: 8, elements: !404, templateParams: !406, identifier: "3278d5de60b9f34d6f953e9083efdf42")
-!404 = !{!405}
-!405 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !403, file: !8, baseType: !17, size: 8, align: 8, offset: 8)
-!406 = !{!407, !192}
-!407 = !DITemplateTypeParameter(name: "T", type: !17)
-!408 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !400, file: !8, baseType: !409, size: 16, align: 8, extraData: i128 1)
-!409 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !398, file: !8, size: 16, align: 8, elements: !410, templateParams: !406, identifier: "a390b9374b93e7ac3540cfedda873c7f")
-!410 = !{!411}
-!411 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !409, file: !8, baseType: !7, size: 8, align: 8, offset: 8)
-!412 = !DIDerivedType(tag: DW_TAG_member, scope: !398, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
-!413 = !{!414, !415, !417}
-!414 = !DILocalVariable(name: "self", arg: 1, scope: !380, file: !161, line: 1945, type: !398)
-!415 = !DILocalVariable(name: "v", scope: !416, file: !161, line: 1947, type: !17, align: 1)
-!416 = distinct !DILexicalBlock(scope: !380, file: !161, line: 1947, column: 13)
-!417 = !DILocalVariable(name: "e", scope: !418, file: !161, line: 1948, type: !7, align: 1)
-!418 = distinct !DILexicalBlock(scope: !380, file: !161, line: 1948, column: 13)
-!419 = !DILocation(line: 1945, column: 15, scope: !380)
-!420 = !DILocation(line: 1946, column: 15, scope: !380)
-!421 = !DILocation(line: 1946, column: 9, scope: !380)
-!422 = !DILocation(line: 1947, column: 16, scope: !380)
-!423 = !{i8 0, i8 124}
-!424 = !DILocation(line: 1947, column: 16, scope: !416)
-!425 = !DILocation(line: 1947, column: 22, scope: !416)
-!426 = !DILocation(line: 1947, column: 45, scope: !380)
-!427 = !DILocation(line: 1948, column: 17, scope: !380)
-!428 = !DILocation(line: 1948, column: 17, scope: !418)
-!429 = !DILocation(line: 1948, column: 42, scope: !418)
-!430 = !DILocation(line: 1948, column: 23, scope: !418)
-!431 = !DILocation(line: 1948, column: 48, scope: !380)
-!432 = !DILocation(line: 1950, column: 6, scope: !380)
-!433 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h5002a8defc3f9bb9E", scope: !435, file: !434, line: 11, type: !438, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !467)
+!353 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !351, file: !8, baseType: !7, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!354 = !{!355, !196}
+!355 = !DITemplateTypeParameter(name: "T", type: !7)
+!356 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !348, file: !8, baseType: !357, size: 16, align: 8, extraData: i128 1)
+!357 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !346, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !358, templateParams: !354, identifier: "668d81f5d495f98682ddaca07380d397")
+!358 = !{!359}
+!359 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !357, file: !8, baseType: !141, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!360 = !DIDerivedType(tag: DW_TAG_member, scope: !346, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
+!361 = !{!362, !363, !365}
+!362 = !DILocalVariable(name: "self", arg: 1, scope: !324, file: !161, line: 1945, type: !346)
+!363 = !DILocalVariable(name: "v", scope: !364, file: !161, line: 1947, type: !7, align: 1)
+!364 = distinct !DILexicalBlock(scope: !324, file: !161, line: 1947, column: 13)
+!365 = !DILocalVariable(name: "e", scope: !366, file: !161, line: 1948, type: !141, align: 1)
+!366 = distinct !DILexicalBlock(scope: !324, file: !161, line: 1948, column: 13)
+!367 = !DILocation(line: 1945, column: 15, scope: !324)
+!368 = !DILocation(line: 1946, column: 15, scope: !324)
+!369 = !{i8 0, i8 2}
+!370 = !DILocation(line: 1946, column: 9, scope: !324)
+!371 = !DILocation(line: 1947, column: 16, scope: !324)
+!372 = !{i8 0, i8 124}
+!373 = !DILocation(line: 1947, column: 16, scope: !364)
+!374 = !DILocation(line: 1947, column: 22, scope: !364)
+!375 = !DILocation(line: 1947, column: 45, scope: !324)
+!376 = !DILocation(line: 1948, column: 17, scope: !324)
+!377 = !DILocation(line: 1948, column: 17, scope: !366)
+!378 = !DILocation(line: 1948, column: 42, scope: !366)
+!379 = !DILocation(line: 1948, column: 23, scope: !366)
+!380 = !DILocation(line: 1948, column: 48, scope: !324)
+!381 = !DILocation(line: 1950, column: 6, scope: !324)
+!382 = distinct !DISubprogram(name: "branch<u8, pc_keyboard::Error>", linkageName: "_ZN79_$LT$core..result..Result$LT$T$C$E$GT$$u20$as$u20$core..ops..try_trait..Try$GT$6branch17hb1856db19b1fb700E", scope: !325, file: !161, line: 1945, type: !383, scopeLine: 1945, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !408, retainedNodes: !414)
+!383 = !DISubroutineType(types: !384)
+!384 = !{!385, !400}
+!385 = !DICompositeType(tag: DW_TAG_structure_type, name: "ControlFlow<core::result::Result<core::convert::Infallible, pc_keyboard::Error>, u8>", scope: !329, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !386, templateParams: !182, identifier: "35577287d6feb14628982ec7fe56c2fa")
+!386 = !{!387}
+!387 = !DICompositeType(tag: DW_TAG_variant_part, scope: !385, file: !8, size: 16, align: 8, elements: !388, templateParams: !182, identifier: "954ccc6166b60c8dd40e2ce17e30d36f", discriminator: !399)
+!388 = !{!389, !395}
+!389 = !DIDerivedType(tag: DW_TAG_member, name: "Continue", scope: !387, file: !8, baseType: !390, size: 16, align: 8, extraData: i128 0)
+!390 = !DICompositeType(tag: DW_TAG_structure_type, name: "Continue", scope: !385, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !391, templateParams: !393, identifier: "bbb62c7e029bb366f70f757f244e34da")
+!391 = !{!392}
+!392 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !390, file: !8, baseType: !10, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!393 = !{!339, !394}
+!394 = !DITemplateTypeParameter(name: "C", type: !10)
+!395 = !DIDerivedType(tag: DW_TAG_member, name: "Break", scope: !387, file: !8, baseType: !396, size: 16, align: 8, extraData: i128 1)
+!396 = !DICompositeType(tag: DW_TAG_structure_type, name: "Break", scope: !385, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !397, templateParams: !393, identifier: "c37f57c3befbe847f4eb8d72e6f5f7a1")
+!397 = !{!398}
+!398 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !396, file: !8, baseType: !202, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!399 = !DIDerivedType(tag: DW_TAG_member, scope: !385, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
+!400 = !DICompositeType(tag: DW_TAG_structure_type, name: "Result<u8, pc_keyboard::Error>", scope: !163, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !401, templateParams: !182, identifier: "77cd48f215d0473919236e2c82819038")
+!401 = !{!402}
+!402 = !DICompositeType(tag: DW_TAG_variant_part, scope: !400, file: !8, size: 16, align: 8, elements: !403, templateParams: !182, identifier: "7528ff31a77dfdacc8c9249978179999", discriminator: !413)
+!403 = !{!404, !409}
+!404 = !DIDerivedType(tag: DW_TAG_member, name: "Ok", scope: !402, file: !8, baseType: !405, size: 16, align: 8, extraData: i128 0)
+!405 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ok", scope: !400, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !406, templateParams: !408, identifier: "e6c00e82a1a3cdf3db0d395a94f2e0c7")
+!406 = !{!407}
+!407 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !405, file: !8, baseType: !10, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!408 = !{!276, !196}
+!409 = !DIDerivedType(tag: DW_TAG_member, name: "Err", scope: !402, file: !8, baseType: !410, size: 16, align: 8, extraData: i128 1)
+!410 = !DICompositeType(tag: DW_TAG_structure_type, name: "Err", scope: !400, file: !8, size: 16, align: 8, flags: DIFlagPublic, elements: !411, templateParams: !408, identifier: "a4a30726445c31564627fa4428855b7d")
+!411 = !{!412}
+!412 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !410, file: !8, baseType: !141, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!413 = !DIDerivedType(tag: DW_TAG_member, scope: !400, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
+!414 = !{!415, !416, !418}
+!415 = !DILocalVariable(name: "self", arg: 1, scope: !382, file: !161, line: 1945, type: !400)
+!416 = !DILocalVariable(name: "v", scope: !417, file: !161, line: 1947, type: !10, align: 1)
+!417 = distinct !DILexicalBlock(scope: !382, file: !161, line: 1947, column: 13)
+!418 = !DILocalVariable(name: "e", scope: !419, file: !161, line: 1948, type: !141, align: 1)
+!419 = distinct !DILexicalBlock(scope: !382, file: !161, line: 1948, column: 13)
+!420 = !DILocation(line: 1945, column: 15, scope: !382)
+!421 = !DILocation(line: 1946, column: 15, scope: !382)
+!422 = !DILocation(line: 1946, column: 9, scope: !382)
+!423 = !DILocation(line: 1947, column: 16, scope: !382)
+!424 = !DILocation(line: 1947, column: 16, scope: !417)
+!425 = !DILocation(line: 1947, column: 22, scope: !417)
+!426 = !DILocation(line: 1947, column: 45, scope: !382)
+!427 = !DILocation(line: 1948, column: 17, scope: !382)
+!428 = !DILocation(line: 1948, column: 17, scope: !419)
+!429 = !DILocation(line: 1948, column: 42, scope: !419)
+!430 = !DILocation(line: 1948, column: 23, scope: !419)
+!431 = !DILocation(line: 1948, column: 48, scope: !382)
+!432 = !DILocation(line: 1950, column: 6, scope: !382)
+!433 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN101_$LT$pc_keyboard..layouts..dvorak_programmer104..DVP104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h25842ce9fb8040d8E", scope: !435, file: !434, line: 11, type: !438, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !467)
 !434 = !DIFile(filename: "src/layouts/dvorak_programmer104.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "1ce658e75c2c1c0a0c1c439241f066f7")
 !435 = !DINamespace(name: "{impl#0}", scope: !436)
 !436 = !DINamespace(name: "dvorak_programmer104", scope: !437)
 !437 = !DINamespace(name: "layouts", scope: !9)
 !438 = !DISubroutineType(types: !439)
-!439 = !{!440, !453, !17, !455, !148}
-!440 = !DICompositeType(tag: DW_TAG_structure_type, name: "DecodedKey", scope: !9, file: !8, size: 64, align: 32, elements: !441, templateParams: !182, identifier: "b783ff4c9e370372c55213bb20e11bca")
+!439 = !{!440, !453, !7, !455, !148}
+!440 = !DICompositeType(tag: DW_TAG_structure_type, name: "DecodedKey", scope: !9, file: !8, size: 64, align: 32, flags: DIFlagPublic, elements: !441, templateParams: !182, identifier: "947c50ce2dc2848721bf3463eae586cc")
 !441 = !{!442}
-!442 = !DICompositeType(tag: DW_TAG_variant_part, scope: !440, file: !8, size: 64, align: 32, elements: !443, templateParams: !182, identifier: "c5030de004506c2fd3fbc077d35cf0de", discriminator: !452)
+!442 = !DICompositeType(tag: DW_TAG_variant_part, scope: !440, file: !8, size: 64, align: 32, elements: !443, templateParams: !182, identifier: "5414205f45b0d87dd4ad7857732adf5d", discriminator: !452)
 !443 = !{!444, !448}
 !444 = !DIDerivedType(tag: DW_TAG_member, name: "RawKey", scope: !442, file: !8, baseType: !445, size: 64, align: 32, extraData: i128 0)
-!445 = !DICompositeType(tag: DW_TAG_structure_type, name: "RawKey", scope: !440, file: !8, size: 64, align: 32, elements: !446, templateParams: !182, identifier: "2768aa6b9204a3f57d27d77734ad4d79")
+!445 = !DICompositeType(tag: DW_TAG_structure_type, name: "RawKey", scope: !440, file: !8, size: 64, align: 32, flags: DIFlagPublic, elements: !446, templateParams: !182, identifier: "b0a9d2eda62cb77248ed79275b65e646")
 !446 = !{!447}
-!447 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !445, file: !8, baseType: !17, size: 8, align: 8, offset: 8)
+!447 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !445, file: !8, baseType: !7, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
 !448 = !DIDerivedType(tag: DW_TAG_member, name: "Unicode", scope: !442, file: !8, baseType: !449, size: 64, align: 32, extraData: i128 1)
-!449 = !DICompositeType(tag: DW_TAG_structure_type, name: "Unicode", scope: !440, file: !8, size: 64, align: 32, elements: !450, templateParams: !182, identifier: "c2cfc437093c6d98a3490adfd5a4f280")
+!449 = !DICompositeType(tag: DW_TAG_structure_type, name: "Unicode", scope: !440, file: !8, size: 64, align: 32, flags: DIFlagPublic, elements: !450, templateParams: !182, identifier: "32a0229a120678da4eb668e15d88232a")
 !450 = !{!451}
-!451 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !449, file: !8, baseType: !308, size: 32, align: 32, offset: 32)
+!451 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !449, file: !8, baseType: !308, size: 32, align: 32, offset: 32, flags: DIFlagPublic)
 !452 = !DIDerivedType(tag: DW_TAG_member, scope: !440, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
 !453 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::dvorak_programmer104::DVP104Key", baseType: !454, size: 64, align: 64, dwarfAddressSpace: 0)
-!454 = !DICompositeType(tag: DW_TAG_structure_type, name: "DVP104Key", scope: !436, file: !8, align: 8, elements: !182, identifier: "e82d5d17ce05a45fdfabc1dd110c766a")
+!454 = !DICompositeType(tag: DW_TAG_structure_type, name: "DVP104Key", scope: !436, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "96902516a3b507288cc219a3860511af")
 !455 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::Modifiers", baseType: !456, size: 64, align: 64, dwarfAddressSpace: 0)
-!456 = !DICompositeType(tag: DW_TAG_structure_type, name: "Modifiers", scope: !9, file: !8, size: 64, align: 8, elements: !457, templateParams: !182, identifier: "95969c583f1e25bcea7306406b458be4")
+!456 = !DICompositeType(tag: DW_TAG_structure_type, name: "Modifiers", scope: !9, file: !8, size: 64, align: 8, flags: DIFlagPublic, elements: !457, templateParams: !182, identifier: "77eac88685bbad97631348bca770dfae")
 !457 = !{!458, !460, !461, !462, !463, !464, !465, !466}
-!458 = !DIDerivedType(tag: DW_TAG_member, name: "lshift", scope: !456, file: !8, baseType: !459, size: 8, align: 8)
+!458 = !DIDerivedType(tag: DW_TAG_member, name: "lshift", scope: !456, file: !8, baseType: !459, size: 8, align: 8, flags: DIFlagPublic)
 !459 = !DIBasicType(name: "bool", size: 8, encoding: DW_ATE_boolean)
-!460 = !DIDerivedType(tag: DW_TAG_member, name: "rshift", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 8)
-!461 = !DIDerivedType(tag: DW_TAG_member, name: "lctrl", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 16)
-!462 = !DIDerivedType(tag: DW_TAG_member, name: "rctrl", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 24)
-!463 = !DIDerivedType(tag: DW_TAG_member, name: "numlock", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 32)
-!464 = !DIDerivedType(tag: DW_TAG_member, name: "capslock", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 40)
-!465 = !DIDerivedType(tag: DW_TAG_member, name: "alt_gr", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 48)
-!466 = !DIDerivedType(tag: DW_TAG_member, name: "rctrl2", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 56)
+!460 = !DIDerivedType(tag: DW_TAG_member, name: "rshift", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 8, flags: DIFlagPublic)
+!461 = !DIDerivedType(tag: DW_TAG_member, name: "lctrl", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 16, flags: DIFlagPublic)
+!462 = !DIDerivedType(tag: DW_TAG_member, name: "rctrl", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 24, flags: DIFlagPublic)
+!463 = !DIDerivedType(tag: DW_TAG_member, name: "numlock", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 32, flags: DIFlagPublic)
+!464 = !DIDerivedType(tag: DW_TAG_member, name: "capslock", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 40, flags: DIFlagPublic)
+!465 = !DIDerivedType(tag: DW_TAG_member, name: "alt_gr", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 48, flags: DIFlagPublic)
+!466 = !DIDerivedType(tag: DW_TAG_member, name: "rctrl2", scope: !456, file: !8, baseType: !459, size: 8, align: 8, offset: 56, flags: DIFlagPublic)
 !467 = !{!468, !469, !470, !471, !472, !474}
 !468 = !DILocalVariable(name: "self", arg: 1, scope: !433, file: !434, line: 12, type: !453)
-!469 = !DILocalVariable(name: "keycode", arg: 2, scope: !433, file: !434, line: 13, type: !17)
+!469 = !DILocalVariable(name: "keycode", arg: 2, scope: !433, file: !434, line: 13, type: !7)
 !470 = !DILocalVariable(name: "modifiers", arg: 3, scope: !433, file: !434, line: 14, type: !455)
 !471 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !433, file: !434, line: 15, type: !148)
 !472 = !DILocalVariable(name: "map_to_unicode", scope: !473, file: !434, line: 17, type: !459, align: 1)
 !473 = distinct !DILexicalBlock(scope: !433, file: !434, line: 17, column: 9)
-!474 = !DILocalVariable(name: "k", scope: !475, file: !434, line: 482, type: !17, align: 1)
+!474 = !DILocalVariable(name: "k", scope: !475, file: !434, line: 482, type: !7, align: 1)
 !475 = distinct !DILexicalBlock(scope: !473, file: !434, line: 482, column: 13)
 !476 = !DILocation(line: 12, column: 9, scope: !433)
 !477 = !DILocation(line: 13, column: 9, scope: !433)
@@ -14225,26 +14225,26 @@ attributes #7 = { noreturn nounwind }
 !851 = !DILocation(line: 478, column: 21, scope: !473)
 !852 = !DILocation(line: 475, column: 17, scope: !473)
 !853 = !DILocation(line: 476, column: 21, scope: !473)
-!854 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8e0b07937e926c4cE", scope: !856, file: !855, line: 11, type: !858, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !862)
+!854 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN93_$LT$pc_keyboard..layouts..dvorak104..Dvorak104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h19673f6f1b406f56E", scope: !856, file: !855, line: 11, type: !858, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !862)
 !855 = !DIFile(filename: "src/layouts/dvorak104.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "7841043f37dd050b052961abb05fd45b")
 !856 = !DINamespace(name: "{impl#0}", scope: !857)
 !857 = !DINamespace(name: "dvorak104", scope: !437)
 !858 = !DISubroutineType(types: !859)
-!859 = !{!440, !860, !17, !455, !148}
+!859 = !{!440, !860, !7, !455, !148}
 !860 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::dvorak104::Dvorak104Key", baseType: !861, size: 64, align: 64, dwarfAddressSpace: 0)
-!861 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dvorak104Key", scope: !857, file: !8, align: 8, elements: !182, identifier: "4c9201aa6b28dab1aa90cbf5f53baf79")
+!861 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dvorak104Key", scope: !857, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "61314828b54098109be09566d9d7805d")
 !862 = !{!863, !864, !865, !866, !867, !869, !871}
 !863 = !DILocalVariable(name: "self", arg: 1, scope: !854, file: !855, line: 12, type: !860)
-!864 = !DILocalVariable(name: "keycode", arg: 2, scope: !854, file: !855, line: 13, type: !17)
+!864 = !DILocalVariable(name: "keycode", arg: 2, scope: !854, file: !855, line: 13, type: !7)
 !865 = !DILocalVariable(name: "modifiers", arg: 3, scope: !854, file: !855, line: 14, type: !455)
 !866 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !854, file: !855, line: 15, type: !148)
 !867 = !DILocalVariable(name: "map_to_unicode", scope: !868, file: !855, line: 17, type: !459, align: 1)
 !868 = distinct !DILexicalBlock(scope: !854, file: !855, line: 17, column: 9)
-!869 = !DILocalVariable(name: "e", scope: !870, file: !855, line: 298, type: !17, align: 1)
+!869 = !DILocalVariable(name: "e", scope: !870, file: !855, line: 298, type: !7, align: 1)
 !870 = distinct !DILexicalBlock(scope: !868, file: !855, line: 298, column: 13)
 !871 = !DILocalVariable(name: "us", scope: !872, file: !855, line: 299, type: !873, align: 1)
 !872 = distinct !DILexicalBlock(scope: !870, file: !855, line: 299, column: 17)
-!873 = !DICompositeType(tag: DW_TAG_structure_type, name: "Us104Key", scope: !874, file: !8, align: 8, elements: !182, identifier: "dd454f2ddd765e6c67e1aa942e7f243b")
+!873 = !DICompositeType(tag: DW_TAG_structure_type, name: "Us104Key", scope: !874, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "95bafa42dce54244279674cd130c65fd")
 !874 = !DINamespace(name: "us104", scope: !437)
 !875 = !DILocation(line: 299, column: 21, scope: !872)
 !876 = !DILocation(line: 12, column: 9, scope: !854)
@@ -14487,20 +14487,20 @@ attributes #7 = { noreturn nounwind }
 !1113 = !DILocation(line: 295, column: 21, scope: !868)
 !1114 = !DILocation(line: 292, column: 24, scope: !868)
 !1115 = !DILocation(line: 293, column: 21, scope: !868)
-!1116 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hbd5d499a1362ab5aE", scope: !1118, file: !1117, line: 11, type: !1119, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1122)
+!1116 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN85_$LT$pc_keyboard..layouts..us104..Us104Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hb41a3174a009a997E", scope: !1118, file: !1117, line: 11, type: !1119, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1122)
 !1117 = !DIFile(filename: "src/layouts/us104.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "cca77834a79ea6104036e4b730345d0e")
 !1118 = !DINamespace(name: "{impl#0}", scope: !874)
 !1119 = !DISubroutineType(types: !1120)
-!1120 = !{!440, !1121, !17, !455, !148}
+!1120 = !{!440, !1121, !7, !455, !148}
 !1121 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::us104::Us104Key", baseType: !873, size: 64, align: 64, dwarfAddressSpace: 0)
 !1122 = !{!1123, !1124, !1125, !1126, !1127, !1129}
 !1123 = !DILocalVariable(name: "self", arg: 1, scope: !1116, file: !1117, line: 12, type: !1121)
-!1124 = !DILocalVariable(name: "keycode", arg: 2, scope: !1116, file: !1117, line: 13, type: !17)
+!1124 = !DILocalVariable(name: "keycode", arg: 2, scope: !1116, file: !1117, line: 13, type: !7)
 !1125 = !DILocalVariable(name: "modifiers", arg: 3, scope: !1116, file: !1117, line: 14, type: !455)
 !1126 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !1116, file: !1117, line: 15, type: !148)
 !1127 = !DILocalVariable(name: "map_to_unicode", scope: !1128, file: !1117, line: 17, type: !459, align: 1)
 !1128 = distinct !DILexicalBlock(scope: !1116, file: !1117, line: 17, column: 9)
-!1129 = !DILocalVariable(name: "k", scope: !1130, file: !1117, line: 483, type: !17, align: 1)
+!1129 = !DILocalVariable(name: "k", scope: !1130, file: !1117, line: 483, type: !7, align: 1)
 !1130 = distinct !DILexicalBlock(scope: !1128, file: !1117, line: 483, column: 13)
 !1131 = !DILocation(line: 12, column: 9, scope: !1116)
 !1132 = !DILocation(line: 13, column: 9, scope: !1116)
@@ -14880,20 +14880,20 @@ attributes #7 = { noreturn nounwind }
 !1506 = !DILocation(line: 479, column: 21, scope: !1128)
 !1507 = !DILocation(line: 476, column: 17, scope: !1128)
 !1508 = !DILocation(line: 477, column: 21, scope: !1128)
-!1509 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17habff44f6a3b6c71dE", scope: !1511, file: !1510, line: 11, type: !1513, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1517)
+!1509 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN85_$LT$pc_keyboard..layouts..uk105..Uk105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h8d9900a3d58cf13bE", scope: !1511, file: !1510, line: 11, type: !1513, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1517)
 !1510 = !DIFile(filename: "src/layouts/uk105.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "80bb6f35ae92bef86e628b8b3ec09486")
 !1511 = !DINamespace(name: "{impl#0}", scope: !1512)
 !1512 = !DINamespace(name: "uk105", scope: !437)
 !1513 = !DISubroutineType(types: !1514)
-!1514 = !{!440, !1515, !17, !455, !148}
+!1514 = !{!440, !1515, !7, !455, !148}
 !1515 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::uk105::Uk105Key", baseType: !1516, size: 64, align: 64, dwarfAddressSpace: 0)
-!1516 = !DICompositeType(tag: DW_TAG_structure_type, name: "Uk105Key", scope: !1512, file: !8, align: 8, elements: !182, identifier: "5ded867ded5b63c0542dfe6cc14b5bc4")
+!1516 = !DICompositeType(tag: DW_TAG_structure_type, name: "Uk105Key", scope: !1512, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "42b52e2b1e9d2c1c6fc4856a60c6ed3b")
 !1517 = !{!1518, !1519, !1520, !1521, !1522, !1524}
 !1518 = !DILocalVariable(name: "self", arg: 1, scope: !1509, file: !1510, line: 12, type: !1515)
-!1519 = !DILocalVariable(name: "keycode", arg: 2, scope: !1509, file: !1510, line: 13, type: !17)
+!1519 = !DILocalVariable(name: "keycode", arg: 2, scope: !1509, file: !1510, line: 13, type: !7)
 !1520 = !DILocalVariable(name: "modifiers", arg: 3, scope: !1509, file: !1510, line: 14, type: !455)
 !1521 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !1509, file: !1510, line: 15, type: !148)
-!1522 = !DILocalVariable(name: "e", scope: !1523, file: !1510, line: 71, type: !17, align: 1)
+!1522 = !DILocalVariable(name: "e", scope: !1523, file: !1510, line: 71, type: !7, align: 1)
 !1523 = distinct !DILexicalBlock(scope: !1509, file: !1510, line: 71, column: 13)
 !1524 = !DILocalVariable(name: "us", scope: !1525, file: !1510, line: 72, type: !873, align: 1)
 !1525 = distinct !DILexicalBlock(scope: !1523, file: !1510, line: 72, column: 17)
@@ -14941,20 +14941,20 @@ attributes #7 = { noreturn nounwind }
 !1567 = !DILocation(line: 38, column: 21, scope: !1509)
 !1568 = !DILocation(line: 35, column: 17, scope: !1509)
 !1569 = !DILocation(line: 36, column: 21, scope: !1509)
-!1570 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h12fbb4c1dbdf6437E", scope: !1572, file: !1571, line: 14, type: !1574, scopeLine: 14, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1578)
+!1570 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN87_$LT$pc_keyboard..layouts..jis109..Jis109Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h731b88a7ee49de02E", scope: !1572, file: !1571, line: 14, type: !1574, scopeLine: 14, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1578)
 !1571 = !DIFile(filename: "src/layouts/jis109.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "bda0464f1d384ef572fca9a52f055d1c")
 !1572 = !DINamespace(name: "{impl#0}", scope: !1573)
 !1573 = !DINamespace(name: "jis109", scope: !437)
 !1574 = !DISubroutineType(types: !1575)
-!1575 = !{!440, !1576, !17, !455, !148}
+!1575 = !{!440, !1576, !7, !455, !148}
 !1576 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::jis109::Jis109Key", baseType: !1577, size: 64, align: 64, dwarfAddressSpace: 0)
-!1577 = !DICompositeType(tag: DW_TAG_structure_type, name: "Jis109Key", scope: !1573, file: !8, align: 8, elements: !182, identifier: "b112d40106e46a3dfc6466f1f50226a9")
+!1577 = !DICompositeType(tag: DW_TAG_structure_type, name: "Jis109Key", scope: !1573, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "ee57e51d1817aada95bec2757e070caa")
 !1578 = !{!1579, !1580, !1581, !1582, !1583, !1585}
 !1579 = !DILocalVariable(name: "self", arg: 1, scope: !1570, file: !1571, line: 15, type: !1576)
-!1580 = !DILocalVariable(name: "keycode", arg: 2, scope: !1570, file: !1571, line: 16, type: !17)
+!1580 = !DILocalVariable(name: "keycode", arg: 2, scope: !1570, file: !1571, line: 16, type: !7)
 !1581 = !DILocalVariable(name: "modifiers", arg: 3, scope: !1570, file: !1571, line: 17, type: !455)
 !1582 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !1570, file: !1571, line: 18, type: !148)
-!1583 = !DILocalVariable(name: "e", scope: !1584, file: !1571, line: 172, type: !17, align: 1)
+!1583 = !DILocalVariable(name: "e", scope: !1584, file: !1571, line: 172, type: !7, align: 1)
 !1584 = distinct !DILexicalBlock(scope: !1570, file: !1571, line: 172, column: 13)
 !1585 = !DILocalVariable(name: "us", scope: !1586, file: !1571, line: 173, type: !873, align: 1)
 !1586 = distinct !DILexicalBlock(scope: !1584, file: !1571, line: 173, column: 17)
@@ -15056,22 +15056,22 @@ attributes #7 = { noreturn nounwind }
 !1682 = !DILocation(line: 168, column: 21, scope: !1570)
 !1683 = !DILocation(line: 165, column: 17, scope: !1570)
 !1684 = !DILocation(line: 166, column: 21, scope: !1570)
-!1685 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hacf23695a6cff0bbE", scope: !1687, file: !1686, line: 13, type: !1689, scopeLine: 13, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1693)
+!1685 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN84_$LT$pc_keyboard..layouts..azerty..Azerty$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h76a8685bd3a14d9fE", scope: !1687, file: !1686, line: 13, type: !1689, scopeLine: 13, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !1693)
 !1686 = !DIFile(filename: "src/layouts/azerty.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "67585ca76cfa803bdf091020fd17c28c")
 !1687 = !DINamespace(name: "{impl#0}", scope: !1688)
 !1688 = !DINamespace(name: "azerty", scope: !437)
 !1689 = !DISubroutineType(types: !1690)
-!1690 = !{!440, !1691, !17, !455, !148}
+!1690 = !{!440, !1691, !7, !455, !148}
 !1691 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::azerty::Azerty", baseType: !1692, size: 64, align: 64, dwarfAddressSpace: 0)
-!1692 = !DICompositeType(tag: DW_TAG_structure_type, name: "Azerty", scope: !1688, file: !8, align: 8, elements: !182, identifier: "f021bbefbcc1f4886b5c1deffb84b5cd")
+!1692 = !DICompositeType(tag: DW_TAG_structure_type, name: "Azerty", scope: !1688, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "f115eab7b0f9559d943d2f27eede2d19")
 !1693 = !{!1694, !1695, !1696, !1697, !1698, !1700}
 !1694 = !DILocalVariable(name: "self", arg: 1, scope: !1685, file: !1686, line: 14, type: !1691)
-!1695 = !DILocalVariable(name: "keycode", arg: 2, scope: !1685, file: !1686, line: 15, type: !17)
+!1695 = !DILocalVariable(name: "keycode", arg: 2, scope: !1685, file: !1686, line: 15, type: !7)
 !1696 = !DILocalVariable(name: "modifiers", arg: 3, scope: !1685, file: !1686, line: 16, type: !455)
 !1697 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !1685, file: !1686, line: 17, type: !148)
 !1698 = !DILocalVariable(name: "map_to_unicode", scope: !1699, file: !1686, line: 19, type: !459, align: 1)
 !1699 = distinct !DILexicalBlock(scope: !1685, file: !1686, line: 19, column: 9)
-!1700 = !DILocalVariable(name: "k", scope: !1701, file: !1686, line: 513, type: !17, align: 1)
+!1700 = !DILocalVariable(name: "k", scope: !1701, file: !1686, line: 513, type: !7, align: 1)
 !1701 = distinct !DILexicalBlock(scope: !1699, file: !1686, line: 513, column: 13)
 !1702 = !DILocation(line: 14, column: 9, scope: !1685)
 !1703 = !DILocation(line: 15, column: 9, scope: !1685)
@@ -15492,22 +15492,22 @@ attributes #7 = { noreturn nounwind }
 !2118 = !DILocation(line: 508, column: 21, scope: !1699)
 !2119 = !DILocation(line: 505, column: 17, scope: !1699)
 !2120 = !DILocation(line: 506, column: 21, scope: !1699)
-!2121 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17heff68b73dd06292eE", scope: !2123, file: !2122, line: 11, type: !2125, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2129)
+!2121 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN86_$LT$pc_keyboard..layouts..colemak..Colemak$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h65d494e461fef24dE", scope: !2123, file: !2122, line: 11, type: !2125, scopeLine: 11, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2129)
 !2122 = !DIFile(filename: "src/layouts/colemak.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "733d9651e48ee5d456e0301aa32f4b95")
 !2123 = !DINamespace(name: "{impl#0}", scope: !2124)
 !2124 = !DINamespace(name: "colemak", scope: !437)
 !2125 = !DISubroutineType(types: !2126)
-!2126 = !{!440, !2127, !17, !455, !148}
+!2126 = !{!440, !2127, !7, !455, !148}
 !2127 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::colemak::Colemak", baseType: !2128, size: 64, align: 64, dwarfAddressSpace: 0)
-!2128 = !DICompositeType(tag: DW_TAG_structure_type, name: "Colemak", scope: !2124, file: !8, align: 8, elements: !182, identifier: "90bfd775ae658971ad3444a85dc22528")
+!2128 = !DICompositeType(tag: DW_TAG_structure_type, name: "Colemak", scope: !2124, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "f90c03a867f32ec14a3a2f27c5587c57")
 !2129 = !{!2130, !2131, !2132, !2133, !2134, !2136}
 !2130 = !DILocalVariable(name: "self", arg: 1, scope: !2121, file: !2122, line: 12, type: !2127)
-!2131 = !DILocalVariable(name: "keycode", arg: 2, scope: !2121, file: !2122, line: 13, type: !17)
+!2131 = !DILocalVariable(name: "keycode", arg: 2, scope: !2121, file: !2122, line: 13, type: !7)
 !2132 = !DILocalVariable(name: "modifiers", arg: 3, scope: !2121, file: !2122, line: 14, type: !455)
 !2133 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !2121, file: !2122, line: 15, type: !148)
 !2134 = !DILocalVariable(name: "map_to_unicode", scope: !2135, file: !2122, line: 17, type: !459, align: 1)
 !2135 = distinct !DILexicalBlock(scope: !2121, file: !2122, line: 17, column: 9)
-!2136 = !DILocalVariable(name: "k", scope: !2137, file: !2122, line: 483, type: !17, align: 1)
+!2136 = !DILocalVariable(name: "k", scope: !2137, file: !2122, line: 483, type: !7, align: 1)
 !2137 = distinct !DILexicalBlock(scope: !2135, file: !2122, line: 483, column: 13)
 !2138 = !DILocation(line: 12, column: 9, scope: !2121)
 !2139 = !DILocation(line: 13, column: 9, scope: !2121)
@@ -15887,22 +15887,22 @@ attributes #7 = { noreturn nounwind }
 !2513 = !DILocation(line: 479, column: 21, scope: !2135)
 !2514 = !DILocation(line: 476, column: 17, scope: !2135)
 !2515 = !DILocation(line: 477, column: 21, scope: !2135)
-!2516 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hc765e0409a94d5c4E", scope: !2518, file: !2517, line: 13, type: !2520, scopeLine: 13, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2524)
+!2516 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN85_$LT$pc_keyboard..layouts..de105..De105Key$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17he00613d4f21a5a46E", scope: !2518, file: !2517, line: 13, type: !2520, scopeLine: 13, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2524)
 !2517 = !DIFile(filename: "src/layouts/de105.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "4aba6eda764b673c29565452a1e351df")
 !2518 = !DINamespace(name: "{impl#0}", scope: !2519)
 !2519 = !DINamespace(name: "de105", scope: !437)
 !2520 = !DISubroutineType(types: !2521)
-!2521 = !{!440, !2522, !17, !455, !148}
+!2521 = !{!440, !2522, !7, !455, !148}
 !2522 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::de105::De105Key", baseType: !2523, size: 64, align: 64, dwarfAddressSpace: 0)
-!2523 = !DICompositeType(tag: DW_TAG_structure_type, name: "De105Key", scope: !2519, file: !8, align: 8, elements: !182, identifier: "e508ddbdc67c5fe12224a9fdb8bc01a2")
+!2523 = !DICompositeType(tag: DW_TAG_structure_type, name: "De105Key", scope: !2519, file: !8, align: 8, flags: DIFlagPublic, elements: !182, identifier: "720f1c27584f8e7811e1bc58cf485b49")
 !2524 = !{!2525, !2526, !2527, !2528, !2529, !2531, !2533}
 !2525 = !DILocalVariable(name: "self", arg: 1, scope: !2516, file: !2517, line: 14, type: !2522)
-!2526 = !DILocalVariable(name: "keycode", arg: 2, scope: !2516, file: !2517, line: 15, type: !17)
+!2526 = !DILocalVariable(name: "keycode", arg: 2, scope: !2516, file: !2517, line: 15, type: !7)
 !2527 = !DILocalVariable(name: "modifiers", arg: 3, scope: !2516, file: !2517, line: 16, type: !455)
 !2528 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !2516, file: !2517, line: 17, type: !148)
 !2529 = !DILocalVariable(name: "map_to_unicode", scope: !2530, file: !2517, line: 19, type: !459, align: 1)
 !2530 = distinct !DILexicalBlock(scope: !2516, file: !2517, line: 19, column: 9)
-!2531 = !DILocalVariable(name: "e", scope: !2532, file: !2517, line: 223, type: !17, align: 1)
+!2531 = !DILocalVariable(name: "e", scope: !2532, file: !2517, line: 223, type: !7, align: 1)
 !2532 = distinct !DILexicalBlock(scope: !2530, file: !2517, line: 223, column: 13)
 !2533 = !DILocalVariable(name: "us", scope: !2534, file: !2517, line: 224, type: !873, align: 1)
 !2534 = distinct !DILexicalBlock(scope: !2532, file: !2517, line: 224, column: 17)
@@ -16063,52 +16063,52 @@ attributes #7 = { noreturn nounwind }
 !2689 = !DILocation(line: 211, column: 21, scope: !2530)
 !2690 = !DILocation(line: 208, column: 17, scope: !2530)
 !2691 = !DILocation(line: 209, column: 21, scope: !2530)
-!2692 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN79_$LT$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hcb21541647b5d3e2E", scope: !2694, file: !2693, line: 44, type: !2695, scopeLine: 44, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2735)
+!2692 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN79_$LT$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17hd09e84017d564e4dE", scope: !2694, file: !2693, line: 44, type: !2695, scopeLine: 44, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2735)
 !2693 = !DIFile(filename: "src/layouts/mod.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "fd1306aa1e89833af3e7a1931d078459")
 !2694 = !DINamespace(name: "{impl#0}", scope: !437)
 !2695 = !DISubroutineType(types: !2696)
-!2696 = !{!440, !2697, !17, !455, !148}
+!2696 = !{!440, !2697, !7, !455, !148}
 !2697 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::layouts::AnyLayout", baseType: !2698, size: 64, align: 64, dwarfAddressSpace: 0)
-!2698 = !DICompositeType(tag: DW_TAG_structure_type, name: "AnyLayout", scope: !437, file: !8, size: 8, align: 8, elements: !2699, templateParams: !182, identifier: "a1e76e2dbf5962b42d33b7c350b960de")
+!2698 = !DICompositeType(tag: DW_TAG_structure_type, name: "AnyLayout", scope: !437, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2699, templateParams: !182, identifier: "ee1b0e67e9c9d6df06227dd790fa653")
 !2699 = !{!2700}
-!2700 = !DICompositeType(tag: DW_TAG_variant_part, scope: !2698, file: !8, size: 8, align: 8, elements: !2701, templateParams: !182, identifier: "97a9eeb64242a6026f09d4ab16490a9a", discriminator: !2734)
+!2700 = !DICompositeType(tag: DW_TAG_variant_part, scope: !2698, file: !8, size: 8, align: 8, elements: !2701, templateParams: !182, identifier: "ca4b3a87f5d883636f348d37a20fd53", discriminator: !2734)
 !2701 = !{!2702, !2706, !2710, !2714, !2718, !2722, !2726, !2730}
 !2702 = !DIDerivedType(tag: DW_TAG_member, name: "DVP104Key", scope: !2700, file: !8, baseType: !2703, size: 8, align: 8, extraData: i128 0)
-!2703 = !DICompositeType(tag: DW_TAG_structure_type, name: "DVP104Key", scope: !2698, file: !8, size: 8, align: 8, elements: !2704, templateParams: !182, identifier: "48ed64160a692a97fcabc47c3b4e2a0")
+!2703 = !DICompositeType(tag: DW_TAG_structure_type, name: "DVP104Key", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2704, templateParams: !182, identifier: "4becf0fc34216ed0eba057394074c639")
 !2704 = !{!2705}
-!2705 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2703, file: !8, baseType: !454, align: 8, offset: 8)
+!2705 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2703, file: !8, baseType: !454, align: 8, offset: 8, flags: DIFlagPublic)
 !2706 = !DIDerivedType(tag: DW_TAG_member, name: "Dvorak104Key", scope: !2700, file: !8, baseType: !2707, size: 8, align: 8, extraData: i128 1)
-!2707 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dvorak104Key", scope: !2698, file: !8, size: 8, align: 8, elements: !2708, templateParams: !182, identifier: "e848718b56174f4dc12e0a6ae9987878")
+!2707 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dvorak104Key", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2708, templateParams: !182, identifier: "cb7c230c91e28b2ea4939d6bffaa4bf1")
 !2708 = !{!2709}
-!2709 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2707, file: !8, baseType: !861, align: 8, offset: 8)
+!2709 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2707, file: !8, baseType: !861, align: 8, offset: 8, flags: DIFlagPublic)
 !2710 = !DIDerivedType(tag: DW_TAG_member, name: "Us104Key", scope: !2700, file: !8, baseType: !2711, size: 8, align: 8, extraData: i128 2)
-!2711 = !DICompositeType(tag: DW_TAG_structure_type, name: "Us104Key", scope: !2698, file: !8, size: 8, align: 8, elements: !2712, templateParams: !182, identifier: "6b18b685fcab70a685b4ac8ad8949da1")
+!2711 = !DICompositeType(tag: DW_TAG_structure_type, name: "Us104Key", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2712, templateParams: !182, identifier: "780a36e806719cc1ea3f902bcd62eccc")
 !2712 = !{!2713}
-!2713 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2711, file: !8, baseType: !873, align: 8, offset: 8)
+!2713 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2711, file: !8, baseType: !873, align: 8, offset: 8, flags: DIFlagPublic)
 !2714 = !DIDerivedType(tag: DW_TAG_member, name: "Uk105Key", scope: !2700, file: !8, baseType: !2715, size: 8, align: 8, extraData: i128 3)
-!2715 = !DICompositeType(tag: DW_TAG_structure_type, name: "Uk105Key", scope: !2698, file: !8, size: 8, align: 8, elements: !2716, templateParams: !182, identifier: "bd77c513e7c8402e1fc40abd1033547f")
+!2715 = !DICompositeType(tag: DW_TAG_structure_type, name: "Uk105Key", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2716, templateParams: !182, identifier: "3f91656dc3efb3ccf81d4f1a70f97eaa")
 !2716 = !{!2717}
-!2717 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2715, file: !8, baseType: !1516, align: 8, offset: 8)
+!2717 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2715, file: !8, baseType: !1516, align: 8, offset: 8, flags: DIFlagPublic)
 !2718 = !DIDerivedType(tag: DW_TAG_member, name: "Jis109Key", scope: !2700, file: !8, baseType: !2719, size: 8, align: 8, extraData: i128 4)
-!2719 = !DICompositeType(tag: DW_TAG_structure_type, name: "Jis109Key", scope: !2698, file: !8, size: 8, align: 8, elements: !2720, templateParams: !182, identifier: "2258a5a7f79d042c2c4c94f47f87b14c")
+!2719 = !DICompositeType(tag: DW_TAG_structure_type, name: "Jis109Key", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2720, templateParams: !182, identifier: "5bbc281790e5931e68bde4fc35e9156b")
 !2720 = !{!2721}
-!2721 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2719, file: !8, baseType: !1577, align: 8, offset: 8)
+!2721 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2719, file: !8, baseType: !1577, align: 8, offset: 8, flags: DIFlagPublic)
 !2722 = !DIDerivedType(tag: DW_TAG_member, name: "Azerty", scope: !2700, file: !8, baseType: !2723, size: 8, align: 8, extraData: i128 5)
-!2723 = !DICompositeType(tag: DW_TAG_structure_type, name: "Azerty", scope: !2698, file: !8, size: 8, align: 8, elements: !2724, templateParams: !182, identifier: "ff44af5979acebf4ec6cfcc3ca972cf6")
+!2723 = !DICompositeType(tag: DW_TAG_structure_type, name: "Azerty", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2724, templateParams: !182, identifier: "685a3388131645446395df6031533d0c")
 !2724 = !{!2725}
-!2725 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2723, file: !8, baseType: !1692, align: 8, offset: 8)
+!2725 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2723, file: !8, baseType: !1692, align: 8, offset: 8, flags: DIFlagPublic)
 !2726 = !DIDerivedType(tag: DW_TAG_member, name: "Colemak", scope: !2700, file: !8, baseType: !2727, size: 8, align: 8, extraData: i128 6)
-!2727 = !DICompositeType(tag: DW_TAG_structure_type, name: "Colemak", scope: !2698, file: !8, size: 8, align: 8, elements: !2728, templateParams: !182, identifier: "bedf14922cfacf3180eb87e02de1148")
+!2727 = !DICompositeType(tag: DW_TAG_structure_type, name: "Colemak", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2728, templateParams: !182, identifier: "811860968eb7db3414c283cab4838204")
 !2728 = !{!2729}
-!2729 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2727, file: !8, baseType: !2128, align: 8, offset: 8)
+!2729 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2727, file: !8, baseType: !2128, align: 8, offset: 8, flags: DIFlagPublic)
 !2730 = !DIDerivedType(tag: DW_TAG_member, name: "De105Key", scope: !2700, file: !8, baseType: !2731, size: 8, align: 8, extraData: i128 7)
-!2731 = !DICompositeType(tag: DW_TAG_structure_type, name: "De105Key", scope: !2698, file: !8, size: 8, align: 8, elements: !2732, templateParams: !182, identifier: "eacbd09bc06898a835ce9e8e2e7aeefe")
+!2731 = !DICompositeType(tag: DW_TAG_structure_type, name: "De105Key", scope: !2698, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2732, templateParams: !182, identifier: "9613803a20c7e603924dc04193d19dfc")
 !2732 = !{!2733}
-!2733 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2731, file: !8, baseType: !2523, align: 8, offset: 8)
+!2733 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2731, file: !8, baseType: !2523, align: 8, offset: 8, flags: DIFlagPublic)
 !2734 = !DIDerivedType(tag: DW_TAG_member, scope: !2698, file: !8, baseType: !10, size: 8, align: 8, flags: DIFlagArtificial)
 !2735 = !{!2736, !2737, !2738, !2739, !2740, !2742, !2744, !2746, !2748, !2750, !2752, !2754}
 !2736 = !DILocalVariable(name: "self", arg: 1, scope: !2692, file: !2693, line: 45, type: !2697)
-!2737 = !DILocalVariable(name: "keycode", arg: 2, scope: !2692, file: !2693, line: 46, type: !17)
+!2737 = !DILocalVariable(name: "keycode", arg: 2, scope: !2692, file: !2693, line: 46, type: !7)
 !2738 = !DILocalVariable(name: "modifiers", arg: 3, scope: !2692, file: !2693, line: 47, type: !455)
 !2739 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !2692, file: !2693, line: 48, type: !148)
 !2740 = !DILocalVariable(name: "inner", scope: !2741, file: !2693, line: 51, type: !453, align: 8)
@@ -16159,14 +16159,14 @@ attributes #7 = { noreturn nounwind }
 !2785 = !DILocation(line: 58, column: 33, scope: !2755)
 !2786 = !DILocation(line: 58, column: 43, scope: !2755)
 !2787 = !DILocation(line: 60, column: 6, scope: !2692)
-!2788 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN83_$LT$$RF$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h53ed92cda871f516E", scope: !2789, file: !2693, line: 64, type: !2790, scopeLine: 64, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2793)
+!2788 = distinct !DISubprogram(name: "map_keycode", linkageName: "_ZN83_$LT$$RF$pc_keyboard..layouts..AnyLayout$u20$as$u20$pc_keyboard..KeyboardLayout$GT$11map_keycode17h70855f39fb21091cE", scope: !2789, file: !2693, line: 64, type: !2790, scopeLine: 64, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !2793)
 !2789 = !DINamespace(name: "{impl#1}", scope: !437)
 !2790 = !DISubroutineType(types: !2791)
-!2791 = !{!440, !2792, !17, !455, !148}
+!2791 = !{!440, !2792, !7, !455, !148}
 !2792 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&&pc_keyboard::layouts::AnyLayout", baseType: !2697, size: 64, align: 64, dwarfAddressSpace: 0)
 !2793 = !{!2794, !2795, !2796, !2797, !2798, !2800, !2802, !2804, !2806, !2808, !2810, !2812}
 !2794 = !DILocalVariable(name: "self", arg: 1, scope: !2788, file: !2693, line: 65, type: !2792)
-!2795 = !DILocalVariable(name: "keycode", arg: 2, scope: !2788, file: !2693, line: 66, type: !17)
+!2795 = !DILocalVariable(name: "keycode", arg: 2, scope: !2788, file: !2693, line: 66, type: !7)
 !2796 = !DILocalVariable(name: "modifiers", arg: 3, scope: !2788, file: !2693, line: 67, type: !455)
 !2797 = !DILocalVariable(name: "handle_ctrl", arg: 4, scope: !2788, file: !2693, line: 68, type: !148)
 !2798 = !DILocalVariable(name: "inner", scope: !2799, file: !2693, line: 71, type: !453, align: 8)
@@ -16217,24 +16217,24 @@ attributes #7 = { noreturn nounwind }
 !2843 = !DILocation(line: 78, column: 33, scope: !2813)
 !2844 = !DILocation(line: 78, column: 43, scope: !2813)
 !2845 = !DILocation(line: 80, column: 6, scope: !2788)
-!2846 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet13new17h86aed014760da6b8E", scope: !2848, file: !2847, line: 17, type: !2853, scopeLine: 17, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !2855)
+!2846 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet13new17hc88d6615d5e64151E", scope: !2848, file: !2847, line: 17, type: !2853, scopeLine: 17, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !2855)
 !2847 = !DIFile(filename: "src/scancodes/set1.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "d640ebfacf608bf249913b09675584e2")
-!2848 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScancodeSet1", scope: !2849, file: !8, size: 8, align: 8, elements: !2851, templateParams: !182, identifier: "f95f03221e225eb72b3161fd55e5983")
+!2848 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScancodeSet1", scope: !2849, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !2851, templateParams: !182, identifier: "e3fd471ede10693cde7430641b890c7e")
 !2849 = !DINamespace(name: "set1", scope: !2850)
 !2850 = !DINamespace(name: "scancodes", scope: !9)
 !2851 = !{!2852}
-!2852 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !2848, file: !8, baseType: !152, size: 8, align: 8)
+!2852 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !2848, file: !8, baseType: !152, size: 8, align: 8, flags: DIFlagPrivate)
 !2853 = !DISubroutineType(types: !2854)
 !2854 = !{!2848}
-!2855 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet13new17h86aed014760da6b8E", scope: !2848, file: !2847, line: 17, type: !2853, scopeLine: 17, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!2855 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet13new17hc88d6615d5e64151E", scope: !2848, file: !2847, line: 17, type: !2853, scopeLine: 17, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !2856 = !DILocation(line: 19, column: 20, scope: !2846)
 !2857 = !DILocation(line: 18, column: 9, scope: !2846)
 !2858 = !{i8 0, i8 6}
 !2859 = !DILocation(line: 21, column: 6, scope: !2846)
-!2860 = distinct !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17hd5b470ead5cee59eE", scope: !2848, file: !2847, line: 24, type: !2861, scopeLine: 24, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !2863, retainedNodes: !2864)
+!2860 = distinct !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17h7c044a3120311ba3E", scope: !2848, file: !2847, line: 24, type: !2861, scopeLine: 24, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !2863, retainedNodes: !2864)
 !2861 = !DISubroutineType(types: !2862)
-!2862 = !{!398, !10}
-!2863 = !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17hd5b470ead5cee59eE", scope: !2848, file: !2847, line: 24, type: !2861, scopeLine: 24, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!2862 = !{!346, !10}
+!2863 = !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet112map_scancode17h7c044a3120311ba3E", scope: !2848, file: !2847, line: 24, type: !2861, scopeLine: 24, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !2864 = !{!2865}
 !2865 = !DILocalVariable(name: "code", arg: 1, scope: !2860, file: !2847, line: 24, type: !10)
 !2866 = !DILocation(line: 24, column: 21, scope: !2860)
@@ -16504,8 +16504,8 @@ attributes #7 = { noreturn nounwind }
 !3130 = !DILocation(line: 113, column: 21, scope: !2860)
 !3131 = !DILocation(line: 113, column: 36, scope: !2860)
 !3132 = !DILocation(line: 116, column: 6, scope: !2860)
-!3133 = distinct !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17hc39613ab5f834448E", scope: !2848, file: !2847, line: 119, type: !2861, scopeLine: 119, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3134, retainedNodes: !3135)
-!3134 = !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17hc39613ab5f834448E", scope: !2848, file: !2847, line: 119, type: !2861, scopeLine: 119, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!3133 = distinct !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17h16e47c6fd29beac7E", scope: !2848, file: !2847, line: 119, type: !2861, scopeLine: 119, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3134, retainedNodes: !3135)
+!3134 = !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet121map_extended_scancode17h16e47c6fd29beac7E", scope: !2848, file: !2847, line: 119, type: !2861, scopeLine: 119, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !3135 = !{!3136}
 !3136 = !DILocalVariable(name: "code", arg: 1, scope: !3133, file: !2847, line: 119, type: !10)
 !3137 = !DILocation(line: 119, column: 30, scope: !3133)
@@ -16613,8 +16613,8 @@ attributes #7 = { noreturn nounwind }
 !3239 = !DILocation(line: 212, column: 21, scope: !3133)
 !3240 = !DILocation(line: 212, column: 38, scope: !3133)
 !3241 = !DILocation(line: 215, column: 6, scope: !3133)
-!3242 = distinct !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h44a843bc09843b98E", scope: !2848, file: !2847, line: 218, type: !2861, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3243, retainedNodes: !3244)
-!3243 = !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h44a843bc09843b98E", scope: !2848, file: !2847, line: 218, type: !2861, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!3242 = distinct !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h04681c93a265713dE", scope: !2848, file: !2847, line: 218, type: !2861, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3243, retainedNodes: !3244)
+!3243 = !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set112ScancodeSet122map_extended2_scancode17h04681c93a265713dE", scope: !2848, file: !2847, line: 218, type: !2861, scopeLine: 218, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !3244 = !{!3245}
 !3245 = !DILocalVariable(name: "code", arg: 1, scope: !3242, file: !2847, line: 218, type: !10)
 !3246 = !DILocation(line: 218, column: 31, scope: !3242)
@@ -16626,37 +16626,37 @@ attributes #7 = { noreturn nounwind }
 !3252 = !DILocation(line: 221, column: 18, scope: !3242)
 !3253 = !DILocation(line: 221, column: 43, scope: !3242)
 !3254 = !DILocation(line: 223, column: 6, scope: !3242)
-!3255 = distinct !DISubprogram(name: "advance_state", linkageName: "_ZN87_$LT$pc_keyboard..scancodes..set1..ScancodeSet1$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17hf5d93a519bace9c9E", scope: !3256, file: !2847, line: 242, type: !3257, scopeLine: 242, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !3260)
+!3255 = distinct !DISubprogram(name: "advance_state", linkageName: "_ZN87_$LT$pc_keyboard..scancodes..set1..ScancodeSet1$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17hea1f7af1116a6120E", scope: !3256, file: !2847, line: 242, type: !3257, scopeLine: 242, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !3260)
 !3256 = !DINamespace(name: "{impl#1}", scope: !2849)
 !3257 = !DISubroutineType(types: !3258)
-!3258 = !{!257, !3259, !10}
+!3258 = !{!167, !3259, !10}
 !3259 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut pc_keyboard::scancodes::set1::ScancodeSet1", baseType: !2848, size: 64, align: 64, dwarfAddressSpace: 0)
 !3260 = !{!3261, !3262, !3263, !3265, !3267, !3269, !3271, !3273, !3275, !3277, !3279, !3281, !3283, !3285}
 !3261 = !DILocalVariable(name: "self", arg: 1, scope: !3255, file: !2847, line: 242, type: !3259)
 !3262 = !DILocalVariable(name: "code", arg: 2, scope: !3255, file: !2847, line: 242, type: !10)
-!3263 = !DILocalVariable(name: "residual", scope: !3264, file: !2847, line: 257, type: !198, align: 1)
+!3263 = !DILocalVariable(name: "residual", scope: !3264, file: !2847, line: 257, type: !202, align: 1)
 !3264 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 257, column: 60)
-!3265 = !DILocalVariable(name: "val", scope: !3266, file: !2847, line: 257, type: !17, align: 1)
+!3265 = !DILocalVariable(name: "val", scope: !3266, file: !2847, line: 257, type: !7, align: 1)
 !3266 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 257, column: 29)
-!3267 = !DILocalVariable(name: "residual", scope: !3268, file: !2847, line: 264, type: !198, align: 1)
+!3267 = !DILocalVariable(name: "residual", scope: !3268, file: !2847, line: 264, type: !202, align: 1)
 !3268 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 264, column: 53)
-!3269 = !DILocalVariable(name: "val", scope: !3270, file: !2847, line: 264, type: !17, align: 1)
+!3269 = !DILocalVariable(name: "val", scope: !3270, file: !2847, line: 264, type: !7, align: 1)
 !3270 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 264, column: 29)
-!3271 = !DILocalVariable(name: "residual", scope: !3272, file: !2847, line: 276, type: !198, align: 1)
+!3271 = !DILocalVariable(name: "residual", scope: !3272, file: !2847, line: 276, type: !202, align: 1)
 !3272 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 276, column: 69)
-!3273 = !DILocalVariable(name: "val", scope: !3274, file: !2847, line: 276, type: !17, align: 1)
+!3273 = !DILocalVariable(name: "val", scope: !3274, file: !2847, line: 276, type: !7, align: 1)
 !3274 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 276, column: 29)
-!3275 = !DILocalVariable(name: "residual", scope: !3276, file: !2847, line: 283, type: !198, align: 1)
+!3275 = !DILocalVariable(name: "residual", scope: !3276, file: !2847, line: 283, type: !202, align: 1)
 !3276 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 283, column: 62)
-!3277 = !DILocalVariable(name: "val", scope: !3278, file: !2847, line: 283, type: !17, align: 1)
+!3277 = !DILocalVariable(name: "val", scope: !3278, file: !2847, line: 283, type: !7, align: 1)
 !3278 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 283, column: 29)
-!3279 = !DILocalVariable(name: "residual", scope: !3280, file: !2847, line: 295, type: !198, align: 1)
+!3279 = !DILocalVariable(name: "residual", scope: !3280, file: !2847, line: 295, type: !202, align: 1)
 !3280 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 295, column: 70)
-!3281 = !DILocalVariable(name: "val", scope: !3282, file: !2847, line: 295, type: !17, align: 1)
+!3281 = !DILocalVariable(name: "val", scope: !3282, file: !2847, line: 295, type: !7, align: 1)
 !3282 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 295, column: 29)
-!3283 = !DILocalVariable(name: "residual", scope: !3284, file: !2847, line: 302, type: !198, align: 1)
+!3283 = !DILocalVariable(name: "residual", scope: !3284, file: !2847, line: 302, type: !202, align: 1)
 !3284 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 302, column: 63)
-!3285 = !DILocalVariable(name: "val", scope: !3286, file: !2847, line: 302, type: !17, align: 1)
+!3285 = !DILocalVariable(name: "val", scope: !3286, file: !2847, line: 302, type: !7, align: 1)
 !3286 = distinct !DILexicalBlock(scope: !3255, file: !2847, line: 302, column: 29)
 !3287 = !DILocation(line: 242, column: 22, scope: !3255)
 !3288 = !DILocation(line: 242, column: 33, scope: !3255)
@@ -16747,20 +16747,20 @@ attributes #7 = { noreturn nounwind }
 !3373 = !DILocation(line: 295, column: 70, scope: !3255)
 !3374 = !DILocation(line: 295, column: 70, scope: !3280)
 !3375 = !DILocation(line: 295, column: 29, scope: !3280)
-!3376 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet23new17h19ecbbd730b73c57E", scope: !3378, file: !3377, line: 18, type: !3382, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3384)
+!3376 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet23new17h436e53282ce2cf05E", scope: !3378, file: !3377, line: 18, type: !3382, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3384)
 !3377 = !DIFile(filename: "src/scancodes/set2.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "9fd198595de9fe924cdd6156a387c0c4")
-!3378 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScancodeSet2", scope: !3379, file: !8, size: 8, align: 8, elements: !3380, templateParams: !182, identifier: "e0f688ff868781bc8511f5aec6820a27")
+!3378 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScancodeSet2", scope: !3379, file: !8, size: 8, align: 8, flags: DIFlagPublic, elements: !3380, templateParams: !182, identifier: "abbf071885f358dcf6442ec5dc90d1aa")
 !3379 = !DINamespace(name: "set2", scope: !2850)
 !3380 = !{!3381}
-!3381 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !3378, file: !8, baseType: !152, size: 8, align: 8)
+!3381 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !3378, file: !8, baseType: !152, size: 8, align: 8, flags: DIFlagPrivate)
 !3382 = !DISubroutineType(types: !3383)
 !3383 = !{!3378}
-!3384 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet23new17h19ecbbd730b73c57E", scope: !3378, file: !3377, line: 18, type: !3382, scopeLine: 18, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!3384 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet23new17h436e53282ce2cf05E", scope: !3378, file: !3377, line: 18, type: !3382, scopeLine: 18, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !3385 = !DILocation(line: 20, column: 20, scope: !3376)
 !3386 = !DILocation(line: 19, column: 9, scope: !3376)
 !3387 = !DILocation(line: 22, column: 6, scope: !3376)
-!3388 = distinct !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h9518aa3f02866bd0E", scope: !3378, file: !3377, line: 25, type: !2861, scopeLine: 25, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3389, retainedNodes: !3390)
-!3389 = !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h9518aa3f02866bd0E", scope: !3378, file: !3377, line: 25, type: !2861, scopeLine: 25, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!3388 = distinct !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h0c8e70e55d780967E", scope: !3378, file: !3377, line: 25, type: !2861, scopeLine: 25, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3389, retainedNodes: !3390)
+!3389 = !DISubprogram(name: "map_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet212map_scancode17h0c8e70e55d780967E", scope: !3378, file: !3377, line: 25, type: !2861, scopeLine: 25, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !3390 = !{!3391}
 !3391 = !DILocalVariable(name: "code", arg: 1, scope: !3388, file: !3377, line: 25, type: !10)
 !3392 = !DILocation(line: 25, column: 21, scope: !3388)
@@ -17051,8 +17051,8 @@ attributes #7 = { noreturn nounwind }
 !3677 = !DILocation(line: 121, column: 21, scope: !3388)
 !3678 = !DILocation(line: 121, column: 46, scope: !3388)
 !3679 = !DILocation(line: 124, column: 6, scope: !3388)
-!3680 = distinct !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17ha48addb341d772dbE", scope: !3378, file: !3377, line: 127, type: !2861, scopeLine: 127, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3681, retainedNodes: !3682)
-!3681 = !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17ha48addb341d772dbE", scope: !3378, file: !3377, line: 127, type: !2861, scopeLine: 127, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!3680 = distinct !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17h5464f300e11a1646E", scope: !3378, file: !3377, line: 127, type: !2861, scopeLine: 127, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3681, retainedNodes: !3682)
+!3681 = !DISubprogram(name: "map_extended_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet221map_extended_scancode17h5464f300e11a1646E", scope: !3378, file: !3377, line: 127, type: !2861, scopeLine: 127, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !3682 = !{!3683}
 !3683 = !DILocalVariable(name: "code", arg: 1, scope: !3680, file: !3377, line: 127, type: !10)
 !3684 = !DILocation(line: 127, column: 30, scope: !3680)
@@ -17145,8 +17145,8 @@ attributes #7 = { noreturn nounwind }
 !3771 = !DILocation(line: 156, column: 21, scope: !3680)
 !3772 = !DILocation(line: 156, column: 39, scope: !3680)
 !3773 = !DILocation(line: 159, column: 6, scope: !3680)
-!3774 = distinct !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17h327e3d8d14d8916aE", scope: !3378, file: !3377, line: 162, type: !2861, scopeLine: 162, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3775, retainedNodes: !3776)
-!3775 = !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17h327e3d8d14d8916aE", scope: !3378, file: !3377, line: 162, type: !2861, scopeLine: 162, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!3774 = distinct !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17hbb8121b364984c34E", scope: !3378, file: !3377, line: 162, type: !2861, scopeLine: 162, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3775, retainedNodes: !3776)
+!3775 = !DISubprogram(name: "map_extended2_scancode", linkageName: "_ZN11pc_keyboard9scancodes4set212ScancodeSet222map_extended2_scancode17hbb8121b364984c34E", scope: !3378, file: !3377, line: 162, type: !2861, scopeLine: 162, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !3776 = !{!3777}
 !3777 = !DILocalVariable(name: "code", arg: 1, scope: !3774, file: !3377, line: 162, type: !10)
 !3778 = !DILocation(line: 162, column: 31, scope: !3774)
@@ -17158,45 +17158,45 @@ attributes #7 = { noreturn nounwind }
 !3784 = !DILocation(line: 165, column: 18, scope: !3774)
 !3785 = !DILocation(line: 165, column: 43, scope: !3774)
 !3786 = !DILocation(line: 167, column: 6, scope: !3774)
-!3787 = distinct !DISubprogram(name: "advance_state", linkageName: "_ZN87_$LT$pc_keyboard..scancodes..set2..ScancodeSet2$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17hb33b63f9257eb4e3E", scope: !3788, file: !3377, line: 195, type: !3789, scopeLine: 195, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !3792)
+!3787 = distinct !DISubprogram(name: "advance_state", linkageName: "_ZN87_$LT$pc_keyboard..scancodes..set2..ScancodeSet2$u20$as$u20$pc_keyboard..ScancodeSet$GT$13advance_state17h962d199f829d1b5cE", scope: !3788, file: !3377, line: 195, type: !3789, scopeLine: 195, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !3792)
 !3788 = !DINamespace(name: "{impl#1}", scope: !3379)
 !3789 = !DISubroutineType(types: !3790)
-!3790 = !{!257, !3791, !10}
+!3790 = !{!167, !3791, !10}
 !3791 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut pc_keyboard::scancodes::set2::ScancodeSet2", baseType: !3378, size: 64, align: 64, dwarfAddressSpace: 0)
 !3792 = !{!3793, !3794, !3795, !3797, !3799, !3801, !3803, !3805, !3807, !3809, !3811, !3813, !3815, !3817, !3819, !3821, !3823, !3825}
 !3793 = !DILocalVariable(name: "self", arg: 1, scope: !3787, file: !3377, line: 195, type: !3791)
 !3794 = !DILocalVariable(name: "code", arg: 2, scope: !3787, file: !3377, line: 195, type: !10)
-!3795 = !DILocalVariable(name: "keycode", scope: !3796, file: !3377, line: 211, type: !17, align: 1)
+!3795 = !DILocalVariable(name: "keycode", scope: !3796, file: !3377, line: 211, type: !7, align: 1)
 !3796 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 211, column: 21)
-!3797 = !DILocalVariable(name: "residual", scope: !3798, file: !3377, line: 211, type: !198, align: 1)
+!3797 = !DILocalVariable(name: "residual", scope: !3798, file: !3377, line: 211, type: !202, align: 1)
 !3798 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 211, column: 59)
-!3799 = !DILocalVariable(name: "val", scope: !3800, file: !3377, line: 211, type: !17, align: 1)
+!3799 = !DILocalVariable(name: "val", scope: !3800, file: !3377, line: 211, type: !7, align: 1)
 !3800 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 211, column: 35)
-!3801 = !DILocalVariable(name: "residual", scope: !3802, file: !3377, line: 216, type: !198, align: 1)
+!3801 = !DILocalVariable(name: "residual", scope: !3802, file: !3377, line: 216, type: !202, align: 1)
 !3802 = distinct !DILexicalBlock(scope: !3796, file: !3377, line: 216, column: 53)
-!3803 = !DILocalVariable(name: "val", scope: !3804, file: !3377, line: 216, type: !17, align: 1)
+!3803 = !DILocalVariable(name: "val", scope: !3804, file: !3377, line: 216, type: !7, align: 1)
 !3804 = distinct !DILexicalBlock(scope: !3796, file: !3377, line: 216, column: 29)
-!3805 = !DILocalVariable(name: "residual", scope: !3806, file: !3377, line: 224, type: !198, align: 1)
+!3805 = !DILocalVariable(name: "residual", scope: !3806, file: !3377, line: 224, type: !202, align: 1)
 !3806 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 224, column: 63)
-!3807 = !DILocalVariable(name: "val", scope: !3808, file: !3377, line: 224, type: !17, align: 1)
+!3807 = !DILocalVariable(name: "val", scope: !3808, file: !3377, line: 224, type: !7, align: 1)
 !3808 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 224, column: 39)
-!3809 = !DILocalVariable(name: "keycode", scope: !3810, file: !3377, line: 234, type: !17, align: 1)
+!3809 = !DILocalVariable(name: "keycode", scope: !3810, file: !3377, line: 234, type: !7, align: 1)
 !3810 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 234, column: 21)
-!3811 = !DILocalVariable(name: "residual", scope: !3812, file: !3377, line: 234, type: !198, align: 1)
+!3811 = !DILocalVariable(name: "residual", scope: !3812, file: !3377, line: 234, type: !202, align: 1)
 !3812 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 234, column: 68)
-!3813 = !DILocalVariable(name: "val", scope: !3814, file: !3377, line: 234, type: !17, align: 1)
+!3813 = !DILocalVariable(name: "val", scope: !3814, file: !3377, line: 234, type: !7, align: 1)
 !3814 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 234, column: 35)
-!3815 = !DILocalVariable(name: "residual", scope: !3816, file: !3377, line: 241, type: !198, align: 1)
+!3815 = !DILocalVariable(name: "residual", scope: !3816, file: !3377, line: 241, type: !202, align: 1)
 !3816 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 241, column: 54)
-!3817 = !DILocalVariable(name: "val", scope: !3818, file: !3377, line: 241, type: !17, align: 1)
+!3817 = !DILocalVariable(name: "val", scope: !3818, file: !3377, line: 241, type: !7, align: 1)
 !3818 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 241, column: 21)
-!3819 = !DILocalVariable(name: "residual", scope: !3820, file: !3377, line: 253, type: !198, align: 1)
+!3819 = !DILocalVariable(name: "residual", scope: !3820, file: !3377, line: 253, type: !202, align: 1)
 !3820 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 253, column: 59)
-!3821 = !DILocalVariable(name: "val", scope: !3822, file: !3377, line: 253, type: !17, align: 1)
+!3821 = !DILocalVariable(name: "val", scope: !3822, file: !3377, line: 253, type: !7, align: 1)
 !3822 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 253, column: 25)
-!3823 = !DILocalVariable(name: "residual", scope: !3824, file: !3377, line: 261, type: !198, align: 1)
+!3823 = !DILocalVariable(name: "residual", scope: !3824, file: !3377, line: 261, type: !202, align: 1)
 !3824 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 261, column: 55)
-!3825 = !DILocalVariable(name: "val", scope: !3826, file: !3377, line: 261, type: !17, align: 1)
+!3825 = !DILocalVariable(name: "val", scope: !3826, file: !3377, line: 261, type: !7, align: 1)
 !3826 = distinct !DILexicalBlock(scope: !3787, file: !3377, line: 261, column: 21)
 !3827 = !DILocation(line: 195, column: 22, scope: !3787)
 !3828 = !DILocation(line: 195, column: 33, scope: !3787)
@@ -17315,33 +17315,33 @@ attributes #7 = { noreturn nounwind }
 !3941 = !DILocation(line: 261, column: 55, scope: !3787)
 !3942 = !DILocation(line: 261, column: 55, scope: !3824)
 !3943 = !DILocation(line: 261, column: 21, scope: !3824)
-!3944 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard10Ps2Decoder3new17hafffd8487cf0c7ccE", scope: !3946, file: !3945, line: 568, type: !3951, scopeLine: 568, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3953)
+!3944 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard10Ps2Decoder3new17h5e087a3538d0c77bE", scope: !3946, file: !3945, line: 568, type: !3951, scopeLine: 568, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3953)
 !3945 = !DIFile(filename: "src/lib.rs", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pc-keyboard-0.7.0", checksumkind: CSK_MD5, checksum: "6bec53fc8eab0fe8f28a81b677ce329c")
-!3946 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ps2Decoder", scope: !9, file: !8, size: 32, align: 16, elements: !3947, templateParams: !182, identifier: "a7676775122ba2fbb8d44b535e9b1687")
+!3946 = !DICompositeType(tag: DW_TAG_structure_type, name: "Ps2Decoder", scope: !9, file: !8, size: 32, align: 16, flags: DIFlagPublic, elements: !3947, templateParams: !182, identifier: "d85924e431171d18eba68bbe61c0d")
 !3947 = !{!3948, !3950}
-!3948 = !DIDerivedType(tag: DW_TAG_member, name: "register", scope: !3946, file: !8, baseType: !3949, size: 16, align: 16)
+!3948 = !DIDerivedType(tag: DW_TAG_member, name: "register", scope: !3946, file: !8, baseType: !3949, size: 16, align: 16, flags: DIFlagPrivate)
 !3949 = !DIBasicType(name: "u16", size: 16, encoding: DW_ATE_unsigned)
-!3950 = !DIDerivedType(tag: DW_TAG_member, name: "num_bits", scope: !3946, file: !8, baseType: !10, size: 8, align: 8, offset: 16)
+!3950 = !DIDerivedType(tag: DW_TAG_member, name: "num_bits", scope: !3946, file: !8, baseType: !10, size: 8, align: 8, offset: 16, flags: DIFlagPrivate)
 !3951 = !DISubroutineType(types: !3952)
 !3952 = !{!3946}
-!3953 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard10Ps2Decoder3new17hafffd8487cf0c7ccE", scope: !3946, file: !3945, line: 568, type: !3951, scopeLine: 568, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!3953 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard10Ps2Decoder3new17h5e087a3538d0c77bE", scope: !3946, file: !3945, line: 568, type: !3951, scopeLine: 568, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !3954 = !DILocation(line: 569, column: 9, scope: !3944)
 !3955 = !DILocation(line: 573, column: 6, scope: !3944)
-!3956 = distinct !DISubprogram(name: "clear", linkageName: "_ZN11pc_keyboard10Ps2Decoder5clear17h303aaa2fc6c0740aE", scope: !3946, file: !3945, line: 578, type: !3957, scopeLine: 578, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3960, retainedNodes: !3961)
+!3956 = distinct !DISubprogram(name: "clear", linkageName: "_ZN11pc_keyboard10Ps2Decoder5clear17hf6fed9a927ae2dc3E", scope: !3946, file: !3945, line: 578, type: !3957, scopeLine: 578, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3960, retainedNodes: !3961)
 !3957 = !DISubroutineType(types: !3958)
 !3958 = !{null, !3959}
 !3959 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut pc_keyboard::Ps2Decoder", baseType: !3946, size: 64, align: 64, dwarfAddressSpace: 0)
-!3960 = !DISubprogram(name: "clear", linkageName: "_ZN11pc_keyboard10Ps2Decoder5clear17h303aaa2fc6c0740aE", scope: !3946, file: !3945, line: 578, type: !3957, scopeLine: 578, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!3960 = !DISubprogram(name: "clear", linkageName: "_ZN11pc_keyboard10Ps2Decoder5clear17hf6fed9a927ae2dc3E", scope: !3946, file: !3945, line: 578, type: !3957, scopeLine: 578, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !3961 = !{!3962}
 !3962 = !DILocalVariable(name: "self", arg: 1, scope: !3956, file: !3945, line: 578, type: !3959)
 !3963 = !DILocation(line: 578, column: 18, scope: !3956)
 !3964 = !DILocation(line: 579, column: 9, scope: !3956)
 !3965 = !DILocation(line: 580, column: 9, scope: !3956)
 !3966 = !DILocation(line: 581, column: 6, scope: !3956)
-!3967 = distinct !DISubprogram(name: "add_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7add_bit17h40a5a11cf9894adcE", scope: !3946, file: !3945, line: 586, type: !3968, scopeLine: 586, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3970, retainedNodes: !3971)
+!3967 = distinct !DISubprogram(name: "add_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7add_bit17h96d2478283077230E", scope: !3946, file: !3945, line: 586, type: !3968, scopeLine: 586, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !3970, retainedNodes: !3971)
 !3968 = !DISubroutineType(types: !3969)
-!3969 = !{!167, !3959, !459}
-!3970 = !DISubprogram(name: "add_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7add_bit17h40a5a11cf9894adcE", scope: !3946, file: !3945, line: 586, type: !3968, scopeLine: 586, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!3969 = !{!261, !3959, !459}
+!3970 = !DISubprogram(name: "add_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7add_bit17h96d2478283077230E", scope: !3946, file: !3945, line: 586, type: !3968, scopeLine: 586, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !3971 = !{!3972, !3973, !3974, !3976, !3978, !3980}
 !3972 = !DILocalVariable(name: "self", arg: 1, scope: !3967, file: !3945, line: 586, type: !3959)
 !3973 = !DILocalVariable(name: "bit", arg: 2, scope: !3967, file: !3945, line: 586, type: !459)
@@ -17349,7 +17349,7 @@ attributes #7 = { noreturn nounwind }
 !3975 = distinct !DILexicalBlock(scope: !3967, file: !3945, line: 590, column: 13)
 !3976 = !DILocalVariable(name: "byte", scope: !3977, file: !3945, line: 593, type: !10, align: 1)
 !3977 = distinct !DILexicalBlock(scope: !3975, file: !3945, line: 593, column: 13)
-!3978 = !DILocalVariable(name: "residual", scope: !3979, file: !3945, line: 593, type: !198, align: 1)
+!3978 = !DILocalVariable(name: "residual", scope: !3979, file: !3945, line: 593, type: !202, align: 1)
 !3979 = distinct !DILexicalBlock(scope: !3975, file: !3945, line: 593, column: 46)
 !3980 = !DILocalVariable(name: "val", scope: !3981, file: !3945, line: 593, type: !10, align: 1)
 !3981 = distinct !DILexicalBlock(scope: !3975, file: !3945, line: 593, column: 24)
@@ -17376,11 +17376,11 @@ attributes #7 = { noreturn nounwind }
 !4002 = !DILocation(line: 593, column: 46, scope: !3975)
 !4003 = !DILocation(line: 593, column: 46, scope: !3979)
 !4004 = !DILocation(line: 593, column: 24, scope: !3979)
-!4005 = distinct !DISubprogram(name: "add_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder8add_word17hb191d5937989031aE", scope: !3946, file: !3945, line: 603, type: !4006, scopeLine: 603, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4009, retainedNodes: !4010)
+!4005 = distinct !DISubprogram(name: "add_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder8add_word17h33ea5c8e61debf85E", scope: !3946, file: !3945, line: 603, type: !4006, scopeLine: 603, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4009, retainedNodes: !4010)
 !4006 = !DISubroutineType(types: !4007)
-!4007 = !{!346, !4008, !3949}
+!4007 = !{!400, !4008, !3949}
 !4008 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::Ps2Decoder", baseType: !3946, size: 64, align: 64, dwarfAddressSpace: 0)
-!4009 = !DISubprogram(name: "add_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder8add_word17hb191d5937989031aE", scope: !3946, file: !3945, line: 603, type: !4006, scopeLine: 603, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!4009 = !DISubprogram(name: "add_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder8add_word17h33ea5c8e61debf85E", scope: !3946, file: !3945, line: 603, type: !4006, scopeLine: 603, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !4010 = !{!4011, !4012}
 !4011 = !DILocalVariable(name: "self", arg: 1, scope: !4005, file: !3945, line: 603, type: !4008)
 !4012 = !DILocalVariable(name: "word", arg: 2, scope: !4005, file: !3945, line: 603, type: !3949)
@@ -17388,10 +17388,10 @@ attributes #7 = { noreturn nounwind }
 !4014 = !DILocation(line: 603, column: 28, scope: !4005)
 !4015 = !DILocation(line: 604, column: 9, scope: !4005)
 !4016 = !DILocation(line: 605, column: 6, scope: !4005)
-!4017 = distinct !DISubprogram(name: "check_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder10check_word17hcc369f4067902015E", scope: !3946, file: !3945, line: 608, type: !4018, scopeLine: 608, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4020, retainedNodes: !4021)
+!4017 = distinct !DISubprogram(name: "check_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder10check_word17hc11613f54fbbdda6E", scope: !3946, file: !3945, line: 608, type: !4018, scopeLine: 608, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4020, retainedNodes: !4021)
 !4018 = !DISubroutineType(types: !4019)
-!4019 = !{!346, !3949}
-!4020 = !DISubprogram(name: "check_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder10check_word17hcc369f4067902015E", scope: !3946, file: !3945, line: 608, type: !4018, scopeLine: 608, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!4019 = !{!400, !3949}
+!4020 = !DISubprogram(name: "check_word", linkageName: "_ZN11pc_keyboard10Ps2Decoder10check_word17hc11613f54fbbdda6E", scope: !3946, file: !3945, line: 608, type: !4018, scopeLine: 608, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !4021 = !{!4022, !4023, !4025, !4027, !4029, !4031}
 !4022 = !DILocalVariable(name: "word", arg: 1, scope: !4017, file: !3945, line: 608, type: !3949)
 !4023 = !DILocalVariable(name: "start_bit", scope: !4024, file: !3945, line: 609, type: !459, align: 1)
@@ -17428,69 +17428,69 @@ attributes #7 = { noreturn nounwind }
 !4054 = !DILocation(line: 630, column: 9, scope: !4032)
 !4055 = !DILocation(line: 627, column: 24, scope: !4032)
 !4056 = !DILocation(line: 627, column: 20, scope: !4032)
-!4057 = distinct !DISubprogram(name: "get_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7get_bit17h6cc562122fe2c887E", scope: !3946, file: !3945, line: 633, type: !4058, scopeLine: 633, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4060, retainedNodes: !4061)
+!4057 = distinct !DISubprogram(name: "get_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7get_bit17h99c6f18eac07fa19E", scope: !3946, file: !3945, line: 633, type: !4058, scopeLine: 633, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4060, retainedNodes: !4061)
 !4058 = !DISubroutineType(types: !4059)
-!4059 = !{!459, !3949, !227}
-!4060 = !DISubprogram(name: "get_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7get_bit17h6cc562122fe2c887E", scope: !3946, file: !3945, line: 633, type: !4058, scopeLine: 633, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!4059 = !{!459, !3949, !231}
+!4060 = !DISubprogram(name: "get_bit", linkageName: "_ZN11pc_keyboard10Ps2Decoder7get_bit17h99c6f18eac07fa19E", scope: !3946, file: !3945, line: 633, type: !4058, scopeLine: 633, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !4061 = !{!4062, !4063}
 !4062 = !DILocalVariable(name: "word", arg: 1, scope: !4057, file: !3945, line: 633, type: !3949)
-!4063 = !DILocalVariable(name: "offset", arg: 2, scope: !4057, file: !3945, line: 633, type: !227)
+!4063 = !DILocalVariable(name: "offset", arg: 2, scope: !4057, file: !3945, line: 633, type: !231)
 !4064 = !DILocation(line: 633, column: 22, scope: !4057)
 !4065 = !DILocation(line: 633, column: 33, scope: !4057)
 !4066 = !DILocation(line: 634, column: 10, scope: !4057)
 !4067 = !DILocation(line: 634, column: 9, scope: !4057)
 !4068 = !DILocation(line: 635, column: 6, scope: !4057)
-!4069 = distinct !DISubprogram(name: "has_even_number_bits", linkageName: "_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17haca82523371854adE", scope: !3946, file: !3945, line: 637, type: !4070, scopeLine: 637, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4072, retainedNodes: !4073)
+!4069 = distinct !DISubprogram(name: "has_even_number_bits", linkageName: "_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17h3460e7775ee0bed1E", scope: !3946, file: !3945, line: 637, type: !4070, scopeLine: 637, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4072, retainedNodes: !4073)
 !4070 = !DISubroutineType(types: !4071)
 !4071 = !{!459, !10}
-!4072 = !DISubprogram(name: "has_even_number_bits", linkageName: "_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17haca82523371854adE", scope: !3946, file: !3945, line: 637, type: !4070, scopeLine: 637, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
+!4072 = !DISubprogram(name: "has_even_number_bits", linkageName: "_ZN11pc_keyboard10Ps2Decoder20has_even_number_bits17h3460e7775ee0bed1E", scope: !3946, file: !3945, line: 637, type: !4070, scopeLine: 637, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !182)
 !4073 = !{!4074}
 !4074 = !DILocalVariable(name: "data", arg: 1, scope: !4069, file: !3945, line: 637, type: !10)
 !4075 = !DILocation(line: 637, column: 35, scope: !4069)
 !4076 = !DILocalVariable(name: "self", arg: 1, scope: !4077, file: !4078, line: 106, type: !10)
-!4077 = distinct !DISubprogram(name: "count_ones", linkageName: "_ZN4core3num20_$LT$impl$u20$u8$GT$10count_ones17h1fd4000ff79c2543E", scope: !4079, file: !4078, line: 106, type: !4081, scopeLine: 106, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !4083)
+!4077 = distinct !DISubprogram(name: "count_ones", linkageName: "_ZN4core3num20_$LT$impl$u20$u8$GT$10count_ones17hdb614ae255819412E", scope: !4079, file: !4078, line: 106, type: !4081, scopeLine: 106, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !4083)
 !4078 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs", directory: "", checksumkind: CSK_MD5, checksum: "77985b69d8b96d3837a96dc7438f1392")
 !4079 = !DINamespace(name: "{impl#6}", scope: !4080)
 !4080 = !DINamespace(name: "num", scope: !164)
 !4081 = !DISubroutineType(types: !4082)
-!4082 = !{!229, !10}
+!4082 = !{!233, !10}
 !4083 = !{!4076}
 !4084 = !DILocation(line: 106, column: 33, scope: !4077, inlinedAt: !4085)
 !4085 = distinct !DILocation(line: 638, column: 10, scope: !4069)
 !4086 = !DILocation(line: 107, column: 13, scope: !4077, inlinedAt: !4085)
 !4087 = !DILocation(line: 638, column: 9, scope: !4069)
 !4088 = !DILocation(line: 639, column: 6, scope: !4069)
-!4089 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE", scope: !273, file: !3945, line: 808, type: !4090, scopeLine: 808, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4092, retainedNodes: !4093)
+!4089 = distinct !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE", scope: !185, file: !3945, line: 808, type: !4090, scopeLine: 808, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4092, retainedNodes: !4093)
 !4090 = !DISubroutineType(types: !4091)
-!4091 = !{!273, !17, !143}
-!4092 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard8KeyEvent3new17heb830304bddc4fdaE", scope: !273, file: !3945, line: 808, type: !4090, scopeLine: 808, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!4091 = !{!185, !7, !136}
+!4092 = !DISubprogram(name: "new", linkageName: "_ZN11pc_keyboard8KeyEvent3new17hea4ad60b71412d4cE", scope: !185, file: !3945, line: 808, type: !4090, scopeLine: 808, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !4093 = !{!4094, !4095}
-!4094 = !DILocalVariable(name: "code", arg: 1, scope: !4089, file: !3945, line: 808, type: !17)
-!4095 = !DILocalVariable(name: "state", arg: 2, scope: !4089, file: !3945, line: 808, type: !143)
+!4094 = !DILocalVariable(name: "code", arg: 1, scope: !4089, file: !3945, line: 808, type: !7)
+!4095 = !DILocalVariable(name: "state", arg: 2, scope: !4089, file: !3945, line: 808, type: !136)
 !4096 = !DILocation(line: 808, column: 22, scope: !4089)
 !4097 = !DILocation(line: 808, column: 37, scope: !4089)
 !4098 = !DILocation(line: 809, column: 9, scope: !4089)
 !4099 = !DILocation(line: 810, column: 6, scope: !4089)
-!4100 = distinct !DISubprogram(name: "is_shifted", linkageName: "_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E", scope: !456, file: !3945, line: 820, type: !4101, scopeLine: 820, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4103, retainedNodes: !4104)
+!4100 = distinct !DISubprogram(name: "is_shifted", linkageName: "_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E", scope: !456, file: !3945, line: 820, type: !4101, scopeLine: 820, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4103, retainedNodes: !4104)
 !4101 = !DISubroutineType(types: !4102)
 !4102 = !{!459, !455}
-!4103 = !DISubprogram(name: "is_shifted", linkageName: "_ZN11pc_keyboard9Modifiers10is_shifted17hac58285c6741e056E", scope: !456, file: !3945, line: 820, type: !4101, scopeLine: 820, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!4103 = !DISubprogram(name: "is_shifted", linkageName: "_ZN11pc_keyboard9Modifiers10is_shifted17h7c98c83983ba0df7E", scope: !456, file: !3945, line: 820, type: !4101, scopeLine: 820, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !4104 = !{!4105}
 !4105 = !DILocalVariable(name: "self", arg: 1, scope: !4100, file: !3945, line: 820, type: !455)
 !4106 = !DILocation(line: 820, column: 29, scope: !4100)
 !4107 = !DILocation(line: 821, column: 9, scope: !4100)
 !4108 = !DILocation(line: 821, column: 23, scope: !4100)
 !4109 = !DILocation(line: 822, column: 6, scope: !4100)
-!4110 = distinct !DISubprogram(name: "is_ctrl", linkageName: "_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE", scope: !456, file: !3945, line: 824, type: !4101, scopeLine: 824, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4111, retainedNodes: !4112)
-!4111 = !DISubprogram(name: "is_ctrl", linkageName: "_ZN11pc_keyboard9Modifiers7is_ctrl17h429a467a69d78e2eE", scope: !456, file: !3945, line: 824, type: !4101, scopeLine: 824, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!4110 = distinct !DISubprogram(name: "is_ctrl", linkageName: "_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE", scope: !456, file: !3945, line: 824, type: !4101, scopeLine: 824, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4111, retainedNodes: !4112)
+!4111 = !DISubprogram(name: "is_ctrl", linkageName: "_ZN11pc_keyboard9Modifiers7is_ctrl17h555572573566e2aaE", scope: !456, file: !3945, line: 824, type: !4101, scopeLine: 824, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !4112 = !{!4113}
 !4113 = !DILocalVariable(name: "self", arg: 1, scope: !4110, file: !3945, line: 824, type: !455)
 !4114 = !DILocation(line: 824, column: 26, scope: !4110)
 !4115 = !DILocation(line: 825, column: 9, scope: !4110)
 !4116 = !DILocation(line: 825, column: 22, scope: !4110)
 !4117 = !DILocation(line: 826, column: 6, scope: !4110)
-!4118 = distinct !DISubprogram(name: "is_caps", linkageName: "_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E", scope: !456, file: !3945, line: 828, type: !4101, scopeLine: 828, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4119, retainedNodes: !4120)
-!4119 = !DISubprogram(name: "is_caps", linkageName: "_ZN11pc_keyboard9Modifiers7is_caps17h3144d70068d31be1E", scope: !456, file: !3945, line: 828, type: !4101, scopeLine: 828, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
+!4118 = distinct !DISubprogram(name: "is_caps", linkageName: "_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE", scope: !456, file: !3945, line: 828, type: !4101, scopeLine: 828, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !4, templateParams: !182, declaration: !4119, retainedNodes: !4120)
+!4119 = !DISubprogram(name: "is_caps", linkageName: "_ZN11pc_keyboard9Modifiers7is_caps17h1232194180c6d47bE", scope: !456, file: !3945, line: 828, type: !4101, scopeLine: 828, flags: DIFlagPrototyped, spFlags: 0, templateParams: !182)
 !4120 = !{!4121}
 !4121 = !DILocalVariable(name: "self", arg: 1, scope: !4118, file: !3945, line: 828, type: !455)
 !4122 = !DILocation(line: 828, column: 26, scope: !4118)
@@ -17499,11 +17499,11 @@ attributes #7 = { noreturn nounwind }
 !4125 = !DILocation(line: 829, column: 9, scope: !4118)
 !4126 = !DILocation(line: 829, column: 39, scope: !4118)
 !4127 = !DILocation(line: 830, column: 6, scope: !4118)
-!4128 = distinct !DISubprogram(name: "eq", linkageName: "_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h0a7f71709ee7a029E", scope: !4129, file: !3945, line: 85, type: !4130, scopeLine: 85, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !4133)
+!4128 = distinct !DISubprogram(name: "eq", linkageName: "_ZN61_$LT$pc_keyboard..KeyCode$u20$as$u20$core..cmp..PartialEq$GT$2eq17h8dbfc8c74289354fE", scope: !4129, file: !3945, line: 85, type: !4130, scopeLine: 85, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !4133)
 !4129 = !DINamespace(name: "{impl#17}", scope: !9)
 !4130 = !DISubroutineType(types: !4131)
 !4131 = !{!459, !4132, !4132}
-!4132 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::KeyCode", baseType: !17, size: 64, align: 64, dwarfAddressSpace: 0)
+!4132 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&pc_keyboard::KeyCode", baseType: !7, size: 64, align: 64, dwarfAddressSpace: 0)
 !4133 = !{!4134, !4135, !4136, !4138}
 !4134 = !DILocalVariable(name: "self", arg: 1, scope: !4128, file: !3945, line: 85, type: !4132)
 !4135 = !DILocalVariable(name: "other", arg: 2, scope: !4128, file: !3945, line: 85, type: !4132)
@@ -17515,7 +17515,7 @@ attributes #7 = { noreturn nounwind }
 !4141 = !DILocation(line: 85, column: 17, scope: !4137)
 !4142 = !DILocation(line: 85, column: 17, scope: !4139)
 !4143 = !DILocation(line: 85, column: 26, scope: !4128)
-!4144 = distinct !DISubprogram(name: "eq", linkageName: "_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17he0063523fd4e97c9E", scope: !4145, file: !3945, line: 378, type: !4146, scopeLine: 378, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !4149)
+!4144 = distinct !DISubprogram(name: "eq", linkageName: "_ZN67_$LT$pc_keyboard..HandleControl$u20$as$u20$core..cmp..PartialEq$GT$2eq17hf4ed216f6d986d0fE", scope: !4145, file: !3945, line: 378, type: !4146, scopeLine: 378, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !4, templateParams: !182, retainedNodes: !4149)
 !4145 = !DINamespace(name: "{impl#33}", scope: !9)
 !4146 = !DISubroutineType(types: !4147)
 !4147 = !{!459, !4148, !4148}

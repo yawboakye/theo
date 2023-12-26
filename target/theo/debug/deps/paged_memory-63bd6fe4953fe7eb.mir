@@ -1,0 +1,70 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn topmost_level(_1: VirtAddr) -> &mut PageTable {
+    debug phys_mem_offset => _1;
+    let mut _0: &mut x86_64::structures::paging::PageTable;
+    let _2: x86_64::structures::paging::PhysFrame;
+    let _3: x86_64::registers::control::Cr3Flags;
+    let mut _4: (x86_64::structures::paging::PhysFrame, x86_64::registers::control::Cr3Flags);
+    let mut _7: u64;
+    let mut _8: *mut x86_64::structures::paging::PageTable;
+    scope 1 {
+        debug topmost_frame => _2;
+        debug _flags => _3;
+        let _5: x86_64::PhysAddr;
+        scope 2 {
+            debug phys_addr => _5;
+            let _6: x86_64::VirtAddr;
+            scope 3 {
+                debug virt_addr => _6;
+            }
+        }
+    }
+
+    bb0: {
+        _4 = control::x86_64::<impl Cr3>::read() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = (_4.0: x86_64::structures::paging::PhysFrame);
+        _3 = (_4.1: x86_64::registers::control::Cr3Flags);
+        _5 = PhysFrame::start_address(_2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _7 = PhysAddr::as_u64(_5) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _6 = <VirtAddr as Add<u64>>::add(_1, move _7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _8 = VirtAddr::as_mut_ptr::<PageTable>(_6) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _0 = &mut (*_8);
+        return;
+    }
+}
+
+fn debug(_1: PageTableLevel) -> () {
+    debug level => _1;
+    let mut _0: ();
+    let mut _2: isize;
+    let mut _3: !;
+
+    bb0: {
+        _2 = discriminant(_1);
+        switchInt(move _2) -> [3: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _3 = panic(const "not yet implemented") -> unwind unreachable;
+    }
+
+    bb2: {
+        return;
+    }
+}

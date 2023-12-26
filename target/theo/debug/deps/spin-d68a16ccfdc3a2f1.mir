@@ -143,7 +143,7 @@ fn barrier::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15
 
     bb18: {
         _32 = ((*_33).1: usize);
-        _31 = num::<impl usize>::wrapping_add(move _32, const 1_usize) -> [return: bb19, unwind unreachable];
+        _31 = core::num::<impl usize>::wrapping_add(move _32, const 1_usize) -> [return: bb19, unwind unreachable];
     }
 
     bb19: {
@@ -1976,7 +1976,7 @@ fn status::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba150
 
     bb1: {
         _3 = &raw mut (*_4);
-        _2 = ptr::mut_ptr::<impl *mut u8>::cast::<Status>(move _3) -> [return: bb2, unwind unreachable];
+        _2 = core::ptr::mut_ptr::<impl *mut u8>::cast::<Status>(move _3) -> [return: bb2, unwind unreachable];
     }
 
     bb2: {
@@ -2255,7 +2255,7 @@ fn once::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001
     }
 
     bb18: {
-        _29 = ptr::mut_ptr::<impl *mut T>::write(move _30, move _22) -> [return: bb19, unwind unreachable];
+        _29 = core::ptr::mut_ptr::<impl *mut T>::write(move _30, move _22) -> [return: bb19, unwind unreachable];
     }
 
     bb19: {
@@ -2541,7 +2541,7 @@ fn once::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001
     }
 
     bb1: {
-        _0 = ptr::mut_ptr::<impl *mut MaybeUninit<T>>::cast::<T>(move _2) -> [return: bb2, unwind unreachable];
+        _0 = core::ptr::mut_ptr::<impl *mut MaybeUninit<T>>::cast::<T>(move _2) -> [return: bb2, unwind unreachable];
     }
 
     bb2: {
@@ -2616,7 +2616,7 @@ fn once::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001
     }
 
     bb2: {
-        _0 = ptr::const_ptr::<impl *const T>::read(move _2) -> [return: bb3, unwind unreachable];
+        _0 = core::ptr::const_ptr::<impl *const T>::read(move _2) -> [return: bb3, unwind unreachable];
     }
 
     bb3: {

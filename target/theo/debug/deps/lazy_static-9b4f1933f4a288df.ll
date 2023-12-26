@@ -1,5 +1,5 @@
-; ModuleID = 'lazy_static.1beca5c1e4790628-cgu.0'
-source_filename = "lazy_static.1beca5c1e4790628-cgu.0"
+; ModuleID = 'lazy_static.ec41508ea19320e-cgu.0'
+source_filename = "lazy_static.ec41508ea19320e-cgu.0"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
@@ -10,6 +10,6 @@ target triple = "x86_64-obuasi-unknown-none"
 !0 = !{i32 8, !"PIC Level", i32 2}
 !1 = !{i32 2, !"Dwarf Version", i32 4}
 !2 = !{i32 2, !"Debug Info Version", i32 3}
-!3 = !{!"rustc version 1.76.0-nightly (ba7c7a301 2023-11-13)"}
-!4 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !5, producer: "clang LLVM (rustc version 1.76.0-nightly (ba7c7a301 2023-11-13))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, splitDebugInlining: false)
-!5 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs/@/lazy_static.1beca5c1e4790628-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0")
+!3 = !{!"rustc version 1.77.0-nightly (bf8716f1c 2023-12-24)"}
+!4 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !5, producer: "clang LLVM (rustc version 1.77.0-nightly (bf8716f1c 2023-12-24))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, splitDebugInlining: false, nameTableKind: None)
+!5 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs/@/lazy_static.ec41508ea19320e-cgu.0", directory: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0")
