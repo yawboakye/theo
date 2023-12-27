@@ -8,9 +8,12 @@ use cpu_interrupts::{
     interrupt_descriptor_table::SafeInterruptDescriptorTable,
     programmable_interface_controller::{self, notify_end_of_timer_interrupt},
 };
+
 use keyboard::DecodedKey;
 use lazy_static::lazy_static;
-use x86_64::structures::idt::{InterruptDescriptorTable, InterruptStackFrame, PageFaultErrorCode};
+use x86_64::structures::idt::{
+    InterruptDescriptorTable, InterruptStackFrame, PageFaultErrorCode,
+};
 
 lazy_static! {
     static ref SAFE_IDT: SafeInterruptDescriptorTable = {

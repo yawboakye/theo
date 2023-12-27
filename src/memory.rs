@@ -22,18 +22,20 @@ impl Mem {
     }
 
     pub fn caused_by_write_page_fault(&self) {
+        // an attempt to write to an invalid memory address so that
+        // the double fault handler can be called. the error
+        // returned is CAUSED_BY_WRITE (since we're writing
+        // to the location).
         #[rustfmt::skip]
-    // an attempt to write to an invalid memory address so that the
-    // double fault handler can be called. the error returned is
-    // CAUSED_BY_WRITE (since we're writing to the location).
-    unsafe { *INVALID_MEMORY_ADDRESS_POINTER = 255; }
+        unsafe { *INVALID_MEMORY_ADDRESS_POINTER = 255; }
     }
 
     pub fn cause_protection_violation_by_write_page_fault(&self) {
-        // when we try to write to the address of the instruction pointer,
-        // a combination of error codes is returned: PROTECTION_VIOLATION | CAUSED_BY_WRITE
-        // since we're trying to write to a protected memory address.
-        // who protects the memory address?
+        // when we try to write to the address of the instruction
+        // pointer, a combination of error codes is
+        // returned: PROTECTION_VIOLATION | CAUSED_BY_WRITE
+        // since we're trying to write to a protected memory
+        // address. who protects the memory address?
         unsafe {
             let instruction = *INSTRUCTION_POINTER_ADDRESS;
             crate::println!("instruction: -->\n{:#?}", instruction);
