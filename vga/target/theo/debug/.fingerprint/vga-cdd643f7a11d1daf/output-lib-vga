@@ -1,0 +1,110 @@
+thread 'cpy 3mi8emi85iynij7o' panicked at /rustc/2319be8e265dd19973574eb581d28297baf44b11/compiler/rustc_codegen_ssa/src/back/write.rs:891:5:
+assertion failed: module_config.emit_obj != EmitObj::None
+stack backtrace:
+   0:        0x10316c948 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h78a98f9f169aa47d
+   1:        0x1031aebf8 - core::fmt::write::h9344c39b85e9c624
+   2:        0x103162c30 - std::io::Write::write_fmt::h21a426b62157e09b
+   3:        0x10316c77c - std::sys_common::backtrace::print::h3086348f9b4c6374
+   4:        0x10316f244 - std::panicking::default_hook::{{closure}}::h85012651ef3e4161
+   5:        0x10316ef8c - std::panicking::default_hook::h05050ce68ddb89d7
+   6:        0x10bb68464 - std[38995fe20cdd0385]::panicking::update_hook::<alloc[dada8df4eaf357ad]::boxed::Box<rustc_driver_impl[474072acc934f695]::install_ice_hook::{closure#0}>>::{closure#0}
+   7:        0x10316f8dc - std::panicking::rust_panic_with_hook::h8d3d4d28b7b21a6d
+   8:        0x10316f66c - std::panicking::begin_panic_handler::{{closure}}::h8cb3820c3cf2fda5
+   9:        0x10316cdcc - std::sys_common::backtrace::__rust_end_short_backtrace::h478d17934a708eaf
+  10:        0x10316f420 - _rust_begin_unwind
+  11:        0x1031c8b94 - core::panicking::panic_fmt::h1a918e0ba5307d39
+  12:        0x1031c8c1c - core::panicking::panic::h06fd93e6210cbbd8
+  13:        0x10be4068c - rustc_codegen_ssa[83a10373c1fc3dec]::back::write::execute_copy_from_cache_work_item::<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend>
+  14:        0x10bd6e138 - std[38995fe20cdd0385]::sys_common::backtrace::__rust_begin_short_backtrace::<<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend as rustc_codegen_ssa[83a10373c1fc3dec]::traits::backend::ExtraBackendMethods>::spawn_named_thread<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::spawn_work<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend>::{closure#0}, ()>::{closure#0}, ()>
+  15:        0x10bd71d60 - <<std[38995fe20cdd0385]::thread::Builder>::spawn_unchecked_<<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend as rustc_codegen_ssa[83a10373c1fc3dec]::traits::backend::ExtraBackendMethods>::spawn_named_thread<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::spawn_work<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend>::{closure#0}, ()>::{closure#0}, ()>::{closure#1} as core[15b8bf159cabbf29]::ops::function::FnOnce<()>>::call_once::{shim:vtable#0}
+  16:        0x103177bac - std::sys::unix::thread::Thread::new::thread_start::hde2b1ae05c16b668
+  17:        0x1815de034 - __pthread_joiner_wake
+
+error: the compiler unexpectedly panicked. this is a bug.
+
+note: we would appreciate a bug report: https://github.com/rust-lang/rust/issues/new?labels=C-bug%2C+I-ICE%2C+T-compiler&template=ice.md
+
+note: please attach the file at `/Users/yaw/self/theo/vga/rustc-ice-2024-01-14T09_07_46-8026.txt` to your bug report
+
+note: compiler flags: --crate-type lib -C embed-bitcode=no -C debuginfo=2 -C incremental=[REDACTED] -Z unstable-options
+
+note: some of the compiler flags provided by cargo are hidden
+
+query stack during panic:
+end of query stack
+thread 'coordinator' panicked at compiler/rustc_middle/src/util/bug.rs:36:26:
+/rustc/2319be8e265dd19973574eb581d28297baf44b11/compiler/rustc_codegen_ssa/src/back/write.rs:1587:29: worker thread panicked
+stack backtrace:
+   0:        0x10316c948 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h78a98f9f169aa47d
+   1:        0x1031aebf8 - core::fmt::write::h9344c39b85e9c624
+   2:        0x103162c30 - std::io::Write::write_fmt::h21a426b62157e09b
+   3:        0x10316c77c - std::sys_common::backtrace::print::h3086348f9b4c6374
+   4:        0x10316f244 - std::panicking::default_hook::{{closure}}::h85012651ef3e4161
+   5:        0x10316ef8c - std::panicking::default_hook::h05050ce68ddb89d7
+   6:        0x10bb68464 - std[38995fe20cdd0385]::panicking::update_hook::<alloc[dada8df4eaf357ad]::boxed::Box<rustc_driver_impl[474072acc934f695]::install_ice_hook::{closure#0}>>::{closure#0}
+   7:        0x10316f8dc - std::panicking::rust_panic_with_hook::h8d3d4d28b7b21a6d
+   8:        0x10fcee018 - std[38995fe20cdd0385]::panicking::begin_panic::<alloc[dada8df4eaf357ad]::string::String>::{closure#0}
+   9:        0x10fcede78 - std[38995fe20cdd0385]::sys_common::backtrace::__rust_end_short_backtrace::<std[38995fe20cdd0385]::panicking::begin_panic<alloc[dada8df4eaf357ad]::string::String>::{closure#0}, !>
+  10:        0x110322b48 - std[38995fe20cdd0385]::panicking::begin_panic::<alloc[dada8df4eaf357ad]::string::String>
+  11:        0x10fd75654 - rustc_middle[c74c86fa8e5eb0f3]::util::bug::opt_span_bug_fmt::<rustc_span[fe41c8b6e6d2d527]::span_encoding::Span>::{closure#0}
+  12:        0x10fd7540c - rustc_middle[c74c86fa8e5eb0f3]::ty::context::tls::with_opt::<rustc_middle[c74c86fa8e5eb0f3]::util::bug::opt_span_bug_fmt<rustc_span[fe41c8b6e6d2d527]::span_encoding::Span>::{closure#0}, !>::{closure#0}
+  13:        0x10fd753d8 - rustc_middle[c74c86fa8e5eb0f3]::ty::context::tls::with_context_opt::<rustc_middle[c74c86fa8e5eb0f3]::ty::context::tls::with_opt<rustc_middle[c74c86fa8e5eb0f3]::util::bug::opt_span_bug_fmt<rustc_span[fe41c8b6e6d2d527]::span_encoding::Span>::{closure#0}, !>::{closure#0}, !>
+  14:        0x11032e6c0 - rustc_middle[c74c86fa8e5eb0f3]::util::bug::bug_fmt
+  15:        0x10bd6fe58 - std[38995fe20cdd0385]::sys_common::backtrace::__rust_begin_short_backtrace::<<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend as rustc_codegen_ssa[83a10373c1fc3dec]::traits::backend::ExtraBackendMethods>::spawn_named_thread<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::start_executing_work<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend>::{closure#5}, core[15b8bf159cabbf29]::result::Result<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::CompiledModules, ()>>::{closure#0}, core[15b8bf159cabbf29]::result::Result<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::CompiledModules, ()>>
+  16:        0x10bd72000 - <<std[38995fe20cdd0385]::thread::Builder>::spawn_unchecked_<<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend as rustc_codegen_ssa[83a10373c1fc3dec]::traits::backend::ExtraBackendMethods>::spawn_named_thread<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::start_executing_work<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend>::{closure#5}, core[15b8bf159cabbf29]::result::Result<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::CompiledModules, ()>>::{closure#0}, core[15b8bf159cabbf29]::result::Result<rustc_codegen_ssa[83a10373c1fc3dec]::back::write::CompiledModules, ()>>::{closure#1} as core[15b8bf159cabbf29]::ops::function::FnOnce<()>>::call_once::{shim:vtable#0}
+  17:        0x103177bac - std::sys::unix::thread::Thread::new::thread_start::hde2b1ae05c16b668
+  18:        0x1815de034 - __pthread_joiner_wake
+
+error: the compiler unexpectedly panicked. this is a bug.
+
+note: we would appreciate a bug report: https://github.com/rust-lang/rust/issues/new?labels=C-bug%2C+I-ICE%2C+T-compiler&template=ice.md
+
+note: please attach the file at `/Users/yaw/self/theo/vga/rustc-ice-2024-01-14T09_07_46-8026.txt` to your bug report
+
+note: compiler flags: --crate-type lib -C embed-bitcode=no -C debuginfo=2 -C incremental=[REDACTED] -Z unstable-options
+
+note: some of the compiler flags provided by cargo are hidden
+
+query stack during panic:
+end of query stack
+thread 'rustc' panicked at compiler/rustc_middle/src/util/bug.rs:36:26:
+/rustc/2319be8e265dd19973574eb581d28297baf44b11/compiler/rustc_codegen_ssa/src/back/write.rs:1955:17: panic during codegen/LLVM phase
+stack backtrace:
+   0:        0x10316c948 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h78a98f9f169aa47d
+   1:        0x1031aebf8 - core::fmt::write::h9344c39b85e9c624
+   2:        0x103162c30 - std::io::Write::write_fmt::h21a426b62157e09b
+   3:        0x10316c77c - std::sys_common::backtrace::print::h3086348f9b4c6374
+   4:        0x10316f244 - std::panicking::default_hook::{{closure}}::h85012651ef3e4161
+   5:        0x10316ef8c - std::panicking::default_hook::h05050ce68ddb89d7
+   6:        0x10bb68464 - std[38995fe20cdd0385]::panicking::update_hook::<alloc[dada8df4eaf357ad]::boxed::Box<rustc_driver_impl[474072acc934f695]::install_ice_hook::{closure#0}>>::{closure#0}
+   7:        0x10316f8dc - std::panicking::rust_panic_with_hook::h8d3d4d28b7b21a6d
+   8:        0x10fcee018 - std[38995fe20cdd0385]::panicking::begin_panic::<alloc[dada8df4eaf357ad]::string::String>::{closure#0}
+   9:        0x10fcede78 - std[38995fe20cdd0385]::sys_common::backtrace::__rust_end_short_backtrace::<std[38995fe20cdd0385]::panicking::begin_panic<alloc[dada8df4eaf357ad]::string::String>::{closure#0}, !>
+  10:        0x110322b48 - std[38995fe20cdd0385]::panicking::begin_panic::<alloc[dada8df4eaf357ad]::string::String>
+  11:        0x10fd75654 - rustc_middle[c74c86fa8e5eb0f3]::util::bug::opt_span_bug_fmt::<rustc_span[fe41c8b6e6d2d527]::span_encoding::Span>::{closure#0}
+  12:        0x10fd7540c - rustc_middle[c74c86fa8e5eb0f3]::ty::context::tls::with_opt::<rustc_middle[c74c86fa8e5eb0f3]::util::bug::opt_span_bug_fmt<rustc_span[fe41c8b6e6d2d527]::span_encoding::Span>::{closure#0}, !>::{closure#0}
+  13:        0x10fd753d8 - rustc_middle[c74c86fa8e5eb0f3]::ty::context::tls::with_context_opt::<rustc_middle[c74c86fa8e5eb0f3]::ty::context::tls::with_opt<rustc_middle[c74c86fa8e5eb0f3]::util::bug::opt_span_bug_fmt<rustc_span[fe41c8b6e6d2d527]::span_encoding::Span>::{closure#0}, !>::{closure#0}, !>
+  14:        0x11032e6c0 - rustc_middle[c74c86fa8e5eb0f3]::util::bug::bug_fmt
+  15:        0x10be43b28 - <rustc_codegen_ssa[83a10373c1fc3dec]::back::write::OngoingCodegen<rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend>>::join
+  16:        0x10bd86f5c - <rustc_codegen_llvm[4fe78ee63848fa55]::LlvmCodegenBackend as rustc_codegen_ssa[83a10373c1fc3dec]::traits::backend::CodegenBackend>::join_codegen
+  17:        0x10bcb81a0 - <rustc_interface[faecbfc5438b1d47]::queries::Linker>::link
+  18:        0x10bb780f4 - rustc_span[fe41c8b6e6d2d527]::set_source_map::<core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>, rustc_interface[faecbfc5438b1d47]::interface::run_compiler<core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>, rustc_driver_impl[474072acc934f695]::run_compiler::{closure#0}>::{closure#0}::{closure#0}>
+  19:        0x10bb39e88 - <scoped_tls[7fd9900d5459e947]::ScopedKey<rustc_span[fe41c8b6e6d2d527]::SessionGlobals>>::set::<rustc_interface[faecbfc5438b1d47]::util::run_in_thread_pool_with_globals<rustc_interface[faecbfc5438b1d47]::interface::run_compiler<core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>, rustc_driver_impl[474072acc934f695]::run_compiler::{closure#0}>::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>
+  20:        0x10bb784a8 - rustc_span[fe41c8b6e6d2d527]::create_session_globals_then::<core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>, rustc_interface[faecbfc5438b1d47]::util::run_in_thread_pool_with_globals<rustc_interface[faecbfc5438b1d47]::interface::run_compiler<core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>, rustc_driver_impl[474072acc934f695]::run_compiler::{closure#0}>::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>::{closure#0}>
+  21:        0x10bb40b10 - std[38995fe20cdd0385]::sys_common::backtrace::__rust_begin_short_backtrace::<rustc_interface[faecbfc5438b1d47]::util::run_in_thread_with_globals<rustc_interface[faecbfc5438b1d47]::util::run_in_thread_pool_with_globals<rustc_interface[faecbfc5438b1d47]::interface::run_compiler<core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>, rustc_driver_impl[474072acc934f695]::run_compiler::{closure#0}>::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>::{closure#0}::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>
+  22:        0x10bb42c38 - <<std[38995fe20cdd0385]::thread::Builder>::spawn_unchecked_<rustc_interface[faecbfc5438b1d47]::util::run_in_thread_with_globals<rustc_interface[faecbfc5438b1d47]::util::run_in_thread_pool_with_globals<rustc_interface[faecbfc5438b1d47]::interface::run_compiler<core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>, rustc_driver_impl[474072acc934f695]::run_compiler::{closure#0}>::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>::{closure#0}::{closure#0}, core[15b8bf159cabbf29]::result::Result<(), rustc_span[fe41c8b6e6d2d527]::ErrorGuaranteed>>::{closure#1} as core[15b8bf159cabbf29]::ops::function::FnOnce<()>>::call_once::{shim:vtable#0}
+  23:        0x103177bac - std::sys::unix::thread::Thread::new::thread_start::hde2b1ae05c16b668
+  24:        0x1815de034 - __pthread_joiner_wake
+
+error: the compiler unexpectedly panicked. this is a bug.
+
+note: we would appreciate a bug report: https://github.com/rust-lang/rust/issues/new?labels=C-bug%2C+I-ICE%2C+T-compiler&template=ice.md
+
+note: please attach the file at `/Users/yaw/self/theo/vga/rustc-ice-2024-01-14T09_07_46-8026.txt` to your bug report
+
+note: compiler flags: --crate-type lib -C embed-bitcode=no -C debuginfo=2 -C incremental=[REDACTED] -Z unstable-options
+
+note: some of the compiler flags provided by cargo are hidden
+
+query stack during panic:
+end of query stack

@@ -1,0 +1,6027 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<u8>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &u8, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 8_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_u8, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_u8);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &u8, _2: T) -> u8 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: u8;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: u8;
+    let mut _17: u8;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: u8;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 8_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 8_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 8_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut u8, _2: usize, _3: bool) -> &mut u8 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut u8;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: u8;
+    let mut _7: bool;
+    let mut _8: u8;
+    let mut _9: u8;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 8_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 8_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_u8, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_u8, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut u8, _2: T, _3: u8) -> &mut u8 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut u8;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: u8;
+    let mut _18: u8;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: u8;
+    let mut _36: u8;
+    let mut _37: u8;
+    let mut _38: u8;
+    let mut _39: u8;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: u8;
+    let mut _53: u8;
+    let mut _54: u8;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: u8;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 8_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 8_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_u8);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 8_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 8_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 8_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 8_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 8_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<u16>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &u16, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: u16;
+    let mut _6: u16;
+    let mut _7: u16;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 16_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_u16, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_u16);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &u16, _2: T) -> u16 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: u16;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: u16;
+    let mut _17: u16;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: u16;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 16_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 16_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 16_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut u16, _2: usize, _3: bool) -> &mut u16 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut u16;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: u16;
+    let mut _7: bool;
+    let mut _8: u16;
+    let mut _9: u16;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 16_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 16_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_u16, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_u16, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut u16, _2: T, _3: u16) -> &mut u16 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut u16;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: u16;
+    let mut _18: u16;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: u16;
+    let mut _36: u16;
+    let mut _37: u16;
+    let mut _38: u16;
+    let mut _39: u16;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: u16;
+    let mut _53: u16;
+    let mut _54: u16;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: u16;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 16_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 16_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_u16);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 16_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 16_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 16_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 16_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 16_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<u32>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &u32, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: u32;
+    let mut _6: u32;
+    let mut _7: u32;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 32_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_u32, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_u32);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &u32, _2: T) -> u32 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: u32;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: u32;
+    let mut _17: u32;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: u32;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 32_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 32_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 32_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut u32, _2: usize, _3: bool) -> &mut u32 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut u32;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: u32;
+    let mut _7: bool;
+    let mut _8: u32;
+    let mut _9: u32;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 32_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 32_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_u32, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_u32, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut u32, _2: T, _3: u32) -> &mut u32 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut u32;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: u32;
+    let mut _18: u32;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: u32;
+    let mut _36: u32;
+    let mut _37: u32;
+    let mut _38: u32;
+    let mut _39: u32;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: u32;
+    let mut _53: u32;
+    let mut _54: u32;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: u32;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 32_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 32_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_u32);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 32_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 32_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 32_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 32_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 32_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<u64>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &u64, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: u64;
+    let mut _6: u64;
+    let mut _7: u64;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 64_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_u64, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_u64);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &u64, _2: T) -> u64 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: u64;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: u64;
+    let mut _17: u64;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: u64;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 64_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 64_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 64_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut u64, _2: usize, _3: bool) -> &mut u64 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut u64;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: u64;
+    let mut _7: bool;
+    let mut _8: u64;
+    let mut _9: u64;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 64_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 64_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_u64, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_u64, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut u64, _2: T, _3: u64) -> &mut u64 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut u64;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: u64;
+    let mut _18: u64;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: u64;
+    let mut _36: u64;
+    let mut _37: u64;
+    let mut _38: u64;
+    let mut _39: u64;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: u64;
+    let mut _53: u64;
+    let mut _54: u64;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: u64;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 64_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 64_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_u64);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 64_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 64_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 64_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 64_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 64_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<u128>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &u128, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: u128;
+    let mut _6: u128;
+    let mut _7: u128;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 128_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_u128, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_u128);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &u128, _2: T) -> u128 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: u128;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: u128;
+    let mut _17: u128;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: u128;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 128_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 128_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 128_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut u128, _2: usize, _3: bool) -> &mut u128 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut u128;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: u128;
+    let mut _7: bool;
+    let mut _8: u128;
+    let mut _9: u128;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 128_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 128_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_u128, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_u128, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut u128, _2: T, _3: u128) -> &mut u128 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut u128;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: u128;
+    let mut _18: u128;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: u128;
+    let mut _36: u128;
+    let mut _37: u128;
+    let mut _38: u128;
+    let mut _39: u128;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: u128;
+    let mut _53: u128;
+    let mut _54: u128;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: u128;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 128_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 128_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_u128);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 128_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 128_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 128_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 128_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 128_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<usize>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &usize, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: usize;
+    let mut _6: usize;
+    let mut _7: usize;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 64_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_usize, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_usize);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &usize, _2: T) -> usize {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: usize;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: usize;
+    let mut _17: usize;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: usize;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 64_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 64_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 64_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut usize, _2: usize, _3: bool) -> &mut usize {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut usize;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: usize;
+    let mut _7: bool;
+    let mut _8: usize;
+    let mut _9: usize;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 64_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 64_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_usize, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_usize, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut usize, _2: T, _3: usize) -> &mut usize {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut usize;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: usize;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: usize;
+    let mut _36: usize;
+    let mut _37: usize;
+    let mut _38: usize;
+    let mut _39: usize;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: usize;
+    let mut _53: usize;
+    let mut _54: usize;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: usize;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 64_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 64_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_usize);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 64_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 64_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 64_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 64_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 64_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<i8>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &i8, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: i8;
+    let mut _6: i8;
+    let mut _7: i8;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 8_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_i8, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_i8);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &i8, _2: T) -> i8 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: i8;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: i8;
+    let mut _17: i8;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: i8;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 8_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 8_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 8_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut i8, _2: usize, _3: bool) -> &mut i8 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut i8;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: i8;
+    let mut _7: bool;
+    let mut _8: i8;
+    let mut _9: i8;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 8_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 8_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_i8, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_i8, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut i8, _2: T, _3: i8) -> &mut i8 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut i8;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: i8;
+    let mut _18: i8;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: i8;
+    let mut _36: i8;
+    let mut _37: i8;
+    let mut _38: i8;
+    let mut _39: i8;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: i8;
+    let mut _53: i8;
+    let mut _54: i8;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: i8;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 8_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 8_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_i8);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 8_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 8_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 8_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 8_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 8_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<i16>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &i16, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: i16;
+    let mut _6: i16;
+    let mut _7: i16;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 16_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_i16, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_i16);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &i16, _2: T) -> i16 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: i16;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: i16;
+    let mut _17: i16;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: i16;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 16_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 16_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 16_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut i16, _2: usize, _3: bool) -> &mut i16 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut i16;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: i16;
+    let mut _7: bool;
+    let mut _8: i16;
+    let mut _9: i16;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 16_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 16_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_i16, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_i16, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut i16, _2: T, _3: i16) -> &mut i16 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut i16;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: i16;
+    let mut _18: i16;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: i16;
+    let mut _36: i16;
+    let mut _37: i16;
+    let mut _38: i16;
+    let mut _39: i16;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: i16;
+    let mut _53: i16;
+    let mut _54: i16;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: i16;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 16_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 16_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_i16);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 16_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 16_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 16_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 16_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 16_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<i32>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &i32, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: i32;
+    let mut _6: i32;
+    let mut _7: i32;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 32_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_i32, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_i32);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &i32, _2: T) -> i32 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: i32;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: i32;
+    let mut _17: i32;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: i32;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 32_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 32_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 32_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut i32, _2: usize, _3: bool) -> &mut i32 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut i32;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: i32;
+    let mut _7: bool;
+    let mut _8: i32;
+    let mut _9: i32;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 32_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 32_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_i32, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_i32, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut i32, _2: T, _3: i32) -> &mut i32 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut i32;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: i32;
+    let mut _18: i32;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: i32;
+    let mut _36: i32;
+    let mut _37: i32;
+    let mut _38: i32;
+    let mut _39: i32;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: i32;
+    let mut _53: i32;
+    let mut _54: i32;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: i32;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 32_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 32_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_i32);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 32_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 32_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 32_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 32_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 32_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<i64>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &i64, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: i64;
+    let mut _6: i64;
+    let mut _7: i64;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 64_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_i64, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_i64);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &i64, _2: T) -> i64 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: i64;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: i64;
+    let mut _17: i64;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: i64;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 64_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 64_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 64_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut i64, _2: usize, _3: bool) -> &mut i64 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut i64;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: i64;
+    let mut _7: bool;
+    let mut _8: i64;
+    let mut _9: i64;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 64_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 64_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_i64, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_i64, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut i64, _2: T, _3: i64) -> &mut i64 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut i64;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: i64;
+    let mut _18: i64;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: i64;
+    let mut _36: i64;
+    let mut _37: i64;
+    let mut _38: i64;
+    let mut _39: i64;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: i64;
+    let mut _53: i64;
+    let mut _54: i64;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: i64;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 64_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 64_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_i64);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 64_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 64_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 64_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 64_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 64_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<i128>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &i128, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: i128;
+    let mut _6: i128;
+    let mut _7: i128;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 128_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_i128, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_i128);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &i128, _2: T) -> i128 {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: i128;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: i128;
+    let mut _17: i128;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: i128;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 128_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 128_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 128_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut i128, _2: usize, _3: bool) -> &mut i128 {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut i128;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: i128;
+    let mut _7: bool;
+    let mut _8: i128;
+    let mut _9: i128;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 128_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 128_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_i128, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_i128, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut i128, _2: T, _3: i128) -> &mut i128 {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut i128;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: i128;
+    let mut _18: i128;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: i128;
+    let mut _36: i128;
+    let mut _37: i128;
+    let mut _38: i128;
+    let mut _39: i128;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: i128;
+    let mut _53: i128;
+    let mut _54: i128;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: i128;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 128_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 128_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_i128);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 128_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 128_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 128_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 128_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 128_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::BIT_LENGTH: usize = {
+    let mut _0: usize;
+    let mut _1: usize;
+    let mut _2: (usize, bool);
+
+    bb0: {
+        StorageLive(_1);
+        ConstEvalCounter;
+        _1 = core::mem::size_of::<isize>() -> [return: bb1, unwind: bb3];
+    }
+
+    bb1: {
+        _2 = CheckedMul(_1, const 8_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} * {}`, which would overflow", move _1, const 8_usize) -> [success: bb2, unwind: bb3];
+    }
+
+    bb2: {
+        _0 = move (_2.0: usize);
+        StorageDead(_1);
+        return;
+    }
+
+    bb3 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bit(_1: &isize, _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: !;
+    let mut _5: isize;
+    let mut _6: isize;
+    let mut _7: isize;
+    let mut _8: bool;
+
+    bb0: {
+        _3 = Lt(_2, const _);
+        switchInt(move _3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _6 = (*_1);
+        _8 = Lt(_2, const 64_usize);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Shl(const 1_isize, _2);
+        _5 = BitAnd(move _6, move _7);
+        _0 = Ne(move _5, const 0_isize);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::get_bits(_1: &isize, _2: T) -> isize {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: isize;
+    let _3: core::ops::Range<usize>;
+    let _4: &T;
+    let mut _5: bool;
+    let mut _6: usize;
+    let mut _7: !;
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: !;
+    let mut _11: bool;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: !;
+    let mut _16: isize;
+    let mut _17: isize;
+    let mut _18: usize;
+    let mut _19: usize;
+    let mut _20: (usize, bool);
+    let mut _21: bool;
+    let mut _22: usize;
+    let mut _23: usize;
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: bool;
+    scope 1 {
+        debug range => _3;
+        let _15: isize;
+        scope 2 {
+            debug bits => _15;
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _3 = to_regular_range::<T>(_4, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = (_3.0: usize);
+        _5 = Lt(move _6, const _);
+        switchInt(move _5) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _9 = (_3.1: usize);
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _12 = (_3.0: usize);
+        _13 = (_3.1: usize);
+        _11 = Lt(move _12, move _13);
+        switchInt(move _11) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _10 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _17 = (*_1);
+        _19 = (_3.1: usize);
+        _20 = CheckedSub(const _, _19);
+        assert(!move (_20.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _18 = move (_20.0: usize);
+        _21 = Lt(_18, const 64_usize);
+        assert(move _21, "attempt to shift left by `{}`, which would overflow", _18) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _16 = Shl(move _17, move _18);
+        _23 = (_3.1: usize);
+        _24 = CheckedSub(const _, _23);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _23) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = move (_24.0: usize);
+        _25 = Lt(_22, const 64_usize);
+        assert(move _25, "attempt to shift right by `{}`, which would overflow", _22) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _15 = Shr(move _16, move _22);
+        _26 = (_3.0: usize);
+        _27 = Lt(_26, const 64_usize);
+        assert(move _27, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Shr(_15, move _26);
+        drop(_2) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bit(_1: &mut isize, _2: usize, _3: bool) -> &mut isize {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: &mut isize;
+    let mut _4: bool;
+    let mut _5: !;
+    let mut _6: isize;
+    let mut _7: bool;
+    let mut _8: isize;
+    let mut _9: isize;
+    let mut _10: bool;
+
+    bb0: {
+        _4 = Lt(_2, const _);
+        switchInt(move _4) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        switchInt(_3) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb2: {
+        _5 = panic(const "assertion failed: bit < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb3: {
+        _7 = Lt(_2, const 64_usize);
+        assert(move _7, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb5, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = Lt(_2, const 64_usize);
+        assert(move _10, "attempt to shift left by `{}`, which would overflow", _2) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Shl(const 1_isize, _2);
+        (*_1) = BitOr((*_1), move _6);
+        goto -> bb7;
+    }
+
+    bb6: {
+        _9 = Shl(const 1_isize, _2);
+        _8 = Not(move _9);
+        (*_1) = BitAnd((*_1), move _8);
+        goto -> bb7;
+    }
+
+    bb7: {
+        _0 = _1;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:211:9: 211:29>::set_bits(_1: &mut isize, _2: T, _3: isize) -> &mut isize {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: &mut isize;
+    let _4: core::ops::Range<usize>;
+    let _5: &T;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: !;
+    let mut _9: bool;
+    let mut _10: usize;
+    let mut _11: !;
+    let mut _12: bool;
+    let mut _13: usize;
+    let mut _14: usize;
+    let mut _15: !;
+    let mut _16: bool;
+    let mut _17: isize;
+    let mut _18: isize;
+    let mut _19: usize;
+    let mut _20: usize;
+    let mut _21: usize;
+    let mut _22: usize;
+    let mut _23: (usize, bool);
+    let mut _24: (usize, bool);
+    let mut _25: bool;
+    let mut _26: usize;
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: usize;
+    let mut _30: (usize, bool);
+    let mut _31: (usize, bool);
+    let mut _32: bool;
+    let mut _33: !;
+    let mut _35: isize;
+    let mut _36: isize;
+    let mut _37: isize;
+    let mut _38: isize;
+    let mut _39: isize;
+    let mut _40: usize;
+    let mut _41: usize;
+    let mut _42: (usize, bool);
+    let mut _43: bool;
+    let mut _44: usize;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: bool;
+    let mut _48: usize;
+    let mut _49: bool;
+    let mut _50: usize;
+    let mut _51: bool;
+    let mut _52: isize;
+    let mut _53: isize;
+    let mut _54: isize;
+    let mut _55: usize;
+    let mut _56: bool;
+    scope 1 {
+        debug range => _4;
+        let _34: isize;
+        scope 2 {
+            debug bitmask => _34;
+        }
+    }
+
+    bb0: {
+        _5 = &_2;
+        _4 = to_regular_range::<T>(_5, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = (_4.0: usize);
+        _6 = Lt(move _7, const _);
+        switchInt(move _6) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _10 = (_4.1: usize);
+        _9 = Le(move _10, const _);
+        switchInt(move _9) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb3: {
+        _8 = panic(const "assertion failed: range.start < Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = (_4.1: usize);
+        _12 = Lt(move _13, move _14);
+        switchInt(move _12) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.end <= Self::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _21 = (_4.1: usize);
+        _22 = (_4.0: usize);
+        _23 = CheckedSub(_21, _22);
+        assert(!move (_23.1: bool), "attempt to compute `{} - {}`, which would overflow", move _21, move _22) -> [success: bb8, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = panic(const "assertion failed: range.start < range.end") -> unwind unreachable;
+    }
+
+    bb8: {
+        _20 = move (_23.0: usize);
+        _24 = CheckedSub(const _, _20);
+        assert(!move (_24.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = move (_24.0: usize);
+        _25 = Lt(_19, const 64_usize);
+        assert(move _25, "attempt to shift left by `{}`, which would overflow", _19) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _18 = Shl(_3, move _19);
+        _28 = (_4.1: usize);
+        _29 = (_4.0: usize);
+        _30 = CheckedSub(_28, _29);
+        assert(!move (_30.1: bool), "attempt to compute `{} - {}`, which would overflow", move _28, move _29) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _27 = move (_30.0: usize);
+        _31 = CheckedSub(const _, _27);
+        assert(!move (_31.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _27) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _26 = move (_31.0: usize);
+        _32 = Lt(_26, const 64_usize);
+        assert(move _32, "attempt to shift right by `{}`, which would overflow", _26) -> [success: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = Shr(move _18, move _26);
+        _16 = Eq(move _17, _3);
+        switchInt(move _16) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _39 = Not(const 0_isize);
+        _41 = (_4.1: usize);
+        _42 = CheckedSub(const _, _41);
+        assert(!move (_42.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _41) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        _33 = panic(const "value does not fit into bit range") -> unwind unreachable;
+    }
+
+    bb16: {
+        _40 = move (_42.0: usize);
+        _43 = Lt(_40, const 64_usize);
+        assert(move _43, "attempt to shift left by `{}`, which would overflow", _40) -> [success: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _38 = Shl(move _39, move _40);
+        _45 = (_4.1: usize);
+        _46 = CheckedSub(const _, _45);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, move _45) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _44 = move (_46.0: usize);
+        _47 = Lt(_44, const 64_usize);
+        assert(move _47, "attempt to shift right by `{}`, which would overflow", _44) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _37 = Shr(move _38, move _44);
+        _48 = (_4.0: usize);
+        _49 = Lt(_48, const 64_usize);
+        assert(move _49, "attempt to shift right by `{}`, which would overflow", _48) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _36 = Shr(move _37, move _48);
+        _50 = (_4.0: usize);
+        _51 = Lt(_50, const 64_usize);
+        assert(move _51, "attempt to shift left by `{}`, which would overflow", _50) -> [success: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _35 = Shl(move _36, move _50);
+        _34 = Not(move _35);
+        _53 = (*_1);
+        _52 = BitAnd(move _53, _34);
+        _55 = (_4.0: usize);
+        _56 = Lt(_55, const 64_usize);
+        assert(move _56, "attempt to shift left by `{}`, which would overflow", _55) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _54 = Shl(_3, move _55);
+        (*_1) = BitOr(move _52, move _54);
+        _0 = _1;
+        drop(_2) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:275:1: 275:38>::bit_length(_1: &[T]) -> usize {
+    debug self => _1;
+    let mut _0: usize;
+    let mut _2: usize;
+    let mut _3: (usize, bool);
+
+    bb0: {
+        _2 = Len((*_1));
+        _3 = CheckedMul(_2, const _);
+        assert(!move (_3.1: bool), "attempt to compute `{} * {}`, which would overflow", move _2, const _) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = move (_3.0: usize);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:275:1: 275:38>::get_bit(_1: &[T], _2: usize) -> bool {
+    debug self => _1;
+    debug bit => _2;
+    let mut _0: bool;
+    let _3: usize;
+    let mut _4: bool;
+    let mut _6: bool;
+    let mut _7: &T;
+    let mut _8: usize;
+    let mut _9: bool;
+    scope 1 {
+        debug slice_index => _3;
+        let _5: usize;
+        scope 2 {
+            debug bit_index => _5;
+        }
+    }
+
+    bb0: {
+        _4 = Eq(const _, const 0_usize);
+        assert(!move _4, "attempt to divide `{}` by zero", _2) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = Div(_2, const _);
+        _6 = Eq(const _, const 0_usize);
+        assert(!move _6, "attempt to calculate the remainder of `{}` with a divisor of zero", _2) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = Rem(_2, const _);
+        _8 = Len((*_1));
+        _9 = Lt(_3, _8);
+        assert(move _9, "index out of bounds: the length is {} but the index is {}", move _8, _3) -> [success: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _7 = &(*_1)[_3];
+        _0 = <T as BitField>::get_bit(move _7, _5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:275:1: 275:38>::get_bits(_1: &[T], _2: U) -> T {
+    debug self => _1;
+    debug range => _2;
+    let mut _0: T;
+    let _3: core::ops::Range<usize>;
+    let _4: &U;
+    let mut _5: usize;
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: &core::ops::Range<usize>;
+    let mut _9: !;
+    let mut _11: usize;
+    let mut _12: bool;
+    let mut _14: usize;
+    let mut _15: bool;
+    let mut _17: usize;
+    let mut _18: bool;
+    let mut _20: usize;
+    let mut _21: bool;
+    let mut _23: &core::ops::Range<usize>;
+    let mut _24: bool;
+    let mut _25: usize;
+    let mut _26: (usize, bool);
+    let mut _27: !;
+    let mut _28: bool;
+    let mut _29: &T;
+    let mut _30: usize;
+    let mut _31: bool;
+    let mut _32: core::ops::Range<usize>;
+    let mut _33: &T;
+    let mut _34: usize;
+    let mut _35: bool;
+    let mut _36: core::ops::Range<usize>;
+    let mut _38: &T;
+    let mut _39: usize;
+    let mut _40: bool;
+    let mut _41: core::ops::Range<usize>;
+    let _42: &mut T;
+    let mut _43: &mut T;
+    let mut _44: core::ops::Range<usize>;
+    let mut _45: usize;
+    let mut _46: (usize, bool);
+    let mut _47: T;
+    let mut _48: &T;
+    let mut _49: usize;
+    let mut _50: bool;
+    let mut _51: core::ops::Range<usize>;
+    scope 1 {
+        debug range => _3;
+        let _10: usize;
+        scope 2 {
+            debug slice_start => _10;
+            let _13: usize;
+            scope 3 {
+                debug slice_end => _13;
+                let _16: usize;
+                scope 4 {
+                    debug bit_start => _16;
+                    let _19: usize;
+                    scope 5 {
+                        debug bit_end => _19;
+                        let _22: usize;
+                        scope 6 {
+                            debug len => _22;
+                            let mut _37: T;
+                            scope 7 {
+                                debug ret => _37;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _4 = &_2;
+        _5 = <[T] as BitArray<T>>::bit_length(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = to_regular_range::<U>(_4, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &_3;
+        _7 = <Range<usize> as ExactSizeIterator>::len(move _8) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _6 = Le(move _7, const _);
+        switchInt(move _6) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _11 = (_3.0: usize);
+        _12 = Eq(const _, const 0_usize);
+        assert(!move _12, "attempt to divide `{}` by zero", _11) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _9 = panic(const "assertion failed: range.len() <= T::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _10 = Div(move _11, const _);
+        _14 = (_3.1: usize);
+        _15 = Eq(const _, const 0_usize);
+        assert(!move _15, "attempt to divide `{}` by zero", _14) -> [success: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _13 = Div(move _14, const _);
+        _17 = (_3.0: usize);
+        _18 = Eq(const _, const 0_usize);
+        assert(!move _18, "attempt to calculate the remainder of `{}` with a divisor of zero", _17) -> [success: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _16 = Rem(move _17, const _);
+        _20 = (_3.1: usize);
+        _21 = Eq(const _, const 0_usize);
+        assert(!move _21, "attempt to calculate the remainder of `{}` with a divisor of zero", _20) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _19 = Rem(move _20, const _);
+        _23 = &_3;
+        _22 = <Range<usize> as ExactSizeIterator>::len(move _23) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _26 = CheckedSub(_13, _10);
+        assert(!move (_26.1: bool), "attempt to compute `{} - {}`, which would overflow", _13, _10) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _25 = move (_26.0: usize);
+        _24 = Le(move _25, const 1_usize);
+        switchInt(move _24) -> [0: bb13, otherwise: bb12];
+    }
+
+    bb12: {
+        _28 = Eq(_10, _13);
+        switchInt(move _28) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb13: {
+        _27 = panic(const "assertion failed: slice_end - slice_start <= 1") -> unwind unreachable;
+    }
+
+    bb14: {
+        _30 = Len((*_1));
+        _31 = Lt(_10, _30);
+        assert(move _31, "index out of bounds: the length is {} but the index is {}", move _30, _10) -> [success: bb16, unwind unreachable];
+    }
+
+    bb15: {
+        switchInt(move _19) -> [0: bb17, otherwise: bb18];
+    }
+
+    bb16: {
+        _29 = &(*_1)[_10];
+        _32 = Range::<usize> { start: _16, end: _19 };
+        _0 = <T as BitField>::get_bits::<Range<usize>>(move _29, move _32) -> [return: bb26, unwind unreachable];
+    }
+
+    bb17: {
+        _34 = Len((*_1));
+        _35 = Lt(_10, _34);
+        assert(move _35, "index out of bounds: the length is {} but the index is {}", move _34, _10) -> [success: bb19, unwind unreachable];
+    }
+
+    bb18: {
+        _39 = Len((*_1));
+        _40 = Lt(_10, _39);
+        assert(move _40, "index out of bounds: the length is {} but the index is {}", move _39, _10) -> [success: bb20, unwind unreachable];
+    }
+
+    bb19: {
+        _33 = &(*_1)[_10];
+        _36 = Range::<usize> { start: _16, end: const _ };
+        _0 = <T as BitField>::get_bits::<Range<usize>>(move _33, move _36) -> [return: bb26, unwind unreachable];
+    }
+
+    bb20: {
+        _38 = &(*_1)[_10];
+        _41 = Range::<usize> { start: _16, end: const _ };
+        _37 = <T as BitField>::get_bits::<Range<usize>>(move _38, move _41) -> [return: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _43 = &mut _37;
+        _46 = CheckedSub(const _, _16);
+        assert(!move (_46.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, _16) -> [success: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _45 = move (_46.0: usize);
+        _44 = Range::<usize> { start: move _45, end: _22 };
+        _49 = Len((*_1));
+        _50 = Lt(_13, _49);
+        assert(move _50, "index out of bounds: the length is {} but the index is {}", move _49, _13) -> [success: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        _48 = &(*_1)[_13];
+        _51 = Range::<usize> { start: const 0_usize, end: _19 };
+        _47 = <T as BitField>::get_bits::<Range<usize>>(move _48, move _51) -> [return: bb24, unwind unreachable];
+    }
+
+    bb24: {
+        _42 = <T as BitField>::set_bits::<Range<usize>>(move _43, move _44, move _47) -> [return: bb25, unwind unreachable];
+    }
+
+    bb25: {
+        _0 = move _37;
+        goto -> bb26;
+    }
+
+    bb26: {
+        drop(_2) -> [return: bb27, unwind unreachable];
+    }
+
+    bb27: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:275:1: 275:38>::set_bit(_1: &mut [T], _2: usize, _3: bool) -> () {
+    debug self => _1;
+    debug bit => _2;
+    debug value => _3;
+    let mut _0: ();
+    let _4: usize;
+    let mut _5: bool;
+    let mut _7: bool;
+    let _8: &mut T;
+    let mut _9: &mut T;
+    let mut _10: usize;
+    let mut _11: bool;
+    scope 1 {
+        debug slice_index => _4;
+        let _6: usize;
+        scope 2 {
+            debug bit_index => _6;
+        }
+    }
+
+    bb0: {
+        _5 = Eq(const _, const 0_usize);
+        assert(!move _5, "attempt to divide `{}` by zero", _2) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = Div(_2, const _);
+        _7 = Eq(const _, const 0_usize);
+        assert(!move _7, "attempt to calculate the remainder of `{}` with a divisor of zero", _2) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _6 = Rem(_2, const _);
+        _10 = Len((*_1));
+        _11 = Lt(_4, _10);
+        assert(move _11, "index out of bounds: the length is {} but the index is {}", move _10, _4) -> [success: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _9 = &mut (*_1)[_4];
+        _8 = <T as BitField>::set_bit(move _9, _6, _3) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bit_field-0.10.1/src/lib.rs:275:1: 275:38>::set_bits(_1: &mut [T], _2: U, _3: T) -> () {
+    debug self => _1;
+    debug range => _2;
+    debug value => _3;
+    let mut _0: ();
+    let _4: core::ops::Range<usize>;
+    let _5: &U;
+    let mut _6: usize;
+    let mut _7: &[T];
+    let mut _8: bool;
+    let mut _9: usize;
+    let mut _10: &core::ops::Range<usize>;
+    let mut _11: !;
+    let mut _13: usize;
+    let mut _14: bool;
+    let mut _16: usize;
+    let mut _17: bool;
+    let mut _19: usize;
+    let mut _20: bool;
+    let mut _22: usize;
+    let mut _23: bool;
+    let mut _24: bool;
+    let mut _25: usize;
+    let mut _26: (usize, bool);
+    let mut _27: !;
+    let mut _28: bool;
+    let _29: &mut T;
+    let mut _30: &mut T;
+    let mut _31: usize;
+    let mut _32: bool;
+    let mut _33: core::ops::Range<usize>;
+    let mut _34: T;
+    let _35: &mut T;
+    let mut _36: &mut T;
+    let mut _37: usize;
+    let mut _38: bool;
+    let mut _39: core::ops::Range<usize>;
+    let mut _40: T;
+    let _41: &mut T;
+    let mut _42: &mut T;
+    let mut _43: usize;
+    let mut _44: bool;
+    let mut _45: core::ops::Range<usize>;
+    let mut _46: T;
+    let mut _47: &T;
+    let mut _48: core::ops::Range<usize>;
+    let mut _49: usize;
+    let mut _50: (usize, bool);
+    let _51: &mut T;
+    let mut _52: &mut T;
+    let mut _53: usize;
+    let mut _54: bool;
+    let mut _55: core::ops::Range<usize>;
+    let mut _56: T;
+    let mut _57: &T;
+    let mut _58: core::ops::Range<usize>;
+    let mut _59: usize;
+    let mut _60: (usize, bool);
+    let mut _61: bool;
+    scope 1 {
+        debug range => _4;
+        let _12: usize;
+        scope 2 {
+            debug slice_start => _12;
+            let _15: usize;
+            scope 3 {
+                debug slice_end => _15;
+                let _18: usize;
+                scope 4 {
+                    debug bit_start => _18;
+                    let _21: usize;
+                    scope 5 {
+                        debug bit_end => _21;
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _61 = const false;
+        _61 = const true;
+        _5 = &_2;
+        _7 = &(*_1);
+        _6 = <[T] as BitArray<T>>::bit_length(move _7) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = to_regular_range::<U>(_5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _10 = &_4;
+        _9 = <Range<usize> as ExactSizeIterator>::len(move _10) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _8 = Le(move _9, const _);
+        switchInt(move _8) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _13 = (_4.0: usize);
+        _14 = Eq(const _, const 0_usize);
+        assert(!move _14, "attempt to divide `{}` by zero", _13) -> [success: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _11 = panic(const "assertion failed: range.len() <= T::BIT_LENGTH") -> unwind unreachable;
+    }
+
+    bb6: {
+        _12 = Div(move _13, const _);
+        _16 = (_4.1: usize);
+        _17 = Eq(const _, const 0_usize);
+        assert(!move _17, "attempt to divide `{}` by zero", _16) -> [success: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _15 = Div(move _16, const _);
+        _19 = (_4.0: usize);
+        _20 = Eq(const _, const 0_usize);
+        assert(!move _20, "attempt to calculate the remainder of `{}` with a divisor of zero", _19) -> [success: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _18 = Rem(move _19, const _);
+        _22 = (_4.1: usize);
+        _23 = Eq(const _, const 0_usize);
+        assert(!move _23, "attempt to calculate the remainder of `{}` with a divisor of zero", _22) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _21 = Rem(move _22, const _);
+        _26 = CheckedSub(_15, _12);
+        assert(!move (_26.1: bool), "attempt to compute `{} - {}`, which would overflow", _15, _12) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _25 = move (_26.0: usize);
+        _24 = Le(move _25, const 1_usize);
+        switchInt(move _24) -> [0: bb12, otherwise: bb11];
+    }
+
+    bb11: {
+        _28 = Eq(_12, _15);
+        switchInt(move _28) -> [0: bb14, otherwise: bb13];
+    }
+
+    bb12: {
+        _27 = panic(const "assertion failed: slice_end - slice_start <= 1") -> unwind unreachable;
+    }
+
+    bb13: {
+        _31 = Len((*_1));
+        _32 = Lt(_12, _31);
+        assert(move _32, "index out of bounds: the length is {} but the index is {}", move _31, _12) -> [success: bb15, unwind unreachable];
+    }
+
+    bb14: {
+        switchInt(move _21) -> [0: bb16, otherwise: bb17];
+    }
+
+    bb15: {
+        _30 = &mut (*_1)[_12];
+        _33 = Range::<usize> { start: _18, end: _21 };
+        _61 = const false;
+        _34 = move _3;
+        _29 = <T as BitField>::set_bits::<Range<usize>>(move _30, move _33, move _34) -> [return: bb26, unwind unreachable];
+    }
+
+    bb16: {
+        _37 = Len((*_1));
+        _38 = Lt(_12, _37);
+        assert(move _38, "index out of bounds: the length is {} but the index is {}", move _37, _12) -> [success: bb18, unwind unreachable];
+    }
+
+    bb17: {
+        _43 = Len((*_1));
+        _44 = Lt(_12, _43);
+        assert(move _44, "index out of bounds: the length is {} but the index is {}", move _43, _12) -> [success: bb19, unwind unreachable];
+    }
+
+    bb18: {
+        _36 = &mut (*_1)[_12];
+        _39 = Range::<usize> { start: _18, end: const _ };
+        _61 = const false;
+        _40 = move _3;
+        _35 = <T as BitField>::set_bits::<Range<usize>>(move _36, move _39, move _40) -> [return: bb26, unwind unreachable];
+    }
+
+    bb19: {
+        _42 = &mut (*_1)[_12];
+        _45 = Range::<usize> { start: _18, end: const _ };
+        _47 = &_3;
+        _50 = CheckedSub(const _, _18);
+        assert(!move (_50.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, _18) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _49 = move (_50.0: usize);
+        _48 = Range::<usize> { start: const 0_usize, end: move _49 };
+        _46 = <T as BitField>::get_bits::<Range<usize>>(move _47, move _48) -> [return: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _41 = <T as BitField>::set_bits::<Range<usize>>(move _42, move _45, move _46) -> [return: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _53 = Len((*_1));
+        _54 = Lt(_15, _53);
+        assert(move _54, "index out of bounds: the length is {} but the index is {}", move _53, _15) -> [success: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        _52 = &mut (*_1)[_15];
+        _55 = Range::<usize> { start: const 0_usize, end: _21 };
+        _57 = &_3;
+        _60 = CheckedSub(const _, _18);
+        assert(!move (_60.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, _18) -> [success: bb24, unwind unreachable];
+    }
+
+    bb24: {
+        _59 = move (_60.0: usize);
+        _58 = Range::<usize> { start: move _59, end: const _ };
+        _56 = <T as BitField>::get_bits::<Range<usize>>(move _57, move _58) -> [return: bb25, unwind unreachable];
+    }
+
+    bb25: {
+        _51 = <T as BitField>::set_bits::<Range<usize>>(move _52, move _55, move _56) -> [return: bb26, unwind unreachable];
+    }
+
+    bb26: {
+        switchInt(_61) -> [0: bb27, otherwise: bb29];
+    }
+
+    bb27: {
+        drop(_2) -> [return: bb28, unwind unreachable];
+    }
+
+    bb28: {
+        return;
+    }
+
+    bb29: {
+        drop(_3) -> [return: bb27, unwind unreachable];
+    }
+}
+
+fn to_regular_range(_1: &T, _2: usize) -> Range<usize> {
+    debug generic_rage => _1;
+    debug bit_length => _2;
+    let mut _0: core::ops::Range<usize>;
+    let _3: usize;
+    let mut _4: core::ops::Bound<&usize>;
+    let mut _5: isize;
+    let _6: usize;
+    let mut _7: (usize, bool);
+    let _8: usize;
+    let mut _10: core::ops::Bound<&usize>;
+    let mut _11: isize;
+    let mut _14: (usize, bool);
+    let mut _15: usize;
+    let mut _16: usize;
+    let mut _17: &usize;
+    let mut _18: &usize;
+    let mut _19: &usize;
+    let mut _20: &usize;
+    scope 1 {
+        debug start => _3;
+        let _9: usize;
+        let _12: usize;
+        let _13: usize;
+        scope 4 {
+            debug end => _9;
+        }
+        scope 5 {
+            debug value => _12;
+        }
+        scope 6 {
+            debug value => _13;
+        }
+    }
+    scope 2 {
+        debug value => _6;
+    }
+    scope 3 {
+        debug value => _8;
+    }
+
+    bb0: {
+        _4 = <T as RangeBounds<usize>>::start_bound(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = discriminant(_4);
+        switchInt(move _5) -> [0: bb5, 1: bb3, 2: bb2, otherwise: bb13];
+    }
+
+    bb2: {
+        _3 = const 0_usize;
+        goto -> bb6;
+    }
+
+    bb3: {
+        _17 = deref_copy ((_4 as Excluded).0: &usize);
+        _6 = (*_17);
+        _7 = CheckedAdd(_6, const 1_usize);
+        assert(!move (_7.1: bool), "attempt to compute `{} + {}`, which would overflow", _6, const 1_usize) -> [success: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _3 = move (_7.0: usize);
+        goto -> bb6;
+    }
+
+    bb5: {
+        _18 = deref_copy ((_4 as Included).0: &usize);
+        _8 = (*_18);
+        _3 = _8;
+        goto -> bb6;
+    }
+
+    bb6: {
+        _10 = <T as RangeBounds<usize>>::end_bound(_1) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _11 = discriminant(_10);
+        switchInt(move _11) -> [0: bb10, 1: bb9, 2: bb8, otherwise: bb13];
+    }
+
+    bb8: {
+        _9 = _2;
+        goto -> bb12;
+    }
+
+    bb9: {
+        _19 = deref_copy ((_10 as Excluded).0: &usize);
+        _12 = (*_19);
+        _9 = _12;
+        goto -> bb12;
+    }
+
+    bb10: {
+        _20 = deref_copy ((_10 as Included).0: &usize);
+        _13 = (*_20);
+        _14 = CheckedAdd(_13, const 1_usize);
+        assert(!move (_14.1: bool), "attempt to compute `{} + {}`, which would overflow", _13, const 1_usize) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _9 = move (_14.0: usize);
+        goto -> bb12;
+    }
+
+    bb12: {
+        _15 = _3;
+        _16 = _9;
+        _0 = Range::<usize> { start: move _15, end: move _16 };
+        return;
+    }
+
+    bb13: {
+        unreachable;
+    }
+}

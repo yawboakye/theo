@@ -1,0 +1,4900 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn mmio::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/mmio.rs:18:1: 18:20>::new(_1: usize) -> MmioSerialPort {
+    debug base => _1;
+    let mut _0: mmio::MmioSerialPort;
+    let _2: *mut u8;
+    let mut _3: core::sync::atomic::AtomicPtr<u8>;
+    let mut _4: core::sync::atomic::AtomicPtr<u8>;
+    let mut _5: *mut u8;
+    let mut _6: core::sync::atomic::AtomicPtr<u8>;
+    let mut _7: *mut u8;
+    let mut _8: core::sync::atomic::AtomicPtr<u8>;
+    let mut _9: *mut u8;
+    let mut _10: core::sync::atomic::AtomicPtr<u8>;
+    let mut _11: *mut u8;
+    let mut _12: core::sync::atomic::AtomicPtr<u8>;
+    let mut _13: *mut u8;
+    scope 1 {
+        debug base_pointer => _2;
+    }
+
+    bb0: {
+        _2 = _1 as *mut u8 (PointerFromExposedAddress);
+        _3 = AtomicPtr::<u8>::new(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = core::ptr::mut_ptr::<impl *mut u8>::add(_2, const 1_usize) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = AtomicPtr::<u8>::new(move _5) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _7 = core::ptr::mut_ptr::<impl *mut u8>::add(_2, const 2_usize) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _6 = AtomicPtr::<u8>::new(move _7) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _9 = core::ptr::mut_ptr::<impl *mut u8>::add(_2, const 3_usize) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _8 = AtomicPtr::<u8>::new(move _9) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _11 = core::ptr::mut_ptr::<impl *mut u8>::add(_2, const 4_usize) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _10 = AtomicPtr::<u8>::new(move _11) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _13 = core::ptr::mut_ptr::<impl *mut u8>::add(_2, const 5_usize) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _12 = AtomicPtr::<u8>::new(move _13) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _0 = MmioSerialPort { data: move _3, int_en: move _4, fifo_ctrl: move _6, line_ctrl: move _8, modem_ctrl: move _10, line_sts: move _12 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn mmio::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/mmio.rs:18:1: 18:20>::new(_1: usize) -> MmioSerialPort {
+    debug base => _1;
+    let mut _0: mmio::MmioSerialPort;
+    let _2: *mut u8;
+    let mut _3: usize;
+    let mut _4: core::sync::atomic::AtomicPtr<u8>;
+    let mut _5: *mut u8;
+    let mut _6: core::sync::atomic::AtomicPtr<u8>;
+    let mut _7: *mut u8;
+    let mut _8: *mut u8;
+    let mut _9: core::sync::atomic::AtomicPtr<u8>;
+    let mut _10: *mut u8;
+    let mut _11: *mut u8;
+    let mut _12: core::sync::atomic::AtomicPtr<u8>;
+    let mut _13: *mut u8;
+    let mut _14: *mut u8;
+    let mut _15: core::sync::atomic::AtomicPtr<u8>;
+    let mut _16: *mut u8;
+    let mut _17: *mut u8;
+    let mut _18: core::sync::atomic::AtomicPtr<u8>;
+    let mut _19: *mut u8;
+    let mut _20: *mut u8;
+    scope 1 {
+        debug base_pointer => _2;
+    }
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = _1;
+        _2 = move _3 as *mut u8 (PointerFromExposedAddress);
+        StorageDead(_3);
+        StorageLive(_4);
+        StorageLive(_5);
+        _5 = _2;
+        ConstEvalCounter;
+        _4 = AtomicPtr::<u8>::new(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_5);
+        StorageLive(_6);
+        StorageLive(_7);
+        StorageLive(_8);
+        _8 = _2;
+        ConstEvalCounter;
+        _7 = core::ptr::mut_ptr::<impl *mut u8>::add(move _8, const 1_usize) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        StorageDead(_8);
+        ConstEvalCounter;
+        _6 = AtomicPtr::<u8>::new(move _7) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        StorageDead(_7);
+        StorageLive(_9);
+        StorageLive(_10);
+        StorageLive(_11);
+        _11 = _2;
+        ConstEvalCounter;
+        _10 = core::ptr::mut_ptr::<impl *mut u8>::add(move _11, const 2_usize) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        StorageDead(_11);
+        ConstEvalCounter;
+        _9 = AtomicPtr::<u8>::new(move _10) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        StorageDead(_10);
+        StorageLive(_12);
+        StorageLive(_13);
+        StorageLive(_14);
+        _14 = _2;
+        ConstEvalCounter;
+        _13 = core::ptr::mut_ptr::<impl *mut u8>::add(move _14, const 3_usize) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        StorageDead(_14);
+        ConstEvalCounter;
+        _12 = AtomicPtr::<u8>::new(move _13) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        StorageDead(_13);
+        StorageLive(_15);
+        StorageLive(_16);
+        StorageLive(_17);
+        _17 = _2;
+        ConstEvalCounter;
+        _16 = core::ptr::mut_ptr::<impl *mut u8>::add(move _17, const 4_usize) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        StorageDead(_17);
+        ConstEvalCounter;
+        _15 = AtomicPtr::<u8>::new(move _16) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        StorageDead(_16);
+        StorageLive(_18);
+        StorageLive(_19);
+        StorageLive(_20);
+        _20 = _2;
+        ConstEvalCounter;
+        _19 = core::ptr::mut_ptr::<impl *mut u8>::add(move _20, const 5_usize) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        StorageDead(_20);
+        ConstEvalCounter;
+        _18 = AtomicPtr::<u8>::new(move _19) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        StorageDead(_19);
+        _0 = MmioSerialPort { data: move _4, int_en: move _6, fifo_ctrl: move _9, line_ctrl: move _12, modem_ctrl: move _15, line_sts: move _18 };
+        StorageDead(_18);
+        StorageDead(_15);
+        StorageDead(_12);
+        StorageDead(_9);
+        StorageDead(_6);
+        StorageDead(_4);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn mmio::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/mmio.rs:18:1: 18:20>::init(_1: &mut MmioSerialPort) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: *mut u8;
+    let mut _3: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _4: core::sync::atomic::Ordering;
+    let mut _6: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _7: core::sync::atomic::Ordering;
+    let mut _9: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _10: core::sync::atomic::Ordering;
+    let mut _12: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _13: core::sync::atomic::Ordering;
+    let mut _15: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _16: core::sync::atomic::Ordering;
+    let _17: ();
+    let _18: ();
+    let _19: ();
+    let _20: ();
+    let _21: ();
+    let _22: ();
+    let _23: ();
+    let _24: ();
+    scope 1 {
+        debug self_int_en => _2;
+        let _5: *mut u8;
+        scope 2 {
+            debug self_line_ctrl => _5;
+            let _8: *mut u8;
+            scope 3 {
+                debug self_data => _8;
+                let _11: *mut u8;
+                scope 4 {
+                    debug self_fifo_ctrl => _11;
+                    let _14: *mut u8;
+                    scope 5 {
+                        debug self_modem_ctrl => _14;
+                        scope 6 {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _3 = &((*_1).1: core::sync::atomic::AtomicPtr<u8>);
+        _4 = Relaxed;
+        _2 = AtomicPtr::<u8>::load(move _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &((*_1).3: core::sync::atomic::AtomicPtr<u8>);
+        _7 = Relaxed;
+        _5 = AtomicPtr::<u8>::load(move _6, move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = &((*_1).0: core::sync::atomic::AtomicPtr<u8>);
+        _10 = Relaxed;
+        _8 = AtomicPtr::<u8>::load(move _9, move _10) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _12 = &((*_1).2: core::sync::atomic::AtomicPtr<u8>);
+        _13 = Relaxed;
+        _11 = AtomicPtr::<u8>::load(move _12, move _13) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _15 = &((*_1).4: core::sync::atomic::AtomicPtr<u8>);
+        _16 = Relaxed;
+        _14 = AtomicPtr::<u8>::load(move _15, move _16) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _17 = core::ptr::mut_ptr::<impl *mut u8>::write(_2, const 0_u8) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _18 = core::ptr::mut_ptr::<impl *mut u8>::write(_5, const 128_u8) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _19 = core::ptr::mut_ptr::<impl *mut u8>::write(_8, const 3_u8) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _20 = core::ptr::mut_ptr::<impl *mut u8>::write(_2, const 0_u8) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _21 = core::ptr::mut_ptr::<impl *mut u8>::write(_5, const 3_u8) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _22 = core::ptr::mut_ptr::<impl *mut u8>::write(_11, const 199_u8) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _23 = core::ptr::mut_ptr::<impl *mut u8>::write(_14, const 11_u8) -> [return: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _24 = core::ptr::mut_ptr::<impl *mut u8>::write(_2, const 1_u8) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn mmio::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/mmio.rs:18:1: 18:20>::line_sts(_1: &mut MmioSerialPort) -> LineStsFlags {
+    debug self => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: u8;
+    let mut _3: *mut u8;
+    let mut _4: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _5: core::sync::atomic::Ordering;
+    scope 1 {
+    }
+
+    bb0: {
+        _4 = &((*_1).5: core::sync::atomic::AtomicPtr<u8>);
+        _5 = Relaxed;
+        _3 = AtomicPtr::<u8>::load(move _4, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = (*_3);
+        _0 = LineStsFlags::from_bits_truncate(move _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn mmio::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/mmio.rs:18:1: 18:20>::send(_1: &mut MmioSerialPort, _2: u8) -> () {
+    debug self => _1;
+    debug data => _2;
+    let mut _0: ();
+    let _3: *mut u8;
+    let mut _4: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _5: core::sync::atomic::Ordering;
+    let mut _6: ();
+    let mut _7: bool;
+    let mut _8: &LineStsFlags;
+    let _9: LineStsFlags;
+    let _10: ();
+    let mut _11: bool;
+    let mut _12: &LineStsFlags;
+    let _13: LineStsFlags;
+    let _14: ();
+    let mut _15: bool;
+    let mut _16: &LineStsFlags;
+    let _17: LineStsFlags;
+    let mut _18: bool;
+    let mut _19: &LineStsFlags;
+    let _20: LineStsFlags;
+    let _21: ();
+    scope 1 {
+        debug self_data => _3;
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _4 = &((*_1).0: core::sync::atomic::AtomicPtr<u8>);
+        _5 = Relaxed;
+        _3 = AtomicPtr::<u8>::load(move _4, move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(_2) -> [8: bb2, 127: bb2, otherwise: bb17];
+    }
+
+    bb2: {
+        _9 = MmioSerialPort::line_sts(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _8 = &_9;
+        _7 = LineStsFlags::contains(move _8, const _) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        switchInt(move _7) -> [0: bb6, otherwise: bb5];
+    }
+
+    bb5: {
+        _10 = core::ptr::mut_ptr::<impl *mut u8>::write(_3, const 8_u8) -> [return: bb7, unwind unreachable];
+    }
+
+    bb6: {
+        _6 = spin_loop() -> [return: bb2, unwind unreachable];
+    }
+
+    bb7: {
+        _13 = MmioSerialPort::line_sts(_1) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _12 = &_13;
+        _11 = LineStsFlags::contains(move _12, const _) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        switchInt(move _11) -> [0: bb11, otherwise: bb10];
+    }
+
+    bb10: {
+        _14 = core::ptr::mut_ptr::<impl *mut u8>::write(_3, const 32_u8) -> [return: bb12, unwind unreachable];
+    }
+
+    bb11: {
+        _6 = spin_loop() -> [return: bb7, unwind unreachable];
+    }
+
+    bb12: {
+        _17 = MmioSerialPort::line_sts(_1) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _16 = &_17;
+        _15 = LineStsFlags::contains(move _16, const _) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        switchInt(move _15) -> [0: bb16, otherwise: bb15];
+    }
+
+    bb15: {
+        _0 = core::ptr::mut_ptr::<impl *mut u8>::write(_3, const 8_u8) -> [return: bb22, unwind unreachable];
+    }
+
+    bb16: {
+        _6 = spin_loop() -> [return: bb12, unwind unreachable];
+    }
+
+    bb17: {
+        _20 = MmioSerialPort::line_sts(_1) -> [return: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _19 = &_20;
+        _18 = LineStsFlags::contains(move _19, const _) -> [return: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        switchInt(move _18) -> [0: bb21, otherwise: bb20];
+    }
+
+    bb20: {
+        _21 = core::ptr::mut_ptr::<impl *mut u8>::write(_3, _2) -> [return: bb22, unwind unreachable];
+    }
+
+    bb21: {
+        _6 = spin_loop() -> [return: bb17, unwind unreachable];
+    }
+
+    bb22: {
+        return;
+    }
+}
+
+fn mmio::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/mmio.rs:18:1: 18:20>::receive(_1: &mut MmioSerialPort) -> u8 {
+    debug self => _1;
+    let mut _0: u8;
+    let _2: *mut u8;
+    let mut _3: &core::sync::atomic::AtomicPtr<u8>;
+    let mut _4: core::sync::atomic::Ordering;
+    let mut _5: ();
+    let mut _6: bool;
+    let mut _7: &LineStsFlags;
+    let _8: LineStsFlags;
+    scope 1 {
+        debug self_data => _2;
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _3 = &((*_1).0: core::sync::atomic::AtomicPtr<u8>);
+        _4 = Relaxed;
+        _2 = AtomicPtr::<u8>::load(move _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = MmioSerialPort::line_sts(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _7 = &_8;
+        _6 = LineStsFlags::contains(move _7, const _) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _6) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _0 = core::ptr::mut_ptr::<impl *mut u8>::read(_2) -> [return: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _5 = spin_loop() -> [return: bb1, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn mmio::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/mmio.rs:107:1: 107:35>::write_str(_1: &mut MmioSerialPort, _2: &str) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug s => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: core::str::Bytes<'_>;
+    let mut _4: core::str::Bytes<'_>;
+    let mut _5: core::str::Bytes<'_>;
+    let mut _6: core::option::Option<u8>;
+    let mut _7: &mut core::str::Bytes<'_>;
+    let mut _8: isize;
+    let _10: ();
+    scope 1 {
+        debug iter => _5;
+        let _9: u8;
+        scope 2 {
+            debug byte => _9;
+        }
+    }
+
+    bb0: {
+        _4 = str::<impl str>::bytes(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Bytes<'_> as IntoIterator>::into_iter(move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = move _3;
+        goto -> bb3;
+    }
+
+    bb3: {
+        _7 = &mut _5;
+        _6 = <Bytes<'_> as Iterator>::next(_7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _8 = discriminant(_6);
+        switchInt(move _8) -> [0: bb6, 1: bb5, otherwise: bb7];
+    }
+
+    bb5: {
+        _9 = ((_6 as Some).0: u8);
+        _10 = MmioSerialPort::send(_1, _9) -> [return: bb3, unwind unreachable];
+    }
+
+    bb6: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        return;
+    }
+
+    bb7: {
+        unreachable;
+    }
+}
+
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:18:1: 18:16>::new(_1: u16) -> SerialPort {
+    debug base => _1;
+    let mut _0: port::SerialPort;
+    let mut _2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    let mut _3: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _4: u16;
+    let mut _5: (u16, bool);
+    let mut _6: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _7: u16;
+    let mut _8: (u16, bool);
+    let mut _9: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _10: u16;
+    let mut _11: (u16, bool);
+    let mut _12: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _13: u16;
+    let mut _14: (u16, bool);
+    let mut _15: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>;
+    let mut _16: u16;
+    let mut _17: (u16, bool);
+
+    bb0: {
+        _2 = PortGeneric::<u8, ReadWriteAccess>::new(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = CheckedAdd(_1, const 1_u16);
+        assert(!move (_5.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 1_u16) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = move (_5.0: u16);
+        _3 = PortGeneric::<u8, WriteOnlyAccess>::new(move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _8 = CheckedAdd(_1, const 2_u16);
+        assert(!move (_8.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 2_u16) -> [success: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _7 = move (_8.0: u16);
+        _6 = PortGeneric::<u8, WriteOnlyAccess>::new(move _7) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _11 = CheckedAdd(_1, const 3_u16);
+        assert(!move (_11.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 3_u16) -> [success: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _10 = move (_11.0: u16);
+        _9 = PortGeneric::<u8, WriteOnlyAccess>::new(move _10) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = CheckedAdd(_1, const 4_u16);
+        assert(!move (_14.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 4_u16) -> [success: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _13 = move (_14.0: u16);
+        _12 = PortGeneric::<u8, WriteOnlyAccess>::new(move _13) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _17 = CheckedAdd(_1, const 5_u16);
+        assert(!move (_17.1: bool), "attempt to compute `{} + {}`, which would overflow", _1, const 5_u16) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _16 = move (_17.0: u16);
+        _15 = PortGeneric::<u8, ReadOnlyAccess>::new(move _16) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _0 = SerialPort { data: move _2, int_en: move _3, fifo_ctrl: move _6, line_ctrl: move _9, modem_ctrl: move _12, line_sts: move _15 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:18:1: 18:16>::new(_1: u16) -> SerialPort {
+    debug base => _1;
+    let mut _0: port::SerialPort;
+    let mut _2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    let mut _3: u16;
+    let mut _4: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _5: u16;
+    let mut _6: u16;
+    let mut _7: (u16, bool);
+    let mut _8: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _9: u16;
+    let mut _10: u16;
+    let mut _11: (u16, bool);
+    let mut _12: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _13: u16;
+    let mut _14: u16;
+    let mut _15: (u16, bool);
+    let mut _16: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let mut _17: u16;
+    let mut _18: u16;
+    let mut _19: (u16, bool);
+    let mut _20: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>;
+    let mut _21: u16;
+    let mut _22: u16;
+    let mut _23: (u16, bool);
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = _1;
+        ConstEvalCounter;
+        _2 = PortGeneric::<u8, ReadWriteAccess>::new(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_3);
+        StorageLive(_4);
+        StorageLive(_5);
+        StorageLive(_6);
+        _6 = _1;
+        _7 = CheckedAdd(_6, const 1_u16);
+        assert(!move (_7.1: bool), "attempt to compute `{} + {}`, which would overflow", move _6, const 1_u16) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = move (_7.0: u16);
+        StorageDead(_6);
+        ConstEvalCounter;
+        _4 = PortGeneric::<u8, WriteOnlyAccess>::new(move _5) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        StorageDead(_5);
+        StorageLive(_8);
+        StorageLive(_9);
+        StorageLive(_10);
+        _10 = _1;
+        _11 = CheckedAdd(_10, const 2_u16);
+        assert(!move (_11.1: bool), "attempt to compute `{} + {}`, which would overflow", move _10, const 2_u16) -> [success: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _9 = move (_11.0: u16);
+        StorageDead(_10);
+        ConstEvalCounter;
+        _8 = PortGeneric::<u8, WriteOnlyAccess>::new(move _9) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        StorageDead(_9);
+        StorageLive(_12);
+        StorageLive(_13);
+        StorageLive(_14);
+        _14 = _1;
+        _15 = CheckedAdd(_14, const 3_u16);
+        assert(!move (_15.1: bool), "attempt to compute `{} + {}`, which would overflow", move _14, const 3_u16) -> [success: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _13 = move (_15.0: u16);
+        StorageDead(_14);
+        ConstEvalCounter;
+        _12 = PortGeneric::<u8, WriteOnlyAccess>::new(move _13) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        StorageDead(_13);
+        StorageLive(_16);
+        StorageLive(_17);
+        StorageLive(_18);
+        _18 = _1;
+        _19 = CheckedAdd(_18, const 4_u16);
+        assert(!move (_19.1: bool), "attempt to compute `{} + {}`, which would overflow", move _18, const 4_u16) -> [success: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _17 = move (_19.0: u16);
+        StorageDead(_18);
+        ConstEvalCounter;
+        _16 = PortGeneric::<u8, WriteOnlyAccess>::new(move _17) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        StorageDead(_17);
+        StorageLive(_20);
+        StorageLive(_21);
+        StorageLive(_22);
+        _22 = _1;
+        _23 = CheckedAdd(_22, const 5_u16);
+        assert(!move (_23.1: bool), "attempt to compute `{} + {}`, which would overflow", move _22, const 5_u16) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _21 = move (_23.0: u16);
+        StorageDead(_22);
+        ConstEvalCounter;
+        _20 = PortGeneric::<u8, ReadOnlyAccess>::new(move _21) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        StorageDead(_21);
+        _0 = SerialPort { data: move _2, int_en: move _4, fifo_ctrl: move _8, line_ctrl: move _12, modem_ctrl: move _16, line_sts: move _20 };
+        StorageDead(_20);
+        StorageDead(_16);
+        StorageDead(_12);
+        StorageDead(_8);
+        StorageDead(_4);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:18:1: 18:16>::init(_1: &mut SerialPort) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let _4: ();
+    let mut _5: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let _6: ();
+    let mut _7: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    let _8: ();
+    let mut _9: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let _10: ();
+    let mut _11: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let _12: ();
+    let mut _13: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let _14: ();
+    let mut _15: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    let _16: ();
+    let mut _17: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &mut ((*_1).1: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>);
+        _2 = PortGeneric::<u8, WriteOnlyAccess>::write(move _3, const 0_u8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &mut ((*_1).3: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>);
+        _4 = PortGeneric::<u8, WriteOnlyAccess>::write(move _5, const 128_u8) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _7 = &mut ((*_1).0: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _6 = PortGeneric::<u8, ReadWriteAccess>::write(move _7, const 3_u8) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _9 = &mut ((*_1).1: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>);
+        _8 = PortGeneric::<u8, WriteOnlyAccess>::write(move _9, const 0_u8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _11 = &mut ((*_1).3: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>);
+        _10 = PortGeneric::<u8, WriteOnlyAccess>::write(move _11, const 3_u8) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _13 = &mut ((*_1).2: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>);
+        _12 = PortGeneric::<u8, WriteOnlyAccess>::write(move _13, const 199_u8) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _15 = &mut ((*_1).4: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>);
+        _14 = PortGeneric::<u8, WriteOnlyAccess>::write(move _15, const 11_u8) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _17 = &mut ((*_1).1: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::WriteOnlyAccess>);
+        _16 = PortGeneric::<u8, WriteOnlyAccess>::write(move _17, const 1_u8) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        return;
+    }
+}
+
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:18:1: 18:16>::line_sts(_1: &mut SerialPort) -> LineStsFlags {
+    debug self => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: u8;
+    let mut _3: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>;
+    scope 1 {
+    }
+
+    bb0: {
+        _3 = &mut ((*_1).5: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadOnlyAccess>);
+        _2 = PortGeneric::<u8, ReadOnlyAccess>::read(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = LineStsFlags::from_bits_truncate(move _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:18:1: 18:16>::send(_1: &mut SerialPort, _2: u8) -> () {
+    debug self => _1;
+    debug data => _2;
+    let mut _0: ();
+    let mut _3: ();
+    let mut _4: bool;
+    let mut _5: &LineStsFlags;
+    let _6: LineStsFlags;
+    let _7: ();
+    let mut _8: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    let mut _9: bool;
+    let mut _10: &LineStsFlags;
+    let _11: LineStsFlags;
+    let _12: ();
+    let mut _13: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    let mut _14: bool;
+    let mut _15: &LineStsFlags;
+    let _16: LineStsFlags;
+    let mut _17: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    let mut _18: bool;
+    let mut _19: &LineStsFlags;
+    let _20: LineStsFlags;
+    let _21: ();
+    let mut _22: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    scope 1 {
+    }
+
+    bb0: {
+        switchInt(_2) -> [8: bb1, 127: bb1, otherwise: bb16];
+    }
+
+    bb1: {
+        _6 = SerialPort::line_sts(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = &_6;
+        _4 = LineStsFlags::contains(move _5, const _) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _4) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _8 = &mut ((*_1).0: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _7 = PortGeneric::<u8, ReadWriteAccess>::write(move _8, const 8_u8) -> [return: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _3 = spin_loop() -> [return: bb1, unwind unreachable];
+    }
+
+    bb6: {
+        _11 = SerialPort::line_sts(_1) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _10 = &_11;
+        _9 = LineStsFlags::contains(move _10, const _) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        switchInt(move _9) -> [0: bb10, otherwise: bb9];
+    }
+
+    bb9: {
+        _13 = &mut ((*_1).0: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _12 = PortGeneric::<u8, ReadWriteAccess>::write(move _13, const 32_u8) -> [return: bb11, unwind unreachable];
+    }
+
+    bb10: {
+        _3 = spin_loop() -> [return: bb6, unwind unreachable];
+    }
+
+    bb11: {
+        _16 = SerialPort::line_sts(_1) -> [return: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _15 = &_16;
+        _14 = LineStsFlags::contains(move _15, const _) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        switchInt(move _14) -> [0: bb15, otherwise: bb14];
+    }
+
+    bb14: {
+        _17 = &mut ((*_1).0: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _0 = PortGeneric::<u8, ReadWriteAccess>::write(move _17, const 8_u8) -> [return: bb21, unwind unreachable];
+    }
+
+    bb15: {
+        _3 = spin_loop() -> [return: bb11, unwind unreachable];
+    }
+
+    bb16: {
+        _20 = SerialPort::line_sts(_1) -> [return: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _19 = &_20;
+        _18 = LineStsFlags::contains(move _19, const _) -> [return: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        switchInt(move _18) -> [0: bb20, otherwise: bb19];
+    }
+
+    bb19: {
+        _22 = &mut ((*_1).0: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _21 = PortGeneric::<u8, ReadWriteAccess>::write(move _22, _2) -> [return: bb21, unwind unreachable];
+    }
+
+    bb20: {
+        _3 = spin_loop() -> [return: bb16, unwind unreachable];
+    }
+
+    bb21: {
+        return;
+    }
+}
+
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:18:1: 18:16>::send_raw(_1: &mut SerialPort, _2: u8) -> () {
+    debug self => _1;
+    debug data => _2;
+    let mut _0: ();
+    let mut _3: ();
+    let mut _4: bool;
+    let mut _5: &LineStsFlags;
+    let _6: LineStsFlags;
+    let _7: ();
+    let mut _8: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    scope 1 {
+    }
+
+    bb0: {
+        goto -> bb1;
+    }
+
+    bb1: {
+        _6 = SerialPort::line_sts(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = &_6;
+        _4 = LineStsFlags::contains(move _5, const _) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _4) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _8 = &mut ((*_1).0: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _7 = PortGeneric::<u8, ReadWriteAccess>::write(move _8, _2) -> [return: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _3 = spin_loop() -> [return: bb1, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:18:1: 18:16>::receive(_1: &mut SerialPort) -> u8 {
+    debug self => _1;
+    let mut _0: u8;
+    let mut _2: ();
+    let mut _3: bool;
+    let mut _4: &LineStsFlags;
+    let _5: LineStsFlags;
+    let mut _6: &mut x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>;
+    scope 1 {
+    }
+
+    bb0: {
+        goto -> bb1;
+    }
+
+    bb1: {
+        _5 = SerialPort::line_sts(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = &_5;
+        _3 = LineStsFlags::contains(move _4, const _) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _3) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _6 = &mut ((*_1).0: x86_64::instructions::port::PortGeneric<u8, x86_64::instructions::port::ReadWriteAccess>);
+        _0 = PortGeneric::<u8, ReadWriteAccess>::read(move _6) -> [return: bb6, unwind unreachable];
+    }
+
+    bb5: {
+        _2 = spin_loop() -> [return: bb1, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn port::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uart_16550-0.2.18/src/port.rs:106:1: 106:31>::write_str(_1: &mut SerialPort, _2: &str) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug s => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: core::str::Bytes<'_>;
+    let mut _4: core::str::Bytes<'_>;
+    let mut _5: core::str::Bytes<'_>;
+    let mut _6: core::option::Option<u8>;
+    let mut _7: &mut core::str::Bytes<'_>;
+    let mut _8: isize;
+    let _10: ();
+    scope 1 {
+        debug iter => _5;
+        let _9: u8;
+        scope 2 {
+            debug byte => _9;
+        }
+    }
+
+    bb0: {
+        _4 = str::<impl str>::bytes(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Bytes<'_> as IntoIterator>::into_iter(move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = move _3;
+        goto -> bb3;
+    }
+
+    bb3: {
+        _7 = &mut _5;
+        _6 = <Bytes<'_> as Iterator>::next(_7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _8 = discriminant(_6);
+        switchInt(move _8) -> [0: bb6, 1: bb5, otherwise: bb7];
+    }
+
+    bb5: {
+        _9 = ((_6 as Some).0: u8);
+        _10 = SerialPort::send(_1, _9) -> [return: bb3, unwind unreachable];
+    }
+
+    bb6: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        return;
+    }
+
+    bb7: {
+        unreachable;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:24: 363:33>::eq(_1: &IntEnFlags, _2: &IntEnFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+
+    bb0: {
+        _3 = ((*_1).0: u8);
+        _4 = ((*_2).0: u8);
+        _0 = Eq(move _3, move _4);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:35: 363:37>::assert_receiver_is_total_eq(_1: &IntEnFlags) -> () {
+    debug self => _1;
+    let mut _0: ();
+    scope 1 {
+    }
+
+    bb0: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:39: 363:44>::clone(_1: &IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    let mut _0: IntEnFlags;
+    scope 1 {
+    }
+
+    bb0: {
+        _0 = (*_1);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:46: 363:56>::partial_cmp(_1: &IntEnFlags, _2: &IntEnFlags) -> Option<core::cmp::Ordering> {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: core::option::Option<core::cmp::Ordering>;
+    let _3: &u8;
+    let _4: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _4 = &((*_2).0: u8);
+        _0 = <u8 as PartialOrd>::partial_cmp(_3, _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:58: 363:61>::cmp(_1: &IntEnFlags, _2: &IntEnFlags) -> core::cmp::Ordering {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: core::cmp::Ordering;
+    let _3: &u8;
+    let _4: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _4 = &((*_2).0: u8);
+        _0 = <u8 as Ord>::cmp(_3, _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:63: 363:67>::hash(_1: &IntEnFlags, _2: &mut __H) -> () {
+    debug self => _1;
+    debug state => _2;
+    let mut _0: ();
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as Hash>::hash::<__H>(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt(_1: &IntEnFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: bool;
+    let mut _4: bool;
+    let mut _5: bool;
+    let mut _6: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _7: core::result::Result<(), core::fmt::Error>;
+    let _8: &str;
+    let mut _9: isize;
+    let mut _10: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _11: core::result::Result<(), core::fmt::Error>;
+    let _12: &str;
+    let mut _13: isize;
+    let mut _14: bool;
+    let mut _15: bool;
+    let mut _16: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _17: core::result::Result<(), core::fmt::Error>;
+    let _18: &str;
+    let mut _19: isize;
+    let mut _20: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _21: core::result::Result<(), core::fmt::Error>;
+    let _22: &str;
+    let mut _23: isize;
+    let mut _24: bool;
+    let mut _25: bool;
+    let mut _26: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _27: core::result::Result<(), core::fmt::Error>;
+    let _28: &str;
+    let mut _29: isize;
+    let mut _30: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _31: core::result::Result<(), core::fmt::Error>;
+    let _32: &str;
+    let mut _33: isize;
+    let mut _34: bool;
+    let mut _35: bool;
+    let mut _36: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _37: core::result::Result<(), core::fmt::Error>;
+    let _38: &str;
+    let mut _39: isize;
+    let mut _40: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _41: core::result::Result<(), core::fmt::Error>;
+    let _42: &str;
+    let mut _43: isize;
+    let mut _45: u8;
+    let mut _46: u8;
+    let mut _47: u8;
+    let mut _48: &IntEnFlags;
+    let _49: IntEnFlags;
+    let mut _50: u8;
+    let mut _51: bool;
+    let mut _52: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _53: core::result::Result<(), core::fmt::Error>;
+    let _54: &str;
+    let mut _55: isize;
+    let mut _56: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _57: core::result::Result<(), core::fmt::Error>;
+    let _58: &str;
+    let mut _59: isize;
+    let mut _60: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _61: core::result::Result<(), core::fmt::Error>;
+    let _62: &u8;
+    let mut _63: isize;
+    let mut _64: bool;
+    let mut _65: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _66: core::result::Result<(), core::fmt::Error>;
+    let _67: &str;
+    let mut _68: isize;
+    scope 1 {
+        debug first => _3;
+        let _44: u8;
+        scope 2 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 3 {
+            }
+        }
+        scope 4 {
+            debug val => const ();
+            scope 5 {
+            }
+        }
+        scope 6 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 7 {
+            }
+        }
+        scope 8 {
+            debug val => const ();
+            scope 9 {
+            }
+        }
+        scope 10 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 11 {
+            }
+        }
+        scope 12 {
+            debug val => const ();
+            scope 13 {
+            }
+        }
+        scope 14 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 15 {
+            }
+        }
+        scope 16 {
+            debug val => const ();
+            scope 17 {
+            }
+        }
+        scope 18 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 19 {
+            }
+        }
+        scope 20 {
+            debug val => const ();
+            scope 21 {
+            }
+        }
+        scope 22 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 23 {
+            }
+        }
+        scope 24 {
+            debug val => const ();
+            scope 25 {
+            }
+        }
+        scope 26 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 27 {
+            }
+        }
+        scope 28 {
+            debug val => const ();
+            scope 29 {
+            }
+        }
+        scope 30 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 31 {
+            }
+        }
+        scope 32 {
+            debug val => const ();
+            scope 33 {
+            }
+        }
+        scope 34 {
+            debug extra_bits => _44;
+            scope 35 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 36 {
+                }
+            }
+            scope 37 {
+                debug val => const ();
+                scope 38 {
+                }
+            }
+            scope 39 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 40 {
+                }
+            }
+            scope 41 {
+                debug val => const ();
+                scope 42 {
+                }
+            }
+            scope 43 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 44 {
+                }
+            }
+            scope 45 {
+                debug val => const ();
+                scope 46 {
+                }
+            }
+            scope 47 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 48 {
+                }
+            }
+            scope 49 {
+                debug val => const ();
+                scope 50 {
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _3 = const true;
+        _4 = <IntEnFlags as <IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::RECEIVED(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _4) -> [0: bb11, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = _3;
+        switchInt(move _5) -> [0: bb3, otherwise: bb7];
+    }
+
+    bb3: {
+        _8 = const " | ";
+        _7 = Formatter::<'_>::write_str(_2, _8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _6 = <Result<(), core::fmt::Error> as Try>::branch(move _7) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _9 = discriminant(_6);
+        switchInt(move _9) -> [0: bb7, 1: bb6, otherwise: bb67];
+    }
+
+    bb6: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb7: {
+        _3 = const false;
+        _12 = const "RECEIVED";
+        _11 = Formatter::<'_>::write_str(_2, _12) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _10 = <Result<(), core::fmt::Error> as Try>::branch(move _11) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _13 = discriminant(_10);
+        switchInt(move _13) -> [0: bb11, 1: bb10, otherwise: bb67];
+    }
+
+    bb10: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb11: {
+        _14 = <IntEnFlags as <IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::SENT(_1) -> [return: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        switchInt(move _14) -> [0: bb22, otherwise: bb13];
+    }
+
+    bb13: {
+        _15 = _3;
+        switchInt(move _15) -> [0: bb14, otherwise: bb18];
+    }
+
+    bb14: {
+        _18 = const " | ";
+        _17 = Formatter::<'_>::write_str(_2, _18) -> [return: bb15, unwind unreachable];
+    }
+
+    bb15: {
+        _16 = <Result<(), core::fmt::Error> as Try>::branch(move _17) -> [return: bb16, unwind unreachable];
+    }
+
+    bb16: {
+        _19 = discriminant(_16);
+        switchInt(move _19) -> [0: bb18, 1: bb17, otherwise: bb67];
+    }
+
+    bb17: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb18: {
+        _3 = const false;
+        _22 = const "SENT";
+        _21 = Formatter::<'_>::write_str(_2, _22) -> [return: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _20 = <Result<(), core::fmt::Error> as Try>::branch(move _21) -> [return: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _23 = discriminant(_20);
+        switchInt(move _23) -> [0: bb22, 1: bb21, otherwise: bb67];
+    }
+
+    bb21: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb22: {
+        _24 = <IntEnFlags as <IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::ERRORED(_1) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        switchInt(move _24) -> [0: bb33, otherwise: bb24];
+    }
+
+    bb24: {
+        _25 = _3;
+        switchInt(move _25) -> [0: bb25, otherwise: bb29];
+    }
+
+    bb25: {
+        _28 = const " | ";
+        _27 = Formatter::<'_>::write_str(_2, _28) -> [return: bb26, unwind unreachable];
+    }
+
+    bb26: {
+        _26 = <Result<(), core::fmt::Error> as Try>::branch(move _27) -> [return: bb27, unwind unreachable];
+    }
+
+    bb27: {
+        _29 = discriminant(_26);
+        switchInt(move _29) -> [0: bb29, 1: bb28, otherwise: bb67];
+    }
+
+    bb28: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb29: {
+        _3 = const false;
+        _32 = const "ERRORED";
+        _31 = Formatter::<'_>::write_str(_2, _32) -> [return: bb30, unwind unreachable];
+    }
+
+    bb30: {
+        _30 = <Result<(), core::fmt::Error> as Try>::branch(move _31) -> [return: bb31, unwind unreachable];
+    }
+
+    bb31: {
+        _33 = discriminant(_30);
+        switchInt(move _33) -> [0: bb33, 1: bb32, otherwise: bb67];
+    }
+
+    bb32: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb33: {
+        _34 = <IntEnFlags as <IntEnFlags as core::fmt::Debug>::fmt::__BitFlags>::STATUS_CHANGE(_1) -> [return: bb34, unwind unreachable];
+    }
+
+    bb34: {
+        switchInt(move _34) -> [0: bb44, otherwise: bb35];
+    }
+
+    bb35: {
+        _35 = _3;
+        switchInt(move _35) -> [0: bb36, otherwise: bb40];
+    }
+
+    bb36: {
+        _38 = const " | ";
+        _37 = Formatter::<'_>::write_str(_2, _38) -> [return: bb37, unwind unreachable];
+    }
+
+    bb37: {
+        _36 = <Result<(), core::fmt::Error> as Try>::branch(move _37) -> [return: bb38, unwind unreachable];
+    }
+
+    bb38: {
+        _39 = discriminant(_36);
+        switchInt(move _39) -> [0: bb40, 1: bb39, otherwise: bb67];
+    }
+
+    bb39: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb40: {
+        _3 = const false;
+        _42 = const "STATUS_CHANGE";
+        _41 = Formatter::<'_>::write_str(_2, _42) -> [return: bb41, unwind unreachable];
+    }
+
+    bb41: {
+        _40 = <Result<(), core::fmt::Error> as Try>::branch(move _41) -> [return: bb42, unwind unreachable];
+    }
+
+    bb42: {
+        _43 = discriminant(_40);
+        switchInt(move _43) -> [0: bb44, 1: bb43, otherwise: bb67];
+    }
+
+    bb43: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb44: {
+        _45 = ((*_1).0: u8);
+        _49 = IntEnFlags::all() -> [return: bb45, unwind unreachable];
+    }
+
+    bb45: {
+        _48 = &_49;
+        _47 = IntEnFlags::bits(move _48) -> [return: bb46, unwind unreachable];
+    }
+
+    bb46: {
+        _46 = Not(move _47);
+        _44 = BitAnd(move _45, move _46);
+        _50 = _44;
+        switchInt(move _50) -> [0: bb60, otherwise: bb47];
+    }
+
+    bb47: {
+        _51 = _3;
+        switchInt(move _51) -> [0: bb48, otherwise: bb52];
+    }
+
+    bb48: {
+        _54 = const " | ";
+        _53 = Formatter::<'_>::write_str(_2, _54) -> [return: bb49, unwind unreachable];
+    }
+
+    bb49: {
+        _52 = <Result<(), core::fmt::Error> as Try>::branch(move _53) -> [return: bb50, unwind unreachable];
+    }
+
+    bb50: {
+        _55 = discriminant(_52);
+        switchInt(move _55) -> [0: bb52, 1: bb51, otherwise: bb67];
+    }
+
+    bb51: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb52: {
+        _3 = const false;
+        _58 = const "0x";
+        _57 = Formatter::<'_>::write_str(_2, _58) -> [return: bb53, unwind unreachable];
+    }
+
+    bb53: {
+        _56 = <Result<(), core::fmt::Error> as Try>::branch(move _57) -> [return: bb54, unwind unreachable];
+    }
+
+    bb54: {
+        _59 = discriminant(_56);
+        switchInt(move _59) -> [0: bb55, 1: bb56, otherwise: bb67];
+    }
+
+    bb55: {
+        _62 = &_44;
+        _61 = <u8 as LowerHex>::fmt(_62, _2) -> [return: bb57, unwind unreachable];
+    }
+
+    bb56: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb57: {
+        _60 = <Result<(), core::fmt::Error> as Try>::branch(move _61) -> [return: bb58, unwind unreachable];
+    }
+
+    bb58: {
+        _63 = discriminant(_60);
+        switchInt(move _63) -> [0: bb60, 1: bb59, otherwise: bb67];
+    }
+
+    bb59: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb60: {
+        _64 = _3;
+        switchInt(move _64) -> [0: bb65, otherwise: bb61];
+    }
+
+    bb61: {
+        _67 = const "(empty)";
+        _66 = Formatter::<'_>::write_str(_2, _67) -> [return: bb62, unwind unreachable];
+    }
+
+    bb62: {
+        _65 = <Result<(), core::fmt::Error> as Try>::branch(move _66) -> [return: bb63, unwind unreachable];
+    }
+
+    bb63: {
+        _68 = discriminant(_65);
+        switchInt(move _68) -> [0: bb65, 1: bb64, otherwise: bb67];
+    }
+
+    bb64: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb66, unwind unreachable];
+    }
+
+    bb65: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        goto -> bb66;
+    }
+
+    bb66: {
+        return;
+    }
+
+    bb67: {
+        unreachable;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::__BitFlags::RECEIVED(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+
+    bb0: {
+        _0 = const false;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::__BitFlags::SENT(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+
+    bb0: {
+        _0 = const false;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::__BitFlags::ERRORED(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+
+    bb0: {
+        _0 = const false;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::__BitFlags::STATUS_CHANGE(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+
+    bb0: {
+        _0 = const false;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:454:17: 454:46>::RECEIVED(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: IntEnFlags;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: IntEnFlags;
+    let mut _9: u8;
+    let mut _10: IntEnFlags;
+
+    bb0: {
+        _3 = const _;
+        _2 = (_3.0: u8);
+        switchInt(move _2) -> [0: bb1, otherwise: bb3];
+    }
+
+    bb1: {
+        _4 = ((*_1).0: u8);
+        switchInt(move _4) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _0 = const false;
+        goto -> bb4;
+    }
+
+    bb3: {
+        _6 = ((*_1).0: u8);
+        _8 = const _;
+        _7 = (_8.0: u8);
+        _5 = BitAnd(move _6, move _7);
+        _10 = const _;
+        _9 = (_10.0: u8);
+        _0 = Eq(move _5, move _9);
+        goto -> bb4;
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:454:17: 454:46>::SENT(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: IntEnFlags;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: IntEnFlags;
+    let mut _9: u8;
+    let mut _10: IntEnFlags;
+
+    bb0: {
+        _3 = const _;
+        _2 = (_3.0: u8);
+        switchInt(move _2) -> [0: bb1, otherwise: bb3];
+    }
+
+    bb1: {
+        _4 = ((*_1).0: u8);
+        switchInt(move _4) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _0 = const false;
+        goto -> bb4;
+    }
+
+    bb3: {
+        _6 = ((*_1).0: u8);
+        _8 = const _;
+        _7 = (_8.0: u8);
+        _5 = BitAnd(move _6, move _7);
+        _10 = const _;
+        _9 = (_10.0: u8);
+        _0 = Eq(move _5, move _9);
+        goto -> bb4;
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:454:17: 454:46>::ERRORED(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: IntEnFlags;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: IntEnFlags;
+    let mut _9: u8;
+    let mut _10: IntEnFlags;
+
+    bb0: {
+        _3 = const _;
+        _2 = (_3.0: u8);
+        switchInt(move _2) -> [0: bb1, otherwise: bb3];
+    }
+
+    bb1: {
+        _4 = ((*_1).0: u8);
+        switchInt(move _4) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _0 = const false;
+        goto -> bb4;
+    }
+
+    bb3: {
+        _6 = ((*_1).0: u8);
+        _8 = const _;
+        _7 = (_8.0: u8);
+        _5 = BitAnd(move _6, move _7);
+        _10 = const _;
+        _9 = (_10.0: u8);
+        _0 = Eq(move _5, move _9);
+        goto -> bb4;
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:454:17: 454:46>::STATUS_CHANGE(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: IntEnFlags;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: IntEnFlags;
+    let mut _9: u8;
+    let mut _10: IntEnFlags;
+
+    bb0: {
+        _3 = const _;
+        _2 = (_3.0: u8);
+        switchInt(move _2) -> [0: bb1, otherwise: bb3];
+    }
+
+    bb1: {
+        _4 = ((*_1).0: u8);
+        switchInt(move _4) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _0 = const false;
+        goto -> bb4;
+    }
+
+    bb3: {
+        _6 = ((*_1).0: u8);
+        _8 = const _;
+        _7 = (_8.0: u8);
+        _5 = BitAnd(move _6, move _7);
+        _10 = const _;
+        _9 = (_10.0: u8);
+        _0 = Eq(move _5, move _9);
+        goto -> bb4;
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:496:9: 496:54>::fmt(_1: &IntEnFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as Binary>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:501:9: 501:53>::fmt(_1: &IntEnFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as Octal>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:506:9: 506:56>::fmt(_1: &IntEnFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as LowerHex>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:511:9: 511:56>::fmt(_1: &IntEnFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as UpperHex>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::RECEIVED: IntEnFlags = {
+    let mut _0: IntEnFlags;
+
+    bb0: {
+        _0 = IntEnFlags { bits: const 1_u8 };
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::SENT: IntEnFlags = {
+    let mut _0: IntEnFlags;
+    let mut _1: u8;
+    let mut _2: u32;
+    let mut _3: bool;
+
+    bb0: {
+        StorageLive(_1);
+        _2 = const 1_i32 as u32 (IntToInt);
+        _3 = Lt(move _2, const 8_u32);
+        assert(move _3, "attempt to shift left by `{}`, which would overflow", const 1_i32) -> [success: bb1, unwind: bb2];
+    }
+
+    bb1: {
+        _1 = Shl(const 1_u8, const 1_i32);
+        _0 = IntEnFlags { bits: move _1 };
+        StorageDead(_1);
+        return;
+    }
+
+    bb2 (cleanup): {
+        resume;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::ERRORED: IntEnFlags = {
+    let mut _0: IntEnFlags;
+    let mut _1: u8;
+    let mut _2: u32;
+    let mut _3: bool;
+
+    bb0: {
+        StorageLive(_1);
+        _2 = const 2_i32 as u32 (IntToInt);
+        _3 = Lt(move _2, const 8_u32);
+        assert(move _3, "attempt to shift left by `{}`, which would overflow", const 2_i32) -> [success: bb1, unwind: bb2];
+    }
+
+    bb1: {
+        _1 = Shl(const 1_u8, const 2_i32);
+        _0 = IntEnFlags { bits: move _1 };
+        StorageDead(_1);
+        return;
+    }
+
+    bb2 (cleanup): {
+        resume;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::STATUS_CHANGE: IntEnFlags = {
+    let mut _0: IntEnFlags;
+    let mut _1: u8;
+    let mut _2: u32;
+    let mut _3: bool;
+
+    bb0: {
+        StorageLive(_1);
+        _2 = const 3_i32 as u32 (IntToInt);
+        _3 = Lt(move _2, const 8_u32);
+        assert(move _3, "attempt to shift left by `{}`, which would overflow", const 3_i32) -> [success: bb1, unwind: bb2];
+    }
+
+    bb1: {
+        _1 = Shl(const 1_u8, const 3_i32);
+        _0 = IntEnFlags { bits: move _1 };
+        StorageDead(_1);
+        return;
+    }
+
+    bb2 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::empty() -> IntEnFlags {
+    let mut _0: IntEnFlags;
+
+    bb0: {
+        _0 = IntEnFlags { bits: const 0_u8 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::empty() -> IntEnFlags {
+    let mut _0: IntEnFlags;
+
+    bb0: {
+        _0 = IntEnFlags { bits: const 0_u8 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all() -> IntEnFlags {
+    let mut _0: IntEnFlags;
+    let mut _1: u8;
+    let mut _2: u8;
+    let mut _3: u8;
+
+    bb0: {
+        _3 = BitOr(const _, const _);
+        _2 = BitOr(move _3, const _);
+        _1 = BitOr(move _2, const _);
+        _0 = IntEnFlags { bits: move _1 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all() -> IntEnFlags {
+    let mut _0: IntEnFlags;
+    let mut _1: u8;
+    let mut _2: u8;
+    let mut _3: u8;
+
+    bb0: {
+        StorageLive(_1);
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = BitOr(const _, const _);
+        _2 = BitOr(move _3, const _);
+        StorageDead(_3);
+        _1 = BitOr(move _2, const _);
+        StorageDead(_2);
+        _0 = IntEnFlags { bits: move _1 };
+        StorageDead(_1);
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::__BitFlags::RECEIVED: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::__BitFlags::SENT: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::__BitFlags::ERRORED: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::__BitFlags::STATUS_CHANGE: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:404:9: 404:38>::RECEIVED: u8 = {
+    let mut _0: u8;
+    let mut _1: IntEnFlags;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = const _;
+        _0 = (_1.0: u8);
+        StorageDead(_1);
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:404:9: 404:38>::SENT: u8 = {
+    let mut _0: u8;
+    let mut _1: IntEnFlags;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = const _;
+        _0 = (_1.0: u8);
+        StorageDead(_1);
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:404:9: 404:38>::ERRORED: u8 = {
+    let mut _0: u8;
+    let mut _1: IntEnFlags;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = const _;
+        _0 = (_1.0: u8);
+        StorageDead(_1);
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:404:9: 404:38>::STATUS_CHANGE: u8 = {
+    let mut _0: u8;
+    let mut _1: IntEnFlags;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = const _;
+        _0 = (_1.0: u8);
+        StorageDead(_1);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::bits(_1: &IntEnFlags) -> u8 {
+    debug self => _1;
+    let mut _0: u8;
+
+    bb0: {
+        _0 = ((*_1).0: u8);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::bits(_1: &IntEnFlags) -> u8 {
+    debug self => _1;
+    let mut _0: u8;
+
+    bb0: {
+        _0 = ((*_1).0: u8);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits(_1: u8) -> Option<IntEnFlags> {
+    debug bits => _1;
+    let mut _0: core::option::Option<IntEnFlags>;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: &IntEnFlags;
+    let _6: IntEnFlags;
+    let mut _7: IntEnFlags;
+
+    bb0: {
+        _6 = IntEnFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_6;
+        _4 = IntEnFlags::bits(move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = Not(move _4);
+        _2 = BitAnd(_1, move _3);
+        switchInt(move _2) -> [0: bb3, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = IntEnFlags { bits: _1 };
+        _0 = Option::<IntEnFlags>::Some(move _7);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<IntEnFlags>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits(_1: u8) -> Option<IntEnFlags> {
+    debug bits => _1;
+    let mut _0: core::option::Option<IntEnFlags>;
+    let mut _2: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: &IntEnFlags;
+    let _8: IntEnFlags;
+    let mut _9: IntEnFlags;
+    let mut _10: u8;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = _1;
+        StorageLive(_5);
+        StorageLive(_6);
+        StorageLive(_7);
+        StorageLive(_8);
+        ConstEvalCounter;
+        _8 = IntEnFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_8;
+        ConstEvalCounter;
+        _6 = IntEnFlags::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        StorageDead(_7);
+        _5 = Not(move _6);
+        StorageDead(_6);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _2 = Eq(move _3, const 0_u8);
+        switchInt(move _2) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb3: {
+        StorageDead(_8);
+        StorageDead(_3);
+        StorageLive(_9);
+        StorageLive(_10);
+        _10 = _1;
+        _9 = IntEnFlags { bits: move _10 };
+        StorageDead(_10);
+        _0 = Option::<IntEnFlags>::Some(move _9);
+        StorageDead(_9);
+        goto -> bb5;
+    }
+
+    bb4: {
+        StorageDead(_8);
+        StorageDead(_3);
+        _0 = Option::<IntEnFlags>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_truncate(_1: u8) -> IntEnFlags {
+    debug bits => _1;
+    let mut _0: IntEnFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: IntEnFlags;
+
+    bb0: {
+        _4 = IntEnFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = (_4.0: u8);
+        _2 = BitAnd(_1, move _3);
+        _0 = IntEnFlags { bits: move _2 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_truncate(_1: u8) -> IntEnFlags {
+    debug bits => _1;
+    let mut _0: IntEnFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: IntEnFlags;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = _1;
+        StorageLive(_4);
+        StorageLive(_5);
+        ConstEvalCounter;
+        _5 = IntEnFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_5.0: u8);
+        _2 = BitAnd(move _3, move _4);
+        StorageDead(_4);
+        StorageDead(_3);
+        _0 = IntEnFlags { bits: move _2 };
+        StorageDead(_2);
+        StorageDead(_5);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_unchecked(_1: u8) -> IntEnFlags {
+    debug bits => _1;
+    let mut _0: IntEnFlags;
+
+    bb0: {
+        _0 = IntEnFlags { bits: _1 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_unchecked(_1: u8) -> IntEnFlags {
+    debug bits => _1;
+    let mut _0: IntEnFlags;
+    let mut _2: u8;
+
+    bb0: {
+        StorageLive(_2);
+        _2 = _1;
+        _0 = IntEnFlags { bits: move _2 };
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_empty(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: &IntEnFlags;
+    let _5: IntEnFlags;
+
+    bb0: {
+        _2 = IntEnFlags::bits(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = IntEnFlags::empty() -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = &_5;
+        _3 = IntEnFlags::bits(move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Eq(move _2, move _3);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_empty(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: &IntEnFlags;
+    let mut _4: u8;
+    let mut _5: &IntEnFlags;
+    let _6: IntEnFlags;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = &(*_1);
+        ConstEvalCounter;
+        _2 = IntEnFlags::bits(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_3);
+        StorageLive(_4);
+        StorageLive(_5);
+        StorageLive(_6);
+        ConstEvalCounter;
+        _6 = IntEnFlags::empty() -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = &_6;
+        ConstEvalCounter;
+        _4 = IntEnFlags::bits(move _5) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        StorageDead(_5);
+        _0 = Eq(move _2, move _4);
+        StorageDead(_4);
+        StorageDead(_2);
+        StorageDead(_6);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_all(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: IntEnFlags;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = IntEnFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = (_4.0: u8);
+        _5 = ((*_1).0: u8);
+        _2 = BitOr(move _3, move _5);
+        _6 = ((*_1).0: u8);
+        _0 = Eq(move _2, move _6);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_all(_1: &IntEnFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: IntEnFlags;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        StorageLive(_4);
+        ConstEvalCounter;
+        _4 = IntEnFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = (_4.0: u8);
+        StorageLive(_5);
+        _5 = ((*_1).0: u8);
+        _2 = BitOr(move _3, move _5);
+        StorageDead(_5);
+        StorageDead(_3);
+        StorageLive(_6);
+        _6 = ((*_1).0: u8);
+        _0 = Eq(move _2, move _6);
+        StorageDead(_6);
+        StorageDead(_2);
+        StorageDead(_4);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersects(_1: &IntEnFlags, _2: IntEnFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: &IntEnFlags;
+    let _5: IntEnFlags;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: u8;
+
+    bb0: {
+        _7 = ((*_1).0: u8);
+        _8 = (_2.0: u8);
+        _6 = BitAnd(move _7, move _8);
+        _5 = IntEnFlags { bits: move _6 };
+        _4 = &_5;
+        _3 = IntEnFlags::is_empty(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Not(move _3);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersects(_1: &IntEnFlags, _2: IntEnFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: &IntEnFlags;
+    let _5: IntEnFlags;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        StorageLive(_5);
+        StorageLive(_6);
+        StorageLive(_7);
+        _7 = ((*_1).0: u8);
+        StorageLive(_8);
+        _8 = (_2.0: u8);
+        _6 = BitAnd(move _7, move _8);
+        StorageDead(_8);
+        StorageDead(_7);
+        _5 = IntEnFlags { bits: move _6 };
+        _4 = &_5;
+        StorageDead(_6);
+        ConstEvalCounter;
+        _3 = IntEnFlags::is_empty(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_4);
+        _0 = Not(move _3);
+        StorageDead(_3);
+        StorageDead(_5);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::contains(_1: &IntEnFlags, _2: IntEnFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = ((*_1).0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        _6 = (_2.0: u8);
+        _0 = Eq(move _3, move _6);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::contains(_1: &IntEnFlags, _2: IntEnFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = ((*_1).0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        StorageLive(_6);
+        _6 = (_2.0: u8);
+        _0 = Eq(move _3, move _6);
+        StorageDead(_6);
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::insert(_1: &mut IntEnFlags, _2: IntEnFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitOr(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::remove(_1: &mut IntEnFlags, _2: IntEnFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+    let mut _4: u8;
+
+    bb0: {
+        _4 = (_2.0: u8);
+        _3 = Not(move _4);
+        ((*_1).0: u8) = BitAnd(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::toggle(_1: &mut IntEnFlags, _2: IntEnFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitXor(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::set(_1: &mut IntEnFlags, _2: IntEnFlags, _3: bool) -> () {
+    debug self => _1;
+    debug other => _2;
+    debug value => _3;
+    let mut _0: ();
+    let _4: ();
+    let _5: ();
+
+    bb0: {
+        switchInt(_3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _4 = IntEnFlags::insert(_1, _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = IntEnFlags::remove(_1, _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersection(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersection(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = IntEnFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::union(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitOr(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::union(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitOr(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = IntEnFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::difference(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _6 = (_2.0: u8);
+        _5 = Not(move _6);
+        _3 = BitAnd(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::difference(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        StorageLive(_6);
+        _6 = (_2.0: u8);
+        _5 = Not(move _6);
+        StorageDead(_6);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = IntEnFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::symmetric_difference(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitXor(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::symmetric_difference(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitXor(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = IntEnFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::complement(_1: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    let mut _0: IntEnFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_1.0: u8);
+        _2 = Not(move _3);
+        _0 = IntEnFlags::from_bits_truncate(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::complement(_1: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    let mut _0: IntEnFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = (_1.0: u8);
+        _2 = Not(move _3);
+        StorageDead(_3);
+        ConstEvalCounter;
+        _0 = IntEnFlags::from_bits_truncate(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:726:9: 726:53>::bitor(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitOr(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:736:9: 736:59>::bitor_assign(_1: &mut IntEnFlags, _2: IntEnFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitOr(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:744:9: 744:54>::bitxor(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitXor(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:754:9: 754:60>::bitxor_assign(_1: &mut IntEnFlags, _2: IntEnFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitXor(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:762:9: 762:54>::bitand(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:772:9: 772:60>::bitand_assign(_1: &mut IntEnFlags, _2: IntEnFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitAnd(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:780:9: 780:51>::sub(_1: IntEnFlags, _2: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _6 = (_2.0: u8);
+        _5 = Not(move _6);
+        _3 = BitAnd(move _4, move _5);
+        _0 = IntEnFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:790:9: 790:57>::sub_assign(_1: &mut IntEnFlags, _2: IntEnFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+    let mut _4: u8;
+
+    bb0: {
+        _4 = (_2.0: u8);
+        _3 = Not(move _4);
+        ((*_1).0: u8) = BitAnd(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:798:9: 798:51>::not(_1: IntEnFlags) -> IntEnFlags {
+    debug self => _1;
+    let mut _0: IntEnFlags;
+    let mut _2: IntEnFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: IntEnFlags;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _3 = Not(move _4);
+        _2 = IntEnFlags { bits: move _3 };
+        _5 = IntEnFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <IntEnFlags as BitAnd>::bitand(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:808:9: 808:66>::extend(_1: &mut IntEnFlags, _2: T) -> () {
+    debug self => _1;
+    debug iterator => _2;
+    let mut _0: ();
+    let mut _3: <T as core::iter::IntoIterator>::IntoIter;
+    let mut _4: <T as core::iter::IntoIterator>::IntoIter;
+    let _5: ();
+    let mut _6: core::option::Option<IntEnFlags>;
+    let mut _7: &mut <T as core::iter::IntoIterator>::IntoIter;
+    let mut _8: isize;
+    scope 1 {
+        debug iter => _4;
+        let _9: IntEnFlags;
+        scope 2 {
+            debug item => _9;
+        }
+    }
+
+    bb0: {
+        _3 = <T as IntoIterator>::into_iter(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = move _3;
+        goto -> bb2;
+    }
+
+    bb2: {
+        _7 = &mut _4;
+        _6 = <<T as IntoIterator>::IntoIter as Iterator>::next(_7) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _8 = discriminant(_6);
+        switchInt(move _8) -> [0: bb5, 1: bb4, otherwise: bb7];
+    }
+
+    bb4: {
+        _9 = ((_6 as Some).0: IntEnFlags);
+        _5 = IntEnFlags::insert(_1, _9) -> [return: bb2, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_4) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+
+    bb7: {
+        unreachable;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:816:9: 816:72>::from_iter(_1: T) -> IntEnFlags {
+    debug iterator => _1;
+    let mut _0: IntEnFlags;
+    let mut _2: IntEnFlags;
+    let _3: ();
+    let mut _4: &mut IntEnFlags;
+    scope 1 {
+        debug result => _2;
+    }
+
+    bb0: {
+        _2 = IntEnFlags::empty() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = &mut _2;
+        _3 = <IntEnFlags as Extend<IntEnFlags>>::extend::<T>(move _4, move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = _2;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:24: 363:33>::eq(_1: &LineStsFlags, _2: &LineStsFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+
+    bb0: {
+        _3 = ((*_1).0: u8);
+        _4 = ((*_2).0: u8);
+        _0 = Eq(move _3, move _4);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:35: 363:37>::assert_receiver_is_total_eq(_1: &LineStsFlags) -> () {
+    debug self => _1;
+    let mut _0: ();
+    scope 1 {
+    }
+
+    bb0: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:39: 363:44>::clone(_1: &LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    let mut _0: LineStsFlags;
+    scope 1 {
+    }
+
+    bb0: {
+        _0 = (*_1);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:46: 363:56>::partial_cmp(_1: &LineStsFlags, _2: &LineStsFlags) -> Option<core::cmp::Ordering> {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: core::option::Option<core::cmp::Ordering>;
+    let _3: &u8;
+    let _4: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _4 = &((*_2).0: u8);
+        _0 = <u8 as PartialOrd>::partial_cmp(_3, _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:58: 363:61>::cmp(_1: &LineStsFlags, _2: &LineStsFlags) -> core::cmp::Ordering {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: core::cmp::Ordering;
+    let _3: &u8;
+    let _4: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _4 = &((*_2).0: u8);
+        _0 = <u8 as Ord>::cmp(_3, _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:363:63: 363:67>::hash(_1: &LineStsFlags, _2: &mut __H) -> () {
+    debug self => _1;
+    debug state => _2;
+    let mut _0: ();
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as Hash>::hash::<__H>(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt(_1: &LineStsFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: bool;
+    let mut _4: bool;
+    let mut _5: bool;
+    let mut _6: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _7: core::result::Result<(), core::fmt::Error>;
+    let _8: &str;
+    let mut _9: isize;
+    let mut _10: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _11: core::result::Result<(), core::fmt::Error>;
+    let _12: &str;
+    let mut _13: isize;
+    let mut _14: bool;
+    let mut _15: bool;
+    let mut _16: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _17: core::result::Result<(), core::fmt::Error>;
+    let _18: &str;
+    let mut _19: isize;
+    let mut _20: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _21: core::result::Result<(), core::fmt::Error>;
+    let _22: &str;
+    let mut _23: isize;
+    let mut _25: u8;
+    let mut _26: u8;
+    let mut _27: u8;
+    let mut _28: &LineStsFlags;
+    let _29: LineStsFlags;
+    let mut _30: u8;
+    let mut _31: bool;
+    let mut _32: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _33: core::result::Result<(), core::fmt::Error>;
+    let _34: &str;
+    let mut _35: isize;
+    let mut _36: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _37: core::result::Result<(), core::fmt::Error>;
+    let _38: &str;
+    let mut _39: isize;
+    let mut _40: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _41: core::result::Result<(), core::fmt::Error>;
+    let _42: &u8;
+    let mut _43: isize;
+    let mut _44: bool;
+    let mut _45: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _46: core::result::Result<(), core::fmt::Error>;
+    let _47: &str;
+    let mut _48: isize;
+    scope 1 {
+        debug first => _3;
+        let _24: u8;
+        scope 2 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 3 {
+            }
+        }
+        scope 4 {
+            debug val => const ();
+            scope 5 {
+            }
+        }
+        scope 6 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 7 {
+            }
+        }
+        scope 8 {
+            debug val => const ();
+            scope 9 {
+            }
+        }
+        scope 10 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 11 {
+            }
+        }
+        scope 12 {
+            debug val => const ();
+            scope 13 {
+            }
+        }
+        scope 14 {
+            debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+            scope 15 {
+            }
+        }
+        scope 16 {
+            debug val => const ();
+            scope 17 {
+            }
+        }
+        scope 18 {
+            debug extra_bits => _24;
+            scope 19 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 20 {
+                }
+            }
+            scope 21 {
+                debug val => const ();
+                scope 22 {
+                }
+            }
+            scope 23 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 24 {
+                }
+            }
+            scope 25 {
+                debug val => const ();
+                scope 26 {
+                }
+            }
+            scope 27 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 28 {
+                }
+            }
+            scope 29 {
+                debug val => const ();
+                scope 30 {
+                }
+            }
+            scope 31 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 32 {
+                }
+            }
+            scope 33 {
+                debug val => const ();
+                scope 34 {
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _3 = const true;
+        _4 = <LineStsFlags as <LineStsFlags as core::fmt::Debug>::fmt::__BitFlags>::INPUT_FULL(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _4) -> [0: bb11, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = _3;
+        switchInt(move _5) -> [0: bb3, otherwise: bb7];
+    }
+
+    bb3: {
+        _8 = const " | ";
+        _7 = Formatter::<'_>::write_str(_2, _8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _6 = <Result<(), core::fmt::Error> as Try>::branch(move _7) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _9 = discriminant(_6);
+        switchInt(move _9) -> [0: bb7, 1: bb6, otherwise: bb45];
+    }
+
+    bb6: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb7: {
+        _3 = const false;
+        _12 = const "INPUT_FULL";
+        _11 = Formatter::<'_>::write_str(_2, _12) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _10 = <Result<(), core::fmt::Error> as Try>::branch(move _11) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _13 = discriminant(_10);
+        switchInt(move _13) -> [0: bb11, 1: bb10, otherwise: bb45];
+    }
+
+    bb10: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb11: {
+        _14 = <LineStsFlags as <LineStsFlags as core::fmt::Debug>::fmt::__BitFlags>::OUTPUT_EMPTY(_1) -> [return: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        switchInt(move _14) -> [0: bb22, otherwise: bb13];
+    }
+
+    bb13: {
+        _15 = _3;
+        switchInt(move _15) -> [0: bb14, otherwise: bb18];
+    }
+
+    bb14: {
+        _18 = const " | ";
+        _17 = Formatter::<'_>::write_str(_2, _18) -> [return: bb15, unwind unreachable];
+    }
+
+    bb15: {
+        _16 = <Result<(), core::fmt::Error> as Try>::branch(move _17) -> [return: bb16, unwind unreachable];
+    }
+
+    bb16: {
+        _19 = discriminant(_16);
+        switchInt(move _19) -> [0: bb18, 1: bb17, otherwise: bb45];
+    }
+
+    bb17: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb18: {
+        _3 = const false;
+        _22 = const "OUTPUT_EMPTY";
+        _21 = Formatter::<'_>::write_str(_2, _22) -> [return: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _20 = <Result<(), core::fmt::Error> as Try>::branch(move _21) -> [return: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _23 = discriminant(_20);
+        switchInt(move _23) -> [0: bb22, 1: bb21, otherwise: bb45];
+    }
+
+    bb21: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb22: {
+        _25 = ((*_1).0: u8);
+        _29 = LineStsFlags::all() -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        _28 = &_29;
+        _27 = LineStsFlags::bits(move _28) -> [return: bb24, unwind unreachable];
+    }
+
+    bb24: {
+        _26 = Not(move _27);
+        _24 = BitAnd(move _25, move _26);
+        _30 = _24;
+        switchInt(move _30) -> [0: bb38, otherwise: bb25];
+    }
+
+    bb25: {
+        _31 = _3;
+        switchInt(move _31) -> [0: bb26, otherwise: bb30];
+    }
+
+    bb26: {
+        _34 = const " | ";
+        _33 = Formatter::<'_>::write_str(_2, _34) -> [return: bb27, unwind unreachable];
+    }
+
+    bb27: {
+        _32 = <Result<(), core::fmt::Error> as Try>::branch(move _33) -> [return: bb28, unwind unreachable];
+    }
+
+    bb28: {
+        _35 = discriminant(_32);
+        switchInt(move _35) -> [0: bb30, 1: bb29, otherwise: bb45];
+    }
+
+    bb29: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb30: {
+        _3 = const false;
+        _38 = const "0x";
+        _37 = Formatter::<'_>::write_str(_2, _38) -> [return: bb31, unwind unreachable];
+    }
+
+    bb31: {
+        _36 = <Result<(), core::fmt::Error> as Try>::branch(move _37) -> [return: bb32, unwind unreachable];
+    }
+
+    bb32: {
+        _39 = discriminant(_36);
+        switchInt(move _39) -> [0: bb33, 1: bb34, otherwise: bb45];
+    }
+
+    bb33: {
+        _42 = &_24;
+        _41 = <u8 as LowerHex>::fmt(_42, _2) -> [return: bb35, unwind unreachable];
+    }
+
+    bb34: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb35: {
+        _40 = <Result<(), core::fmt::Error> as Try>::branch(move _41) -> [return: bb36, unwind unreachable];
+    }
+
+    bb36: {
+        _43 = discriminant(_40);
+        switchInt(move _43) -> [0: bb38, 1: bb37, otherwise: bb45];
+    }
+
+    bb37: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb38: {
+        _44 = _3;
+        switchInt(move _44) -> [0: bb43, otherwise: bb39];
+    }
+
+    bb39: {
+        _47 = const "(empty)";
+        _46 = Formatter::<'_>::write_str(_2, _47) -> [return: bb40, unwind unreachable];
+    }
+
+    bb40: {
+        _45 = <Result<(), core::fmt::Error> as Try>::branch(move _46) -> [return: bb41, unwind unreachable];
+    }
+
+    bb41: {
+        _48 = discriminant(_45);
+        switchInt(move _48) -> [0: bb43, 1: bb42, otherwise: bb45];
+    }
+
+    bb42: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb44, unwind unreachable];
+    }
+
+    bb43: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        goto -> bb44;
+    }
+
+    bb44: {
+        return;
+    }
+
+    bb45: {
+        unreachable;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::__BitFlags::INPUT_FULL(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+
+    bb0: {
+        _0 = const false;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::__BitFlags::OUTPUT_EMPTY(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+
+    bb0: {
+        _0 = const false;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:454:17: 454:46>::INPUT_FULL(_1: &LineStsFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: LineStsFlags;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: LineStsFlags;
+    let mut _9: u8;
+    let mut _10: LineStsFlags;
+
+    bb0: {
+        _3 = const _;
+        _2 = (_3.0: u8);
+        switchInt(move _2) -> [0: bb1, otherwise: bb3];
+    }
+
+    bb1: {
+        _4 = ((*_1).0: u8);
+        switchInt(move _4) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _0 = const false;
+        goto -> bb4;
+    }
+
+    bb3: {
+        _6 = ((*_1).0: u8);
+        _8 = const _;
+        _7 = (_8.0: u8);
+        _5 = BitAnd(move _6, move _7);
+        _10 = const _;
+        _9 = (_10.0: u8);
+        _0 = Eq(move _5, move _9);
+        goto -> bb4;
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:433:9: 433:53>::fmt::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:454:17: 454:46>::OUTPUT_EMPTY(_1: &LineStsFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: LineStsFlags;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: LineStsFlags;
+    let mut _9: u8;
+    let mut _10: LineStsFlags;
+
+    bb0: {
+        _3 = const _;
+        _2 = (_3.0: u8);
+        switchInt(move _2) -> [0: bb1, otherwise: bb3];
+    }
+
+    bb1: {
+        _4 = ((*_1).0: u8);
+        switchInt(move _4) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _0 = const false;
+        goto -> bb4;
+    }
+
+    bb3: {
+        _6 = ((*_1).0: u8);
+        _8 = const _;
+        _7 = (_8.0: u8);
+        _5 = BitAnd(move _6, move _7);
+        _10 = const _;
+        _9 = (_10.0: u8);
+        _0 = Eq(move _5, move _9);
+        goto -> bb4;
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:496:9: 496:54>::fmt(_1: &LineStsFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as Binary>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:501:9: 501:53>::fmt(_1: &LineStsFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as Octal>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:506:9: 506:56>::fmt(_1: &LineStsFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as LowerHex>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:511:9: 511:56>::fmt(_1: &LineStsFlags, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &u8;
+
+    bb0: {
+        _3 = &((*_1).0: u8);
+        _0 = <u8 as UpperHex>::fmt(_3, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::INPUT_FULL: LineStsFlags = {
+    let mut _0: LineStsFlags;
+
+    bb0: {
+        _0 = LineStsFlags { bits: const 1_u8 };
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::OUTPUT_EMPTY: LineStsFlags = {
+    let mut _0: LineStsFlags;
+    let mut _1: u8;
+    let mut _2: u32;
+    let mut _3: bool;
+
+    bb0: {
+        StorageLive(_1);
+        _2 = const 5_i32 as u32 (IntToInt);
+        _3 = Lt(move _2, const 8_u32);
+        assert(move _3, "attempt to shift left by `{}`, which would overflow", const 5_i32) -> [success: bb1, unwind: bb2];
+    }
+
+    bb1: {
+        _1 = Shl(const 1_u8, const 5_i32);
+        _0 = LineStsFlags { bits: move _1 };
+        StorageDead(_1);
+        return;
+    }
+
+    bb2 (cleanup): {
+        resume;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::empty() -> LineStsFlags {
+    let mut _0: LineStsFlags;
+
+    bb0: {
+        _0 = LineStsFlags { bits: const 0_u8 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::empty() -> LineStsFlags {
+    let mut _0: LineStsFlags;
+
+    bb0: {
+        _0 = LineStsFlags { bits: const 0_u8 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all() -> LineStsFlags {
+    let mut _0: LineStsFlags;
+    let mut _1: u8;
+
+    bb0: {
+        _1 = BitOr(const _, const _);
+        _0 = LineStsFlags { bits: move _1 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all() -> LineStsFlags {
+    let mut _0: LineStsFlags;
+    let mut _1: u8;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = BitOr(const _, const _);
+        _0 = LineStsFlags { bits: move _1 };
+        StorageDead(_1);
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::__BitFlags::INPUT_FULL: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::__BitFlags::OUTPUT_EMPTY: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:404:9: 404:38>::INPUT_FULL: u8 = {
+    let mut _0: u8;
+    let mut _1: LineStsFlags;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = const _;
+        _0 = (_1.0: u8);
+        StorageDead(_1);
+        return;
+    }
+}
+
+const <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::all::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:404:9: 404:38>::OUTPUT_EMPTY: u8 = {
+    let mut _0: u8;
+    let mut _1: LineStsFlags;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = const _;
+        _0 = (_1.0: u8);
+        StorageDead(_1);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::bits(_1: &LineStsFlags) -> u8 {
+    debug self => _1;
+    let mut _0: u8;
+
+    bb0: {
+        _0 = ((*_1).0: u8);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::bits(_1: &LineStsFlags) -> u8 {
+    debug self => _1;
+    let mut _0: u8;
+
+    bb0: {
+        _0 = ((*_1).0: u8);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits(_1: u8) -> Option<LineStsFlags> {
+    debug bits => _1;
+    let mut _0: core::option::Option<LineStsFlags>;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: &LineStsFlags;
+    let _6: LineStsFlags;
+    let mut _7: LineStsFlags;
+
+    bb0: {
+        _6 = LineStsFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_6;
+        _4 = LineStsFlags::bits(move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = Not(move _4);
+        _2 = BitAnd(_1, move _3);
+        switchInt(move _2) -> [0: bb3, otherwise: bb4];
+    }
+
+    bb3: {
+        _7 = LineStsFlags { bits: _1 };
+        _0 = Option::<LineStsFlags>::Some(move _7);
+        goto -> bb5;
+    }
+
+    bb4: {
+        _0 = Option::<LineStsFlags>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits(_1: u8) -> Option<LineStsFlags> {
+    debug bits => _1;
+    let mut _0: core::option::Option<LineStsFlags>;
+    let mut _2: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+    let mut _7: &LineStsFlags;
+    let _8: LineStsFlags;
+    let mut _9: LineStsFlags;
+    let mut _10: u8;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = _1;
+        StorageLive(_5);
+        StorageLive(_6);
+        StorageLive(_7);
+        StorageLive(_8);
+        ConstEvalCounter;
+        _8 = LineStsFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_8;
+        ConstEvalCounter;
+        _6 = LineStsFlags::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        StorageDead(_7);
+        _5 = Not(move _6);
+        StorageDead(_6);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _2 = Eq(move _3, const 0_u8);
+        switchInt(move _2) -> [0: bb4, otherwise: bb3];
+    }
+
+    bb3: {
+        StorageDead(_8);
+        StorageDead(_3);
+        StorageLive(_9);
+        StorageLive(_10);
+        _10 = _1;
+        _9 = LineStsFlags { bits: move _10 };
+        StorageDead(_10);
+        _0 = Option::<LineStsFlags>::Some(move _9);
+        StorageDead(_9);
+        goto -> bb5;
+    }
+
+    bb4: {
+        StorageDead(_8);
+        StorageDead(_3);
+        _0 = Option::<LineStsFlags>::None;
+        goto -> bb5;
+    }
+
+    bb5: {
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_truncate(_1: u8) -> LineStsFlags {
+    debug bits => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: LineStsFlags;
+
+    bb0: {
+        _4 = LineStsFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = (_4.0: u8);
+        _2 = BitAnd(_1, move _3);
+        _0 = LineStsFlags { bits: move _2 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_truncate(_1: u8) -> LineStsFlags {
+    debug bits => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: LineStsFlags;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = _1;
+        StorageLive(_4);
+        StorageLive(_5);
+        ConstEvalCounter;
+        _5 = LineStsFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = (_5.0: u8);
+        _2 = BitAnd(move _3, move _4);
+        StorageDead(_4);
+        StorageDead(_3);
+        _0 = LineStsFlags { bits: move _2 };
+        StorageDead(_2);
+        StorageDead(_5);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_unchecked(_1: u8) -> LineStsFlags {
+    debug bits => _1;
+    let mut _0: LineStsFlags;
+
+    bb0: {
+        _0 = LineStsFlags { bits: _1 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::from_bits_unchecked(_1: u8) -> LineStsFlags {
+    debug bits => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: u8;
+
+    bb0: {
+        StorageLive(_2);
+        _2 = _1;
+        _0 = LineStsFlags { bits: move _2 };
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_empty(_1: &LineStsFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: &LineStsFlags;
+    let _5: LineStsFlags;
+
+    bb0: {
+        _2 = LineStsFlags::bits(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = LineStsFlags::empty() -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = &_5;
+        _3 = LineStsFlags::bits(move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = Eq(move _2, move _3);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_empty(_1: &LineStsFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: &LineStsFlags;
+    let mut _4: u8;
+    let mut _5: &LineStsFlags;
+    let _6: LineStsFlags;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = &(*_1);
+        ConstEvalCounter;
+        _2 = LineStsFlags::bits(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_3);
+        StorageLive(_4);
+        StorageLive(_5);
+        StorageLive(_6);
+        ConstEvalCounter;
+        _6 = LineStsFlags::empty() -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = &_6;
+        ConstEvalCounter;
+        _4 = LineStsFlags::bits(move _5) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        StorageDead(_5);
+        _0 = Eq(move _2, move _4);
+        StorageDead(_4);
+        StorageDead(_2);
+        StorageDead(_6);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_all(_1: &LineStsFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: LineStsFlags;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = LineStsFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = (_4.0: u8);
+        _5 = ((*_1).0: u8);
+        _2 = BitOr(move _3, move _5);
+        _6 = ((*_1).0: u8);
+        _0 = Eq(move _2, move _6);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::is_all(_1: &LineStsFlags) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: u8;
+    let mut _3: u8;
+    let mut _4: LineStsFlags;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        StorageLive(_4);
+        ConstEvalCounter;
+        _4 = LineStsFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = (_4.0: u8);
+        StorageLive(_5);
+        _5 = ((*_1).0: u8);
+        _2 = BitOr(move _3, move _5);
+        StorageDead(_5);
+        StorageDead(_3);
+        StorageLive(_6);
+        _6 = ((*_1).0: u8);
+        _0 = Eq(move _2, move _6);
+        StorageDead(_6);
+        StorageDead(_2);
+        StorageDead(_4);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersects(_1: &LineStsFlags, _2: LineStsFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: &LineStsFlags;
+    let _5: LineStsFlags;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: u8;
+
+    bb0: {
+        _7 = ((*_1).0: u8);
+        _8 = (_2.0: u8);
+        _6 = BitAnd(move _7, move _8);
+        _5 = LineStsFlags { bits: move _6 };
+        _4 = &_5;
+        _3 = LineStsFlags::is_empty(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Not(move _3);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersects(_1: &LineStsFlags, _2: LineStsFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: bool;
+    let mut _4: &LineStsFlags;
+    let _5: LineStsFlags;
+    let mut _6: u8;
+    let mut _7: u8;
+    let mut _8: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        StorageLive(_5);
+        StorageLive(_6);
+        StorageLive(_7);
+        _7 = ((*_1).0: u8);
+        StorageLive(_8);
+        _8 = (_2.0: u8);
+        _6 = BitAnd(move _7, move _8);
+        StorageDead(_8);
+        StorageDead(_7);
+        _5 = LineStsFlags { bits: move _6 };
+        _4 = &_5;
+        StorageDead(_6);
+        ConstEvalCounter;
+        _3 = LineStsFlags::is_empty(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_4);
+        _0 = Not(move _3);
+        StorageDead(_3);
+        StorageDead(_5);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::contains(_1: &LineStsFlags, _2: LineStsFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = ((*_1).0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        _6 = (_2.0: u8);
+        _0 = Eq(move _3, move _6);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::contains(_1: &LineStsFlags, _2: LineStsFlags) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = ((*_1).0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        StorageLive(_6);
+        _6 = (_2.0: u8);
+        _0 = Eq(move _3, move _6);
+        StorageDead(_6);
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::insert(_1: &mut LineStsFlags, _2: LineStsFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitOr(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::remove(_1: &mut LineStsFlags, _2: LineStsFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+    let mut _4: u8;
+
+    bb0: {
+        _4 = (_2.0: u8);
+        _3 = Not(move _4);
+        ((*_1).0: u8) = BitAnd(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::toggle(_1: &mut LineStsFlags, _2: LineStsFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitXor(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::set(_1: &mut LineStsFlags, _2: LineStsFlags, _3: bool) -> () {
+    debug self => _1;
+    debug other => _2;
+    debug value => _3;
+    let mut _0: ();
+    let _4: ();
+    let _5: ();
+
+    bb0: {
+        switchInt(_3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _4 = LineStsFlags::insert(_1, _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = LineStsFlags::remove(_1, _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersection(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::intersection(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = LineStsFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::union(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitOr(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::union(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitOr(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = LineStsFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::difference(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _6 = (_2.0: u8);
+        _5 = Not(move _6);
+        _3 = BitAnd(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::difference(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        StorageLive(_6);
+        _6 = (_2.0: u8);
+        _5 = Not(move _6);
+        StorageDead(_6);
+        _3 = BitAnd(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = LineStsFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::symmetric_difference(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitXor(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::symmetric_difference(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        StorageLive(_3);
+        StorageLive(_4);
+        _4 = (_1.0: u8);
+        StorageLive(_5);
+        _5 = (_2.0: u8);
+        _3 = BitXor(move _4, move _5);
+        StorageDead(_5);
+        StorageDead(_4);
+        _0 = LineStsFlags { bits: move _3 };
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::complement(_1: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_1.0: u8);
+        _2 = Not(move _3);
+        _0 = LineStsFlags::from_bits_truncate(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:518:9: 518:23>::complement(_1: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: u8;
+    let mut _3: u8;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _3 = (_1.0: u8);
+        _2 = Not(move _3);
+        StorageDead(_3);
+        ConstEvalCounter;
+        _0 = LineStsFlags::from_bits_truncate(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:726:9: 726:53>::bitor(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitOr(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:736:9: 736:59>::bitor_assign(_1: &mut LineStsFlags, _2: LineStsFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitOr(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:744:9: 744:54>::bitxor(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitXor(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:754:9: 754:60>::bitxor_assign(_1: &mut LineStsFlags, _2: LineStsFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitXor(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:762:9: 762:54>::bitand(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _5 = (_2.0: u8);
+        _3 = BitAnd(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:772:9: 772:60>::bitand_assign(_1: &mut LineStsFlags, _2: LineStsFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+
+    bb0: {
+        _3 = (_2.0: u8);
+        ((*_1).0: u8) = BitAnd(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:780:9: 780:51>::sub(_1: LineStsFlags, _2: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: u8;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _6 = (_2.0: u8);
+        _5 = Not(move _6);
+        _3 = BitAnd(move _4, move _5);
+        _0 = LineStsFlags { bits: move _3 };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:790:9: 790:57>::sub_assign(_1: &mut LineStsFlags, _2: LineStsFlags) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: u8;
+    let mut _4: u8;
+
+    bb0: {
+        _4 = (_2.0: u8);
+        _3 = Not(move _4);
+        ((*_1).0: u8) = BitAnd(((*_1).0: u8), move _3);
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:798:9: 798:51>::not(_1: LineStsFlags) -> LineStsFlags {
+    debug self => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: LineStsFlags;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: LineStsFlags;
+
+    bb0: {
+        _4 = (_1.0: u8);
+        _3 = Not(move _4);
+        _2 = LineStsFlags { bits: move _3 };
+        _5 = LineStsFlags::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = <LineStsFlags as BitAnd>::bitand(move _2, move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:808:9: 808:66>::extend(_1: &mut LineStsFlags, _2: T) -> () {
+    debug self => _1;
+    debug iterator => _2;
+    let mut _0: ();
+    let mut _3: <T as core::iter::IntoIterator>::IntoIter;
+    let mut _4: <T as core::iter::IntoIterator>::IntoIter;
+    let _5: ();
+    let mut _6: core::option::Option<LineStsFlags>;
+    let mut _7: &mut <T as core::iter::IntoIterator>::IntoIter;
+    let mut _8: isize;
+    scope 1 {
+        debug iter => _4;
+        let _9: LineStsFlags;
+        scope 2 {
+            debug item => _9;
+        }
+    }
+
+    bb0: {
+        _3 = <T as IntoIterator>::into_iter(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = move _3;
+        goto -> bb2;
+    }
+
+    bb2: {
+        _7 = &mut _4;
+        _6 = <<T as IntoIterator>::IntoIter as Iterator>::next(_7) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _8 = discriminant(_6);
+        switchInt(move _8) -> [0: bb5, 1: bb4, otherwise: bb7];
+    }
+
+    bb4: {
+        _9 = ((_6 as Some).0: LineStsFlags);
+        _5 = LineStsFlags::insert(_1, _9) -> [return: bb2, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_4) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+
+    bb7: {
+        unreachable;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:816:9: 816:72>::from_iter(_1: T) -> LineStsFlags {
+    debug iterator => _1;
+    let mut _0: LineStsFlags;
+    let mut _2: LineStsFlags;
+    let _3: ();
+    let mut _4: &mut LineStsFlags;
+    scope 1 {
+        debug result => _2;
+    }
+
+    bb0: {
+        _2 = LineStsFlags::empty() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = &mut _2;
+        _3 = <LineStsFlags as Extend<LineStsFlags>>::extend::<T>(move _4, move _1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = _2;
+        return;
+    }
+}

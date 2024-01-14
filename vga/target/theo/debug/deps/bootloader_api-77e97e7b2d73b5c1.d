@@ -1,0 +1,17 @@
+/Users/yaw/self/theo/vga/target/theo/debug/deps/bootloader_api-77e97e7b2d73b5c1.ll: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/lib.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/config.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/info.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/concat.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/version_info.rs
+
+/Users/yaw/self/theo/vga/target/theo/debug/deps/bootloader_api-77e97e7b2d73b5c1.mir: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/lib.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/config.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/info.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/concat.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/version_info.rs
+
+/Users/yaw/self/theo/vga/target/theo/debug/deps/libbootloader_api-77e97e7b2d73b5c1.rmeta: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/lib.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/config.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/info.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/concat.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/version_info.rs
+
+/Users/yaw/self/theo/vga/target/theo/debug/deps/libbootloader_api-77e97e7b2d73b5c1.rlib: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/lib.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/config.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/info.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/concat.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/version_info.rs
+
+/Users/yaw/self/theo/vga/target/theo/debug/deps/bootloader_api-77e97e7b2d73b5c1.d: /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/lib.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/config.rs /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/info.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/concat.rs /Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/version_info.rs
+
+/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/lib.rs:
+/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/config.rs:
+/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bootloader_api-0.11.5/src/info.rs:
+/Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/concat.rs:
+/Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out/version_info.rs:
+
+# env-dep:OUT_DIR=/Users/yaw/self/theo/vga/target/theo/debug/build/bootloader_api-2e838d3e7557f9c0/out

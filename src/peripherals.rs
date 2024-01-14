@@ -3,7 +3,7 @@ use core::fmt;
 use keyboard::{Keyboard, ScancodeSet1, UsLayout};
 use lazy_static::lazy_static;
 use spin::Mutex;
-use vga::{Screen, TextFlowDirection};
+use vga::text_buffer::{Screen, TextFlowDirection};
 
 lazy_static! {
     pub static ref VGA_DISPLAY_IN_TEXT_MODE: Mutex<Screen> =

@@ -1,0 +1,768 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+const LINE_SPACING: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const 2_usize;
+        return;
+    }
+}
+
+const LETTER_SPACING: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const 0_usize;
+        return;
+    }
+}
+
+const BORDER_PADDING: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const 1_usize;
+        return;
+    }
+}
+
+const CHAR_RASTER_HEIGHT: noto_sans_mono_bitmap::RasterHeight = {
+    let mut _0: noto_sans_mono_bitmap::RasterHeight;
+
+    bb0: {
+        _0 = Size16;
+        return;
+    }
+}
+
+const CHAR_RASTER_WIDTH: usize = {
+    let mut _0: usize;
+    let mut _1: noto_sans_mono_bitmap::FontWeight;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = Regular;
+        ConstEvalCounter;
+        _0 = noto_sans_mono_bitmap::get_raster_width(move _1, const _) -> [return: bb1, unwind: bb2];
+    }
+
+    bb1: {
+        StorageDead(_1);
+        return;
+    }
+
+    bb2 (cleanup): {
+        resume;
+    }
+}
+
+const BACKUP_CHAR: char = {
+    let mut _0: char;
+
+    bb0: {
+        _0 = const '�';
+        return;
+    }
+}
+
+const FONT_WEIGHT: noto_sans_mono_bitmap::FontWeight = {
+    let mut _0: noto_sans_mono_bitmap::FontWeight;
+
+    bb0: {
+        _0 = Regular;
+        return;
+    }
+}
+
+fn get_char_raster(_1: char) -> RasterizedChar {
+    debug c => _1;
+    let mut _0: noto_sans_mono_bitmap::RasterizedChar;
+    let mut _2: core::option::Option<noto_sans_mono_bitmap::RasterizedChar>;
+
+    bb0: {
+        _2 = get_char_raster::get(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Option::<RasterizedChar>::unwrap_or_else::<{closure@frame_buffer/src/lib.rs:54:27: 54:29}>(move _2, const ZeroSized: {closure@frame_buffer/src/lib.rs:54:27: 54:29}) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn get_char_raster::get(_1: char) -> Option<RasterizedChar> {
+    debug c => _1;
+    let mut _0: core::option::Option<noto_sans_mono_bitmap::RasterizedChar>;
+
+    bb0: {
+        _0 = get_raster(_1, const _, const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn get_char_raster::{closure#0}(_1: {closure@frame_buffer/src/lib.rs:54:27: 54:29}) -> RasterizedChar {
+    let mut _0: noto_sans_mono_bitmap::RasterizedChar;
+    let mut _2: core::option::Option<noto_sans_mono_bitmap::RasterizedChar>;
+    let _3: &str;
+
+    bb0: {
+        _2 = get_char_raster::get(const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = const "Should get raster of backup char.";
+        _0 = Option::<RasterizedChar>::expect(move _2, _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::new(_1: &mut [u8], _2: FrameBufferInfo) -> FrameBufferWriter {
+    debug framebuffer => _1;
+    debug info => _2;
+    let mut _0: FrameBufferWriter;
+    let mut _3: FrameBufferWriter;
+    let _4: ();
+    let mut _5: &mut FrameBufferWriter;
+    scope 1 {
+        debug logger => _3;
+    }
+
+    bb0: {
+        _3 = FrameBufferWriter { framebuffer: _1, info: _2, x_pos: const 0_usize, y_pos: const 0_usize };
+        _5 = &mut _3;
+        _4 = FrameBufferWriter::clear(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = move _3;
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::newline(_1: &mut FrameBufferWriter) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let mut _2: usize;
+    let mut _3: usize;
+    let mut _4: (usize, bool);
+    let mut _5: (usize, bool);
+
+    bb0: {
+        _3 = noto_sans_mono_bitmap::RasterHeight::val(const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = CheckedAdd(_3, const _);
+        assert(!move (_4.1: bool), "attempt to compute `{} + {}`, which would overflow", move _3, const _) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _2 = move (_4.0: usize);
+        _5 = CheckedAdd(((*_1).3: usize), _2);
+        assert(!move (_5.1: bool), "attempt to compute `{} + {}`, which would overflow", ((*_1).3: usize), move _2) -> [success: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        ((*_1).3: usize) = move (_5.0: usize);
+        _0 = FrameBufferWriter::carriage_return(_1) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::carriage_return(_1: &mut FrameBufferWriter) -> () {
+    debug self => _1;
+    let mut _0: ();
+
+    bb0: {
+        ((*_1).2: usize) = const _;
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::clear(_1: &mut FrameBufferWriter) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: ();
+    let mut _3: &mut [u8];
+
+    bb0: {
+        ((*_1).2: usize) = const _;
+        ((*_1).3: usize) = const _;
+        _3 = deref_copy ((*_1).0: &mut [u8]);
+        _2 = slice::<impl [u8]>::fill(_3, const 0_u8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::width(_1: &FrameBufferWriter) -> usize {
+    debug self => _1;
+    let mut _0: usize;
+
+    bb0: {
+        _0 = (((*_1).1: bootloader_api::info::FrameBufferInfo).1: usize);
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::height(_1: &FrameBufferWriter) -> usize {
+    debug self => _1;
+    let mut _0: usize;
+
+    bb0: {
+        _0 = (((*_1).1: bootloader_api::info::FrameBufferInfo).2: usize);
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::write_char(_1: &mut FrameBufferWriter, _2: char) -> () {
+    debug self => _1;
+    debug c => _2;
+    let mut _0: ();
+    let mut _4: usize;
+    let mut _5: (usize, bool);
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: &FrameBufferWriter;
+    let _9: ();
+    let mut _11: usize;
+    let mut _12: usize;
+    let mut _13: usize;
+    let mut _14: (usize, bool);
+    let mut _15: (usize, bool);
+    let mut _16: bool;
+    let mut _17: usize;
+    let mut _18: &FrameBufferWriter;
+    let _19: ();
+    let _20: ();
+    let mut _21: noto_sans_mono_bitmap::RasterizedChar;
+    scope 1 {
+        debug c => _2;
+        let _3: usize;
+        scope 2 {
+            debug new_xpos => _3;
+            let _10: usize;
+            scope 3 {
+                debug new_ypos => _10;
+            }
+        }
+    }
+
+    bb0: {
+        switchInt(_2) -> [10: bb2, 13: bb3, otherwise: bb1];
+    }
+
+    bb1: {
+        _4 = ((*_1).2: usize);
+        _5 = CheckedAdd(_4, const _);
+        assert(!move (_5.1: bool), "attempt to compute `{} + {}`, which would overflow", move _4, const _) -> [success: bb4, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = FrameBufferWriter::newline(_1) -> [return: bb15, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = FrameBufferWriter::carriage_return(_1) -> [return: bb15, unwind unreachable];
+    }
+
+    bb4: {
+        _3 = move (_5.0: usize);
+        _8 = &(*_1);
+        _7 = FrameBufferWriter::width(move _8) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _6 = Ge(_3, move _7);
+        switchInt(move _6) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb6: {
+        _9 = FrameBufferWriter::newline(_1) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _12 = ((*_1).3: usize);
+        _13 = noto_sans_mono_bitmap::RasterHeight::val(const _) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _14 = CheckedAdd(_12, _13);
+        assert(!move (_14.1: bool), "attempt to compute `{} + {}`, which would overflow", move _12, move _13) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _11 = move (_14.0: usize);
+        _15 = CheckedAdd(_11, const _);
+        assert(!move (_15.1: bool), "attempt to compute `{} + {}`, which would overflow", move _11, const _) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _10 = move (_15.0: usize);
+        _18 = &(*_1);
+        _17 = FrameBufferWriter::height(move _18) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _16 = Ge(_10, move _17);
+        switchInt(move _16) -> [0: bb13, otherwise: bb12];
+    }
+
+    bb12: {
+        _19 = FrameBufferWriter::clear(_1) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _21 = get_char_raster(_2) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        _20 = FrameBufferWriter::write_rendered_char(_1, move _21) -> [return: bb15, unwind unreachable];
+    }
+
+    bb15: {
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::write_rendered_char(_1: &mut FrameBufferWriter, _2: RasterizedChar) -> () {
+    debug self => _1;
+    debug rendered_char => _2;
+    let mut _0: ();
+    let mut _3: core::iter::Enumerate<core::slice::Iter<'_, &[u8]>>;
+    let mut _4: core::iter::Enumerate<core::slice::Iter<'_, &[u8]>>;
+    let mut _5: core::slice::Iter<'_, &[u8]>;
+    let _6: &[&[u8]];
+    let mut _7: &noto_sans_mono_bitmap::RasterizedChar;
+    let mut _8: core::iter::Enumerate<core::slice::Iter<'_, &[u8]>>;
+    let mut _9: core::option::Option<(usize, &&[u8])>;
+    let mut _10: &mut core::iter::Enumerate<core::slice::Iter<'_, &[u8]>>;
+    let mut _11: isize;
+    let mut _14: core::iter::Enumerate<core::slice::Iter<'_, u8>>;
+    let mut _15: core::iter::Enumerate<core::slice::Iter<'_, u8>>;
+    let mut _16: core::slice::Iter<'_, u8>;
+    let mut _18: core::option::Option<(usize, &u8)>;
+    let mut _19: &mut core::iter::Enumerate<core::slice::Iter<'_, u8>>;
+    let mut _20: isize;
+    let _23: ();
+    let mut _24: usize;
+    let mut _25: usize;
+    let mut _26: (usize, bool);
+    let mut _27: usize;
+    let mut _28: usize;
+    let mut _29: (usize, bool);
+    let mut _30: u8;
+    let mut _31: usize;
+    let mut _32: usize;
+    let mut _33: &noto_sans_mono_bitmap::RasterizedChar;
+    let mut _34: (usize, bool);
+    let mut _35: (usize, bool);
+    let mut _36: &[u8];
+    scope 1 {
+        debug iter => _8;
+        let _12: usize;
+        let _13: &&[u8];
+        scope 2 {
+            debug y => _12;
+            debug row => _13;
+            let mut _17: core::iter::Enumerate<core::slice::Iter<'_, u8>>;
+            scope 3 {
+                debug iter => _17;
+                let _21: usize;
+                let _22: &u8;
+                scope 4 {
+                    debug x => _21;
+                    debug byte => _22;
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _7 = &_2;
+        _6 = RasterizedChar::raster(move _7) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = slice::<impl [&[u8]]>::iter(_6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = <core::slice::Iter<'_, &[u8]> as Iterator>::enumerate(move _5) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _3 = <Enumerate<core::slice::Iter<'_, &[u8]>> as IntoIterator>::into_iter(move _4) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _8 = move _3;
+        goto -> bb5;
+    }
+
+    bb5: {
+        _10 = &mut _8;
+        _9 = <Enumerate<core::slice::Iter<'_, &[u8]>> as Iterator>::next(_10) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _11 = discriminant(_9);
+        switchInt(move _11) -> [0: bb8, 1: bb7, otherwise: bb20];
+    }
+
+    bb7: {
+        _12 = (((_9 as Some).0: (usize, &&[u8])).0: usize);
+        _13 = (((_9 as Some).0: (usize, &&[u8])).1: &&[u8]);
+        _36 = deref_copy (*_13);
+        _16 = slice::<impl [u8]>::iter(_36) -> [return: bb9, unwind unreachable];
+    }
+
+    bb8: {
+        _33 = &_2;
+        _32 = RasterizedChar::width(move _33) -> [return: bb17, unwind unreachable];
+    }
+
+    bb9: {
+        _15 = <core::slice::Iter<'_, u8> as Iterator>::enumerate(move _16) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _14 = <Enumerate<core::slice::Iter<'_, u8>> as IntoIterator>::into_iter(move _15) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _17 = move _14;
+        goto -> bb12;
+    }
+
+    bb12: {
+        _19 = &mut _17;
+        _18 = <Enumerate<core::slice::Iter<'_, u8>> as Iterator>::next(_19) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _20 = discriminant(_18);
+        switchInt(move _20) -> [0: bb5, 1: bb14, otherwise: bb20];
+    }
+
+    bb14: {
+        _21 = (((_18 as Some).0: (usize, &u8)).0: usize);
+        _22 = (((_18 as Some).0: (usize, &u8)).1: &u8);
+        _25 = ((*_1).2: usize);
+        _26 = CheckedAdd(_25, _21);
+        assert(!move (_26.1: bool), "attempt to compute `{} + {}`, which would overflow", move _25, _21) -> [success: bb15, unwind unreachable];
+    }
+
+    bb15: {
+        _24 = move (_26.0: usize);
+        _28 = ((*_1).3: usize);
+        _29 = CheckedAdd(_28, _12);
+        assert(!move (_29.1: bool), "attempt to compute `{} + {}`, which would overflow", move _28, _12) -> [success: bb16, unwind unreachable];
+    }
+
+    bb16: {
+        _27 = move (_29.0: usize);
+        _30 = (*_22);
+        _23 = FrameBufferWriter::write_pixel(_1, move _24, move _27, move _30) -> [return: bb12, unwind unreachable];
+    }
+
+    bb17: {
+        _34 = CheckedAdd(_32, const _);
+        assert(!move (_34.1: bool), "attempt to compute `{} + {}`, which would overflow", move _32, const _) -> [success: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _31 = move (_34.0: usize);
+        _35 = CheckedAdd(((*_1).2: usize), _31);
+        assert(!move (_35.1: bool), "attempt to compute `{} + {}`, which would overflow", ((*_1).2: usize), move _31) -> [success: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        ((*_1).2: usize) = move (_35.0: usize);
+        return;
+    }
+
+    bb20: {
+        unreachable;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:65:1: 65:23>::write_pixel(_1: &mut FrameBufferWriter, _2: usize, _3: usize, _4: u8) -> () {
+    debug self => _1;
+    debug x => _2;
+    debug y => _3;
+    debug intensity => _4;
+    let mut _0: ();
+    let _5: usize;
+    let mut _6: usize;
+    let mut _7: usize;
+    let mut _8: (usize, bool);
+    let mut _9: (usize, bool);
+    let mut _11: isize;
+    let mut _12: u8;
+    let mut _13: bool;
+    let mut _14: u8;
+    let mut _15: bool;
+    let mut _16: u8;
+    let mut _17: bool;
+    let mut _19: bootloader_api::info::PixelFormat;
+    let _20: !;
+    let mut _21: core::fmt::Arguments<'_>;
+    let mut _22: &[&str];
+    let mut _23: &[core::fmt::rt::Argument<'_>];
+    let _24: &[core::fmt::rt::Argument<'_>; 1];
+    let _25: [core::fmt::rt::Argument<'_>; 1];
+    let mut _26: core::fmt::rt::Argument<'_>;
+    let _27: &bootloader_api::info::PixelFormat;
+    let mut _30: (usize, bool);
+    let _31: ();
+    let mut _32: &mut [u8];
+    let mut _33: core::ops::Range<usize>;
+    let mut _34: usize;
+    let mut _35: (usize, bool);
+    let _36: &[u8];
+    let mut _37: &[u8; 4];
+    let mut _38: core::ops::RangeTo<usize>;
+    let mut _39: u8;
+    let mut _40: *const u8;
+    let _41: &u8;
+    let mut _42: usize;
+    let mut _43: bool;
+    let mut _45: &mut [u8];
+    let mut _46: &mut [u8];
+    let mut _47: &mut [u8];
+    scope 1 {
+        debug pixel_offset => _5;
+        let _10: [u8; 4];
+        let _18: bootloader_api::info::PixelFormat;
+        scope 2 {
+            debug color => _10;
+            let _28: usize;
+            scope 4 {
+                debug bytes_per_pixel => _28;
+                let _29: usize;
+                scope 5 {
+                    debug byte_offset => _29;
+                    scope 6 {
+                    }
+                    scope 7 {
+                    }
+                }
+            }
+        }
+        scope 3 {
+            debug other => _18;
+            let mut _44: &[&str; 2];
+        }
+    }
+
+    bb0: {
+        _7 = (((*_1).1: bootloader_api::info::FrameBufferInfo).5: usize);
+        _8 = CheckedMul(_3, _7);
+        assert(!move (_8.1: bool), "attempt to compute `{} * {}`, which would overflow", _3, move _7) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = move (_8.0: usize);
+        _9 = CheckedAdd(_6, _2);
+        assert(!move (_9.1: bool), "attempt to compute `{} + {}`, which would overflow", move _6, _2) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = move (_9.0: usize);
+        _11 = discriminant((((*_1).1: bootloader_api::info::FrameBufferInfo).3: bootloader_api::info::PixelFormat));
+        switchInt(move _11) -> [0: bb4, 1: bb6, 2: bb8, otherwise: bb3];
+    }
+
+    bb3: {
+        _18 = (((*_1).1: bootloader_api::info::FrameBufferInfo).3: bootloader_api::info::PixelFormat);
+        _19 = Rgb;
+        (((*_1).1: bootloader_api::info::FrameBufferInfo).3: bootloader_api::info::PixelFormat) = move _19;
+        _44 = const _;
+        _22 = _44 as &[&str] (PointerCoercion(Unsize));
+        _27 = &_18;
+        _26 = core::fmt::rt::Argument::<'_>::new_debug::<PixelFormat>(_27) -> [return: bb12, unwind unreachable];
+    }
+
+    bb4: {
+        _13 = Eq(const 2_u8, const 0_u8);
+        assert(!move _13, "attempt to divide `{}` by zero", _4) -> [success: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _12 = Div(_4, const 2_u8);
+        _10 = [_4, _4, move _12, const 0_u8];
+        goto -> bb14;
+    }
+
+    bb6: {
+        _15 = Eq(const 2_u8, const 0_u8);
+        assert(!move _15, "attempt to divide `{}` by zero", _4) -> [success: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _14 = Div(_4, const 2_u8);
+        _10 = [move _14, _4, _4, const 0_u8];
+        goto -> bb14;
+    }
+
+    bb8: {
+        _17 = Gt(_4, const 200_u8);
+        switchInt(move _17) -> [0: bb10, otherwise: bb9];
+    }
+
+    bb9: {
+        _16 = const 15_u8;
+        goto -> bb11;
+    }
+
+    bb10: {
+        _16 = const 0_u8;
+        goto -> bb11;
+    }
+
+    bb11: {
+        _10 = [move _16, const 0_u8, const 0_u8, const 0_u8];
+        goto -> bb14;
+    }
+
+    bb12: {
+        _25 = [move _26];
+        _24 = &_25;
+        _23 = _24 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _21 = Arguments::<'_>::new_v1(move _22, move _23) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _20 = panic_fmt(move _21) -> unwind unreachable;
+    }
+
+    bb14: {
+        _28 = (((*_1).1: bootloader_api::info::FrameBufferInfo).4: usize);
+        _30 = CheckedMul(_5, _28);
+        assert(!move (_30.1: bool), "attempt to compute `{} * {}`, which would overflow", _5, _28) -> [success: bb15, unwind unreachable];
+    }
+
+    bb15: {
+        _29 = move (_30.0: usize);
+        _45 = deref_copy ((*_1).0: &mut [u8]);
+        _35 = CheckedAdd(_29, _28);
+        assert(!move (_35.1: bool), "attempt to compute `{} + {}`, which would overflow", _29, _28) -> [success: bb16, unwind unreachable];
+    }
+
+    bb16: {
+        _34 = move (_35.0: usize);
+        _33 = Range::<usize> { start: _29, end: move _34 };
+        _32 = <[u8] as IndexMut<Range<usize>>>::index_mut(_45, move _33) -> [return: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        _37 = &_10;
+        _38 = RangeTo::<usize> { end: _28 };
+        _36 = <[u8; 4] as Index<RangeTo<usize>>>::index(move _37, move _38) -> [return: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _31 = slice::<impl [u8]>::copy_from_slice(_32, _36) -> [return: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _46 = deref_copy ((*_1).0: &mut [u8]);
+        _42 = Len((*_46));
+        _43 = Lt(_29, _42);
+        assert(move _43, "index out of bounds: the length is {} but the index is {}", move _42, _29) -> [success: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _47 = deref_copy ((*_1).0: &mut [u8]);
+        _41 = &(*_47)[_29];
+        _40 = &raw const (*_41);
+        _39 = read_volatile::<u8>(move _40) -> [return: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        return;
+    }
+}
+
+promoted[0] in <impl at frame_buffer/src/lib.rs:65:1: 65:23>::write_pixel: &[&str; 2] = {
+    let mut _0: &[&str; 2];
+    let mut _1: [&str; 2];
+
+    bb0: {
+        _1 = [const "pixel format ", const " not supported in logger"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn <impl at frame_buffer/src/lib.rs:162:1: 162:38>::write_str(_1: &mut FrameBufferWriter, _2: &str) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug s => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: core::str::Chars<'_>;
+    let mut _4: core::str::Chars<'_>;
+    let mut _5: core::str::Chars<'_>;
+    let mut _6: core::option::Option<char>;
+    let mut _7: &mut core::str::Chars<'_>;
+    let mut _8: isize;
+    let _10: ();
+    scope 1 {
+        debug iter => _5;
+        let _9: char;
+        scope 2 {
+            debug c => _9;
+        }
+    }
+
+    bb0: {
+        _4 = str::<impl str>::chars(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Chars<'_> as IntoIterator>::into_iter(move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = move _3;
+        goto -> bb3;
+    }
+
+    bb3: {
+        _7 = &mut _5;
+        _6 = <Chars<'_> as Iterator>::next(_7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _8 = discriminant(_6);
+        switchInt(move _8) -> [0: bb6, 1: bb5, otherwise: bb7];
+    }
+
+    bb5: {
+        _9 = ((_6 as Some).0: char);
+        _10 = FrameBufferWriter::write_char(_1, _9) -> [return: bb3, unwind unreachable];
+    }
+
+    bb6: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        return;
+    }
+
+    bb7: {
+        unreachable;
+    }
+}

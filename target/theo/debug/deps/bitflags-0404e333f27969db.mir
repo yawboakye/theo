@@ -1,0 +1,3695 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:18:1: 18:23>::new(_1: &B) -> iter::Iter<B> {
+    debug flags => _1;
+    let mut _0: iter::Iter<B>;
+    let mut _2: iter::IterNames<B>;
+
+    bb0: {
+        _2 = IterNames::<B>::new(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = iter::Iter::<B> { inner: move _2, done: const false };
+        return;
+    }
+}
+
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:27:1: 27:25>::__private_const_new(_1: &[Flag<B>], _2: B, _3: B) -> iter::Iter<B> {
+    debug flags => _1;
+    debug source => _2;
+    debug remaining => _3;
+    let mut _0: iter::Iter<B>;
+    let mut _4: iter::IterNames<B>;
+
+    bb0: {
+        _4 = IterNames::<B>::__private_const_new(_1, move _2, move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = iter::Iter::<B> { inner: move _4, done: const false };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:27:1: 27:25>::__private_const_new(_1: &[Flag<B>], _2: B, _3: B) -> iter::Iter<B> {
+    debug flags => _1;
+    debug source => _2;
+    debug remaining => _3;
+    let mut _0: iter::Iter<B>;
+    let mut _4: iter::IterNames<B>;
+    let mut _5: &[traits::Flag<B>];
+    let mut _6: B;
+    let mut _7: B;
+
+    bb0: {
+        StorageLive(_4);
+        StorageLive(_5);
+        _5 = _1;
+        StorageLive(_6);
+        _6 = move _2;
+        StorageLive(_7);
+        _7 = move _3;
+        ConstEvalCounter;
+        _4 = IterNames::<B>::__private_const_new(move _5, move _6, move _7) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_7);
+        StorageDead(_6);
+        StorageDead(_5);
+        _0 = iter::Iter::<B> { inner: move _4, done: const false };
+        StorageDead(_4);
+        return;
+    }
+}
+
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:38:1: 38:36>::next(_1: &mut iter::Iter<B>) -> Option<B> {
+    debug self => _1;
+    let mut _0: core::option::Option<B>;
+    let mut _2: core::option::Option<(&str, B)>;
+    let mut _3: &mut iter::IterNames<B>;
+    let mut _4: isize;
+    let _5: B;
+    let mut _6: bool;
+    let mut _7: bool;
+    let _8: &B;
+    let mut _9: &iter::IterNames<B>;
+    let mut _10: B;
+    let mut _11: <B as traits::Flags>::Bits;
+    let mut _12: &B;
+    scope 1 {
+        debug flag => _5;
+    }
+
+    bb0: {
+        _3 = &mut ((*_1).0: iter::IterNames<B>);
+        _2 = <IterNames<B> as Iterator>::next(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = discriminant(_2);
+        switchInt(move _4) -> [0: bb4, 1: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        unreachable;
+    }
+
+    bb3: {
+        _5 = move (((_2 as Some).0: (&str, B)).1: B);
+        _0 = Option::<B>::Some(move _5);
+        goto -> bb13;
+    }
+
+    bb4: {
+        _6 = ((*_1).1: bool);
+        switchInt(move _6) -> [0: bb6, otherwise: bb5];
+    }
+
+    bb5: {
+        _0 = Option::<B>::None;
+        goto -> bb13;
+    }
+
+    bb6: {
+        ((*_1).1: bool) = const true;
+        _9 = &((*_1).0: iter::IterNames<B>);
+        _8 = IterNames::<B>::remaining(move _9) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _7 = <B as Flags>::is_empty(_8) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        switchInt(move _7) -> [0: bb10, otherwise: bb9];
+    }
+
+    bb9: {
+        _0 = Option::<B>::None;
+        goto -> bb13;
+    }
+
+    bb10: {
+        _12 = &(((*_1).0: iter::IterNames<B>).3: B);
+        _11 = <B as Flags>::bits(move _12) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _10 = <B as Flags>::from_bits_retain(move _11) -> [return: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _0 = Option::<B>::Some(move _10);
+        goto -> bb13;
+    }
+
+    bb13: {
+        return;
+    }
+}
+
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:74:1: 74:28>::new(_1: &B) -> IterNames<B> {
+    debug flags => _1;
+    let mut _0: iter::IterNames<B>;
+    let mut _2: B;
+    let mut _3: <B as traits::Flags>::Bits;
+    let mut _4: B;
+    let mut _5: <B as traits::Flags>::Bits;
+
+    bb0: {
+        _3 = <B as Flags>::bits(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = <B as Flags>::from_bits_retain(move _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = <B as Flags>::bits(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _4 = <B as Flags>::from_bits_retain(move _5) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _0 = IterNames::<B> { flags: const _, idx: const 0_usize, source: move _4, remaining: move _2 };
+        return;
+    }
+}
+
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:85:1: 85:30>::__private_const_new(_1: &[Flag<B>], _2: B, _3: B) -> IterNames<B> {
+    debug flags => _1;
+    debug source => _2;
+    debug remaining => _3;
+    let mut _0: iter::IterNames<B>;
+
+    bb0: {
+        _0 = IterNames::<B> { flags: _1, idx: const 0_usize, source: move _2, remaining: move _3 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:85:1: 85:30>::__private_const_new(_1: &[Flag<B>], _2: B, _3: B) -> IterNames<B> {
+    debug flags => _1;
+    debug source => _2;
+    debug remaining => _3;
+    let mut _0: iter::IterNames<B>;
+    let mut _4: &[traits::Flag<B>];
+    let mut _5: B;
+    let mut _6: B;
+
+    bb0: {
+        StorageLive(_4);
+        _4 = _1;
+        StorageLive(_5);
+        _5 = move _3;
+        StorageLive(_6);
+        _6 = move _2;
+        _0 = IterNames::<B> { flags: move _4, idx: const 0_usize, source: move _6, remaining: move _5 };
+        StorageDead(_6);
+        StorageDead(_5);
+        StorageDead(_4);
+        return;
+    }
+}
+
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:85:1: 85:30>::remaining(_1: &IterNames<B>) -> &B {
+    debug self => _1;
+    let mut _0: &B;
+
+    bb0: {
+        _0 = &((*_1).3: B);
+        return;
+    }
+}
+
+fn iter::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/iter.rs:107:1: 107:41>::next(_1: &mut IterNames<B>) -> Option<(&str, B)> {
+    debug self => _1;
+    let mut _0: core::option::Option<(&str, B)>;
+    let mut _2: core::option::Option<&traits::Flag<B>>;
+    let mut _3: usize;
+    let mut _4: isize;
+    let mut _6: bool;
+    let mut _7: &B;
+    let mut _8: (usize, bool);
+    let mut _9: bool;
+    let _10: &str;
+    let _12: &B;
+    let mut _13: bool;
+    let mut _14: &B;
+    let mut _15: B;
+    let mut _16: bool;
+    let mut _17: &B;
+    let mut _18: B;
+    let _19: ();
+    let mut _20: &mut B;
+    let mut _21: B;
+    let mut _22: (&str, B);
+    let _23: &str;
+    let mut _24: B;
+    let mut _25: &[traits::Flag<B>];
+    scope 1 {
+        debug flag => _5;
+        let _5: &traits::Flag<B>;
+        let _11: <B as traits::Flags>::Bits;
+        scope 2 {
+            debug bits => _11;
+        }
+    }
+
+    bb0: {
+        goto -> bb1;
+    }
+
+    bb1: {
+        _25 = deref_copy ((*_1).0: &[traits::Flag<B>]);
+        _3 = ((*_1).1: usize);
+        _2 = slice::<impl [Flag<B>]>::get::<usize>(_25, move _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = discriminant(_2);
+        switchInt(move _4) -> [1: bb3, otherwise: bb23];
+    }
+
+    bb3: {
+        _5 = ((_2 as Some).0: &traits::Flag<B>);
+        _7 = &((*_1).3: B);
+        _6 = <B as Flags>::is_empty(move _7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        switchInt(move _6) -> [0: bb6, otherwise: bb5];
+    }
+
+    bb5: {
+        _0 = Option::<(&str, B)>::None;
+        goto -> bb24;
+    }
+
+    bb6: {
+        _8 = CheckedAdd(((*_1).1: usize), const 1_usize);
+        assert(!move (_8.1: bool), "attempt to compute `{} + {}`, which would overflow", ((*_1).1: usize), const 1_usize) -> [success: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        ((*_1).1: usize) = move (_8.0: usize);
+        _10 = Flag::<B>::name(_5) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _9 = str::<impl str>::is_empty(_10) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        switchInt(move _9) -> [0: bb10, otherwise: bb1];
+    }
+
+    bb10: {
+        _12 = Flag::<B>::value(_5) -> [return: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _11 = <B as Flags>::bits(_12) -> [return: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _14 = &((*_1).2: B);
+        _15 = <B as Flags>::from_bits_retain(_11) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _13 = <B as Flags>::contains(move _14, move _15) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        switchInt(move _13) -> [0: bb1, otherwise: bb15];
+    }
+
+    bb15: {
+        _17 = &((*_1).3: B);
+        _18 = <B as Flags>::from_bits_retain(_11) -> [return: bb16, unwind unreachable];
+    }
+
+    bb16: {
+        _16 = <B as Flags>::intersects(move _17, move _18) -> [return: bb17, unwind unreachable];
+    }
+
+    bb17: {
+        switchInt(move _16) -> [0: bb1, otherwise: bb18];
+    }
+
+    bb18: {
+        _20 = &mut ((*_1).3: B);
+        _21 = <B as Flags>::from_bits_retain(_11) -> [return: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _19 = <B as Flags>::remove(move _20, move _21) -> [return: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _23 = Flag::<B>::name(_5) -> [return: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _24 = <B as Flags>::from_bits_retain(_11) -> [return: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _22 = (_23, move _24);
+        _0 = Option::<(&str, B)>::Some(move _22);
+        goto -> bb24;
+    }
+
+    bb23: {
+        _0 = Option::<(&str, B)>::None;
+        goto -> bb24;
+    }
+
+    bb24: {
+        return;
+    }
+}
+
+fn to_writer(_1: &B, _2: impl Write) -> Result<(), core::fmt::Error> {
+    debug flags => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: bool;
+    let mut _5: &mut iter::IterNames<B>;
+    let mut _6: &mut iter::IterNames<B>;
+    let mut _8: core::option::Option<(&str, B)>;
+    let mut _9: &mut &mut iter::IterNames<B>;
+    let mut _10: isize;
+    let mut _12: bool;
+    let mut _13: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _14: core::result::Result<(), core::fmt::Error>;
+    let mut _15: &mut impl Write;
+    let _16: &str;
+    let mut _17: isize;
+    let mut _18: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _19: core::result::Result<(), core::fmt::Error>;
+    let mut _20: &mut impl Write;
+    let mut _21: isize;
+    let _23: &B;
+    let mut _24: &iter::IterNames<B>;
+    let mut _25: bool;
+    let mut _26: &<B as traits::Flags>::Bits;
+    let mut _27: &<B as traits::Flags>::Bits;
+    let _28: <B as traits::Flags>::Bits;
+    let mut _29: bool;
+    let mut _30: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _31: core::result::Result<(), core::fmt::Error>;
+    let mut _32: &mut impl Write;
+    let _33: &str;
+    let mut _34: isize;
+    let mut _35: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _36: core::result::Result<(), core::fmt::Error>;
+    let mut _37: &mut impl Write;
+    let _38: &str;
+    let mut _39: isize;
+    let mut _40: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _41: core::result::Result<(), core::fmt::Error>;
+    let mut _42: &<B as traits::Flags>::Bits;
+    let mut _43: impl Write;
+    let mut _44: isize;
+    let mut _45: bool;
+    scope 1 {
+        debug first => _3;
+        let mut _4: iter::IterNames<B>;
+        scope 2 {
+            debug iter => _4;
+            let mut _7: &mut iter::IterNames<B>;
+            let _22: <B as traits::Flags>::Bits;
+            scope 3 {
+                debug iter => _7;
+                let _11: &str;
+                scope 4 {
+                    debug name => _11;
+                    scope 5 {
+                        debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                        scope 6 {
+                        }
+                    }
+                    scope 7 {
+                        debug val => const ();
+                        scope 8 {
+                        }
+                    }
+                    scope 9 {
+                        debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                        scope 10 {
+                        }
+                    }
+                    scope 11 {
+                        debug val => const ();
+                        scope 12 {
+                        }
+                    }
+                }
+            }
+            scope 13 {
+                debug remaining => _22;
+                scope 14 {
+                    debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                    scope 15 {
+                    }
+                }
+                scope 16 {
+                    debug val => const ();
+                    scope 17 {
+                    }
+                }
+                scope 18 {
+                    debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                    scope 19 {
+                    }
+                }
+                scope 20 {
+                    debug val => const ();
+                    scope 21 {
+                    }
+                }
+                scope 22 {
+                    debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                    scope 23 {
+                    }
+                }
+                scope 24 {
+                    debug val => const ();
+                    scope 25 {
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _45 = const false;
+        _45 = const true;
+        _3 = const true;
+        _4 = <B as Flags>::iter_names(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &mut _4;
+        _5 = <&mut IterNames<B> as IntoIterator>::into_iter(move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _7 = move _5;
+        goto -> bb3;
+    }
+
+    bb3: {
+        _9 = &mut _7;
+        _8 = <&mut IterNames<B> as Iterator>::next(_9) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = discriminant(_8);
+        switchInt(move _10) -> [0: bb7, 1: bb5, otherwise: bb6];
+    }
+
+    bb5: {
+        _11 = (((_8 as Some).0: (&str, B)).0: &str);
+        _12 = _3;
+        switchInt(move _12) -> [0: bb8, otherwise: bb12];
+    }
+
+    bb6: {
+        unreachable;
+    }
+
+    bb7: {
+        drop(_8) -> [return: bb17, unwind unreachable];
+    }
+
+    bb8: {
+        _15 = &mut _2;
+        _16 = const " | ";
+        _14 = <impl Write as Write>::write_str(move _15, _16) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _13 = <Result<(), core::fmt::Error> as Try>::branch(move _14) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _17 = discriminant(_13);
+        switchInt(move _17) -> [0: bb12, 1: bb11, otherwise: bb6];
+    }
+
+    bb11: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb36, unwind unreachable];
+    }
+
+    bb12: {
+        _3 = const false;
+        _20 = &mut _2;
+        _19 = <impl Write as Write>::write_str(move _20, _11) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _18 = <Result<(), core::fmt::Error> as Try>::branch(move _19) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        _21 = discriminant(_18);
+        switchInt(move _21) -> [0: bb15, 1: bb16, otherwise: bb6];
+    }
+
+    bb15: {
+        drop(_8) -> [return: bb3, unwind unreachable];
+    }
+
+    bb16: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb36, unwind unreachable];
+    }
+
+    bb17: {
+        _24 = &_4;
+        _23 = IterNames::<B>::remaining(move _24) -> [return: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _22 = <B as Flags>::bits(_23) -> [return: bb19, unwind unreachable];
+    }
+
+    bb19: {
+        _26 = &_22;
+        _28 = const _;
+        _27 = &_28;
+        _25 = <<B as Flags>::Bits as PartialEq>::ne(move _26, move _27) -> [return: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        switchInt(move _25) -> [0: bb34, otherwise: bb21];
+    }
+
+    bb21: {
+        _29 = _3;
+        switchInt(move _29) -> [0: bb22, otherwise: bb26];
+    }
+
+    bb22: {
+        _32 = &mut _2;
+        _33 = const " | ";
+        _31 = <impl Write as Write>::write_str(move _32, _33) -> [return: bb23, unwind unreachable];
+    }
+
+    bb23: {
+        _30 = <Result<(), core::fmt::Error> as Try>::branch(move _31) -> [return: bb24, unwind unreachable];
+    }
+
+    bb24: {
+        _34 = discriminant(_30);
+        switchInt(move _34) -> [0: bb26, 1: bb25, otherwise: bb6];
+    }
+
+    bb25: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb37, unwind unreachable];
+    }
+
+    bb26: {
+        _37 = &mut _2;
+        _38 = const "0x";
+        _36 = <impl Write as Write>::write_str(move _37, _38) -> [return: bb27, unwind unreachable];
+    }
+
+    bb27: {
+        _35 = <Result<(), core::fmt::Error> as Try>::branch(move _36) -> [return: bb28, unwind unreachable];
+    }
+
+    bb28: {
+        _39 = discriminant(_35);
+        switchInt(move _39) -> [0: bb29, 1: bb30, otherwise: bb6];
+    }
+
+    bb29: {
+        _42 = &_22;
+        _45 = const false;
+        _43 = move _2;
+        _41 = <<B as Flags>::Bits as WriteHex>::write_hex::<impl Write>(move _42, move _43) -> [return: bb31, unwind unreachable];
+    }
+
+    bb30: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb37, unwind unreachable];
+    }
+
+    bb31: {
+        _40 = <Result<(), core::fmt::Error> as Try>::branch(move _41) -> [return: bb32, unwind unreachable];
+    }
+
+    bb32: {
+        _44 = discriminant(_40);
+        switchInt(move _44) -> [0: bb34, 1: bb33, otherwise: bb6];
+    }
+
+    bb33: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb37, unwind unreachable];
+    }
+
+    bb34: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        drop(_4) -> [return: bb35, unwind unreachable];
+    }
+
+    bb35: {
+        switchInt(_45) -> [0: bb39, otherwise: bb40];
+    }
+
+    bb36: {
+        drop(_8) -> [return: bb37, unwind unreachable];
+    }
+
+    bb37: {
+        drop(_4) -> [return: bb38, unwind unreachable];
+    }
+
+    bb38: {
+        switchInt(_45) -> [0: bb39, otherwise: bb41];
+    }
+
+    bb39: {
+        return;
+    }
+
+    bb40: {
+        drop(_2) -> [return: bb39, unwind unreachable];
+    }
+
+    bb41: {
+        drop(_2) -> [return: bb39, unwind unreachable];
+    }
+}
+
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:82:1: 84:23>::fmt(_1: &AsDisplay<'_, B>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &B;
+
+    bb0: {
+        _3 = deref_copy ((*_1).0: &B);
+        _0 = to_writer::<B, &mut Formatter<'_>>(_3, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn parser::from_str(_1: &str) -> Result<B, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<B, parser::ParseError>;
+    let mut _2: B;
+    let mut _3: bool;
+    let _4: &str;
+    let mut _5: B;
+    let mut _6: core::str::Split<'_, char>;
+    let mut _7: core::str::Split<'_, char>;
+    let mut _9: core::option::Option<&str>;
+    let mut _10: &mut core::str::Split<'_, char>;
+    let mut _11: isize;
+    let mut _14: bool;
+    let mut _15: &str;
+    let mut _16: parser::ParseError;
+    let mut _18: core::option::Option<&str>;
+    let mut _19: &str;
+    let mut _20: isize;
+    let mut _22: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, parser::ParseError>, <B as traits::Flags>::Bits>;
+    let mut _23: core::result::Result<<B as traits::Flags>::Bits, parser::ParseError>;
+    let mut _24: core::result::Result<<B as traits::Flags>::Bits, parser::ParseError>;
+    let mut _25: &str;
+    let mut _26: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:120:52: 120:55};
+    let mut _27: &&str;
+    let mut _28: isize;
+    let mut _31: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, parser::ParseError>, B>;
+    let mut _32: core::result::Result<B, parser::ParseError>;
+    let mut _33: core::option::Option<B>;
+    let mut _34: &str;
+    let mut _35: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:128:43: 128:45};
+    let mut _36: &&str;
+    let mut _37: isize;
+    let _40: ();
+    let mut _41: &mut B;
+    let mut _42: B;
+    let mut _43: B;
+    let mut _44: bool;
+    scope 1 {
+        debug parsed_flags => _2;
+        let mut _8: core::str::Split<'_, char>;
+        scope 2 {
+            debug iter => _8;
+            let _12: &str;
+            scope 3 {
+                debug flag => _12;
+                let _13: &str;
+                scope 4 {
+                    debug flag => _13;
+                    let _17: B;
+                    let _38: core::result::Result<core::convert::Infallible, parser::ParseError>;
+                    let _39: B;
+                    scope 5 {
+                        debug parsed_flag => _17;
+                    }
+                    scope 6 {
+                        debug flag => _21;
+                        let _21: &str;
+                        let _29: core::result::Result<core::convert::Infallible, parser::ParseError>;
+                        let _30: <B as traits::Flags>::Bits;
+                        scope 7 {
+                            debug bits => _30;
+                        }
+                        scope 8 {
+                            debug residual => _29;
+                            scope 9 {
+                            }
+                        }
+                        scope 10 {
+                            debug val => _30;
+                            scope 11 {
+                            }
+                        }
+                    }
+                    scope 12 {
+                        debug residual => _38;
+                        scope 13 {
+                        }
+                    }
+                    scope 14 {
+                        debug val => _39;
+                        scope 15 {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        _44 = const false;
+        _2 = <B as Flags>::empty() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _44 = const true;
+        _4 = str::<impl str>::trim(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = str::<impl str>::is_empty(_4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _3) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _44 = const false;
+        _5 = move _2;
+        _0 = Result::<B, ParseError>::Ok(move _5);
+        goto -> bb35;
+    }
+
+    bb5: {
+        _7 = str::<impl str>::split::<'_, char>(_1, const '|') -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _6 = <core::str::Split<'_, char> as IntoIterator>::into_iter(move _7) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        _8 = move _6;
+        goto -> bb8;
+    }
+
+    bb8: {
+        _10 = &mut _8;
+        _9 = <core::str::Split<'_, char> as Iterator>::next(_10) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _11 = discriminant(_9);
+        switchInt(move _11) -> [0: bb12, 1: bb10, otherwise: bb11];
+    }
+
+    bb10: {
+        _12 = ((_9 as Some).0: &str);
+        _13 = str::<impl str>::trim(_12) -> [return: bb13, unwind unreachable];
+    }
+
+    bb11: {
+        unreachable;
+    }
+
+    bb12: {
+        _44 = const false;
+        _43 = move _2;
+        _0 = Result::<B, ParseError>::Ok(move _43);
+        _44 = const false;
+        goto -> bb33;
+    }
+
+    bb13: {
+        _15 = _13;
+        _14 = str::<impl str>::is_empty(move _15) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        switchInt(move _14) -> [0: bb17, otherwise: bb15];
+    }
+
+    bb15: {
+        _16 = ParseError::empty_flag() -> [return: bb16, unwind unreachable];
+    }
+
+    bb16: {
+        _0 = Result::<B, ParseError>::Err(move _16);
+        goto -> bb35;
+    }
+
+    bb17: {
+        _19 = _13;
+        _18 = str::<impl str>::strip_prefix::<'_, &str>(move _19, const "0x") -> [return: bb18, unwind unreachable];
+    }
+
+    bb18: {
+        _20 = discriminant(_18);
+        switchInt(move _20) -> [1: bb19, otherwise: bb25];
+    }
+
+    bb19: {
+        _21 = ((_18 as Some).0: &str);
+        _25 = _21;
+        _24 = <<B as Flags>::Bits as ParseHex>::parse_hex(move _25) -> [return: bb20, unwind unreachable];
+    }
+
+    bb20: {
+        _27 = &_21;
+        _26 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:120:52: 120:55} { flag: move _27 };
+        _23 = Result::<<B as Flags>::Bits, ParseError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:120:52: 120:55}>(move _24, move _26) -> [return: bb21, unwind unreachable];
+    }
+
+    bb21: {
+        _22 = <Result<<B as Flags>::Bits, ParseError> as Try>::branch(move _23) -> [return: bb22, unwind unreachable];
+    }
+
+    bb22: {
+        _28 = discriminant(_22);
+        switchInt(move _28) -> [0: bb23, 1: bb24, otherwise: bb11];
+    }
+
+    bb23: {
+        _30 = ((_22 as Continue).0: <B as traits::Flags>::Bits);
+        _17 = <B as Flags>::from_bits_retain(_30) -> [return: bb31, unwind unreachable];
+    }
+
+    bb24: {
+        _29 = move ((_22 as Break).0: core::result::Result<core::convert::Infallible, parser::ParseError>);
+        _0 = <Result<B, ParseError> as FromResidual<Result<Infallible, ParseError>>>::from_residual(move _29) -> [return: bb35, unwind unreachable];
+    }
+
+    bb25: {
+        _34 = _13;
+        _33 = <B as Flags>::from_name(move _34) -> [return: bb26, unwind unreachable];
+    }
+
+    bb26: {
+        _36 = &_13;
+        _35 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:128:43: 128:45} { flag: move _36 };
+        _32 = Option::<B>::ok_or_else::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:128:43: 128:45}>(move _33, move _35) -> [return: bb27, unwind unreachable];
+    }
+
+    bb27: {
+        _31 = <Result<B, ParseError> as Try>::branch(move _32) -> [return: bb28, unwind unreachable];
+    }
+
+    bb28: {
+        _37 = discriminant(_31);
+        switchInt(move _37) -> [0: bb29, 1: bb30, otherwise: bb11];
+    }
+
+    bb29: {
+        _39 = move ((_31 as Continue).0: B);
+        _17 = move _39;
+        goto -> bb31;
+    }
+
+    bb30: {
+        _38 = move ((_31 as Break).0: core::result::Result<core::convert::Infallible, parser::ParseError>);
+        _0 = <Result<B, ParseError> as FromResidual<Result<Infallible, ParseError>>>::from_residual(move _38) -> [return: bb35, unwind unreachable];
+    }
+
+    bb31: {
+        _41 = &mut _2;
+        _42 = move _17;
+        _40 = <B as Flags>::insert(move _41, move _42) -> [return: bb8, unwind unreachable];
+    }
+
+    bb32: {
+        _44 = const false;
+        goto -> bb33;
+    }
+
+    bb33: {
+        return;
+    }
+
+    bb34: {
+        drop(_2) -> [return: bb32, unwind unreachable];
+    }
+
+    bb35: {
+        switchInt(_44) -> [0: bb32, otherwise: bb34];
+    }
+}
+
+fn parser::from_str::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:120:52: 120:55}, _2: ParseError) -> ParseError {
+    debug flag => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn parser::from_str::{closure#1}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:128:43: 128:45}) -> ParseError {
+    debug flag => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _2: &str;
+    let mut _3: &&str;
+
+    bb0: {
+        _3 = deref_copy (_1.0: &&str);
+        _2 = (*_3);
+        _0 = ParseError::invalid_named_flag::<&str>(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:158:10: 158:15>::fmt(_1: &ParseError, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let _3: &str;
+    let mut _4: &dyn core::fmt::Debug;
+    let _5: &&parser::ParseErrorKind;
+    let _6: &parser::ParseErrorKind;
+
+    bb0: {
+        _3 = const "ParseError";
+        _6 = &((*_1).0: parser::ParseErrorKind);
+        _5 = &_6;
+        _4 = _5 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _0 = Formatter::<'_>::debug_tuple_field1_finish(_2, _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:161:10: 161:15>::fmt(_1: &ParseErrorKind, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: isize;
+    let _4: &str;
+    let _5: &();
+    let _6: &str;
+    let _7: &str;
+    let mut _8: &dyn core::fmt::Debug;
+    let _9: &&();
+    let _10: &();
+    let _11: &str;
+    let _12: &str;
+    let mut _13: &dyn core::fmt::Debug;
+    let _14: &&();
+    scope 1 {
+        debug __self_0 => _5;
+    }
+    scope 2 {
+        debug __self_0 => _10;
+    }
+
+    bb0: {
+        _3 = discriminant((*_1));
+        switchInt(move _3) -> [0: bb2, 1: bb3, 2: bb1, otherwise: bb5];
+    }
+
+    bb1: {
+        _10 = &(((*_1) as InvalidHexFlag).0: ());
+        _11 = const "InvalidHexFlag";
+        _12 = const "got";
+        _14 = &_10;
+        _13 = _14 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _0 = Formatter::<'_>::debug_struct_field1_finish(_2, _11, _12, move _13) -> [return: bb4, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = const "EmptyFlag";
+        _0 = Formatter::<'_>::write_str(_2, _4) -> [return: bb4, unwind unreachable];
+    }
+
+    bb3: {
+        _5 = &(((*_1) as InvalidNamedFlag).0: ());
+        _6 = const "InvalidNamedFlag";
+        _7 = const "got";
+        _9 = &_5;
+        _8 = _9 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _0 = Formatter::<'_>::debug_struct_field1_finish(_2, _6, _7, move _8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+
+    bb5: {
+        unreachable;
+    }
+}
+
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:179:1: 179:16>::invalid_hex_flag(_1: impl fmt::Display) -> ParseError {
+    debug flag => _1;
+    let mut _0: parser::ParseError;
+    let _2: impl fmt::Display;
+    let mut _3: parser::ParseErrorKind;
+    scope 1 {
+        debug _flag => _2;
+        scope 2 {
+            debug got => const ();
+        }
+    }
+
+    bb0: {
+        _2 = move _1;
+        _3 = ParseErrorKind::InvalidHexFlag { got: const () };
+        _0 = ParseError(move _3);
+        drop(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:179:1: 179:16>::invalid_named_flag(_1: impl fmt::Display) -> ParseError {
+    debug flag => _1;
+    let mut _0: parser::ParseError;
+    let _2: impl fmt::Display;
+    let mut _3: parser::ParseErrorKind;
+    scope 1 {
+        debug _flag => _2;
+        scope 2 {
+            debug got => const ();
+        }
+    }
+
+    bb0: {
+        _2 = move _1;
+        _3 = ParseErrorKind::InvalidNamedFlag { got: const () };
+        _0 = ParseError(move _3);
+        drop(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:179:1: 179:16>::empty_flag() -> ParseError {
+    let mut _0: parser::ParseError;
+    let mut _1: parser::ParseErrorKind;
+
+    bb0: {
+        _1 = ParseErrorKind::EmptyFlag;
+        _0 = ParseError(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:179:1: 179:16>::empty_flag() -> ParseError {
+    let mut _0: parser::ParseError;
+    let mut _1: parser::ParseErrorKind;
+
+    bb0: {
+        StorageLive(_1);
+        _1 = ParseErrorKind::EmptyFlag;
+        _0 = ParseError(move _1);
+        StorageDead(_1);
+        return;
+    }
+}
+
+fn parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:214:1: 214:33>::fmt(_1: &ParseError, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &parser::ParseErrorKind;
+    let mut _4: isize;
+    let _5: &();
+    let mut _6: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _7: core::result::Result<(), core::fmt::Error>;
+    let mut _8: core::fmt::Arguments<'_>;
+    let mut _9: &[&str];
+    let mut _10: isize;
+    let _11: &();
+    let mut _12: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _13: core::result::Result<(), core::fmt::Error>;
+    let mut _14: core::fmt::Arguments<'_>;
+    let mut _15: &[&str];
+    let mut _16: isize;
+    let mut _17: core::ops::ControlFlow<core::result::Result<core::convert::Infallible, core::fmt::Error>>;
+    let mut _18: core::result::Result<(), core::fmt::Error>;
+    let mut _19: core::fmt::Arguments<'_>;
+    let mut _20: &[&str];
+    let mut _21: isize;
+    let mut _22: &[&str; 1];
+    scope 1 {
+        debug got => _5;
+        scope 2 {
+            debug _got => _5;
+            let mut _24: &[&str; 1];
+            scope 3 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 4 {
+                }
+            }
+            scope 5 {
+                debug val => const ();
+                scope 6 {
+                }
+            }
+        }
+    }
+    scope 7 {
+        debug got => _11;
+        scope 8 {
+            debug _got => _11;
+            let mut _23: &[&str; 1];
+            scope 9 {
+                debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+                scope 10 {
+                }
+            }
+            scope 11 {
+                debug val => const ();
+                scope 12 {
+                }
+            }
+        }
+    }
+    scope 13 {
+        debug residual => const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error);
+        scope 14 {
+        }
+    }
+    scope 15 {
+        debug val => const ();
+        scope 16 {
+        }
+    }
+
+    bb0: {
+        _3 = &((*_1).0: parser::ParseErrorKind);
+        _4 = discriminant((*_3));
+        switchInt(move _4) -> [0: bb1, 1: bb2, 2: bb7, otherwise: bb18];
+    }
+
+    bb1: {
+        _22 = const _;
+        _20 = _22 as &[&str] (PointerCoercion(Unsize));
+        _19 = Arguments::<'_>::new_const(move _20) -> [return: bb12, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = &(((*_3) as InvalidNamedFlag).0: ());
+        _24 = const _;
+        _9 = _24 as &[&str] (PointerCoercion(Unsize));
+        _8 = Arguments::<'_>::new_const(move _9) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _7 = Formatter::<'_>::write_fmt(_2, move _8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _6 = <Result<(), core::fmt::Error> as Try>::branch(move _7) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _10 = discriminant(_6);
+        switchInt(move _10) -> [0: bb16, 1: bb6, otherwise: bb18];
+    }
+
+    bb6: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb17, unwind unreachable];
+    }
+
+    bb7: {
+        _11 = &(((*_3) as InvalidHexFlag).0: ());
+        _23 = const _;
+        _15 = _23 as &[&str] (PointerCoercion(Unsize));
+        _14 = Arguments::<'_>::new_const(move _15) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _13 = Formatter::<'_>::write_fmt(_2, move _14) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _12 = <Result<(), core::fmt::Error> as Try>::branch(move _13) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _16 = discriminant(_12);
+        switchInt(move _16) -> [0: bb16, 1: bb11, otherwise: bb18];
+    }
+
+    bb11: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb17, unwind unreachable];
+    }
+
+    bb12: {
+        _18 = Formatter::<'_>::write_fmt(_2, move _19) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _17 = <Result<(), core::fmt::Error> as Try>::branch(move _18) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        _21 = discriminant(_17);
+        switchInt(move _21) -> [0: bb16, 1: bb15, otherwise: bb18];
+    }
+
+    bb15: {
+        _0 = <Result<(), core::fmt::Error> as FromResidual<Result<Infallible, core::fmt::Error>>>::from_residual(const Result::<Infallible, core::fmt::Error>::Err(core::fmt::Error)) -> [return: bb17, unwind unreachable];
+    }
+
+    bb16: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        goto -> bb17;
+    }
+
+    bb17: {
+        return;
+    }
+
+    bb18: {
+        unreachable;
+    }
+}
+
+promoted[0] in parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:214:1: 214:33>::fmt: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "encountered empty flag"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[1] in parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:214:1: 214:33>::fmt: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "invalid hex flag"];
+        _0 = &_1;
+        return;
+    }
+}
+
+promoted[2] in parser::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/parser.rs:214:1: 214:33>::fmt: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const "unrecognized named flag"];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::new(_1: &str, _2: B) -> Flag<B> {
+    debug name => _1;
+    debug value => _2;
+    let mut _0: traits::Flag<B>;
+
+    bb0: {
+        _0 = Flag::<B> { name: _1, value: move _2 };
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::new(_1: &str, _2: B) -> Flag<B> {
+    debug name => _1;
+    debug value => _2;
+    let mut _0: traits::Flag<B>;
+    let mut _3: &str;
+    let mut _4: B;
+
+    bb0: {
+        StorageLive(_3);
+        _3 = _1;
+        StorageLive(_4);
+        _4 = move _2;
+        _0 = Flag::<B> { name: move _3, value: move _4 };
+        StorageDead(_4);
+        StorageDead(_3);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::name(_1: &Flag<B>) -> &str {
+    debug self => _1;
+    let mut _0: &str;
+
+    bb0: {
+        _0 = ((*_1).0: &str);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::name(_1: &Flag<B>) -> &str {
+    debug self => _1;
+    let mut _0: &str;
+
+    bb0: {
+        _0 = ((*_1).0: &str);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::value(_1: &Flag<B>) -> &B {
+    debug self => _1;
+    let mut _0: &B;
+
+    bb0: {
+        _0 = &((*_1).1: B);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::value(_1: &Flag<B>) -> &B {
+    debug self => _1;
+    let mut _0: &B;
+    let _2: &B;
+
+    bb0: {
+        StorageLive(_2);
+        _2 = &((*_1).1: B);
+        _0 = &(*_2);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::is_named(_1: &Flag<B>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: bool;
+    let mut _3: &str;
+
+    bb0: {
+        _3 = deref_copy ((*_1).0: &str);
+        _2 = str::<impl str>::is_empty(_3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Not(move _2);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::is_named(_1: &Flag<B>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: bool;
+    let mut _3: &str;
+    let mut _4: &str;
+
+    bb0: {
+        StorageLive(_2);
+        StorageLive(_3);
+        _4 = deref_copy ((*_1).0: &str);
+        _3 = &(*_4);
+        ConstEvalCounter;
+        _2 = str::<impl str>::is_empty(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_3);
+        _0 = Not(move _2);
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::is_unnamed(_1: &Flag<B>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &str;
+
+    bb0: {
+        _2 = deref_copy ((*_1).0: &str);
+        _0 = str::<impl str>::is_empty(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:19:1: 19:16>::is_unnamed(_1: &Flag<B>) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &str;
+    let mut _3: &str;
+
+    bb0: {
+        StorageLive(_2);
+        _3 = deref_copy ((*_1).0: &str);
+        _2 = &(*_3);
+        ConstEvalCounter;
+        _0 = str::<impl str>::is_empty(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        StorageDead(_2);
+        return;
+    }
+}
+
+fn Flags::empty() -> Self {
+    let mut _0: Self;
+
+    bb0: {
+        _0 = <Self as Flags>::from_bits_retain(const _) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn Flags::all() -> Self {
+    let mut _0: Self;
+    let mut _1: <Self as traits::Flags>::Bits;
+    let mut _2: core::slice::Iter<'_, traits::Flag<Self>>;
+    let mut _3: core::slice::Iter<'_, traits::Flag<Self>>;
+    let _4: &[traits::Flag<Self>];
+    let mut _6: core::option::Option<&traits::Flag<Self>>;
+    let mut _7: &mut core::slice::Iter<'_, traits::Flag<Self>>;
+    let mut _8: isize;
+    let mut _10: <Self as traits::Flags>::Bits;
+    let mut _11: <Self as traits::Flags>::Bits;
+    let mut _12: <Self as traits::Flags>::Bits;
+    let _13: &Self;
+    let mut _14: <Self as traits::Flags>::Bits;
+    scope 1 {
+        debug truncated => _1;
+        let mut _5: core::slice::Iter<'_, traits::Flag<Self>>;
+        scope 2 {
+            debug iter => _5;
+            let _9: &traits::Flag<Self>;
+            scope 3 {
+                debug flag => _9;
+            }
+        }
+    }
+
+    bb0: {
+        _1 = const _;
+        _4 = const _;
+        _3 = slice::<impl [Flag<Self>]>::iter(_4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = <core::slice::Iter<'_, Flag<Self>> as IntoIterator>::into_iter(move _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = move _2;
+        goto -> bb3;
+    }
+
+    bb3: {
+        _7 = &mut _5;
+        _6 = <core::slice::Iter<'_, Flag<Self>> as Iterator>::next(_7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _8 = discriminant(_6);
+        switchInt(move _8) -> [0: bb6, 1: bb5, otherwise: bb11];
+    }
+
+    bb5: {
+        _9 = ((_6 as Some).0: &traits::Flag<Self>);
+        _11 = _1;
+        _13 = Flag::<Self>::value(_9) -> [return: bb7, unwind unreachable];
+    }
+
+    bb6: {
+        _14 = _1;
+        _0 = <Self as Flags>::from_bits_retain(move _14) -> [return: bb10, unwind unreachable];
+    }
+
+    bb7: {
+        _12 = <Self as Flags>::bits(_13) -> [return: bb8, unwind unreachable];
+    }
+
+    bb8: {
+        _10 = <<Self as Flags>::Bits as BitOr>::bitor(move _11, move _12) -> [return: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _1 = move _10;
+        goto -> bb3;
+    }
+
+    bb10: {
+        return;
+    }
+
+    bb11: {
+        unreachable;
+    }
+}
+
+fn Flags::from_bits(_1: <Self as Flags>::Bits) -> Option<Self> {
+    debug bits => _1;
+    let mut _0: core::option::Option<Self>;
+    let _2: Self;
+    let mut _3: <Self as traits::Flags>::Bits;
+    let mut _4: bool;
+    let mut _5: &<Self as traits::Flags>::Bits;
+    let _6: <Self as traits::Flags>::Bits;
+    let mut _7: &Self;
+    let mut _8: &<Self as traits::Flags>::Bits;
+    let mut _9: Self;
+    let mut _10: bool;
+    scope 1 {
+        debug truncated => _2;
+    }
+
+    bb0: {
+        _10 = const false;
+        _3 = _1;
+        _2 = <Self as Flags>::from_bits_truncate(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _10 = const true;
+        _7 = &_2;
+        _6 = <Self as Flags>::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = &_6;
+        _8 = &_1;
+        _4 = <<Self as Flags>::Bits as PartialEq>::eq(move _5, move _8) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        switchInt(move _4) -> [0: bb5, otherwise: bb4];
+    }
+
+    bb4: {
+        _10 = const false;
+        _9 = move _2;
+        _0 = Option::<Self>::Some(move _9);
+        goto -> bb6;
+    }
+
+    bb5: {
+        _0 = Option::<Self>::None;
+        goto -> bb6;
+    }
+
+    bb6: {
+        switchInt(_10) -> [0: bb7, otherwise: bb8];
+    }
+
+    bb7: {
+        _10 = const false;
+        return;
+    }
+
+    bb8: {
+        drop(_2) -> [return: bb7, unwind unreachable];
+    }
+}
+
+fn Flags::from_bits_truncate(_1: <Self as Flags>::Bits) -> Self {
+    debug bits => _1;
+    let mut _0: Self;
+    let mut _2: <Self as traits::Flags>::Bits;
+    let mut _3: <Self as traits::Flags>::Bits;
+    let mut _4: &Self;
+    let _5: Self;
+
+    bb0: {
+        _5 = <Self as Flags>::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = &_5;
+        _3 = <Self as Flags>::bits(move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _2 = <<Self as Flags>::Bits as BitAnd>::bitand(_1, move _3) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = <Self as Flags>::from_bits_retain(move _2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        drop(_5) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn Flags::from_name(_1: &str) -> Option<Self> {
+    debug name => _1;
+    let mut _0: core::option::Option<Self>;
+    let mut _2: bool;
+    let mut _3: &str;
+    let mut _4: core::slice::Iter<'_, traits::Flag<Self>>;
+    let mut _5: core::slice::Iter<'_, traits::Flag<Self>>;
+    let mut _6: core::option::Option<&traits::Flag<Self>>;
+    let mut _7: &mut core::slice::Iter<'_, traits::Flag<Self>>;
+    let mut _8: isize;
+    let mut _10: bool;
+    let mut _11: &&str;
+    let _12: &str;
+    let mut _13: &&str;
+    let mut _14: Self;
+    let mut _15: <Self as traits::Flags>::Bits;
+    let _16: &Self;
+    scope 1 {
+        debug iter => _5;
+        let _9: &traits::Flag<Self>;
+        scope 2 {
+            debug flag => _9;
+        }
+    }
+
+    bb0: {
+        _3 = _1;
+        _2 = str::<impl str>::is_empty(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _2) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _0 = Option::<Self>::None;
+        goto -> bb15;
+    }
+
+    bb3: {
+        _4 = <&[Flag<Self>] as IntoIterator>::into_iter(const _) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _5 = move _4;
+        goto -> bb5;
+    }
+
+    bb5: {
+        _7 = &mut _5;
+        _6 = <core::slice::Iter<'_, Flag<Self>> as Iterator>::next(_7) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        _8 = discriminant(_6);
+        switchInt(move _8) -> [0: bb8, 1: bb7, otherwise: bb16];
+    }
+
+    bb7: {
+        _9 = ((_6 as Some).0: &traits::Flag<Self>);
+        _12 = Flag::<Self>::name(_9) -> [return: bb9, unwind unreachable];
+    }
+
+    bb8: {
+        _0 = Option::<Self>::None;
+        goto -> bb15;
+    }
+
+    bb9: {
+        _11 = &_12;
+        _13 = &_1;
+        _10 = <&str as PartialEq>::eq(move _11, move _13) -> [return: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        switchInt(move _10) -> [0: bb5, otherwise: bb11];
+    }
+
+    bb11: {
+        _16 = Flag::<Self>::value(_9) -> [return: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _15 = <Self as Flags>::bits(_16) -> [return: bb13, unwind unreachable];
+    }
+
+    bb13: {
+        _14 = <Self as Flags>::from_bits_retain(move _15) -> [return: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        _0 = Option::<Self>::Some(move _14);
+        goto -> bb15;
+    }
+
+    bb15: {
+        return;
+    }
+
+    bb16: {
+        unreachable;
+    }
+}
+
+fn Flags::iter(_1: &Self) -> iter::Iter<Self> {
+    debug self => _1;
+    let mut _0: iter::Iter<Self>;
+
+    bb0: {
+        _0 = iter::Iter::<Self>::new(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn Flags::iter_names(_1: &Self) -> IterNames<Self> {
+    debug self => _1;
+    let mut _0: iter::IterNames<Self>;
+
+    bb0: {
+        _0 = IterNames::<Self>::new(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn Flags::is_empty(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &<Self as traits::Flags>::Bits;
+    let _3: <Self as traits::Flags>::Bits;
+    let mut _4: &<Self as traits::Flags>::Bits;
+    let _5: <Self as traits::Flags>::Bits;
+
+    bb0: {
+        _3 = <Self as Flags>::bits(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = &_3;
+        _5 = const _;
+        _4 = &_5;
+        _0 = <<Self as Flags>::Bits as PartialEq>::eq(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn Flags::is_all(_1: &Self) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: &<Self as traits::Flags>::Bits;
+    let _3: <Self as traits::Flags>::Bits;
+    let mut _4: <Self as traits::Flags>::Bits;
+    let mut _5: &Self;
+    let _6: Self;
+    let mut _7: <Self as traits::Flags>::Bits;
+    let mut _8: &<Self as traits::Flags>::Bits;
+    let _9: <Self as traits::Flags>::Bits;
+
+    bb0: {
+        _6 = <Self as Flags>::all() -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_6;
+        _4 = <Self as Flags>::bits(move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _7 = <Self as Flags>::bits(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _3 = <<Self as Flags>::Bits as BitOr>::bitor(move _4, move _7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _2 = &_3;
+        _9 = <Self as Flags>::bits(_1) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _8 = &_9;
+        _0 = <<Self as Flags>::Bits as PartialEq>::eq(move _2, move _8) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        drop(_6) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        return;
+    }
+}
+
+fn Flags::intersects(_1: &Self, _2: Self) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: &<Self as traits::Flags>::Bits;
+    let _4: <Self as traits::Flags>::Bits;
+    let mut _5: <Self as traits::Flags>::Bits;
+    let mut _6: <Self as traits::Flags>::Bits;
+    let mut _7: &Self;
+    let mut _8: &<Self as traits::Flags>::Bits;
+    let _9: <Self as traits::Flags>::Bits;
+
+    bb0: {
+        _5 = <Self as Flags>::bits(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_2;
+        _6 = <Self as Flags>::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = <<Self as Flags>::Bits as BitAnd>::bitand(move _5, move _6) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _3 = &_4;
+        _9 = const _;
+        _8 = &_9;
+        _0 = <<Self as Flags>::Bits as PartialEq>::ne(move _3, move _8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        drop(_2) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn Flags::contains(_1: &Self, _2: Self) -> bool {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: bool;
+    let mut _3: &<Self as traits::Flags>::Bits;
+    let _4: <Self as traits::Flags>::Bits;
+    let mut _5: <Self as traits::Flags>::Bits;
+    let mut _6: <Self as traits::Flags>::Bits;
+    let mut _7: &Self;
+    let mut _8: &<Self as traits::Flags>::Bits;
+    let _9: <Self as traits::Flags>::Bits;
+    let mut _10: &Self;
+
+    bb0: {
+        _5 = <Self as Flags>::bits(_1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_2;
+        _6 = <Self as Flags>::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = <<Self as Flags>::Bits as BitAnd>::bitand(move _5, move _6) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _3 = &_4;
+        _10 = &_2;
+        _9 = <Self as Flags>::bits(move _10) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _8 = &_9;
+        _0 = <<Self as Flags>::Bits as PartialEq>::eq(move _3, move _8) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_2) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn Flags::insert(_1: &mut Self, _2: Self) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: Self;
+    let mut _4: Self;
+    let mut _5: <Self as traits::Flags>::Bits;
+    let mut _6: &Self;
+
+    bb0: {
+        _6 = &(*_1);
+        _5 = <Self as Flags>::bits(move _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = <Self as Flags>::from_bits_retain(move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = <Self as Flags>::union(move _4, move _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop((*_1)) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        (*_1) = move _3;
+        return;
+    }
+}
+
+fn Flags::remove(_1: &mut Self, _2: Self) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: Self;
+    let mut _4: Self;
+    let mut _5: <Self as traits::Flags>::Bits;
+    let mut _6: &Self;
+
+    bb0: {
+        _6 = &(*_1);
+        _5 = <Self as Flags>::bits(move _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = <Self as Flags>::from_bits_retain(move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = <Self as Flags>::difference(move _4, move _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop((*_1)) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        (*_1) = move _3;
+        return;
+    }
+}
+
+fn Flags::toggle(_1: &mut Self, _2: Self) -> () {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: ();
+    let mut _3: Self;
+    let mut _4: Self;
+    let mut _5: <Self as traits::Flags>::Bits;
+    let mut _6: &Self;
+
+    bb0: {
+        _6 = &(*_1);
+        _5 = <Self as Flags>::bits(move _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = <Self as Flags>::from_bits_retain(move _5) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = <Self as Flags>::symmetric_difference(move _4, move _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop((*_1)) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        (*_1) = move _3;
+        return;
+    }
+}
+
+fn Flags::set(_1: &mut Self, _2: Self, _3: bool) -> () {
+    debug self => _1;
+    debug other => _2;
+    debug value => _3;
+    let mut _0: ();
+    let _4: ();
+    let _5: ();
+
+    bb0: {
+        switchInt(_3) -> [0: bb2, otherwise: bb1];
+    }
+
+    bb1: {
+        _4 = <Self as Flags>::insert(_1, move _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = <Self as Flags>::remove(_1, move _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        return;
+    }
+}
+
+fn Flags::intersection(_1: Self, _2: Self) -> Self {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: Self;
+    let mut _3: <Self as traits::Flags>::Bits;
+    let mut _4: <Self as traits::Flags>::Bits;
+    let mut _5: &Self;
+    let mut _6: <Self as traits::Flags>::Bits;
+    let mut _7: &Self;
+
+    bb0: {
+        _5 = &_1;
+        _4 = <Self as Flags>::bits(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_2;
+        _6 = <Self as Flags>::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = <<Self as Flags>::Bits as BitAnd>::bitand(move _4, move _6) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = <Self as Flags>::from_bits_retain(move _3) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        drop(_2) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_1) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn Flags::union(_1: Self, _2: Self) -> Self {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: Self;
+    let mut _3: <Self as traits::Flags>::Bits;
+    let mut _4: <Self as traits::Flags>::Bits;
+    let mut _5: &Self;
+    let mut _6: <Self as traits::Flags>::Bits;
+    let mut _7: &Self;
+
+    bb0: {
+        _5 = &_1;
+        _4 = <Self as Flags>::bits(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_2;
+        _6 = <Self as Flags>::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = <<Self as Flags>::Bits as BitOr>::bitor(move _4, move _6) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = <Self as Flags>::from_bits_retain(move _3) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        drop(_2) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_1) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn Flags::difference(_1: Self, _2: Self) -> Self {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: Self;
+    let mut _3: <Self as traits::Flags>::Bits;
+    let mut _4: <Self as traits::Flags>::Bits;
+    let mut _5: &Self;
+    let mut _6: <Self as traits::Flags>::Bits;
+    let mut _7: <Self as traits::Flags>::Bits;
+    let mut _8: &Self;
+
+    bb0: {
+        _5 = &_1;
+        _4 = <Self as Flags>::bits(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = &_2;
+        _7 = <Self as Flags>::bits(move _8) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _6 = <<Self as Flags>::Bits as Not>::not(move _7) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _3 = <<Self as Flags>::Bits as BitAnd>::bitand(move _4, move _6) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _0 = <Self as Flags>::from_bits_retain(move _3) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_2) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        drop(_1) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        return;
+    }
+}
+
+fn Flags::symmetric_difference(_1: Self, _2: Self) -> Self {
+    debug self => _1;
+    debug other => _2;
+    let mut _0: Self;
+    let mut _3: <Self as traits::Flags>::Bits;
+    let mut _4: <Self as traits::Flags>::Bits;
+    let mut _5: &Self;
+    let mut _6: <Self as traits::Flags>::Bits;
+    let mut _7: &Self;
+
+    bb0: {
+        _5 = &_1;
+        _4 = <Self as Flags>::bits(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = &_2;
+        _6 = <Self as Flags>::bits(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _3 = <<Self as Flags>::Bits as BitXor>::bitxor(move _4, move _6) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = <Self as Flags>::from_bits_retain(move _3) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        drop(_2) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_1) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn Flags::complement(_1: Self) -> Self {
+    debug self => _1;
+    let mut _0: Self;
+    let mut _2: <Self as traits::Flags>::Bits;
+    let mut _3: <Self as traits::Flags>::Bits;
+    let mut _4: &Self;
+
+    bb0: {
+        _4 = &_1;
+        _3 = <Self as Flags>::bits(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = <<Self as Flags>::Bits as Not>::not(move _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <Self as Flags>::from_bits_truncate(move _2) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_1) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::EMPTY: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::ALL: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::EMPTY: i8 = {
+    let mut _0: i8;
+
+    bb0: {
+        _0 = const 0_i8;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::ALL: i8 = {
+    let mut _0: i8;
+
+    bb0: {
+        _0 = const _ as i8 (IntToInt);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex(_1: &str) -> Result<u8, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<u8, parser::ParseError>;
+    let mut _2: core::result::Result<u8, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl u8>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64} { input: move _5 };
+        _0 = Result::<u8, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex(_1: &str) -> Result<i8, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<i8, parser::ParseError>;
+    let mut _2: core::result::Result<i8, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl i8>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64} { input: move _5 };
+        _0 = Result::<i8, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex(_1: &u8, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&u8;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&u8>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex(_1: &i8, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&i8;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&i8>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::EMPTY: u16 = {
+    let mut _0: u16;
+
+    bb0: {
+        _0 = const 0_u16;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::ALL: u16 = {
+    let mut _0: u16;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::EMPTY: i16 = {
+    let mut _0: i16;
+
+    bb0: {
+        _0 = const 0_i16;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::ALL: i16 = {
+    let mut _0: i16;
+
+    bb0: {
+        _0 = const _ as i16 (IntToInt);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex(_1: &str) -> Result<u16, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<u16, parser::ParseError>;
+    let mut _2: core::result::Result<u16, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl u16>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64} { input: move _5 };
+        _0 = Result::<u16, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex(_1: &str) -> Result<i16, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<i16, parser::ParseError>;
+    let mut _2: core::result::Result<i16, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl i16>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64} { input: move _5 };
+        _0 = Result::<i16, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex(_1: &u16, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&u16;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&u16>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex(_1: &i16, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&i16;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&i16>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::EMPTY: u32 = {
+    let mut _0: u32;
+
+    bb0: {
+        _0 = const 0_u32;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::ALL: u32 = {
+    let mut _0: u32;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::EMPTY: i32 = {
+    let mut _0: i32;
+
+    bb0: {
+        _0 = const 0_i32;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::ALL: i32 = {
+    let mut _0: i32;
+
+    bb0: {
+        _0 = const _ as i32 (IntToInt);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex(_1: &str) -> Result<u32, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<u32, parser::ParseError>;
+    let mut _2: core::result::Result<u32, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl u32>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64} { input: move _5 };
+        _0 = Result::<u32, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex(_1: &str) -> Result<i32, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<i32, parser::ParseError>;
+    let mut _2: core::result::Result<i32, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl i32>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64} { input: move _5 };
+        _0 = Result::<i32, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex(_1: &u32, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&u32;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&u32>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex(_1: &i32, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&i32;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&i32>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::EMPTY: u64 = {
+    let mut _0: u64;
+
+    bb0: {
+        _0 = const 0_u64;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::ALL: u64 = {
+    let mut _0: u64;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::EMPTY: i64 = {
+    let mut _0: i64;
+
+    bb0: {
+        _0 = const 0_i64;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::ALL: i64 = {
+    let mut _0: i64;
+
+    bb0: {
+        _0 = const _ as i64 (IntToInt);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex(_1: &str) -> Result<u64, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<u64, parser::ParseError>;
+    let mut _2: core::result::Result<u64, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl u64>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64} { input: move _5 };
+        _0 = Result::<u64, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex(_1: &str) -> Result<i64, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<i64, parser::ParseError>;
+    let mut _2: core::result::Result<i64, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl i64>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64} { input: move _5 };
+        _0 = Result::<i64, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex(_1: &u64, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&u64;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&u64>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex(_1: &i64, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&i64;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&i64>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::EMPTY: u128 = {
+    let mut _0: u128;
+
+    bb0: {
+        _0 = const 0_u128;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::ALL: u128 = {
+    let mut _0: u128;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::EMPTY: i128 = {
+    let mut _0: i128;
+
+    bb0: {
+        _0 = const 0_i128;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::ALL: i128 = {
+    let mut _0: i128;
+
+    bb0: {
+        _0 = const _ as i128 (IntToInt);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex(_1: &str) -> Result<u128, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<u128, parser::ParseError>;
+    let mut _2: core::result::Result<u128, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl u128>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64} { input: move _5 };
+        _0 = Result::<u128, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex(_1: &str) -> Result<i128, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<i128, parser::ParseError>;
+    let mut _2: core::result::Result<i128, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl i128>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64} { input: move _5 };
+        _0 = Result::<i128, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex(_1: &u128, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&u128;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&u128>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex(_1: &i128, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&i128;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&i128>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::EMPTY: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const 0_usize;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:344:13: 344:29>::ALL: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::EMPTY: isize = {
+    let mut _0: isize;
+
+    bb0: {
+        _0 = const 0_isize;
+        return;
+    }
+}
+
+const traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:349:13: 349:29>::ALL: isize = {
+    let mut _0: isize;
+
+    bb0: {
+        _0 = const _ as isize (IntToInt);
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex(_1: &str) -> Result<usize, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<usize, parser::ParseError>;
+    let mut _2: core::result::Result<usize, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl usize>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64} { input: move _5 };
+        _0 = Result::<usize, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:354:13: 354:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:356:61: 356:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex(_1: &str) -> Result<isize, ParseError> {
+    debug input => _1;
+    let mut _0: core::result::Result<isize, parser::ParseError>;
+    let mut _2: core::result::Result<isize, core::num::ParseIntError>;
+    let mut _3: &str;
+    let mut _4: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64};
+    let mut _5: &&str;
+
+    bb0: {
+        _3 = _1;
+        _2 = core::num::<impl isize>::from_str_radix(move _3, const 16_u32) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _5 = &_1;
+        _4 = {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64} { input: move _5 };
+        _0 = Result::<isize, ParseIntError>::map_err::<ParseError, {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}>(move _2, move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:360:13: 360:33>::parse_hex::{closure#0}(_1: {closure@/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:362:61: 362:64}, _2: ParseIntError) -> ParseError {
+    debug input => (*(_1.0: &&str));
+    let mut _0: parser::ParseError;
+    let mut _3: &str;
+    let mut _4: &&str;
+
+    bb0: {
+        _4 = deref_copy (_1.0: &&str);
+        _3 = (*_4);
+        _0 = ParseError::invalid_hex_flag::<&str>(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex(_1: &usize, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&usize;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&usize>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:366:13: 366:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex(_1: &isize, _2: W) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug writer => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut W;
+    let mut _4: core::fmt::Arguments<'_>;
+    let mut _5: &[&str];
+    let mut _6: &[core::fmt::rt::Argument<'_>];
+    let _7: &[core::fmt::rt::Argument<'_>; 1];
+    let _8: [core::fmt::rt::Argument<'_>; 1];
+    let mut _9: core::fmt::rt::Argument<'_>;
+    let _10: &&isize;
+    let mut _11: &[&str; 1];
+
+    bb0: {
+        _3 = &mut _2;
+        _11 = const _;
+        _5 = _11 as &[&str] (PointerCoercion(Unsize));
+        _10 = &_1;
+        _9 = core::fmt::rt::Argument::<'_>::new_lower_hex::<&isize>(_10) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _8 = [move _9];
+        _7 = &_8;
+        _6 = _7 as &[core::fmt::rt::Argument<'_>] (PointerCoercion(Unsize));
+        _4 = Arguments::<'_>::new_v1(move _5, move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = <W as Write>::write_fmt(move _3, move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        drop(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
+
+promoted[0] in traits::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-2.4.1/src/traits.rs:372:13: 372:33>::write_hex: &[&str; 1] = {
+    let mut _0: &[&str; 1];
+    let mut _1: [&str; 1];
+
+    bb0: {
+        _1 = [const ""];
+        _0 = &_1;
+        return;
+    }
+}
+
+fn AsDisplay(_1: &B) -> AsDisplay<'_, B> {
+    let mut _0: parser::AsDisplay<'_, B>;
+
+    bb0: {
+        _0 = AsDisplay::<'_, B>(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn AsDisplay(_1: &B) -> AsDisplay<'_, B> {
+    let mut _0: parser::AsDisplay<'_, B>;
+
+    bb0: {
+        _0 = AsDisplay::<'_, B>(move _1);
+        return;
+    }
+}
+
+fn ParseError(_1: ParseErrorKind) -> ParseError {
+    let mut _0: parser::ParseError;
+
+    bb0: {
+        _0 = ParseError(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn ParseError(_1: ParseErrorKind) -> ParseError {
+    let mut _0: parser::ParseError;
+
+    bb0: {
+        _0 = ParseError(move _1);
+        return;
+    }
+}

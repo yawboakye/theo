@@ -1435,7 +1435,7 @@ static VGA_DISPLAY_IN_TEXT_MODE: VGA_DISPLAY_IN_TEXT_MODE = {
 
 fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref(_1: &VGA_DISPLAY_IN_TEXT_MODE) -> &Mutex<Screen> {
     debug self => _1;
-    let mut _0: &spin::mutex::Mutex<vga::Screen>;
+    let mut _0: &spin::mutex::Mutex<vga::text_buffer::Screen>;
 
     bb0: {
         _0 = <VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__stability() -> [return: bb1, unwind unreachable];
@@ -1447,9 +1447,9 @@ fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22b
 }
 
 fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__static_ref_initialize() -> Mutex<Screen> {
-    let mut _0: spin::mutex::Mutex<vga::Screen>;
-    let mut _1: vga::Screen;
-    let mut _2: vga::TextFlowDirection;
+    let mut _0: spin::mutex::Mutex<vga::text_buffer::Screen>;
+    let mut _1: vga::text_buffer::Screen;
+    let mut _2: vga::text_buffer::TextFlowDirection;
 
     bb0: {
         _2 = BottomUp;
@@ -1466,8 +1466,8 @@ fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22b
 }
 
 fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability() -> &Mutex<Screen> {
-    let mut _0: &spin::mutex::Mutex<vga::Screen>;
-    let _1: &lazy_static::lazy::Lazy<spin::mutex::Mutex<vga::Screen>>;
+    let mut _0: &spin::mutex::Mutex<vga::text_buffer::Screen>;
+    let _1: &lazy_static::lazy::Lazy<spin::mutex::Mutex<vga::text_buffer::Screen>>;
 
     bb0: {
         _1 = const {alloc12: &lazy_static::lazy::Lazy<Mutex<Screen>>};
@@ -1498,7 +1498,7 @@ alloc12 (static: <VGA_DISPLAY_IN_TEXT_MODE as Deref>::deref::__stability::LAZY, 
 }
 
 static peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:133:9: 133:36>::deref::__stability::LAZY: lazy_static::lazy::Lazy<Mutex<Screen>> = {
-    let mut _0: lazy_static::lazy::Lazy<spin::mutex::Mutex<vga::Screen>>;
+    let mut _0: lazy_static::lazy::Lazy<spin::mutex::Mutex<vga::text_buffer::Screen>>;
 
     bb0: {
         _0 = const _;
@@ -1509,7 +1509,7 @@ static peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17
 fn peripherals::<impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:147:9: 147:39>::initialize(_1: &VGA_DISPLAY_IN_TEXT_MODE) -> () {
     debug lazy => _1;
     let mut _0: ();
-    let _2: &spin::mutex::Mutex<vga::Screen>;
+    let _2: &spin::mutex::Mutex<vga::text_buffer::Screen>;
     scope 1 {
     }
 
@@ -1631,10 +1631,10 @@ fn peripherals::_print::{closure#0}(_1: {closure@src/peripherals.rs:29:34: 29:36
     debug args => (*(_1.0: &core::fmt::Arguments<'_>));
     let mut _0: ();
     let mut _2: core::result::Result<(), core::fmt::Error>;
-    let mut _3: &mut vga::Screen;
-    let mut _4: &mut spin::MutexGuard<'_, vga::Screen>;
-    let mut _5: spin::MutexGuard<'_, vga::Screen>;
-    let _6: &spin::mutex::Mutex<vga::Screen>;
+    let mut _3: &mut vga::text_buffer::Screen;
+    let mut _4: &mut spin::MutexGuard<'_, vga::text_buffer::Screen>;
+    let mut _5: spin::MutexGuard<'_, vga::text_buffer::Screen>;
+    let _6: &spin::mutex::Mutex<vga::text_buffer::Screen>;
     let _7: &peripherals::VGA_DISPLAY_IN_TEXT_MODE;
     let mut _8: core::fmt::Arguments<'_>;
     let mut _9: &core::fmt::Arguments<'_>;

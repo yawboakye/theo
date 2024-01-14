@@ -1,5 +1,5 @@
-; ModuleID = '3mytfyo678bdv4ve'
-source_filename = "3mytfyo678bdv4ve"
+; ModuleID = 'km3ytdp9kpaw3da'
+source_filename = "km3ytdp9kpaw3da"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-obuasi-unknown-none"
 
@@ -35,15 +35,15 @@ target triple = "x86_64-obuasi-unknown-none"
 %"core::option::Option<u64>" = type { i64, [1 x i64] }
 %"bootloader_api::info::Optional<u64>" = type { i32, [3 x i32] }
 %"core::fmt::rt::UnsafeArg" = type { {} }
-%"spin::mutex::Mutex<vga::Screen>" = type { %"spin::mutex::spin::SpinMutex<vga::Screen>" }
-%"spin::mutex::spin::SpinMutex<vga::Screen>" = type { %"core::marker::PhantomData<spin::relax::Spin>", %"core::sync::atomic::AtomicBool", [7 x i8], %"core::cell::UnsafeCell<vga::Screen>" }
+%"spin::mutex::Mutex<text_buffer::Screen>" = type { %"spin::mutex::spin::SpinMutex<text_buffer::Screen>" }
+%"spin::mutex::spin::SpinMutex<text_buffer::Screen>" = type { %"core::marker::PhantomData<spin::relax::Spin>", %"core::sync::atomic::AtomicBool", [7 x i8], %"core::cell::UnsafeCell<text_buffer::Screen>" }
 %"core::marker::PhantomData<spin::relax::Spin>" = type {}
 %"core::sync::atomic::AtomicBool" = type { i8 }
-%"core::cell::UnsafeCell<vga::Screen>" = type { %"vga::Screen" }
-%"vga::Screen" = type { ptr, i64, %"vga::Cursor", %"vga::Dot", [80 x %"vga::ScreenChar"], i8, [7 x i8] }
-%"vga::Cursor" = type { %"vga::Dot" }
-%"vga::Dot" = type { i64, i64 }
-%"vga::ScreenChar" = type { i8, i8 }
+%"core::cell::UnsafeCell<text_buffer::Screen>" = type { %"text_buffer::Screen" }
+%"text_buffer::Screen" = type { ptr, i64, %"text_buffer::Cursor", %"text_buffer::Dot", [80 x %"text_buffer::ScreenChar"], i8, [7 x i8] }
+%"text_buffer::Cursor" = type { %"text_buffer::Dot" }
+%"text_buffer::Dot" = type { i64, i64 }
+%"text_buffer::ScreenChar" = type { i8, i8 }
 %"cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable" = type { %"x86_64::structures::idt::InterruptDescriptorTable", i8, i8, i8, [13 x i8] }
 %"spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>" = type { %"spin::mutex::spin::SpinMutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>" }
 %"spin::mutex::spin::SpinMutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>" = type { %"core::marker::PhantomData<spin::relax::Spin>", %"core::sync::atomic::AtomicBool", [1 x i8], %"core::cell::UnsafeCell<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>" }
@@ -55,17 +55,17 @@ target triple = "x86_64-obuasi-unknown-none"
 %"core::option::Option<usize>" = type { i64, [1 x i64] }
 %"core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>" = type { [4098 x i8], i8, [13 x i8] }
 %"core::option::Option<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>::Some" = type { [1 x i16], %"spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>" }
-%"core::option::Option<spin::mutex::Mutex<vga::Screen>>::Some" = type { [1 x i64], %"spin::mutex::Mutex<vga::Screen>" }
+%"core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>::Some" = type { [1 x i64], %"spin::mutex::Mutex<text_buffer::Screen>" }
 %"core::option::Option<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>" = type { i16, [9 x i16] }
 %"spin::once::Finish<'_>" = type { ptr, i8, [7 x i8] }
 %"spin::once::Once<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>" = type { %"core::sync::atomic::AtomicUsize", %"core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>>", [2 x i16] }
 %"core::sync::atomic::AtomicUsize" = type { i64 }
 %"core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>>" = type { %"core::option::Option<spin::mutex::Mutex<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>>" }
+%"core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>" = type { i64, [28 x i64] }
+%"spin::once::Once<spin::mutex::Mutex<text_buffer::Screen>>" = type { %"core::sync::atomic::AtomicUsize", %"core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>>" }
+%"core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>>" = type { %"core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>" }
 %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>" = type { %"core::cell::UnsafeCell<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>", %"core::sync::atomic::AtomicUsize", [1 x i64] }
 %"core::cell::UnsafeCell<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>" = type { %"core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>" }
-%"core::option::Option<spin::mutex::Mutex<vga::Screen>>" = type { i64, [28 x i64] }
-%"spin::once::Once<spin::mutex::Mutex<vga::Screen>>" = type { %"core::sync::atomic::AtomicUsize", %"core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<vga::Screen>>>" }
-%"core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<vga::Screen>>>" = type { %"core::option::Option<spin::mutex::Mutex<vga::Screen>>" }
 %"core::panic::location::Location<'_>" = type { { ptr, i64 }, i32, i32 }
 %"core::result::Result<x86_64::addr::VirtAddr, x86_64::addr::VirtAddrNotValid>" = type { i64, [1 x i64] }
 %"bitflags::traits::Flag<x86_64::registers::rflags::RFlags>" = type { { ptr, i64 }, i64 }
@@ -86,8 +86,8 @@ target triple = "x86_64-obuasi-unknown-none"
 %"bootloader_api::info::Optional<bootloader_api::info::FrameBuffer>" = type { i32, [15 x i32] }
 %"bootloader_api::info::Optional<u16>" = type { i32, [1 x i32] }
 %"bootloader_api::info::Optional<bootloader_api::info::TlsTemplate>" = type { i32, [7 x i32] }
-%"spin::mutex::spin::SpinMutexGuard<'_, vga::Screen>" = type { ptr, ptr }
-%"spin::mutex::MutexGuard<'_, vga::Screen>" = type { %"spin::mutex::spin::SpinMutexGuard<'_, vga::Screen>" }
+%"spin::mutex::spin::SpinMutexGuard<'_, text_buffer::Screen>" = type { ptr, ptr }
+%"spin::mutex::MutexGuard<'_, text_buffer::Screen>" = type { %"spin::mutex::spin::SpinMutexGuard<'_, text_buffer::Screen>" }
 
 @alloc_523248e34db904eab55c5eb570cbbcf7 = private unnamed_addr constant <{ [6 x i8] }> <{ [6 x i8] c"entry " }>, align 1
 @alloc_8888ebfef96191fe59f3dccdfd1e2e9f = private unnamed_addr constant <{ [44 x i8] }> <{ [44 x i8] c" is an diverging exception (must not return)" }>, align 1
@@ -310,7 +310,7 @@ target triple = "x86_64-obuasi-unknown-none"
 @vtable.a = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr25drop_in_place$LT$bool$GT$17h3332b70a580a04d5E", [16 x i8] c"\01\00\00\00\00\00\00\00\01\00\00\00\00\00\00\00", ptr @"_ZN41_$LT$bool$u20$as$u20$core..fmt..Debug$GT$3fmt17hc808545771bfe5dfE" }>, align 8, !dbg !226
 @alloc_1345bb1b7804d17c32eca7c37789ad73 = private unnamed_addr constant <{ [18 x i8] }> <{ [18 x i8] c"force_no_backtrace" }>, align 1
 @vtable.b = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr29drop_in_place$LT$$RF$bool$GT$17h5a2038aaa9ac62b1E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17ha42ebfcb7559d66cE" }>, align 8, !dbg !235
-@vtable.c = private constant <{ ptr, [16 x i8], ptr, ptr, ptr }> <{ ptr @"_ZN4core3ptr32drop_in_place$LT$vga..Screen$GT$17h47bc60bcaae77c41E", [16 x i8] c"\D8\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN48_$LT$vga..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17h927957bcd12df6c8E", ptr @_ZN4core3fmt5Write10write_char17h5913d6fadd9e51b5E, ptr @_ZN4core3fmt5Write9write_fmt17hbacf93c51d373761E }>, align 8, !dbg !244
+@vtable.c = private constant <{ ptr, [16 x i8], ptr, ptr, ptr }> <{ ptr @"_ZN4core3ptr40drop_in_place$LT$text_buffer..Screen$GT$17h408fb793ce67d5c6E", [16 x i8] c"\D8\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN56_$LT$text_buffer..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17hc45d3e58c29adb9bE", ptr @_ZN4core3fmt5Write10write_char17hb6af9f3bda8f5886E, ptr @_ZN4core3fmt5Write9write_fmt17hce365dd4b4c35844E }>, align 8, !dbg !244
 @alloc_db71f8f2efa4491d8384d69403773686 = private unnamed_addr constant <{ [18 x i8] }> <{ [18 x i8] c"PageFaultErrorCode" }>, align 1
 @vtable.d = private constant <{ ptr, [16 x i8], ptr }> <{ ptr @"_ZN4core3ptr69drop_in_place$LT$$RF$x86_64..structures..idt.._..InternalBitFlags$GT$17h028bbe1fe7c5dc61E", [16 x i8] c"\08\00\00\00\00\00\00\00\08\00\00\00\00\00\00\00", ptr @"_ZN42_$LT$$RF$T$u20$as$u20$core..fmt..Debug$GT$3fmt17h242673e519fd04b6E" }>, align 8, !dbg !291
 @alloc_129868e99993fac393d02de2e84e1958 = private unnamed_addr constant <{ [34 x i8] }> <{ [34 x i8] c"<<<>>> PAGE FAULT OCCURRED <<<>>>\0A" }>, align 1
@@ -353,7 +353,7 @@ target triple = "x86_64-obuasi-unknown-none"
 @alloc_89145f0e94d32249f13126908daaef05 = private unnamed_addr constant <{ ptr, [16 x i8] }> <{ ptr @alloc_ceb4379b47ed1f7ed9f46a275cc711f0, [16 x i8] c"\11\00\00\00\00\00\00\00\1C\00\00\00\10\00\00\00" }>, align 8
 @"_ZN70_$LT$theo..interrupts..SAFE_IDT$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h9cd6bf497b66c077E" = internal global <{ [4098 x i8], [1 x i8], [13 x i8], [8 x i8], [8 x i8] }> <{ [4098 x i8] undef, [1 x i8] c"\02", [13 x i8] undef, [8 x i8] zeroinitializer, [8 x i8] undef }>, align 16, !dbg !385
 @_ZN4theo11peripherals24VGA_DISPLAY_IN_TEXT_MODE17h1126cb4cf797ea1cE = internal constant <{}> zeroinitializer, align 1, !dbg !580
-@"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h990dd612b592a6a8E" = internal global <{ [16 x i8], [224 x i8] }> <{ [16 x i8] zeroinitializer, [224 x i8] undef }>, align 8, !dbg !586
+@"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h4492d8acf804287dE" = internal global <{ [16 x i8], [224 x i8] }> <{ [16 x i8] zeroinitializer, [224 x i8] undef }>, align 8, !dbg !586
 @_ZN4theo11peripherals8KEYBOARD17h8de25e2078b9955aE = internal constant <{}> zeroinitializer, align 1, !dbg !646
 @"_ZN71_$LT$theo..peripherals..KEYBOARD$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h289de5092f7fa060E" = internal global <{ [10 x i8], [22 x i8] }> <{ [10 x i8] zeroinitializer, [22 x i8] undef }>, align 8, !dbg !651
 @_ZN4theo6serial7SERIAL117h965f48109ccf4522E = internal constant <{}> zeroinitializer, align 1, !dbg !767
@@ -1549,7 +1549,7 @@ bb7:                                              ; preds = %bb2, %bb5, %bb6
 
 ; core::fmt::Write::write_char
 ; Function Attrs: noredzone nounwind
-define internal zeroext i1 @_ZN4core3fmt5Write10write_char17h5913d6fadd9e51b5E(ptr align 8 %self, i32 %c) unnamed_addr #1 !dbg !1706 {
+define internal zeroext i1 @_ZN4core3fmt5Write10write_char17hb6af9f3bda8f5886E(ptr align 8 %self, i32 %c) unnamed_addr #1 !dbg !1706 {
 start:
   %c.dbg.spill = alloca i32, align 4
   %self.dbg.spill = alloca ptr, align 8
@@ -1564,14 +1564,14 @@ start:
   %1 = call { ptr, i64 } @"_ZN4core4char7methods22_$LT$impl$u20$char$GT$11encode_utf817h937ad0e1156d63c4E"(i32 %c, ptr align 1 %_7, i64 4) #9, !dbg !1719
   %_4.0 = extractvalue { ptr, i64 } %1, 0, !dbg !1719
   %_4.1 = extractvalue { ptr, i64 } %1, 1, !dbg !1719
-; call <vga::Screen as core::fmt::Write>::write_str
-  %_0 = call zeroext i1 @"_ZN48_$LT$vga..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17h927957bcd12df6c8E"(ptr align 8 %self, ptr align 1 %_4.0, i64 %_4.1) #9, !dbg !1720
+; call <text_buffer::Screen as core::fmt::Write>::write_str
+  %_0 = call zeroext i1 @"_ZN56_$LT$text_buffer..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17hc45d3e58c29adb9bE"(ptr align 8 %self, ptr align 1 %_4.0, i64 %_4.1) #9, !dbg !1720
   ret i1 %_0, !dbg !1721
 }
 
 ; core::fmt::Write::write_fmt
 ; Function Attrs: noredzone nounwind
-define internal zeroext i1 @_ZN4core3fmt5Write9write_fmt17hbacf93c51d373761E(ptr align 8 %self, ptr align 8 %args) unnamed_addr #1 !dbg !1722 {
+define internal zeroext i1 @_ZN4core3fmt5Write9write_fmt17hce365dd4b4c35844E(ptr align 8 %self, ptr align 8 %args) unnamed_addr #1 !dbg !1722 {
 start:
   %0 = alloca %"core::fmt::Arguments<'_>", align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -1580,7 +1580,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %args, metadata !1727, metadata !DIExpression()), !dbg !1729
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %0, ptr align 8 %args, i64 48, i1 false), !dbg !1730
 ; call <&mut W as core::fmt::Write::write_fmt::SpecWriteFmt>::spec_write_fmt
-  %_0 = call zeroext i1 @"_ZN75_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write..write_fmt..SpecWriteFmt$GT$14spec_write_fmt17h0c4d0463cbc2b2c4E"(ptr align 8 %self, ptr align 8 %0) #9, !dbg !1730
+  %_0 = call zeroext i1 @"_ZN75_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write..write_fmt..SpecWriteFmt$GT$14spec_write_fmt17h67ef9e4eb80d8ee2E"(ptr align 8 %self, ptr align 8 %0) #9, !dbg !1730
   ret i1 %_0, !dbg !1731
 }
 
@@ -1747,14 +1747,14 @@ start:
 
 ; core::ops::function::FnOnce::call_once
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @_ZN4core3ops8function6FnOnce9call_once17h4625be1ff4a61bd0E(ptr sret(%"spin::mutex::Mutex<vga::Screen>") align 8 %_0) unnamed_addr #0 !dbg !1800 {
+define internal void @_ZN4core3ops8function6FnOnce9call_once17h4625be1ff4a61bd0E(ptr sret(%"spin::mutex::Mutex<text_buffer::Screen>") align 8 %_0) unnamed_addr #0 !dbg !1800 {
 start:
   %0 = alloca i8, align 1
-  %_3.i.i = alloca %"core::cell::UnsafeCell<vga::Screen>", align 8
+  %_3.i.i = alloca %"core::cell::UnsafeCell<text_buffer::Screen>", align 8
   %_2.i1.i = alloca %"core::sync::atomic::AtomicBool", align 1
-  %_2.i.i = alloca %"spin::mutex::spin::SpinMutex<vga::Screen>", align 8
+  %_2.i.i = alloca %"spin::mutex::spin::SpinMutex<text_buffer::Screen>", align 8
   %_2.i = alloca i8, align 1
-  %_1.i = alloca %"vga::Screen", align 8
+  %_1.i = alloca %"text_buffer::Screen", align 8
   %_1.dbg.spill = alloca {}, align 1
   %_2 = alloca {}, align 1
   call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !1808, metadata !DIExpression()), !dbg !1813
@@ -1762,8 +1762,8 @@ start:
   store i8 1, ptr %_2.i, align 1, !dbg !1814
   %1 = load i8, ptr %_2.i, align 1, !dbg !1819, !range !1335, !noundef !29
   %2 = trunc i8 %1 to i1, !dbg !1819
-; call vga::Screen::new
-  call void @_ZN3vga6Screen3new17h47ec63f87da2587aE(ptr sret(%"vga::Screen") align 8 %_1.i, i1 zeroext %2, i8 32) #9, !dbg !1819
+; call text_buffer::Screen::new
+  call void @_ZN11text_buffer6Screen3new17hc8bf4b46baf0d484E(ptr sret(%"text_buffer::Screen") align 8 %_1.i, i1 zeroext %2, i8 32) #9, !dbg !1819
   call void @llvm.dbg.declare(metadata ptr %_1.i, metadata !1820, metadata !DIExpression()), !dbg !1827
   call void @llvm.dbg.declare(metadata ptr %_1.i, metadata !1829, metadata !DIExpression()), !dbg !1836
 ; call core::sync::atomic::AtomicBool::new
@@ -1773,7 +1773,7 @@ start:
   call void @llvm.dbg.declare(metadata ptr %_1.i, metadata !1839, metadata !DIExpression()), !dbg !1846
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_3.i.i, ptr align 8 %_1.i, i64 216, i1 false), !dbg !1848
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_2.i.i, ptr align 1 %_2.i1.i, i64 1, i1 false), !dbg !1849
-  %4 = getelementptr inbounds %"spin::mutex::spin::SpinMutex<vga::Screen>", ptr %_2.i.i, i32 0, i32 3, !dbg !1849
+  %4 = getelementptr inbounds %"spin::mutex::spin::SpinMutex<text_buffer::Screen>", ptr %_2.i.i, i32 0, i32 3, !dbg !1849
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %4, ptr align 8 %_3.i.i, i64 216, i1 false), !dbg !1849
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_0, ptr align 8 %_2.i.i, i64 224, i1 false), !dbg !1850
   ret void, !dbg !1813
@@ -1939,9 +1939,9 @@ start:
   ret void, !dbg !1998
 }
 
-; core::ptr::drop_in_place<vga::Screen>
+; core::ptr::drop_in_place<text_buffer::Screen>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr32drop_in_place$LT$vga..Screen$GT$17h47bc60bcaae77c41E"(ptr align 8 %_1) unnamed_addr #0 !dbg !1999 {
+define internal void @"_ZN4core3ptr40drop_in_place$LT$text_buffer..Screen$GT$17h408fb793ce67d5c6E"(ptr align 8 %_1) unnamed_addr #0 !dbg !1999 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
@@ -1969,35 +1969,35 @@ start:
   ret void, !dbg !2023
 }
 
-; core::ptr::drop_in_place<spin::mutex::MutexGuard<vga::Screen>>
-; Function Attrs: noredzone nounwind
-define internal void @"_ZN4core3ptr63drop_in_place$LT$spin..mutex..MutexGuard$LT$vga..Screen$GT$$GT$17h22f8cfd866939958E"(ptr align 8 %_1) unnamed_addr #1 !dbg !2024 {
-start:
-  %_1.dbg.spill = alloca ptr, align 8
-  store ptr %_1, ptr %_1.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2036, metadata !DIExpression()), !dbg !2039
-; call core::ptr::drop_in_place<spin::mutex::spin::SpinMutexGuard<vga::Screen>>
-  call void @"_ZN4core3ptr73drop_in_place$LT$spin..mutex..spin..SpinMutexGuard$LT$vga..Screen$GT$$GT$17h0b619d009a1750aaE"(ptr align 8 %_1) #9, !dbg !2039
-  ret void, !dbg !2039
-}
-
 ; core::ptr::drop_in_place<&x86_64::structures::idt::_::InternalBitFlags>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr69drop_in_place$LT$$RF$x86_64..structures..idt.._..InternalBitFlags$GT$17h028bbe1fe7c5dc61E"(ptr align 8 %_1) unnamed_addr #0 !dbg !2040 {
+define internal void @"_ZN4core3ptr69drop_in_place$LT$$RF$x86_64..structures..idt.._..InternalBitFlags$GT$17h028bbe1fe7c5dc61E"(ptr align 8 %_1) unnamed_addr #0 !dbg !2024 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
-  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2045, metadata !DIExpression()), !dbg !2048
-  ret void, !dbg !2048
+  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2029, metadata !DIExpression()), !dbg !2032
+  ret void, !dbg !2032
 }
 
 ; core::ptr::drop_in_place<&dyn core::any::Any+core::marker::Send>
 ; Function Attrs: inlinehint noredzone nounwind
-define internal void @"_ZN4core3ptr70drop_in_place$LT$$RF$dyn$u20$core..any..Any$u2b$core..marker..Send$GT$17h819ac95864651a47E"(ptr align 8 %_1) unnamed_addr #0 !dbg !2049 {
+define internal void @"_ZN4core3ptr70drop_in_place$LT$$RF$dyn$u20$core..any..Any$u2b$core..marker..Send$GT$17h819ac95864651a47E"(ptr align 8 %_1) unnamed_addr #0 !dbg !2033 {
+start:
+  %_1.dbg.spill = alloca ptr, align 8
+  store ptr %_1, ptr %_1.dbg.spill, align 8
+  call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2038, metadata !DIExpression()), !dbg !2041
+  ret void, !dbg !2041
+}
+
+; core::ptr::drop_in_place<spin::mutex::MutexGuard<text_buffer::Screen>>
+; Function Attrs: noredzone nounwind
+define internal void @"_ZN4core3ptr71drop_in_place$LT$spin..mutex..MutexGuard$LT$text_buffer..Screen$GT$$GT$17h169c47592dd6f262E"(ptr align 8 %_1) unnamed_addr #1 !dbg !2042 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2054, metadata !DIExpression()), !dbg !2057
+; call core::ptr::drop_in_place<spin::mutex::spin::SpinMutexGuard<text_buffer::Screen>>
+  call void @"_ZN4core3ptr81drop_in_place$LT$spin..mutex..spin..SpinMutexGuard$LT$text_buffer..Screen$GT$$GT$17h9da44c2089289720E"(ptr align 8 %_1) #9, !dbg !2057
   ret void, !dbg !2057
 }
 
@@ -2011,15 +2011,15 @@ start:
   ret void, !dbg !2066
 }
 
-; core::ptr::drop_in_place<spin::mutex::spin::SpinMutexGuard<vga::Screen>>
+; core::ptr::drop_in_place<spin::mutex::spin::SpinMutexGuard<text_buffer::Screen>>
 ; Function Attrs: noredzone nounwind
-define internal void @"_ZN4core3ptr73drop_in_place$LT$spin..mutex..spin..SpinMutexGuard$LT$vga..Screen$GT$$GT$17h0b619d009a1750aaE"(ptr align 8 %_1) unnamed_addr #1 !dbg !2067 {
+define internal void @"_ZN4core3ptr81drop_in_place$LT$spin..mutex..spin..SpinMutexGuard$LT$text_buffer..Screen$GT$$GT$17h9da44c2089289720E"(ptr align 8 %_1) unnamed_addr #1 !dbg !2067 {
 start:
   %_1.dbg.spill = alloca ptr, align 8
   store ptr %_1, ptr %_1.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %_1.dbg.spill, metadata !2072, metadata !DIExpression()), !dbg !2075
 ; call <spin::mutex::spin::SpinMutexGuard<T> as core::ops::drop::Drop>::drop
-  call void @"_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1f76c0e611e2efbeE"(ptr align 8 %_1) #9, !dbg !2075
+  call void @"_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1aba09227e054e4bE"(ptr align 8 %_1) #9, !dbg !2075
   ret void, !dbg !2075
 }
 
@@ -3348,7 +3348,7 @@ bb2:                                              ; No predecessors!
 
 ; core::option::Option<T>::as_ref
 ; Function Attrs: inlinehint noredzone nounwind
-define internal align 8 ptr @"_ZN4core6option15Option$LT$T$GT$6as_ref17hb6514294b2b221acE"(ptr align 8 %self) unnamed_addr #0 !dbg !2765 {
+define internal align 8 ptr @"_ZN4core6option15Option$LT$T$GT$6as_ref17hc3be598db801e6d3E"(ptr align 8 %self) unnamed_addr #0 !dbg !2765 {
 start:
   %x.dbg.spill = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -3364,7 +3364,7 @@ bb1:                                              ; preds = %start
   br label %bb4, !dbg !2791
 
 bb3:                                              ; preds = %start
-  %x = getelementptr inbounds %"core::option::Option<spin::mutex::Mutex<vga::Screen>>::Some", ptr %self, i32 0, i32 1, !dbg !2792
+  %x = getelementptr inbounds %"core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>::Some", ptr %self, i32 0, i32 1, !dbg !2792
   store ptr %x, ptr %x.dbg.spill, align 8, !dbg !2792
   call void @llvm.dbg.declare(metadata ptr %x.dbg.spill, metadata !2786, metadata !DIExpression()), !dbg !2793
   store ptr %x, ptr %_0, align 8, !dbg !2794
@@ -3513,7 +3513,7 @@ bb21:                                             ; preds = %bb19
 
 ; spin::once::Once<T>::call_once
 ; Function Attrs: noredzone nounwind
-define internal align 16 ptr @"_ZN4spin4once13Once$LT$T$GT$9call_once17h524ced28fb72061cE"(ptr align 16 %self) unnamed_addr #1 !dbg !2871 {
+define internal align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9call_once17h36d5eea70ef3a86fE"(ptr align 8 %self) unnamed_addr #1 !dbg !2871 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %builder.dbg.spill = alloca {}, align 1
@@ -3521,8 +3521,8 @@ start:
   %_33 = alloca i8, align 1
   %_29 = alloca i8, align 1
   %_23 = alloca i8, align 1
-  %_16 = alloca %"cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable", align 16
-  %_15 = alloca %"core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", align 16
+  %_16 = alloca %"spin::mutex::Mutex<text_buffer::Screen>", align 8
+  %_15 = alloca %"core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>", align 8
   %finish = alloca %"spin::once::Finish<'_>", align 8
   %_10 = alloca i8, align 1
   %_5 = alloca i8, align 1
@@ -3535,12 +3535,11 @@ start:
   call void @llvm.dbg.declare(metadata ptr %finish, metadata !2883, metadata !DIExpression()), !dbg !2888
   store i8 0, ptr %_33, align 1, !dbg !2889
   store i8 1, ptr %_33, align 1, !dbg !2889
-  %_4 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2890
-  store i8 4, ptr %_5, align 1, !dbg !2891
-  %0 = load i8, ptr %_5, align 1, !dbg !2890, !range !2371, !noundef !29
+  store i8 4, ptr %_5, align 1, !dbg !2890
+  %0 = load i8, ptr %_5, align 1, !dbg !2891, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::load
-  %1 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %_4, i8 %0) #9, !dbg !2890
-  store i64 %1, ptr %status, align 8, !dbg !2890
+  %1 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %self, i8 %0) #9, !dbg !2891
+  store i64 %1, ptr %status, align 8, !dbg !2891
   %_7 = load i64, ptr %status, align 8, !dbg !2892, !noundef !29
   %_6 = icmp eq i64 %_7, 0, !dbg !2892
   br i1 %_6, label %bb2, label %bb10, !dbg !2892
@@ -3555,39 +3554,39 @@ bb10:                                             ; preds = %bb13, %bb2, %start
   ], !dbg !2893
 
 bb2:                                              ; preds = %start
-  %_9 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2894
-  store i8 4, ptr %_10, align 1, !dbg !2895
-  %3 = load i8, ptr %_10, align 1, !dbg !2894, !range !2371, !noundef !29
+  store i8 4, ptr %_10, align 1, !dbg !2894
+  %3 = load i8, ptr %_10, align 1, !dbg !2895, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::compare_and_swap
-  %_8 = call i64 @_ZN4core4sync6atomic11AtomicUsize16compare_and_swap17h37926aec4106a0f1E(ptr align 8 %_9, i64 0, i64 1, i8 %3) #9, !dbg !2894
+  %_8 = call i64 @_ZN4core4sync6atomic11AtomicUsize16compare_and_swap17h37926aec4106a0f1E(ptr align 8 %self, i64 0, i64 1, i8 %3) #9, !dbg !2895
   store i64 %_8, ptr %status, align 8, !dbg !2896
   %_12 = load i64, ptr %status, align 8, !dbg !2897, !noundef !29
   %_11 = icmp eq i64 %_12, 0, !dbg !2897
   br i1 %_11, label %bb4, label %bb10, !dbg !2897
 
 bb4:                                              ; preds = %bb2
-  %_14 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2898
-  store ptr %_14, ptr %finish, align 8, !dbg !2899
-  %4 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2899
-  store i8 1, ptr %4, align 8, !dbg !2899
-  store i8 0, ptr %_33, align 1, !dbg !2900
+  store ptr %self, ptr %finish, align 8, !dbg !2898
+  %4 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2898
+  store i8 1, ptr %4, align 8, !dbg !2898
+  store i8 0, ptr %_33, align 1, !dbg !2899
 ; call core::ops::function::FnOnce::call_once
-  call void @_ZN4core3ops8function6FnOnce9call_once17had8963dafdd684c9E(ptr sret(%"cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable") align 16 %_16) #9, !dbg !2900
-  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %_15, ptr align 16 %_16, i64 4112, i1 false), !dbg !2901
-  store ptr %self, ptr %self.dbg.spill.i, align 8
+  call void @_ZN4core3ops8function6FnOnce9call_once17h4625be1ff4a61bd0E(ptr sret(%"spin::mutex::Mutex<text_buffer::Screen>") align 8 %_16) #9, !dbg !2899
+  %5 = getelementptr inbounds %"core::option::Option<spin::mutex::Mutex<text_buffer::Screen>>::Some", ptr %_15, i32 0, i32 1, !dbg !2900
+  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %5, ptr align 8 %_16, i64 224, i1 false), !dbg !2900
+  store i64 1, ptr %_15, align 8, !dbg !2900
+  %_19 = getelementptr inbounds %"spin::once::Once<spin::mutex::Mutex<text_buffer::Screen>>", ptr %self, i32 0, i32 1, !dbg !2901
+  store ptr %_19, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !2902, metadata !DIExpression()), !dbg !2910
-  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %self, ptr align 16 %_15, i64 4112, i1 false), !dbg !2912
-  %5 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2913
-  store i8 0, ptr %5, align 8, !dbg !2913
+  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_19, ptr align 8 %_15, i64 232, i1 false), !dbg !2912
+  %6 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2913
+  store i8 0, ptr %6, align 8, !dbg !2913
   store i64 2, ptr %status, align 8, !dbg !2914
-  %_21 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2915
-  %_22 = load i64, ptr %status, align 8, !dbg !2916, !noundef !29
-  store i8 4, ptr %_23, align 1, !dbg !2917
-  %6 = load i8, ptr %_23, align 1, !dbg !2915, !range !2371, !noundef !29
+  %_22 = load i64, ptr %status, align 8, !dbg !2915, !noundef !29
+  store i8 4, ptr %_23, align 1, !dbg !2916
+  %7 = load i8, ptr %_23, align 1, !dbg !2917, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::store
-  call void @_ZN4core4sync6atomic11AtomicUsize5store17h7dc943b7610f0f84E(ptr align 8 %_21, i64 %_22, i8 %6) #9, !dbg !2915
+  call void @_ZN4core4sync6atomic11AtomicUsize5store17h7dc943b7610f0f84E(ptr align 8 %self, i64 %_22, i8 %7) #9, !dbg !2917
 ; call spin::once::Once<T>::force_get
-  %_24 = call align 16 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17hfecdf8d252a23e07E"(ptr align 16 %self) #9, !dbg !2918
+  %_24 = call align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17h4806fc7a105113a1E"(ptr align 8 %self) #9, !dbg !2918
   store ptr %_24, ptr %_0, align 8, !dbg !2918
 ; call core::ptr::drop_in_place<spin::once::Finish>
   call void @"_ZN4core3ptr39drop_in_place$LT$spin..once..Finish$GT$17h555ec6f99d097d21E"(ptr align 8 %finish) #9, !dbg !2919
@@ -3606,11 +3605,10 @@ bb12:                                             ; preds = %bb10
 bb13:                                             ; preds = %bb10
 ; call core::sync::atomic::spin_loop_hint
   call void @_ZN4core4sync6atomic14spin_loop_hint17h52f607d221b1427dE() #9, !dbg !2922
-  %_28 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2923
-  store i8 4, ptr %_29, align 1, !dbg !2924
-  %7 = load i8, ptr %_29, align 1, !dbg !2923, !range !2371, !noundef !29
+  store i8 4, ptr %_29, align 1, !dbg !2923
+  %8 = load i8, ptr %_29, align 1, !dbg !2924, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::load
-  %_27 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %_28, i8 %7) #9, !dbg !2923
+  %_27 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %self, i8 %8) #9, !dbg !2924
   store i64 %_27, ptr %status, align 8, !dbg !2925
   br label %bb10, !dbg !2926
 
@@ -3621,18 +3619,18 @@ bb16:                                             ; preds = %bb10
 
 bb17:                                             ; preds = %bb10
 ; call spin::once::Once<T>::force_get
-  %_31 = call align 16 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17hfecdf8d252a23e07E"(ptr align 16 %self) #9, !dbg !2928
+  %_31 = call align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17h4806fc7a105113a1E"(ptr align 8 %self) #9, !dbg !2928
   store ptr %_31, ptr %_0, align 8, !dbg !2928
   br label %bb19, !dbg !2929
 
 bb19:                                             ; preds = %bb4, %bb17
-  %8 = load i8, ptr %_33, align 1, !dbg !2931, !range !1335, !noundef !29
-  %9 = trunc i8 %8 to i1, !dbg !2931
-  br i1 %9, label %bb21, label %bb20, !dbg !2931
+  %9 = load i8, ptr %_33, align 1, !dbg !2931, !range !1335, !noundef !29
+  %10 = trunc i8 %9 to i1, !dbg !2931
+  br i1 %10, label %bb21, label %bb20, !dbg !2931
 
 bb20:                                             ; preds = %bb21, %bb19
-  %10 = load ptr, ptr %_0, align 8, !dbg !2932, !nonnull !29, !align !2730, !noundef !29
-  ret ptr %10, !dbg !2932
+  %11 = load ptr, ptr %_0, align 8, !dbg !2932, !nonnull !29, !align !1277, !noundef !29
+  ret ptr %11, !dbg !2932
 
 bb21:                                             ; preds = %bb19
   br label %bb20, !dbg !2931
@@ -3640,7 +3638,7 @@ bb21:                                             ; preds = %bb19
 
 ; spin::once::Once<T>::call_once
 ; Function Attrs: noredzone nounwind
-define internal align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9call_once17hac05a90989645468E"(ptr align 8 %self) unnamed_addr #1 !dbg !2933 {
+define internal align 16 ptr @"_ZN4spin4once13Once$LT$T$GT$9call_once17h524ced28fb72061cE"(ptr align 16 %self) unnamed_addr #1 !dbg !2933 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %builder.dbg.spill = alloca {}, align 1
@@ -3648,8 +3646,8 @@ start:
   %_33 = alloca i8, align 1
   %_29 = alloca i8, align 1
   %_23 = alloca i8, align 1
-  %_16 = alloca %"spin::mutex::Mutex<vga::Screen>", align 8
-  %_15 = alloca %"core::option::Option<spin::mutex::Mutex<vga::Screen>>", align 8
+  %_16 = alloca %"cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable", align 16
+  %_15 = alloca %"core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", align 16
   %finish = alloca %"spin::once::Finish<'_>", align 8
   %_10 = alloca i8, align 1
   %_5 = alloca i8, align 1
@@ -3662,11 +3660,12 @@ start:
   call void @llvm.dbg.declare(metadata ptr %finish, metadata !2945, metadata !DIExpression()), !dbg !2950
   store i8 0, ptr %_33, align 1, !dbg !2951
   store i8 1, ptr %_33, align 1, !dbg !2951
-  store i8 4, ptr %_5, align 1, !dbg !2952
-  %0 = load i8, ptr %_5, align 1, !dbg !2953, !range !2371, !noundef !29
+  %_4 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2952
+  store i8 4, ptr %_5, align 1, !dbg !2953
+  %0 = load i8, ptr %_5, align 1, !dbg !2952, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::load
-  %1 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %self, i8 %0) #9, !dbg !2953
-  store i64 %1, ptr %status, align 8, !dbg !2953
+  %1 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %_4, i8 %0) #9, !dbg !2952
+  store i64 %1, ptr %status, align 8, !dbg !2952
   %_7 = load i64, ptr %status, align 8, !dbg !2954, !noundef !29
   %_6 = icmp eq i64 %_7, 0, !dbg !2954
   br i1 %_6, label %bb2, label %bb10, !dbg !2954
@@ -3681,39 +3680,39 @@ bb10:                                             ; preds = %bb13, %bb2, %start
   ], !dbg !2955
 
 bb2:                                              ; preds = %start
-  store i8 4, ptr %_10, align 1, !dbg !2956
-  %3 = load i8, ptr %_10, align 1, !dbg !2957, !range !2371, !noundef !29
+  %_9 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2956
+  store i8 4, ptr %_10, align 1, !dbg !2957
+  %3 = load i8, ptr %_10, align 1, !dbg !2956, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::compare_and_swap
-  %_8 = call i64 @_ZN4core4sync6atomic11AtomicUsize16compare_and_swap17h37926aec4106a0f1E(ptr align 8 %self, i64 0, i64 1, i8 %3) #9, !dbg !2957
+  %_8 = call i64 @_ZN4core4sync6atomic11AtomicUsize16compare_and_swap17h37926aec4106a0f1E(ptr align 8 %_9, i64 0, i64 1, i8 %3) #9, !dbg !2956
   store i64 %_8, ptr %status, align 8, !dbg !2958
   %_12 = load i64, ptr %status, align 8, !dbg !2959, !noundef !29
   %_11 = icmp eq i64 %_12, 0, !dbg !2959
   br i1 %_11, label %bb4, label %bb10, !dbg !2959
 
 bb4:                                              ; preds = %bb2
-  store ptr %self, ptr %finish, align 8, !dbg !2960
-  %4 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2960
-  store i8 1, ptr %4, align 8, !dbg !2960
-  store i8 0, ptr %_33, align 1, !dbg !2961
+  %_14 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2960
+  store ptr %_14, ptr %finish, align 8, !dbg !2961
+  %4 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2961
+  store i8 1, ptr %4, align 8, !dbg !2961
+  store i8 0, ptr %_33, align 1, !dbg !2962
 ; call core::ops::function::FnOnce::call_once
-  call void @_ZN4core3ops8function6FnOnce9call_once17h4625be1ff4a61bd0E(ptr sret(%"spin::mutex::Mutex<vga::Screen>") align 8 %_16) #9, !dbg !2961
-  %5 = getelementptr inbounds %"core::option::Option<spin::mutex::Mutex<vga::Screen>>::Some", ptr %_15, i32 0, i32 1, !dbg !2962
-  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %5, ptr align 8 %_16, i64 224, i1 false), !dbg !2962
-  store i64 1, ptr %_15, align 8, !dbg !2962
-  %_19 = getelementptr inbounds %"spin::once::Once<spin::mutex::Mutex<vga::Screen>>", ptr %self, i32 0, i32 1, !dbg !2963
-  store ptr %_19, ptr %self.dbg.spill.i, align 8
+  call void @_ZN4core3ops8function6FnOnce9call_once17had8963dafdd684c9E(ptr sret(%"cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable") align 16 %_16) #9, !dbg !2962
+  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %_15, ptr align 16 %_16, i64 4112, i1 false), !dbg !2963
+  store ptr %self, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !2964, metadata !DIExpression()), !dbg !2972
-  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_19, ptr align 8 %_15, i64 232, i1 false), !dbg !2974
-  %6 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2975
-  store i8 0, ptr %6, align 8, !dbg !2975
+  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %self, ptr align 16 %_15, i64 4112, i1 false), !dbg !2974
+  %5 = getelementptr inbounds i8, ptr %finish, i64 8, !dbg !2975
+  store i8 0, ptr %5, align 8, !dbg !2975
   store i64 2, ptr %status, align 8, !dbg !2976
-  %_22 = load i64, ptr %status, align 8, !dbg !2977, !noundef !29
-  store i8 4, ptr %_23, align 1, !dbg !2978
-  %7 = load i8, ptr %_23, align 1, !dbg !2979, !range !2371, !noundef !29
+  %_21 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2977
+  %_22 = load i64, ptr %status, align 8, !dbg !2978, !noundef !29
+  store i8 4, ptr %_23, align 1, !dbg !2979
+  %6 = load i8, ptr %_23, align 1, !dbg !2977, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::store
-  call void @_ZN4core4sync6atomic11AtomicUsize5store17h7dc943b7610f0f84E(ptr align 8 %self, i64 %_22, i8 %7) #9, !dbg !2979
+  call void @_ZN4core4sync6atomic11AtomicUsize5store17h7dc943b7610f0f84E(ptr align 8 %_21, i64 %_22, i8 %6) #9, !dbg !2977
 ; call spin::once::Once<T>::force_get
-  %_24 = call align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17h2f8b4bf09c6ecfdbE"(ptr align 8 %self) #9, !dbg !2980
+  %_24 = call align 16 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17hfecdf8d252a23e07E"(ptr align 16 %self) #9, !dbg !2980
   store ptr %_24, ptr %_0, align 8, !dbg !2980
 ; call core::ptr::drop_in_place<spin::once::Finish>
   call void @"_ZN4core3ptr39drop_in_place$LT$spin..once..Finish$GT$17h555ec6f99d097d21E"(ptr align 8 %finish) #9, !dbg !2981
@@ -3732,10 +3731,11 @@ bb12:                                             ; preds = %bb10
 bb13:                                             ; preds = %bb10
 ; call core::sync::atomic::spin_loop_hint
   call void @_ZN4core4sync6atomic14spin_loop_hint17h52f607d221b1427dE() #9, !dbg !2984
-  store i8 4, ptr %_29, align 1, !dbg !2985
-  %8 = load i8, ptr %_29, align 1, !dbg !2986, !range !2371, !noundef !29
+  %_28 = getelementptr inbounds %"spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", ptr %self, i32 0, i32 1, !dbg !2985
+  store i8 4, ptr %_29, align 1, !dbg !2986
+  %7 = load i8, ptr %_29, align 1, !dbg !2985, !range !2371, !noundef !29
 ; call core::sync::atomic::AtomicUsize::load
-  %_27 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %self, i8 %8) #9, !dbg !2986
+  %_27 = call i64 @_ZN4core4sync6atomic11AtomicUsize4load17h1770c7e888455abdE(ptr align 8 %_28, i8 %7) #9, !dbg !2985
   store i64 %_27, ptr %status, align 8, !dbg !2987
   br label %bb10, !dbg !2988
 
@@ -3746,18 +3746,18 @@ bb16:                                             ; preds = %bb10
 
 bb17:                                             ; preds = %bb10
 ; call spin::once::Once<T>::force_get
-  %_31 = call align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17h2f8b4bf09c6ecfdbE"(ptr align 8 %self) #9, !dbg !2990
+  %_31 = call align 16 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17hfecdf8d252a23e07E"(ptr align 16 %self) #9, !dbg !2990
   store ptr %_31, ptr %_0, align 8, !dbg !2990
   br label %bb19, !dbg !2991
 
 bb19:                                             ; preds = %bb4, %bb17
-  %9 = load i8, ptr %_33, align 1, !dbg !2993, !range !1335, !noundef !29
-  %10 = trunc i8 %9 to i1, !dbg !2993
-  br i1 %10, label %bb21, label %bb20, !dbg !2993
+  %8 = load i8, ptr %_33, align 1, !dbg !2993, !range !1335, !noundef !29
+  %9 = trunc i8 %8 to i1, !dbg !2993
+  br i1 %9, label %bb21, label %bb20, !dbg !2993
 
 bb20:                                             ; preds = %bb21, %bb19
-  %11 = load ptr, ptr %_0, align 8, !dbg !2994, !nonnull !29, !align !1277, !noundef !29
-  ret ptr %11, !dbg !2994
+  %10 = load ptr, ptr %_0, align 8, !dbg !2994, !nonnull !29, !align !2730, !noundef !29
+  ret ptr %10, !dbg !2994
 
 bb21:                                             ; preds = %bb19
   br label %bb20, !dbg !2993
@@ -3765,7 +3765,7 @@ bb21:                                             ; preds = %bb19
 
 ; spin::once::Once<T>::force_get
 ; Function Attrs: noredzone nounwind
-define internal align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17h2f8b4bf09c6ecfdbE"(ptr align 8 %self) unnamed_addr #1 !dbg !2995 {
+define internal align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9force_get17h4806fc7a105113a1E"(ptr align 8 %self) unnamed_addr #1 !dbg !2995 {
 start:
   %self.dbg.spill.i = alloca ptr, align 8
   %p.dbg.spill = alloca ptr, align 8
@@ -3773,11 +3773,11 @@ start:
   %_2 = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3000, metadata !DIExpression()), !dbg !3003
-  %_5 = getelementptr inbounds %"spin::once::Once<spin::mutex::Mutex<vga::Screen>>", ptr %self, i32 0, i32 1, !dbg !3004
+  %_5 = getelementptr inbounds %"spin::once::Once<spin::mutex::Mutex<text_buffer::Screen>>", ptr %self, i32 0, i32 1, !dbg !3004
   store ptr %_5, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !2964, metadata !DIExpression()), !dbg !3005
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !2902, metadata !DIExpression()), !dbg !3005
 ; call core::option::Option<T>::as_ref
-  %0 = call align 8 ptr @"_ZN4core6option15Option$LT$T$GT$6as_ref17hb6514294b2b221acE"(ptr align 8 %_5) #9, !dbg !3007
+  %0 = call align 8 ptr @"_ZN4core6option15Option$LT$T$GT$6as_ref17hc3be598db801e6d3E"(ptr align 8 %_5) #9, !dbg !3007
   store ptr %0, ptr %_2, align 8, !dbg !3007
   %1 = load ptr, ptr %_2, align 8, !dbg !3007, !noundef !29
   %2 = ptrtoint ptr %1 to i64, !dbg !3007
@@ -3850,7 +3850,7 @@ start:
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3036, metadata !DIExpression()), !dbg !3039
   store ptr %self, ptr %self.dbg.spill.i, align 8
-  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !2902, metadata !DIExpression()), !dbg !3040
+  call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !2964, metadata !DIExpression()), !dbg !3040
 ; call core::option::Option<T>::as_ref
   %0 = call align 16 ptr @"_ZN4core6option15Option$LT$T$GT$6as_ref17h4d3571f50eb8cc42E"(ptr align 16 %self) #9, !dbg !3042
   store ptr %0, ptr %_2, align 8, !dbg !3042
@@ -6296,7 +6296,7 @@ start:
 
 ; <&mut W as core::fmt::Write::write_fmt::SpecWriteFmt>::spec_write_fmt
 ; Function Attrs: inlinehint noredzone nounwind
-define internal zeroext i1 @"_ZN75_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write..write_fmt..SpecWriteFmt$GT$14spec_write_fmt17h0c4d0463cbc2b2c4E"(ptr align 8 %self, ptr align 8 %args) unnamed_addr #0 !dbg !3657 {
+define internal zeroext i1 @"_ZN75_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write..write_fmt..SpecWriteFmt$GT$14spec_write_fmt17h67ef9e4eb80d8ee2E"(ptr align 8 %self, ptr align 8 %args) unnamed_addr #0 !dbg !3657 {
 start:
   %0 = alloca %"core::fmt::Arguments<'_>", align 8
   %self.dbg.spill = alloca ptr, align 8
@@ -6358,13 +6358,13 @@ start:
 
 ; <spin::mutex::MutexGuard<T> as core::ops::deref::DerefMut>::deref_mut
 ; Function Attrs: noredzone nounwind
-define internal align 8 ptr @"_ZN79_$LT$spin..mutex..MutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h2d9f8d7b6286a791E"(ptr align 8 %self) unnamed_addr #1 !dbg !3715 {
+define internal align 8 ptr @"_ZN79_$LT$spin..mutex..MutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h73e3304029e06bb6E"(ptr align 8 %self) unnamed_addr #1 !dbg !3715 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !3720, metadata !DIExpression()), !dbg !3721
 ; call <spin::mutex::spin::SpinMutexGuard<T> as core::ops::deref::DerefMut>::deref_mut
-  %_0 = call align 8 ptr @"_ZN89_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17hbf47a8b40966ea2aE"(ptr align 8 %self) #9, !dbg !3722
+  %_0 = call align 8 ptr @"_ZN89_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h778bc540d9c91f98E"(ptr align 8 %self) #9, !dbg !3722
   ret ptr %_0, !dbg !3723
 }
 
@@ -6421,7 +6421,7 @@ start:
 
 ; <spin::mutex::spin::SpinMutexGuard<T> as core::ops::drop::Drop>::drop
 ; Function Attrs: noredzone nounwind
-define internal void @"_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1b1b22cfd857ac43E"(ptr align 8 %self) unnamed_addr #1 !dbg !3758 {
+define internal void @"_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1aba09227e054e4bE"(ptr align 8 %self) unnamed_addr #1 !dbg !3758 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_3 = alloca i8, align 1
@@ -6437,7 +6437,7 @@ start:
 
 ; <spin::mutex::spin::SpinMutexGuard<T> as core::ops::drop::Drop>::drop
 ; Function Attrs: noredzone nounwind
-define internal void @"_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1f76c0e611e2efbeE"(ptr align 8 %self) unnamed_addr #1 !dbg !3769 {
+define internal void @"_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1b1b22cfd857ac43E"(ptr align 8 %self) unnamed_addr #1 !dbg !3769 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   %_3 = alloca i8, align 1
@@ -6465,7 +6465,7 @@ start:
 
 ; <spin::mutex::spin::SpinMutexGuard<T> as core::ops::deref::DerefMut>::deref_mut
 ; Function Attrs: noredzone nounwind
-define internal align 8 ptr @"_ZN89_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17hbf47a8b40966ea2aE"(ptr align 8 %self) unnamed_addr #1 !dbg !3788 {
+define internal align 8 ptr @"_ZN89_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h778bc540d9c91f98E"(ptr align 8 %self) unnamed_addr #1 !dbg !3788 {
 start:
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
@@ -7504,16 +7504,16 @@ start:
   %_7.i = alloca i8, align 1
   %_6.i = alloca i8, align 1
   %_4.i = alloca %"core::result::Result<bool, bool>", align 1
-  %_0.i2 = alloca %"spin::mutex::spin::SpinMutexGuard<'_, vga::Screen>", align 8
+  %_0.i2 = alloca %"spin::mutex::spin::SpinMutexGuard<'_, text_buffer::Screen>", align 8
   %self.dbg.spill.i = alloca ptr, align 8
-  %_0.i = alloca %"spin::mutex::MutexGuard<'_, vga::Screen>", align 8
+  %_0.i = alloca %"spin::mutex::MutexGuard<'_, text_buffer::Screen>", align 8
   %_8 = alloca %"core::fmt::Arguments<'_>", align 8
-  %_5 = alloca %"spin::mutex::MutexGuard<'_, vga::Screen>", align 8
+  %_5 = alloca %"spin::mutex::MutexGuard<'_, text_buffer::Screen>", align 8
   %_1 = alloca ptr, align 8
   store ptr %0, ptr %_1, align 8
   call void @llvm.dbg.declare(metadata ptr %_1, metadata !4403, metadata !DIExpression(DW_OP_deref)), !dbg !4404
 ; call <theo::peripherals::VGA_DISPLAY_IN_TEXT_MODE as core::ops::deref::Deref>::deref
-  %_6 = call align 8 ptr @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref17h809d8d4dd27057b0E"(ptr align 1 @_ZN4theo11peripherals24VGA_DISPLAY_IN_TEXT_MODE17h1126cb4cf797ea1cE) #9, !dbg !4405
+  %_6 = call align 8 ptr @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref17hde9fb2d75d2e2a82E"(ptr align 1 @_ZN4theo11peripherals24VGA_DISPLAY_IN_TEXT_MODE17h1126cb4cf797ea1cE) #9, !dbg !4405
   store ptr %_6, ptr %self.dbg.spill.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i, metadata !4406, metadata !DIExpression()), !dbg !4412
   store ptr %_6, ptr %self.dbg.spill.i1, align 8
@@ -7535,7 +7535,7 @@ bb1.i:                                            ; preds = %bb4.i, %start
   store i8 %5, ptr %7, align 1, !dbg !4426
 ; call core::result::Result<T,E>::is_err
   %_2.i = call zeroext i1 @"_ZN4core6result19Result$LT$T$C$E$GT$6is_err17h8269d6d291908066E"(ptr align 1 %_4.i) #9, !dbg !4426
-  br i1 %_2.i, label %bb4.i, label %"_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h06d59d148b81c44bE.exit", !dbg !4426
+  br i1 %_2.i, label %bb4.i, label %"_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h20057546bb77952bE.exit", !dbg !4426
 
 bb4.i:                                            ; preds = %bb6.i, %bb1.i
   store ptr %_6, ptr %self.dbg.spill.i3, align 8
@@ -7551,8 +7551,8 @@ bb6.i:                                            ; preds = %bb4.i
   call void @_ZN4core4sync6atomic14spin_loop_hint17h52f607d221b1427dE() #9, !dbg !4438
   br label %bb4.i, !dbg !4440
 
-"_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h06d59d148b81c44bE.exit": ; preds = %bb1.i
-  %_14.i = getelementptr inbounds %"spin::mutex::spin::SpinMutex<vga::Screen>", ptr %_6, i32 0, i32 3, !dbg !4441
+"_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h20057546bb77952bE.exit": ; preds = %bb1.i
+  %_14.i = getelementptr inbounds %"spin::mutex::spin::SpinMutex<text_buffer::Screen>", ptr %_6, i32 0, i32 3, !dbg !4441
   store ptr %_14.i, ptr %self.dbg.spill.i.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i.i, metadata !4442, metadata !DIExpression()), !dbg !4449
   store ptr %_6, ptr %_0.i2, align 8, !dbg !4451
@@ -7579,15 +7579,15 @@ bb6.i:                                            ; preds = %bb4.i
   %23 = getelementptr inbounds i8, ptr %_5, i64 8, !dbg !4405
   store ptr %22, ptr %23, align 8, !dbg !4405
 ; call <spin::mutex::MutexGuard<T> as core::ops::deref::DerefMut>::deref_mut
-  %_3 = call align 8 ptr @"_ZN79_$LT$spin..mutex..MutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h2d9f8d7b6286a791E"(ptr align 8 %_5) #9, !dbg !4405
+  %_3 = call align 8 ptr @"_ZN79_$LT$spin..mutex..MutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h73e3304029e06bb6E"(ptr align 8 %_5) #9, !dbg !4405
   %_9 = load ptr, ptr %_1, align 8, !dbg !4456, !nonnull !29, !align !1277, !noundef !29
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %_8, ptr align 8 %_9, i64 48, i1 false), !dbg !4456
 ; call core::fmt::Write::write_fmt
-  %_2 = call zeroext i1 @_ZN4core3fmt5Write9write_fmt17hbacf93c51d373761E(ptr align 8 %_3, ptr align 8 %_8) #9, !dbg !4405
+  %_2 = call zeroext i1 @_ZN4core3fmt5Write9write_fmt17hce365dd4b4c35844E(ptr align 8 %_3, ptr align 8 %_8) #9, !dbg !4405
 ; call core::result::Result<T,E>::unwrap
   call void @"_ZN4core6result19Result$LT$T$C$E$GT$6unwrap17ha2a2d556d90db7ebE"(i1 zeroext %_2, ptr align 8 @alloc_d08997a3b514c27721e31730cc8f2b02) #9, !dbg !4405
-; call core::ptr::drop_in_place<spin::mutex::MutexGuard<vga::Screen>>
-  call void @"_ZN4core3ptr63drop_in_place$LT$spin..mutex..MutexGuard$LT$vga..Screen$GT$$GT$17h22f8cfd866939958E"(ptr align 8 %_5) #9, !dbg !4457
+; call core::ptr::drop_in_place<spin::mutex::MutexGuard<text_buffer::Screen>>
+  call void @"_ZN4core3ptr71drop_in_place$LT$spin..mutex..MutexGuard$LT$text_buffer..Screen$GT$$GT$17h169c47592dd6f262E"(ptr align 8 %_5) #9, !dbg !4457
   ret void, !dbg !4458
 }
 
@@ -7763,17 +7763,17 @@ start:
 
 ; <theo::peripherals::VGA_DISPLAY_IN_TEXT_MODE as core::ops::deref::Deref>::deref
 ; Function Attrs: noredzone nounwind
-define internal align 8 ptr @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref17h809d8d4dd27057b0E"(ptr align 1 %self) unnamed_addr #1 !dbg !4543 {
+define internal align 8 ptr @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref17hde9fb2d75d2e2a82E"(ptr align 1 %self) unnamed_addr #1 !dbg !4543 {
 start:
   %self.dbg.spill.i.i = alloca ptr, align 8
   %self.dbg.spill = alloca ptr, align 8
   store ptr %self, ptr %self.dbg.spill, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill, metadata !4548, metadata !DIExpression()), !dbg !4549
-  store ptr @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h990dd612b592a6a8E", ptr %self.dbg.spill.i.i, align 8
+  store ptr @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h4492d8acf804287dE", ptr %self.dbg.spill.i.i, align 8
   call void @llvm.dbg.declare(metadata ptr %self.dbg.spill.i.i, metadata !4550, metadata !DIExpression()), !dbg !4558
   call void @llvm.dbg.declare(metadata ptr undef, metadata !4557, metadata !DIExpression()), !dbg !4564
 ; call spin::once::Once<T>::call_once
-  %_0.i.i = call align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9call_once17hac05a90989645468E"(ptr align 8 @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h990dd612b592a6a8E") #9, !dbg !4565
+  %_0.i.i = call align 8 ptr @"_ZN4spin4once13Once$LT$T$GT$9call_once17h36d5eea70ef3a86fE"(ptr align 8 @"_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h4492d8acf804287dE") #9, !dbg !4565
   ret ptr %_0.i.i, !dbg !4566
 }
 
@@ -7908,9 +7908,9 @@ declare zeroext i1 @"_ZN4core3fmt3num53_$LT$impl$u20$core..fmt..LowerHex$u20$for
 ; Function Attrs: nocallback nofree nounwind willreturn memory(argmem: write)
 declare void @llvm.memset.p0.i64(ptr nocapture writeonly, i8, i64, i1 immarg) #8
 
-; <vga::Screen as core::fmt::Write>::write_str
+; <text_buffer::Screen as core::fmt::Write>::write_str
 ; Function Attrs: noredzone nounwind
-declare zeroext i1 @"_ZN48_$LT$vga..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17h927957bcd12df6c8E"(ptr align 8, ptr align 1, i64) unnamed_addr #1
+declare zeroext i1 @"_ZN56_$LT$text_buffer..Screen$u20$as$u20$core..fmt..Write$GT$9write_str17hc45d3e58c29adb9bE"(ptr align 8, ptr align 1, i64) unnamed_addr #1
 
 ; core::slice::index::<impl core::ops::index::IndexMut<I> for [T]>::index_mut
 ; Function Attrs: inlinehint noredzone nounwind
@@ -8112,9 +8112,9 @@ declare { i8, i1 } @llvm.uadd.with.overflow.i8(i8, i8) #4
 ; Function Attrs: noredzone nounwind
 declare void @_ZN14cpu_interrupts26interrupt_descriptor_table28SafeInterruptDescriptorTable4from17hafaa57c060e482eaE(ptr sret(%"cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable") align 16, ptr align 16) unnamed_addr #1
 
-; vga::Screen::new
+; text_buffer::Screen::new
 ; Function Attrs: noredzone nounwind
-declare void @_ZN3vga6Screen3new17h47ec63f87da2587aE(ptr sret(%"vga::Screen") align 8, i1 zeroext, i8) unnamed_addr #1
+declare void @_ZN11text_buffer6Screen3new17hc8bf4b46baf0d484E(ptr sret(%"text_buffer::Screen") align 8, i1 zeroext, i8) unnamed_addr #1
 
 ; bootloader_api::__force_use
 ; Function Attrs: noredzone nounwind
@@ -8383,8 +8383,8 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !242 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !237, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
 !243 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&bool", baseType: !234, size: 64, align: 64, dwarfAddressSpace: 0)
 !244 = !DIGlobalVariableExpression(var: !245, expr: !DIExpression())
-!245 = distinct !DIGlobalVariable(name: "<vga::Screen as core::fmt::Write>::{vtable}", scope: null, file: !2, type: !246, isLocal: true, isDefinition: true)
-!246 = !DICompositeType(tag: DW_TAG_structure_type, name: "<vga::Screen as core::fmt::Write>::{vtable_type}", file: !2, size: 384, align: 64, flags: DIFlagArtificial, elements: !247, vtableHolder: !254, templateParams: !29, identifier: "53cc32d5dd13f31827b1f7a5295e71bb")
+!245 = distinct !DIGlobalVariable(name: "<text_buffer::Screen as core::fmt::Write>::{vtable}", scope: null, file: !2, type: !246, isLocal: true, isDefinition: true)
+!246 = !DICompositeType(tag: DW_TAG_structure_type, name: "<text_buffer::Screen as core::fmt::Write>::{vtable_type}", file: !2, size: 384, align: 64, flags: DIFlagArtificial, elements: !247, vtableHolder: !254, templateParams: !29, identifier: "d796710f416566e4680ead2390b8934e")
 !247 = !{!248, !249, !250, !251, !252, !253}
 !248 = !DIDerivedType(tag: DW_TAG_member, name: "drop_in_place", scope: !246, file: !2, baseType: !6, size: 64, align: 64)
 !249 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !246, file: !2, baseType: !9, size: 64, align: 64, offset: 64)
@@ -8392,31 +8392,31 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !251 = !DIDerivedType(tag: DW_TAG_member, name: "__method3", scope: !246, file: !2, baseType: !6, size: 64, align: 64, offset: 192)
 !252 = !DIDerivedType(tag: DW_TAG_member, name: "__method4", scope: !246, file: !2, baseType: !6, size: 64, align: 64, offset: 256)
 !253 = !DIDerivedType(tag: DW_TAG_member, name: "__method5", scope: !246, file: !2, baseType: !6, size: 64, align: 64, offset: 320)
-!254 = !DICompositeType(tag: DW_TAG_structure_type, name: "Screen", scope: !255, file: !2, size: 1728, align: 64, flags: DIFlagPublic, elements: !256, templateParams: !29, identifier: "330ec2815b83b95497a63dbcdc750fab")
-!255 = !DINamespace(name: "vga", scope: null)
+!254 = !DICompositeType(tag: DW_TAG_structure_type, name: "Screen", scope: !255, file: !2, size: 1728, align: 64, flags: DIFlagPublic, elements: !256, templateParams: !29, identifier: "b2c0c9d63e94e7f858130b2ed736ef4")
+!255 = !DINamespace(name: "text_buffer", scope: null)
 !256 = !{!257, !258, !266, !267, !285, !290}
 !257 = !DIDerivedType(tag: DW_TAG_member, name: "water_level", scope: !254, file: !2, baseType: !9, size: 64, align: 64, offset: 64, flags: DIFlagPrivate)
 !258 = !DIDerivedType(tag: DW_TAG_member, name: "cursor", scope: !254, file: !2, baseType: !259, size: 128, align: 64, offset: 128, flags: DIFlagPrivate)
-!259 = !DICompositeType(tag: DW_TAG_structure_type, name: "Cursor", scope: !255, file: !2, size: 128, align: 64, flags: DIFlagPrivate, elements: !260, templateParams: !29, identifier: "18eacc65824e14da86ca2a34a5649356")
+!259 = !DICompositeType(tag: DW_TAG_structure_type, name: "Cursor", scope: !255, file: !2, size: 128, align: 64, flags: DIFlagPrivate, elements: !260, templateParams: !29, identifier: "3a660ba629955f67246370881687e147")
 !260 = !{!261}
 !261 = !DIDerivedType(tag: DW_TAG_member, name: "pos", scope: !259, file: !2, baseType: !262, size: 128, align: 64, flags: DIFlagPrivate)
-!262 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dot", scope: !255, file: !2, size: 128, align: 64, flags: DIFlagPrivate, elements: !263, templateParams: !29, identifier: "e81da3a37b79cea016d78bd7ddf43685")
+!262 = !DICompositeType(tag: DW_TAG_structure_type, name: "Dot", scope: !255, file: !2, size: 128, align: 64, flags: DIFlagPrivate, elements: !263, templateParams: !29, identifier: "693403fc6c110164405716cc38ceca04")
 !263 = !{!264, !265}
 !264 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !262, file: !2, baseType: !9, size: 64, align: 64, flags: DIFlagPrivate)
 !265 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !262, file: !2, baseType: !9, size: 64, align: 64, offset: 64, flags: DIFlagPrivate)
 !266 = !DIDerivedType(tag: DW_TAG_member, name: "origin", scope: !254, file: !2, baseType: !262, size: 128, align: 64, offset: 256, flags: DIFlagPrivate)
 !267 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !254, file: !2, baseType: !268, size: 64, align: 64, flags: DIFlagPrivate)
-!268 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Buffer", baseType: !269, size: 64, align: 64, dwarfAddressSpace: 0)
-!269 = !DICompositeType(tag: DW_TAG_structure_type, name: "Buffer", scope: !255, file: !2, size: 32000, align: 8, flags: DIFlagPrivate, elements: !270, templateParams: !29, identifier: "492ac36a0b62d893dc31955386def3a")
+!268 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut text_buffer::Buffer", baseType: !269, size: 64, align: 64, dwarfAddressSpace: 0)
+!269 = !DICompositeType(tag: DW_TAG_structure_type, name: "Buffer", scope: !255, file: !2, size: 32000, align: 8, flags: DIFlagPrivate, elements: !270, templateParams: !29, identifier: "f515044cb13d990d322d47ec60217190")
 !270 = !{!271}
 !271 = !DIDerivedType(tag: DW_TAG_member, name: "chars", scope: !269, file: !2, baseType: !272, size: 32000, align: 8, flags: DIFlagPrivate)
 !272 = !DICompositeType(tag: DW_TAG_array_type, baseType: !273, size: 32000, align: 8, elements: !283)
 !273 = !DICompositeType(tag: DW_TAG_array_type, baseType: !274, size: 1280, align: 8, elements: !281)
-!274 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScreenChar", scope: !255, file: !2, size: 16, align: 8, flags: DIFlagPrivate, elements: !275, templateParams: !29, identifier: "4819fcbb07635b3a72d791e93fe3b251")
+!274 = !DICompositeType(tag: DW_TAG_structure_type, name: "ScreenChar", scope: !255, file: !2, size: 16, align: 8, flags: DIFlagPrivate, elements: !275, templateParams: !29, identifier: "488cd8c01b529c1044a76908cad1df7d")
 !275 = !{!276, !277}
 !276 = !DIDerivedType(tag: DW_TAG_member, name: "char", scope: !274, file: !2, baseType: !27, size: 8, align: 8, flags: DIFlagPrivate)
 !277 = !DIDerivedType(tag: DW_TAG_member, name: "color_code", scope: !274, file: !2, baseType: !278, size: 8, align: 8, offset: 8, flags: DIFlagPrivate)
-!278 = !DICompositeType(tag: DW_TAG_structure_type, name: "ColorCode", scope: !255, file: !2, size: 8, align: 8, flags: DIFlagPrivate, elements: !279, templateParams: !29, identifier: "404cd755b5b765a152c63e00ffea1eff")
+!278 = !DICompositeType(tag: DW_TAG_structure_type, name: "ColorCode", scope: !255, file: !2, size: 8, align: 8, flags: DIFlagPrivate, elements: !279, templateParams: !29, identifier: "e7ead5665b644cdbfb23869ce6231e2e")
 !279 = !{!280}
 !280 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !278, file: !2, baseType: !27, size: 8, align: 8, flags: DIFlagPrivate)
 !281 = !{!282}
@@ -8725,33 +8725,33 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !584 = !{!585}
 !585 = !DIDerivedType(tag: DW_TAG_member, name: "__private_field", scope: !583, file: !2, baseType: !7, align: 8, flags: DIFlagPrivate)
 !586 = !DIGlobalVariableExpression(var: !587, expr: !DIExpression())
-!587 = distinct !DIGlobalVariable(name: "LAZY", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h990dd612b592a6a8E", scope: !588, file: !390, line: 29, type: !591, isLocal: true, isDefinition: true, align: 64)
+!587 = distinct !DIGlobalVariable(name: "LAZY", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability4LAZY17h4492d8acf804287dE", scope: !588, file: !390, line: 29, type: !591, isLocal: true, isDefinition: true, align: 64)
 !588 = !DINamespace(name: "__stability", scope: !589)
 !589 = !DINamespace(name: "deref", scope: !590)
 !590 = !DINamespace(name: "{impl#0}", scope: !582)
-!591 = !DICompositeType(tag: DW_TAG_structure_type, name: "Lazy<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", scope: !392, file: !2, size: 1920, align: 64, flags: DIFlagPublic, elements: !592, templateParams: !607, identifier: "30e94c9ad82cb56ed527b1f6e5c1b0ca")
+!591 = !DICompositeType(tag: DW_TAG_structure_type, name: "Lazy<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", scope: !392, file: !2, size: 1920, align: 64, flags: DIFlagPublic, elements: !592, templateParams: !607, identifier: "4886aa3dc02afbd812591d3920331a58")
 !592 = !{!593}
 !593 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !591, file: !2, baseType: !594, size: 1920, align: 64, flags: DIFlagPrivate)
-!594 = !DICompositeType(tag: DW_TAG_structure_type, name: "Once<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", scope: !397, file: !2, size: 1920, align: 64, flags: DIFlagPublic, elements: !595, templateParams: !607, identifier: "ca1b9458706e0661714e394fa74543ef")
+!594 = !DICompositeType(tag: DW_TAG_structure_type, name: "Once<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", scope: !397, file: !2, size: 1920, align: 64, flags: DIFlagPublic, elements: !595, templateParams: !607, identifier: "c7fff722325493b016c4274636cffed4")
 !595 = !{!596, !597}
 !596 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !594, file: !2, baseType: !401, size: 64, align: 64, flags: DIFlagPrivate)
 !597 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !594, file: !2, baseType: !598, size: 1856, align: 64, offset: 64, flags: DIFlagPrivate)
-!598 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<core::option::Option<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>>", scope: !407, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !599, templateParams: !644, identifier: "6879e02463c168354599663a65cb878a")
+!598 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<core::option::Option<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>>", scope: !407, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !599, templateParams: !644, identifier: "bcb7ea01c2a22f2087ce856c565b4673")
 !599 = !{!600}
 !600 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !598, file: !2, baseType: !601, size: 1856, align: 64, flags: DIFlagPrivate)
-!601 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", scope: !33, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !602, templateParams: !29, identifier: "2fe9d1b183230395c7c126cab923dbf1")
+!601 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", scope: !33, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !602, templateParams: !29, identifier: "9ba4ffd26d4e8b01f9c2b981fb8b2bc6")
 !602 = !{!603}
-!603 = !DICompositeType(tag: DW_TAG_variant_part, scope: !601, file: !2, size: 1856, align: 64, elements: !604, templateParams: !29, identifier: "c58f3c0dffb700c05466b15816da7ff4", discriminator: !643)
+!603 = !DICompositeType(tag: DW_TAG_variant_part, scope: !601, file: !2, size: 1856, align: 64, elements: !604, templateParams: !29, identifier: "a55f6838bc02c4f570f3bf65a774ace6", discriminator: !643)
 !604 = !{!605, !639}
 !605 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !603, file: !2, baseType: !606, size: 1856, align: 64, extraData: i128 0)
-!606 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !601, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !29, templateParams: !607, identifier: "240fb1736008d31e8d0bec1db39969e6")
+!606 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !601, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !29, templateParams: !607, identifier: "7bdcfca8dff920011a2150ea8885ab09")
 !607 = !{!608}
 !608 = !DITemplateTypeParameter(name: "T", type: !609)
-!609 = !DICompositeType(tag: DW_TAG_structure_type, name: "Mutex<vga::Screen, spin::relax::Spin>", scope: !610, file: !2, size: 1792, align: 64, flags: DIFlagPublic, elements: !611, templateParams: !637, identifier: "7918480eab89f5a73f3a36b06c723d20")
+!609 = !DICompositeType(tag: DW_TAG_structure_type, name: "Mutex<text_buffer::Screen, spin::relax::Spin>", scope: !610, file: !2, size: 1792, align: 64, flags: DIFlagPublic, elements: !611, templateParams: !637, identifier: "816184eb711f64ad7eef8f482d67bad0")
 !610 = !DINamespace(name: "mutex", scope: !398)
 !611 = !{!612}
 !612 = !DIDerivedType(tag: DW_TAG_member, name: "inner", scope: !609, file: !2, baseType: !613, size: 1792, align: 64, flags: DIFlagPrivate)
-!613 = !DICompositeType(tag: DW_TAG_structure_type, name: "SpinMutex<vga::Screen, spin::relax::Spin>", scope: !614, file: !2, size: 1792, align: 64, flags: DIFlagPublic, elements: !615, templateParams: !637, identifier: "e90cbdad52e838ad8e02173c262a042a")
+!613 = !DICompositeType(tag: DW_TAG_structure_type, name: "SpinMutex<text_buffer::Screen, spin::relax::Spin>", scope: !614, file: !2, size: 1792, align: 64, flags: DIFlagPublic, elements: !615, templateParams: !637, identifier: "c2ab5a1e0ec0f76fc11da847865cebbf")
 !614 = !DINamespace(name: "spin", scope: !610)
 !615 = !{!616, !622, !631}
 !616 = !DIDerivedType(tag: DW_TAG_member, name: "phantom", scope: !613, file: !2, baseType: !617, align: 8, flags: DIFlagPrivate)
@@ -8770,7 +8770,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !629 = !{!630}
 !630 = !DITemplateTypeParameter(name: "T", type: !27)
 !631 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !613, file: !2, baseType: !632, size: 1728, align: 64, offset: 64, flags: DIFlagPrivate)
-!632 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<vga::Screen>", scope: !407, file: !2, size: 1728, align: 64, flags: DIFlagPublic, elements: !633, templateParams: !635, identifier: "167c1076a73a6453b258dd9bed016200")
+!632 = !DICompositeType(tag: DW_TAG_structure_type, name: "UnsafeCell<text_buffer::Screen>", scope: !407, file: !2, size: 1728, align: 64, flags: DIFlagPublic, elements: !633, templateParams: !635, identifier: "a9d0a32aa47acfe433a22a1eb9f28033")
 !633 = !{!634}
 !634 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !632, file: !2, baseType: !254, size: 1728, align: 64, flags: DIFlagPrivate)
 !635 = !{!636}
@@ -8778,7 +8778,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !637 = !{!636, !638}
 !638 = !DITemplateTypeParameter(name: "R", type: !620)
 !639 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !603, file: !2, baseType: !640, size: 1856, align: 64, extraData: i128 1)
-!640 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !601, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !641, templateParams: !607, identifier: "dd8508984a1fbef89fb7580c2a748033")
+!640 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !601, file: !2, size: 1856, align: 64, flags: DIFlagPublic, elements: !641, templateParams: !607, identifier: "2e15e327107d831156d2fdcae4a74478")
 !641 = !{!642}
 !642 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !640, file: !2, baseType: !609, size: 1792, align: 64, offset: 64, flags: DIFlagPublic)
 !643 = !DIDerivedType(tag: DW_TAG_member, scope: !601, file: !2, baseType: !76, size: 64, align: 64, flags: DIFlagArtificial)
@@ -9010,7 +9010,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !869 = !{i32 2, !"Debug Info Version", i32 3}
 !870 = !{!"rustc version 1.77.0-nightly (2319be8e2 2024-01-12)"}
 !871 = distinct !DICompileUnit(language: DW_LANG_Rust, file: !872, producer: "clang LLVM (rustc version 1.77.0-nightly (2319be8e2 2024-01-12))", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !873, globals: !1026, splitDebugInlining: false, nameTableKind: None)
-!872 = !DIFile(filename: "src/main.rs/@/3mytfyo678bdv4ve", directory: "/Users/yaw/self/theo")
+!872 = !DIFile(filename: "src/main.rs/@/km3ytdp9kpaw3da", directory: "/Users/yaw/self/theo")
 !873 = !{!286, !703, !715, !874, !1000, !1005, !52, !1012, !1019}
 !874 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "KeyCode", scope: !690, file: !2, baseType: !27, size: 8, align: 8, flags: DIFlagEnumClass, elements: !875)
 !875 = !{!876, !877, !878, !879, !880, !881, !882, !883, !884, !885, !886, !887, !888, !889, !890, !891, !892, !893, !894, !895, !896, !897, !898, !899, !900, !901, !902, !903, !904, !905, !906, !907, !908, !909, !910, !911, !912, !913, !914, !915, !916, !917, !918, !919, !920, !921, !922, !923, !924, !925, !926, !927, !928, !929, !930, !931, !932, !933, !934, !935, !936, !937, !938, !939, !940, !941, !942, !943, !944, !945, !946, !947, !948, !949, !950, !951, !952, !953, !954, !955, !956, !957, !958, !959, !960, !961, !962, !963, !964, !965, !966, !967, !968, !969, !970, !971, !972, !973, !974, !975, !976, !977, !978, !979, !980, !981, !982, !983, !984, !985, !986, !987, !988, !989, !990, !991, !992, !993, !994, !995, !996, !997, !998, !999}
@@ -9844,11 +9844,11 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !1703 = !DILocation(line: 195, column: 21, scope: !1689)
 !1704 = !DILocation(line: 193, column: 21, scope: !1689)
 !1705 = !DILocation(line: 197, column: 14, scope: !1689)
-!1706 = distinct !DISubprogram(name: "write_char<vga::Screen>", linkageName: "_ZN4core3fmt5Write10write_char17h5913d6fadd9e51b5E", scope: !1707, file: !1537, line: 166, type: !1708, scopeLine: 166, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !1714, retainedNodes: !1711)
+!1706 = distinct !DISubprogram(name: "write_char<text_buffer::Screen>", linkageName: "_ZN4core3fmt5Write10write_char17hb6af9f3bda8f5886E", scope: !1707, file: !1537, line: 166, type: !1708, scopeLine: 166, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !1714, retainedNodes: !1711)
 !1707 = !DINamespace(name: "Write", scope: !15)
 !1708 = !DISubroutineType(types: !1709)
 !1709 = !{!99, !1710, !50}
-!1710 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut vga::Screen", baseType: !254, size: 64, align: 64, dwarfAddressSpace: 0)
+!1710 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut text_buffer::Screen", baseType: !254, size: 64, align: 64, dwarfAddressSpace: 0)
 !1711 = !{!1712, !1713}
 !1712 = !DILocalVariable(name: "self", arg: 1, scope: !1706, file: !1537, line: 166, type: !1710)
 !1713 = !DILocalVariable(name: "c", arg: 2, scope: !1706, file: !1537, line: 166, type: !50)
@@ -9860,7 +9860,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !1719 = !DILocation(line: 167, column: 24, scope: !1706)
 !1720 = !DILocation(line: 167, column: 9, scope: !1706)
 !1721 = !DILocation(line: 168, column: 6, scope: !1706)
-!1722 = distinct !DISubprogram(name: "write_fmt<vga::Screen>", linkageName: "_ZN4core3fmt5Write9write_fmt17hbacf93c51d373761E", scope: !1707, file: !1537, line: 194, type: !1723, scopeLine: 194, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !1714, retainedNodes: !1725)
+!1722 = distinct !DISubprogram(name: "write_fmt<text_buffer::Screen>", linkageName: "_ZN4core3fmt5Write9write_fmt17hce365dd4b4c35844E", scope: !1707, file: !1537, line: 194, type: !1723, scopeLine: 194, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !1714, retainedNodes: !1725)
 !1723 = !DISubroutineType(types: !1724)
 !1724 = !{!99, !1710, !14}
 !1725 = !{!1726, !1727}
@@ -9938,11 +9938,11 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !1797 = !DILocation(line: 304, column: 47, scope: !1780)
 !1798 = !DILocation(line: 305, column: 13, scope: !1780)
 !1799 = !DILocation(line: 306, column: 10, scope: !1780)
-!1800 = distinct !DISubprogram(name: "call_once<fn() -> spin::mutex::Mutex<vga::Screen, spin::relax::Spin>, ()>", linkageName: "_ZN4core3ops8function6FnOnce9call_once17h4625be1ff4a61bd0E", scope: !1801, file: !1781, line: 250, type: !1802, scopeLine: 250, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !1810, retainedNodes: !1807)
+!1800 = distinct !DISubprogram(name: "call_once<fn() -> spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>, ()>", linkageName: "_ZN4core3ops8function6FnOnce9call_once17h4625be1ff4a61bd0E", scope: !1801, file: !1781, line: 250, type: !1802, scopeLine: 250, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !1810, retainedNodes: !1807)
 !1801 = !DINamespace(name: "FnOnce", scope: !1784)
 !1802 = !DISubroutineType(types: !1803)
 !1803 = !{!609, !1804}
-!1804 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "fn() -> spin::mutex::Mutex<vga::Screen, spin::relax::Spin>", baseType: !1805, align: 1, dwarfAddressSpace: 0)
+!1804 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "fn() -> spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>", baseType: !1805, align: 1, dwarfAddressSpace: 0)
 !1805 = !DISubroutineType(types: !1806)
 !1806 = !{!609}
 !1807 = !{!1808, !1809}
@@ -9954,35 +9954,35 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !1813 = !DILocation(line: 250, column: 5, scope: !1800)
 !1814 = !DILocation(line: 10, column: 32, scope: !1815, inlinedAt: !1818)
 !1815 = !DILexicalBlockFile(scope: !1817, file: !1816, discriminator: 0)
-!1816 = !DIFile(filename: "src/peripherals.rs", directory: "/Users/yaw/self/theo", checksumkind: CSK_MD5, checksum: "b9ef90eb7bf99c5434756a60c8aca520")
-!1817 = distinct !DISubprogram(name: "__static_ref_initialize", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref23__static_ref_initialize17hefd9544b389bda43E", scope: !589, file: !381, line: 137, type: !1805, scopeLine: 137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29)
+!1816 = !DIFile(filename: "src/peripherals.rs", directory: "/Users/yaw/self/theo", checksumkind: CSK_MD5, checksum: "80cc7bcfdc126ece9263f5eb194daafc")
+!1817 = distinct !DISubprogram(name: "__static_ref_initialize", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref23__static_ref_initialize17h2c6948ca4c1f4a9cE", scope: !589, file: !381, line: 137, type: !1805, scopeLine: 137, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29)
 !1818 = distinct !DILocation(line: 250, column: 5, scope: !1800)
 !1819 = !DILocation(line: 10, column: 20, scope: !1815, inlinedAt: !1818)
 !1820 = !DILocalVariable(name: "value", arg: 1, scope: !1821, file: !1822, line: 148, type: !254)
-!1821 = distinct !DISubprogram(name: "new<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$3new17h640b540bcd7c5908E", scope: !609, file: !1822, line: 148, type: !1823, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !1825, retainedNodes: !1826)
+!1821 = distinct !DISubprogram(name: "new<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$3new17h93b900136bd7170dE", scope: !609, file: !1822, line: 148, type: !1823, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !1825, retainedNodes: !1826)
 !1822 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.9.8/src/mutex.rs", directory: "", checksumkind: CSK_MD5, checksum: "8bd51efe234d6d30883585776287c8e6")
 !1823 = !DISubroutineType(types: !1824)
 !1824 = !{!609, !254}
-!1825 = !DISubprogram(name: "new<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$3new17h640b540bcd7c5908E", scope: !609, file: !1822, line: 148, type: !1823, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
+!1825 = !DISubprogram(name: "new<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$3new17h93b900136bd7170dE", scope: !609, file: !1822, line: 148, type: !1823, scopeLine: 148, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
 !1826 = !{!1820}
 !1827 = !DILocation(line: 148, column: 22, scope: !1821, inlinedAt: !1828)
 !1828 = distinct !DILocation(line: 10, column: 9, scope: !1815, inlinedAt: !1818)
 !1829 = !DILocalVariable(name: "data", arg: 1, scope: !1830, file: !1831, line: 110, type: !254)
-!1830 = distinct !DISubprogram(name: "new<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$3new17hc5f50387cb673a73E", scope: !613, file: !1831, line: 110, type: !1832, scopeLine: 110, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !1834, retainedNodes: !1835)
+!1830 = distinct !DISubprogram(name: "new<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$3new17h69899a40f74e9060E", scope: !613, file: !1831, line: 110, type: !1832, scopeLine: 110, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !1834, retainedNodes: !1835)
 !1831 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spin-0.9.8/src/mutex/spin.rs", directory: "", checksumkind: CSK_MD5, checksum: "eafec6adab68eecd5bf401d2ab27702c")
 !1832 = !DISubroutineType(types: !1833)
 !1833 = !{!613, !254}
-!1834 = !DISubprogram(name: "new<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$3new17hc5f50387cb673a73E", scope: !613, file: !1831, line: 110, type: !1832, scopeLine: 110, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
+!1834 = !DISubprogram(name: "new<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$3new17h69899a40f74e9060E", scope: !613, file: !1831, line: 110, type: !1832, scopeLine: 110, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
 !1835 = !{!1829}
 !1836 = !DILocation(line: 110, column: 22, scope: !1830, inlinedAt: !1837)
 !1837 = distinct !DILocation(line: 150, column: 20, scope: !1821, inlinedAt: !1828)
 !1838 = !DILocation(line: 112, column: 19, scope: !1830, inlinedAt: !1837)
 !1839 = !DILocalVariable(name: "value", arg: 1, scope: !1840, file: !1841, line: 2047, type: !254)
-!1840 = distinct !DISubprogram(name: "new<vga::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3new17h5cccebe93cfa7b64E", scope: !632, file: !1841, line: 2047, type: !1842, scopeLine: 2047, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, declaration: !1844, retainedNodes: !1845)
+!1840 = distinct !DISubprogram(name: "new<text_buffer::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3new17h05f319a9d903e86bE", scope: !632, file: !1841, line: 2047, type: !1842, scopeLine: 2047, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, declaration: !1844, retainedNodes: !1845)
 !1841 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/cell.rs", directory: "", checksumkind: CSK_MD5, checksum: "b0d7fce865d67685e67f51481f8c133a")
 !1842 = !DISubroutineType(types: !1843)
 !1843 = !{!632, !254}
-!1844 = !DISubprogram(name: "new<vga::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3new17h5cccebe93cfa7b64E", scope: !632, file: !1841, line: 2047, type: !1842, scopeLine: 2047, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !635)
+!1844 = !DISubprogram(name: "new<text_buffer::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3new17h05f319a9d903e86bE", scope: !632, file: !1841, line: 2047, type: !1842, scopeLine: 2047, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !635)
 !1845 = !{!1839}
 !1846 = !DILocation(line: 2047, column: 22, scope: !1840, inlinedAt: !1847)
 !1847 = distinct !DILocation(line: 113, column: 19, scope: !1830, inlinedAt: !1837)
@@ -10137,10 +10137,10 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !1996 = !{!1997}
 !1997 = !DITemplateTypeParameter(name: "T", type: !243)
 !1998 = !DILocation(line: 507, column: 1, scope: !1990)
-!1999 = distinct !DISubprogram(name: "drop_in_place<vga::Screen>", linkageName: "_ZN4core3ptr32drop_in_place$LT$vga..Screen$GT$17h47bc60bcaae77c41E", scope: !1929, file: !1928, line: 507, type: !2000, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !2003)
+!1999 = distinct !DISubprogram(name: "drop_in_place<text_buffer::Screen>", linkageName: "_ZN4core3ptr40drop_in_place$LT$text_buffer..Screen$GT$17h408fb793ce67d5c6E", scope: !1929, file: !1928, line: 507, type: !2000, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !2003)
 !2000 = !DISubroutineType(types: !2001)
 !2001 = !{null, !2002}
-!2002 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut vga::Screen", baseType: !254, size: 64, align: 64, dwarfAddressSpace: 0)
+!2002 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut text_buffer::Screen", baseType: !254, size: 64, align: 64, dwarfAddressSpace: 0)
 !2003 = !{!2004}
 !2004 = !DILocalVariable(arg: 1, scope: !1999, file: !1928, line: 507, type: !2002)
 !2005 = !DILocation(line: 507, column: 1, scope: !1999)
@@ -10162,40 +10162,40 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2021 = !{!2022}
 !2022 = !DITemplateTypeParameter(name: "T", type: !218)
 !2023 = !DILocation(line: 507, column: 1, scope: !2015)
-!2024 = distinct !DISubprogram(name: "drop_in_place<spin::mutex::MutexGuard<vga::Screen>>", linkageName: "_ZN4core3ptr63drop_in_place$LT$spin..mutex..MutexGuard$LT$vga..Screen$GT$$GT$17h22f8cfd866939958E", scope: !1929, file: !1928, line: 507, type: !2025, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2037, retainedNodes: !2035)
+!2024 = distinct !DISubprogram(name: "drop_in_place<&x86_64::structures::idt::_::InternalBitFlags>", linkageName: "_ZN4core3ptr69drop_in_place$LT$$RF$x86_64..structures..idt.._..InternalBitFlags$GT$17h028bbe1fe7c5dc61E", scope: !1929, file: !1928, line: 507, type: !2025, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2030, retainedNodes: !2028)
 !2025 = !DISubroutineType(types: !2026)
 !2026 = !{null, !2027}
-!2027 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut spin::mutex::MutexGuard<vga::Screen>", baseType: !2028, size: 64, align: 64, dwarfAddressSpace: 0)
-!2028 = !DICompositeType(tag: DW_TAG_structure_type, name: "MutexGuard<vga::Screen>", scope: !610, file: !2, size: 128, align: 64, flags: DIFlagPublic, elements: !2029, templateParams: !635, identifier: "a548db3acf8a3494281284f29e80eb8b")
-!2029 = !{!2030}
-!2030 = !DIDerivedType(tag: DW_TAG_member, name: "inner", scope: !2028, file: !2, baseType: !2031, size: 128, align: 64, flags: DIFlagPrivate)
-!2031 = !DICompositeType(tag: DW_TAG_structure_type, name: "SpinMutexGuard<vga::Screen>", scope: !614, file: !2, size: 128, align: 64, flags: DIFlagPublic, elements: !2032, templateParams: !635, identifier: "6427f79040260111535e80638ba0750")
-!2032 = !{!2033, !2034}
-!2033 = !DIDerivedType(tag: DW_TAG_member, name: "lock", scope: !2031, file: !2, baseType: !1939, size: 64, align: 64, flags: DIFlagPrivate)
-!2034 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !2031, file: !2, baseType: !2002, size: 64, align: 64, offset: 64, flags: DIFlagPrivate)
-!2035 = !{!2036}
-!2036 = !DILocalVariable(arg: 1, scope: !2024, file: !1928, line: 507, type: !2027)
+!2027 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &x86_64::structures::idt::_::InternalBitFlags", baseType: !299, size: 64, align: 64, dwarfAddressSpace: 0)
+!2028 = !{!2029}
+!2029 = !DILocalVariable(arg: 1, scope: !2024, file: !1928, line: 507, type: !2027)
+!2030 = !{!2031}
+!2031 = !DITemplateTypeParameter(name: "T", type: !299)
+!2032 = !DILocation(line: 507, column: 1, scope: !2024)
+!2033 = distinct !DISubprogram(name: "drop_in_place<&(dyn core::any::Any + core::marker::Send)>", linkageName: "_ZN4core3ptr70drop_in_place$LT$$RF$dyn$u20$core..any..Any$u2b$core..marker..Send$GT$17h819ac95864651a47E", scope: !1929, file: !1928, line: 507, type: !2034, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2039, retainedNodes: !2037)
+!2034 = !DISubroutineType(types: !2035)
+!2035 = !{null, !2036}
+!2036 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &(dyn core::any::Any + core::marker::Send)", baseType: !183, size: 64, align: 64, dwarfAddressSpace: 0)
 !2037 = !{!2038}
-!2038 = !DITemplateTypeParameter(name: "T", type: !2028)
-!2039 = !DILocation(line: 507, column: 1, scope: !2024)
-!2040 = distinct !DISubprogram(name: "drop_in_place<&x86_64::structures::idt::_::InternalBitFlags>", linkageName: "_ZN4core3ptr69drop_in_place$LT$$RF$x86_64..structures..idt.._..InternalBitFlags$GT$17h028bbe1fe7c5dc61E", scope: !1929, file: !1928, line: 507, type: !2041, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2046, retainedNodes: !2044)
-!2041 = !DISubroutineType(types: !2042)
-!2042 = !{null, !2043}
-!2043 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &x86_64::structures::idt::_::InternalBitFlags", baseType: !299, size: 64, align: 64, dwarfAddressSpace: 0)
-!2044 = !{!2045}
-!2045 = !DILocalVariable(arg: 1, scope: !2040, file: !1928, line: 507, type: !2043)
-!2046 = !{!2047}
-!2047 = !DITemplateTypeParameter(name: "T", type: !299)
-!2048 = !DILocation(line: 507, column: 1, scope: !2040)
-!2049 = distinct !DISubprogram(name: "drop_in_place<&(dyn core::any::Any + core::marker::Send)>", linkageName: "_ZN4core3ptr70drop_in_place$LT$$RF$dyn$u20$core..any..Any$u2b$core..marker..Send$GT$17h819ac95864651a47E", scope: !1929, file: !1928, line: 507, type: !2050, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2055, retainedNodes: !2053)
-!2050 = !DISubroutineType(types: !2051)
-!2051 = !{null, !2052}
-!2052 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut &(dyn core::any::Any + core::marker::Send)", baseType: !183, size: 64, align: 64, dwarfAddressSpace: 0)
+!2038 = !DILocalVariable(arg: 1, scope: !2033, file: !1928, line: 507, type: !2036)
+!2039 = !{!2040}
+!2040 = !DITemplateTypeParameter(name: "T", type: !183)
+!2041 = !DILocation(line: 507, column: 1, scope: !2033)
+!2042 = distinct !DISubprogram(name: "drop_in_place<spin::mutex::MutexGuard<text_buffer::Screen>>", linkageName: "_ZN4core3ptr71drop_in_place$LT$spin..mutex..MutexGuard$LT$text_buffer..Screen$GT$$GT$17h169c47592dd6f262E", scope: !1929, file: !1928, line: 507, type: !2043, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2055, retainedNodes: !2053)
+!2043 = !DISubroutineType(types: !2044)
+!2044 = !{null, !2045}
+!2045 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut spin::mutex::MutexGuard<text_buffer::Screen>", baseType: !2046, size: 64, align: 64, dwarfAddressSpace: 0)
+!2046 = !DICompositeType(tag: DW_TAG_structure_type, name: "MutexGuard<text_buffer::Screen>", scope: !610, file: !2, size: 128, align: 64, flags: DIFlagPublic, elements: !2047, templateParams: !635, identifier: "4816164392726289951edc649447ce03")
+!2047 = !{!2048}
+!2048 = !DIDerivedType(tag: DW_TAG_member, name: "inner", scope: !2046, file: !2, baseType: !2049, size: 128, align: 64, flags: DIFlagPrivate)
+!2049 = !DICompositeType(tag: DW_TAG_structure_type, name: "SpinMutexGuard<text_buffer::Screen>", scope: !614, file: !2, size: 128, align: 64, flags: DIFlagPublic, elements: !2050, templateParams: !635, identifier: "74d2b75d1bebc5e1f90e6bbb8663da4d")
+!2050 = !{!2051, !2052}
+!2051 = !DIDerivedType(tag: DW_TAG_member, name: "lock", scope: !2049, file: !2, baseType: !1939, size: 64, align: 64, flags: DIFlagPrivate)
+!2052 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !2049, file: !2, baseType: !2002, size: 64, align: 64, offset: 64, flags: DIFlagPrivate)
 !2053 = !{!2054}
-!2054 = !DILocalVariable(arg: 1, scope: !2049, file: !1928, line: 507, type: !2052)
+!2054 = !DILocalVariable(arg: 1, scope: !2042, file: !1928, line: 507, type: !2045)
 !2055 = !{!2056}
-!2056 = !DITemplateTypeParameter(name: "T", type: !183)
-!2057 = !DILocation(line: 507, column: 1, scope: !2049)
+!2056 = !DITemplateTypeParameter(name: "T", type: !2046)
+!2057 = !DILocation(line: 507, column: 1, scope: !2042)
 !2058 = distinct !DISubprogram(name: "drop_in_place<core::option::Option<&core::fmt::Arguments>>", linkageName: "_ZN4core3ptr73drop_in_place$LT$core..option..Option$LT$$RF$core..fmt..Arguments$GT$$GT$17h99ec4da07ce46419E", scope: !1929, file: !1928, line: 507, type: !2059, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2064, retainedNodes: !2062)
 !2059 = !DISubroutineType(types: !2060)
 !2060 = !{null, !2061}
@@ -10205,14 +10205,14 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2064 = !{!2065}
 !2065 = !DITemplateTypeParameter(name: "T", type: !197)
 !2066 = !DILocation(line: 507, column: 1, scope: !2058)
-!2067 = distinct !DISubprogram(name: "drop_in_place<spin::mutex::spin::SpinMutexGuard<vga::Screen>>", linkageName: "_ZN4core3ptr73drop_in_place$LT$spin..mutex..spin..SpinMutexGuard$LT$vga..Screen$GT$$GT$17h0b619d009a1750aaE", scope: !1929, file: !1928, line: 507, type: !2068, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2073, retainedNodes: !2071)
+!2067 = distinct !DISubprogram(name: "drop_in_place<spin::mutex::spin::SpinMutexGuard<text_buffer::Screen>>", linkageName: "_ZN4core3ptr81drop_in_place$LT$spin..mutex..spin..SpinMutexGuard$LT$text_buffer..Screen$GT$$GT$17h9da44c2089289720E", scope: !1929, file: !1928, line: 507, type: !2068, scopeLine: 507, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2073, retainedNodes: !2071)
 !2068 = !DISubroutineType(types: !2069)
 !2069 = !{null, !2070}
-!2070 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut spin::mutex::spin::SpinMutexGuard<vga::Screen>", baseType: !2031, size: 64, align: 64, dwarfAddressSpace: 0)
+!2070 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut spin::mutex::spin::SpinMutexGuard<text_buffer::Screen>", baseType: !2049, size: 64, align: 64, dwarfAddressSpace: 0)
 !2071 = !{!2072}
 !2072 = !DILocalVariable(arg: 1, scope: !2067, file: !1928, line: 507, type: !2070)
 !2073 = !{!2074}
-!2074 = !DITemplateTypeParameter(name: "T", type: !2031)
+!2074 = !DITemplateTypeParameter(name: "T", type: !2049)
 !2075 = !DILocation(line: 507, column: 1, scope: !2067)
 !2076 = distinct !DISubprogram(name: "from_utf8_unchecked_mut", linkageName: "_ZN4core3str8converts23from_utf8_unchecked_mut17h40ea98508f44d588E", scope: !2078, file: !2077, line: 201, type: !2080, scopeLine: 201, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29, retainedNodes: !2090)
 !2077 = !DIFile(filename: "/Users/yaw/.rustup/toolchains/nightly-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/str/converts.rs", directory: "", checksumkind: CSK_MD5, checksum: "da1fe9292a112b914c758915c9011305")
@@ -10903,25 +10903,25 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2762 = !DILocation(line: 682, column: 34, scope: !2731)
 !2763 = !DILocation(line: 685, column: 6, scope: !2731)
 !2764 = !{i64 2}
-!2765 = distinct !DISubprogram(name: "as_ref<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN4core6option15Option$LT$T$GT$6as_ref17hb6514294b2b221acE", scope: !601, file: !2674, line: 680, type: !2766, scopeLine: 680, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !607, declaration: !2783, retainedNodes: !2784)
+!2765 = distinct !DISubprogram(name: "as_ref<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN4core6option15Option$LT$T$GT$6as_ref17hc3be598db801e6d3E", scope: !601, file: !2674, line: 680, type: !2766, scopeLine: 680, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !607, declaration: !2783, retainedNodes: !2784)
 !2766 = !DISubroutineType(types: !2767)
 !2767 = !{!2768, !2782}
-!2768 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", scope: !33, file: !2, size: 64, align: 64, flags: DIFlagPublic, elements: !2769, templateParams: !29, identifier: "c376e80d1d13d3dc6eb6b93fb5acffee")
+!2768 = !DICompositeType(tag: DW_TAG_structure_type, name: "Option<&spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", scope: !33, file: !2, size: 64, align: 64, flags: DIFlagPublic, elements: !2769, templateParams: !29, identifier: "650852b4b431fbe6a9d7f4cedbc57de4")
 !2769 = !{!2770}
-!2770 = !DICompositeType(tag: DW_TAG_variant_part, scope: !2768, file: !2, size: 64, align: 64, elements: !2771, templateParams: !29, identifier: "55f7ae4882fb50a54c789dd677ebbbaf", discriminator: !2781)
+!2770 = !DICompositeType(tag: DW_TAG_variant_part, scope: !2768, file: !2, size: 64, align: 64, elements: !2771, templateParams: !29, identifier: "7f1d11e601a43811eafeddb1cba56980", discriminator: !2781)
 !2771 = !{!2772, !2777}
 !2772 = !DIDerivedType(tag: DW_TAG_member, name: "None", scope: !2770, file: !2, baseType: !2773, size: 64, align: 64, extraData: i128 0)
-!2773 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !2768, file: !2, size: 64, align: 64, flags: DIFlagPublic, elements: !29, templateParams: !2774, identifier: "3f4b234e3371410b62a22894d8664690")
+!2773 = !DICompositeType(tag: DW_TAG_structure_type, name: "None", scope: !2768, file: !2, size: 64, align: 64, flags: DIFlagPublic, elements: !29, templateParams: !2774, identifier: "56bb55a78c73542b6bd23060fa93d28f")
 !2774 = !{!2775}
 !2775 = !DITemplateTypeParameter(name: "T", type: !2776)
-!2776 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::mutex::Mutex<vga::Screen, spin::relax::Spin>", baseType: !609, size: 64, align: 64, dwarfAddressSpace: 0)
+!2776 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>", baseType: !609, size: 64, align: 64, dwarfAddressSpace: 0)
 !2777 = !DIDerivedType(tag: DW_TAG_member, name: "Some", scope: !2770, file: !2, baseType: !2778, size: 64, align: 64)
-!2778 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !2768, file: !2, size: 64, align: 64, flags: DIFlagPublic, elements: !2779, templateParams: !2774, identifier: "de215e816349a8b8e09caeaf3f9fe8f4")
+!2778 = !DICompositeType(tag: DW_TAG_structure_type, name: "Some", scope: !2768, file: !2, size: 64, align: 64, flags: DIFlagPublic, elements: !2779, templateParams: !2774, identifier: "9b2aa95aacc66422292a04353d0a42")
 !2779 = !{!2780}
 !2780 = !DIDerivedType(tag: DW_TAG_member, name: "__0", scope: !2778, file: !2, baseType: !2776, size: 64, align: 64, flags: DIFlagPublic)
 !2781 = !DIDerivedType(tag: DW_TAG_member, scope: !2768, file: !2, baseType: !76, size: 64, align: 64, flags: DIFlagArtificial)
-!2782 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::option::Option<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", baseType: !601, size: 64, align: 64, dwarfAddressSpace: 0)
-!2783 = !DISubprogram(name: "as_ref<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN4core6option15Option$LT$T$GT$6as_ref17hb6514294b2b221acE", scope: !601, file: !2674, line: 680, type: !2766, scopeLine: 680, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !607)
+!2782 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::option::Option<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", baseType: !601, size: 64, align: 64, dwarfAddressSpace: 0)
+!2783 = !DISubprogram(name: "as_ref<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN4core6option15Option$LT$T$GT$6as_ref17hc3be598db801e6d3E", scope: !601, file: !2674, line: 680, type: !2766, scopeLine: 680, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !607)
 !2784 = !{!2785, !2786}
 !2785 = !DILocalVariable(name: "self", arg: 1, scope: !2765, file: !2674, line: 680, type: !2782)
 !2786 = !DILocalVariable(name: "x", scope: !2787, file: !2674, line: 682, type: !2776, align: 8)
@@ -11009,16 +11009,16 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2868 = !DILexicalBlockFile(scope: !2816, file: !310, discriminator: 0)
 !2869 = !DILocation(line: 133, column: 5, scope: !2804)
 !2870 = !DILocation(line: 133, column: 6, scope: !2804)
-!2871 = distinct !DISubprogram(name: "call_once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17h524ced28fb72061cE", scope: !396, file: !2805, line: 98, type: !2872, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2876, declaration: !2875, retainedNodes: !2878)
+!2871 = distinct !DISubprogram(name: "call_once<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17h36d5eea70ef3a86fE", scope: !594, file: !2805, line: 98, type: !2872, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2876, declaration: !2875, retainedNodes: !2878)
 !2872 = !DISubroutineType(types: !2873)
-!2873 = !{!2709, !2874, !1854}
-!2874 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", baseType: !396, size: 64, align: 64, dwarfAddressSpace: 0)
-!2875 = !DISubprogram(name: "call_once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17h524ced28fb72061cE", scope: !396, file: !2805, line: 98, type: !2872, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2876)
-!2876 = !{!421, !2877}
-!2877 = !DITemplateTypeParameter(name: "F", type: !1854)
+!2873 = !{!2776, !2874, !1804}
+!2874 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::once::Once<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", baseType: !594, size: 64, align: 64, dwarfAddressSpace: 0)
+!2875 = !DISubprogram(name: "call_once<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17h36d5eea70ef3a86fE", scope: !594, file: !2805, line: 98, type: !2872, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2876)
+!2876 = !{!608, !2877}
+!2877 = !DITemplateTypeParameter(name: "F", type: !1804)
 !2878 = !{!2879, !2880, !2881, !2883}
 !2879 = !DILocalVariable(name: "self", arg: 1, scope: !2871, file: !2805, line: 98, type: !2874)
-!2880 = !DILocalVariable(name: "builder", arg: 2, scope: !2871, file: !2805, line: 98, type: !1854)
+!2880 = !DILocalVariable(name: "builder", arg: 2, scope: !2871, file: !2805, line: 98, type: !1804)
 !2881 = !DILocalVariable(name: "status", scope: !2882, file: !2805, line: 101, type: !9, align: 8)
 !2882 = distinct !DILexicalBlock(scope: !2871, file: !2805, line: 101, column: 9)
 !2883 = !DILocalVariable(name: "finish", scope: !2884, file: !2805, line: 109, type: !2819, align: 8)
@@ -11028,41 +11028,41 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2887 = !DILocation(line: 101, column: 13, scope: !2882)
 !2888 = !DILocation(line: 109, column: 21, scope: !2884)
 !2889 = !DILocation(line: 121, column: 9, scope: !2871)
-!2890 = !DILocation(line: 101, column: 26, scope: !2871)
-!2891 = !DILocation(line: 101, column: 42, scope: !2871)
+!2890 = !DILocation(line: 101, column: 42, scope: !2871)
+!2891 = !DILocation(line: 101, column: 26, scope: !2871)
 !2892 = !DILocation(line: 103, column: 12, scope: !2882)
 !2893 = !DILocation(line: 122, column: 13, scope: !2882)
-!2894 = !DILocation(line: 104, column: 22, scope: !2882)
-!2895 = !DILocation(line: 106, column: 50, scope: !2882)
+!2894 = !DILocation(line: 106, column: 50, scope: !2882)
+!2895 = !DILocation(line: 104, column: 22, scope: !2882)
 !2896 = !DILocation(line: 104, column: 13, scope: !2882)
 !2897 = !DILocation(line: 107, column: 16, scope: !2882)
-!2898 = !DILocation(line: 109, column: 50, scope: !2882)
-!2899 = !DILocation(line: 109, column: 34, scope: !2882)
-!2900 = !DILocation(line: 110, column: 50, scope: !2884)
-!2901 = !DILocation(line: 110, column: 45, scope: !2884)
+!2898 = !DILocation(line: 109, column: 34, scope: !2882)
+!2899 = !DILocation(line: 110, column: 50, scope: !2884)
+!2900 = !DILocation(line: 110, column: 45, scope: !2884)
+!2901 = !DILocation(line: 110, column: 27, scope: !2884)
 !2902 = !DILocalVariable(name: "self", arg: 1, scope: !2903, file: !1841, line: 2112, type: !2907)
-!2903 = distinct !DISubprogram(name: "get<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h75a881f29b383f91E", scope: !411, file: !1841, line: 2112, type: !2904, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !578, declaration: !2908, retainedNodes: !2909)
+!2903 = distinct !DISubprogram(name: "get<core::option::Option<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17habd40b2a2e11f503E", scope: !598, file: !1841, line: 2112, type: !2904, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !644, declaration: !2908, retainedNodes: !2909)
 !2904 = !DISubroutineType(types: !2905)
 !2905 = !{!2906, !2907}
-!2906 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", baseType: !414, size: 64, align: 64, dwarfAddressSpace: 0)
-!2907 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>", baseType: !411, size: 64, align: 64, dwarfAddressSpace: 0)
-!2908 = !DISubprogram(name: "get<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h75a881f29b383f91E", scope: !411, file: !1841, line: 2112, type: !2904, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !578)
+!2906 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::option::Option<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", baseType: !601, size: 64, align: 64, dwarfAddressSpace: 0)
+!2907 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>>", baseType: !598, size: 64, align: 64, dwarfAddressSpace: 0)
+!2908 = !DISubprogram(name: "get<core::option::Option<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17habd40b2a2e11f503E", scope: !598, file: !1841, line: 2112, type: !2904, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !644)
 !2909 = !{!2902}
 !2910 = !DILocation(line: 2112, column: 22, scope: !2903, inlinedAt: !2911)
 !2911 = distinct !DILocation(line: 110, column: 27, scope: !2884)
 !2912 = !DILocation(line: 110, column: 26, scope: !2884)
 !2913 = !DILocation(line: 111, column: 17, scope: !2884)
 !2914 = !DILocation(line: 113, column: 17, scope: !2884)
-!2915 = !DILocation(line: 114, column: 17, scope: !2884)
-!2916 = !DILocation(line: 114, column: 34, scope: !2884)
-!2917 = !DILocation(line: 114, column: 42, scope: !2884)
+!2915 = !DILocation(line: 114, column: 34, scope: !2884)
+!2916 = !DILocation(line: 114, column: 42, scope: !2884)
+!2917 = !DILocation(line: 114, column: 17, scope: !2884)
 !2918 = !DILocation(line: 117, column: 24, scope: !2884)
 !2919 = !DILocation(line: 118, column: 13, scope: !2882)
 !2920 = !DILocation(line: 130, column: 31, scope: !2882)
 !2921 = !DILocation(line: 123, column: 31, scope: !2882)
 !2922 = !DILocation(line: 125, column: 21, scope: !2882)
-!2923 = !DILocation(line: 126, column: 30, scope: !2882)
-!2924 = !DILocation(line: 126, column: 46, scope: !2882)
+!2923 = !DILocation(line: 126, column: 46, scope: !2882)
+!2924 = !DILocation(line: 126, column: 30, scope: !2882)
 !2925 = !DILocation(line: 126, column: 21, scope: !2882)
 !2926 = !DILocation(line: 126, column: 62, scope: !2882)
 !2927 = !DILocation(line: 128, column: 29, scope: !2882)
@@ -11071,16 +11071,16 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2930 = !DILexicalBlockFile(scope: !2882, file: !310, discriminator: 0)
 !2931 = !DILocation(line: 133, column: 5, scope: !2871)
 !2932 = !DILocation(line: 133, column: 6, scope: !2871)
-!2933 = distinct !DISubprogram(name: "call_once<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17hac05a90989645468E", scope: !594, file: !2805, line: 98, type: !2934, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2938, declaration: !2937, retainedNodes: !2940)
+!2933 = distinct !DISubprogram(name: "call_once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17h524ced28fb72061cE", scope: !396, file: !2805, line: 98, type: !2934, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2938, declaration: !2937, retainedNodes: !2940)
 !2934 = !DISubroutineType(types: !2935)
-!2935 = !{!2776, !2936, !1804}
-!2936 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::once::Once<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", baseType: !594, size: 64, align: 64, dwarfAddressSpace: 0)
-!2937 = !DISubprogram(name: "call_once<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17hac05a90989645468E", scope: !594, file: !2805, line: 98, type: !2934, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2938)
-!2938 = !{!608, !2939}
-!2939 = !DITemplateTypeParameter(name: "F", type: !1804)
+!2935 = !{!2709, !2936, !1854}
+!2936 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::once::Once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", baseType: !396, size: 64, align: 64, dwarfAddressSpace: 0)
+!2937 = !DISubprogram(name: "call_once<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9call_once17h524ced28fb72061cE", scope: !396, file: !2805, line: 98, type: !2934, scopeLine: 98, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2938)
+!2938 = !{!421, !2939}
+!2939 = !DITemplateTypeParameter(name: "F", type: !1854)
 !2940 = !{!2941, !2942, !2943, !2945}
 !2941 = !DILocalVariable(name: "self", arg: 1, scope: !2933, file: !2805, line: 98, type: !2936)
-!2942 = !DILocalVariable(name: "builder", arg: 2, scope: !2933, file: !2805, line: 98, type: !1804)
+!2942 = !DILocalVariable(name: "builder", arg: 2, scope: !2933, file: !2805, line: 98, type: !1854)
 !2943 = !DILocalVariable(name: "status", scope: !2944, file: !2805, line: 101, type: !9, align: 8)
 !2944 = distinct !DILexicalBlock(scope: !2933, file: !2805, line: 101, column: 9)
 !2945 = !DILocalVariable(name: "finish", scope: !2946, file: !2805, line: 109, type: !2819, align: 8)
@@ -11090,41 +11090,41 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2949 = !DILocation(line: 101, column: 13, scope: !2944)
 !2950 = !DILocation(line: 109, column: 21, scope: !2946)
 !2951 = !DILocation(line: 121, column: 9, scope: !2933)
-!2952 = !DILocation(line: 101, column: 42, scope: !2933)
-!2953 = !DILocation(line: 101, column: 26, scope: !2933)
+!2952 = !DILocation(line: 101, column: 26, scope: !2933)
+!2953 = !DILocation(line: 101, column: 42, scope: !2933)
 !2954 = !DILocation(line: 103, column: 12, scope: !2944)
 !2955 = !DILocation(line: 122, column: 13, scope: !2944)
-!2956 = !DILocation(line: 106, column: 50, scope: !2944)
-!2957 = !DILocation(line: 104, column: 22, scope: !2944)
+!2956 = !DILocation(line: 104, column: 22, scope: !2944)
+!2957 = !DILocation(line: 106, column: 50, scope: !2944)
 !2958 = !DILocation(line: 104, column: 13, scope: !2944)
 !2959 = !DILocation(line: 107, column: 16, scope: !2944)
-!2960 = !DILocation(line: 109, column: 34, scope: !2944)
-!2961 = !DILocation(line: 110, column: 50, scope: !2946)
-!2962 = !DILocation(line: 110, column: 45, scope: !2946)
-!2963 = !DILocation(line: 110, column: 27, scope: !2946)
+!2960 = !DILocation(line: 109, column: 50, scope: !2944)
+!2961 = !DILocation(line: 109, column: 34, scope: !2944)
+!2962 = !DILocation(line: 110, column: 50, scope: !2946)
+!2963 = !DILocation(line: 110, column: 45, scope: !2946)
 !2964 = !DILocalVariable(name: "self", arg: 1, scope: !2965, file: !1841, line: 2112, type: !2969)
-!2965 = distinct !DISubprogram(name: "get<core::option::Option<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h01dc2a34a5534facE", scope: !598, file: !1841, line: 2112, type: !2966, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !644, declaration: !2970, retainedNodes: !2971)
+!2965 = distinct !DISubprogram(name: "get<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h75a881f29b383f91E", scope: !411, file: !1841, line: 2112, type: !2966, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !578, declaration: !2970, retainedNodes: !2971)
 !2966 = !DISubroutineType(types: !2967)
 !2967 = !{!2968, !2969}
-!2968 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::option::Option<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", baseType: !601, size: 64, align: 64, dwarfAddressSpace: 0)
-!2969 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<core::option::Option<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>>", baseType: !598, size: 64, align: 64, dwarfAddressSpace: 0)
-!2970 = !DISubprogram(name: "get<core::option::Option<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h01dc2a34a5534facE", scope: !598, file: !1841, line: 2112, type: !2966, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !644)
+!2968 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "*mut core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", baseType: !414, size: 64, align: 64, dwarfAddressSpace: 0)
+!2969 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>", baseType: !411, size: 64, align: 64, dwarfAddressSpace: 0)
+!2970 = !DISubprogram(name: "get<core::option::Option<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17h75a881f29b383f91E", scope: !411, file: !1841, line: 2112, type: !2966, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !578)
 !2971 = !{!2964}
 !2972 = !DILocation(line: 2112, column: 22, scope: !2965, inlinedAt: !2973)
 !2973 = distinct !DILocation(line: 110, column: 27, scope: !2946)
 !2974 = !DILocation(line: 110, column: 26, scope: !2946)
 !2975 = !DILocation(line: 111, column: 17, scope: !2946)
 !2976 = !DILocation(line: 113, column: 17, scope: !2946)
-!2977 = !DILocation(line: 114, column: 34, scope: !2946)
-!2978 = !DILocation(line: 114, column: 42, scope: !2946)
-!2979 = !DILocation(line: 114, column: 17, scope: !2946)
+!2977 = !DILocation(line: 114, column: 17, scope: !2946)
+!2978 = !DILocation(line: 114, column: 34, scope: !2946)
+!2979 = !DILocation(line: 114, column: 42, scope: !2946)
 !2980 = !DILocation(line: 117, column: 24, scope: !2946)
 !2981 = !DILocation(line: 118, column: 13, scope: !2944)
 !2982 = !DILocation(line: 130, column: 31, scope: !2944)
 !2983 = !DILocation(line: 123, column: 31, scope: !2944)
 !2984 = !DILocation(line: 125, column: 21, scope: !2944)
-!2985 = !DILocation(line: 126, column: 46, scope: !2944)
-!2986 = !DILocation(line: 126, column: 30, scope: !2944)
+!2985 = !DILocation(line: 126, column: 30, scope: !2944)
+!2986 = !DILocation(line: 126, column: 46, scope: !2944)
 !2987 = !DILocation(line: 126, column: 21, scope: !2944)
 !2988 = !DILocation(line: 126, column: 62, scope: !2944)
 !2989 = !DILocation(line: 128, column: 29, scope: !2944)
@@ -11133,17 +11133,17 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !2992 = !DILexicalBlockFile(scope: !2944, file: !310, discriminator: 0)
 !2993 = !DILocation(line: 133, column: 5, scope: !2933)
 !2994 = !DILocation(line: 133, column: 6, scope: !2933)
-!2995 = distinct !DISubprogram(name: "force_get<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9force_get17h2f8b4bf09c6ecfdbE", scope: !594, file: !2805, line: 63, type: !2996, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !607, declaration: !2998, retainedNodes: !2999)
+!2995 = distinct !DISubprogram(name: "force_get<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9force_get17h4806fc7a105113a1E", scope: !594, file: !2805, line: 63, type: !2996, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !607, declaration: !2998, retainedNodes: !2999)
 !2996 = !DISubroutineType(types: !2997)
-!2997 = !{!2776, !2936}
-!2998 = !DISubprogram(name: "force_get<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9force_get17h2f8b4bf09c6ecfdbE", scope: !594, file: !2805, line: 63, type: !2996, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !607)
+!2997 = !{!2776, !2874}
+!2998 = !DISubprogram(name: "force_get<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9force_get17h4806fc7a105113a1E", scope: !594, file: !2805, line: 63, type: !2996, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !607)
 !2999 = !{!3000, !3001}
-!3000 = !DILocalVariable(name: "self", arg: 1, scope: !2995, file: !2805, line: 63, type: !2936)
+!3000 = !DILocalVariable(name: "self", arg: 1, scope: !2995, file: !2805, line: 63, type: !2874)
 !3001 = !DILocalVariable(name: "p", scope: !3002, file: !2805, line: 66, type: !2776, align: 8)
 !3002 = distinct !DILexicalBlock(scope: !2995, file: !2805, line: 66, column: 13)
 !3003 = !DILocation(line: 63, column: 22, scope: !2995)
 !3004 = !DILocation(line: 64, column: 26, scope: !2995)
-!3005 = !DILocation(line: 2112, column: 22, scope: !2965, inlinedAt: !3006)
+!3005 = !DILocation(line: 2112, column: 22, scope: !2903, inlinedAt: !3006)
 !3006 = distinct !DILocation(line: 64, column: 26, scope: !2995)
 !3007 = !DILocation(line: 64, column: 15, scope: !2995)
 !3008 = !DILocation(line: 64, column: 9, scope: !2995)
@@ -11171,14 +11171,14 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3030 = !DILocation(line: 68, column: 6, scope: !3013)
 !3031 = distinct !DISubprogram(name: "force_get<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9force_get17hfecdf8d252a23e07E", scope: !396, file: !2805, line: 63, type: !3032, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !420, declaration: !3034, retainedNodes: !3035)
 !3032 = !DISubroutineType(types: !3033)
-!3033 = !{!2709, !2874}
+!3033 = !{!2709, !2936}
 !3034 = !DISubprogram(name: "force_get<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN4spin4once13Once$LT$T$GT$9force_get17hfecdf8d252a23e07E", scope: !396, file: !2805, line: 63, type: !3032, scopeLine: 63, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !420)
 !3035 = !{!3036, !3037}
-!3036 = !DILocalVariable(name: "self", arg: 1, scope: !3031, file: !2805, line: 63, type: !2874)
+!3036 = !DILocalVariable(name: "self", arg: 1, scope: !3031, file: !2805, line: 63, type: !2936)
 !3037 = !DILocalVariable(name: "p", scope: !3038, file: !2805, line: 66, type: !2709, align: 8)
 !3038 = distinct !DILexicalBlock(scope: !3031, file: !2805, line: 66, column: 13)
 !3039 = !DILocation(line: 63, column: 22, scope: !3031)
-!3040 = !DILocation(line: 2112, column: 22, scope: !2903, inlinedAt: !3041)
+!3040 = !DILocation(line: 2112, column: 22, scope: !2965, inlinedAt: !3041)
 !3041 = distinct !DILocation(line: 64, column: 26, scope: !3031)
 !3042 = !DILocation(line: 64, column: 15, scope: !3031)
 !3043 = !DILocation(line: 64, column: 9, scope: !3031)
@@ -11440,13 +11440,13 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3299 = !DILocation(line: 20, column: 20, scope: !3298)
 !3300 = !DILocation(line: 20, column: 5, scope: !3298)
 !3301 = !DILocation(line: 22, column: 9, scope: !3298)
-!3302 = !{i32 246181}
+!3302 = !{i32 246194}
 !3303 = !DILocation(line: 24, column: 2, scope: !3298)
 !3304 = distinct !DISubprogram(name: "disable", linkageName: "_ZN6x86_6412instructions10interrupts7disable17h728cd6bd8d8ab555E", scope: !3276, file: !3275, line: 30, type: !2262, scopeLine: 30, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29)
 !3305 = !DILocation(line: 32, column: 20, scope: !3304)
 !3306 = !DILocation(line: 32, column: 5, scope: !3304)
 !3307 = !DILocation(line: 34, column: 9, scope: !3304)
-!3308 = !{i32 246457}
+!3308 = !{i32 246470}
 !3309 = !DILocation(line: 36, column: 2, scope: !3304)
 !3310 = distinct !DISubprogram(name: "get_reg", linkageName: "_ZN6x86_6412instructions12segmentation106_$LT$impl$u20$x86_64..registers..segmentation..Segment$u20$for$u20$x86_64..registers..segmentation..CS$GT$7get_reg17h42c18a35a208f336E", scope: !3312, file: !3311, line: 14, type: !3314, scopeLine: 14, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29, retainedNodes: !3321)
 !3311 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/x86_64-0.14.11/src/instructions/segmentation.rs", directory: "", checksumkind: CSK_MD5, checksum: "7756f86a7b45782f4dbb54eae93deb4e")
@@ -11464,14 +11464,14 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3323 = distinct !DILexicalBlock(scope: !3310, file: !3311, line: 15, column: 13)
 !3324 = !DILocation(line: 15, column: 17, scope: !3323)
 !3325 = !DILocation(line: 17, column: 17, scope: !3323)
-!3326 = !{i32 2074552}
+!3326 = !{i32 2080290}
 !3327 = !DILocation(line: 19, column: 29, scope: !3323)
 !3328 = !DILocation(line: 19, column: 13, scope: !3323)
 !3329 = !DILocation(line: 20, column: 10, scope: !3310)
 !3330 = distinct !DISubprogram(name: "hlt", linkageName: "_ZN6x86_6412instructions3hlt17h7a3c007311eeea36E", scope: !741, file: !3331, line: 16, type: !2262, scopeLine: 16, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29)
 !3331 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/x86_64-0.14.11/src/instructions/mod.rs", directory: "", checksumkind: CSK_MD5, checksum: "51fed88ab7d29c8852de42c270133124")
 !3332 = !DILocation(line: 18, column: 9, scope: !3330)
-!3333 = !{i32 157777}
+!3333 = !{i32 157790}
 !3334 = !DILocation(line: 20, column: 2, scope: !3330)
 !3335 = distinct !DISubprogram(name: "new_truncate", linkageName: "_ZN6x86_644addr8VirtAddr12new_truncate17hf781e0b3d2a4c75cE", scope: !455, file: !3336, line: 97, type: !3337, scopeLine: 97, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29, declaration: !3339, retainedNodes: !3340)
 !3336 = !DIFile(filename: "/Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/x86_64-0.14.11/src/addr.rs", directory: "", checksumkind: CSK_MD5, checksum: "db0a3a6c7c3a5543598cb3a8a6160561")
@@ -11758,7 +11758,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3617 = distinct !DILexicalBlock(scope: !3612, file: !3422, line: 91, column: 9)
 !3618 = !DILocation(line: 91, column: 13, scope: !3617)
 !3619 = !DILocation(line: 94, column: 13, scope: !3617)
-!3620 = !{i32 2084041}
+!3620 = !{i32 2089779}
 !3621 = !DILocation(line: 97, column: 9, scope: !3617)
 !3622 = !DILocation(line: 98, column: 6, scope: !3612)
 !3623 = distinct !DISubprogram(name: "read", linkageName: "_ZN6x86_649registers7control6x86_6449_$LT$impl$u20$x86_64..registers..control..Cr2$GT$4read17hadc80871ffd6fdeaE", scope: !3625, file: !3624, line: 272, type: !3627, scopeLine: 272, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29, declaration: !3629)
@@ -11778,7 +11778,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3637 = distinct !DILexicalBlock(scope: !3633, file: !3624, line: 279, column: 13)
 !3638 = !DILocation(line: 279, column: 17, scope: !3637)
 !3639 = !DILocation(line: 282, column: 17, scope: !3637)
-!3640 = !{i32 420760}
+!3640 = !{i32 420773}
 !3641 = !DILocation(line: 285, column: 13, scope: !3637)
 !3642 = !DILocation(line: 286, column: 10, scope: !3633)
 !3643 = distinct !DISubprogram(name: "fmt", linkageName: "_ZN71_$LT$core..panic..panic_info..PanicInfo$u20$as$u20$core..fmt..Debug$GT$3fmt17he44d380ced25dd68E", scope: !3645, file: !3644, line: 25, type: !3646, scopeLine: 25, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29, retainedNodes: !3648)
@@ -11795,7 +11795,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3654 = !DILocation(line: 30, column: 5, scope: !3643)
 !3655 = !DILocation(line: 31, column: 5, scope: !3643)
 !3656 = !DILocation(line: 25, column: 15, scope: !3643)
-!3657 = distinct !DISubprogram(name: "spec_write_fmt<vga::Screen>", linkageName: "_ZN75_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write..write_fmt..SpecWriteFmt$GT$14spec_write_fmt17h0c4d0463cbc2b2c4E", scope: !3658, file: !1537, line: 210, type: !1723, scopeLine: 210, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !3663, retainedNodes: !3660)
+!3657 = distinct !DISubprogram(name: "spec_write_fmt<text_buffer::Screen>", linkageName: "_ZN75_$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write..write_fmt..SpecWriteFmt$GT$14spec_write_fmt17h67ef9e4eb80d8ee2E", scope: !3658, file: !1537, line: 210, type: !1723, scopeLine: 210, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !3663, retainedNodes: !3660)
 !3658 = !DINamespace(name: "{impl#1}", scope: !3659)
 !3659 = !DINamespace(name: "write_fmt", scope: !1707)
 !3660 = !{!3661, !3662}
@@ -11853,10 +11853,10 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3712 = !DILocation(line: 312, column: 18, scope: !3704)
 !3713 = !DILocation(line: 313, column: 14, scope: !3704)
 !3714 = !DILocation(line: 314, column: 6, scope: !3704)
-!3715 = distinct !DISubprogram(name: "deref_mut<vga::Screen>", linkageName: "_ZN79_$LT$spin..mutex..MutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h2d9f8d7b6286a791E", scope: !3705, file: !1822, line: 312, type: !3716, scopeLine: 312, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !3719)
+!3715 = distinct !DISubprogram(name: "deref_mut<text_buffer::Screen>", linkageName: "_ZN79_$LT$spin..mutex..MutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h73e3304029e06bb6E", scope: !3705, file: !1822, line: 312, type: !3716, scopeLine: 312, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !3719)
 !3716 = !DISubroutineType(types: !3717)
 !3717 = !{!1710, !3718}
-!3718 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::mutex::MutexGuard<vga::Screen>", baseType: !2028, size: 64, align: 64, dwarfAddressSpace: 0)
+!3718 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::mutex::MutexGuard<text_buffer::Screen>", baseType: !2046, size: 64, align: 64, dwarfAddressSpace: 0)
 !3719 = !{!3720}
 !3720 = !DILocalVariable(name: "self", arg: 1, scope: !3715, file: !1822, line: 312, type: !3718)
 !3721 = !DILocation(line: 312, column: 18, scope: !3715)
@@ -11896,21 +11896,21 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3755 = !DILocation(line: 2481, column: 22, scope: !3748)
 !3756 = !DILocation(line: 2483, column: 21, scope: !3748)
 !3757 = !DILocation(line: 2485, column: 6, scope: !3748)
-!3758 = distinct !DISubprogram(name: "drop<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>", linkageName: "_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1b1b22cfd857ac43E", scope: !3759, file: !1831, line: 349, type: !3760, scopeLine: 349, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !757, retainedNodes: !3763)
+!3758 = distinct !DISubprogram(name: "drop<text_buffer::Screen>", linkageName: "_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1aba09227e054e4bE", scope: !3759, file: !1831, line: 349, type: !3760, scopeLine: 349, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !3763)
 !3759 = !DINamespace(name: "{impl#15}", scope: !614)
 !3760 = !DISubroutineType(types: !3761)
 !3761 = !{null, !3762}
-!3762 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::mutex::spin::SpinMutexGuard<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>", baseType: !1936, size: 64, align: 64, dwarfAddressSpace: 0)
+!3762 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::mutex::spin::SpinMutexGuard<text_buffer::Screen>", baseType: !2049, size: 64, align: 64, dwarfAddressSpace: 0)
 !3763 = !{!3764}
 !3764 = !DILocalVariable(name: "self", arg: 1, scope: !3758, file: !1831, line: 349, type: !3762)
 !3765 = !DILocation(line: 349, column: 13, scope: !3758)
 !3766 = !DILocation(line: 350, column: 9, scope: !3758)
 !3767 = !DILocation(line: 350, column: 32, scope: !3758)
 !3768 = !DILocation(line: 351, column: 6, scope: !3758)
-!3769 = distinct !DISubprogram(name: "drop<vga::Screen>", linkageName: "_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1f76c0e611e2efbeE", scope: !3759, file: !1831, line: 349, type: !3770, scopeLine: 349, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !3773)
+!3769 = distinct !DISubprogram(name: "drop<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>", linkageName: "_ZN84_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h1b1b22cfd857ac43E", scope: !3759, file: !1831, line: 349, type: !3770, scopeLine: 349, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !757, retainedNodes: !3773)
 !3770 = !DISubroutineType(types: !3771)
 !3771 = !{null, !3772}
-!3772 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::mutex::spin::SpinMutexGuard<vga::Screen>", baseType: !2031, size: 64, align: 64, dwarfAddressSpace: 0)
+!3772 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&mut spin::mutex::spin::SpinMutexGuard<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>", baseType: !1936, size: 64, align: 64, dwarfAddressSpace: 0)
 !3773 = !{!3774}
 !3774 = !DILocalVariable(name: "self", arg: 1, scope: !3769, file: !1831, line: 349, type: !3772)
 !3775 = !DILocation(line: 349, column: 13, scope: !3769)
@@ -11920,17 +11920,17 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !3779 = distinct !DISubprogram(name: "deref_mut<keyboard::Keyboard<pc_keyboard::layouts::us104::Us104Key, pc_keyboard::scancodes::set1::ScancodeSet1>>", linkageName: "_ZN89_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h01364d77b972aadfE", scope: !3780, file: !1831, line: 341, type: !3781, scopeLine: 341, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !757, retainedNodes: !3783)
 !3780 = !DINamespace(name: "{impl#14}", scope: !614)
 !3781 = !DISubroutineType(types: !3782)
-!3782 = !{!3708, !3762}
+!3782 = !{!3708, !3772}
 !3783 = !{!3784}
-!3784 = !DILocalVariable(name: "self", arg: 1, scope: !3779, file: !1831, line: 341, type: !3762)
+!3784 = !DILocalVariable(name: "self", arg: 1, scope: !3779, file: !1831, line: 341, type: !3772)
 !3785 = !DILocation(line: 341, column: 18, scope: !3779)
 !3786 = !DILocation(line: 343, column: 18, scope: !3779)
 !3787 = !DILocation(line: 344, column: 6, scope: !3779)
-!3788 = distinct !DISubprogram(name: "deref_mut<vga::Screen>", linkageName: "_ZN89_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17hbf47a8b40966ea2aE", scope: !3780, file: !1831, line: 341, type: !3789, scopeLine: 341, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !3791)
+!3788 = distinct !DISubprogram(name: "deref_mut<text_buffer::Screen>", linkageName: "_ZN89_$LT$spin..mutex..spin..SpinMutexGuard$LT$T$GT$$u20$as$u20$core..ops..deref..DerefMut$GT$9deref_mut17h778bc540d9c91f98E", scope: !3780, file: !1831, line: 341, type: !3789, scopeLine: 341, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, retainedNodes: !3791)
 !3789 = !DISubroutineType(types: !3790)
-!3790 = !{!1710, !3772}
+!3790 = !{!1710, !3762}
 !3791 = !{!3792}
-!3792 = !DILocalVariable(name: "self", arg: 1, scope: !3788, file: !1831, line: 341, type: !3772)
+!3792 = !DILocalVariable(name: "self", arg: 1, scope: !3788, file: !1831, line: 341, type: !3762)
 !3793 = !DILocation(line: 341, column: 18, scope: !3788)
 !3794 = !DILocation(line: 343, column: 18, scope: !3788)
 !3795 = !DILocation(line: 344, column: 6, scope: !3788)
@@ -12545,19 +12545,19 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !4404 = !DILocation(line: 27, column: 15, scope: !4401)
 !4405 = !DILocation(line: 29, column: 37, scope: !4401)
 !4406 = !DILocalVariable(name: "self", arg: 1, scope: !4407, file: !1822, line: 184, type: !2776)
-!4407 = distinct !DISubprogram(name: "lock<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$4lock17h611b99152af372c5E", scope: !609, file: !1822, line: 184, type: !4408, scopeLine: 184, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !4410, retainedNodes: !4411)
+!4407 = distinct !DISubprogram(name: "lock<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$4lock17h5dfe79ec78f6a08dE", scope: !609, file: !1822, line: 184, type: !4408, scopeLine: 184, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !4410, retainedNodes: !4411)
 !4408 = !DISubroutineType(types: !4409)
-!4409 = !{!2028, !2776}
-!4410 = !DISubprogram(name: "lock<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$4lock17h611b99152af372c5E", scope: !609, file: !1822, line: 184, type: !4408, scopeLine: 184, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
+!4409 = !{!2046, !2776}
+!4410 = !DISubprogram(name: "lock<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex18Mutex$LT$T$C$R$GT$4lock17h5dfe79ec78f6a08dE", scope: !609, file: !1822, line: 184, type: !4408, scopeLine: 184, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
 !4411 = !{!4406}
 !4412 = !DILocation(line: 184, column: 17, scope: !4407, inlinedAt: !4413)
 !4413 = distinct !DILocation(line: 29, column: 37, scope: !4401)
 !4414 = !DILocalVariable(name: "self", arg: 1, scope: !4415, file: !1831, line: 177, type: !4418)
-!4415 = distinct !DISubprogram(name: "lock<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h06d59d148b81c44bE", scope: !613, file: !1831, line: 177, type: !4416, scopeLine: 177, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !4419, retainedNodes: !4420)
+!4415 = distinct !DISubprogram(name: "lock<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h20057546bb77952bE", scope: !613, file: !1831, line: 177, type: !4416, scopeLine: 177, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !4419, retainedNodes: !4420)
 !4416 = !DISubroutineType(types: !4417)
-!4417 = !{!2031, !4418}
-!4418 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::mutex::spin::SpinMutex<vga::Screen, spin::relax::Spin>", baseType: !613, size: 64, align: 64, dwarfAddressSpace: 0)
-!4419 = !DISubprogram(name: "lock<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h06d59d148b81c44bE", scope: !613, file: !1831, line: 177, type: !4416, scopeLine: 177, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
+!4417 = !{!2049, !4418}
+!4418 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&spin::mutex::spin::SpinMutex<text_buffer::Screen, spin::relax::Spin>", baseType: !613, size: 64, align: 64, dwarfAddressSpace: 0)
+!4419 = !DISubprogram(name: "lock<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$4lock17h20057546bb77952bE", scope: !613, file: !1831, line: 177, type: !4416, scopeLine: 177, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
 !4420 = !{!4414}
 !4421 = !DILocation(line: 177, column: 17, scope: !4415, inlinedAt: !4422)
 !4422 = distinct !DILocation(line: 186, column: 20, scope: !4407, inlinedAt: !4413)
@@ -12566,10 +12566,10 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !4425 = !DILocation(line: 182, column: 68, scope: !4415, inlinedAt: !4422)
 !4426 = !DILocation(line: 180, column: 15, scope: !4415, inlinedAt: !4422)
 !4427 = !DILocalVariable(name: "self", arg: 1, scope: !4428, file: !1831, line: 206, type: !4418)
-!4428 = distinct !DISubprogram(name: "is_locked<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$9is_locked17h482f194b33327bafE", scope: !613, file: !1831, line: 206, type: !4429, scopeLine: 206, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !4431, retainedNodes: !4432)
+!4428 = distinct !DISubprogram(name: "is_locked<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$9is_locked17h7899542441a49220E", scope: !613, file: !1831, line: 206, type: !4429, scopeLine: 206, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !637, declaration: !4431, retainedNodes: !4432)
 !4429 = !DISubroutineType(types: !4430)
 !4430 = !{!234, !4418}
-!4431 = !DISubprogram(name: "is_locked<vga::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$9is_locked17h482f194b33327bafE", scope: !613, file: !1831, line: 206, type: !4429, scopeLine: 206, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
+!4431 = !DISubprogram(name: "is_locked<text_buffer::Screen, spin::relax::Spin>", linkageName: "_ZN4spin5mutex4spin22SpinMutex$LT$T$C$R$GT$9is_locked17h7899542441a49220E", scope: !613, file: !1831, line: 206, type: !4429, scopeLine: 206, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !637)
 !4432 = !{!4427}
 !4433 = !DILocation(line: 206, column: 22, scope: !4428, inlinedAt: !4434)
 !4434 = distinct !DILocation(line: 186, column: 19, scope: !4415, inlinedAt: !4422)
@@ -12581,11 +12581,11 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !4440 = !DILocation(line: 187, column: 17, scope: !4415, inlinedAt: !4422)
 !4441 = !DILocation(line: 193, column: 34, scope: !4415, inlinedAt: !4422)
 !4442 = !DILocalVariable(name: "self", arg: 1, scope: !4443, file: !1841, line: 2112, type: !4446)
-!4443 = distinct !DISubprogram(name: "get<vga::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17hb0996107b75a35f0E", scope: !632, file: !1841, line: 2112, type: !4444, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, declaration: !4447, retainedNodes: !4448)
+!4443 = distinct !DISubprogram(name: "get<text_buffer::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17he5afb3910d0d1499E", scope: !632, file: !1841, line: 2112, type: !4444, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !635, declaration: !4447, retainedNodes: !4448)
 !4444 = !DISubroutineType(types: !4445)
 !4445 = !{!2002, !4446}
-!4446 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<vga::Screen>", baseType: !632, size: 64, align: 64, dwarfAddressSpace: 0)
-!4447 = !DISubprogram(name: "get<vga::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17hb0996107b75a35f0E", scope: !632, file: !1841, line: 2112, type: !4444, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !635)
+!4446 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&core::cell::UnsafeCell<text_buffer::Screen>", baseType: !632, size: 64, align: 64, dwarfAddressSpace: 0)
+!4447 = !DISubprogram(name: "get<text_buffer::Screen>", linkageName: "_ZN4core4cell19UnsafeCell$LT$T$GT$3get17he5afb3910d0d1499E", scope: !632, file: !1841, line: 2112, type: !4444, scopeLine: 2112, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !635)
 !4448 = !{!4442}
 !4449 = !DILocation(line: 2112, column: 22, scope: !4443, inlinedAt: !4450)
 !4450 = distinct !DILocation(line: 193, column: 34, scope: !4415, inlinedAt: !4422)
@@ -12665,11 +12665,11 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !4524 = !DILocalVariable(name: "self", arg: 1, scope: !4519, file: !381, line: 135, type: !4522)
 !4525 = !DILocation(line: 135, column: 22, scope: !4519)
 !4526 = !DILocalVariable(name: "self", arg: 1, scope: !4527, file: !390, line: 18, type: !4530)
-!4527 = distinct !DISubprogram(name: "get<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h05674d53e94f6c3eE", scope: !391, file: !390, line: 18, type: !4528, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2876, declaration: !4531, retainedNodes: !4532)
+!4527 = distinct !DISubprogram(name: "get<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h05674d53e94f6c3eE", scope: !391, file: !390, line: 18, type: !4528, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2938, declaration: !4531, retainedNodes: !4532)
 !4528 = !DISubroutineType(types: !4529)
 !4529 = !{!2709, !4530, !1854}
 !4530 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&lazy_static::lazy::Lazy<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", baseType: !391, size: 64, align: 64, dwarfAddressSpace: 0)
-!4531 = !DISubprogram(name: "get<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h05674d53e94f6c3eE", scope: !391, file: !390, line: 18, type: !4528, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2876)
+!4531 = !DISubprogram(name: "get<cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable, fn() -> cpu_interrupts::interrupt_descriptor_table::SafeInterruptDescriptorTable>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h05674d53e94f6c3eE", scope: !391, file: !390, line: 18, type: !4528, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2938)
 !4532 = !{!4526, !4533}
 !4533 = !DILocalVariable(name: "builder", arg: 2, scope: !4527, file: !390, line: 18, type: !1854)
 !4534 = !DILocation(line: 18, column: 19, scope: !4527, inlinedAt: !4535)
@@ -12681,7 +12681,7 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !4540 = !DILocation(line: 18, column: 34, scope: !4527, inlinedAt: !4535)
 !4541 = !DILocation(line: 21, column: 9, scope: !4527, inlinedAt: !4535)
 !4542 = !DILocation(line: 145, column: 14, scope: !4519)
-!4543 = distinct !DISubprogram(name: "deref", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref17h809d8d4dd27057b0E", scope: !590, file: !381, line: 135, type: !4544, scopeLine: 135, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29, retainedNodes: !4547)
+!4543 = distinct !DISubprogram(name: "deref", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref17hde9fb2d75d2e2a82E", scope: !590, file: !381, line: 135, type: !4544, scopeLine: 135, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29, retainedNodes: !4547)
 !4544 = !DISubroutineType(types: !4545)
 !4545 = !{!2776, !4546}
 !4546 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&theo::peripherals::VGA_DISPLAY_IN_TEXT_MODE", baseType: !583, size: 64, align: 64, dwarfAddressSpace: 0)
@@ -12689,16 +12689,16 @@ attributes #12 = { memory(inaccessiblemem: readwrite) }
 !4548 = !DILocalVariable(name: "self", arg: 1, scope: !4543, file: !381, line: 135, type: !4546)
 !4549 = !DILocation(line: 135, column: 22, scope: !4543)
 !4550 = !DILocalVariable(name: "self", arg: 1, scope: !4551, file: !390, line: 18, type: !4554)
-!4551 = distinct !DISubprogram(name: "get<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h460595ba78221e08E", scope: !591, file: !390, line: 18, type: !4552, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2938, declaration: !4555, retainedNodes: !4556)
+!4551 = distinct !DISubprogram(name: "get<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h04c631d0ecf42381E", scope: !591, file: !390, line: 18, type: !4552, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !2876, declaration: !4555, retainedNodes: !4556)
 !4552 = !DISubroutineType(types: !4553)
 !4553 = !{!2776, !4554, !1804}
-!4554 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&lazy_static::lazy::Lazy<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", baseType: !591, size: 64, align: 64, dwarfAddressSpace: 0)
-!4555 = !DISubprogram(name: "get<spin::mutex::Mutex<vga::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<vga::Screen, spin::relax::Spin>>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h460595ba78221e08E", scope: !591, file: !390, line: 18, type: !4552, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2938)
+!4554 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "&lazy_static::lazy::Lazy<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", baseType: !591, size: 64, align: 64, dwarfAddressSpace: 0)
+!4555 = !DISubprogram(name: "get<spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>, fn() -> spin::mutex::Mutex<text_buffer::Screen, spin::relax::Spin>>", linkageName: "_ZN11lazy_static4lazy13Lazy$LT$T$GT$3get17h04c631d0ecf42381E", scope: !591, file: !390, line: 18, type: !4552, scopeLine: 18, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit, templateParams: !2876)
 !4556 = !{!4550, !4557}
 !4557 = !DILocalVariable(name: "builder", arg: 2, scope: !4551, file: !390, line: 18, type: !1804)
 !4558 = !DILocation(line: 18, column: 19, scope: !4551, inlinedAt: !4559)
 !4559 = distinct !DILocation(line: 142, column: 21, scope: !4560, inlinedAt: !4563)
-!4560 = distinct !DISubprogram(name: "__stability", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability17h1aa327798df8b4eaE", scope: !589, file: !381, line: 140, type: !4561, scopeLine: 140, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29)
+!4560 = distinct !DISubprogram(name: "__stability", linkageName: "_ZN87_$LT$theo..peripherals..VGA_DISPLAY_IN_TEXT_MODE$u20$as$u20$core..ops..deref..Deref$GT$5deref11__stability17hc94bd3be0066dfeeE", scope: !589, file: !381, line: 140, type: !4561, scopeLine: 140, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !871, templateParams: !29)
 !4561 = !DISubroutineType(types: !4562)
 !4562 = !{!2776}
 !4563 = distinct !DILocation(line: 144, column: 17, scope: !4543)

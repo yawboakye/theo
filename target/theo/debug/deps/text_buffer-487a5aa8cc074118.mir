@@ -1,0 +1,1013 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+Color::Black::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 0_u8;
+        return;
+    }
+}
+
+Color::Blue::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 1_u8;
+        return;
+    }
+}
+
+Color::Green::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 2_u8;
+        return;
+    }
+}
+
+Color::Cyan::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 3_u8;
+        return;
+    }
+}
+
+Color::Red::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 4_u8;
+        return;
+    }
+}
+
+Color::Magenta::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 5_u8;
+        return;
+    }
+}
+
+Color::Brown::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 6_u8;
+        return;
+    }
+}
+
+Color::LightGray::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 7_u8;
+        return;
+    }
+}
+
+Color::DarkGray::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 8_u8;
+        return;
+    }
+}
+
+Color::LightBlue::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 9_u8;
+        return;
+    }
+}
+
+Color::LightGreen::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 10_u8;
+        return;
+    }
+}
+
+Color::LightCyan::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 11_u8;
+        return;
+    }
+}
+
+Color::LightRed::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 12_u8;
+        return;
+    }
+}
+
+Color::LightMagenta::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 13_u8;
+        return;
+    }
+}
+
+Color::Yellow::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 14_u8;
+        return;
+    }
+}
+
+Color::White::{constant#0}: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 15_u8;
+        return;
+    }
+}
+
+static PI_CHAR_CODE: u8 = {
+    let mut _0: u8;
+
+    bb0: {
+        _0 = const 227_u8;
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:32:16: 32:21>::clone(_1: &ColorCode) -> ColorCode {
+    debug self => _1;
+    let mut _0: ColorCode;
+    scope 1 {
+    }
+
+    bb0: {
+        _0 = (*_1);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:36:1: 36:15>::new(_1: Color, _2: Color) -> ColorCode {
+    debug fg => _1;
+    debug bg => _2;
+    let mut _0: ColorCode;
+    let mut _3: u8;
+    let mut _4: u8;
+    let mut _5: u8;
+    let mut _6: bool;
+    let mut _7: u32;
+    let mut _8: bool;
+    let mut _9: u8;
+    let mut _10: bool;
+
+    bb0: {
+        _5 = discriminant(_2);
+        _6 = Le(_5, const 15_u8);
+        assume(move _6);
+        _7 = const 4_i32 as u32 (IntToInt);
+        _8 = Lt(move _7, const 8_u32);
+        assert(move _8, "attempt to shift left by `{}`, which would overflow", const 4_i32) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = Shl(_5, const 4_i32);
+        _9 = discriminant(_1);
+        _10 = Le(_9, const 15_u8);
+        assume(move _10);
+        _3 = BitOr(move _4, _9);
+        _0 = ColorCode(move _3);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:42:16: 42:21>::clone(_1: &ScreenChar) -> ScreenChar {
+    debug self => _1;
+    let mut _0: ScreenChar;
+    scope 1 {
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _0 = (*_1);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:49:1: 49:16>::new(_1: u8) -> ScreenChar {
+    debug c => _1;
+    let mut _0: ScreenChar;
+    let mut _2: ColorCode;
+    let mut _3: Color;
+    let mut _4: Color;
+
+    bb0: {
+        _3 = Color::Yellow;
+        _4 = Color::Blue;
+        _2 = ColorCode::new(move _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = ScreenChar { char: _1, color_code: move _2 };
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:49:1: 49:16>::inverse(_1: u8) -> ScreenChar {
+    debug c => _1;
+    let mut _0: ScreenChar;
+    let mut _2: ColorCode;
+    let mut _3: Color;
+    let mut _4: Color;
+
+    bb0: {
+        _3 = Color::Yellow;
+        _4 = Color::Blue;
+        _2 = ColorCode::new(move _3, move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = ScreenChar { char: _1, color_code: move _2 };
+        return;
+    }
+}
+
+static VGA_COLOR_TEXT_MODE_ADDR: u64 = {
+    let mut _0: u64;
+
+    bb0: {
+        _0 = const 753664_u64;
+        return;
+    }
+}
+
+const VGA_TEXT_BUF_HEIGHT: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const 25_usize;
+        return;
+    }
+}
+
+const VGA_TEXT_BUF_WIDTH: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const 80_usize;
+        return;
+    }
+}
+
+ScreenRow::{constant#0}: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+Buffer::chars::{constant#0}: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:80:16: 80:21>::clone(_1: &Dot) -> Dot {
+    debug self => _1;
+    let mut _0: Dot;
+    scope 1 {
+    }
+
+    bb0: {
+        _0 = (*_1);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:86:16: 86:21>::clone(_1: &Cursor) -> Cursor {
+    debug self => _1;
+    let mut _0: Cursor;
+    scope 1 {
+    }
+
+    bb0: {
+        _0 = (*_1);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:91:1: 91:12>::x(_1: &Cursor) -> usize {
+    debug self => _1;
+    let mut _0: usize;
+
+    bb0: {
+        _0 = (((*_1).0: Dot).0: usize);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:91:1: 91:12>::y(_1: &Cursor) -> usize {
+    debug self => _1;
+    let mut _0: usize;
+
+    bb0: {
+        _0 = (((*_1).0: Dot).1: usize);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:91:1: 91:12>::incr_x(_1: &mut Cursor) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let mut _2: (usize, bool);
+
+    bb0: {
+        _2 = CheckedAdd((((*_1).0: Dot).0: usize), const 1_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} + {}`, which would overflow", (((*_1).0: Dot).0: usize), const 1_usize) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        (((*_1).0: Dot).0: usize) = move (_2.0: usize);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:91:1: 91:12>::decr_y(_1: &mut Cursor) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let mut _2: (usize, bool);
+
+    bb0: {
+        _2 = CheckedSub((((*_1).0: Dot).1: usize), const 1_usize);
+        assert(!move (_2.1: bool), "attempt to compute `{} - {}`, which would overflow", (((*_1).0: Dot).1: usize), const 1_usize) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        (((*_1).0: Dot).1: usize) = move (_2.0: usize);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::width(_1: &Screen) -> usize {
+    debug self => _1;
+    let mut _0: usize;
+    let mut _2: &[ScreenChar];
+    let mut _3: &[ScreenChar; 80];
+    let _4: usize;
+    let mut _5: usize;
+    let mut _6: bool;
+    let mut _7: &mut Buffer;
+
+    bb0: {
+        _4 = const 0_usize;
+        _5 = const 25_usize;
+        _6 = Lt(_4, _5);
+        assert(move _6, "index out of bounds: the length is {} but the index is {}", move _5, _4) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = deref_copy ((*_1).3: &mut Buffer);
+        _3 = &((*_7).0: [[ScreenChar; 80]; 25])[_4];
+        _2 = move _3 as &[ScreenChar] (PointerCoercion(Unsize));
+        _0 = Len((*_2));
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::height(_1: &Screen) -> usize {
+    debug self => _1;
+    let mut _0: usize;
+    let mut _2: &[[ScreenChar; 80]];
+    let mut _3: &[[ScreenChar; 80]; 25];
+    let mut _4: &mut Buffer;
+
+    bb0: {
+        _4 = deref_copy ((*_1).3: &mut Buffer);
+        _3 = &((*_4).0: [[ScreenChar; 80]; 25]);
+        _2 = move _3 as &[[ScreenChar; 80]] (PointerCoercion(Unsize));
+        _0 = Len((*_2));
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::top_down_flow_screen(_1: &mut Buffer, _2: [ScreenChar; 80]) -> Screen {
+    debug buf => _1;
+    debug blank_row => _2;
+    let mut _0: Screen;
+    let _3: Dot;
+    let mut _4: TextFlowDirection;
+    let mut _5: Cursor;
+    scope 1 {
+        debug origin_dot => _3;
+    }
+
+    bb0: {
+        _3 = Dot { x: const 0_usize, y: const 0_usize };
+        _4 = TextFlowDirection::TopDown;
+        _5 = Cursor { pos: _3 };
+        _0 = Screen { water_level: const 1_usize, cursor: move _5, origin: _3, buf: _1, tfd: move _4, blank_row: _2 };
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::bottom_up_flow_screen(_1: &mut Buffer, _2: [ScreenChar; 80]) -> Screen {
+    debug buf => _1;
+    debug blank_row => _2;
+    let mut _0: Screen;
+    let _3: usize;
+    let mut _4: (usize, bool);
+    let mut _6: Cursor;
+    let mut _7: TextFlowDirection;
+    let mut _8: usize;
+    let mut _9: (usize, bool);
+    scope 1 {
+        debug perceived_y => _3;
+        let _5: Dot;
+        scope 2 {
+            debug origin_dot => _5;
+        }
+    }
+
+    bb0: {
+        _4 = CheckedSub(const _, const 1_usize);
+        assert(!move (_4.1: bool), "attempt to compute `{} - {}`, which would overflow", const _, const 1_usize) -> [success: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = move (_4.0: usize);
+        _5 = Dot { x: const 0_usize, y: _3 };
+        _6 = Cursor { pos: _5 };
+        _7 = TextFlowDirection::BottomUp;
+        _9 = CheckedSub(_3, const 1_usize);
+        assert(!move (_9.1: bool), "attempt to compute `{} - {}`, which would overflow", _3, const 1_usize) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = move (_9.0: usize);
+        _0 = Screen { water_level: move _8, cursor: move _6, origin: _5, buf: _1, tfd: move _7, blank_row: _2 };
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::new(_1: TextFlowDirection, _2: u8) -> Screen {
+    debug tfd => _1;
+    debug blank_row_char => _2;
+    let mut _0: Screen;
+    let mut _3: &mut Buffer;
+    let mut _4: *mut Buffer;
+    let mut _5: u64;
+    let mut _6: &u64;
+    let mut _8: ScreenChar;
+    let mut _10: isize;
+    let _11: ();
+    let mut _12: &mut Screen;
+    scope 1 {
+        debug buf => _3;
+        let _7: [ScreenChar; 80];
+        scope 3 {
+            debug blank_row => _7;
+            let mut _9: Screen;
+            scope 4 {
+                debug screen => _9;
+            }
+        }
+    }
+    scope 2 {
+    }
+
+    bb0: {
+        _6 = const {alloc22: &u64};
+        _5 = (*_6);
+        _4 = move _5 as *mut Buffer (PointerFromExposedAddress);
+        _3 = &mut (*_4);
+        _8 = ScreenChar::inverse(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _7 = [move _8; 80];
+        _10 = discriminant(_1);
+        switchInt(move _10) -> [0: bb2, 1: bb3, otherwise: bb6];
+    }
+
+    bb2: {
+        _9 = Screen::top_down_flow_screen(_3, _7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb3: {
+        _9 = Screen::bottom_up_flow_screen(_3, _7) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _12 = &mut _9;
+        _11 = Screen::clear(move _12) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _0 = move _9;
+        return;
+    }
+
+    bb6: {
+        unreachable;
+    }
+}
+
+alloc22 (static: VGA_COLOR_TEXT_MODE_ADDR, size: 8, align: 8) {
+    00 80 0b 00 00 00 00 00                         │ ........
+}
+
+<impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::new::{constant#0}: usize = {
+    let mut _0: usize;
+
+    bb0: {
+        _0 = const _;
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::clear(_1: &mut Screen) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let mut _2: core::ops::Range<usize>;
+    let mut _3: core::ops::Range<usize>;
+    let mut _4: usize;
+    let mut _5: &Screen;
+    let mut _6: core::ops::Range<usize>;
+    let mut _7: core::option::Option<usize>;
+    let mut _8: &mut core::ops::Range<usize>;
+    let mut _9: isize;
+    let mut _11: [ScreenChar; 80];
+    let mut _12: usize;
+    let mut _13: bool;
+    let mut _14: &mut Buffer;
+    scope 1 {
+        debug iter => _6;
+        let _10: usize;
+        scope 2 {
+            debug row => _10;
+        }
+    }
+
+    bb0: {
+        _5 = &(*_1);
+        _4 = Screen::height(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = Range::<usize> { start: const 0_usize, end: move _4 };
+        _2 = <Range<usize> as IntoIterator>::into_iter(move _3) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _6 = move _2;
+        goto -> bb3;
+    }
+
+    bb3: {
+        _8 = &mut _6;
+        _7 = <Range<usize> as Iterator>::next(_8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _9 = discriminant(_7);
+        switchInt(move _9) -> [0: bb6, 1: bb5, otherwise: bb8];
+    }
+
+    bb5: {
+        _10 = ((_7 as Some).0: usize);
+        _11 = ((*_1).5: [ScreenChar; 80]);
+        _12 = const 25_usize;
+        _13 = Lt(_10, _12);
+        assert(move _13, "index out of bounds: the length is {} but the index is {}", move _12, _10) -> [success: bb7, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+
+    bb7: {
+        _14 = deref_copy ((*_1).3: &mut Buffer);
+        ((*_14).0: [[ScreenChar; 80]; 25])[_10] = move _11;
+        goto -> bb3;
+    }
+
+    bb8: {
+        unreachable;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::print_sc(_1: &mut Screen, _2: ScreenChar) -> () {
+    debug self => _1;
+    debug sc => _2;
+    let mut _0: ();
+    let _3: &mut ScreenChar;
+    let _4: usize;
+    let mut _5: &Cursor;
+    let mut _6: usize;
+    let mut _7: bool;
+    let _8: usize;
+    let mut _9: &Cursor;
+    let mut _10: usize;
+    let mut _11: bool;
+    let _12: ();
+    let mut _13: *mut ScreenChar;
+    let _14: ();
+    let mut _15: &mut Cursor;
+    let mut _16: &mut Buffer;
+    scope 1 {
+        debug dst => _3;
+        scope 2 {
+        }
+    }
+
+    bb0: {
+        _5 = &((*_1).1: Cursor);
+        _4 = Cursor::y(move _5) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = const 25_usize;
+        _7 = Lt(_4, _6);
+        assert(move _7, "index out of bounds: the length is {} but the index is {}", move _6, _4) -> [success: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _9 = &((*_1).1: Cursor);
+        _8 = Cursor::x(move _9) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _10 = const 80_usize;
+        _11 = Lt(_8, _10);
+        assert(move _11, "index out of bounds: the length is {} but the index is {}", move _10, _8) -> [success: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _16 = deref_copy ((*_1).3: &mut Buffer);
+        _3 = &mut ((*_16).0: [[ScreenChar; 80]; 25])[_4][_8];
+        _13 = &raw mut (*_3);
+        _12 = write_volatile::<ScreenChar>(move _13, _2) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _15 = &mut ((*_1).1: Cursor);
+        _14 = Cursor::incr_x(move _15) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::should_wrap(_1: &Screen) -> bool {
+    debug self => _1;
+    let mut _0: bool;
+    let mut _2: usize;
+    let mut _3: &Cursor;
+    let mut _4: usize;
+
+    bb0: {
+        _3 = &((*_1).1: Cursor);
+        _2 = Cursor::x(move _3) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = Screen::width(_1) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = Eq(move _2, move _4);
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::print(_1: &mut Screen, _2: u8) -> () {
+    debug self => _1;
+    debug c => _2;
+    let mut _0: ();
+    let mut _3: bool;
+    let mut _4: &Screen;
+    let _5: ();
+    let mut _6: ScreenChar;
+
+    bb0: {
+        _4 = &(*_1);
+        _3 = Screen::should_wrap(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        switchInt(move _3) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        _5 = Screen::print_new_line(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _6 = ScreenChar::new(_2) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _0 = Screen::print_sc(_1, move _6) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::recall_cursor_to_origin(_1: &mut Screen) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let mut _2: Dot;
+
+    bb0: {
+        _2 = ((*_1).2: Dot);
+        (((*_1).1: Cursor).0: Dot) = move _2;
+        return;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::print_new_line(_1: &mut Screen) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let mut _2: isize;
+    let mut _3: core::ops::Range<usize>;
+    let mut _4: core::ops::Range<usize>;
+    let mut _5: usize;
+    let mut _6: usize;
+    let mut _7: &Screen;
+    let mut _8: core::ops::Range<usize>;
+    let mut _9: core::option::Option<usize>;
+    let mut _10: &mut core::ops::Range<usize>;
+    let mut _11: isize;
+    let mut _13: [ScreenChar; 80];
+    let mut _14: usize;
+    let mut _15: bool;
+    let _16: usize;
+    let mut _17: (usize, bool);
+    let mut _18: usize;
+    let mut _19: bool;
+    let mut _20: [ScreenChar; 80];
+    let mut _21: usize;
+    let mut _22: bool;
+    let mut _23: bool;
+    let mut _24: usize;
+    let mut _25: (usize, bool);
+    let _26: ();
+    let mut _27: &mut Buffer;
+    let mut _28: &mut Buffer;
+    let mut _29: &mut Buffer;
+    scope 1 {
+        debug iter => _8;
+        let _12: usize;
+        scope 2 {
+            debug row => _12;
+        }
+    }
+
+    bb0: {
+        _2 = discriminant(((*_1).4: TextFlowDirection));
+        switchInt(move _2) -> [0: bb16, 1: bb1, otherwise: bb17];
+    }
+
+    bb1: {
+        _5 = ((*_1).0: usize);
+        _7 = &(*_1);
+        _6 = Screen::height(move _7) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _4 = Range::<usize> { start: move _5, end: move _6 };
+        _3 = <Range<usize> as IntoIterator>::into_iter(move _4) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _8 = move _3;
+        goto -> bb4;
+    }
+
+    bb4: {
+        _10 = &mut _8;
+        _9 = <Range<usize> as Iterator>::next(_10) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        _11 = discriminant(_9);
+        switchInt(move _11) -> [0: bb7, 1: bb6, otherwise: bb17];
+    }
+
+    bb6: {
+        _12 = ((_9 as Some).0: usize);
+        switchInt(move _12) -> [0: bb4, otherwise: bb8];
+    }
+
+    bb7: {
+        _24 = ((*_1).0: usize);
+        _23 = Gt(move _24, const 0_usize);
+        switchInt(move _23) -> [0: bb15, otherwise: bb13];
+    }
+
+    bb8: {
+        _14 = const 25_usize;
+        _15 = Lt(_12, _14);
+        assert(move _15, "index out of bounds: the length is {} but the index is {}", move _14, _12) -> [success: bb9, unwind unreachable];
+    }
+
+    bb9: {
+        _27 = deref_copy ((*_1).3: &mut Buffer);
+        _13 = ((*_27).0: [[ScreenChar; 80]; 25])[_12];
+        _17 = CheckedSub(_12, const 1_usize);
+        assert(!move (_17.1: bool), "attempt to compute `{} - {}`, which would overflow", _12, const 1_usize) -> [success: bb10, unwind unreachable];
+    }
+
+    bb10: {
+        _16 = move (_17.0: usize);
+        _18 = const 25_usize;
+        _19 = Lt(_16, _18);
+        assert(move _19, "index out of bounds: the length is {} but the index is {}", move _18, _16) -> [success: bb11, unwind unreachable];
+    }
+
+    bb11: {
+        _28 = deref_copy ((*_1).3: &mut Buffer);
+        ((*_28).0: [[ScreenChar; 80]; 25])[_16] = move _13;
+        _20 = ((*_1).5: [ScreenChar; 80]);
+        _21 = const 25_usize;
+        _22 = Lt(_12, _21);
+        assert(move _22, "index out of bounds: the length is {} but the index is {}", move _21, _12) -> [success: bb12, unwind unreachable];
+    }
+
+    bb12: {
+        _29 = deref_copy ((*_1).3: &mut Buffer);
+        ((*_29).0: [[ScreenChar; 80]; 25])[_12] = move _20;
+        goto -> bb4;
+    }
+
+    bb13: {
+        _25 = CheckedSub(((*_1).0: usize), const 1_usize);
+        assert(!move (_25.1: bool), "attempt to compute `{} - {}`, which would overflow", ((*_1).0: usize), const 1_usize) -> [success: bb14, unwind unreachable];
+    }
+
+    bb14: {
+        ((*_1).0: usize) = move (_25.0: usize);
+        goto -> bb15;
+    }
+
+    bb15: {
+        _26 = Screen::recall_cursor_to_origin(_1) -> [return: bb16, unwind unreachable];
+    }
+
+    bb16: {
+        return;
+    }
+
+    bb17: {
+        unreachable;
+    }
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:144:1: 144:12>::print_text(_1: &mut Screen, _2: &str) -> () {
+    debug self => _1;
+    debug text => _2;
+    let mut _0: ();
+    let mut _3: core::str::Bytes<'_>;
+    let mut _4: core::str::Bytes<'_>;
+    let mut _5: core::str::Bytes<'_>;
+    let _6: ();
+    let mut _7: core::option::Option<u8>;
+    let mut _8: &mut core::str::Bytes<'_>;
+    let mut _9: isize;
+    let mut _11: bool;
+    let mut _12: bool;
+    let mut _13: u8;
+    let mut _14: &u8;
+    scope 1 {
+        debug iter => _5;
+        let _10: u8;
+        scope 2 {
+            debug byte => _10;
+        }
+    }
+
+    bb0: {
+        _4 = str::<impl str>::bytes(_2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _3 = <Bytes<'_> as IntoIterator>::into_iter(move _4) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _5 = move _3;
+        goto -> bb3;
+    }
+
+    bb3: {
+        _8 = &mut _5;
+        _7 = <Bytes<'_> as Iterator>::next(_8) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _9 = discriminant(_7);
+        switchInt(move _9) -> [0: bb6, 1: bb5, otherwise: bb12];
+    }
+
+    bb5: {
+        _10 = ((_7 as Some).0: u8);
+        _11 = Le(const 32_u8, _10);
+        switchInt(move _11) -> [0: bb8, otherwise: bb10];
+    }
+
+    bb6: {
+        return;
+    }
+
+    bb7: {
+        _6 = Screen::print(_1, _10) -> [return: bb3, unwind unreachable];
+    }
+
+    bb8: {
+        switchInt(_10) -> [10: bb11, otherwise: bb9];
+    }
+
+    bb9: {
+        _14 = const {alloc23: &u8};
+        _13 = (*_14);
+        _6 = Screen::print(_1, move _13) -> [return: bb3, unwind unreachable];
+    }
+
+    bb10: {
+        _12 = Le(_10, const 126_u8);
+        switchInt(move _12) -> [0: bb8, otherwise: bb7];
+    }
+
+    bb11: {
+        _6 = Screen::print_new_line(_1) -> [return: bb3, unwind unreachable];
+    }
+
+    bb12: {
+        unreachable;
+    }
+}
+
+alloc23 (static: PI_CHAR_CODE, size: 1, align: 1) {
+    e3                                              │ .
+}
+
+fn <impl at vga/text_buffer/src/lib.rs:279:1: 279:22>::write_str(_1: &mut Screen, _2: &str) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug text => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: ();
+
+    bb0: {
+        _3 = Screen::print_text(_1, _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _0 = Result::<(), core::fmt::Error>::Ok(const ());
+        return;
+    }
+}
+
+fn ColorCode(_1: u8) -> ColorCode {
+    let mut _0: ColorCode;
+
+    bb0: {
+        _0 = ColorCode(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn ColorCode(_1: u8) -> ColorCode {
+    let mut _0: ColorCode;
+
+    bb0: {
+        _0 = ColorCode(move _1);
+        return;
+    }
+}
