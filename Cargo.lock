@@ -27,16 +27,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "327762f6e5a765692301e5bb513e0d9fef63be86bbc14528052b1cd3e6f03e07"
 
 [[package]]
-name = "bootloader"
-version = "0.9.23"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b6e02311b16c9819e7c72866d379cdd3026c3b7b25c1edf161f548f8e887e7ff"
-
-[[package]]
 name = "bootloader_api"
-version = "0.11.4"
+version = "0.11.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "88f843888771a490c3ad246e58bf25e62da70d2c653d74a3eca92acbab599e02"
+checksum = "daaa1fb791aea49e19db7b7b3662665d511eb4e30a0627fa525fd92652f39358"
 
 [[package]]
 name = "cpu_interrupts"
@@ -46,6 +40,14 @@ dependencies = [
  "pic8259",
  "spin 0.9.8",
  "x86_64",
+]
+
+[[package]]
+name = "frame_buffer"
+version = "0.1.0"
+dependencies = [
+ "bootloader_api",
+ "noto-sans-mono-bitmap",
 ]
 
 [[package]]
@@ -74,6 +76,12 @@ dependencies = [
  "autocfg",
  "scopeguard",
 ]
+
+[[package]]
+name = "noto-sans-mono-bitmap"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a27daf9557165efe1d09b52f97393bf6283cadb0a76fbe64a1061e15553a994a"
 
 [[package]]
 name = "paged_memory"
@@ -124,10 +132,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "text_buffer"
+version = "0.1.0"
+
+[[package]]
 name = "theo"
 version = "0.1.0"
 dependencies = [
- "bootloader",
  "bootloader_api",
  "cpu_interrupts",
  "keyboard",
@@ -152,7 +163,11 @@ dependencies = [
 
 [[package]]
 name = "vga"
-version = "0.1.0"
+version = "0.1.1"
+dependencies = [
+ "frame_buffer",
+ "text_buffer",
+]
 
 [[package]]
 name = "volatile"

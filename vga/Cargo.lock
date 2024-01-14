@@ -3,5 +3,33 @@
 version = 3
 
 [[package]]
-name = "vga"
+name = "bootloader_api"
+version = "0.11.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "daaa1fb791aea49e19db7b7b3662665d511eb4e30a0627fa525fd92652f39358"
+
+[[package]]
+name = "frame_buffer"
 version = "0.1.0"
+dependencies = [
+ "bootloader_api",
+ "noto-sans-mono-bitmap",
+]
+
+[[package]]
+name = "noto-sans-mono-bitmap"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a27daf9557165efe1d09b52f97393bf6283cadb0a76fbe64a1061e15553a994a"
+
+[[package]]
+name = "text_buffer"
+version = "0.1.0"
+
+[[package]]
+name = "vga"
+version = "0.1.1"
+dependencies = [
+ "frame_buffer",
+ "text_buffer",
+]

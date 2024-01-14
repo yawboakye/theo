@@ -1,0 +1,274 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:212:10: 212:15>::fmt(_1: &Always, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+
+    bb0: {
+        unreachable;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:229:1: 229:25>::should_run() -> bool {
+    let mut _0: bool;
+
+    bb0: {
+        _0 = const true;
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:308:1: 310:23>::with_strategy(_1: T, _2: F) -> ScopeGuard<T, F, S> {
+    debug v => _1;
+    debug dropfn => _2;
+    let mut _0: ScopeGuard<T, F, S>;
+    let mut _3: core::mem::ManuallyDrop<T>;
+    let mut _4: core::mem::ManuallyDrop<F>;
+
+    bb0: {
+        _3 = ManuallyDrop::<T>::new(move _1) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = ManuallyDrop::<F>::new(move _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _0 = ScopeGuard::<T, F, S> { value: move _3, dropfn: move _4, strategy: const ZeroSized: PhantomData<fn(S) -> S> };
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:308:1: 310:23>::into_inner(_1: ScopeGuard<T, F, S>) -> T {
+    debug guard => _1;
+    let mut _0: T;
+    let mut _2: *const T;
+    let _3: &T;
+    let mut _4: &core::mem::ManuallyDrop<T>;
+    let mut _6: *const F;
+    let _7: &F;
+    let mut _8: &core::mem::ManuallyDrop<F>;
+    let _9: ();
+    let mut _10: ScopeGuard<T, F, S>;
+    scope 1 {
+        scope 2 {
+            debug value => _0;
+            let _5: F;
+            scope 3 {
+                debug _dropfn => _5;
+            }
+        }
+    }
+
+    bb0: {
+        _4 = &(_1.0: core::mem::ManuallyDrop<T>);
+        _3 = <ManuallyDrop<T> as Deref>::deref(move _4) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _2 = &raw const (*_3);
+        _0 = read::<T>(move _2) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = &(_1.1: core::mem::ManuallyDrop<F>);
+        _7 = <ManuallyDrop<F> as Deref>::deref(move _8) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _6 = &raw const (*_7);
+        _5 = read::<F>(move _6) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _10 = move _1;
+        _9 = core::mem::forget::<ScopeGuard<T, F, S>>(move _10) -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        drop(_5) -> [return: bb6, unwind unreachable];
+    }
+
+    bb6: {
+        return;
+    }
+}
+
+fn guard(_1: T, _2: F) -> ScopeGuard<T, F> {
+    debug v => _1;
+    debug dropfn => _2;
+    let mut _0: ScopeGuard<T, F>;
+
+    bb0: {
+        _0 = ScopeGuard::<T, F>::with_strategy(move _1, move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:428:1: 430:22>::deref(_1: &ScopeGuard<T, F, S>) -> &T {
+    debug self => _1;
+    let mut _0: &T;
+    let mut _2: &core::mem::ManuallyDrop<T>;
+
+    bb0: {
+        _2 = &((*_1).0: core::mem::ManuallyDrop<T>);
+        _0 = <ManuallyDrop<T> as Deref>::deref(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:439:1: 441:22>::deref_mut(_1: &mut ScopeGuard<T, F, S>) -> &mut T {
+    debug self => _1;
+    let mut _0: &mut T;
+    let mut _2: &mut core::mem::ManuallyDrop<T>;
+
+    bb0: {
+        _2 = &mut ((*_1).0: core::mem::ManuallyDrop<T>);
+        _0 = <ManuallyDrop<T> as DerefMut>::deref_mut(move _2) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        return;
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:448:1: 450:22>::drop(_1: &mut ScopeGuard<T, F, S>) -> () {
+    debug self => _1;
+    let mut _0: ();
+    let _2: T;
+    let _3: F;
+    let mut _4: (T, F);
+    let mut _5: T;
+    let mut _6: *const T;
+    let _7: &T;
+    let mut _8: &core::mem::ManuallyDrop<T>;
+    let mut _9: F;
+    let mut _10: *const F;
+    let _11: &F;
+    let mut _12: &core::mem::ManuallyDrop<F>;
+    let mut _13: bool;
+    let _14: ();
+    let mut _15: F;
+    let mut _16: (T,);
+    let mut _17: T;
+    let mut _18: bool;
+    let mut _19: bool;
+    scope 1 {
+        debug value => _2;
+        debug dropfn => _3;
+    }
+    scope 2 {
+    }
+
+    bb0: {
+        _19 = const false;
+        _18 = const false;
+        _8 = &((*_1).0: core::mem::ManuallyDrop<T>);
+        _7 = <ManuallyDrop<T> as Deref>::deref(move _8) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _6 = &raw const (*_7);
+        _5 = read::<T>(move _6) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _12 = &((*_1).1: core::mem::ManuallyDrop<F>);
+        _11 = <ManuallyDrop<F> as Deref>::deref(move _12) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _10 = &raw const (*_11);
+        _9 = read::<F>(move _10) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        _4 = (move _5, move _9);
+        _19 = const true;
+        _2 = move (_4.0: T);
+        _18 = const true;
+        _3 = move (_4.1: F);
+        _13 = <S as Strategy>::should_run() -> [return: bb5, unwind unreachable];
+    }
+
+    bb5: {
+        switchInt(move _13) -> [0: bb7, otherwise: bb6];
+    }
+
+    bb6: {
+        _18 = const false;
+        _15 = move _3;
+        _19 = const false;
+        _17 = move _2;
+        _16 = (move _17,);
+        _14 = <F as FnOnce<(T,)>>::call_once(move _15, move _16) -> [return: bb7, unwind unreachable];
+    }
+
+    bb7: {
+        switchInt(_18) -> [0: bb8, otherwise: bb10];
+    }
+
+    bb8: {
+        _18 = const false;
+        switchInt(_19) -> [0: bb9, otherwise: bb11];
+    }
+
+    bb9: {
+        _19 = const false;
+        return;
+    }
+
+    bb10: {
+        drop(_3) -> [return: bb8, unwind unreachable];
+    }
+
+    bb11: {
+        drop(_2) -> [return: bb9, unwind unreachable];
+    }
+}
+
+fn <impl at /Users/yaw/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.1.0/src/lib.rs:464:1: 467:22>::fmt(_1: &ScopeGuard<T, F, S>, _2: &mut Formatter<'_>) -> Result<(), core::fmt::Error> {
+    debug self => _1;
+    debug f => _2;
+    let mut _0: core::result::Result<(), core::fmt::Error>;
+    let mut _3: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _4: &mut core::fmt::DebugStruct<'_, '_>;
+    let mut _5: core::fmt::DebugStruct<'_, '_>;
+    let _6: &str;
+    let _7: &str;
+    let mut _8: &dyn core::fmt::Debug;
+    let _9: &T;
+    let mut _10: &core::mem::ManuallyDrop<T>;
+
+    bb0: {
+        _6 = const "ScopeGuard";
+        _5 = Formatter::<'_>::debug_struct(_2, _6) -> [return: bb1, unwind unreachable];
+    }
+
+    bb1: {
+        _4 = &mut _5;
+        _7 = const "value";
+        _10 = &((*_1).0: core::mem::ManuallyDrop<T>);
+        _9 = <ManuallyDrop<T> as Deref>::deref(move _10) -> [return: bb2, unwind unreachable];
+    }
+
+    bb2: {
+        _8 = _9 as &dyn core::fmt::Debug (PointerCoercion(Unsize));
+        _3 = DebugStruct::<'_, '_>::field(move _4, _7, move _8) -> [return: bb3, unwind unreachable];
+    }
+
+    bb3: {
+        _0 = DebugStruct::<'_, '_>::finish(_3) -> [return: bb4, unwind unreachable];
+    }
+
+    bb4: {
+        return;
+    }
+}
